@@ -1,0 +1,18 @@
+{
+  "name": "engagement-lab-website-2.0",
+  "description": "The Engagement Lab's home page v2.x server backend.",
+  "version": "2.0.0",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engagementgamelab/engagement-lab-website-2.0.git"
+  },
+  "dependencies": {
+    "cloudinary": "^1.13.2",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "keystone-storage-adapter-azure": "^1.1.0",
+    "moment": "^2.22.2",
+    "validator": "^10.9.0"
+  }
+}

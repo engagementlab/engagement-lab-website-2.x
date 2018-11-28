@@ -1,0 +1,122 @@
+.cmap {
+
+	.filters {
+		margin-left: 4%;
+	}
+
+	.cohort-year {
+		margin-left: 20px;
+	}
+
+	.section {
+		padding: 40px 0;
+	}
+
+	.inline-header {
+		font-weight: 700;
+		color: $base-color-hover;
+	}
+
+	.column {
+		height: 100%;
+	}
+
+	#student-quotes {
+		margin-bottom: 40px;
+	}
+
+	.quote {
+		
+		font-size: 20px;
+		margin-top:40px;
+
+		img, p {
+			display: inline;
+		}
+		.quote-author{
+			padding: 20px 0px;
+			color: #51d0b1;
+			float: right;
+		}
+	}
+
+	.team-member {
+
+		&.team-cmap {
+			height: 100%;
+			.image-box {
+				background-color:white;
+				width: 90%;
+				max-height:300px;
+				height: 100%;
+				margin: 0 auto;
+			}
+			.cmap-proj {
+				text-align: left;
+				width: 90%;
+				margin: 0 auto;
+				padding-top: 15px;
+			}
+		}
+		&.alumni-item {
+			.cmap-proj {
+				padding: 0px 20px;
+			}
+		}
+	}
+
+	#apply { background-color: #f2f2f2; }
+	#curriculum { background-color: #17839c; }
+	#structure { background-color: #2898b3; }
+	#courses { background-color: #38b1ce; }
+	#alumni { 
+		background-color: #f2f2f2; 
+		color: #7d7d7d;
+
+		h3 {
+			color: #7d7d7d;
+		}
+	}
+	#elements {
+		background-color: #fff;
+		#element-0 { background-color: #ff6352; }
+		#element-1 { background-color: #00b8b3; }
+		#element-2 { background-color: #51d0b1; }
+		#element-3 { background-color: #fcb75c; }
+		#columns { display: flex; }
+	}
+	// #projects { background-color: #f2f2f2; }
+
+	#students { background-color: #f2f2f2; }
+
+	.dark { color: $white; }
+
+	h3.section-header {
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	.lead p {
+		margin-bottom: 20px;
+		font-size: 16px;
+		font-weight: 300px;
+		line-height: 1.4;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	@media (max-width: 991px) {
+		#elements #columns {
+			display: block;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.lead p {
+			font-size: 20px;
+		}
+	}
+}
