@@ -58,5 +58,5 @@ About.add({
  * Model Registration
  */
 About.defaultSort = '-createdAt';
-About.defaultColumns = 'name, updatedAt';
+About.defaultColumns = 'name';
 About.register();

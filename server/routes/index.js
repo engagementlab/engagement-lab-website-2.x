@@ -20,6 +20,7 @@
 
 const keystone = global.keystone;
 const express = require('express');
+const passport = require('passport');
 var router = express.Router();
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
@@ -36,9 +37,27 @@ var routes = {
 };
 
 // keystone redirect
-router.all('/admin', function(req, res, next) {
-    
-});
+// Perform the login, after login Auth0 will redirect to callback
+router.get('/keystone', passport.authenticate('auth0', {
+    scope: 'openid email profile'
+  }), function (req, res) {
+    res.redirect('/');
+  });
+
+  router.get('/callback', function (req, res, next) {
+    passport.authenticate('auth0', function (err, user, info) {
+      if (err) { return next(err); }
+      if (!user) { return res.redirect('/cms'); }
+      req.logIn(user, function (err) {
+        //   console.log('user',user)
+        if (err) { return next(err); }
+        const returnTo = req.session.returnTo;
+        delete req.session.returnTo;
+
+        res.redirect(returnTo || '/cms');
+      });
+    })(req, res, next);
+  });
 
 // Views
 router.get('/', routes.views.index);
@@ -77,6 +96,10 @@ router.all('/climatesmartboston', function(req, res, next) {
 });
 router.all('/api/cpi/register', keystone.middleware.api, routes.api.communityplanit.create);
 router.all('/api/tv/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.tv.get);
+router.get('/authenticate', function (req, res, next) {
+    // const { _raw, _json, ...userProfile } = req.user;
+    console.log(req.session.passport.user)
+  });
 
 // Participatory Pokémon Go redirect
 router.all('/pokemon', function(req, res, next) {

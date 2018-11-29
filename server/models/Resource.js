@@ -194,7 +194,7 @@ Resource.schema.pre('remove', function (next) {
  */
 Resource.relationship({
 	ref: 'Project',
-	refPath: 'projects',
+	refPath: 'files',
 	path: 'resources'
 });
 

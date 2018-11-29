@@ -40,5 +40,5 @@ Academics.add({
  * Model Registration
  */
 Academics.defaultSort = '-createdAt';
-Academics.defaultColumns = 'blurb, mission';
+// Academics.defaultColumns = 'blurb, mission';
 Academics.register();
