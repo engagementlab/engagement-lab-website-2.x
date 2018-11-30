@@ -14,7 +14,6 @@
  */
 const keystone = global.keystone;
 var Project = keystone.list('Project');
-var NewsBox = keystone.list('NewsBox');
 var twitter = keystone.get('twitter');
 var _ = require('underscore');
 

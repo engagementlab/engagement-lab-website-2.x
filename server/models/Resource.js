@@ -117,7 +117,7 @@ Resource.add({
 			type: 'article'
 		},
 		label: 'Image Override (350 x 233)',
-		folder: 'site/research',
+		folder: 'homepage-2.0/research',
 		note: 'This should be used if the image provided automatically is not acceptable.',
 		autoCleanup: true
 	}

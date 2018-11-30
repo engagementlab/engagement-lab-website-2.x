@@ -43,7 +43,7 @@ About.add({
 	historyImages: {
 		type: Types.CloudinaryImages,
 		label: 'History Images (Requires EXACTLY 6 images to display properly)',
-		folder: 'site/about',
+		folder: 'homepage-2.0/about',
 		autoCleanup: true
 	},
 	

@@ -41,7 +41,7 @@ TV.add({
     },
     slideshowImages: {
         type: Types.CloudinaryImages,
-        folder: 'site/tv-slideshow',
+        folder: 'homepage-2.0/tv-slideshow',
         autoCleanup: true,
         required: true,
         initial: true,

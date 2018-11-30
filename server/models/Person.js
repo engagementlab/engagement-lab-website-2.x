@@ -63,7 +63,7 @@ Person.add({
 		dependsOn: { category: ['CMAP', 'advisory board'] }, note: 'This field is for students and board members, and will display beneath the regular bio text on the person\'s individual page.'},
 	
 	bio: { type: Types.Markdown, label: 'Bio', required: true, initial: true },
-	image: { type: Types.CloudinaryImage, label: 'Image', folder: 'site/team', note: 'Must be in square format. Will display as 192px by 192px.' },
+	image: { type: Types.CloudinaryImage, label: 'Image', folder: 'homepage-2.0/team', note: 'Must be in square format. Will display as 192px by 192px.' },
 	
 	cmapPerson: { type: Types.Boolean, label: 'Show on CMAP page', dependsOn: { category: ['faculty leadership', 'faculty fellows', 'CMAP'] }, note: 'This field is for faculty leadership, fellows, and CMAP students to display them in the CMAP page.'},
 	

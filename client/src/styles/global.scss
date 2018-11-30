@@ -1,0 +1,98 @@
+// GRID OVERRIDES
+// Grid columns
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 6 !default;
+$grid-gutter-width: 30px !default;
+
+@import '~bootstrap-4-grid/scss/grid.scss';
+
+body {
+  // background: cdn-image('outer-bg', f_auto);
+}
+
+// GLOBAL STYLING
+.container {
+  padding: 0;
+}
+@media (min-width: 1430px) {
+  .container {
+    margin: 0;
+  }
+}
+
+.bold {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+}
+
+.medium {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 500;
+}
+.small {
+  font-size: small;
+}
+.xx-large {
+  font-size: xx-large;
+}
+
+.auto {  
+  margin: auto!important;
+}
+.no-margin {
+  margin: 0;
+}
+.no-pad {
+  padding: 0;
+}
+
+// Center any column, yay!
+.col-centered {
+  float: none;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vert-center-desktop {
+  @include mq($from: tablet) {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.row-sm {
+  @include mq($from: mobileLg) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+.row-lg {
+  @include mq($from: tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.hidden-desktop {
+  @include mq($from: tablet) {
+    display: none;
+  }
+}
+.hidden-mobile {
+  @include mobile-only {
+    display: none;
+  }
+}

@@ -48,19 +48,23 @@ Listing.add({
         initial: true,
         index: true
     },
-    description: {
+    byline: {
         type: String,
-        label: 'Byline',
         required: true,
         initial: true,
-        note: 'This displays under listing\'s image. Do not include \'name\' in this field. <br />Text in the above <i>Name</i> prepends this.'
+        note: 'This displays under the project/event name on its page.'
+    },
+    description: {
+        type: String,
+        required: true,
+        initial: true,
     },
     image: {
         type: Types.CloudinaryImage,
         label: 'Thumbnail Image',
-        folder: 'site/listings',
+        folder: 'homepage-2.0/listings',
         autoCleanup: true, 
-        note: 'This displays as the grid listing image/thumbnail on its respective page.'
+        note: 'This displays as the image/thumbnail when needed.'
     }
 });
 

@@ -32,7 +32,7 @@ var Academics = new keystone.List('Academics',
  */
 Academics.add({
 	intro: { type: Types.Textarea, label: 'Intro Text', required: true, initial: true, index: true },
-	logo: { type: Types.CloudinaryImage, label: 'Image', folder: 'site/academics' }
+	logo: { type: Types.CloudinaryImage, label: 'Image', folder: 'homepage-2.0/academics' }
 	
 });
 
