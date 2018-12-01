@@ -1,13 +1,15 @@
-// GRID OVERRIDES
-// Grid columns
-// Set the number of columns and specify the width of the gutters.
-$grid-columns: 6 !default;
-$grid-gutter-width: 30px !default;
+// Bulma framework
+@import "~bulma/sass/utilities/mixins";
+@import "~bulma/sass/grid/columns";
 
-@import '~bootstrap-4-grid/scss/grid.scss';
+// Site vars
+@import "./variables";
 
 body {
-  // background: cdn-image('outer-bg', f_auto);
+  color: black;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 1%;
 }
 
 // GLOBAL STYLING

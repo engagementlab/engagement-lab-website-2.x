@@ -17,6 +17,8 @@ import { AppComponent } from './app.component';
 import { ProjectComponent } from './projects/project.component';
 import { HomeComponent } from './home.component';
 import { DataService } from './utils/data.service';
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -35,7 +37,10 @@ export const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ProjectComponent
+    ProjectComponent,
+    NavComponent,
+    FooterComponent,
+    CdnImageComponent
   ],
   imports: [
     AppRoutingModule,

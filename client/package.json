@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "source ~/.nvm/nvm.sh; nvm use; ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -23,10 +23,12 @@
     "@nicky-lenaers/ngx-scroll-to": "^1.0.0",
     "@types/greensock": "^1.15.32",
     "@types/gsap": "^1.20.0",
+    "bulma": "^0.7.2",
     "cloudinary-core": "^2.5.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.3.3",
+    "sass-mq": "^5.0.0",
     "tslib": "^1.9.0",
     "underscore": "^1.9.1",
     "zone.js": "~0.8.26"

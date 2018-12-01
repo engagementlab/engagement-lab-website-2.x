@@ -13,7 +13,7 @@ export class CdnImageComponent implements OnInit {
   @Input() height: number;
 	@Input() width: number;
   @Input() quality: number;
-	@Input() autoFormat: boolean = true;
+	@Input() autoFormat: boolean = false;
 
   public widthCss: SafeStyle;
   public imgId: string;
@@ -23,7 +23,7 @@ export class CdnImageComponent implements OnInit {
 
   ngOnInit() {
     
-    this.imgId = 'making-smart-city/' + this.cloudinaryId;
+    this.imgId = 'homepage-2.0/' + this.cloudinaryId;
 
     if(this.width)
       this.widthCss = this._sanitizer.bypassSecurityTrustStyle('max-width:' + this.width+'px');
