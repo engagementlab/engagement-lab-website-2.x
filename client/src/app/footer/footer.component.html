@@ -1,38 +1,62 @@
-<footer>
+<footer class="columns">
 
-  <h4>
-    <span id="making">Making</span> <span id="a"> A</span><br />
-    Civic Smart City
-  </h4>
+  <div id="logos" class="column is-one-quarter">
 
-  <div id="contact">
-    120 Boylston St.<br />
-    Boston, MA<br />
-    engagementlab@<br >emerson.edu
+    <cdn-image cloudinaryId="logos/logo-sm" width="70" alt="Engagement Lab smalll logo"></cdn-image> 
+    <!-- <cdn-image cloudinaryId="logos/logo-sm" width="70" alt="" aria-role="button"></cdn-image>  -->
   </div>
 
-  <ul>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/workshop">Workshop</a></li>
-      <li><a routerLink="/playbook">Playbook</a></li>
-      <!-- <li><a routerLink="/cities">Cities</a></li> -->
-  </ul>
+  <div id="contact" class="column">
+    <div id="social" class="columns">
+        
+      <a href="https://www.facebook.com/EngagementLab" role="link" class="column">
+          <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image> 
+      </a>
+      <a href="https://twitter.com/engagelab" role="link" class="column">
+          <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image> 
+      </a>
+      <a href="https://www.instagram.com/engagelab" role="link" class="column">
+          <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image> 
+      </a>
+      <a href="https://medium.com/engagement-lab-emerson-college" role="link" class="column">
+          <cdn-image cloudinaryId="logos/med" width="24" alt="Medium link image"></cdn-image> 
+      </a>
+      <a href="https://github.com/engagementlab" role="link" class="column">
+          <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image> 
+      </a>
+
+    </div>
+    <div id="address">
+      engagementlab@emerson.edu
+      120 Boylston St. Boston, MA<br />
+      02116
+    </div>
+  </div>
+
+  <div id="newsletter" class="column">
+    <h3>Newsletter</h3>
+
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+      <form action="https://engagementgamelab.us6.list-manage.com/subscribe/post?u=8cb16e3042072f11cc0680d36&amp;id=e9f56f4f4d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          
+        <div class="mc-field-group">
+          <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
+          <input type="submit" value="Subscribe to Newsletter" name="subscribe" id="mc-embedded-subscribe" class="button hidden" aria-hidden="true">
+        </div>
+        
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8cb16e3042072f11cc0680d36_e9f56f4f4d" tabindex="-1" value=""></div>
+        </div>
+      </form>
+    </div>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  </div>
 
   <div id="top">
   </div>
-  
-  <div id="logos">
-
-    <div>
-      <cdn-image cloudinaryId="logos/el-logo-black.png" width="100" alt="Engagement Lab @ Emerson College logo"></cdn-image> 
-      <cdn-image cloudinaryId="logos/ca-p-logo.png" width="277" alt="City as Platform logo"></cdn-image>
-      <!-- <cdn-image cloudinaryId="logos/berkman-klein-center-logo.png" width="362" alt="The Berkman Klein Center for Internet & Society at Harvard University logo"></cdn-image> -->
-    </div>
-    <div>
-      <cdn-image cloudinaryId="logos/asu-center.png" width="281" alt="ASU Center for Smart Cities and Regions logo"></cdn-image>
-      <cdn-image cloudinaryId="logos/kf-logo-stacked.png" width="240" alt="Knight Foundation logo"></cdn-image>
-    </div>
-    
-  </div>
-
 </footer>

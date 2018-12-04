@@ -1,6 +1,6 @@
 {
-  "name": "client",
-  "version": "0.0.0",
+  "name": "engagement-lab-website-2.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "source ~/.nvm/nvm.sh; nvm use; ng serve",
@@ -21,11 +21,11 @@
     "@angular/router": "~7.1.0",
     "@cloudinary/angular-5.x": "^1.0.2",
     "@nicky-lenaers/ngx-scroll-to": "^1.0.0",
-    "@types/greensock": "^1.15.32",
     "@types/gsap": "^1.20.0",
     "bulma": "^0.7.2",
     "cloudinary-core": "^2.5.0",
     "core-js": "^2.5.4",
+    "gsap": "^2.0.2",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.3.3",
     "sass-mq": "^5.0.0",
