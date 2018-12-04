@@ -1,0 +1,28 @@
+<div id="featured" class="columns">
+  <h1>Featured Project</h1>
+
+  <!-- <div class="is-one-third">{{projectFeatured.name}} </div> -->
+
+
+</div>
+
+<div class="controls">
+      <button type="button" class="control" data-filter="all">All <sup>{{projectTypesTotal}}</sup></button>
+      <button type="button" class="control" [attr.data-filter]="'.'+type" *ngFor="let type of projectTypeNames">{{type}} <sup>{{projectTypesCount[type]}}</sup></button>    
+    </div>
+      
+  <div id="projects" class="columns is-multiline is-centered">
+
+  <div #projectList class="project column is-one-third is-one-fourth-tablet mix {{project.projectType}}" *ngFor="let project of projects; let i = index;">
+    
+    <a routerLink="/projects/{{project.key}}">
+      <div class="bg">
+        <img src="{{project.image.secure_url}}" alt="Thumbnail image for {{project.name}}" aria-role="button" />
+      </div>
+
+      <h1>{{project.projectType}}</h1>
+      <h4>{{project.name}}</h4>
+
+    </a>
+  </div>
+</div>

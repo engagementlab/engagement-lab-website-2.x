@@ -1,24 +1,24 @@
-<nav class="columns">
+<nav class="columns is-mobile">
 
-	<div class="column is-four-fifths">
+	<div class="column is-one-fourth-mobile is-four-fifths-desktop">
 			<a id="home" routerLink="/">
 				<cdn-image cloudinaryId="logos/el-logo" width="423" alt="Button to go to home page" aria-role="button"></cdn-image>
 			</a>
 	</div>
 
 	<div class="column">
-		<a id="menu" (click)="openNav()" class="columns">
+		<a id="menu-btn" (click)="openNav()" class="columns">
 			<div class="column is-one-quarter">
 				<span></span>
 				<span></span>
 			</div>
-			<div id="label" class="column">Menu</div>
+			<div id="label" class="column hidden-mobile">Menu</div>
 		</a>
 	</div>
 
-<!-- 	
+	
 	<section id="menu">
 	
-	</section> -->
+	</section>
 
 </nav>

@@ -15,6 +15,7 @@ import cloudinaryConfiguration from './cdn.config';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectComponent } from './projects/project.component';
+import { ProjectIndexComponent } from './projects/index.component';
 import { HomeComponent } from './home.component';
 import { DataService } from './utils/data.service';
 import { NavComponent } from './nav/nav.component';
@@ -30,6 +31,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   // { path: 'about', component: AboutComponent },  
   
+  { path: 'projects', component: ProjectIndexComponent },
   { path: 'projects/:key', component: ProjectComponent }
 ];
 
@@ -40,7 +42,8 @@ export const routes: Routes = [
     ProjectComponent,
     NavComponent,
     FooterComponent,
-    CdnImageComponent
+    CdnImageComponent,
+    ProjectIndexComponent
   ],
   imports: [
     AppRoutingModule,

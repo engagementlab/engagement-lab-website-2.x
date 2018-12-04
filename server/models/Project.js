@@ -75,17 +75,18 @@ Project.add({
         label: 'Custom URL',
         note: 'Must be format of "projecturl". Overrides default "/projects/projectname".'
     },
-    format: {
-        type: Types.Relationship,
-        ref: 'Filter',
-        filters: {
-            category: 'Format',
-            appears: 'Project'
-        },
-        label: 'Type/Format of Product(s)',
-        many: true, 
-        note: 'What kind of project is this? Choose from below or add a Format Filter and choose \'Project\' as its destination.'
-    },
+    projectType: { type: Types.Select, label: 'Type', options: 'Curriculum, Event, Game, Tool', default: 'Curriculum', required: true, initial: true },
+    // format: {
+    //     type: Types.Relationship,
+    //     ref: 'Filter',
+    //     filters: {
+    //         category: 'Format',
+    //         appears: 'Project'
+    //     },
+    //     label: 'Type/Format of Product(s)',
+    //     many: true, 
+    //     note: 'What kind of project is this? Choose from below or add a Format Filter and choose \'Project\' as its destination.'
+    // },
     featured: {
         type: Types.Boolean,
         label: 'Featured', 

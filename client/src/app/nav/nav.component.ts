@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TweenLite, TimelineLite } from "gsap";
+// import { TweenLite, TimelineLite } from "gsap";
 
 @Component({
   selector: 'app-nav',
@@ -8,14 +8,14 @@ import { TweenLite, TimelineLite } from "gsap";
 })
 export class NavComponent implements OnInit {
 
-	tl: TimelineLite; 
+	// tl: TimelineLite; 
 
   constructor() { }
 
   ngOnInit() {
 
 
-  	this.tl = new TimelineLite({paused:true});
+/*   	this.tl = new TimelineLite({paused:true});
     
   	let tl = this.tl;
   	let open = document.getElementById('open');
@@ -29,12 +29,12 @@ export class NavComponent implements OnInit {
     tl.fromTo(close, .2, {autoAlpha:0, rotationY:90}, {autoAlpha:1, rotationY:0, display:'block'}, '+=0.1');
     tl.set(close, {css:{zIndex:21}});
     tl.fromTo(navEl, .6, {autoAlpha:0}, {top:0, autoAlpha:1, ease:gsap.Quad.easeOut}, '+=0.1');
-
+ */
   }
 
   openNav() {
 
-  	document.getElementById('menu').classList.toggle('open');
+  	document.getElementById('menu-btn').classList.toggle('open');
   	// this.tl.play();
 
   }

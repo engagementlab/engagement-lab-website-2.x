@@ -1,0 +1,56 @@
+@import "~src/styles/_variables";
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 1.5px; 
+}
+
+.controls {
+
+    button {
+        font-family: 'LunchtypeRegular';
+        font-size: 1.4em;
+        background: none;
+        border: 0;
+    }
+
+}
+
+.project {
+
+    a {
+        text-decoration: none; 
+    }
+
+    .bg {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        min-height: 450px;
+    }
+
+    &:nth-child(3n+1) {
+        .bg {
+            background-color: $tomato;
+        }
+    }
+    &:nth-child(3n+2) {
+        .bg {
+            background-color: $mango;
+        }
+    }
+    &:nth-child(3n+3) {
+        .bg {
+            background-color: $green-blue;
+        }
+    }
+
+    h4 {
+        font-size: 1.7em;
+    }
+
+    img {
+        // width: 70%;
+    }
+
+}

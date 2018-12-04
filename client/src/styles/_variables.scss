@@ -2,7 +2,12 @@
 $cdn-product: 'homepage-2.0';
 
 @import url('https://fonts.googleapis.com/css?family=Overpass:400,600,900');
-
+@font-face {
+    font-family: 'LunchtypeRegular';
+    src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-regular-webfont.woff2') format('woff2'), /* Super modern browsers */
+         url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-regular-webfont.woff') format('woff'), /* Modern browsers */
+         url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943478/homepage-2.0/fonts/Lunchtype22-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
 
 h1 {
     font-family: Overpass;
@@ -39,11 +44,15 @@ $yellow: #fecf33;
 $light-orange: #fdbd39;
 $peach: #ee6723;
 
+$tomato: #f72923;
+$green-blue: #00ab9e;
+$mango: #f6a536;
+
+
 $mq-breakpoints: (
     mobile:  320px,
     mobileLg:  360px,
-    // Forces mobile width forever
-    tablet:  10000px,
+    tablet:  1024px,
     tabletPortrait:  768px,
     desktop: 980px,
     wide:    1300px,

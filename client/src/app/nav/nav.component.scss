@@ -1,6 +1,14 @@
 @import "~src/styles/_variables";
 
-#menu {
+#home {
+    ::ng-deep img {
+        @include mobile-only {
+           width: 200px;
+        }
+    }
+}
+
+#menu-btn {
   font-family: Overpass;
   font-size: 18px;
   font-weight: 600;
