@@ -1,1 +1,67 @@
-{{content?.name}}
+<div class="columns is-multiline">
+
+  <h2 class="column is-full">{{content?.name}}</h2>
+
+  <h3 class="blurb column is-four-fifths-desktop">
+    {{content?.byline}}
+  </h3>
+</div>
+
+<div class="columns">
+
+  <div class="column is-one-third" *ngIf="content?.externalLinkUrl !== null">
+    <h4>Website</h4>
+    <a href="{{content?.externalLinkUrl}}" role="link">{{content?.externalLinkUrl | prettyUrl}}</a>
+  </div>
+
+  <div class="column is-one-third">
+    <h4>Principal Investigator</h4>
+    <div *ngFor="let pi of content?.principalInvestigator">
+      {{pi.name}}
+    </div>
+  </div>
+
+</div>
+
+<div class="blurb">
+
+  <div class="column is-two-thirds">{{content?.description}}</div>
+
+  <div class="columns is-centered">
+    <div class="column is-one-third">
+      <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[0].public_id}}" autoFormat="true" width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[0] !== null"></cdn-image>
+    </div>
+    <div class="column is-one-third">
+      <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[1].public_id}}" autoFormat="true" width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[0] !== null"></cdn-image>
+    </div>
+  </div>
+  <div *ngIf="content?.challengeTxt" class="columns">
+    <h3 class="column is-one-third uppercase">
+        Challenge
+    </h3>
+    <div class="column is-two-thirds">
+        {{content?.challengeTxt}}
+    </div>
+  </div>
+    <hr />
+
+    <div *ngIf="content?.strategyTxt" class="columns">
+    <h3 class="column is-one-third uppercase">
+        Strategy +<br />Approach
+    </h3>
+    <div class="column is-two-thirds">
+        {{content?.strategyTxt}}
+    </div>
+  </div>
+    <hr />
+
+  <div *ngIf="content?.strategyTxt" class="columns">
+      <h3 class="column is-one-third uppercase">
+        Results
+      </h3>
+      <div class="column is-two-thirds">
+          {{content?.resultsTxt}}
+      </div>
+    </div>
+    
+</div>

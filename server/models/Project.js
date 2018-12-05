@@ -70,12 +70,29 @@ Project.add({
         label: 'Enabled', 
         note: 'Determines if this project appears on the live site.'
     },
+    featured: {
+        type: Types.Boolean,
+        label: 'Featured', 
+        note: 'Determines if this project appears on the home page in the featured project slider.'
+    },
     customUrl: {
         type: String,
         label: 'Custom URL',
         note: 'Must be format of "projecturl". Overrides default "/projects/projectname".'
     },
     projectType: { type: Types.Select, label: 'Type', options: 'Curriculum, Event, Game, Tool', default: 'Curriculum', required: true, initial: true },
+    principalInvestigator: {
+        type: Types.Relationship,
+        ref: 'Filter',
+        filters: {
+            category: 'Person'
+        },
+        label: 'Principal Investigator(s)', 
+        note: 'Appears on the individual project page.', 
+        many: true
+    },
+
+
     // format: {
     //     type: Types.Relationship,
     //     ref: 'Filter',
@@ -86,12 +103,7 @@ Project.add({
     //     label: 'Type/Format of Product(s)',
     //     many: true, 
     //     note: 'What kind of project is this? Choose from below or add a Format Filter and choose \'Project\' as its destination.'
-    // },
-    featured: {
-        type: Types.Boolean,
-        label: 'Featured', 
-        note: 'Determines if this project appears on the home page in the featured project slider.'
-    }
+    // }
 },
 
 'Project Information', {
@@ -116,6 +128,13 @@ Project.add({
 },
 
 'Project Media', {
+    // Images for project page
+    projectImages: {
+        type: Types.CloudinaryImages,
+        folder: 'homepage-2.0/projects',
+        autoCleanup: true,
+        note: 'Images below/above main project info. Please use only high-quality images. To re-order, remove and upload again. **MAX of 3 images**'
+    },
     // Resource model reference for videos
     video: {
         type: Types.Relationship,
@@ -217,11 +236,6 @@ Project.schema.pre('save', function(next) {
     // Save state for post hook
     this.wasNew = this.isNew;
     this.wasModified = this.isModified();
-
-   /*  if (this.projectImages.length > 0 && (this.projectImages.length < this.projectImageCaptions.length)) {
-        var err = new Error('You cannot have more images than their respective captions.');
-        next(err);
-    } */
 
     next();
 

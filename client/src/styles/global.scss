@@ -9,13 +9,12 @@
 body {
   font-family: 'LunchtypeRegular';
   font-size: 20px;
+  color: black;
 
   @include mobile-only {
     font-size: 14px;
   }
 
-  color: black;
-  margin-top: 3%!important;  
 }
 
 // GLOBAL STYLING
@@ -23,7 +22,6 @@ body {
 .bold {
   font-weight: 700;
 }
-
 .medium {
   font-weight: 500;
 }
@@ -32,6 +30,20 @@ body {
 }
 .xx-large {
   font-size: xx-large;
+}
+
+.uppercase {
+
+  text-transform: uppercase;
+
+}
+
+.blurb {
+ 
+  font-size: 1.3em;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
+
 }
 
 .auto {  
@@ -44,13 +56,6 @@ body {
   padding: 0;
 }
 
-// Center any column, yay!
-.col-centered {
-  float: none;
-  display: inline-block;
-  margin: 0 auto;
-}
-
 .vert-center {
   position: relative;
   top: 50%;
@@ -61,23 +66,6 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-  }
-}
-
-.row-sm {
-  @include mq($from: mobileLg) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
-.row-lg {
-  @include mq($from: tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
   }
 }
 

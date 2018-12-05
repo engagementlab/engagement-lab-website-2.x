@@ -23,10 +23,10 @@ export class ProjectIndexComponent implements OnInit {
   
     this._dataSvc.getDataForUrl('projects/get/').subscribe(response => {
         this.projects = response;    
-        // this.projectFeatured = _.find(response, (obj) => {
-        //   return obj.featured;
-        // });    
-       
+        this.projectFeatured = _.find(response, (obj) => {
+          return obj.featured;
+        });    
+        
         // get count of each project types
         this.projectTypesCount = _.countBy(response, (obj) => {
           return obj.projectType;

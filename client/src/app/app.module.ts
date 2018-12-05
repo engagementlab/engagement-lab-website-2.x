@@ -5,6 +5,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 // Utils
 import { CdnImageComponent } from './utils/cdn-image/cdn-image.component';
+import { ButtonComponent } from './utils/app-button/button.component';
 
 // NPM
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
@@ -20,6 +21,7 @@ import { HomeComponent } from './home.component';
 import { DataService } from './utils/data.service';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { PrettyUrlPipe } from './utils/pretty-url.pipe';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -39,11 +41,13 @@ export const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
+    ProjectIndexComponent,
     ProjectComponent,
     NavComponent,
     FooterComponent,
     CdnImageComponent,
-    ProjectIndexComponent
+    ButtonComponent,
+    PrettyUrlPipe
   ],
   imports: [
     AppRoutingModule,

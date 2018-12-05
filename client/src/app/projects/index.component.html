@@ -1,7 +1,18 @@
-<div id="featured" class="columns">
-  <h1>Featured Project</h1>
+<div id="featured" class="columns is-multiline">
+  <h1 class="column is-full uppercase">Featured Project</h1>
 
-  <!-- <div class="is-one-third">{{projectFeatured.name}} </div> -->
+  <div class="column is-one-third">
+    
+    <h2>{{projectFeatured?.name}}</h2>
+    <h3>{{projectFeatured?.projectType}}</h3>
+    <div class="blurb">
+        {{projectFeatured?.byline}}   
+    </div>
+    <app-button label="view" route="/projects/{{projectFeatured?.key}}" ariaLabel="Go to '{{projectFeatured?.name}}' project"></app-button>
+  </div>
+  <div class="column is-one-third">
+      <img src="{{projectFeatured?.image.secure_url}}" alt="Thumbnail image for {{projectFeatured?.name}}" aria-role="image" />
+  </div>
 
 
 </div>

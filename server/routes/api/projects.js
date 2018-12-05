@@ -16,14 +16,14 @@ mongoose.Promise = require('bluebird');
 var buildData = (options, res) => {
 
     let list = keystone.list('Project').model;
-    let fields = 'key image name featured projectType customUrl';
+    let fields = 'key image byline name featured projectType customUrl';
     let data;
 
     if (options.id) {
-        let addtlFields = 'byline description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl';
+        let addtlFields = 'description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
         data = list.findOne({
             key: options.id
-        }, fields + ' ' + addtlFields).populate('format');
+        }, fields + ' ' + addtlFields).populate('format principalInvestigator');
     }
     else if (options.limit)
         data = list.find({}, ).sort([

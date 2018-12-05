@@ -9,6 +9,7 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 export class CdnImageComponent implements OnInit {
 
 	@Input() cloudinaryId: string;
+	@Input() cloudinaryPrefix: string;
 	@Input() alt: string;
   @Input() height: number;
 	@Input() width: number;
@@ -22,11 +23,13 @@ export class CdnImageComponent implements OnInit {
   }
 
   ngOnInit() {
-    
-    this.imgId = 'homepage-2.0/' + this.cloudinaryId;
+
+    this.imgId = (this.cloudinaryPrefix ? this.cloudinaryPrefix : 'homepage-2.0/') + this.cloudinaryId;
 
     if(this.width)
       this.widthCss = this._sanitizer.bypassSecurityTrustStyle('max-width:' + this.width+'px');
+
+      console.log(this.autoFormat)
 
   }
 
