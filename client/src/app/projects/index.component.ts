@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import * as AOS from 'aos';
 
 import { DataService } from '../utils/data.service';
 import mixitup from 'mixitup';
@@ -45,7 +46,7 @@ export class ProjectIndexComponent implements OnInit {
     this.projectList.changes.subscribe(t => {
   
         let mixer = mixitup(document.getElementById('projects'));
-        console.log(mixer)
+        AOS.init();
     });
 
   }

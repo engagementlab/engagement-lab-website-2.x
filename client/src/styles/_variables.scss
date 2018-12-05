@@ -8,6 +8,12 @@ $cdn-product: 'homepage-2.0';
          url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-regular-webfont.woff') format('woff'), /* Modern browsers */
          url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943478/homepage-2.0/fonts/Lunchtype22-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
   }
+  @font-face {
+      font-family: 'LunchtypeMedium';
+      src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff2') format('woff2'), /* Super modern browsers */
+           url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff') format('woff'), /* Modern browsers */
+           url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943478/homepage-2.0/fonts/Lunchtype22-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+    }
 
 h1 {
     font-family: Overpass;

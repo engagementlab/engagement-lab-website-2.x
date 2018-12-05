@@ -24,7 +24,7 @@
       
   <div id="projects" class="columns is-multiline is-centered">
 
-  <div #projectList class="project column is-one-third is-one-fourth-tablet mix {{project.projectType}}" *ngFor="let project of projects; let i = index;">
+  <div #projectList class="project column is-one-third is-one-fourth-tablet mix {{project.projectType}}"  data-aos="flip-down" data-aos-delay="0" *ngFor="let project of projects; let i = index;">
     
     <a routerLink="/projects/{{project.key}}">
       <div class="bg">

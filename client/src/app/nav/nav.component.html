@@ -1,24 +1,37 @@
 <nav class="columns is-mobile">
 
-	<div class="column is-one-fourth-mobile is-four-fifths-desktop">
-			<a id="home" routerLink="/">
-				<cdn-image cloudinaryId="logos/el-logo" width="423" alt="Button to go to home page" aria-role="button"></cdn-image>
-			</a>
-	</div>
+  <div class="column is-one-fourth-mobile is-four-fifths-desktop">
+    <a id="home" routerLink="/">
+      <cdn-image cloudinaryId="logos/el-logo" width="423" alt="Button to go to home page" aria-role="button"></cdn-image>
+    </a>
+  </div>
 
-	<div class="column">
-		<a id="menu-btn" (click)="openNav()" class="columns uppercase">
-			<div class="column is-one-quarter">
-				<span></span>
-				<span></span>
-			</div>
-			<div id="label" class="column hidden-mobile">Menu</div>
-		</a>
-	</div>
-
-	
-	<section id="menu">
-	
-	</section>
+  <div class="column">
+    <a id="menu-btn" (click)="openNav()" class="columns uppercase">
+      <div id="lines" class="column is-one-quarter">
+        <span></span>
+        <span></span>
+      </div>
+      <div id="label" class="column hidden-mobile">
+        <div class="open">Menu</div>
+        <div class="close">Close</div>
+      </div>
+    </a>
+  </div>
 
 </nav>
+
+
+<section id="menu" class="columns">
+
+	<div class="column is-two-thirds">
+		<h3><a routerLink="/about">About</a></h3>
+		<h3><a routerLink="/projects">Projects</a></h3>
+		<h3><a routerLink="/publications">Publications</a></h3>
+	</div>
+	<div class="column is-two-thirds">
+		<h3><a routerLink="/masters">Masters Program</a></h3>
+		<h3><a routerLink="/get-involved">Get Involved</a></h3>
+	</div>
+
+</section>
