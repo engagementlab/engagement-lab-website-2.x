@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Developed by Engagement Lab, 2018
  * ==============

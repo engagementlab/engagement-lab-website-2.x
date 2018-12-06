@@ -39,9 +39,9 @@ export class NavComponent implements OnInit {
     // TweenLite.set(close, {transformStyle:'preserve-3d'});
   	// tl.fromTo(open, .1, {autoAlpha:1}, {autoAlpha:0, rotationY:90});
     // tl.fromTo(close, .2, {autoAlpha:0, rotationY:90}, {autoAlpha:1, rotationY:0, display:'block'}, '+=0.1');
-    tl.fromTo(navEl, .7, {yPercent:-100}, { yPercent:0, display:'flex', ease:Circ.easeOut}, '+=.01');
-    tl.fromTo(document.getElementById('menu-overlay'), .4, {autoAlpha:0, display:'none'}, {autoAlpha:.97, display:'block'}, '-=.7');
     tl.set([navEl, document.getElementById('menu-btn')], {css:{position:'fixed'}});
+    tl.fromTo(navEl, .7, {autoAlpha:0}, {autoAlpha:1, display:'flex', ease:Circ.easeOut}, '+=.01');
+    tl.fromTo(document.getElementById('menu-overlay'), .5, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'}, '-=.7');
 
   }
 

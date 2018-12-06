@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
-import * as AOS from 'aos';
 
 import { DataService } from '../utils/data.service';
+
+import * as cl from 'cloudinary-core';
 import mixitup from 'mixitup';
 import * as _ from 'underscore';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-index',

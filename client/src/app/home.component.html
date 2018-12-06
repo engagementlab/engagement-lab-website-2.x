@@ -1,3 +1,47 @@
-<p>
-  home works!
-</p>
+<h1 class="column is-full uppercase">Our Initiatives</h1>
+<hr />
+
+<section id="initiatives">
+<div #initiativeList class="initiative columns is-one-third" *ngFor="let initiative of initiatives; let i = index;">
+
+  <div class="column is-half">
+    <h2 data-aos="fade-in">{{initiative.name}}</h2>
+    <cdn-image data-aos="fade-up-left" cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true" width="600" alt="Artwork image for '{{initiative.name}}' initiative"></cdn-image>
+  </div>
+
+  <div data-aos="slide-left" class="column is-half">
+    <p>{{initiative.description}}</p>
+    <h3 class="uppercase">Related Case Studies</h3>
+    <hr />
+
+    <div class="project" *ngFor="let project of initiative.projects">
+      <a routerLink="/projects/{{project.key}}">
+        {{project.name}}
+      </a>
+      <hr />
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- featured projects -->
+<section id="projects-wrap">
+<h1 class="column is-full uppercase">Featured Projects</h1>
+<div id="projects" class="columns">
+<div #projectList class="project column is-half" *ngFor="let project of featuredProjects">
+    
+    <a routerLink="/projects/{{project.key}}">
+      <div class="bg">
+        <span role="tooltip">view</span>
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" width="450" alt="Thumbnail image for '{{project.name}}' project"></cdn-image>
+      </div>
+
+      <p class="name">{{project.name}}</p>
+      <p class="type uppercase">{{project.projectType}}</p>
+      <p class="byline">{{project.byline}}</p>
+
+    </a>
+  </div>
+  </div>
+  </section>

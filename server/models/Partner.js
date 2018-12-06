@@ -1,5 +1,6 @@
+'use strict';
 /**
- * Engagement Lab Website
+ * Engagement Lab Website v2.x
  * 
  * Parner Model
  * @module team

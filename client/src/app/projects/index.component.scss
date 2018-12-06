@@ -29,22 +29,6 @@ h1 {
         min-height: 450px;
     }
 
-    &:nth-child(3n+1) {
-        .bg {
-            background-color: $tomato;
-        }
-    }
-    &:nth-child(3n+2) {
-        .bg {
-            background-color: $mango;
-        }
-    }
-    &:nth-child(3n+3) {
-        .bg {
-            background-color: $green-blue;
-        }
-    }
-
     h4 {
         font-size: 1.7em;
     }

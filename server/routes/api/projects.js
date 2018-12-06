@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Developed by Engagement Lab, 2018
  * ==============
@@ -33,10 +34,12 @@ var buildData = (options, res) => {
     else if(options.featured)
         data = list.find({
             'enabled': true,
-            'featured': true});
+            'featured': true})
+            .sort([['sortOrder', 'descending']]);
 
     else
-        data = list.find({'enabled': true}, fields);
+        data = list.find({'enabled': true}, fields)
+                   .sort([['sortOrder', 'descending']]);
 
     data.exec();
     Bluebird.props({

@@ -1,7 +1,7 @@
+'use strict';
 /**
- * Boston Civic Media
+ * Engagement Lab Website v2.x
  * 
- * Research category Modelz
  * @class Filters
  * @author Erica Salling
  * 

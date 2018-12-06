@@ -61,8 +61,9 @@ router.all('/*', function(req, res, next) {
 
 });
 
-router.all('/api/tv/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.tv.get);
+router.all('/api/homepage/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.home.get);
 router.all('/api/projects/get/:project_key?', [keystone.middleware.api, keystone.middleware.cors], routes.api.projects.get);
+router.all('/api/tv/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.tv.get);
 
 // // Participatory Pokémon Go redirect
 // router.all('/pokemon', function(req, res, next) {

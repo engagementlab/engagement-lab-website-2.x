@@ -4,8 +4,7 @@
   "version": "2.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "source ~/.nvm/nvm.sh; nvm use; node app.js",
-    "build": "ng build"
+    "start": "source ~/.nvm/nvm.sh; nvm use; node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +14,7 @@
     "bluebird": "^3.5.3",
     "cloudinary": "^1.13.2",
     "dotenv": "^6.1.0",
+    "el-bootstrapper": "git://github.com/engagementlab/el-bootstrapper.git",
     "express": "^4.16.4",
     "i": "^0.3.6",
     "keystone-storage-adapter-azure": "^1.1.0",

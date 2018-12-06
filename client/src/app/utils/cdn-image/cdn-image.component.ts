@@ -29,7 +29,7 @@ export class CdnImageComponent implements OnInit {
     if(this.width)
       this.widthCss = this._sanitizer.bypassSecurityTrustStyle('max-width:' + this.width+'px');
 
-      console.log(this.autoFormat)
+      // console.log(this.cloudinaryId)
 
   }
 

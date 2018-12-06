@@ -35,7 +35,7 @@ nav {
       left: 0;
 
       @include transform(rotate(0deg));
-      @include transition(all, .25s, ease-in-out);
+      @include transition(all, .7s, ease-in-out);
 
       &:nth-child(2) {
         position: relative;
@@ -47,7 +47,12 @@ nav {
   }
 
   #label {
-      display: flex;
+    display: flex;
+
+    .open {
+      position: absolute;
+    }
+
     .close {
       opacity: 0;
     }

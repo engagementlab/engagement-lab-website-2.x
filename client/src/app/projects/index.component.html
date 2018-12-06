@@ -1,4 +1,4 @@
-<div id="featured" class="columns is-multiline">
+<div id="featured" class="columns is-multiline" *ngIf="projectFeatured !== undefined">
   <h1 class="column is-full uppercase">Featured Project</h1>
 
   <div class="column is-one-third">
@@ -8,10 +8,10 @@
     <div class="blurb">
         {{projectFeatured?.byline}}   
     </div>
-    <app-button label="view" route="/projects/{{projectFeatured?.key}}" ariaLabel="Go to '{{projectFeatured?.name}}' project"></app-button>
+    <app-button data-aos="fade-in" data-aos-delay="7" label="view" route="/projects/{{projectFeatured?.key}}" ariaLabel="Go to '{{projectFeatured?.name}}' project"></app-button>
   </div>
   <div class="column is-one-third">
-      <img src="{{projectFeatured?.image.secure_url}}" alt="Thumbnail image for {{projectFeatured?.name}}" aria-role="image" />
+      <cdn-image cloudinaryPrefix="/" cloudinaryId="{{projectFeatured.image.public_id}}" autoFormat="true" alt="Thumbnail image for '{{content?.name}}' project"></cdn-image>
   </div>
 
 
@@ -24,11 +24,12 @@
       
   <div id="projects" class="columns is-multiline is-centered">
 
-  <div #projectList class="project column is-one-third is-one-fourth-tablet mix {{project.projectType}}"  data-aos="flip-down" data-aos-delay="0" *ngFor="let project of projects; let i = index;">
+  <div #projectList class="project column is-one-third is-one-fourth-tablet mix {{project.projectType}}" data-aos="fade-in" *ngFor="let project of projects; let i = index;">
     
     <a routerLink="/projects/{{project.key}}">
       <div class="bg">
-        <img src="{{project.image.secure_url}}" alt="Thumbnail image for {{project.name}}" aria-role="button" />
+        <span role="tooltip">view</span>
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" width="600" alt="Thumbnail image for '{{project.name}}' project"></cdn-image>
       </div>
 
       <h1>{{project.projectType}}</h1>

@@ -1,4 +1,5 @@
  'use strict';
+'use strict';
 /**
  * Engagement Lab Website v2.x
  * Developed by Engagement Lab, 2018

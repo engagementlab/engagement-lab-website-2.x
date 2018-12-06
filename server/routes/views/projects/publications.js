@@ -1,6 +1,7 @@
 'use strict';
+'use strict';
 /**
- * Engagement Lab Website
+ * Engagement Lab Website v2.x
  * Developed by Engagement Lab, 2015
  * ==============
  * Research projects directory view controller.

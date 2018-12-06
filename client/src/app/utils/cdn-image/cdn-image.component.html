@@ -1,10 +1,10 @@
-<cl-image *ngIf="cloudinaryId !== undefined && cloudinaryId.length > 0" secure="true" public-id="{{imgId}}" attr.alt="{{alt}}"
-  [style]="widthCss" class="cdn-image">
+<cl-image *ngIf="cloudinaryId !== undefined && cloudinaryId.length > 0" secure="true" public-id="{{imgId}}" attr.width="auto:breakpoints:{{width}}"
+  sizes="100vw" client_hints="true" attr.alt="{{alt}}" [style]="widthCss" class="cdn-image">
 
-  <cl-transformation *ngIf="autoFormat === 'true'" attr.width="{{width}}" attr.height="{{height}}" attr.quality="{{quality}}"
-    crop="scale" fetch-format="auto" dpr="auto" crop="fill"></cl-transformation>
+  <cl-transformation *ngIf="autoFormat === 'true'" attr.height="{{height}}" attr.quality="{{quality}}" crop="scale"
+    fetch-format="auto" dpr="auto" crop="scale"></cl-transformation>
 
-  <cl-transformation *ngIf="autoFormat === 'false'" attr.width="{{width}}" attr.height="{{height}}" attr.quality="{{quality}}"
+  <cl-transformation *ngIf="autoFormat === 'false'" attr.width="auto" attr.height="{{height}}" attr.quality="{{quality}}"
     crop="scale" dpr="auto" crop="fill"></cl-transformation>
 
 </cl-image>

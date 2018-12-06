@@ -1,5 +1,6 @@
+'use strict';
 /**
- * Engagement Lab Website
+ * Engagement Lab Website v2.x
  * 
  * CPI CPIPartner Model
  * @module models

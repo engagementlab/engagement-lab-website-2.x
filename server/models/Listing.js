@@ -1,5 +1,6 @@
+'use strict';
 /**
- * Engagement Lab Website
+ * Engagement Lab Website v2.x
  * 
  * Page category Model
  * @module listing
@@ -32,7 +33,7 @@ var Listing = new keystone.List('Listing', {
  * Local Methods
  * =============
  */
-safeString = function(str) {
+let safeString = function(str) {
     return str.toLowerCase().replace(/\s+/g, '-').replace(',', '');
 };
 

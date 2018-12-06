@@ -1,0 +1,38 @@
+#projects-wrap {
+
+    background-color: black;
+    color: white;
+    padding: 2%;
+
+    a, h1 {
+        color: white;
+    }
+    a {
+        text-decoration: none;
+    }
+    p {
+        &.name {
+            margin-bottom: 1%;
+            font-size: 1.8em;
+            font-weight: 500;
+            line-height: 1.36;
+            letter-spacing: 1px;
+        }
+        &.type {
+            font-weight: bold;
+            line-height: 1.33;
+            letter-spacing: 1px;
+        }
+        &.byline {
+            font-size: 1.2em;
+            line-height: 1.42;
+            letter-spacing: 0.5px;
+        }
+    }
+    
+    #projects {
+        padding-left: 2%;
+        padding-right: 6%;
+    }
+
+}
