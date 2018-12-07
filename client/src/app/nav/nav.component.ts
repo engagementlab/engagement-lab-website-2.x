@@ -12,7 +12,8 @@ import { TimelineLite, Circ, TweenLite } from "gsap";
 })
 export class NavComponent implements OnInit {
 
-	tl: TimelineLite; 
+  tl: TimelineLite; 
+  btn: HTMLElement;
 
   constructor(private _router: Router) { 
   
@@ -26,36 +27,30 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
 
-
+    this.btn = document.getElementById('menu-btn');
    	this.tl = new TimelineLite({paused:true, reversed:true});
     
   	let tl = this.tl;
-  	// let open = document.getElementById('open');
-    // let close = document.getElementById('close');
-  	// let home = document.getElementById(ismobile.phone ? 'home-mobile' : 'home');
   	let navEl = document.getElementById('menu');
+    // let opened = this.btn.classList.contains('open');
+    let show = document.querySelector('#menu-btn .close');
+    let hide = document.querySelector('#menu-btn .open');
 
-    // TweenLite.set(open, {transformStyle:'preserve-3d'});
-    // TweenLite.set(close, {transformStyle:'preserve-3d'});
-  	// tl.fromTo(open, .1, {autoAlpha:1}, {autoAlpha:0, rotationY:90});
-    // tl.fromTo(close, .2, {autoAlpha:0, rotationY:90}, {autoAlpha:1, rotationY:0, display:'block'}, '+=0.1');
-    tl.set([navEl, document.getElementById('menu-btn')], {css:{position:'fixed'}});
-    tl.fromTo(navEl, .7, {autoAlpha:0}, {autoAlpha:1, display:'flex', ease:Circ.easeOut}, '+=.01');
+    // tl.set([navEl, document.getElementById('menu-btn')], {css:{position:'fixed'}});
+    tl.add('start');
+    tl.set(this.btn, {className:'+=open'}, 'start');
+    
+    tl.fromTo(show, .7, {xPercent:100, autoAlpha:0}, { xPercent:0, autoAlpha:1, ease:Circ.easeOut});
+    tl.fromTo(hide, .7, {xPercent:0, autoAlpha:1}, { xPercent:100, autoAlpha:0, ease:Circ.easeOut}, '-=.7');
+
+    tl.fromTo(navEl, .7, {autoAlpha:0}, {autoAlpha:1, display:'flex', ease:Circ.easeOut}, '-=.7');
     tl.fromTo(document.getElementById('menu-overlay'), .5, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'}, '-=.7');
 
   }
 
   openNav() {
 
-    let btn = document.getElementById('menu-btn');
-    
-    btn.classList.toggle('open');
-    let opened = btn.classList.contains('open');
-    let show = document.querySelector('#menu-btn .' + (opened ? 'close': 'open'));
-    let hide = document.querySelector('#menu-btn .' + (!opened ? 'close': 'open'));
-    
-    TweenLite.fromTo(show, .7, {xPercent:100, autoAlpha:0}, { xPercent:0, autoAlpha:1, ease:Circ.easeOut});
-    TweenLite.fromTo(hide, .7, {xPercent:0, autoAlpha:1}, { xPercent:100, autoAlpha:0, ease:Circ.easeOut});
+    // this.btn.classList.toggle('open');
     if(!this.tl.reversed())
       this.tl.reverse();
     else

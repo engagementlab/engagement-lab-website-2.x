@@ -10,7 +10,7 @@ import { DataService } from '../utils/data.service';
 })
 export class ProjectComponent implements OnInit {
 
-  private content: any[];
+  public content: any;
 
   constructor(private _dataSvc: DataService, private _route: ActivatedRoute) { 
 

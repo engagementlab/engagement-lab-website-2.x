@@ -1,3 +1,17 @@
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+    color: black;
+    }
+}
+#initiatives {
+    .project {
+        border-bottom: solid 2px black;
+    }
+}
 #projects-wrap {
 
     background-color: black;
@@ -6,9 +20,6 @@
 
     a, h1 {
         color: white;
-    }
-    a {
-        text-decoration: none;
     }
     p {
         &.name {
@@ -36,3 +47,10 @@
     }
 
 }
+
+// #events {
+//     .name {
+//         justify-content: left;
+//         align-items: baseline;
+//     }
+// }

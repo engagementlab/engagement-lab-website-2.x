@@ -1,47 +1,63 @@
 <h1 class="column is-full uppercase">Our Initiatives</h1>
 <hr />
 
+<!-- initiatives -->
 <section id="initiatives">
-<div #initiativeList class="initiative columns is-one-third" *ngFor="let initiative of initiatives; let i = index;">
+  <div #initiativeList class="initiative columns is-one-third" *ngFor="let initiative of initiatives; let i = index;">
 
-  <div class="column is-half">
-    <h2 data-aos="fade-in">{{initiative.name}}</h2>
-    <cdn-image data-aos="fade-up-left" cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true" width="600" alt="Artwork image for '{{initiative.name}}' initiative"></cdn-image>
-  </div>
-
-  <div data-aos="slide-left" class="column is-half">
-    <p>{{initiative.description}}</p>
-    <h3 class="uppercase">Related Case Studies</h3>
-    <hr />
-
-    <div class="project" *ngFor="let project of initiative.projects">
-      <a routerLink="/projects/{{project.key}}">
-        {{project.name}}
-      </a>
-      <hr />
+    <div class="column is-half">
+      <h2 data-aos="fade-in">{{initiative.name}}</h2>
+      <cdn-image data-aos="fade-up-left" cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true"
+        width="600" alt="Artwork image for '{{initiative.name}}' initiative"></cdn-image>
     </div>
-  </div>
 
-</div>
+    <div data-aos="slide-left" class="column">
+      <p>{{initiative.description}}</p>
+      <h3 class="uppercase">Related Case Studies</h3>
+      <hr />
+
+      <div class="project" *ngFor="let project of initiative.projects">
+        <a routerLink="/projects/{{project.key}}">
+          {{project.name}}
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- featured projects -->
 <section id="projects-wrap">
-<h1 class="column is-full uppercase">Featured Projects</h1>
-<div id="projects" class="columns">
-<div #projectList class="project column is-half" *ngFor="let project of featuredProjects">
-    
-    <a routerLink="/projects/{{project.key}}">
-      <div class="bg">
-        <span role="tooltip">view</span>
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" width="450" alt="Thumbnail image for '{{project.name}}' project"></cdn-image>
-      </div>
+  <h1 class="column is-full uppercase">Featured Projects</h1>
+  <div id="projects" class="columns">
+    <div #projectList class="project column is-half" *ngFor="let project of featuredProjects">
 
-      <p class="name">{{project.name}}</p>
-      <p class="type uppercase">{{project.projectType}}</p>
-      <p class="byline">{{project.byline}}</p>
+      <a routerLink="/projects/{{project.key}}">
+        <div class="bg">
+          <span role="tooltip">view</span>
+          <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" width="450" alt="Thumbnail image for '{{project.name}}' project"></cdn-image>
+        </div>
 
-    </a>
+        <p class="name">{{project.name}}</p>
+        <p class="type uppercase">{{project.projectType}}</p>
+        <p class="byline">{{project.byline}}</p>
+
+      </a>
+    </div>
   </div>
-  </div>
+</section>
+
+<!-- events -->
+<section id="events" class="columns is-multiline">
+    <h1 class="column is-full uppercase">Events</h1>
+    <div #eventList class="event column is-full" *ngFor="let event of events">
+
+      <a href="{{event.eventUrl}}" class="columns">
+
+        <div class="date column is-one-fifth">{{event.date | date: 'MMMM dd'}}</div>
+        <h2 class="name column no-margin">{{event.name}}</h2>
+
+      </a>
+    </div>
   </section>
+  

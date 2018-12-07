@@ -13,12 +13,13 @@
  */
 const keystone = global.keystone;
 const Types = keystone.Field.Types;
+const validator = require('validator');
 
 var Event = new keystone.List('Event', {
     label: 'Events',
     singular: 'Event',
     autokey: {
-        path: 'event_key',
+        path: 'key',
         from: 'name',
         unique: true
     },
@@ -26,11 +27,38 @@ var Event = new keystone.List('Event', {
 });
 
 /**
+ * Field Validators
+ * @main Event
+ */
+var urlValidator = {
+    validator: function(val) {
+        return !val || validator.isURL(val, {
+            protocols: ['http', 'https'],
+            require_tld: true,
+            require_protocol: false,
+            allow_underscores: true
+        });
+    },
+    msg: 'Invalid link URL (e.g. needs http:// and .abc/)'
+};
+
+/**
  * Model Fields
  * @main About
  */
 Event.add({
 
+    // TODO: use for index?
+    /* featured: {
+        type: Types.Boolean,
+        label: 'Featured Event',
+        note: 'Only one event should be featured'
+    }, */
+    enabled: {
+        type: Types.Boolean,
+        label: 'Enabled',
+        note: 'Will never appear on site if not enabled'
+    },
     name: {
         type: String,
         default: 'Name of Event',
@@ -57,9 +85,13 @@ Event.add({
         required: true,
         initial: true
     },
-    eventbriteURL: {
-        type: String,
-        label: 'Eventbrite URL'
+    eventUrl: {
+        type: Types.Url,
+        label: 'Event URL',
+        validate: urlValidator,
+        note: 'Must be in format "http://www.something.org".',
+        required: true,
+        initial: true
     },
     hackpadURL: {
         type: String,
@@ -68,16 +100,6 @@ Event.add({
     additionalURL: {
         type: String,
         label: "Summary Blog Post URL"
-    },
-    featured: {
-        type: Types.Boolean,
-        label: 'Featured Event',
-        note: 'Only one event should be featured'
-    },
-    enabled: {
-        type: Types.Boolean,
-        label: 'Enabled',
-        note: 'Will never appear on site if not enabled'
     },
     createdAt: {
         type: Date,

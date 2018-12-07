@@ -10,8 +10,9 @@ import * as AOS from 'aos';
 })
 export class HomeComponent implements OnInit {
 
-  private initiatives: any[];
-  private featuredProjects: any[];
+  public initiatives: any[];
+  public featuredProjects: any[];
+  public events: any[];
 
   @ViewChildren('initiativeList') initiativeList: QueryList<any>;
 
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
     this._dataSvc.getDataForUrl('homepage/get/').subscribe(response => {
       this.initiatives = response.initiatives;    
       this.featuredProjects = response.projects;    
+      this.events = response.events;    
     });
 
   }

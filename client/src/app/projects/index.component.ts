@@ -14,11 +14,11 @@ import * as AOS from 'aos';
 })
 export class ProjectIndexComponent implements OnInit {
 
-  private projects: any[];
-  private projectFeatured: any;
-  private projectTypeNames: string[];
-  private projectTypesCount: Object;
-  private projectTypesTotal: number;
+  public projects: any[];
+  public projectFeatured: any;
+  public projectTypeNames: string[];
+  public projectTypesCount: Object;
+  public projectTypesTotal: number;
 
   @ViewChildren('projectList') projectList: QueryList<any>;
 
