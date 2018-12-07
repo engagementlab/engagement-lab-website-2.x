@@ -15,7 +15,7 @@
       "name": "engagement-lab-website-client",      
       "exec_interpreter": "/home/node/.nvm/versions/node/v10.14.0/bin/node",
       "script": "/home/node/.nvm/versions/node/v10.14.0/bin/http-server",
-      "args": "/srv/engagement-lab-website-client-2.0/source/client/dist/engagement-lab-website -p 8081"
+      "args": "/srv/engagement-lab-website-client-2.0/source/client/dist/engagement-lab-website -p 8082"
     }],
   "deploy" : {
 
