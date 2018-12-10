@@ -1,0 +1,17 @@
+@import "~src/styles/_variables";
+
+#portfolio {
+    .icon {
+        max-width: 100px;
+        
+        &.tomato {
+            @include circular-background($tomato);
+        }
+        &.gb {
+            @include circular-background($green-blue);
+        }
+        &.mango {
+            @include circular-background($mango);
+        }
+    }
+}

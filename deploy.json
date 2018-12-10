@@ -15,7 +15,7 @@
       "name": "engagement-lab-website-client",      
       "exec_interpreter": "/home/node/.nvm/versions/node/v10.14.0/bin/node",
       "script": "/home/node/.nvm/versions/node/v10.14.0/bin/http-server",
-      "args": "/srv/engagementlab-website-client-2.0/source/client/dist -p 8082"
+      "args": "/srv/engagement-lab-website-2.0/source/client/dist -p 8082"
     }],
   "deploy" : {
 
@@ -29,19 +29,6 @@
       "post-deploy" : "cd client ; nvm use ; npm i ; npm run build-qa ; pm2 restart 'engagement-lab-website-client'; cd ../server ; nvm use ; npm i ; pm2 restart 'engagement-lab-website-server'",
       "env": {
         "NODE_ENV": "staging"
-      }
-    },
-
-    "production" : {
-      "user": "node",
-      "host": "199.94.80.32",
-      "repo": "git@github.com:engagementgamelab/engagement-lab-website.git",
-      "ref": "origin/production",
-      "path": "/srv/engagement-lab-website-2.0",
-      "pre-deploy-local" : "echo 'Cloning and running npm install. Be patient.'",
-      "post-deploy" : "cd /srv/engagement-lab-website-2.0/source ; npm i ; cd /srv/framework-4.0/source/ ; npm link /srv/engagement-lab-website-2.0/current ; grunt compile --sites=engagement-lab-website ; source ~/.nvm/nvm.sh ; nvm use ; pm2 restart 'server' --env production",
-      "env": {
-        "NODE_ENV": "production"
       }
     }
 
