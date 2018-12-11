@@ -1,0 +1,37 @@
+<div class="people-grid">
+
+    <div *ngIf="preview === true" id="top">
+        <h1 class="uppercase">Team</h1>
+
+        <div id="right">
+            <a routerLink="/team">
+                <h4>view all</h4>
+            </a>
+
+            <div id="controls">
+                <button id="prev" type="button" class="control">
+                    <cdn-image cloudinaryId="team/nav-btn-back" width="32" alt="Previous team slides"></cdn-image>
+                </button>
+                <button id="next" type="button" class="control">
+                    <cdn-image cloudinaryId="team/nav-btn-next" width="32" alt="Next team slides"></cdn-image>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="list" [ngClass]="{'is-multiline columns' : preview === false}">
+        
+        <div #teamList class="person" [ngClass]="{'column is-one-quarter' : preview === false}" *ngFor="let person of people; let i = index;">
+            <a [class.white]="preview === true" routerLink="/team/{{person.key}}">
+                
+                <cdn-image cloudinaryPrefix="/" cloudinaryId="{{person.image.public_id}}" autoFormat="true" effect="grayscale"
+                    width="270" alt="Portrait image of {{person.name.first}} {{person.name.last}}"></cdn-image>
+                <div class="name">{{person.name.first}} {{person.name.last}}</div>
+                <div class="title">{{person.title}}</div>
+
+            </a>
+        </div>
+
+    </div>
+
+</div>

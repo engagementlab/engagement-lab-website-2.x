@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 // Utils
 import { CdnImageComponent } from './utils/cdn-image/cdn-image.component';
 import { ButtonComponent } from './utils/app-button/button.component';
+import { PrettyUrlPipe } from './utils/pretty-url.pipe';
 
 // NPM
 import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
@@ -18,10 +19,14 @@ import { AboutComponent } from './about/about.component';
 import { ProjectComponent } from './projects/project.component';
 import { ProjectIndexComponent } from './projects/index.component';
 import { HomeComponent } from './home.component';
-import { DataService } from './utils/data.service';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
-import { PrettyUrlPipe } from './utils/pretty-url.pipe';
+import { TeamComponent } from './team/team.component';
+import { RedirectComponent } from './redirect/redirect.component';
+
+import { DataService } from './utils/data.service';
+import { RedirectService } from './utils/redirect.service';
+import { PeopleGridComponent } from './team/people-grid.component';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -32,9 +37,22 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },  
+  { path: 'team', component: TeamComponent },  
+  { path: 'team/:key', component: TeamComponent },  
   
   { path: 'projects', component: ProjectIndexComponent },
-  { path: 'projects/:key', component: ProjectComponent }
+  { path: 'projects/:key', component: ProjectComponent },
+
+  // TEMP redirects
+  { path: 'cmap', component: RedirectComponent, canActivate:[RedirectService], data: {
+      externalUrl: 'https://www.emerson.edu/academics/media-design-ma'
+    } 
+  },
+  { path: 'masters', component: RedirectComponent, canActivate:[RedirectService], data: {
+      externalUrl: 'https://www.emerson.edu/academics/media-design-ma'
+    } 
+  }
+
 ];
 
 @NgModule({
@@ -48,7 +66,10 @@ export const routes: Routes = [
     CdnImageComponent,
     ButtonComponent,
     PrettyUrlPipe,
-    AboutComponent
+    AboutComponent,
+    TeamComponent,
+    RedirectComponent,
+    PeopleGridComponent
   ],
   imports: [
     AppRoutingModule,
@@ -58,8 +79,8 @@ export const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [
-    // RouterStateService
-    DataService
+    DataService,
+    RedirectService
   ],
   bootstrap: [AppComponent]
 })

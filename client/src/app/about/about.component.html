@@ -4,78 +4,76 @@
 <section class="columns" *ngIf="about !== undefined">
 
     <div class="column is-one-third">{{about?.summary1}}</div>
-      <div class="column">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" width="450" alt="About flavor image 1" aria-role="img"></cdn-image>
-      </div>
+    <div class="column">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" width="450" alt="About flavor image 1"
+            aria-role="img"></cdn-image>
+    </div>
 </section>
 
 <section class="columns" *ngIf="about !== undefined">
 
-      <div class="column">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[1].public_id}}" width="450" alt="About flavor image 2" aria-role="img"></cdn-image>
-      </div>
+    <div class="column">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[1].public_id}}" width="450" alt="About flavor image 2"
+            aria-role="img"></cdn-image>
+    </div>
     <div class="column is-one-third">{{about?.summary2}}</div>
 </section>
 
 <section id="portfolio" *ngIf="about !== undefined">
 
-  <div class="columns">
-    <div class="column is-one-third">
-      <div class="icon tomato">
-        <cdn-image cloudinaryId="about/research-icon" autoFormat="false" width="100" alt="Research icon image" aria-role="img"></cdn-image> 
-      </div>
-      <h3>Research</h3>
-      {{about?.research}}
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="icon tomato">
+                <cdn-image cloudinaryId="about/research-icon" autoFormat="false" width="100" alt="Research icon image"
+                    aria-role="img"></cdn-image>
+            </div>
+            <h3>Research</h3>
+            {{about?.research}}
+        </div>
+
+        <div class="column is-one-third">
+            <div class="icon gb">
+                <cdn-image cloudinaryId="about/workshop-icon" autoFormat="false" width="100" alt="Workshops icon image"
+                    aria-role="img"></cdn-image>
+            </div>
+            <h3>Workshops</h3>
+            {{about?.workshops}}
+        </div>
+
+        <div class="column is-one-third">
+            <div class="icon mango">
+                <cdn-image cloudinaryId="about/tools-icon" autoFormat="false" width="100" alt="Tools icon image"
+                    aria-role="img"></cdn-image>
+            </div>
+            <h3>Tools</h3>
+            {{about?.tools}}
+        </div>
     </div>
 
-    <div class="column is-one-third">
-      <div class="icon gb">
-        <cdn-image cloudinaryId="about/workshop-icon" autoFormat="false" width="100" alt="Workshops icon image" aria-role="img"></cdn-image> 
-      </div>
-      <h3>Workshops</h3>
-      {{about?.workshops}}
-    </div>
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="icon tomato">
+                <cdn-image cloudinaryId="about/teaching-icon" autoFormat="false" width="100" alt="Teaching icon image"
+                    aria-role="img"></cdn-image>
+            </div>
+            <h3>Teaching</h3>
+            {{about?.teaching}}
+        </div>
 
-    <div class="column is-one-third">
-      <div class="icon mango">
-        <cdn-image cloudinaryId="about/tools-icon" autoFormat="false" width="100" alt="Tools icon image" aria-role="img"></cdn-image> 
-      </div>
-      <h3>Tools</h3>
-      {{about?.tools}}
+        <div class="column is-one-third">
+            <div class="icon gb">
+                <cdn-image cloudinaryId="about/design-icon" autoFormat="false" width="100" alt="Design icon image"
+                    aria-role="img"></cdn-image>
+            </div>
+            <h3>Design</h3>
+            {{about?.design}}
+        </div>
     </div>
-  </div>
-
-  <div class="columns">
-    <div class="column is-one-third">
-      <div class="icon tomato">
-        <cdn-image cloudinaryId="about/teaching-icon" autoFormat="false" width="100" alt="Teaching icon image" aria-role="img"></cdn-image> 
-      </div>
-      <h3>Teaching</h3>
-      {{about?.teaching}}
-    </div>
-
-    <div class="column is-one-third">
-      <div class="icon gb">
-        <cdn-image cloudinaryId="about/design-icon" autoFormat="false" width="100" alt="Design icon image" aria-role="img"></cdn-image> 
-      </div>
-      <h3>Design</h3>
-      {{about?.design}}
-    </div>
-  </div>
 
 </section>
 
 <section id="team">
-    <ui-carousel 
-    slides="{{people?}}"
-    slides-to-show="3"
-    slides-to-scroll="1"
-    initial-slide="1"
-    autoplay="false"
-    dots="false">
-  
-    <carousel-item>
-      <h3>{{ item }}</h3>
-    </carousel-item>
-  </ui-carousel>
+
+  <people-grid [people]="people" [preview]="true"></people-grid>
+
 </section>

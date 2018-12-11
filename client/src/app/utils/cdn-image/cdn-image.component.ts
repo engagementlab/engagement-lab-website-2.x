@@ -11,6 +11,7 @@ export class CdnImageComponent implements OnInit {
 	@Input() cloudinaryId: string;
 	@Input() cloudinaryPrefix: string;
 	@Input() alt: string;
+  @Input() effect: string = 'brightness:0';
   @Input() height: number;
 	@Input() width: number;
   @Input() quality: number;
@@ -29,7 +30,7 @@ export class CdnImageComponent implements OnInit {
     if(this.width)
       this.widthCss = this._sanitizer.bypassSecurityTrustStyle('max-width:' + this.width+'px');
 
-      // console.log(this.cloudinaryId)
+    // if(!this.)
 
   }
 

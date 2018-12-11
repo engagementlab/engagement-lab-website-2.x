@@ -14,7 +14,20 @@ body {
   @include mobile-only {
     font-size: 14px;
   }
+}
 
+a {
+  color: black;
+  text-decoration: none;
+
+  &.href {
+    border-bottom: solid 2px black;
+  }
+}
+
+button {
+  background: none;
+  border: 0;
 }
 
 // GLOBAL STYLING

@@ -1,0 +1,29 @@
+.people-grid {
+    h1, h4 {
+        color: white!important;
+    }
+    #top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #list {
+        margin-top: 5%;
+    }
+    .name {
+        font-size: 1.3em;
+        line-height: 1.43;
+        letter-spacing: 0.3px;
+    }
+
+    a.white {
+        div {
+            color: white;
+        }
+    }
+}

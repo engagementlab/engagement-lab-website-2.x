@@ -53,7 +53,7 @@ Person.add({
 	},
 
 	title: {
-		type: String,
+		type: Types.Textarea,
 		label: 'Title',
 		dependsOn: {
 			category: ['faculty leadership', 'staff', 'faculty fellows', 'lab assistants']
