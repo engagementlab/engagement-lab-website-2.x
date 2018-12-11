@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PeopleGridComponent } from './people-grid.component';
 
-describe('TeamSliderComponent', () => {
+describe('PeopleGridComponent', () => {
   let component: PeopleGridComponent;
   let fixture: ComponentFixture<PeopleGridComponent>;
 
