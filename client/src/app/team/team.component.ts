@@ -13,11 +13,9 @@ import * as _ from 'underscore';
 })
 export class TeamComponent implements OnInit {
 
-  public faculty: any[];
-  public staff: any[];
-  public board: any[];
-  public fellows: any[];
   public currentPerson: any;
+
+  public people: { [key: string]: any[] } = {};
 
   constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router, private _location: Location) { 
   
@@ -45,7 +43,7 @@ export class TeamComponent implements OnInit {
     
     this.currentPerson = undefined;
     this._location.go('team');
-    
+
     // document.getElementById('person-modal').style.display = 'none';
 
   }
@@ -59,10 +57,17 @@ export class TeamComponent implements OnInit {
 
     this._dataSvc.getDataForUrl('team/get/').subscribe(response => {   
       
-      this.faculty = _.filter(response.people, (person) => { return person.category === 'faculty leadership'; });
-      this.staff = _.filter(response.people, (person) => { return person.category === 'staff'; });
-      this.board = _.filter(response.people, (person) => { return person.category === 'advisory board'; });
-      this.fellows = _.filter(response.people, (person) => { return person.category === 'faculty fellows'; })
+      this.people['faculty'] = _.filter(response.people, (person) => { return person.category === 'faculty leadership'; });
+      this.people['staff'] = _.filter(response.people, (person) => { return person.category === 'staff'; });
+      this.people['board'] = _.filter(response.people, (person) => { return person.category === 'advisory board'; });
+      this.people['fellows'] = _.filter(response.people, (person) => { return person.category === 'faculty fellows'; })
+
+      // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
+      for(key in this.people) {
+        let mod = this.people[key].length % 4;
+        for(let i=0; i<mod; i++)
+          this.people[key].push({name:'dummy'});
+      }
 
     });
 

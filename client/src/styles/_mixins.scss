@@ -258,3 +258,26 @@ $base-font-size: 16px;
 
     @return url("#{$strPrefix}/v#{$version}/#{$cdn-product}/#{$imgName}");
 }
+
+/* Device type breakpoint helpers */
+
+@mixin phones {
+  @include mq($until: tabletPortrait) {
+    @content;
+  }
+}
+@mixin tablet-portrait {
+  @include mq($from: mobileLg, $until: tablet) {
+    @content;
+  }
+} 
+@mixin not-phones {
+  @include mq($from: tabletPortrait) {
+    @content;
+  }
+}
+@mixin desktop {
+  @include mq($from: wide) {
+    @content;
+  }
+}

@@ -1,3 +1,5 @@
+@import "~src/styles/_variables";
+
 .people-grid {
     h1, h4 {
         color: white!important;
@@ -14,6 +16,23 @@
     }
     #list {
         margin-top: 5%;
+        &.is-multiline {
+            display: flex;
+            flex-wrap: wrap;
+  
+            .person {
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: 21%;
+                margin: 5px;
+                @include phones {
+                    flex-basis: 75%;
+                }
+                @include tablet-portrait {
+                    flex-basis: 33%;
+                }
+            }
+        }
     }
     .name {
         font-size: 1.3em;

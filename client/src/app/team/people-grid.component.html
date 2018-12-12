@@ -19,10 +19,11 @@
         </div>
     </div>
 
-    <div id="list" [ngClass]="{'is-multiline columns' : preview === false}">
-        
-        <div #teamList class="person" [ngClass]="{'column is-one-quarter' : preview === false}" *ngFor="let person of people; let i = index;">
-            <a [class.white]="preview === true" routerLink="/team/{{person.key}}">
+    
+    <div id="list" [ngClass]="{'is-multiline' : preview === false}">
+        <div #teamList class="person" *ngFor="let person of people; let i = index;">
+
+            <a *ngIf="person.name != 'dummy'" [class.white]="preview === true" routerLink="/team/{{person.key}}">
                 
                 <cdn-image cloudinaryPrefix="/" cloudinaryId="{{person.image.public_id}}" autoFormat="true" effect="grayscale"
                     width="270" alt="Portrait image of {{person.name.first}} {{person.name.last}}"></cdn-image>
