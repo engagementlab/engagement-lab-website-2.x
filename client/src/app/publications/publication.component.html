@@ -1,0 +1,22 @@
+<div class="{{type}}">
+<div class="top">
+    <div class="icon">
+      <div class="bg">
+        <cdn-image cloudinaryId="publications/{{pub.form.key}}-icon" width="50" alt="{{pub.title}} icon image"></cdn-image>
+      </div>
+    </div>
+
+    <div>
+        <h2>{{pub.title}}</h2>
+        <h3 class="uppercase" [innerHtml]="pub.author | authorFormat"></h3>
+    </div>
+</div>
+<hr />
+<div class="bottom">
+    <span class="uppercase">{{pub.form.key}}</span>
+    <a *ngIf="pub.articleResource !== undefined && pub.articleResource.file !== undefined" href="{{pub.articleResource.file.url}}">
+        Download&nbsp;
+        <cdn-image cloudinaryId="publications/download-icon" width="25" alt="{{pub.title}} download icon image"></cdn-image>
+    </a>
+</div>
+</div>

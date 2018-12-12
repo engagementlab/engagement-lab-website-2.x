@@ -27,6 +27,9 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { DataService } from './utils/data.service';
 import { RedirectService } from './utils/redirect.service';
 import { PeopleGridComponent } from './team/people-grid.component';
+import { PublicationIndexComponent } from './publications/index.component';
+import { AuthorFormatPipe } from './utils/author-format.pipe';
+import { PublicationComponent } from './publications/publication.component';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -42,6 +45,9 @@ export const routes: Routes = [
   
   { path: 'projects', component: ProjectIndexComponent },
   { path: 'projects/:key', component: ProjectComponent },
+
+  { path: 'publications', component: PublicationIndexComponent },
+  // { path: 'projects/:key', component: ProjectComponent },
 
   // TEMP redirects
   { path: 'cmap', component: RedirectComponent, canActivate:[RedirectService], data: {
@@ -69,7 +75,10 @@ export const routes: Routes = [
     AboutComponent,
     TeamComponent,
     RedirectComponent,
-    PeopleGridComponent
+    PeopleGridComponent,
+    PublicationIndexComponent,
+    AuthorFormatPipe,
+    PublicationComponent
   ],
   imports: [
     AppRoutingModule,

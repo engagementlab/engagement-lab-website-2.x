@@ -20,12 +20,17 @@ var filter = keystone.list('Filter');
  * @constructor
  * See: http://keystonejs.com/docs/database/#lists-options
  */
-var Publication = new keystone.List('Publication', 
-	{
-		sortable: true,
-		map: { name: 'title' },
-		autokey: { path: 'key', from: 'title', unique: true }
-	});
+var Publication = new keystone.List('Publication', {
+  sortable: true,
+  map: {
+    name: 'title'
+  },
+  autokey: {
+    path: 'key',
+    from: 'title',
+    unique: true
+  }
+});
 
 // Storage adapter for Azure
 var azureFile = new keystone.Storage({
@@ -45,8 +50,8 @@ var azureFile = new keystone.Storage({
 });
 
 /** 
-	* Caching fields for 'post' save hook
-	*/
+ * Caching fields for 'post' save hook
+ */
 var docIsNew;
 var docIsModified;
 
@@ -55,9 +60,21 @@ var docIsModified;
  * @main Publication
  */
 Publication.add({
-	title: { type: String, label: 'Title', required: true, initial: true, index: true, note: 'This is the link text for article/chapter urls, and the link text to individual pages for books and guides.' }
+  title: {
+    type: String,
+    label: 'Title',
+    required: true,
+    initial: true,
+    index: true,
+    note: 'This is the link text for article/chapter urls, and the link text to individual pages for books and guides.'
+  },
+  enabled: {
+      type: Types.Boolean,
+      label: 'Enabled', 
+      note: 'Determines if this publication appears on the live site.'
+  }
 }, 'Filters', {
-  keyword: {
+  /* keyword: {
       type: Types.Relationship,
       filters: {
           category: 'Keyword', 
@@ -71,84 +88,123 @@ Publication.add({
       initial: true
   },
   person: {
-      type: Types.Relationship,
-      filters: {
-          category: 'Person'
-      },
-      ref: 'Filter',
-      label: 'Author(s)',
-      note: 'Is there a faculty member associated with this publication? Pick them from this list or add as a \'Person\' filter',
-      required: true,
-      many: true,
-      initial: true
-  },
+    type: Types.Relationship,
+    filters: {
+      category: 'Person'
+    },
+    ref: 'Filter',
+    label: 'Author(s)',
+    note: 'Is there a faculty member associated with this publication? Pick them from this list or add as a \'Person\' filter',
+    required: true,
+    many: true,
+    initial: true
+  }, */
   form: {
-      type: Types.Relationship,
-      filters: {
-          category: 'Format',
-          appears: 'Publication'
-      },
-      ref: 'Filter',
-      label: 'Format(s)',
-      note: 'What kind of publication is this? A book? An article? Pick from here or add a new Format Filter and choose \'Publication\' for the destination.',
-      required: true,
-      many: false,
-      initial: true
+    type: Types.Relationship,
+    filters: {
+      category: 'Format',
+      appears: 'Publication'
+    },
+    ref: 'Filter',
+    label: 'Format(s)',
+    note: 'What kind of publication is this? A book? An article? Pick from here or add a new Format Filter and choose \'Publication\' for the destination.',
+    required: true,
+    many: false,
+    initial: true
   }
 }, 'Publication Information', {
-  author: { type: String, label: 'Author Name(s)', required: true, initial: true, note: 'This appears below the title.' },
-	// This field is required in the save hook below instead of here as keystone dependsOn workaround
-	blurb: { type: Types.Textarea, label: 'Blurb Text', note: 'This displays beneath the title, date, and author in the article or chapter listing.' },
- 
-	description: { type: Types.Markdown, label: 'Description Text', required: false, initial: true, note: 'This displays on the individual publication page under \'About\''},
+  author: {
+    type: Types.TextArray,
+    label: 'Author Name(s)',
+    required: true,
+    initial: true,
+    note: 'This appears below the title.'
+  },
+  // This field is required in the save hook below instead of here as keystone dependsOn workaround
+  blurb: {
+    type: Types.Textarea,
+    label: 'Blurb Text',
+    note: 'This displays beneath the title, date, and author in the article or chapter listing.'
+  },
 
-	image: { type: Types.CloudinaryImage, label: 'Thumbnail', folder: 'research/publications', autoCleanup: true, note: 'For Books and Guides! This is the image thumbnail that displays on the publication listings page.' },
+  description: {
+    type: Types.Markdown,
+    label: 'Description Text',
+    required: false,
+    initial: true,
+    note: 'This displays on the individual publication page under \'About\''
+  },
 
-	bannerImage: { type: Types.CloudinaryImage, label: 'Banner Image', folder: 'research/publications', autoCleanup: true, note: 'For Books and Guides! This is the banner image on the individual publication page, displayed behind the title. If none is uploaded, the title will display with a dark-grey background by default.' },
+  image: {
+    type: Types.CloudinaryImage,
+    label: 'Thumbnail',
+    folder: 'research/publications',
+    autoCleanup: true,
+    note: 'For Books and Guides! This is the image thumbnail that displays on the publication listings page.'
+  },
 
-	date: { type: Date, label: 'Publication Date', initial: true, required: true, note: 'For Books and Guides, this displays on the individual page below the author. For Articles and Chapters, this displays in the listing next to the author.' },
-	articleResource: { 
-    type: Types.Relationship, 
+  bannerImage: {
+    type: Types.CloudinaryImage,
+    label: 'Banner Image',
+    folder: 'research/publications',
+    autoCleanup: true,
+    note: 'For Books and Guides! This is the banner image on the individual publication page, displayed behind the title. If none is uploaded, the title will display with a dark-grey background by default.'
+  },
+
+  date: {
+    type: Date,
+    label: 'Publication Date',
+    initial: true,
+    required: true,
+    note: 'For Books and Guides, this displays on the individual page below the author. For Articles and Chapters, this displays in the listing next to the author.'
+  },
+  articleResource: {
+    type: Types.Relationship,
     ref: 'Resource',
-    label: 'Article Resource', 
-    note: 'This is a link or file.' 
-  },  
-	purchaseUrls: {
-		type: Types.TextArray,
-		label: 'Links to purchase book',
-		note: 'Must be in format "http://www.something.org"'
-	},
-	downloadUrls: {
-		type: Types.TextArray,
-		label: 'Link(s) to download book',
-		note: 'Must be in format "http://www.something.org"'
-	},
-	file: {
-		type: Types.File,
-		label: 'File',
-		note: 'If uploaded, a downloadable link to the book or guide will be appear on the publication\'s individual page.',
-		storage: azureFile
-	}, 
+    label: 'Article Resource',
+    note: 'This is a link or file.'
+  },
+  purchaseUrls: {
+    type: Types.TextArray,
+    label: 'Links to purchase book',
+    note: 'Must be in format "http://www.something.org"'
+  },
+  downloadUrls: {
+    type: Types.TextArray,
+    label: 'Link(s) to download book',
+    note: 'Must be in format "http://www.something.org"'
+  },
+  file: {
+    type: Types.File,
+    label: 'File',
+    note: 'If uploaded, a downloadable link to the book or guide will be appear on the publication\'s individual page.',
+    storage: azureFile
+  },
 
-  isArticle: { type: Boolean, hidden: true, noedit: true, default: false }
+  isArticle: {
+    type: Boolean,
+    hidden: true,
+    noedit: true,
+    default: false
+  }
 });
 
 /**
  * Hooks
  * =============
  */
-Publication.schema.pre('save', function(next) {
-  
+Publication.schema.pre('save', function (next) {
+
   // Save state for post hook
   this.wasNew = this.isNew;
   this.wasModified = this.isModified();
 
   var pub = this;
-  filter.model.findFilter(this.form, function(err, result) {
+  filter.model.findFilter(this.form, function (err, result) {
 
     if (result.key == 'article-chapter')
       pub.isArticle = true;
-    else 
+    else
       pub.isArticle = false;
 
     next(err);
@@ -161,5 +217,5 @@ Publication.schema.pre('save', function(next) {
  * Model Registration
  */
 Publication.defaultSort = '-createdAt';
-Publication.defaultColumns = 'title, form';
+Publication.defaultColumns = 'title, form, enabled';
 Publication.register();

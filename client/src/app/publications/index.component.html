@@ -1,0 +1,14 @@
+<div class="controls" *ngIf="pubTypesCount !== undefined">
+    <button type="button" class="control" data-filter="all">All <sup>{{pubTypesTotal}}</sup></button>
+    <button type="button" class="control" data-filter=".book">Books <sup>{{pubTypesCount['book']}}</sup></button>
+    <button type="button" class="control" data-filter=".guide">Guides <sup>{{pubTypesCount['guide']}}</sup></button>
+    <button type="button" class="control" data-filter=".article-chapter">Articles <sup>{{pubTypesCount['article-chapter']}}</sup></button>
+</div>
+
+<div id="publications" class="columns is-multiline is-centered">
+
+    <div #publicationsList class="publication column is-one-third mix book" *ngFor="let pub of publications; let i = index;">
+        <publication [pub]="pub" type="book" attr.class="{{pub.form.key}}"></publication>
+    </div>
+
+</div>
