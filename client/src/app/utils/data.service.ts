@@ -34,6 +34,7 @@ export class DataService {
       
       return this.http.get(url)
       .map((res:any)=> {
+        this.isLoading.next(false);
         return res.data;
       })
       .catch((error:any) => { 

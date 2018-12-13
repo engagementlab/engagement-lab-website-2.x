@@ -15,12 +15,11 @@ import * as AOS from 'aos';
 export class PublicationIndexComponent implements OnInit {
 
   public pubs: any[];
-  public guides: any[];
-  public articles: any[];
+  // public guides: any[];
+  // public articles: any[];
   public pubTypesCount: Object;
   public pubTypesTotal: number;
   public pubTypeKeys: string[]; 
-
 
   @ViewChildren('publicationList') publicationList: QueryList<any>;
 

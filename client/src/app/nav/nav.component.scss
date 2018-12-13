@@ -9,10 +9,44 @@ nav {
 }
 
 #home {
-  ::ng-deep img {
+    
+  #logo-img {
+    max-width: 423px;
+  }
+  
+  svg {
+    
+    @include transform(scale(.4));
+    @include transition(transform, .4s, ease-in-out);
+    transform-origin: left top;
+
     @include mobile-only {
-      width: 200px;
+      max-width: 200px;
     }
+    #color-lab {
+      @include transition(opacity, 1s, ease-in-out);
+      opacity: 0;
+    }
+    #bw-lab {
+      @include transition(opacity, 1s, ease-in-out);
+      opacity: 1;
+    }
+
+  }
+
+  &.lg {
+
+    svg {
+      @include transform(scale(1));
+
+      #color-lab {
+        opacity: 1;
+      }
+      #bw-lab {
+        opacity: 0;
+      }
+    }
+    
   }
 }
 
