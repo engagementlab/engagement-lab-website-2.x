@@ -10,9 +10,13 @@ export class PublicationComponent implements OnInit {
   @Input() pub: any;
   @Input() type: string;
 
-  constructor() { }
+  public iconWidth: number;
+
+  constructor() {}
 
   ngOnInit() {
+
+      this.iconWidth = this.type === 'book' ? 37 : 50;
   }
 
 }

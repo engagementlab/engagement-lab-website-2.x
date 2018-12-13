@@ -165,13 +165,13 @@ Publication.add({
     note: 'This is a link or file.'
   },
   purchaseUrls: {
-    type: Types.TextArray,
-    label: 'Links to purchase book',
+    type: String,
+    label: 'Link to purchase book (*will not* display if Article Resource is defined)',
     note: 'Must be in format "http://www.something.org"'
   },
   downloadUrls: {
-    type: Types.TextArray,
-    label: 'Link(s) to download book',
+    type: String,
+    label: 'Link to download book (*will not* display if Article Resource is defined)',
     note: 'Must be in format "http://www.something.org"'
   },
   file: {

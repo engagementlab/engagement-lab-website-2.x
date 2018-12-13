@@ -5,9 +5,9 @@
 	"database": "engagement-lab",
 	"allowed_domains": ["www.riskhorizon.org", "boston.communityplanit.org", "www.civicmediaproject.com", "civicmediaproject.com", "www.civicmediaproject.net", "civicmediaproject.net"],
 	"admin_nav": { 
-									"projects": ["projects", "publications"],
-									"programs": ["initiatives", "Cmap"],
-									"shared": ["resources"],
+									"projects/publications": ["projects", "publications"],
+									"intiatives": ["initiatives", "Cmap"],
+									"files/resources": ["resources"],
 									"about": ["About", "partners", "people", "jobs"],
 									"filters": ["Filter"]
 								}

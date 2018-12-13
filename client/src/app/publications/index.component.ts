@@ -14,7 +14,9 @@ import * as AOS from 'aos';
 })
 export class PublicationIndexComponent implements OnInit {
 
-  public publications: any[];
+  public pubs: any[];
+  public guides: any[];
+  public articles: any[];
   public pubTypesCount: Object;
   public pubTypesTotal: number;
   public pubTypeKeys: string[]; 
@@ -25,7 +27,10 @@ export class PublicationIndexComponent implements OnInit {
   constructor(private _dataSvc: DataService) { 
   
     this._dataSvc.getDataForUrl('publications/get/').subscribe(response => {
-        this.publications = _.sortBy(response, (pub) => { return pub.form.key });    
+        this.pubs = response;
+        // this.books = _.filter(pubs, (pub) => { return pub.form.key === 'book'; });
+        // this.guides = _.filter(pubs, (pub) => { return pub.form.key === 'guide'; });
+        // this.articles = _.filter(pubs, (pub) => { return pub.form.key === 'article-chapter'; });
                
         // get count of each pub type
         this.pubTypesCount = _.countBy(response, (obj) => {

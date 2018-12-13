@@ -10,9 +10,21 @@
 }
 
 #publications {
-    margin-top: 5%;
+    
+    .columns {
+        margin-top: 5%;
+        
+    }
 
     .publication {
-        width: 47%;
+        flex-basis: 47%;
+        margin-top: 2%;
+
+        @include phones {
+            flex-basis: 100%;
+        }
+        @include tablet-portrait {
+            flex-basis: 33%;
+        }
     }
 }

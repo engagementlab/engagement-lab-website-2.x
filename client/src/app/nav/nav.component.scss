@@ -26,6 +26,10 @@ nav {
   #lines {
     margin-top: 4%;
 
+    @include mobile-only {
+      padding-left: 40%;
+    }
+
     span {
       display: block;
       height: 2px;
@@ -48,6 +52,9 @@ nav {
 
   #label {
     display: flex;
+    @include mobile-only {
+      display: none;
+    }
 
     .open {
       position: absolute;

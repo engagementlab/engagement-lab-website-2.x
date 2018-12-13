@@ -1,4 +1,5 @@
 // Bulma framework
+$tablet: 768px;
 @import "~bulma/sass/utilities/mixins";
 @import "~bulma/sass/grid/columns";
 @import "~bulma/sass/elements/container";
@@ -31,6 +32,14 @@ button {
 }
 
 // GLOBAL STYLING
+
+// Bulma container adjustments
+.container {
+  @include not-desktop {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
 
 .bold {
   font-weight: 700;
@@ -100,6 +109,12 @@ button {
 
 .hidden-mobile {
   @include mobile-only {
+    display: none;
+  }
+}
+
+.hidden-not-mobile {
+  @include mq($from: mobileLg) {
     display: none;
   }
 }

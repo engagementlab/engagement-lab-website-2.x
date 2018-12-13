@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import { environment } from '../environments/environment';
 import { TweenLite, Expo, Back } from "gsap";
@@ -12,16 +13,19 @@ import { TweenLite, Expo, Back } from "gsap";
 export class AppComponent implements OnInit {
 
   public isQABuild: boolean;
-  title = 'Engagement Label';
+  title = 'Engagement Lab @ Emerson College';
 
 
-  constructor(private _router: Router) { }
- 
-  ngOnInit() {
+  constructor(private _router: Router, private _titleSvc: Title) {
 
     this.isQABuild = environment.qa;
+    this._titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
+
+   }
+ 
+  ngOnInit() {
     
-    // if(!this.isQABuild) return;
+    if(!this.isQABuild) return;
     setTimeout(() => {
 
       TweenLite.fromTo(document.getElementById('qa-build'), .7, {autoAlpha:0, bottom:'-100%'}, {autoAlpha:1, bottom:0, ease:Expo.easeOut});

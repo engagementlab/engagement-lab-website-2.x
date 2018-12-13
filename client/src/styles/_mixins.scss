@@ -222,9 +222,7 @@ $base-font-size: 16px;
 }
 
 @mixin mobile-only {
-
-    // For now, this shows content on ALL devices
-    @include mq($until: tablet) {
+    @include mq($until: tabletPortrait) {
         @content;
     }
 }
@@ -278,6 +276,11 @@ $base-font-size: 16px;
 }
 @mixin desktop {
   @include mq($from: wide) {
+    @content;
+  }
+}
+@mixin not-desktop {
+  @include mq($until: wide) {
     @content;
   }
 }

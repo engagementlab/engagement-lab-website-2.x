@@ -5,10 +5,26 @@
     <button type="button" class="control" data-filter=".article-chapter">Articles <sup>{{pubTypesCount['article-chapter']}}</sup></button>
 </div>
 
-<div id="publications" class="columns is-multiline is-centered">
-
-    <div #publicationsList class="publication column is-one-third mix book" *ngFor="let pub of publications; let i = index;">
-        <publication [pub]="pub" type="book" attr.class="{{pub.form.key}}"></publication>
+<div id="publications">
+    
+  <!-- Books -->
+  <div class="columns is-multiline">
+    <div #publicationsList class="publication column mix {{pub.form.key}}" *ngFor="let pub of pubs">
+      <publication [pub]="pub" type="{{pub.form.key}}"></publication>
     </div>
+  </div>
+
+  <!-- Guides -->
+  <!-- <div id="guides" class="columns is-multiline mix guide">
+    <div class="publication column is-one-third" *ngFor="let guide of guides">
+        <publication [pub]="guide" type="guide" attr.class="{{guide.form.key}}"></publication>
+    </div>
+  </div>
+
+  <div id="articles" class="columns is-multiline mix article">
+    <div class="publication column is-one-third" *ngFor="let article of articles">
+        <publication [pub]="article" type="article" attr.class="{{article.form.key}}"></publication>
+    </div>
+  </div> -->
 
 </div>

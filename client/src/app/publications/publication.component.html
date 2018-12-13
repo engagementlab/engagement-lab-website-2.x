@@ -1,22 +1,36 @@
 <div class="{{type}}">
-<div class="top">
-    <div class="icon">
-      <div class="bg">
-        <cdn-image cloudinaryId="publications/{{pub.form.key}}-icon" width="50" alt="{{pub.title}} icon image"></cdn-image>
-      </div>
-    </div>
+    <div class="top">
+        <div class="icon">
+            <div class="bg">
+                <cdn-image cloudinaryId="publications/{{pub.form.key}}-icon" width="{{iconWidth}}" alt="{{pub.title}} icon image"></cdn-image>
+            </div>
+        </div>
 
-    <div>
-        <h2>{{pub.title}}</h2>
-        <h3 class="uppercase" [innerHtml]="pub.author | authorFormat"></h3>
+        <div>
+            <h2>{{pub.title}}</h2>
+            <h3 class="uppercase" [innerHtml]="pub.author | authorFormat"></h3>
+        </div>
     </div>
-</div>
-<hr />
-<div class="bottom">
-    <span class="uppercase">{{pub.form.key}}</span>
-    <a *ngIf="pub.articleResource !== undefined && pub.articleResource.file !== undefined" href="{{pub.articleResource.file.url}}">
-        Download&nbsp;
-        <cdn-image cloudinaryId="publications/download-icon" width="25" alt="{{pub.title}} download icon image"></cdn-image>
-    </a>
-</div>
+    <hr />
+    <div class="bottom">
+        <span class="uppercase">{{type}}</span>
+
+        <a *ngIf="pub.downloadUrls !== undefined && pub.downloadUrls.length > 0; else resource" href="{{pub.downloadUrls}}">
+            Download&nbsp;
+            <cdn-image cloudinaryId="publications/download-icon" width="25" alt="{{pub.title}} download icon image"></cdn-image>
+        </a>
+
+        <ng-template #resource>
+            <a *ngIf="pub.articleResource !== undefined && pub.articleResource.file !== undefined" href="{{pub.articleResource.file.url}}">
+                Download&nbsp;
+                <cdn-image cloudinaryId="publications/download-icon" width="25" alt="{{pub.title}} download icon image"></cdn-image>
+            </a>
+        </ng-template>
+
+        <a *ngIf="pub.purchaseUrls !== undefined && pub.purchaseUrls.length > 0" href="{{pub.purchaseUrls}}">
+            View&nbsp;
+            <cdn-image cloudinaryId="publications/download-icon" width="25" alt="{{pub.title}} link icon image"></cdn-image>
+        </a>
+
+    </div>
 </div>
