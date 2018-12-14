@@ -1,7 +1,27 @@
-h3.blurb {
+@import "~src/styles/_variables";
+
+h2 {
+    // font-size: 1.6em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.blurb {
  
-    font-size: 1.3em;
+    font-size: 2em;
     line-height: 1.43;
     letter-spacing: 0.3px;
 
+    @include mobile-only {
+        font-size: 1.5em;       
+        line-height: 1.17;
+        letter-spacing: 0.5px; 
+    }
+
+}
+
+.description {
+    font-size: 1.5em;
+    line-height: 1.43;
+    letter-spacing: 0.3px;
 }

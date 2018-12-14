@@ -93,18 +93,17 @@ Project.add({
         many: true
     },
 
-
-    // format: {
-    //     type: Types.Relationship,
-    //     ref: 'Filter',
-    //     filters: {
-    //         category: 'Format',
-    //         appears: 'Project'
-    //     },
-    //     label: 'Type/Format of Product(s)',
-    //     many: true, 
-    //     note: 'What kind of project is this? Choose from below or add a Format Filter and choose \'Project\' as its destination.'
-    // }
+    format: {
+        type: Types.Relationship,
+        ref: 'Filter',
+        filters: {
+            category: 'Format',
+            appears: 'Project'
+        },
+        label: 'Type/Format of Product(s)',
+        many: true, 
+        note: 'What kind of project is this? Choose from below or add a Format Filter and choose \'Project\' as its destination.'
+    }
 },
 
 'Project Information', {

@@ -36,26 +36,30 @@ export class ProjectComponent implements OnInit {
     });
 
   }
+
+  ngAfterViewChecked() {
+    
+    this.setBgHeight();
+
+  }
    
   setContent(data: any) {
 
     this.projectBgEl = document.getElementById('project-bg');
-    // this.projectBgEl.style.display = 'block';
 
     this.content = data;
     this.themeIndex = data['sortOrder'] % 3;
 
     this.projectBgEl.removeAttribute('class');
     this.projectBgEl.setAttribute('class', 'show index-'+this.themeIndex);
-
-    this.setBgHeight();
     
   }
 
   setBgHeight() {
 
-    let height = (this.backgroundEnd.nativeElement.offsetTop + 
-      this.backgroundEnd.nativeElement.offsetHeight) - window.scrollY+'px';
+    if(this.projectBgEl === undefined) return;
+
+    let height = (this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight) - window.scrollY+'px';
     this.projectBgEl.style.maxHeight = height;
     this.projectBgEl.style.height = height;
 

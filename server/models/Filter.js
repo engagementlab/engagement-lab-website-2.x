@@ -91,6 +91,6 @@ Filters.schema.statics.findFilter = function(resourceId, callback) {
  * =============
  */
 Filters.defaultSort = 'category';
-Filters.defaultColumns = 'name, category';
+Filters.defaultColumns = 'name, category, appears';
 Filters.register();
 
