@@ -48,7 +48,7 @@ export class ProjectIndexComponent implements OnInit {
     this.projectList.changes.subscribe(t => {
   
         let mixer = mixitup(document.getElementById('projects'));
-        AOS.init();
+        // AOS.init();
     });
 
   }

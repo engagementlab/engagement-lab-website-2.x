@@ -5,7 +5,7 @@ import { DataService } from '../utils/data.service';
 
 import { filter } from 'rxjs/operators';
 
-import { TimelineLite, Circ, Linear } from "gsap";
+import { TimelineLite, Circ, Linear, TweenMax } from "gsap";
 
 @Component({
   selector: 'app-nav',
@@ -15,36 +15,30 @@ import { TimelineLite, Circ, Linear } from "gsap";
 export class NavComponent implements OnInit {
 
   tl: TimelineLite; 
-  tlLogo: TimelineLite; 
+  tlLogo; 
   btn: HTMLElement;
   
   private wasLoading: boolean = false;
 
   constructor(private _router: Router, private _dataSvc: DataService) {
-    // Establish a timeline
-    this.tlLogo = new TimelineLite({
-      repeat: -1,
-      yoyo: true,
-      paused: true
-    }); 
+
     // Hide nav when nav occurs
     _router.events.pipe(filter(e => e instanceof NavigationStart)).subscribe(e => {
       // if(document.getElementById('menu-btn').classList.contains('open'))
         // this.tl.reverse();
     });
 
-
 		this._dataSvc.isLoading.subscribe( value => {
       if(this.wasLoading && !value) {
         if(document.getElementById('menu-btn').classList.contains('open')) 
             this.tl.reverse();
-
-          this.tlLogo.pause(0);
+          // this.tlLogo.pause(0);
       }
           
       this.wasLoading = value;
-      if(value)
-        this.tlLogo.play();
+      if(value) {
+        // this.tlLogo.play();
+      }
 
   } );
   
@@ -72,19 +66,11 @@ export class NavComponent implements OnInit {
     tl.fromTo(document.getElementById('menu-overlay'), .5, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'}, '-=.7');
 
 
-    // Get the linearGradient ID & gradientTransform attribute
-    var gradient      = document.getElementById('gradient'),
-    gradient_attr = gradient.getAttribute('gradientTransform');
-
-    // The loop to iterate over values of 0-360
-    for(var i = -425, l = 425; i <= l; i++) {
-    this.tlLogo.to(gradient, 0.001, {
-    attr: {
-      gradientTransform: 'translate(' + i + ')'
-    },
-    ease: Linear.easeInOut
-    });
-    }
+    /* var i = {x: -425};
+    var gradient      = document.getElementById('gradient');
+    this.tlLogo = TweenMax.to(i, 5, {score:"+=850", onUpdate:() => {
+      gradient.setAttribute('gradientTransform', 'translate('+i.x+')');
+    }, ease:Linear.easeNone, paused: true}); */
   }
 
   openNav() {

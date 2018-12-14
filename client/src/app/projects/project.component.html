@@ -1,4 +1,4 @@
-<div class="columns is-multiline">
+<div class="columns is-multiline theme-{{themeIndex}}">
 
   <h2 class="column is-full">{{content?.name}}</h2>
 
@@ -7,7 +7,7 @@
   </h3>
 </div>
 
-<div class="columns">
+<div #backgroundEnd class="columns" (scroll)="scrollHandler($event)">
 
   <div class="column is-one-third" *ngIf="content?.externalLinkUrl !== null">
     <h4>Website</h4>
@@ -27,14 +27,15 @@
 
   <div class="column is-two-thirds">{{content?.description}}</div>
 
-  <div class="columns is-centered">
+  <div class="columns is-centered" *ngIf="content?.projectImages !== undefined && content?.projectImages.length > 0">
     <div class="column is-one-third">
       <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[0].public_id}}" autoFormat="true" width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[0] !== null"></cdn-image>
     </div>
     <div class="column is-one-third">
-      <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[1].public_id}}" autoFormat="true" width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[0] !== null"></cdn-image>
+      <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[1].public_id}}" autoFormat="true" width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[1] !== null"></cdn-image>
     </div>
   </div>
+
   <div *ngIf="content?.challengeTxt" class="columns">
     <h3 class="column is-one-third uppercase">
         Challenge

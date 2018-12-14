@@ -17,14 +17,16 @@ mongoose.Promise = require('bluebird');
 var buildData = (options, res) => {
 
     let list = keystone.list('Project').model;
-    let fields = 'key image byline name featured projectType customUrl';
+    let fields = 'key image byline name featured projectType customUrl sortOrder -_id';
     let data;
+    let countData;
 
     if (options.id) {
         let addtlFields = 'description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
+        countData = list.count({});
         data = list.findOne({
-            key: options.id
-        }, fields + ' ' + addtlFields).populate('format principalInvestigator');
+                    key: options.id
+                }, fields + ' ' + addtlFields).populate('format principalInvestigator');
     }
     else if (options.limit)
         data = list.find({}, ).sort([
@@ -39,17 +41,35 @@ var buildData = (options, res) => {
 
     else
         data = list.find({'enabled': true}, fields)
-                   .sort([['sortOrder', 'descending']]);
+                   .sort([['sortOrder', 'ascending']]);
 
+    // Get count of all docs if needed
+    // if(countData)
+    //     countData.exec();
     data.exec();
+
     Bluebird.props({
             jsonData: data
         })
         .then(results => {
-            return res.status(200).json({
+            
+            let finalData = results.jsonData;
+
+            // Assemble project theme index if one project pulled
+            // if(countData) {
+
+            //     let index = results.jsonData 
+            //     finalData = {
+            //         project: results.jsonData,
+            //         themeIndex: results.countAmt
+            //     }
+            // }
+            let resultObj = {
                 status: 200,
-                data: results.jsonData
-            });
+                data: finalData
+            };
+
+            return res.status(200).json(resultObj);
         }).catch(err => {
             console.log(err);
         })

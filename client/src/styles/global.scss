@@ -17,6 +17,33 @@ body {
   }
 }
 
+// "Fake" background for top of project pages
+#project-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+  opacity: 0;
+
+  @include multi-transition(max-height .03s ease-in-out, opacity 1s linear);
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.index-0 {
+    background-color: $mango;
+  }
+  &.index-1 {
+    background-color: $green-blue;
+  }
+  &.index-2 {
+    background-color: $tomato;
+  }
+}
+
+// GLOBAL STYLING
 a {
   color: black;
   text-decoration: none;
@@ -30,8 +57,6 @@ button {
   background: none;
   border: 0;
 }
-
-// GLOBAL STYLING
 
 // Bulma container adjustments
 .container {

@@ -2,7 +2,7 @@
 @import '../styles/_variables';
 
 #menu-overlay {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     opacity: 0;
     display: none;

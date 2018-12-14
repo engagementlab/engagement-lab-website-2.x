@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 import { environment } from '../environments/environment';
@@ -37,6 +37,8 @@ export class AppComponent implements OnInit {
     }
 
     this._router.events.subscribe((evt) => {
+      if (evt instanceof NavigationStart)
+        document.getElementById('project-bg').removeAttribute('class');
 
       if (!(evt instanceof NavigationEnd)) {
         return;
@@ -50,7 +52,6 @@ export class AppComponent implements OnInit {
 
       if(evt.url.indexOf('/#') === 0)
         return;
-
       window.scrollTo(0, 0);
 
     });
