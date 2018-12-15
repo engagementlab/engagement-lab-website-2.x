@@ -1,64 +1,90 @@
-<footer class="columns is-mobile">
+<footer class="columns is-mobile is-multiline">
 
-  <div id="logos" class="column is-one-quarter">
+    <div id="logos" class="column is-full-mobile is-one-quarter-tablet">
 
-    <cdn-image cloudinaryId="logos/logo-sm" width="70" alt="Engagement Lab small logo"></cdn-image> 
-    <!-- <cdn-image cloudinaryId="logos/logo-sm" width="70" alt="" aria-role="button"></cdn-image>  -->
-
-    <p>CC BY-NC-SA 4.0.</p>
-  </div>
-
-  <div id="contact" class="column">
-    <div id="social" class="columns is-mobile">
-        
-      <a href="https://www.facebook.com/EngagementLab" role="link" class="column">
-          <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image> 
-      </a>
-      <a href="https://twitter.com/engagelab" role="link" class="column">
-          <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image> 
-      </a>
-      <a href="https://www.instagram.com/engagelab" role="link" class="column">
-          <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image> 
-      </a>
-      <a href="https://medium.com/engagement-lab-emerson-college" role="link" class="column">
-          <cdn-image cloudinaryId="logos/med" width="24" alt="Medium link image"></cdn-image> 
-      </a>
-      <a href="https://github.com/engagementlab" role="link" class="column">
-          <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image> 
-      </a>
-
+        <cdn-image cloudinaryId="logos/logo-sm" width="70" alt="Engagement Lab small logo"></cdn-image>
+        <!-- <cdn-image cloudinaryId="logos/logo-sm" width="70" alt="" aria-role="button"></cdn-image>  -->
+        <span>(need emerson svg logo)</span>
     </div>
-    <div id="address">
-      engagementlab@emerson.edu
-      120 Boylston St. Boston, MA<br />
-      02116
+
+    <div id="contact" class="column is-full-mobile">
+        <div id="social" class="columns column is-full is-mobile">
+
+            <a href="https://www.facebook.com/EngagementLab" role="link" class="column">
+                <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image>
+            </a>
+            <a href="https://twitter.com/engagelab" role="link" class="column">
+                <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image>
+            </a>
+            <a href="https://www.instagram.com/engagelab" role="link" class="column">
+                <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image>
+            </a>
+            <a href="https://medium.com/engagement-lab-emerson-college" role="link" class="column">
+                <cdn-image cloudinaryId="logos/med" width="24" alt="Medium link image"></cdn-image>
+            </a>
+            <a href="https://github.com/engagementlab" role="link" class="column">
+                <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image>
+            </a>
+
+        </div>
+        <div id="address" class="is-full-mobile">
+            engagementlab@emerson.edu<br />
+            120 Boylston St. Boston, MA <span class="hidden-desktop">02116</span>
+            <span class="hidden-mobile"><br />02116</span>
+        </div>
     </div>
-  </div>
 
-  <div id="newsletter" class="column">
-    <h3 class="uppercase">Newsletter</h3>
+    <div id="newsletter" class="column is-full-mobile">
+        <h3 class="uppercase">Newsletter</h3>
 
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form action="https://engagementgamelab.us6.list-manage.com/subscribe/post?u=8cb16e3042072f11cc0680d36&amp;id=e9f56f4f4d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-          
-        <div class="mc-field-group">
-          <input type="email" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
-          <input type="submit" value="Subscribe to Newsletter" name="subscribe" id="mc-embedded-subscribe" class="button hidden" aria-hidden="true">
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+            <form action="https://engagementgamelab.us6.list-manage.com/subscribe/post?u=8cb16e3042072f11cc0680d36&amp;id=e9f56f4f4d"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                novalidate>
+                <div id="mc_embed_signup_scroll">
+
+                    <div class="mc-field-group">
+                        <input type="email" placeholder="Your email" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <input type="submit" value="Subscribe to Newsletter" name="subscribe" id="mc-embedded-subscribe"
+                            class="button hidden" aria-hidden="true">
+                    </div>
+
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8cb16e3042072f11cc0680d36_e9f56f4f4d"
+                            tabindex="-1" value=""></div>
+                </div>
+            </form>
         </div>
-        
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8cb16e3042072f11cc0680d36_e9f56f4f4d" tabindex="-1" value=""></div>
-        </div>
-      </form>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script type='text/javascript'>
+            (function ($) {
+                window.fnames = new Array();
+                window.ftypes = new Array();
+                fnames[0] = 'EMAIL';
+                ftypes[0] = 'email';
+                fnames[1] = 'FNAME';
+                ftypes[1] = 'text';
+                fnames[2] = 'LNAME';
+                ftypes[2] = 'text';
+                fnames[3] = 'MMERGE3';
+                ftypes[3] = 'text';
+            }(jQuery));
+            var $mcj = jQuery.noConflict(true);
+
+        </script>
     </div>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-  </div>
+    <!--End mc_embed_signup-->
+    <div id="top">
+      <span (click)="scrollToTop()">top</span>
+    </div>
 
-  <div id="top">
-  </div>
+    <div class="column is-full">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0;max-width: 80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+        </a>
+    </div>
 </footer>

@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Subject } from 'rxjs';
 import { Observable } from 'rxjs/Observable';
-import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 
@@ -39,23 +39,9 @@ export class DataService {
       })
       .catch((error:any) => { 
           this.isLoading.next(false);
-          return Observable.throw(error);
+          return throwError(error);
       });
 
-	}
-	
-/*   public getFilteredDataForUrl(url: string, selector: string): Observable<any> {
-
-      this.isLoading.next(true);
-
-      return this.http.get(this.baseUrl+'get/data/select/'+url+'/'+selector)
-      .map((res:any)=> {
-        return res.data;
-      })
-      .catch((error:any) => { 
-          this.isLoading.next(false);
-          return Observable.throw(error);
-      });
-
-	} */
+  }
+  
 }

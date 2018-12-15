@@ -1,3 +1,30 @@
+@import '../../styles/_variables';
+
 footer {
     margin-top: 10%;
+
+    // MC Email form
+    #newsletter {
+
+        h3 {
+            font-size: 1em;
+        }
+
+        input[type=email] {
+            width: 80%;
+            font-family: 'LunchtypeRegular';
+            font-size: 1.5em;
+            color: black;
+            opacity: 1;
+            border: none;
+            border-bottom: solid 2px black;
+            padding-bottom: 2%;
+
+            @include placeholder {
+                font-family: 'LunchtypeRegular';
+                color: black;
+                opacity: 1;
+            }
+        }
+    }
 }

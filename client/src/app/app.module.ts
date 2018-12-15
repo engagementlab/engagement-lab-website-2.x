@@ -12,6 +12,7 @@ import { PrettyUrlPipe } from './utils/pretty-url.pipe';
 import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
 import { CloudinaryConfiguration, CloudinaryModule } from '@cloudinary/angular-5.x';
 import cloudinaryConfiguration from './cdn.config';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -85,7 +86,8 @@ export const routes: Routes = [
     BrowserModule,
     CloudinaryModule.forRoot(cloudinary, config),
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ScrollToModule.forRoot()
   ],
   providers: [
     DataService,
