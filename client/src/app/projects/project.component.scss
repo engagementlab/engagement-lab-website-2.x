@@ -21,7 +21,52 @@ h2 {
 }
 
 .description {
+
     font-size: 1.5em;
     line-height: 1.43;
     letter-spacing: 0.3px;
+    
+    margin-top: 15%;
+    
+    @include mobile-only {
+        font-size: 1em;
+        line-height: 1.25;
+        margin-top: 33%;
+    }
+
+    h3 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        font-size: 1.1em;
+    }
+
+    .text {
+        font-size: .9em;
+    }
+
+}
+
+#top {
+    padding-bottom: 9%;
+}
+
+#bottom {
+    text-align: center;
+}
+
+#verticle-line {
+
+    position: absolute;
+    display: block;
+    background-color: black;
+    width: 2px;
+    height: 40px;
+    margin-top: -20px;
+
+    @include not-phones {
+    width: 4px;
+    height: 100px;
+    margin-top: -50px;
+    }
 }

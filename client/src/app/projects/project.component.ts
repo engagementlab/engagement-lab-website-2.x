@@ -31,9 +31,9 @@ export class ProjectComponent implements OnInit {
   ngOnInit() {
 
     let key = this._route.snapshot.paramMap.get('key');
-    this._dataSvc.getDataForUrl('projects/get/'+key).subscribe(response => {
-      this.setContent(response);    
-    });
+    // this._dataSvc.getDataForUrl('projects/get/'+key).subscribe(response => {
+    //   this.setContent(response);    
+    // });
 
   }
 

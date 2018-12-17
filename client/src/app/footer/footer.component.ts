@@ -15,7 +15,6 @@ export class FooterComponent implements OnInit {
 
 
   public scrollToTop() {
-    console.log('scroll')
     this._scrollToSvc
       .scrollTo({
         target: document.getElementById('nav'),
@@ -23,5 +22,5 @@ export class FooterComponent implements OnInit {
         easing: 'easeOutElastic',
         duration: 700
       });
-}
+  }
 }

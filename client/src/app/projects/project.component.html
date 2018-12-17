@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div #backgroundEnd class="columns is-mobile is-multiline" (scroll)="scrollHandler($event)">
+<div #backgroundEnd id="top" class="columns is-mobile is-multiline" (scroll)="scrollHandler($event)">
 
     <div class="column is-two-fifths-mobile is-one-quarter-tablet" *ngIf="content?.format !== undefined">
         <h4>Product</h4>
@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <div class="column is-two-fifths-mobile is-one-quarter-tablet" *ngIf="content?.externalLinkUrl !== null">
+    <div class="column is-two-fifths-mobile is-one-quarter-tablet" *ngIf="content?.externalLinkUrl !== null && content?.externalLinkUrl.length > 0">
         <h4>Website</h4>
         <a href="{{content?.externalLinkUrl}}" role="link">{{content?.externalLinkUrl | prettyUrl}}</a>
     </div>
@@ -30,6 +30,8 @@
 
 </div>
 
+<div id="verticle-line">&nbsp;</div>
+
 <div class="description">
 
     <div class="column is-two-thirds">{{content?.description}}</div>
@@ -37,11 +39,11 @@
     <div class="columns is-mobile is-centered" *ngIf="content?.projectImages !== undefined && content?.projectImages.length > 0">
         <div class="column is-two-fifths-mobile is-one-third-tablet">
             <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[0].public_id}}" autoFormat="true"
-                width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[0] !== null"></cdn-image>
+                width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[0] !== undefined"></cdn-image>
         </div>
         <div class="column is-two-fifths-mobile is-one-third-tablet">
             <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[1].public_id}}" autoFormat="true"
-                width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[1] !== null"></cdn-image>
+                width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[1] !== undefined"></cdn-image>
         </div>
     </div>
 
@@ -49,29 +51,34 @@
         <h3 class="column is-one-third uppercase">
             Challenge
         </h3>
-        <div class="column is-two-thirds">
+        <div class="column text">
             {{content?.challengeTxt}}
+            <hr />
         </div>
     </div>
-    <hr />
 
     <div *ngIf="content?.strategyTxt" class="columns">
         <h3 class="column is-one-third uppercase">
             Strategy +<br />Approach
         </h3>
-        <div class="column is-two-thirds">
+        <div class="column text">
             {{content?.strategyTxt}}
+            <hr />
         </div>
     </div>
-    <hr />
 
     <div *ngIf="content?.strategyTxt" class="columns">
         <h3 class="column is-one-third uppercase">
             Results
         </h3>
-        <div class="column is-two-thirds">
+        <div class="column text">
             {{content?.resultsTxt}}
         </div>
+    </div>
+
+    <div id="bottom" class="column is-full" *ngIf="content !== undefined && content.projectImages[2] !== undefined">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content.projectImages[2].public_id}}" autoFormat="true"
+        width="800" alt="Image for '{{content?.name}}' project"></cdn-image>
     </div>
 
 </div>

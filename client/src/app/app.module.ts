@@ -48,7 +48,11 @@ export const routes: Routes = [
   { path: 'projects/:key', component: ProjectComponent },
 
   { path: 'publications', component: PublicationIndexComponent },
-  // { path: 'projects/:key', component: ProjectComponent },
+
+  { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
+      externalUrl: 'https://www.launchpad6.com/contestpad'
+    }
+  },
 
   // TEMP redirects
   { path: 'cmap', component: RedirectComponent, canActivate:[RedirectService], data: {
