@@ -1,41 +1,66 @@
-<section id="person-modal" class="columns" *ngIf="currentPerson !== undefined" (click)="closePerson()">
+<section id="person-modal" class="" *ngIf="currentPerson !== undefined" (click)="closePerson()">
 
-    <div class="column is-one-third">
-        <h1 class="uppercase">
-            {{currentPerson.name.first}} {{currentPerson.name.last}}
-        </h1>
-       
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{currentPerson.image.public_id}}" autoFormat="true" effect="grayscale"
-        width="270" alt="Portrait image of {{currentPerson.name.first}} {{currentPerson.name.last}}"></cdn-image>
-    </div>
+    <div id="header">
 
-    <div class="column is-half">
-       <div [innerHtml]="currentPerson.bio.html">
-       </div>
+        <cdn-image id="logo" cloudinaryId="logos/el-logo-team" width="141" alt="Engagement Lab logo" aria-role="image"></cdn-image>
 
-       <div class="columns">
-           <div class="column is-one-third" *ngIf="currentPerson.websiteURL.length > 0">
-               <a href="{{currentPerson.websiteURL}}">{{currentPerson.websiteURL | prettyUrl}}</a>
-            </div>
-            <div class="column" *ngIf="currentPerson.email.length > 0">
-                {{currentPerson.email}}
-             </div>
-       </div>
-       <!-- <div class="columns">
-           <div class="column is-" *ngIf="currentPerson.websiteURL.length > 0">
-               <a href="{{currentPerson.websiteURL}}">{{currentPerson.websiteURL | prettyUrl}}</a>
-            </div>
-            <div class="column" *ngIf="currentPerson.email.length > 0">
-                {{currentPerson.email}}
-             </div>
-       </div> -->
-    </div>
-
-    <div class="column">
         <a id="menu-btn">
             <span></span>
             <span></span>
         </a>
+    </div>
+
+    <div id="content" class="columns">
+
+        <div id="top" class="column is-two-thirds-mobile is-half-tablet">
+            <h1 class="uppercase">
+                {{currentPerson.name.first}} {{currentPerson.name.last}}
+            </h1>
+
+            <p>{{currentPerson.title}}</p>
+
+            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{currentPerson.image.public_id}}" autoFormat="true" effect="grayscale"
+                width="225" alt="Portrait image of {{currentPerson.name.first}} {{currentPerson.name.last}}"></cdn-image>
+        </div>
+
+        <div id="bio" class="column is-four-fifths-mobile is-half-tablet">
+
+            <!-- Bio markup -->
+            <div class="www" [innerHtml]="currentPerson.bio.html">
+            </div>
+
+            <div class="columns is-multiline is-mobile">
+
+                <div class="www column is-full" *ngIf="currentPerson.websiteURL.length > 0">
+                    <a href="{{currentPerson.websiteURL}}">{{currentPerson.websiteURL | prettyUrl}}</a>
+                </div>
+
+                <div class="column is-one-third" *ngIf="currentPerson.email.length > 0">
+                    {{currentPerson.email}}
+                </div>
+
+                <!-- Social links -->
+                <div id="social" class="column is-full columns is-mobile">
+
+                    <a href="{{currentPerson.fbURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.fbURL && currentPerson.fbURL.length > 0">
+                        <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image>
+                    </a>
+                    <a href="{{currentPerson.twitterURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.twitterURL && currentPerson.twitterURL.length > 0">
+                        <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image>
+                    </a>
+                    <a href="{{currentPerson.igURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.igURL && currentPerson.igURL.length > 0">
+                        <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image>
+                    </a>
+                    <a href="{{currentPerson.linkedInURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.linkedInURL && currentPerson.linkedInURL.length > 0">
+                        <cdn-image cloudinaryId="logos/li" width="24" alt="LinkedIn link image"></cdn-image>
+                    </a>
+                    <a href="{{currentPerson.githubURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.githubURL && currentPerson.githubURL.length > 0">
+                        <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image>
+                    </a>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 </section>

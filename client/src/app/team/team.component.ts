@@ -34,7 +34,6 @@ export class TeamComponent implements OnInit {
     this._dataSvc.getDataForUrl('team/get/'+key).subscribe(response => {
       
       this.currentPerson = response.people;
-      // document.getElementById('person-modal').style.display = 'flex';
 
     });
   }
@@ -44,7 +43,7 @@ export class TeamComponent implements OnInit {
     this.currentPerson = undefined;
     this._location.go('team');
 
-    // document.getElementById('person-modal').style.display = 'none';
+    window.scrollTo(0, 0);
 
   }
 

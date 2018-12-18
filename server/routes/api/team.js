@@ -22,7 +22,7 @@ var buildData = (options, res) => {
 
     if (options.id) {
         // Get person whose id specified
-        let addtlFields = 'bio email twitterURL fbURL linkedInURL githubURL websiteURL';
+        let addtlFields = 'bio email twitterURL fbURL linkedInURL githubURL websiteURL igURL';
         peopleData = person.findOne({
             key: options.id
         }, personFields + ' ' + addtlFields);

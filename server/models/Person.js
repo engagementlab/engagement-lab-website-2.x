@@ -22,6 +22,7 @@ const Types = keystone.Field.Types;
 var Person = new keystone.List('Person', {
 	label: 'People',
 	singular: 'Team Member',
+	plural: 'Team',
 	sortable: true,
 	autokey: {
 		path: 'key',
@@ -113,6 +114,11 @@ Person.add({
 	fbURL: {
 		type: Types.Url,
 		label: 'Facebook',
+		note: 'This will display on the person\'s individual page'
+	},
+	igURL: {
+		type: Types.Url,
+		label: 'Instagram',
 		note: 'This will display on the person\'s individual page'
 	},
 	linkedInURL: {

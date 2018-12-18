@@ -1,16 +1,18 @@
-import { Component, OnInit, ViewChildren, QueryList, Input } from '@angular/core';
-import { tns } from 'tiny-slider';
+import { Component, OnInit, ViewChildren, QueryList, Input, OnDestroy, AfterViewInit } from '@angular/core';
+import { tns, TinySliderInstance } from 'tiny-slider';
 
 @Component({
   selector: 'people-grid',
   templateUrl: './people-grid.component.html',
   styleUrls: ['./people-grid.component.scss']
 })
-export class PeopleGridComponent implements OnInit {
+export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
   
   @Input() people: any[];
   @Input() preview: boolean = false;
   @ViewChildren('teamList') list: QueryList<any>;
+
+  private slider: TinySliderInstance;
   
   constructor() { }
 
@@ -22,7 +24,9 @@ export class PeopleGridComponent implements OnInit {
     if(!this.preview) return;
 
     this.list.changes.subscribe(t => {
-      var slider = tns({
+
+      // Create slider once staff list pouplates
+      this.slider = tns({
         container: '#list',
         items: 3,
         slideBy: 1,
@@ -34,7 +38,16 @@ export class PeopleGridComponent implements OnInit {
         mouseDrag: true,
         controlsContainer: document.getElementById('controls')
       });
+
     });
+
+  }
+
+  ngOnDestroy() {
+
+    // Destroy slider when user leaves
+    if(this.slider)
+      this.slider.destroy();
 
   }
 }
