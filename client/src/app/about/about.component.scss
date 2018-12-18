@@ -1,6 +1,26 @@
 @import "~src/styles/_variables";
 
+h2 {
+    
+    font-size: 2.25em;
+
+    @include not-phones {
+        font-size: 3.1em;
+
+    }
+
+}
+
+h3 {
+
+  font-family: 'LunchtypeRegular';
+  line-height: 1.17;
+  letter-spacing: 0.5px;
+  
+}
+
 #portfolio {
+
     .icon {
         max-width: 100px;
         
@@ -14,6 +34,7 @@
             @include circular-background($mango);
         }
     }
+
 }
 
 #team {

@@ -1,16 +1,40 @@
-<h2 class="column is-half">The Engagement Lab at Emerson College</h2>
-<h5 class="column is-three-quarters">{{about?.missionStatement}}</h5>
+<h2 class="column is-half no-pad">The Engagement Lab at Emerson College</h2>
+<h3 class="column is-full-mobile is-three-quarters no-pad">{{about?.missionStatement}}</h3>
 
-<section class="columns" *ngIf="about !== undefined">
+<section class="columns is-mobile is-multiline" *ngIf="about !== undefined">
 
-    <div class="column is-one-third">{{about?.summary1}}</div>
-    <div class="column">
+    <div class="column is-full">
+        <hr />
+    </div>
+    <!-- <div class="column is-half-mobile is-one-third-tablet">
+        {{about?.summary1}}
+    </div>
+
+    <div class="column is-two-fifths-mobile is-one-third-tablet">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" width="450" alt="About flavor image 1"
+            aria-role="img"></cdn-image>
+    </div> -->
+
+     
+    <div class="column is-half-mobile hidden-desktop">
+            {{about?.summary1}}
+            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" width="450" alt="About flavor image 1"
+                aria-role="img"></cdn-image>
+    </div>
+
+    <div class="column hidden-desktop">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[1].public_id}}" width="450" alt="About flavor image 2"
+        aria-role="img"></cdn-image>
+        {{about?.summary2}}
+    </div>
+
+    <div class="column is-two-fifths-mobile is-one-third-tablet hidden-mobile">
         <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" width="450" alt="About flavor image 1"
             aria-role="img"></cdn-image>
     </div>
 </section>
 
-<section class="columns" *ngIf="about !== undefined">
+<section class="columns hidden-mobile" *ngIf="about !== undefined">
 
     <div class="column">
         <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[1].public_id}}" width="450" alt="About flavor image 2"
