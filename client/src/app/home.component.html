@@ -6,12 +6,12 @@
   <div #initiativeList class="initiative columns is-one-third" *ngFor="let initiative of initiatives; let i = index;">
 
     <div class="column is-half">
-      <h2 data-aos="fade-in">{{initiative.name}}</h2>
-      <cdn-image data-aos="fade-up-left" cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true"
+      <h2>{{initiative.name}}</h2>
+      <cdn-image cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true"
         width="600" alt="Artwork image for '{{initiative.name}}' initiative"></cdn-image>
     </div>
 
-    <div data-aos="slide-left" class="column">
+    <div class="column">
       <p>{{initiative.description}}</p>
       <h3 class="uppercase">Related Case Studies</h3>
       <hr />

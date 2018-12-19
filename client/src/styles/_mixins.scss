@@ -261,12 +261,6 @@ $base-font-size: 16px;
     font-weight: 600;
 }
 
-@mixin mobile-only {
-    @include mq($until: tabletPortrait) {
-        @content;
-    }
-}
-
 @mixin border-radius($radius) {
 
     -webkit-border-radius: #{$radius + "px"};
@@ -299,6 +293,12 @@ $base-font-size: 16px;
 
 /* Device type breakpoint helpers */
 
+
+@mixin mobile-only {
+    @include mq($until: tabletPortrait) {
+        @content;
+    }
+}
 @mixin phones {
   @include mq($until: tabletPortrait) {
     @content;
@@ -308,7 +308,12 @@ $base-font-size: 16px;
   @include mq($from: mobileLg, $until: tablet) {
     @content;
   }
-} 
+}
+@mixin until-tablet-wide {
+  @include mq($until: tablet) {
+    @content;
+  }
+}  
 @mixin not-phones {
   @include mq($from: tabletPortrait) {
     @content;

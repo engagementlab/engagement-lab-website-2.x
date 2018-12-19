@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
   ngAfterViewInit() {
 
     this.initiativeList.changes.subscribe(t => {
-        AOS.init();
+        // AOS.init();
     });
 
   }

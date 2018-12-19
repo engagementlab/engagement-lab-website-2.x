@@ -132,6 +132,12 @@ button {
   }
 }
 
+.hidden-tablet-plus {
+  @include mq($from: tabletPortrait) {
+    display: none;
+  }
+}
+
 .hidden-mobile {
   @include mobile-only {
     display: none;
