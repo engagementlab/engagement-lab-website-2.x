@@ -51,48 +51,19 @@ h3 {
 }
 
 .book {
-
-    .icon {
-        .bg {
-            @include circular-background($tomato);
-        }
-    }
-    hr {
-        border-color:  $tomato;
-    }
     span {
         color: $tomato;
     }
 }
 
 .guide {
-
-    .icon {
-        .bg {
-            @include circular-background($green-blue);
-        }
-    }
-    hr {
-        border-color:  $green-blue;
-    }
     span {
         color: $green-blue;
     }
-
 }
 
 .article-chapter {
-
-    .icon {
-        .bg {
-            @include circular-background($mango);
-        }
-    }
-    hr {
-        border-color:  $mango;
-    }
     span {
         color: $mango;
-    }
-    
+    }    
 }

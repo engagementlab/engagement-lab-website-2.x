@@ -17,16 +17,16 @@ mongoose.Promise = require('bluebird');
 var buildData = (options, res) => {
 
     let list = keystone.list('Publication').model;
-    let fields = 'key title author downloadUrls purchaseUrls -_id';
+    let fields = 'key title author date downloadUrls purchaseUrls -_id';
     let data;
 
-    if (options.id) {
+/*     if (options.id) {
         // let addtlFields = 'description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
         // data = list.findOne({
         //     key: options.id
         // }, fields + ' ' + addtlFields).populate('format principalInvestigator');
     }
-    else
+    else */
         data = list.find({'enabled': true}, fields)
                    .sort([['sortOrder', 'descending']])
                    .populate('form')

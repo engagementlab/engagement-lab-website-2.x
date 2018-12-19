@@ -1,19 +1,21 @@
 <div class="{{type}}">
     <div class="top">
-        <div class="icon">
-            <div class="bg">
-                <cdn-image cloudinaryId="publications/{{pub.form.key}}-icon" width="{{iconWidth}}" alt="{{pub.title}} icon image"></cdn-image>
-            </div>
-        </div>
 
-        <div>
-            <h2>{{pub.title}}</h2>
-            <h3 class="uppercase" [innerHtml]="pub.author | authorFormat"></h3>
-        </div>
+        <h2>{{pub.title}}</h2>
+        <hr />
+
     </div>
-    <hr />
+    
+    
     <div class="bottom">
-        <span class="uppercase">{{type}}</span>
+        <div class="icon">
+            <span class="uppercase">{{type}}</span>
+            <cdn-image cloudinaryId="publications/{{pub.form.key}}-icon" width="{{iconWidth}}" alt="{{pub.title}} icon image"></cdn-image>
+            <span>{{year}}</span>
+        </div>
+        
+        <h3 class="uppercase" [innerHtml]="pub.author | authorFormat"></h3>
+        <p>I had a horrible nightmare, dreamed I went back in time, it was terrible. But you're good, Marty, you're really good. And this audition tape of your is great, you gotta send it in to the record company.</p>
 
         <a *ngIf="pub.downloadUrls !== undefined && pub.downloadUrls.length > 0; else resource" href="{{pub.downloadUrls}}">
             Download&nbsp;
@@ -29,7 +31,7 @@
 
         <a *ngIf="pub.purchaseUrls !== undefined && pub.purchaseUrls.length > 0" href="{{pub.purchaseUrls}}">
             Buy&nbsp;
-            <cdn-image cloudinaryId="publications/buy-icon" width="25" alt="{{pub.title}} buy icon image"></cdn-image>
+            <cdn-image cloudinaryId="publications/view-icon" width="25" alt="{{pub.title}} view icon image"></cdn-image>
         </a>
 
     </div>

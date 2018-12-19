@@ -11,12 +11,15 @@ export class PublicationComponent implements OnInit {
   @Input() type: string;
 
   public iconWidth: number;
+  public year: number;
 
   constructor() {}
 
   ngOnInit() {
 
       this.iconWidth = this.type === 'book' ? 37 : 50;
+      this.year = new Date(this.pub.date).getFullYear();
+      
   }
 
 }
