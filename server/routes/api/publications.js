@@ -17,7 +17,7 @@ mongoose.Promise = require('bluebird');
 var buildData = (options, res) => {
 
     let list = keystone.list('Publication').model;
-    let fields = 'key title author date downloadUrls purchaseUrls -_id';
+    let fields = 'key title author date context downloadUrls purchaseUrls -_id';
     let data;
 
 /*     if (options.id) {

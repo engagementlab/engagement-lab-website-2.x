@@ -2,7 +2,7 @@
 
 h2 {
     font-family: 'LunchtypeRegular';
-    font-size: 1.4em;
+    font-size: 1.9em;
     font-weight: normal;
     line-height: 1.29;
     letter-spacing: 0.3px;
@@ -11,21 +11,14 @@ h2 {
 
 h3 {
     font-family: 'LunchtypeMedium';
-    font-size: .9em;
+    font-size: 1em;
     font-weight: 500;
     line-height: 1.44;
     letter-spacing: 0.5px;
 }
 
-.top {
-    .icon {
-        flex: 1 0 9%;
-        margin-right: 3%;
-        max-width: 49px;
-        .bg {
-            text-align: center;
-        }
-    }
+hr {
+    border: 2px solid;
 }
 
 .bottom {
@@ -34,34 +27,52 @@ h3 {
     justify-content: space-between;
     align-items: center;
 
-    a {
+    .icon {
+        flex: 1 0 17%;
+        margin-right: 3%;
+        text-align: center;
+        span {
+            font-family: 'Overpass';
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+    }
+
+    .link {
         display: flex;
-        align-items: center;
-    }
-    hr {
-        border: 2px solid;
-    }
-    span {
-        font-family: 'Overpass';
-        font-weight: 500;
-        font-size: 1.2em;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: Overpass;
+        font-weight: 900;
+
+        margin-top: 6%;
+
+        div {
+            // justify-self: left;
+        }
+        
+        a {
+            display: flex;
+            // justify-self: right;
+            align-content: center;
+        }
     }
 }
 
 .book {
-    span {
+    .icon {
         color: $tomato;
     }
 }
 
 .guide {
-    span {
+    .icon {
         color: $green-blue;
     }
 }
 
 .article-chapter {
-    span {
+    .icon {
         color: $mango;
     }    
 }

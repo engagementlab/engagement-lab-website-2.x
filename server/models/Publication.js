@@ -74,31 +74,6 @@ Publication.add({
       note: 'Determines if this publication appears on the live site.'
   }
 }, 'Filters', {
-  /* keyword: {
-      type: Types.Relationship,
-      filters: {
-          category: 'Keyword', 
-          appears: 'Publication'
-      },
-      ref: 'Filter',
-      label: 'Keyword(s)',
-      note: 'What is this publication about? Pick from here or add a new Keyword Filter and choose \'Publication\' for the destination.',
-      required: true,
-      many: true,
-      initial: true
-  },
-  person: {
-    type: Types.Relationship,
-    filters: {
-      category: 'Person'
-    },
-    ref: 'Filter',
-    label: 'Author(s)',
-    note: 'Is there a faculty member associated with this publication? Pick them from this list or add as a \'Person\' filter',
-    required: true,
-    many: true,
-    initial: true
-  }, */
   form: {
     type: Types.Relationship,
     filters: {
@@ -114,7 +89,7 @@ Publication.add({
   }
 }, 'Publication Information', {
   author: {
-    type: Types.TextArray,
+    type: String,
     label: 'Author Name(s)',
     required: true,
     initial: true,
@@ -124,9 +99,8 @@ Publication.add({
   blurb: {
     type: Types.Textarea,
     label: 'Blurb Text',
-    note: 'This displays beneath the title, date, and author in the article or chapter listing.'
+    note: 'This displays beneath the title and author in the publications listing.'
   },
-
   description: {
     type: Types.Markdown,
     label: 'Description Text',
@@ -134,23 +108,11 @@ Publication.add({
     initial: true,
     note: 'This displays on the individual publication page under \'About\''
   },
-
-  image: {
-    type: Types.CloudinaryImage,
-    label: 'Thumbnail',
-    folder: 'research/publications',
-    autoCleanup: true,
-    note: 'For Books and Guides! This is the image thumbnail that displays on the publication listings page.'
+  context: {
+    type: String,
+    note: 'Where this publication appears, e.g. "Journal Of Civic Media Vol. 1 Issue 3".'
   },
-
-  bannerImage: {
-    type: Types.CloudinaryImage,
-    label: 'Banner Image',
-    folder: 'research/publications',
-    autoCleanup: true,
-    note: 'For Books and Guides! This is the banner image on the individual publication page, displayed behind the title. If none is uploaded, the title will display with a dark-grey background by default.'
-  },
-
+  
   date: {
     type: Date,
     label: 'Publication Date',
@@ -166,12 +128,12 @@ Publication.add({
   },
   purchaseUrls: {
     type: String,
-    label: 'Link to purchase book (*will not* display if Article Resource is defined)',
+    label: 'Link to view publication',
     note: 'Must be in format "http://www.something.org"'
   },
   downloadUrls: {
     type: String,
-    label: 'Link to download book (*will not* display if Article Resource is defined)',
+    label: 'Link to download publication',
     note: 'Must be in format "http://www.something.org"'
   },
   file: {

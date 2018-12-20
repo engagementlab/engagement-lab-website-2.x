@@ -9,9 +9,10 @@
     
     <div class="bottom">
         <div class="icon">
-            <span class="uppercase">{{type}}</span>
+            <span *ngIf="type !== 'article-chapter'" class="uppercase">{{type}}</span>
+            <span *ngIf="type === 'article-chapter'" class="uppercase">article</span>
             <cdn-image cloudinaryId="publications/{{pub.form.key}}-icon" width="{{iconWidth}}" alt="{{pub.title}} icon image"></cdn-image>
-            <span>{{year}}</span>
+            <div>{{year}}</div>
         </div>
 
         <div id="right">
@@ -19,23 +20,26 @@
             <h3 class="uppercase" [innerHtml]="pub.author | authorFormat"></h3>
             <p>I had a horrible nightmare, dreamed I went back in time, it was terrible. But you're good, Marty, you're really good. And this audition tape of your is great, you gotta send it in to the record company.</p>
 
+            <div class="link">
+            <div *ngIf="pub.context !== undefined">{{pub.context}}</div>
             <a *ngIf="pub.downloadUrls !== undefined && pub.downloadUrls.length > 0; else resource" href="{{pub.downloadUrls}}">
-                Download&nbsp;
+                download&nbsp;
                 <cdn-image cloudinaryId="publications/download-icon" width="25" alt="{{pub.title}} download icon image"></cdn-image>
             </a>
 
             <ng-template #resource>
                 <a *ngIf="pub.articleResource !== undefined && pub.articleResource.file !== undefined" href="{{pub.articleResource.file.url}}">
-                    Download&nbsp;
+                    download&nbsp;
                     <cdn-image cloudinaryId="publications/download-icon" width="25" alt="{{pub.title}} download icon image"></cdn-image>
                 </a>
             </ng-template>
 
             <a *ngIf="pub.purchaseUrls !== undefined && pub.purchaseUrls.length > 0" href="{{pub.purchaseUrls}}">
-                Buy&nbsp;
+                view&nbsp;
                 <cdn-image cloudinaryId="publications/view-icon" width="25" alt="{{pub.title}} view icon image"></cdn-image>
             </a>
-            
+            </div>
+
         </div>
     </div>
 </div>
