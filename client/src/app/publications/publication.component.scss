@@ -41,17 +41,17 @@ hr {
     .link {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end;
         font-family: Overpass;
         font-weight: 900;
 
         margin-top: 6%;
 
-        div {
-            // justify-self: left;
+        div.context {
+            width: 75%;
         }
         
-        a {
+        div.a {
             display: flex;
             // justify-self: right;
             align-content: center;

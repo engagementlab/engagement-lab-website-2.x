@@ -5,6 +5,9 @@
     button {
         font-family: 'LunchtypeRegular';
         font-size: 1.4em;
+        &.mixitup-control-active {
+            font-weight: bold;
+        }
     }
 
 }
