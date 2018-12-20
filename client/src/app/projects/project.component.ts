@@ -13,6 +13,7 @@ export class ProjectComponent implements OnInit {
   public content: any;
   public themeIndex: number;
   private projectBgEl: HTMLElement;
+  private themeColors: string[] = ['#f6a536', '#00ab9e', '#f72923'];
 
   @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
 
@@ -60,8 +61,13 @@ export class ProjectComponent implements OnInit {
     if(this.projectBgEl === undefined) return;
 
     let height = (this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight) - window.scrollY+'px';
-    this.projectBgEl.style.maxHeight = height;
-    this.projectBgEl.style.height = height;
+
+    let endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
+    let heightVal = document.body.clientHeight;
+    let perc = (endY / heightVal) * 100;
+    let color = this.themeColors[this.themeIndex];
+
+    document.body.style.backgroundImage = 'linear-gradient(to bottom, ' + color + ' 0%, ' + color + ' ' + perc + '%, white ' + perc + '%, white 100%)';
 
   }
 
@@ -69,7 +75,7 @@ export class ProjectComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) 
     scrollHandler(event) {
       
-      this.setBgHeight();
+      // this.setBgHeight();
 
     }
 

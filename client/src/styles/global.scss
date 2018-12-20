@@ -7,39 +7,29 @@ $tablet: 768px;
 // Site vars
 @import "./variables";
 
+html {
+  
+}
+
 body {
   font-family: 'LunchtypeRegular';
   font-size: 18px;
   color: black;
+  
+  // background: linear-gradient(to bottom, $mango 0%, $mango 50%, $white 50%, white 100%);
+  background-size: 100% 101%;
+
+  // "Fake" background for top of project pages
+
 
   @include mobile-only {
     font-size: 16px;
   }
-}
 
-// "Fake" background for top of project pages
-#project-bg {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: -100;
-  opacity: 0;
-
-  @include multi-transition(max-height .03s ease-in-out, opacity 1s linear);
-
+  @include transition(opacity, 1s, linear);
+  // background: linear-gradient(to bottom, $mango 0%, $mango 50%, $white 50%, white 100%);
   &.show {
     opacity: 1;
-  }
-
-  &.index-0 {
-    background-color: $mango;
-  }
-  &.index-1 {
-    background-color: $green-blue;
-  }
-  &.index-2 {
-    background-color: $tomato;
   }
 }
 
