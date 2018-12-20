@@ -21,6 +21,8 @@ export class PublicationIndexComponent implements OnInit {
   public pubTypesTotal: number;
   public pubTypeKeys: string[]; 
 
+  private mixer: mixitup.mixer;
+
   @ViewChildren('publicationList') publicationList: QueryList<any>;
 
   constructor(private _dataSvc: DataService) { 
@@ -52,9 +54,21 @@ export class PublicationIndexComponent implements OnInit {
 
     this.publicationList.changes.subscribe(t => {
   
-        let mixer = mixitup(document.getElementById('publications'));
+        mixitup(document.getElementById('publications'), {
+          animation: {
+            effects: 'fade'
+          }
+        });
         // AOS.init();
     });
+
+  }
+
+  ngOnDestroy() {
+
+    // Destroy mixer when user leaves
+    if(this.mixer)
+      this.mixer.destroy();
 
   }
 

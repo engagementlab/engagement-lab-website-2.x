@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 
 import { DataService } from '../utils/data.service';
 
-import * as cl from 'cloudinary-core';
 import mixitup from 'mixitup';
 import * as _ from 'underscore';
 import * as AOS from 'aos';
@@ -19,6 +18,8 @@ export class ProjectIndexComponent implements OnInit {
   public projectTypeNames: string[];
   public projectTypesCount: Object;
   public projectTypesTotal: number;
+
+  private mixer: mixitup.mixer;
 
   @ViewChildren('projectList') projectList: QueryList<any>;
 
@@ -47,10 +48,21 @@ export class ProjectIndexComponent implements OnInit {
 
     this.projectList.changes.subscribe(t => {
   
-        let mixer = mixitup(document.getElementById('projects'));
+        this.mixer = mixitup(document.getElementById('projects'), {
+          animation: {
+            effects: 'fade'
+          }
+        });
         // AOS.init();
     });
 
   }
 
+  ngOnDestroy() {
+
+    // Destroy mixer when user leaves
+    if(this.mixer)
+      this.mixer.destroy();
+
+  }
 }
