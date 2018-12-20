@@ -237,13 +237,19 @@ Project.schema.pre('save', function(next) {
     this.wasNew = this.isNew;
     this.wasModified = this.isModified();
 
+    // Override key w/ custom URL if defined
+    if(this.customUrl && this.customUrl.length > 0)
+     this.key = this.customUrl;
+
     next();
 
 });
 
-Project.schema.post('save', function(next) {
+Project.schema.post('save', (doc, next) => {
     // Make a post to slack when this Project is updated
     // keystone.get('slack').Post(Project.model, this, true);
+
+    next();
 
 });
 

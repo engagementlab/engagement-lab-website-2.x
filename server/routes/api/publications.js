@@ -17,7 +17,7 @@ mongoose.Promise = require('bluebird');
 var buildData = (options, res) => {
 
     let list = keystone.list('Publication').model;
-    let fields = 'key title author date context downloadUrls purchaseUrls -_id';
+    let fields = 'key title author date blurb context downloadUrls purchaseUrls -_id';
     let data;
 
 /*     if (options.id) {
@@ -28,7 +28,7 @@ var buildData = (options, res) => {
     }
     else */
         data = list.find({'enabled': true}, fields)
-                   .sort([['sortOrder', 'descending']])
+                   .sort([['date', 'descending']])
                    .populate('form')
                    .populate({
                         path: 'articleResource',

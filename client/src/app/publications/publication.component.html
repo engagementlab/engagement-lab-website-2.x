@@ -18,10 +18,10 @@
 
             <div id="right">
 
-                <h3 class="uppercase" [innerHtml]="pub.author | authorFormat"></h3>
-                <p>I had a horrible nightmare, dreamed I went back in time, it was terrible. But you're good, Marty,
-                    you're really good. And this audition tape of your is great, you gotta send it in to the record
+                <h3 class="uppercase" [innerHtml]="pub.author"></h3>
+                <p *ngIf="(pub.blurb && pub.blurb.length === 0) || !pub.blurb">[Blurb here] But you're good, Marty, you're really good. And this audition tape of your is great, you gotta send it in to the record
                     company.</p>
+                <p *ngIf="pub.blurb && pub.blurb.length > 0">{{pub.blurb}}</p>
 
                 <div class="link">
                     

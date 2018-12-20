@@ -19,7 +19,7 @@ export class FooterComponent implements OnInit {
       .scrollTo({
         target: document.getElementById('nav'),
         offset: 0,
-        easing: 'easeOutElastic',
+        easing: 'easeOutQuint',
         duration: 700
       });
   }
