@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div #backgroundEnd id="top" class="columns is-mobile is-multiline" (scroll)="scrollHandler($event)">
+<div #backgroundEnd id="top" class="columns is-mobile is-multiline" (scroll)="scrollHandler($event)" *ngIf="!hidden">
 
     <div class="column is-two-fifths-mobile is-one-quarter-tablet" *ngIf="content?.format !== undefined">
         <h4>Product</h4>
@@ -32,7 +32,7 @@
 
 <div id="verticle-line">&nbsp;</div>
 
-<div class="description">
+<div #description class="description" *ngIf="!hidden">
 
     <div class="column is-two-thirds">{{content?.description}}</div>
 

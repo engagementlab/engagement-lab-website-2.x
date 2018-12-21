@@ -37,8 +37,6 @@ export class AppComponent implements OnInit {
     }
 
     this._router.events.subscribe((evt) => {
-      if (evt instanceof NavigationStart)
-        document.getElementById('project-bg').removeAttribute('class');
 
       if (!(evt instanceof NavigationEnd)) {
         return;

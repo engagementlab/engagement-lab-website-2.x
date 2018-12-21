@@ -8,7 +8,7 @@
     <div class="blurb">
         {{projectFeatured?.byline}}   
     </div>
-    <app-button data-aos="fade-in" data-aos-delay="7" label="view" route="/projects/{{projectFeatured?.key}}" ariaLabel="Go to '{{projectFeatured?.name}}' project"></app-button>
+    <app-button label="view" route="/projects/{{projectFeatured?.key}}" ariaLabel="Go to '{{projectFeatured?.name}}' project"></app-button>
   </div>
   <div class="column is-one-third">
       <cdn-image cloudinaryPrefix="/" cloudinaryId="{{projectFeatured.image.public_id}}" autoFormat="true" alt="Thumbnail image for '{{content?.name}}' project"></cdn-image>

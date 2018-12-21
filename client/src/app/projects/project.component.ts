@@ -1,81 +1,101 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {
+    Component,
+    ViewChild,
+    ElementRef
+} from '@angular/core';
+import {
+    ActivatedRoute
+} from '@angular/router';
 
-import { DataService } from '../utils/data.service';
+import {
+    DataService
+} from '../utils/data.service';
+import {
+    TweenLite
+} from 'gsap';
 
 @Component({
-  selector: 'app-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss']
+    selector: 'app-project',
+    templateUrl: './project.component.html',
+    styleUrls: ['./project.component.scss']
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
 
-  public content: any;
-  public themeIndex: number;
-  private projectBgEl: HTMLElement;
-  private themeColors: string[] = ['#f6a536', '#00ab9e', '#f72923'];
+    public content: any;
+    public themeIndex: number;
+    public hidden: boolean = true;
 
-  @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
+    private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
+    private bgEndPerc: number;
 
-  constructor(private _dataSvc: DataService, private _route: ActivatedRoute) { 
+    @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
+    @ViewChild('description') description: ElementRef;
 
-    this._route.params.subscribe(params => {
+    constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
 
-      this._dataSvc.getDataForUrl('projects/get/'+params['key']).subscribe(response => {
-          this.setContent(response);   
-      });
+        this._route.params.subscribe(params => {
 
-    });
+            this._dataSvc.getDataForUrl('projects/get/' + params['key']).subscribe(response => {
+                this.setContent(response);
+                this.hidden = false;
+            });
 
-  }
+        });
 
-  ngOnInit() {
+    }
 
-    let key = this._route.snapshot.paramMap.get('key');
-    // this._dataSvc.getDataForUrl('projects/get/'+key).subscribe(response => {
-    //   this.setContent(response);    
-    // });
+    ngAfterViewChecked() {
 
-  }
+        this.setBgHeight();
 
-  ngAfterViewChecked() {
-    
-    this.setBgHeight();
+    }
 
-  }
-   
-  setContent(data: any) {
+    ngOnDestroy() {
 
-    this.projectBgEl = document.getElementById('project-bg');
+        // Undo bg gradient
+        let color = this.themeColors[this.themeIndex];
+        let alpha = {
+            a: 1
+        };
+        TweenLite.to(alpha, 1, {
+            a: '-=1',
+            onUpdate: () => {
+                document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ',' + alpha.a + ' ) 0%, rgba(' + color + ',' + alpha.a + ') ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
+            }
+        });
+    }
 
-    this.content = data;
-    this.themeIndex = data['sortOrder'] % 3;
+    setContent(data: any) {
 
-    this.projectBgEl.removeAttribute('class');
-    this.projectBgEl.setAttribute('class', 'show index-'+this.themeIndex);
-    
-  }
+        this.content = data;
+        this.themeIndex = data['sortOrder'] % 3;
 
-  setBgHeight() {
+        setTimeout(() => {
 
-    if(this.projectBgEl === undefined) return;
+            let color = this.themeColors[this.themeIndex];
+            var alpha = {
+                a: 0
+            };
 
-    let height = (this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight) - window.scrollY+'px';
+            TweenLite.to(alpha, 1, {
+                a: '+=1',
+                onUpdate: () => {
+                    // Set bg to generated gradient
+                    document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ',' + alpha.a + ' ) 0%, rgba(' + color + ',' + alpha.a + ') ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
+                }
+            });
 
-    let endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
-    let heightVal = document.body.clientHeight;
-    let perc = (endY / heightVal) * 100;
-    let color = this.themeColors[this.themeIndex];
+        }, 0);
 
-    document.body.style.backgroundImage = 'linear-gradient(to bottom, ' + color + ' 0%, ' + color + ' ' + perc + '%, white ' + perc + '%, white 100%)';
+    }
 
-  }
+    setBgHeight() {
 
-  // Update bg height on scroll
-  @HostListener('window:scroll', ['$event']) 
-    scrollHandler(event) {
-      
-      // this.setBgHeight();
+        if (this.backgroundEnd === undefined || this.description === undefined) return;
+
+        let endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
+        let windowHeight = document.body.clientHeight;
+        this.bgEndPerc = (endY / windowHeight) * 100;
 
     }
 
