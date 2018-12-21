@@ -1,22 +1,51 @@
 @import "~src/styles/_variables";
 
 h2 {
-    
+
     font-size: 2.25em;
 
     @include not-phones {
         font-size: 3.1em;
-
     }
 
 }
 
 h3 {
 
-  font-family: 'LunchtypeRegular';
-  line-height: 1.17;
-  letter-spacing: 0.5px;
-  
+    font-family: 'LunchtypeRegular';
+    font-size: 2em;
+    font-weight: normal;
+
+    margin-top: 5%;
+    margin-bottom: 7%;
+    line-height: 1.17;
+    letter-spacing: 0.5px;
+
+}
+
+.summary {
+
+    font-size: 1.55em;
+    line-height: 1.29;
+    letter-spacing: 0.3px;
+
+    @include not-phones {
+        div {
+            &:nth-child(2) {
+                ::ng-deep img {
+                    @include transform(translateY(-12%));
+                }
+            }
+            &:nth-child(3) {
+                ::ng-deep img {
+                    @include desktop {
+                        @include transform(translateY(-22%));
+                    }
+                    @include transform(translateY(32%));
+                }
+            }
+        }
+    }
 }
 
 #portfolio {
@@ -29,13 +58,15 @@ h3 {
 
     .icon {
         max-width: 100px;
-        
+
         &.tomato {
             @include circular-background($tomato);
         }
+
         &.gb {
             @include circular-background($green-blue);
         }
+
         &.mango {
             @include circular-background($mango);
         }

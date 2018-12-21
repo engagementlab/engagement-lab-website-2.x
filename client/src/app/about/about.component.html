@@ -1,33 +1,58 @@
 <h2 class="column is-half no-pad">The Engagement Lab at Emerson College</h2>
-<h3 class="column is-full-mobile is-three-quarters no-pad">{{about?.missionStatement}}</h3>
+<h3 class="column is-full-mobile is-7-tablet no-pad">{{about?.missionStatement}}</h3>
 
-<section class="columns is-mobile is-multiline" *ngIf="about !== undefined">
 
-    <div class="column is-full">
-        <hr />
-    </div>
+<div class="column is-full">
+    <hr />
+</div>
 
-    <div class="column is-two-fifths-mobile is-half-mobile is-one-third-tablet hidden-desktop">
+<!-- Mobile-only -->
+<section class="columns is-centered is-mobile is-multiline" *ngIf="about !== undefined && isPhone">
+    <div class="column is-two-fifths-mobile is-half-mobile">
         {{about?.summary1}}
         <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" autoFormat=true width="450" alt="About flavor image 1"
             aria-role="img"></cdn-image>
     </div>
 
-    <div class="column is-two-fifths-mobile is-one-third-tablet hidden-desktop">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[1].public_id}}" autoFormat=true width="450" alt="About flavor image 2"
-                aria-role="img"></cdn-image>
-            {{about?.summary2}}
+    <div class="column is-two-fifths-mobile">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[1].public_id}}" autoFormat=true width="450" alt="About flavor image 2"
+            aria-role="img"></cdn-image>
+        {{about?.summary2}}
     </div>
-     
-    <div class="column is-one-third-tablet hidden-mobile">
-            {{about?.summary1}}
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" autoFormat=true width="140" height="217" gravity="faces" crop="lfill" alt="About flavor image 1"
-                aria-role="img"></cdn-image>
+</section>
+
+<!-- Tablet/desktop-only -->
+<section class="columns is-multiline summary" *ngIf="about !== undefined && !isPhone">
+    <div class="column is-5 ">
+        {{about?.summary1}}
+    </div>
+    <div class="column is-4 is-offset-1">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[0].public_id}}" autoFormat=true width="140" height="217"
+            gravity="faces" crop="lfill" alt="About flavor image 1" aria-role="img"></cdn-image>
     </div>
 
-    <div class=" is-one-third-tablet hidden-mobile">
+    <div class="column is-5">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{}" autoFormat=true width="250" height="407" alt=""
+            aria-role="img"></cdn-image>
+            
+        <cl-image 
+        responsive
+        public-id="{{about.images[1].public_id}}" 
+        secure="true"
+        width="250"
+        height="407"
+        fetch-format="auto"
+        crop="fill"
+        gravity="center"
+        attr.alt="About flavor image 2" class="cdn-image" *ngIf="isTablet">
+        <cl-transformation attr.quality="100"></cl-transformation>
+        </cl-image>
+
+
         <cdn-image cloudinaryPrefix="/" cloudinaryId="{{about.images[1].public_id}}" autoFormat=true width="450" alt="About flavor image 2"
-        aria-role="img"></cdn-image>
+            aria-role="img" *ngIf="!isTablet"></cdn-image>
+    </div>
+    <div class="column is-4 is-offset-1">
         {{about?.summary2}}
     </div>
 </section>
@@ -37,8 +62,7 @@
     <div class="columns is-mobile is-centered is-multiline">
         <div class="column is-two-fifths-mobile">
             <div class="icon tomato">
-                <cdn-image cloudinaryId="about/research-icon" width="100" alt="Research icon image"
-                    aria-role="img"></cdn-image>
+                <cdn-image cloudinaryId="about/research-icon" width="100" alt="Research icon image" aria-role="img"></cdn-image>
             </div>
             <h3>Research</h3>
             {{about?.research}}
@@ -46,8 +70,7 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon gb">
-                <cdn-image cloudinaryId="about/workshop-icon" width="100" alt="Workshops icon image"
-                    aria-role="img"></cdn-image>
+                <cdn-image cloudinaryId="about/workshop-icon" width="100" alt="Workshops icon image" aria-role="img"></cdn-image>
             </div>
             <h3>Workshops</h3>
             {{about?.workshops}}
@@ -55,8 +78,7 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon mango">
-                <cdn-image cloudinaryId="about/tools-icon" width="100" alt="Tools icon image"
-                    aria-role="img"></cdn-image>
+                <cdn-image cloudinaryId="about/tools-icon" width="100" alt="Tools icon image" aria-role="img"></cdn-image>
             </div>
             <h3>Tools</h3>
             {{about?.tools}}
@@ -64,8 +86,7 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon tomato">
-                <cdn-image cloudinaryId="about/teaching-icon" width="100" alt="Teaching icon image"
-                    aria-role="img"></cdn-image>
+                <cdn-image cloudinaryId="about/teaching-icon" width="100" alt="Teaching icon image" aria-role="img"></cdn-image>
             </div>
             <h3>Teaching</h3>
             {{about?.teaching}}
@@ -73,8 +94,7 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon gb">
-                <cdn-image cloudinaryId="about/design-icon" width="100" alt="Design icon image"
-                    aria-role="img"></cdn-image>
+                <cdn-image cloudinaryId="about/design-icon" width="100" alt="Design icon image" aria-role="img"></cdn-image>
             </div>
             <h3>Design</h3>
             {{about?.design}}
@@ -88,6 +108,6 @@
 
 <section id="team">
 
-  <people-grid [people]="people" [preview]="true"></people-grid>
+    <people-grid [people]="people" [preview]="true"></people-grid>
 
 </section>
