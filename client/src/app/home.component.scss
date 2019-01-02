@@ -72,6 +72,20 @@ a {
 
 }
 
+#event {
+    
+    margin-top: 10%;
+
+    div {
+        background-color: black;
+        color: white;
+    }
+    #day {
+        border-right: solid 2px white;
+    }
+    
+}
+
 #initiatives {
     .project {
         border-bottom: solid 2px black;

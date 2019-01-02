@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   public initiatives: any[];
   public featuredProjects: any[];
   public events: any[];
+  public latestEvent: any;
 
   private tls: TimelineLite[];
   t: TweenLite;
@@ -39,9 +40,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this._dataSvc.getDataForUrl('homepage/get/').subscribe(response => {
+     
       this.initiatives = response.initiatives;    
       this.featuredProjects = response.projects;    
       this.events = response.events;    
+
+      this.latestEvent = response.events[response.events.length-1];
+
     });
 
   }
@@ -52,17 +57,16 @@ export class HomeComponent implements OnInit {
         // AOS.init();
     });
     
-      this.tls = [
-        new TimelineLite({repeat:-1, yoyo:true}), 
-        new TimelineLite({repeat:-1, yoyo:true}),
-        new TimelineLite({repeat:-1, yoyo:true}),
-        new TimelineLite({repeat:-1, yoyo:true}),
-        new TimelineLite({repeat:-1, yoyo:true}),
-        new TimelineLite({repeat:-1, yoyo:true})
-      ];
-    // this.tl.addLabel('start',); 
-    let i = 0;
+    this.tls = [
+      new TimelineLite({repeat:-1, yoyo:true}), 
+      new TimelineLite({repeat:-1, yoyo:true}),
+      new TimelineLite({repeat:-1, yoyo:true}),
+      new TimelineLite({repeat:-1, yoyo:true}),
+      new TimelineLite({repeat:-1, yoyo:true}),
+      new TimelineLite({repeat:-1, yoyo:true})
+    ];
     
+    let i = 0;
     while(i < 20) {
       
       this.tls[0].add(TweenLite.to(this.blueBg.nativeElement, 5.7, { xPercent:_.random(-10, 10), yPercent:_.random(-10, 10), ease:Sine.easeInOut}));
