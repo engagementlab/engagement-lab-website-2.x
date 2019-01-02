@@ -8,17 +8,68 @@ a {
     }
 }
 
-.decor-ellipse {
+#intro {
+    #text {
 
-    display: block;
-  width: 204px;
-  height: 205px;
-  border-radius: 50%;
-  
-  
-  &#red {
-    background-color: $tomato;
+        font-size: 2em;
+        line-height: 1.41;
+        letter-spacing: 0.5px;
+
+        margin-top: 8%;
+        margin-bottom: 8%;
+
     }
+
+    .decor {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:first-child {
+            
+            margin-bottom: 30%;
+            margin-left: -16%;
+
+        }
+
+        &:nth-child(2) {
+            
+            margin-left: 15%;
+
+        }
+
+        &:nth-child(3) {
+            
+            margin-top: -35%;
+
+        }
+
+        .ellipse {
+
+            position: absolute;
+            display: block;
+            width: 204px;
+            height: 205px;
+            border-radius: 50%;
+
+
+            &#blue {
+                background-color: $green-blue;
+            }
+            &#red {
+                background-color: $tomato;
+            }
+            &#yellow {
+                background-color: $mango;
+            }
+        }
+
+        svg {
+            position: absolute;
+        }
+    }
+
 }
 
 #initiatives {

@@ -15,7 +15,6 @@ import { TimelineLite, Circ, Linear, TweenMax } from "gsap";
 export class NavComponent implements OnInit {
 
   tl: TimelineLite; 
-  tlLogo; 
   btn: HTMLElement;
   
   private wasLoading: boolean = false;
@@ -51,11 +50,9 @@ export class NavComponent implements OnInit {
     
   	let tl = this.tl;
   	let navEl = document.getElementById('menu');
-    // let opened = this.btn.classList.contains('open');
     let show = document.querySelector('#menu-btn .close');
     let hide = document.querySelector('#menu-btn .open');
 
-    // tl.set([navEl, document.getElementById('menu-btn')], {css:{position:'fixed'}});
     tl.add('start');
     tl.set(this.btn, {className:'+=open'}, 'start');
     

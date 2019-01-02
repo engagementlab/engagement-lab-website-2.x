@@ -1,8 +1,12 @@
-import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from './utils/data.service';
 
 import * as AOS from 'aos';
-import * as Warp from 'warpjs';
+import * as anime from 'animejs';
+import * as _ from 'underscore';
+
+import { TweenLite, Ease, Sine, Tween, TimelineLite } from 'gsap';
+
 // import * as spiralFactory from 'warpjs/src/warp'
 
 @Component({
@@ -16,7 +20,19 @@ export class HomeComponent implements OnInit {
   public featuredProjects: any[];
   public events: any[];
 
+  private tls: TimelineLite[];
+  t: TweenLite;
+
   @ViewChildren('initiativeList') initiativeList: QueryList<any>;
+  
+  @ViewChild('blueBg') blueBg: ElementRef;
+  @ViewChild('bluePattern') bluePattern: ElementRef;
+
+  @ViewChild('redBg') redBg: ElementRef;
+  @ViewChild('redPattern') redPattern: ElementRef;
+
+  @ViewChild('yellowBg') yellowBg: ElementRef;
+  @ViewChild('yellowPattern') yellowPattern: ElementRef;
 
   constructor(private _dataSvc: DataService) {  }
 
@@ -35,78 +51,43 @@ export class HomeComponent implements OnInit {
     this.initiativeList.changes.subscribe(t => {
         // AOS.init();
     });
-
-    let pointCount = 0;
-    let mouseX = 0
-    let mouseY = 0
-    let lastMouseX = 0
-    let lastMouseY = 0
-    let mouseDeltaX = 0
-    let mouseDeltaY = 0
-
-    const svg = document.querySelector('#red svg')
-    const warp = new Warp(svg)
-
-const svgPos = svg.getBoundingClientRect()
-const originX = svgPos.left
-const originY = svgPos.top
-let brushSize = 25
-    warp.interpolate(8)
-    warp.transform(([ x, y ]) => [ x, y, y]);
-    let offset = 0
-    function animate()
-    {
-      // let factor = Math.floor(Math.random() * (17 - 16 + 1) + 16);
-      // // warp.transform(([ x, y, oy ]) => [ x, oy + 1 * Math.sin(x / 20 + offset), oy ])
-      //  warp.transform(([ x, y, oy ]) => [ x + 1, y, oy ]);
-      //   offset += 0.09
-
-        pointCount = 0
-        warp.transform(function(points)
-        {
-          pointCount++
-          return smudge(points)
-        })
-        requestAnimationFrame(animate)
-    }
-
-    window.addEventListener('mousemove', function(e)
-    {
-      mouseX = e.clientX
-      mouseY = e.clientY
-      mouseDeltaX = mouseX - lastMouseX
-      mouseDeltaY = mouseY - lastMouseY
-      lastMouseX = mouseX
-      lastMouseY = mouseY
-    })
-
-    function smudge([x, y])
-    {
-      const pointX = x + originX
-      const pointY = y + originY
-      const deltaX = mouseX - pointX
-      const deltaY = mouseY - pointY
-      const delta = Math.sqrt(deltaX**2 + deltaY**2)
-
-      if(delta <= brushSize)
-      {
-        x += mouseDeltaX * ((brushSize - delta) / brushSize)
-        y += mouseDeltaY * ((brushSize - delta) / brushSize)
-      }
+    
+      this.tls = [
+        new TimelineLite({repeat:-1, yoyo:true}), 
+        new TimelineLite({repeat:-1, yoyo:true}),
+        new TimelineLite({repeat:-1, yoyo:true}),
+        new TimelineLite({repeat:-1, yoyo:true}),
+        new TimelineLite({repeat:-1, yoyo:true}),
+        new TimelineLite({repeat:-1, yoyo:true})
+      ];
+    // this.tl.addLabel('start',); 
+    let i = 0;
+    
+    while(i < 20) {
       
-      return [x, y]
+      this.tls[0].add(TweenLite.to(this.blueBg.nativeElement, 5.7, { xPercent:_.random(-10, 10), yPercent:_.random(-10, 10), ease:Sine.easeInOut}));
+      this.tls[1].add(TweenLite.to(this.bluePattern.nativeElement, 5.7, { xPercent:_.random(-15, 15), yPercent:_.random(-15, 15), ease:Sine.easeInOut}));
+
+      this.tls[2].add(TweenLite.to(this.yellowBg.nativeElement, 5.7, { xPercent:_.random(-15, 15), yPercent:_.random(-25, 25), ease:Sine.easeInOut}));
+      this.tls[3].add(TweenLite.to(this.yellowPattern.nativeElement, 5.7, { xPercent:_.random(-10, 10), yPercent:_.random(-25, 25), ease:Sine.easeInOut}));
+
+      this.tls[4].add(TweenLite.to(this.redBg.nativeElement, 5.7, { xPercent:_.random(-7, 7), yPercent:_.random(-15, 15), ease:Sine.easeInOut}));
+      this.tls[5].add(TweenLite.to(this.redPattern.nativeElement, 5.7, { xPercent:_.random(-5, 5), yPercent:_.random(-10, 10), ease:Sine.easeInOut}));
+
+      i++;
     }
 
+/*     anime({
+      targets: '#red .path1',
+      d: [
+        { value: 'M 130.174 75 C 130.174 75 92.525 109.315 94.886 116.741 C 97.248 124.166 151.747 125.699 151.747 125.699 C 151.747 125.699 166.121 107.101 177.551 108.274 C 188.982 109.446 207.235 94.184 195.329 85.467 C 183.422 76.75 144.423 60.845 130.174 75 Z M 200 127.486 C 200 127.486 207.705 131.159 220.934 144.475 C 234.163 157.791 264.466 146.222 257.28 139.263 C 250.094 132.304 235.706 132.227 232.812 120.584 C 229.918 108.941 207.285 99.675 200 127.486 Z' }
+      ],
+      easing: 'easeOutQuad',
 
-    // window.addEventListener("mousemove", function(e) {
-    //   requestAnimationFrame(function() {
-    //     let  p = f, y = 0, f = e.clientX, d = e.clientY
-    //       var e = s.getBoundingClientRect();
-    //       warp.transform(a(p - e.left, y - e.top, f - e.left, d - e.top, 100, .33))
-    //   })
-
-    animate()
-
+    direction: 'alternate',
+      duration: 2000,
+      loop: true
+    }); */
 
 
   }
