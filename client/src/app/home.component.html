@@ -54,52 +54,79 @@
 
 </section>
 
-<div id="event" class="column columns is-full">
-    <span class="column is-7-tablet"></span>
 
-    <span class="column columns">
-        <div class="column" id="day">
-            {{latestEvent.date | date: 'MM'}} <br />
-            {{latestEvent.date | date: 'dd'}}
-        </div>
-        <div class="column is-three-quarters">
-            <span>{{latestEvent.name}}</span>
-            view
-        </div>
-      </span>
+<div id="event" class="column columns is-full is-mobile" *ngIf="latestEvent !== undefined">
+    <span class="column is-3-mobile is-5-tablet is-7-desktop"></span>
+
+    <a href="{{latestEvent.eventUrl}}" class="columns">
+        <span class="column columns is-mobile">
+            <div class="column is-1" id="day">
+                {{latestEvent.date | date: 'MM'}} <br />
+                {{latestEvent.date | date: 'dd'}}
+            </div>
+            <div class="column is-8">
+                <span>{{latestEvent.name}}</span>
+                <div class="view hidden-tablet-plus">view</div>
+            </div>
+            <div class="column hidden-mobile view">
+                view
+            </div>
+        </span>
+    </a>
 </div>
 
-<h1 class="column is-full uppercase">Our Initiatives</h1>
-<hr />
+<hr class="thick" />
+<h1 class="column is-full uppercase no-pad">Our Initiatives</h1>
 
 <!-- initiatives -->
 <section id="initiatives">
-    <div #initiativeList class="initiative columns is-one-third" *ngFor="let initiative of initiatives; let i = index;">
 
-        <div class="column is-half">
-            <h2>{{initiative.name}}</h2>
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true" width="600"
-                alt="Artwork image for '{{initiative.name}}' initiative"></cdn-image>
+    <div #initiativeList *ngFor="let initiative of initiatives; let i = index; let first = first;">
+
+        <div class="label" [class.first]="i === 1" [class.second]="i === 2" *ngIf="!first">
+            <div class="text">
+                {{initiative.name}}
+            </div>
+            <div>&nbsp;</div>
         </div>
 
-        <div class="column">
-            <p>{{initiative.description}}</p>
-            <h3 class="uppercase">Related Case Studies</h3>
-            <hr />
+        <div class="initiative columns">
+            <div class="column is-half">
+                <h2>{{initiative.name}}</h2>
+                <cdn-image cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true" width="600"
+                    alt="Artwork image for '{{initiative.name}}' initiative"></cdn-image>
+            </div>
 
-            <div class="project" *ngFor="let project of initiative.projects">
-                <a routerLink="/projects/{{project.key}}">
-                    {{project.name}}
-                </a>
+            <div class="column">
+                <p>{{initiative.description}}</p>
+                <h3 class="uppercase">Related Case Studies</h3>
+                <hr />
+
+                <div class="project" *ngFor="let project of initiative.projects">
+                    <a routerLink="/projects/{{project.key}}">
+                        {{project.name}}
+                    </a>
+                </div>
             </div>
         </div>
-
     </div>
+
 </section>
 
-<!-- featured projects -->
+<!-- recent/featured projects -->
 <section id="projects-wrap">
-    <h1 class="column is-full uppercase">Featured Projects</h1>
+    <div class="columns is-mobile">
+        <h1 class="column is-7 uppercase">Recent Projects</h1>
+
+        <a class="column is-4-mobile view" routerLink="/projects">
+            <h1> view all&nbsp;
+              <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
+                <path stroke="#fff" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
+              </svg>
+            </h1>
+        </a>
+    </div>
+
     <div id="projects" class="columns">
         <div #projectList class="project column is-half" *ngFor="let project of featuredProjects">
 
@@ -120,13 +147,26 @@
 </section>
 
 <!-- events -->
-<section id="events" class="columns is-multiline">
-    <h1 class="column is-full uppercase">Events</h1>
+<hr class="thick" />
+<section id="events">
+    <div class="columns is-mobile">
+        <h1 class="column is-7-mobile is-half-tablet uppercase">Events</h1>
+
+        <a class="column is-4-mobile is-5-tablet view" routerLink="/events">
+            <h1> view all&nbsp;
+              <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
+                <path stroke="#000" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
+              </svg>
+            </h1>
+        </a>
+    </div>
+
     <div #eventList class="event column is-full" *ngFor="let event of events">
 
-        <a href="{{event.eventUrl}}" class="columns">
+        <a href="{{event.eventUrl}}" class="columns is-mobile">
 
-            <div class="date column is-one-fifth">{{event.date | date: 'MMMM dd'}}</div>
+            <div class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}}</div>
+            <div class="date column is-one-fifth hidden-desktop">{{event.date | date: 'MMM dd'}}</div>
             <h2 class="name column no-margin">{{event.name}}</h2>
 
         </a>

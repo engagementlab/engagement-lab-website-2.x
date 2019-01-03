@@ -6,6 +6,40 @@ a {
     &:visited {
         color: black;
     }
+    &.view {
+
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            display: flex;
+
+            font-family: 'Overpass';
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: normal;
+            align-items: center;
+        }
+
+        @include not-phones {
+            justify-content: flex-end;
+        }
+        @include phones {
+            svg {
+                max-width: 16px;
+            }
+        }
+
+    }
+}
+
+hr {
+    &.thick {
+        border-bottom: solid 4px black;
+    }
+}
+
+h1 {
 }
 
 #intro {
@@ -74,6 +108,13 @@ a {
 
 #event {
     
+    font-family: 'Overpass';
+    font-size: .9em;
+    font-weight: 600;
+
+    line-height: 1.29;
+    letter-spacing: 0.8px;
+
     margin-top: 10%;
 
     div {
@@ -82,13 +123,60 @@ a {
     }
     #day {
         border-right: solid 2px white;
+        text-align: center;
+    }
+    .view {
+        padding-top: 4%;
     }
     
+    a:hover {
+        .view {
+            text-decoration: underline;
+        }
+    }
+
 }
 
 #initiatives {
-    .project {
+
+    > div:not(:first-child) {
+        margin-top: 20%;
+    }
+
+    hr {
         border-bottom: solid 2px black;
+    }
+    h3 {
+        font-size: 1em;
+    }
+
+    .label {    
+        font-family: 'Overpass';
+        font-size: 1em;
+        font-weight: 600;
+
+        line-height: 1.29;
+        letter-spacing: 0.8px;
+
+        &.first {            
+            border-left: solid 4px $tomato;
+        }
+        &.second {            
+            border-left: solid 4px $green-blue;
+        }
+        
+        .text {
+            border-bottom: solid 1px black;
+            padding-left: 3%;
+            padding-bottom: 1%;
+        }
+    }
+
+    .project {
+        margin-top: 8%;
+        padding-bottom: 8%;
+
+        border-bottom: solid 1px black;
     }
 }
 
@@ -102,26 +190,28 @@ a {
     h1 {
         color: white;
     }
+    h1 {
+        font-size: 1.12em;
+    }
 
     p {
         &.name {
             margin-bottom: 1%;
-            font-size: 1.8em;
+            font-size: 1.5em;
             font-weight: 500;
-            line-height: 1.36;
-            letter-spacing: 1px;
+            line-height: 1.17;
+            letter-spacing: 0.5px;
         }
 
         &.type {
-            font-weight: bold;
-            line-height: 1.33;
-            letter-spacing: 1px;
+            line-height: 1.25;
+            letter-spacing: 1.3px;
         }
 
         &.byline {
-            font-size: 1.2em;
-            line-height: 1.42;
-            letter-spacing: 0.5px;
+            font-size: 1em;
+            line-height: 1.25;
+            letter-spacing: 0.3px;
         }
     }
 
@@ -132,9 +222,18 @@ a {
 
 }
 
-// #events {
-//     .name {
-//         justify-content: left;
-//         align-items: baseline;
-//     }
-// }
+#events {
+
+    h1 {
+        font-size: 1.12em;
+    }
+    h2 {
+        font-size: 2.24em;
+        line-height: 1.11;
+        letter-spacing: 1px;
+    }
+    .date {
+        font-size: 1.5em;
+    }
+
+}
