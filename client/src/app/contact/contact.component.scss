@@ -1,0 +1,76 @@
+@import "~src/styles/_variables";
+
+h2 {
+
+    font-size: 2.25em;
+
+    @include not-phones {
+        font-size: 3.1em;
+    }
+
+}
+
+h3 {
+
+    font-family: 'LunchtypeRegular';
+    font-size: 1.5em;
+    font-weight: normal;
+
+    margin-top: 5%;
+    margin-bottom: 7%;
+    line-height: 1.17;
+    letter-spacing: 0.5px;
+
+}
+
+.icon {
+    max-width: 100px;
+    @include phones {
+        max-width: 50px;
+    }
+
+    &.tomato {
+        @include circular-background($tomato);
+    }
+
+    &.gb {
+        @include circular-background($green-blue);
+    }
+}
+
+#donate {
+
+    background-color: black;
+    color: white;
+    padding-top: 5%;
+    
+    #icons {
+        #bg {
+            margin-left: -13%;
+        }
+        #pig {
+            position: absolute;
+            padding-top: 5%;
+            left: 0;
+        }
+    }
+
+    h2 { 
+        color: white;
+    }
+
+}
+
+#links {
+    a {
+        &:nth-child(1), &:nth-child(4) {
+            color: $green-blue;
+        }
+        &:nth-child(2) {
+            color: $tomato;
+        }
+        &:nth-child(3) {
+            color: $mango;
+        }
+    }
+}

@@ -67,6 +67,7 @@ router.get('/api/team/get', [keystone.middleware.api, keystone.middleware.cors],
 router.get('/api/team/get/:person_key?', [keystone.middleware.api, keystone.middleware.cors], routes.api.team.get);
 router.get('/api/projects/get/:project_key?', [keystone.middleware.api, keystone.middleware.cors], routes.api.projects.get);
 router.get('/api/publications/get/:project_key?', [keystone.middleware.api, keystone.middleware.cors], routes.api.publications.get);
+router.get('/api/contact/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.contact.get);
 router.all('/api/tv/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.tv.get);
 
 module.exports = router;

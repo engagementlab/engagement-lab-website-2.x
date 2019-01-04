@@ -1,0 +1,68 @@
+<h2 class="column is-half no-pad">Collaborate and work with us</h2>
+<h3 class="column is-full-mobile is-7-tablet no-pad">{{content?.blurb}}</h3>
+
+<section id="portfolio" *ngIf="content !== undefined">
+
+    <div class="columns is-mobile is-centered">
+        <div class="column is-two-fifths-mobile">
+            <div class="icon tomato">
+                <cdn-image cloudinaryId="contact/student-icon" width="100" alt="Students and Researchers icon image" aria-role="img"></cdn-image>
+            </div>
+            <h3>Students and Researchers</h3>
+            {{content?.students}}
+            <div>
+              <strong>Find out more</strong>
+            </div>
+        </div>
+
+        <div class="column is-two-fifths-mobile">
+            <div class="icon gb">
+                <cdn-image cloudinaryId="contact/partner-icon" width="100" alt="Community Partners icon image" aria-role="img"></cdn-image>
+            </div>
+            <h3>Community Partners</h3>
+            {{content?.community}}
+        </div>
+    </div>
+
+</section>
+
+<section id="donate">
+
+  <div id="icons">
+    <cdn-image id="bg" cloudinaryId="contact/piggybank-bg" width="180" alt="Piggybank background image" aria-role="img"></cdn-image>
+    <cdn-image id="pig" cloudinaryId="contact/piggybank-icon" width="100" alt="Piggybank icon image" aria-role="img"></cdn-image>
+  </div>
+
+  <h2>Donate to help support the Lab</h2>
+  <app-button label="donate" href="" ariaLabel="Go to page to donate to the Lab"></app-button>
+
+</section>
+
+<hr />
+
+<h4 class="uppercase">Get in Touch</h4>
+
+<h3>
+
+  Engagement Lab
+  <p>
+    160 Boylston St.<br />
+    Boston, MA 02116
+  </p>
+
+  <p>
+
+  t&nbsp;&nbsp;&nbsp;+ 1 617 824 3030<br />
+  e&nbsp;&nbsp;&nbsp;engagementlab@emerson.edu
+
+</p>
+</h3>
+
+<h2 id="links">
+
+  You can keep up to date by following us on <a href="https://twitter.com/engagelab" role="link">Twitter</a>, 
+  <a href="https://www.facebook.com/EngagementLab" role="link">Facebook</a>, 
+  and <a href="https://www.instagram.com/engagelab" role="link">Instagram</a>. 
+  You can also check out our blog on <a href="https://medium.com/engagement-lab-emerson-college" role="link">Medium</a>.
+
+</h2>

@@ -58,6 +58,9 @@ h3 {
 
     .icon {
         max-width: 100px;
+        @include phones {
+            max-width: 50px;
+        }
 
         &.tomato {
             @include circular-background($tomato);

@@ -23,6 +23,7 @@ import { HomeComponent } from './home.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { TeamComponent } from './team/team.component';
+import { ContactComponent } from './contact/contact.component';
 import { RedirectComponent } from './redirect/redirect.component';
 
 import { DataService } from './utils/data.service';
@@ -48,6 +49,10 @@ export const routes: Routes = [
   { path: 'projects/:key', component: ProjectComponent },
 
   { path: 'publications', component: PublicationIndexComponent },
+  
+  { path: 'getinvolved', component: ContactComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'press', component: ContactComponent },
 
   { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
       externalUrl: 'https://www.launchpad6.com/contestpad'
@@ -83,7 +88,8 @@ export const routes: Routes = [
     PeopleGridComponent,
     PublicationIndexComponent,
     AuthorFormatPipe,
-    PublicationComponent
+    PublicationComponent,
+    ContactComponent
   ],
   imports: [
     AppRoutingModule,
