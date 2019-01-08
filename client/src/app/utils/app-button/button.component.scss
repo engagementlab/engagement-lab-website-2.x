@@ -1,6 +1,7 @@
 @import "~src/styles/_variables";
 
 a.btn {
+
 	display: inline-block;
 	font-weight: 700;
   font-size: .9em;
@@ -28,4 +29,20 @@ a.btn {
     cursor: pointer;
     @include scale(.9);
   }
+
+  &.white {
+    font-size: 1.2em;
+    font-weight: bold;
+
+    color: white;
+    border-color: white;
+    border-width: 2px;
+
+    padding-left: 38%;
+    padding-right: 38%;
+
+    padding-top: 9%;
+    padding-bottom: 9%;
+  }
+
 }

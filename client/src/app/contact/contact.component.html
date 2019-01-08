@@ -1,40 +1,48 @@
-<h2 class="column is-half no-pad">Collaborate and work with us</h2>
-<h3 class="column is-full-mobile is-7-tablet no-pad">{{content?.blurb}}</h3>
+<h2 class="column is-half-mobile is-full-tablet no-pad">Collaborate and work with us</h2>
+<h3 class="column is-full-mobile is-8-tablet no-pad">{{content?.blurb}}</h3>
 
 <section id="portfolio" *ngIf="content !== undefined">
 
     <div class="columns is-mobile is-centered">
         <div class="column is-two-fifths-mobile">
             <div class="icon tomato">
-                <cdn-image cloudinaryId="contact/student-icon" width="100" alt="Students and Researchers icon image" aria-role="img"></cdn-image>
+                <cdn-image cloudinaryId="contact/student-icon" width="100" alt="Students and Researchers icon image"
+                    aria-role="img"></cdn-image>
             </div>
             <h3>Students and Researchers</h3>
             {{content?.students}}
-            <div>
-              <strong>Find out more</strong>
+            <div class="link">
+                <a routerLink="/masters">Find out more</a>
             </div>
         </div>
 
         <div class="column is-two-fifths-mobile">
             <div class="icon gb">
-                <cdn-image cloudinaryId="contact/partner-icon" width="100" alt="Community Partners icon image" aria-role="img"></cdn-image>
+                <cdn-image cloudinaryId="contact/partner-icon" width="100" alt="Community Partners icon image"
+                    aria-role="img"></cdn-image>
             </div>
             <h3>Community Partners</h3>
             {{content?.community}}
+            <div class="link">
+                <a>(Links to where...?)</a>
+            </div>
         </div>
     </div>
 
 </section>
 
-<section id="donate">
+<section id="donate" class="columns">
 
-  <div id="icons">
-    <cdn-image id="bg" cloudinaryId="contact/piggybank-bg" width="180" alt="Piggybank background image" aria-role="img"></cdn-image>
-    <cdn-image id="pig" cloudinaryId="contact/piggybank-icon" width="100" alt="Piggybank icon image" aria-role="img"></cdn-image>
-  </div>
+    <div id="icons" class="column is-one-quarter-tablet">
+        <cdn-image id="bg" cloudinaryId="contact/piggybank-bg" width="403" alt="Piggybank background image" aria-role="img"></cdn-image>
+        <cdn-image id="pig" cloudinaryId="contact/piggybank-icon" width="140" alt="Piggybank icon image" aria-role="img"></cdn-image>
+    </div>
 
-  <h2>Donate to help support the Lab</h2>
-  <app-button label="donate" href="" ariaLabel="Go to page to donate to the Lab"></app-button>
+    <h2 class="column is-5-tablet">Donate to help support the Lab</h2>
+
+    <div id="btn" class="column">
+        <app-button label="donate" href="https://www.emerson.edu/support-emerson/give" ariaLabel="Go to page to donate to the Lab" class="white"></app-button>
+    </div>
 
 </section>
 
@@ -42,27 +50,32 @@
 
 <h4 class="uppercase">Get in Touch</h4>
 
-<h3>
+<div id="bottom" class="columns">
+<h3 class="column is-half">
 
-  Engagement Lab
-  <p>
-    160 Boylston St.<br />
-    Boston, MA 02116
-  </p>
+    Engagement Lab
+    <p>
+        160 Boylston St.<br />
+        Boston, MA 02116
+    </p>
 
-  <p>
+    <p>
 
-  t&nbsp;&nbsp;&nbsp;+ 1 617 824 3030<br />
-  e&nbsp;&nbsp;&nbsp;engagementlab@emerson.edu
+        t&nbsp;&nbsp;&nbsp;+ 1 617 824 3030<br />
+        e&nbsp;
+        <span class="hidden-desktop">engagementlab<br />&nbsp;&nbsp;&nbsp;&nbsp;@emerson.edu</span>
+        <span class="hidden-mobile">engagementlab@emerson.edu</span>
 
-</p>
+    </p>
+
 </h3>
 
-<h2 id="links">
+<h2 id="links" class="column is-half">
 
-  You can keep up to date by following us on <a href="https://twitter.com/engagelab" role="link">Twitter</a>, 
-  <a href="https://www.facebook.com/EngagementLab" role="link">Facebook</a>, 
-  and <a href="https://www.instagram.com/engagelab" role="link">Instagram</a>. 
-  You can also check out our blog on <a href="https://medium.com/engagement-lab-emerson-college" role="link">Medium</a>.
+    You can keep up to date by following us on <a href="https://twitter.com/engagelab" role="link">Twitter</a>,
+    <a href="https://www.facebook.com/EngagementLab" role="link">Facebook</a>,
+    and <a href="https://www.instagram.com/engagelab" role="link">Instagram</a>.
+    You can also check out our blog on <a href="https://medium.com/engagement-lab-emerson-college" role="link">Medium</a>.
 
 </h2>
+</div>
