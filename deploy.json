@@ -30,6 +30,19 @@
       "env": {
         "NODE_ENV": "staging"
       }
+    },
+
+    "production" : {
+      "user": "node",
+      "host": "199.94.80.32",
+      "repo": "git@github.com:engagementlab/engagement-lab-website-2.0.git",
+      "ref": "origin/production",
+      "path": "/srv/engagement-lab-website-2.0",
+      "pre-deploy-local" : "echo 'Cloning and building.';",
+      "post-deploy" : "cd client ; nvm use ; npm i ; npm run build ; pm2 restart 'engagement-lab-website-client'; cd ../server ; nvm use ; npm i ; pm2 restart 'engagement-lab-website-server'",
+      "env": {
+        "NODE_ENV": "staging"
+      }
     }
 
   }
