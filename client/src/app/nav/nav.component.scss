@@ -60,8 +60,9 @@ nav {
   cursor: pointer;
 
   #lines {
-    margin-top: 4%;
-
+    position: relative;
+    top: 6px;
+    
     @include mobile-only {
       padding-left: 40%;
     }

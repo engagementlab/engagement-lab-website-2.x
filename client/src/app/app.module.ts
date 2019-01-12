@@ -32,6 +32,7 @@ import { PeopleGridComponent } from './team/people-grid.component';
 import { PublicationIndexComponent } from './publications/index.component';
 import { AuthorFormatPipe } from './utils/author-format.pipe';
 import { PublicationComponent } from './publications/publication.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -53,6 +54,7 @@ export const routes: Routes = [
   { path: 'getinvolved', component: ContactComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'press', component: ContactComponent },
+  { path: 'privacy', component: PrivacyComponent },
 
   { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
       externalUrl: 'https://www.launchpad6.com/contestpad'
@@ -89,7 +91,8 @@ export const routes: Routes = [
     PublicationIndexComponent,
     AuthorFormatPipe,
     PublicationComponent,
-    ContactComponent
+    ContactComponent,
+    PrivacyComponent
   ],
   imports: [
     AppRoutingModule,
