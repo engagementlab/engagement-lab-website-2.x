@@ -37,13 +37,8 @@ h4 {
 
     @include not-phones {
         font-size: 1.35em;
-        // line-height: 1.41;
     }
 
-}
-
-hr {
-    border: solid 4px black;
 }
 
 .icon {
@@ -97,7 +92,7 @@ hr {
 
             @include phones {
                 ::ng-deep img {
-                    max-width: 180px;
+                    max-width: 180px!important;
                 }
             }
         }
@@ -126,6 +121,8 @@ hr {
         @include phones {
             margin-left: 3%;
             margin-right: 3%;
+            padding-top: 0;
+            padding-bottom: 0;
         }
     }
 

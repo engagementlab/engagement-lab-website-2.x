@@ -7,10 +7,6 @@ $tablet: 768px;
 // Site vars
 @import "./variables";
 
-html {
-  
-}
-
 body {
   font-family: 'LunchtypeRegular';
   font-size: 18px;
@@ -18,9 +14,6 @@ body {
   
   // background: linear-gradient(to bottom, $mango 0%, $mango 50%, $white 50%, white 100%);
   background-size: 100% 101%;
-
-  // "Fake" background for top of project pages
-
 
   @include mobile-only {
     font-size: 16px;
@@ -43,9 +36,64 @@ a {
   }
 }
 
+h1 {
+    font-family: Overpass;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+h2 {
+    font-family: Overpass;
+    font-size: 2.8em;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: 1.3px;
+    color: #000000;
+}
+h3 {
+    font-family: Overpass;
+    font-weight: 600;
+    font-size: 1.35em;
+    line-height: 1.38;
+    letter-spacing: 1.5px;
+
+    &.blurb {
+    
+        font-family: 'LunchtypeRegular';
+        font-size: 2em;
+        font-weight: normal;
+    
+        margin-top: 5%;
+        margin-bottom: 7%;
+        line-height: 1.17;
+        letter-spacing: 0.5px;
+    
+    }
+}
+h4 {
+  font-family: Overpass;
+  font-size: .9em;
+  font-weight: 600;
+}
+
 button {
   background: none;
   border: 0;
+}
+
+hr {    
+  border-bottom: solid 2px black;
+  
+  &.thick {
+    border-bottom: solid 4px black;
+  }
 }
 
 // Bulma container adjustments

@@ -8,7 +8,7 @@ import { DataService } from '../utils/data.service';
 })
 export class ContactComponent implements OnInit {
 
-  public content: any;  
+  public content: any;
 
   constructor(private _dataSvc: DataService) { }
 

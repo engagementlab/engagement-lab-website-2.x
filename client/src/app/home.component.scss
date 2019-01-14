@@ -33,18 +33,6 @@ a {
     }
 }
 
-hr {
-    
-    &.thick {
-        border-bottom: solid 4px black;
-    }
-    border-bottom: solid 2px black;
-
-}
-
-h1 {
-}
-
 #intro {
 
     padding-bottom: 12%;
@@ -153,9 +141,6 @@ h1 {
         }
     }
 
-    hr {
-        border-bottom: solid 2px black;
-    }
     h3 {
         font-size: 1.3em;
     }
