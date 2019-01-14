@@ -7,8 +7,9 @@
 	"admin_nav": { 
 									"projects/publications": ["projects", "publications"],
 									"intiatives": ["initiatives", "Cmap"],
+									"events": ["events"],
 									"files/resources": ["resources"],
-									"about": ["About", "partners", "people", "jobs"],
+									"about": ["About", "Contact", "partners", "people", "jobs"],
 									"filters": ["Filter"]
 								}
 }

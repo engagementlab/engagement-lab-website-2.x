@@ -25,7 +25,7 @@ var CPIPartner = new keystone.List('CPIPartner',
 	{
 		label: 'Community PlanIt Partners',
 		sortable: true,
-		hidden: false,
+		hidden: true,
 		inherits: Listing
 	});
 

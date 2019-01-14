@@ -80,7 +80,7 @@
 <!-- initiatives -->
 <section id="initiatives">
 
-    <div #initiativeList *ngFor="let initiative of initiatives; let i = index; let first = first;">
+    <div #initiativeList class="initiative" *ngFor="let initiative of initiatives; let i = index; let first = first;">
 
         <div class="label" [class.first]="i === 1" [class.second]="i === 2" *ngIf="!first">
             <div class="text">
@@ -89,7 +89,7 @@
             <div>&nbsp;</div>
         </div>
 
-        <div class="initiative columns">
+        <div class="columns">
             <div class="column is-half">
                 <h2>{{initiative.name}}</h2>
                 <cdn-image cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" autoFormat="true" width="600"
@@ -97,15 +97,15 @@
             </div>
 
             <div class="column">
-                <p>{{initiative.description}}</p>
+                <p>{{initiative.description}}</p> 
+                <div class="projects">
                 <h3 class="uppercase">Related Projects</h3>
                 <hr />
 
-                <div class="project" *ngFor="let project of initiative.projects">
-                    <a routerLink="/projects/{{project.key}}">
-                        {{project.name}}
-                    </a>
-                </div>
+                <a class="project" routerLink="/projects/{{project.key}}" *ngFor="let project of initiative.projects">
+                    {{project.name}}
+                </a>
+            </div>
             </div>
         </div>
     </div>
@@ -115,13 +115,13 @@
 <!-- recent/featured projects -->
 <section id="projects-wrap">
     <div class="columns is-mobile">
-        <h1 class="column is-7 uppercase">Recent Projects</h1>
+        <h1 class="column is-6-mobile is-7-tablet uppercase">Recent Projects</h1>
 
         <a class="column is-4-mobile view" routerLink="/projects">
             <h1> view all&nbsp;
-              <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
-                <path stroke="#fff" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
-              </svg>
+                <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
+                    <path stroke="#fff" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
+                </svg>
             </h1>
         </a>
     </div>
@@ -151,23 +151,24 @@
     <div class="columns is-mobile">
         <h1 class="column is-7-mobile is-half-tablet uppercase">Events</h1>
 
-        <a class="column is-4-mobile is-5-tablet view" routerLink="/events">
+        <a class="column view" routerLink="/events">
             <h1> view all&nbsp;
-              <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
-                <path stroke="#000" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
-              </svg>
+                <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
+                    <path stroke="#000" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
+                </svg>
             </h1>
         </a>
     </div>
 
     <div #eventList class="event column is-full" *ngFor="let event of events">
 
-        <a href="{{event.eventUrl}}" class="columns is-mobile">
-
-            <div class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}}</div>
-            <div class="date column is-one-fifth hidden-desktop">{{event.date | date: 'MMM dd'}}</div>
-            <h2 class="name column no-margin">{{event.name}}</h2>
-
+        <a href="{{event.eventUrl}}">
+            <div class="columns is-mobile">
+                <div class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}}</div>
+                <div class="date column is-one-fifth hidden-desktop">{{event.date | date: 'MMM dd'}}</div>
+                <h2 class="name column no-margin">{{event.name}}</h2>
+            </div>
+            <hr />
         </a>
     </div>
 </section>
