@@ -147,6 +147,7 @@ h1 {
 
     > div:not(:first-child) {
         margin-top: 10%;
+        
         @include phones {  
             margin-top: 20%;
         }
@@ -275,6 +276,11 @@ h1 {
 }
 
 #events {
+    
+    margin-top: 10%;    
+    @include phones {  
+        margin-top: 35%;
+    }
 
     h1 {
         font-size: 1.12em;
