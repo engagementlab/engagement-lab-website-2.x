@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../utils/data.service';
 
 @Component({
   selector: 'app-jobs',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobsComponent implements OnInit {
 
-  constructor() { }
+  public jobs: any[];
+
+  constructor(private _dataSvc: DataService) { 
+  
+    this._dataSvc.getDataForUrl('jobs/get/').subscribe(response => {
+      
+      this.jobs = response;
+      
+    });
+  
+  }
 
   ngOnInit() {
   }

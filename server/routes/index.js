@@ -71,6 +71,7 @@ router.get('/api/projects/get/:project_key?', routeIncludes, routes.api.projects
 router.get('/api/publications/get/:project_key?', routeIncludes, routes.api.publications.get);
 router.get('/api/events/get/:event_key?', routeIncludes, routes.api.events.get);
 router.get('/api/contact/get', routeIncludes, routes.api.contact.get);
+router.get('/api/jobs/get', routeIncludes, routes.api.jobs.get);
 router.get('/api/masters/get', routeIncludes, routes.api.masters.get);
 
 router.all('/api/tv/get', routeIncludes, routes.api.tv.get);

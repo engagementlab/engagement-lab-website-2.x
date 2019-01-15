@@ -69,6 +69,7 @@ export const routes: Routes = [
   { path: 'press', component: ContactComponent },
 
   { path: 'privacy', component: PrivacyComponent },
+  { path: 'jobs', component: JobsComponent },
   
   { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService], data: {
     externalUrl: 'https://www.launchpad6.com/contestpad'
