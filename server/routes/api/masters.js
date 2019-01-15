@@ -16,8 +16,8 @@ mongoose.Promise = require('bluebird');
 
 var buildData = (res) => {
 
-    let masters = keystone.list('Cmap').model;
-    let fields = 'programDescription.html -_id';
+    let masters = keystone.list('Masters').model;
+    let fields = 'programDescription.html applicationLink buttonTxt -_id';
     
     // Get masters program text
     let mastersData = masters.find({}, fields);
