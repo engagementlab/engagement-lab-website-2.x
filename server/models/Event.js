@@ -13,7 +13,7 @@
  */
 const keystone = global.keystone;
 const Types = keystone.Field.Types;
-const validator = require('validator');
+const urlValidator = require('../utils').url;
 
 var Event = new keystone.List('Event', {
     label: 'Events',
@@ -25,22 +25,6 @@ var Event = new keystone.List('Event', {
     },
     hidden: false
 });
-
-/**
- * Field Validators
- * @main Event
- */
-var urlValidator = {
-    validator: function(val) {
-        return !val || validator.isURL(val, {
-            protocols: ['http', 'https'],
-            require_tld: true,
-            require_protocol: false,
-            allow_underscores: true
-        });
-    },
-    msg: 'Invalid link URL (e.g. needs http:// and .abc/)'
-};
 
 /**
  * Model Fields
