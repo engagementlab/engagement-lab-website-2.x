@@ -35,7 +35,7 @@
         <a routerLink="/projects/{{project.key}}" *ngIf="project.key !== 'dummy'">
             <div class="bg">
                 <span role="tooltip">view</span>
-                <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" height="450"
+                <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" height="490"
                     alt="Thumbnail image for '{{project.name}}' project" *ngIf="project.image !== undefined"></cdn-image>
             </div>
             <h4>{{project.name}}</h4>
