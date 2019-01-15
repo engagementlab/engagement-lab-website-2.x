@@ -5,8 +5,9 @@
 
         <a href="{{event.eventUrl}}">
             <div class="columns is-mobile">
-                <h1 class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}}</h1>
-                <h1 class="date column is-one-fifth hidden-desktop">{{event.date | date: 'MMM dd'}} <div class="year">{{event.date
+                <h1 class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}} <div class="year">{{event.date
+                    | date: 'yyyy'}}</div></h1>
+                <h1 class="date column is-one-fifth hidden-tablet-plus">{{event.date | date: 'MMM dd'}} <div class="year">{{event.date
                         | date: 'yy'}}</div>
                 </h1>
 
