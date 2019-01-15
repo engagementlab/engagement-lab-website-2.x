@@ -20,6 +20,8 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about/about.component';
+import { EventIndexComponent } from './events/index.component';
+import { EventComponent } from './events/event.component';
 import { ProjectIndexComponent } from './projects/index.component';
 import { ProjectComponent } from './projects/project.component';
 import { PublicationIndexComponent } from './publications/index.component';
@@ -52,6 +54,9 @@ export const routes: Routes = [
   
   { path: 'projects', component: ProjectIndexComponent },
   { path: 'projects/:key', component: ProjectComponent },
+
+  { path: 'events', component: EventIndexComponent },
+  { path: 'events/:key', component: EventComponent },
 
   { path: 'publications', component: PublicationIndexComponent },
   
@@ -103,7 +108,9 @@ export const routes: Routes = [
     ContactComponent,
     PrivacyComponent,
     MastersComponent,
-    JobsComponent
+    JobsComponent,
+    EventIndexComponent,
+    EventComponent
   ],
   imports: [
     AppRoutingModule,

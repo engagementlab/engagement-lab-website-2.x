@@ -62,6 +62,13 @@ Event.add({
         label: 'Event Image',
         folder: 'homepage-2.0/events',
     },
+    shortDescription: {
+        type: Types.Text,
+        note: 'Shown on event index page. Limit 200 characters.',
+        required: true,
+        initial: true,
+        max: 200
+    },
     description: {
         type: Types.Markdown,
         label: 'Long Description',
