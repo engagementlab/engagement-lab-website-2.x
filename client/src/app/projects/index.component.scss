@@ -4,12 +4,35 @@ h1 {
     letter-spacing: 1.5px; 
 }
 
+app-button {
+    @include not-phones {
+        display: block;
+        margin-top: 14%;
+    }
+}
+
 .controls {
+
+    margin-top: 17%;
+
+    @include not-phones {
+        margin-top: 5%;
+    } 
 
     button {
         font-family: 'LunchtypeRegular';
-        font-size: 1.4em;
+        font-size: 1em;
+        margin-bottom: 7%;
+
+        @include not-phones {
+            font-size: 1.4em;
+        } 
+        sup {
+            font-size: .9em;
+        }
+
         &.mixitup-control-active {
+            font-family: 'LunchtypeMedium';
             font-weight: bold;
         }
     }
@@ -23,7 +46,7 @@ h1 {
         display: flex;
         text-align: center;
         align-items: center;
-        min-height: 450px;
+        max-height: 450px;
     }
 
     h4 {

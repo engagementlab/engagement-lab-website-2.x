@@ -1,17 +1,22 @@
 <div id="featured" class="columns is-multiline" *ngIf="projectFeatured !== undefined">
     <h1 class="column is-full uppercase">Featured Project</h1>
 
-    <div class="column is-one-third">
+    <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
+
+        <div class="column is-one-third hidden-tablet-plus">
+            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{projectFeatured.image.public_id}}" autoFormat="true" width="300"
+                alt="Thumbnail image for '{{content?.name}}' project"></cdn-image>
+        </div>
 
         <h2>{{projectFeatured?.name}}</h2>
-        <h3>{{projectFeatured?.projectType}}</h3>
-        <div class="blurb">
+        <div class="blurb column is-10-mobile is-full">
             {{projectFeatured?.byline}}
         </div>
-        <app-button label="view" route="/projects/{{projectFeatured?.key}}" ariaLabel="Go to '{{projectFeatured?.name}}' project"></app-button>
+        <app-button label="view" class="view" route="/projects/{{projectFeatured?.key}}" ariaLabel="Go to '{{projectFeatured?.name}}' project"></app-button>
     </div>
-    <div class="column is-one-third">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{projectFeatured.image.public_id}}" autoFormat="true" alt="Thumbnail image for '{{content?.name}}' project"></cdn-image>
+
+    <div class="column hidden-mobile">
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{projectFeatured.image.public_id}}" autoFormat="true" width="800" alt="Thumbnail image for '{{content?.name}}' project"></cdn-image>
     </div>
 
 
@@ -23,18 +28,16 @@
         <sup>{{projectTypesCount[type]}}</sup></button>
 </div>
 
-<div id="projects" class="columns is-multiline is-centered">
+<div id="projects" class="columns is-multiline">
 
-    <div #projectList class="project column is-one-third is-one-fourth-tablet mix {{project.projectType}}" *ngFor="let project of projects; let i = index;">
+    <div #projectList class="project column is-5 {{project.projectType}}" [class.mix]="project.key !== 'dummy'" *ngFor="let project of projects; let i = index;">
 
         <a routerLink="/projects/{{project.key}}" *ngIf="project.key !== 'dummy'">
             <div class="bg">
                 <span role="tooltip">view</span>
-                <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" width="600"
+                <cdn-image cloudinaryPrefix="/" cloudinaryId="{{project.image.public_id}}" autoFormat="true" height="450"
                     alt="Thumbnail image for '{{project.name}}' project" *ngIf="project.image !== undefined"></cdn-image>
             </div>
-
-            <h1>{{project.projectType}}</h1>
             <h4>{{project.name}}</h4>
 
         </a>

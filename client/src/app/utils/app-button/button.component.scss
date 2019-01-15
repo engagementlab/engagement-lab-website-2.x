@@ -41,6 +41,7 @@ a.btn {
   }
 
   &.white {
+
     font-size: 1.2em;
     font-weight: bold;
 
@@ -53,6 +54,17 @@ a.btn {
 
     padding-top: 9%;
     padding-bottom: 9%;
+
+  }
+
+  &.view {
+
+    @include phones {
+      border-width: 2px;
+      padding-top: 6%;
+      padding-bottom: 6%;
+    }
+
   }
 
 }
