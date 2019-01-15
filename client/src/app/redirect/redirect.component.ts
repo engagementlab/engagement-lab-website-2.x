@@ -11,8 +11,8 @@ export class RedirectComponent implements OnInit {
   public url: string;
 
   constructor(_route: ActivatedRoute) { 
-    _route.data.subscribe((data) => {
-      this.url = data['externalUrl'];
+    _route.queryParams.subscribe((params) => {
+      this.url = params['url'];
     });
   }
 
