@@ -12,8 +12,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
+  
   public scrollToTop() {
     this._scrollToSvc
       .scrollTo({

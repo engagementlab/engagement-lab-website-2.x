@@ -31,10 +31,6 @@ export class ProjectIndexComponent implements OnInit {
           return obj.featured;
         });
         
-        // if not even count of projects, add a dummy once so last one doesn't center
-        if(this.projects.length % 2 === 1)
-          this.projects.push({projectType: 'dummy', key: 'dummy'});
-        
         // get count of each project types
         this.projectTypesCount = _.countBy(response, (obj) => {
           return obj.projectType;
@@ -57,6 +53,11 @@ export class ProjectIndexComponent implements OnInit {
             effects: 'fade'
           }
         });
+      
+      // if not even count of projects, add a dummy once so last one doesn't center
+      if(this.projects.length % 2 === 1)
+        this.projects.push({projectType: 'dummy', key: 'dummy'});
+        
         // AOS.init();
     });
 

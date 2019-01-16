@@ -1,0 +1,28 @@
+@import "~src/styles/_variables";
+
+hr {
+
+    margin-top: 15%;
+
+    @include phones {
+        margin-top: 30%;
+    }
+
+}
+
+#btn {
+
+    margin-top: 2%;
+
+    @include phones {
+        app-button {
+            display: block;
+            margin-top: 10%;
+        }
+    }
+
+    #mobile {
+        text-align: right;
+    }
+
+}

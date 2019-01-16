@@ -13,9 +13,8 @@
 
 const keystone = global.keystone;
 const Types = keystone.Field.Types;
+const urlValidator = require('../utils').url;
 var Listing = require('./Listing');
-// See: https://github.com/chriso/validator.js
-var validator = require('validator');
 
 /**
  * @module project
@@ -25,39 +24,6 @@ var validator = require('validator');
 var Project = new keystone.List('Project', {
     inherits: Listing,
     hidden: false
-});
-
-/**
- * Field Validators
- * @main Project
- */
-var urlValidator = {
-    validator: function(val) {
-        return !val || validator.isURL(val, {
-            protocols: ['http', 'https'],
-            require_tld: true,
-            require_protocol: false,
-            allow_underscores: true
-        });
-    },
-    msg: 'Invalid link URL (e.g. needs http:// and .org/)'
-};
-
-// Storage adapter for Azure
-var azureFile = new keystone.Storage({
-  adapter: require('keystone-storage-adapter-azure'),
-  azure: {
-    container: 'elabproject',
-    generateFilename: function (file) {
-        // Cleanup filename
-        return file.originalname.replace(/[\\'\-\[\]\/\{\}\(\)\*\+\?\\\^\$\|]/g, "").replace(/ /g, '_').toLowerCase();
-    }
-  },
-  schema: {
-    path: true,
-    originalname: true,
-    url: true
-  }
 });
 
 /**
@@ -144,43 +110,7 @@ Project.add({
             type: 'video'
         }
 
-    },
-/*     // Resource model reference for files
-    files: {
-        type: Types.Relationship,
-        ref: 'Resource',
-        label: 'Project Files',
-        filters: {
-            type: 'file'
-        },
-        many: true,
-        note: 'Will appear in \'Resources\' tab on individual project page.'
-
-    },
-    // Resource model reference for articles
-    articles: {
-        type: Types.Relationship,
-        ref: 'Resource',
-        label: 'External Articles',
-        filters: {
-            type: 'article'
-        },
-        many: true,
-        note: 'Will appear in \'News\' section on individual project page.'
-
-    },
-    // Resource model reference for articles
-    blogs: {
-        type: Types.Relationship,
-        ref: 'Resource',
-        label: 'Blog Posts',
-        filters: {
-            type: 'blog post'
-        },
-        many: true,
-        note: 'Will appear in \'News\' section on individual project page.'
-
-    } */
+    }
 });
 
 /**

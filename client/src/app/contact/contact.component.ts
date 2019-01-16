@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../utils/data.service';
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 
 @Component({
   selector: 'app-contact',
@@ -8,9 +9,9 @@ import { DataService } from '../utils/data.service';
 })
 export class ContactComponent implements OnInit {
 
-  public content: any;  
+  public content: any;
 
-  constructor(private _dataSvc: DataService) { }
+  constructor(private _dataSvc: DataService, private _scrollToSvc: ScrollToService) { }
 
   ngOnInit() {
 
@@ -21,4 +22,15 @@ export class ContactComponent implements OnInit {
     });
 
   }
+  
+  public scrollToBottom() {
+    this._scrollToSvc
+      .scrollTo({
+        target: document.getElementById('bottom'),
+        offset: 0,
+        easing: 'easeOutQuint',
+        duration: 700
+      });
+  }
+  
 }

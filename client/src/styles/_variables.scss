@@ -8,45 +8,11 @@ $cdn-product: 'homepage-2.0';
          url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-regular-webfont.woff') format('woff'), /* Modern browsers */
          url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943478/homepage-2.0/fonts/Lunchtype22-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
   }
-  @font-face {
-      font-family: 'LunchtypeMedium';
-      src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff2') format('woff2'), /* Super modern browsers */
-           url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff') format('woff'), /* Modern browsers */
-           url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943478/homepage-2.0/fonts/Lunchtype22-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
-    }
-
-h1 {
-    font-family: Overpass;
-    font-size: 24px;
-    font-weight: 900;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.29;
-    letter-spacing: 2px;
-    color: #000000;
-}
-
-h2 {
-    font-family: Overpass;
-    font-size: 2.8em;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.27;
-    letter-spacing: 1.3px;
-    color: #000000;
-}
-h3 {
-    font-family: Overpass;
-    font-weight: 600;
-    font-size: 1.35em;
-    line-height: 1.38;
-    letter-spacing: 1.5px;
-}
-h4 {
-  font-family: Overpass;
-  font-size: .9em;
-  font-weight: 600;
+@font-face {
+    font-family: 'LunchtypeMedium';
+    src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff2') format('woff2'), /* Super modern browsers */
+        url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff') format('woff'), /* Modern browsers */
+        url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943478/homepage-2.0/fonts/Lunchtype22-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 // COLORS

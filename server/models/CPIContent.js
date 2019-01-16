@@ -24,9 +24,8 @@ var CPIContent = new keystone.List('CPIContent',
 	{	
 		label: 'Community PlanIt Content',
 		autokey: { path: 'key', from: 'email', unique: true },
-		// nocreate: true
+		hidden: true,
 		nodelete: true
-		// noedit: true
 	});
 
 /**

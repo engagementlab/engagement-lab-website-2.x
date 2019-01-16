@@ -1,4 +1,3 @@
- 'use strict';
 'use strict';
 /**
  * Engagement Lab Website v2.x

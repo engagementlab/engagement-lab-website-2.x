@@ -22,8 +22,8 @@ var Types = keystone.Field.Types;
  */
 var Contact = new keystone.List('Contact', 
 	{
-		label: 'Contact/Get Involved Page',
-		singular: 'Contact/Get Involved Page',
+		label: 'Get Involved Page',
+		singular: 'Get Involved Page',
 		nodelete: true,
 		nocreate: true
 	});

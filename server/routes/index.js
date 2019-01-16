@@ -13,6 +13,8 @@ keystone.pre('render', middleware.flashMessages);
 var routes = {
     api: importRoutes('./api')
 };
+let routeIncludes = [keystone.middleware.api, keystone.middleware.cors];
+
 // router.get('/unlockinghealth', routes.views.html.unlockinghealth);
 // router.get('/riskhorizon', routes.views.html.riskhorizon);
 // router.get('/cmp', routes.views.html.cmp);
@@ -61,13 +63,17 @@ router.all('/*', function(req, res, next) {
 
 });
 
-router.get('/api/homepage/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.home.get);
-router.get('/api/about/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.about.get);
-router.get('/api/team/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.team.get);
-router.get('/api/team/get/:person_key?', [keystone.middleware.api, keystone.middleware.cors], routes.api.team.get);
-router.get('/api/projects/get/:project_key?', [keystone.middleware.api, keystone.middleware.cors], routes.api.projects.get);
-router.get('/api/publications/get/:project_key?', [keystone.middleware.api, keystone.middleware.cors], routes.api.publications.get);
-router.get('/api/contact/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.contact.get);
-router.all('/api/tv/get', [keystone.middleware.api, keystone.middleware.cors], routes.api.tv.get);
+router.get('/api/homepage/get', routeIncludes, routes.api.home.get);
+router.get('/api/about/get', routeIncludes, routes.api.about.get);
+router.get('/api/team/get', routeIncludes, routes.api.team.get);
+router.get('/api/team/get/:person_key?', routeIncludes, routes.api.team.get);
+router.get('/api/projects/get/:project_key?', routeIncludes, routes.api.projects.get);
+router.get('/api/publications/get/:project_key?', routeIncludes, routes.api.publications.get);
+router.get('/api/events/get/:event_key?', routeIncludes, routes.api.events.get);
+router.get('/api/contact/get', routeIncludes, routes.api.contact.get);
+router.get('/api/jobs/get', routeIncludes, routes.api.jobs.get);
+router.get('/api/masters/get', routeIncludes, routes.api.masters.get);
+
+router.all('/api/tv/get', routeIncludes, routes.api.tv.get);
 
 module.exports = router;
