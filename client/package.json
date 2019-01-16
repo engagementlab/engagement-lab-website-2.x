@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "source ~/.nvm/nvm.sh; nvm use; ng serve",
-    "build": "ng build --configuration=prod --prod",
+    "build": "ng build --configuration=production --prod",
     "build-qa": "ng build --configuration=qa --prod",
     "test": "ng test",
     "lint": "ng lint",
