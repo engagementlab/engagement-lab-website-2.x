@@ -25,7 +25,7 @@ var buildData = (options, res) => {
     
     // Get initiatives
     let initiativeData = initiative.find({}).sort([
-        ['sortOrder', 'descending']
+        ['sortOrder', 'ascending']
     ]).populate({
         path: 'projects',
         select: 'name key -_id',

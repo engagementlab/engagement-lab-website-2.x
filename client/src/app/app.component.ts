@@ -48,6 +48,9 @@ export class AppComponent implements OnInit {
       else
         document.getElementById('home').classList.remove('lg');
 
+      if(!evt.url.includes('initiatives'))
+        document.getElementById('initiative-bg').classList.value = '';
+
       if(evt.url.indexOf('/#') === 0)
         return;
       window.scrollTo(0, 0);

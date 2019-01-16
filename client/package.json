@@ -1,6 +1,6 @@
 {
   "name": "engagement-lab-website-2.0",
-  "version": "0.1.0",
+  "version": "2.0.1",
   "scripts": {
     "ng": "ng",
     "start": "source ~/.nvm/nvm.sh; nvm use; ng serve",
