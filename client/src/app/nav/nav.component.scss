@@ -11,6 +11,14 @@ nav {
     
   #logo-img {
     max-width: 423px;
+    @include mobile-only {
+      &.white {
+        path {
+          stroke: white;
+          fill: white;
+        }
+      }
+    }
   }
   
   svg {
@@ -21,6 +29,7 @@ nav {
 
     @include mobile-only {
       max-width: 200px;
+
     }
     #color-lab {
       @include transition(opacity, 1s, ease-in-out);

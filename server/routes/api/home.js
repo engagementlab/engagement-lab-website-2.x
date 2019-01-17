@@ -22,6 +22,7 @@ var buildData = (options, res) => {
     
     let projectFields = 'name image key projectType byline -_id';
     let eventFields = 'name date key eventUrl -_id';
+    let initiativeFields = 'name description key projects -_id';
     
     // Get initiatives
     let initiativeData = initiative.find({}).sort([

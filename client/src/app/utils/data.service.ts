@@ -18,6 +18,7 @@ import 'rxjs/add/observable/of';
 export class DataService {
 
   public isLoading: Subject<boolean> = new Subject<boolean>();
+  public serverProblem: Subject<boolean> = new Subject<boolean>();
   private baseUrl: string;
 
   constructor(private http: HttpClient) { 
@@ -29,12 +30,20 @@ export class DataService {
   public getDataForUrl(urlParam: string): Observable<any> {
 
       this.isLoading.next(true);
+      this.serverProblem.next(false);
 
       let url = this.baseUrl+urlParam; 
       
       return this.http.get(url)
       .map((res:any)=> {
         this.isLoading.next(false);
+        
+        // Catch no data as problem on backend
+        if(res === null) {
+          this.serverProblem.next(true);
+          return;
+        }
+        
         return res.data;
       })
       .catch((error:any) => { 

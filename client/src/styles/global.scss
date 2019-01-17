@@ -25,10 +25,14 @@ body {
 
 #initiative-bg {
 	position: absolute;
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 	width: 100%;
-	height: 1021px;
+  height: 1021px;
+  
+  @include phones {
+    height: 588px;
+  }
 	
 	display: none;
 
@@ -40,6 +44,10 @@ body {
 	&.trust-and-the-news {
 		background-image: cdn-image('initiatives/trust-news-bg.jpg', c_fill, h_1021, w_1440);
 	}
+	&.health-advocacy {
+		background-image: cdn-image('initiatives/health-bg.jpg', c_fill, h_1021, w_1440);
+	}
+
 }
 
 
@@ -95,6 +103,10 @@ h3 {
         margin-bottom: 7%;
         line-height: 1.17;
         letter-spacing: 0.5px;
+
+        @include phones {
+          font-size: 1.5em;
+        }
     
     }
 }
