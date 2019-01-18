@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } fro
 import { DataService } from './utils/data.service';
 
 import * as AOS from 'aos';
-import * as anime from 'animejs';
+// import * as anime from 'animejs';
 import * as _ from 'underscore';
 
 import { TweenLite, Ease, Sine, Tween, TimelineLite } from 'gsap';

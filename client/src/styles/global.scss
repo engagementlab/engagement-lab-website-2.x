@@ -35,10 +35,10 @@ body {
   }
 	
 	display: none;
-
-	&.smart-cities {
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+    &.smart-cities {
 		background-image: cdn-image('initiatives/smartcities-bg.jpg', c_fill, g_south_east, h_1021, w_1440);
 	}
 	&.trust-and-the-news {

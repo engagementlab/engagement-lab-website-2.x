@@ -3,6 +3,8 @@ import { DataService } from '../utils/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { TweenLite } from 'gsap';
 
+import * as AOS from 'aos';
+
 @Component({
   selector: 'app-initiative',
   templateUrl: './initiative.component.html',
@@ -13,8 +15,11 @@ export class InitiativeComponent implements OnInit {
   public initiativeType: string;
   public content: any;
 
+  private upperBg: HTMLElement;
+
   constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
 
+    this.upperBg = document.getElementById('initiative-bg');
     this._route.params.subscribe(params => {
 
       this.initiativeType = params['key'];
@@ -23,9 +28,14 @@ export class InitiativeComponent implements OnInit {
 
         this.content = response;
 
-        document.getElementById('initiative-bg').classList.value = this.initiativeType;
+        this.upperBg.classList.value = this.initiativeType;
+        TweenLite.fromTo(this.upperBg, 1, {autoAlpha:0}, {autoAlpha:1, display:'block', delay:1});
+        
         document.getElementById('logo-img').classList.add('white');
-        TweenLite.fromTo(document.getElementById('initiative-bg'), 2, {autoAlpha:0}, {autoAlpha:1, display:'block', delay:1});
+
+        AOS.init({
+          mirror: true
+        });
         
       });
 
