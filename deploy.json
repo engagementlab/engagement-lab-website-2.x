@@ -26,7 +26,7 @@
       "ref": "origin/master",
       "path": "/srv/engagement-lab-website-2.0",
       "pre-deploy-local" : "echo 'Cloning and running npm install. Be patient.';",
-      "post-deploy" : "cd client ; nvm use ; npm i ; npm run build-qa ; pm2 restart 'engagement-lab-website-client'; cd ../server ; nvm use ; npm i ; pm2 restart 'engagement-lab-website-server'",
+      "post-deploy" : "cd client ; nvm use ; npm i ; pm2 stop 'engagement-lab-website-client' ; npm run build-qa ; pm2 start 'engagement-lab-website-client'; cd ../server ; nvm use ; npm i ; pm2 restart 'engagement-lab-website-server'",
       "env": {
         "NODE_ENV": "staging"
       }
@@ -39,7 +39,7 @@
       "ref": "origin/production",
       "path": "/srv/engagement-lab-website-2.0",
       "pre-deploy-local" : "echo 'Cloning and building.';",
-      "post-deploy" : "cd client ; nvm use ; npm i ; npm run build ; pm2 restart 'engagement-lab-website-client'; cd ../server ; nvm use ; npm i ; pm2 restart 'engagement-lab-website-server'",
+      "post-deploy" : "cd client ; nvm use ; npm i ; pm2 stop 'engagement-lab-website-client' ; npm run build ; pm2 restart 'engagement-lab-website-client'; cd ../server ; nvm use ; npm i ; pm2 restart 'engagement-lab-website-server'",
       "env": {
         "NODE_ENV": "staging"
       }
