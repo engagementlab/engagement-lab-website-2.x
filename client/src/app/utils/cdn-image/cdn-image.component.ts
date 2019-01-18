@@ -18,6 +18,7 @@ export class CdnImageComponent implements OnInit {
 	@Input() width: string;
   @Input() quality: number;
 	@Input() autoFormat: boolean = false;
+	@Input() svg: boolean = false;
 
   public widthCss: SafeStyle;
   public widthAuto: SafeStyle;
