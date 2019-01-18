@@ -1,6 +1,6 @@
 @import "~src/styles/_variables";
 
-[data-aos="test-anim"] {
+/* [data-aos="test-anim"] {
     transform: skewX(45deg);
     opacity: 0;
     transition-property: transform, opacity;
@@ -8,7 +8,7 @@
       transform: skewX(120deg);
       opacity: 1;
     }
-  }
+  } */
 
 section {
 
@@ -22,32 +22,32 @@ section {
     &.smart-cities {
         .project {
             &:hover {
-                color: $mango;
-                border-color: $mango !important;
+                color: $tomato;
+                border-bottom-color: $tomato !important;
             }
         }
         #red {
             display: block;
         }
     }
-
+    
     &.trust-and-the-news {
         .project {
             &:hover {
-                color: $tomato;
-                border-bottom-color: $tomato !important;
+                color: $green-blue;
+                border-bottom-color: $green-blue !important;
             }
         }
         #greenblue {
             display: block;
         }
     }
-
+    
     &.health-advocacy {
         .project {
             &:hover {
-                color: $green-blue;
-                border-bottom-color: $green-blue !important;
+                color: $mango;
+                border-bottom-color: $mango !important;
             }
         }
         #mango {
@@ -121,6 +121,10 @@ section {
 
 h3.hidden-mobile {
     width: 60%;
+}
+p, h3 {
+    position: relative;
+    z-index: 1;
 }
 
 .projects {
