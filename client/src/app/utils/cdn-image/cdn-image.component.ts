@@ -17,6 +17,8 @@ export class CdnImageComponent implements OnInit {
   @Input() height: number;
 	@Input() width: string;
   @Input() quality: number;
+
+  @Input() responsive: boolean = true;
 	@Input() autoFormat: boolean = false;
 	@Input() svg: boolean = false;
 
@@ -26,7 +28,7 @@ export class CdnImageComponent implements OnInit {
 
   constructor(private _sanitizer: DomSanitizer) {
   }
-
+  
   ngOnInit() {
 
     this.imgId = (this.cloudinaryPrefix ? this.cloudinaryPrefix : 'homepage-2.0/') + this.cloudinaryId;

@@ -95,7 +95,10 @@
             <!-- art -->
             <div class="column is-half">
                 <cdn-image cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" svg="true"
-                    alt="Artwork image for '{{initiative.name}}' initiative"></cdn-image>
+                    alt="Artwork image for '{{initiative.name}}' initiative" *ngIf="!isPhone"></cdn-image>
+                
+                <cdn-image cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}"
+                    alt="Artwork image for '{{initiative.name}}' initiative" [responsive]="false" *ngIf="isPhone"></cdn-image>
             </div>
             <!-- info -->
             <div class="column">
