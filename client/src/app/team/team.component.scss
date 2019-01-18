@@ -37,9 +37,49 @@ h1 {
 
     #content {
         max-width: 630px;
-        // margin: 0 auto;
         padding: 10% 5% 0% 5%;
         align-self: center;
+        justify-content: space-evenly;
+        
+        @include not-phones {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include until-tablet-wide {
+            
+            max-width: 93%;
+        }
+        
+        @include desktop {
+
+        max-width: 60%;
+        }
+
+    #top {
+        padding: 0;
+        ::ng-deep img {
+            max-width: 270px;
+        }
+    }
+
+    #bio {
+        padding: 0;
+        line-height: 1.29;
+        font-size: .9em;
+        @include not-phones {
+            line-height: 1.44;
+            letter-spacing: 0.3px;
+            font-size: 1em;
+        }
+
+        .www {
+            ::ng-deep a, a {
+                color: white;
+                border-bottom: solid 1px rgba($color: #fff, $alpha: .6);
+            }
+        }
+    }
+
     }
 
     
@@ -48,23 +88,6 @@ h1 {
     }
     h1 {
         font-size: 1.1em;
-    }
-
-    #top {
-        padding: 0;
-    }
-
-    #bio {
-        padding: 0;
-        line-height: 1.29;
-        font-size: .9em;
-
-        .www {
-            ::ng-deep a, a {
-                color: white;
-                border-bottom: solid 2px white;
-            }
-        }
     }
 
     #social {

@@ -1,4 +1,4 @@
-<section id="person-modal" class="" *ngIf="currentPerson !== undefined" (click)="closePerson()">
+<section id="person-modal" *ngIf="currentPerson !== undefined" (click)="closePerson()">
 
     <div id="header">
 
@@ -12,12 +12,12 @@
 
     <div id="content" class="columns">
 
-        <div id="top" class="column is-two-thirds-mobile is-half-tablet">
+        <div id="top" class="column is-two-thirds-mobile is-one-third-tablet">
             <h1 class="uppercase">
                 {{currentPerson.name.first}} {{currentPerson.name.last}}
             </h1>
 
-            <p>{{currentPerson.title}}</p>
+            <p class="hidden-tablet-plus">{{currentPerson.title}}</p>
 
             <cdn-image cloudinaryPrefix="/" cloudinaryId="{{currentPerson.image.public_id}}" autoFormat="true" effect="grayscale"
                 width="225" alt="Portrait image of {{currentPerson.name.first}} {{currentPerson.name.last}}"></cdn-image>
@@ -26,12 +26,13 @@
         <div id="bio" class="column is-four-fifths-mobile is-half-tablet">
 
             <!-- Bio markup -->
+            <p class="hidden-mobile">{{currentPerson.title}}</p>
             <div class="www" [innerHtml]="currentPerson.bio.html">
             </div>
 
             <div class="columns is-multiline is-mobile">
 
-                <div class="www column is-full" *ngIf="currentPerson.websiteURL.length > 0">
+                <div class="www column is-full-mobile" *ngIf="currentPerson.websiteURL.length > 0">
                     <a href="{{currentPerson.websiteURL}}">{{currentPerson.websiteURL | prettyUrl}}</a>
                 </div>
 
