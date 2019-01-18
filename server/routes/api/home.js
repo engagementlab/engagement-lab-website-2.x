@@ -22,7 +22,7 @@ var buildData = (options, res) => {
     
     let projectFields = 'name image key projectType byline -_id';
     let eventFields = 'name date key eventUrl -_id';
-    let initiativeFields = 'name description key projects -_id';
+    let initiativeFields = 'name description image key projects -_id';
     
     // Spit on dev server
     if(process.env.NODE_ENV === 'development')
