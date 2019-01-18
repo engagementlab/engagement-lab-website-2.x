@@ -24,10 +24,9 @@ var buildData = (options, res) => {
         path: 'projects',
         select: 'name key -_id',
         options: { sort: 'name' }
-    });;
-    // Execute queries
-    initiativeData.exec();
+    })
 
+    // Execute queries
     Bluebird.props({
             initiative: initiativeData,
         })

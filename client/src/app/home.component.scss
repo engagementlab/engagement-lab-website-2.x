@@ -166,8 +166,10 @@ a {
             margin-bottom: 0;
             transform-origin: 0%;
             @include transition(transform, .2s, ease-in-out);
+        }
 
-            &:hover {
+        &:hover {
+            h2 {
                 @include scale(1.05);
             }
         }

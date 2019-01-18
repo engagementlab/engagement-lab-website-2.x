@@ -23,9 +23,8 @@ var buildData = (options, res) => {
     let jobsData = jobs.find({enabled: true}, fields).sort([
         ['createdAt', 'descending']
     ]);
+    
     // Execute queries
-    jobsData.exec();
-
     Bluebird.props({
             jobs: jobsData,
         })

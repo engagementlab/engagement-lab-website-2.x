@@ -23,9 +23,8 @@ var buildData = (options, res) => {
     let eventsData = events.find({enabled: true}, fields).sort([
         ['date', 'descending']
     ]);
+    
     // Execute queries
-    eventsData.exec();
-
     Bluebird.props({
             events: eventsData,
         })

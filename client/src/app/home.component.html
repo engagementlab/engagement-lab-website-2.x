@@ -89,9 +89,10 @@
             <div>&nbsp;</div>
         </div>
 
-        <div class="columns is-multiline">
+        <a routerLink="/initiatives/{{initiative.key}}">
+            <div class="columns is-multiline">
             <!-- name -->
-            <h2 class="column is-full"><a routerLink="/initiatives/{{initiative.key}}">{{initiative.name}}</a></h2>
+            <h2 class="column is-full">{{initiative.name}}</h2>
             <!-- art -->
             <div class="column is-half">
                 <cdn-image cloudinaryPrefix="/" cloudinaryId="{{initiative.image.public_id}}" svg="true"
@@ -113,7 +114,7 @@
                 </a>
             </div>
             </div>
-        </div>
+        </div></a>
     </div>
 
 </section>
