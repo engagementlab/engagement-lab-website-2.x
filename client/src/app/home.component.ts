@@ -1,13 +1,11 @@
 import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from './utils/data.service';
+import { TweenLite, Sine, TimelineLite } from 'gsap';
 
 import * as AOS from 'aos';
-import * as anime from 'animejs';
 import * as _ from 'underscore';
+import * as ismobile from 'ismobilejs';
 
-import { TweenLite, Ease, Sine, Tween, TimelineLite } from 'gsap';
-
-// import * as spiralFactory from 'warpjs/src/warp'
 
 @Component({
   selector: 'app-home',
@@ -20,6 +18,8 @@ export class HomeComponent implements OnInit {
   public featuredProjects: any[];
   public events: any[];
   public latestEvent: any;
+
+  public isPhone: boolean;
 
   private tls: TimelineLite[];
   t: TweenLite;
@@ -35,7 +35,9 @@ export class HomeComponent implements OnInit {
   @ViewChild('yellowBg') yellowBg: ElementRef;
   @ViewChild('yellowPattern') yellowPattern: ElementRef;
 
-  constructor(private _dataSvc: DataService) {  }
+  constructor(private _dataSvc: DataService) {
+    this.isPhone = ismobile.phone;
+  }
 
   ngOnInit() {
 

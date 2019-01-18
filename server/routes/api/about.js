@@ -31,11 +31,6 @@ var buildData = (res) => {
     // Get faculty and staff
     let peopleData = person.find({category: {$in: ['faculty leadership', 'staff']}}, personFields)
                            .sort([['sortOrder', 'ascending']]);
-
-    // Execute queries
-    aboutData.exec();
-    partnersData.exec();
-    peopleData.exec();
     
     Bluebird.props({
             about: aboutData,

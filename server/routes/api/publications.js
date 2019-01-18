@@ -35,7 +35,6 @@ var buildData = (options, res) => {
                         select: 'file.url -_id'
                     });
 
-    data.exec();
     Bluebird.props({
             jsonData: data
         })

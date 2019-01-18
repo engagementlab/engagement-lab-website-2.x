@@ -22,15 +22,21 @@ var buildData = (options, res) => {
     
     let projectFields = 'name image key projectType byline -_id';
     let eventFields = 'name date key eventUrl -_id';
+    let initiativeFields = 'name description image key projects -_id';
     
+    // Spit on dev server
+    if(process.env.NODE_ENV === 'development')
+        mongoose.set('debug', true);
+
     // Get initiatives
-    let initiativeData = initiative.find({}).sort([
-        ['sortOrder', 'descending']
-    ]).populate({
-        path: 'projects',
-        select: 'name key -_id',
-        options: { limit: 2, sort: 'name' }
-    });
+    let initiativeData = initiative.find({}, initiativeFields).sort([
+        ['sortOrder', 'ascending']
+    ])
+    .populate({
+            path: 'projects',
+            select: 'name key -_id',
+            options: { limit: 3, sort: 'name' }
+        });
     // Get a couple featured projects
     let projectData = project.find({ featured: true }, projectFields).limit(2);
     // Get 3 events most recent by date
@@ -39,10 +45,6 @@ var buildData = (options, res) => {
     ]).limit(3);
     
     // Execute queries
-    initiativeData.exec();
-    projectData.exec();
-    eventData.exec();
-
     Bluebird.props({
             initiatives: initiativeData,
             projects: projectData,

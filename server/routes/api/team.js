@@ -33,9 +33,7 @@ var buildData = (options, res) => {
                             .sort([['sortOrder', 'ascending']]);
     }
 
-    // Execute query
-    peopleData.exec();
-    
+    // Execute query    
     Bluebird.props({
             people: peopleData
         })

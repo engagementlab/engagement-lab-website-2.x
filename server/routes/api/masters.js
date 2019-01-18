@@ -21,9 +21,8 @@ var buildData = (res) => {
     
     // Get masters program text
     let mastersData = masters.find({}, fields);
+    
     // Execute queries
-    mastersData.exec();
-
     Bluebird.props({
             masters: mastersData,
         })

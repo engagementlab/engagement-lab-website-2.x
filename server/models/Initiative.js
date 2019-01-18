@@ -34,7 +34,8 @@ var Initiative = new keystone.List('Initiative',
  */
 Initiative.add({
 	name: { type: String, label: 'Initiative Name', required: true, initial: true, index: true, note: 'This is the name or title of the directory'},
-    description: { type: String, label: 'Description', required: true, initial: true, note: 'This displays next to/near the initiative name' },
+    description: { type: String, required: true, initial: true, note: 'This displays next to/near the initiative name' },
+    longDescription: { type: Types.Textarea, required: true, initial: true, note: 'This displays on the initiative landing' },
     image: {
         type: Types.CloudinaryImage,
         label: 'Initiative Image',

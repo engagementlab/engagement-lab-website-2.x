@@ -30,7 +30,6 @@ var buildData = (options, res) => {
     else
         data = list.find({});
 
-    data.exec();
     Bluebird.props({
             jsonData: data
         })

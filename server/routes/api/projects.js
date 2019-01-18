@@ -48,30 +48,15 @@ var buildData = (options, res) => {
         data = list.find({'enabled': true}, fields)
                    .sort([['sortOrder', 'ascending']]);
 
-    // Get count of all docs if needed
-    // if(countData)
-    //     countData.exec();
-    data.exec();
-
+    // Execute
     Bluebird.props({
             jsonData: data
         })
         .then(results => {
             
-            let finalData = results.jsonData;
-
-            // Assemble project theme index if one project pulled
-            // if(countData) {
-
-            //     let index = results.jsonData 
-            //     finalData = {
-            //         project: results.jsonData,
-            //         themeIndex: results.countAmt
-            //     }
-            // }
             let resultObj = {
                 status: 200,
-                data: finalData
+                data: results.jsonData
             };
 
             return res.status(200).json(resultObj);

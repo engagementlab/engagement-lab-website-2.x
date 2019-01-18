@@ -16,16 +16,23 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { HomeComponent } from './home.component';
+import { InitiativeComponent } from './initiatives/initiative.component';
 import { AboutComponent } from './about/about.component';
+
 import { EventIndexComponent } from './events/index.component';
 import { EventComponent } from './events/event.component';
+
 import { ProjectIndexComponent } from './projects/index.component';
 import { ProjectComponent } from './projects/project.component';
+
 import { PublicationIndexComponent } from './publications/index.component';
 import { PublicationComponent } from './publications/publication.component';
+
 import { TeamComponent } from './team/team.component';
 import { PeopleGridComponent } from './team/people-grid.component';
 import { ContactComponent } from './contact/contact.component';
@@ -46,6 +53,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 // App routes
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'initiatives/:key', component: InitiativeComponent },
   { path: 'about', component: AboutComponent },  
   
   { path: 'team', component: TeamComponent },  
@@ -108,7 +116,8 @@ export const routes: Routes = [
     MastersComponent,
     JobsComponent,
     EventIndexComponent,
-    EventComponent
+    EventComponent,
+    InitiativeComponent
   ],
   imports: [
     AppRoutingModule,
