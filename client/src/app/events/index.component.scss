@@ -1,28 +1,66 @@
 @import "~src/styles/_variables";
 
-h1 {
-    text-transform: uppercase;
-    line-height: 1.33;
-    letter-spacing: 1.5px;
 
-    .year {
-        font-size: 2.1em;
-        font-weight: 800;
+#events {
+    h1 {
+        text-transform: uppercase;
+        line-height: 1.33;
+        letter-spacing: 1.5px;
 
-        letter-spacing: 1.3px;
+        .year {
+            font-size: 2.1em;
+            font-weight: 800;
 
-        color: black;
-        -webkit-text-stroke: black 1px;
-        -webkit-text-fill-color: white;
+            letter-spacing: 1.3px;
+
+            color: black;
+            -webkit-text-stroke: black 1px;
+            -webkit-text-fill-color: white;
+        }
     }
+
+    a:hover {
+
+        .year {
+            -webkit-text-stroke: $tomato 1px;
+        }
+
+        svg path {
+            stroke: $tomato;
+        }
+    }
+
 }
 
-a:hover {
+#pastevents {
 
-    .year {
-        -webkit-text-stroke: $tomato 1px; 
+    background-color: black;
+    color: white;
+
+    margin-left: -3%;
+    margin-right: -3%;
+
+    padding: 3% 3% 0 3%;
+    // padding-left: 3%;
+    // padding-right: 3%;
+
+    h1,
+    h2,
+    h4 {
+        color: white;
     }
-    svg path {
-        stroke: $tomato;
+
+    h1 {
+        font-size: 1.1em;
     }
+
+    h4 {
+        font-size: 1.05em;
+
+        .year {
+            font-size: 1.4em;
+        }
+    }
+
+
 }

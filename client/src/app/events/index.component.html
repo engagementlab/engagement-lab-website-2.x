@@ -23,3 +23,28 @@
 
     </div>
 </section>
+
+<section id="pastevents" *ngIf="pastEvents !== undefined">
+    <h1 class="uppercase">past events</h1>
+    <div class="event column is-full" *ngFor="let event of pastEvents">
+
+        <a href="{{event.eventUrl}}">
+            <div class="columns is-mobile">
+                <h4 class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}} <div class="year">{{event.date
+                    | date: 'yyyy'}}</div></h4>
+                <h4 class="date column is-one-fifth hidden-tablet-plus">{{event.date | date: 'MMM dd'}} <div class="year">{{event.date
+                        | date: 'yy'}}</div>
+                </h4>
+
+                <h2 class="name column no-margin">{{event.name}}&nbsp;
+                    <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                      <path stroke="#fff" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"/>
+                    </svg>
+                </h2>
+
+            </div>
+            <hr />
+        </a>
+
+    </div>
+</section>
