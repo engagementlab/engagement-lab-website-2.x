@@ -5,7 +5,7 @@ import {
     ElementRef
 } from '@angular/core';
 import {
-    ActivatedRoute
+    ActivatedRoute, Router
 } from '@angular/router';
 import {
     DataService
@@ -28,7 +28,7 @@ export class EventComponent implements OnInit {
 
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
 
-    constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
+    constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
 
         this._route.params.subscribe(params => {
 
@@ -49,11 +49,35 @@ export class EventComponent implements OnInit {
 
     }
 
+    ngOnDestroy() {
+
+      // Skip bg fade out if going to other event
+      if (this._router.routerState.snapshot.url.indexOf('/event') > -1)
+        return;
+
+      // Undo bg gradient
+      let color = '247, 41, 35'
+      let alpha = {
+          a: 1
+      };
+      TweenLite.to(alpha, 1, {
+          a: '-=1',
+          onUpdate: () => {
+              document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ',' + alpha.a + ' ) 0%, rgba(' + color + ',' + alpha.a + ') ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
+          }
+      });
+      
+    }
+
     setContent(data: any) {
 
         this.content = data.event;
         this.next = data.next;
         this.previous = data.prev;
+
+        // Skip bg fade if coming from other event
+        if(this._dataSvc.previousUrl.indexOf('/event') > -1)
+          return;
 
         setTimeout(() => {
 
