@@ -100,7 +100,7 @@ $base-font-size: 16px;
 }
 
 // translate
-@mixin translate ($x, $y) {
+@mixin translate ($x, $y:0) {
     @include transform(translate($x, $y));
 }
 
@@ -116,6 +116,7 @@ $base-font-size: 16px;
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
 }
+
 // Usage:   @include transition(width, height 0.3s ease-in-out);
 // Output:  -webkit-transition(width 0.2s, height 0.3s ease-in-out);
 //          transition(width 0.2s, height 0.3s ease-in-out);
@@ -123,39 +124,45 @@ $base-font-size: 16px;
 // Pass in any number of transitions
 @mixin multi-transition($transitions...) {
     $unfoldedTransitions: ();
+
     @each $transition in $transitions {
-      $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
+        $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
     }
-    
+
     -webkit-transition: $unfoldedTransitions;
     -moz-transition: $unfoldedTransitions;
     -ms-transition: $unfoldedTransitions;
     -o-transition: $unfoldedTransitions;
     transition: $unfoldedTransitions;
-  }
-  
-  @function unfoldTransition ($transition) {
+}
+
+@function unfoldTransition ($transition) {
     // Default values
     $property: all;
     $duration: .2s;
     $easing: null; // Browser default is ease, which is what we want
     $delay: null; // Browser default is 0, which is what we want
     $defaultProperties: ($property, $duration, $easing, $delay);
-  
+
     // Grab transition properties if they exist
     $unfoldedTransition: ();
+
     @for $i from 1 through length($defaultProperties) {
-      $p: null;
-      @if $i <= length($transition) {
-        $p: nth($transition, $i)
-      } @else {
-        $p: nth($defaultProperties, $i)
-      }
-      $unfoldedTransition: append($unfoldedTransition, $p);
+        $p: null;
+
+        @if $i <=length($transition) {
+            $p: nth($transition, $i)
+        }
+
+        @else {
+            $p: nth($defaultProperties, $i)
+        }
+
+        $unfoldedTransition: append($unfoldedTransition, $p);
     }
-  
+
     @return $unfoldedTransition;
-  }
+}
 
 // FILTERS
 // grayscale      ex: filter: grayscale(100%);
@@ -299,41 +306,61 @@ $base-font-size: 16px;
         @content;
     }
 }
+
 @mixin phones {
-  @include mq($until: tabletPortrait) {
-    @content;
-  }
+    @include mq($until: tabletPortrait) {
+        @content;
+    }
 }
+
 @mixin tablet-portrait {
-  @include mq($from: mobileLg, $until: tablet) {
-    @content;
-  }
+    @include mq($from: mobileLg, $until: tablet) {
+        @content;
+    }
 }
+
 @mixin until-tablet-wide {
-  @include mq($until: tablet) {
-    @content;
-  }
-}  
+    @include mq($until: tablet) {
+        @content;
+    }
+}
+
 @mixin not-phones {
-  @include mq($from: tabletPortrait) {
-    @content;
-  }
+    @include mq($from: tabletPortrait) {
+        @content;
+    }
 }
+
 @mixin desktop {
-  @include mq($from: wide) {
-    @content;
-  }
+    @include mq($from: wide) {
+        @content;
+    }
 }
+
 @mixin not-desktop {
-  @include mq($until: wide) {
-    @content;
-  }
+    @include mq($until: wide) {
+        @content;
+    }
 }
 
 @mixin placeholder {
-    &::-webkit-input-placeholder {@content}
-    &:-moz-placeholder           {@content}
-    &::-moz-placeholder          {@content}
-    &:-ms-input-placeholder      {@content}  
-    &::placeholder      {@content}  
+    &::-webkit-input-placeholder {
+        @content
+    }
+
+    &:-moz-placeholder {
+        @content
+    }
+
+    &::-moz-placeholder {
+        @content
+    }
+
+    &:-ms-input-placeholder {
+        @content
+    }
+
+    &::placeholder {
+        @content
+    }
 }

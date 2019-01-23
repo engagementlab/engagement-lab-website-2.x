@@ -32,12 +32,6 @@ var Event = new keystone.List('Event', {
  */
 Event.add({
 
-    // TODO: use for index?
-    /* featured: {
-        type: Types.Boolean,
-        label: 'Featured Event',
-        note: 'Only one event should be featured'
-    }, */
     enabled: {
         type: Types.Boolean,
         label: 'Enabled',
@@ -57,9 +51,9 @@ Event.add({
         required: true,
         initial: true
     },
-    image: {
-        type: Types.CloudinaryImage,
-        label: 'Event Image',
+    images: {
+        type: Types.CloudinaryImages,
+        label: 'Event Images',
         folder: 'homepage-2.0/events',
     },
     shortDescription: {
@@ -80,17 +74,11 @@ Event.add({
         type: Types.Url,
         label: 'Event URL',
         validate: urlValidator,
-        note: 'Must be in format "http://www.something.org".',
-        required: true,
-        initial: true
-    },
-    hackpadURL: {
-        type: String,
-        label: 'Hackpad URL'
+        note: 'Must be in format "http://www.something.org".'
     },
     additionalURL: {
         type: String,
-        label: "Summary Blog Post URL"
+        label: "Summary Blog Post URL (current not used)"
     },
     createdAt: {
         type: Date,
@@ -115,5 +103,5 @@ Event.schema.pre('save', function (next) {
  * Model Registration
  */
 Event.defaultSort = '-createdAt';
-Event.defaultColumns = 'name, featured, enabled';
+Event.defaultColumns = 'name, date, enabled';
 Event.register();

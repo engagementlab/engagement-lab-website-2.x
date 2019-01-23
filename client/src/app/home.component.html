@@ -169,7 +169,7 @@
 
     <div #eventList class="event column is-full" *ngFor="let event of events">
 
-        <a href="{{event.eventUrl}}">
+        <a routerLink="/events/{{event.key}}">
             <div class="columns is-mobile">
                 <div class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}}</div>
                 <div class="date column is-one-fifth hidden-tablet-plus">{{event.date | date: 'MMM dd'}}</div>

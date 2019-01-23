@@ -21,7 +21,7 @@ var buildData = (options, res) => {
     let event = keystone.list('Event').model;
     
     let projectFields = 'name image key projectType byline -_id';
-    let eventFields = 'name date key eventUrl -_id';
+    let eventFields = 'name date key -_id';
     let initiativeFields = 'name description image key projects -_id';
     
     // Spit on dev server

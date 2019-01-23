@@ -1,15 +1,87 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    Component,
+    OnInit,
+    ViewChild,
+    ElementRef
+} from '@angular/core';
+import {
+    ActivatedRoute
+} from '@angular/router';
+import {
+    DataService
+} from '../utils/data.service';
+import { TweenLite } from 'gsap';
 
 @Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html',
-  styleUrls: ['./event.component.scss']
+    selector: 'app-event',
+    templateUrl: './event.component.html',
+    styleUrls: ['./event.component.scss']
 })
 export class EventComponent implements OnInit {
 
-  constructor() { }
+    public content: any;
+    public next: any;
+    public previous: any;
+    public hidden: boolean = true;
 
-  ngOnInit() {
-  }
+    private bgEndPerc: number;
+
+    @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
+
+    constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
+
+        this._route.params.subscribe(params => {
+
+            this._dataSvc.getDataForUrl('events/get/' + params['key']).subscribe(response => {
+                this.setContent(response);
+                this.hidden = false;
+            });
+
+        });
+
+    }
+
+    ngOnInit() {}
+
+    ngAfterViewChecked() {
+
+        this.setBgHeight();
+
+    }
+
+    setContent(data: any) {
+
+        this.content = data.event;
+        this.next = data.next;
+        this.previous = data.prev;
+
+        setTimeout(() => {
+
+            let color = '247, 41, 35'
+            var alpha = {
+                a: 0
+            };
+
+            TweenLite.to(alpha, 1, {
+                a: '+=1',
+                onUpdate: () => {
+                    // Set bg to generated gradient
+                    document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ',' + alpha.a + ' ) 0%, rgba(' + color + ',' + alpha.a + ') ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
+                }
+            });
+
+        }, 0);
+
+    }
+
+    setBgHeight() {
+
+        if (this.backgroundEnd === undefined) return;
+
+        let endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
+        let windowHeight = document.body.clientHeight;
+        this.bgEndPerc = (endY / windowHeight) * 100;
+
+    }
 
 }

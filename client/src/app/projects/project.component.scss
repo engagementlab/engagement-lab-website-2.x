@@ -54,19 +54,3 @@ h2 {
 #bottom {
     text-align: center;
 }
-
-#verticle-line {
-
-    position: absolute;
-    display: block;
-    background-color: black;
-    width: 2px;
-    height: 40px;
-    margin-top: -20px;
-
-    @include not-phones {
-    width: 4px;
-    height: 100px;
-    margin-top: -50px;
-    }
-}

@@ -17,22 +17,57 @@ mongoose.Promise = require('bluebird');
 var buildData = (options, res) => {
 
     let events = keystone.list('Event').model;
-    let fields = 'name date key eventUrl -_id';
+    let eventsData;
+    let queries = {}; 
+    let fields = 'name date key shortDescription eventUrl';
     
-    // Get enabled events
-    let eventsData = events.find({enabled: true}, fields).sort([
-        ['date', 'descending']
-    ]);
+    if(options.id) {
+        // Get one event
+        fields += ' description images.public_id';
+        eventsData = events.findOne({key: options.id}, fields);
+    }
+    else {
+        // Get enabled events
+        fields += ' -_id';
+        eventsData = events.find({ enabled: true}, fields).sort([
+            ['date', 'descending']
+        ]);
+    }
+    queries.events = eventsData;
     
     // Execute queries
-    Bluebird.props({
-            events: eventsData,
-        })
+    Bluebird.props(queries)
         .then(results => {
-            return res.status(200).json({
-                status: 200,
-                data: results.events
-            });
+            
+            if(options.id) {
+                
+                // When retrieving one event, also get next/prev ones
+                let fields = 'name key -_id';
+                let nextEvent = events.findOne({date: {
+                    $gt: results.events.date
+                }}, fields).limit(1);
+                let prevEvent = events.findOne({date: {
+                    $lt: results.events.date
+                }}, fields).limit(1);
+
+                Bluebird.props({next: nextEvent, prev: prevEvent}).then(nextPrevResults => {
+                    let output = Object.assign(nextPrevResults, {event: results.events});
+                    return res.status(200).json({
+                        status: 200,
+                        data: output
+                    });
+                }).catch(err => {
+                    console.log(err);
+                });
+
+            }
+            else {
+                return res.status(200).json({
+                    status: 200,
+                    data: results.events
+                });
+            }
+
         }).catch(err => {
             console.log(err);
         });
@@ -45,8 +80,8 @@ var buildData = (options, res) => {
 exports.get = function (req, res) {
 
     let options = {};
-    if (req.params.project_key)
-        options.id = req.params.project_key;
+    if (req.params.key)
+        options.id = req.params.key;
 
     return buildData(options, res);
 

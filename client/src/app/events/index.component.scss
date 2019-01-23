@@ -6,6 +6,7 @@
         text-transform: uppercase;
         line-height: 1.33;
         letter-spacing: 1.5px;
+        margin-top: 0;
 
         .year {
             font-size: 2.1em;
@@ -19,15 +20,18 @@
         }
     }
 
-    a:hover {
+    h2 {
+        margin-top: 0;
+    }
 
+    a:hover {
         .year {
             -webkit-text-stroke: $tomato 1px;
         }
+    }
 
-        svg path {
-            stroke: $tomato;
-        }
+    .description {
+        font-size: 1.1em;
     }
 
 }
@@ -37,15 +41,14 @@
     background-color: black;
     color: white;
 
+    margin-top: 10%;
     margin-left: -3%;
     margin-right: -3%;
 
-    padding: 3% 3% 0 3%;
-    // padding-left: 3%;
-    // padding-right: 3%;
+    padding: 3%;
 
     h1,
-    h2,
+    h3,
     h4 {
         color: white;
     }
@@ -56,11 +59,33 @@
 
     h4 {
         font-size: 1.05em;
+        text-transform: uppercase;
 
         .year {
             font-size: 1.4em;
         }
     }
 
+    @include phones {
+        h3, h4 {
+            margin-top: 0;
+        }
+    }
+
+    svg {
+        @include transition(transform, .2s, ease-in-out);
+    }
+
+    a:hover {
+        svg {
+            @include translate(15%);
+        }
+    }
+
+    .description {
+        color: white;
+        font-size: .9em;
+        line-height: 1.29;
+    }
 
 }
