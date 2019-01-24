@@ -10,7 +10,9 @@ import {
 import {
     DataService
 } from '../utils/data.service';
+
 import { TweenLite } from 'gsap';
+import * as ismobile from 'ismobilejs';
 
 @Component({
     selector: 'app-event',
@@ -23,13 +25,15 @@ export class EventComponent implements OnInit {
     public next: any;
     public previous: any;
     public hidden: boolean = true;
-
+    public isPhone: boolean;
+    
     private bgEndPerc: number;
-
+    
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
-
+    
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
-
+        
+        this.isPhone = ismobile.phone;
         this._route.params.subscribe(params => {
 
             this._dataSvc.getDataForUrl('events/get/' + params['key']).subscribe(response => {
@@ -71,17 +75,21 @@ export class EventComponent implements OnInit {
 
     setContent(data: any) {
 
+        let color = '247, 41, 35';
+
         this.content = data.event;
         this.next = data.next;
         this.previous = data.prev;
 
-        // Skip bg fade if coming from other event
-        if(this._dataSvc.previousUrl.indexOf('/event') > -1)
-          return;
-
+        // Slight timeout of 0 hack to allow page content to load in
         setTimeout(() => {
 
-            let color = '247, 41, 35'
+            // Skip bg fade if coming from other event, only adjust height
+            if(this._dataSvc.previousUrl.split('/events')[1]) {
+                document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ', 1) 0%, rgba(' + color + ', 1) ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
+                return;
+            }
+
             var alpha = {
                 a: 0
             };

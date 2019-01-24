@@ -12,7 +12,7 @@
     <div class="column is-two-fifths-mobile is-one-quarter-tablet" *ngIf="content?.format !== undefined">
         <h4>Product</h4>
         <div *ngFor="let format of content?.format">
-          {{format.name}}
+            {{format.name}}
         </div>
     </div>
 
@@ -77,8 +77,46 @@
     </div>
 
     <div id="bottom" class="column is-full" *ngIf="content !== undefined && content.projectImages[2] !== undefined">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content.projectImages[2].public_id}}" autoFormat="true"
-        width="800" alt="Image for '{{content?.name}}' project"></cdn-image>
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content.projectImages[2].public_id}}" autoFormat="true" width="800"
+            alt="Image for '{{content?.name}}' project"></cdn-image>
     </div>
 
 </div>
+
+<section id="nextprev" class="columns is-mobile is-multiline listing">
+    <!-- Prev project can have an empty column on non-mobile -->
+    <div class="item column is-full-mobile is-half-tablet" *ngIf="!isPhone || (isPhone && previous)">
+        <a id="prev" class="prev theme-{{themeIndex}}" routerLink="/projects/{{previous.key}}" *ngIf="previous">
+            <hr class="hidden-mobile" />
+
+            <div>
+                <h1 class="uppercase">
+                    previous project
+                </h1>
+
+                <h2>{{previous.name}}
+                </h2>
+                <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                    <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
+                </svg>
+            </div>
+        </a>
+    </div>
+    <div class="item column is-full-mobile is-half-tablet" *ngIf="next">
+        <a id="next" class="theme-{{themeIndex}}" routerLink="/projects/{{next.key}}">
+            <hr class="hidden-mobile" />
+
+            <div>
+                <h1 class="uppercase">
+                    next project
+                </h1>
+
+                <h2>{{next.name}}
+                </h2>
+                <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                    <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
+                </svg>
+            </div>
+        </a>
+    </div>
+</section>

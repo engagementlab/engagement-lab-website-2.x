@@ -1,7 +1,7 @@
 <h2 class="column is-half no-pad">Events</h2>
 
 <section id="events" *ngIf="events !== undefined" class="listing">
-    <div #eventList class="event column is-full" *ngFor="let event of events">
+    <div #eventList class="item column  is-full" *ngFor="let event of events">
 
         <a routerLink="/events/{{event.key}}">
             <hr />
@@ -31,7 +31,7 @@
 
 <section id="pastevents" *ngIf="pastEvents !== undefined">
     <h1 class="uppercase">past events</h1>
-    <div class="event column is-full" *ngFor="let event of pastEvents; last as isLast">
+    <div class="item column  is-full" *ngFor="let event of pastEvents; last as isLast">
 
         <a routerLink="/events/{{event.key}}">
             <div class="columns is-mobile">

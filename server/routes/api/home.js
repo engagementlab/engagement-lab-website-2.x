@@ -20,9 +20,9 @@ var buildData = (options, res) => {
     let project = keystone.list('Project').model;
     let event = keystone.list('Event').model;
     
-    let projectFields = 'name image key projectType byline -_id';
+    let projectFields = 'name image.public_id key projectType byline -_id';
     let eventFields = 'name date key -_id';
-    let initiativeFields = 'name description image key projects -_id';
+    let initiativeFields = 'name description image.public_id key projects -_id';
     
     // Spit on dev server
     if(process.env.NODE_ENV === 'development')

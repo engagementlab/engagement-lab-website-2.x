@@ -38,20 +38,3 @@
     }
 
 }
-
-#prev {
-    svg {
-        @include rotate(-180);
-    }
-    &:hover {
-        svg {
-            @include transform(rotate( -180deg) translate(15%,0));
-        }
-    }
-}
-
-#next {
-    @include not-phones {
-        text-align: end;
-    }
-}

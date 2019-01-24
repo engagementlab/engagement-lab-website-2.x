@@ -50,10 +50,11 @@
 
 </div>
 
-<section id="nextprev" class="columns is-mobile listing">
-    <div class="event column is-full-mobile is-half-tablet" *ngIf="previous">
-        <a id="prev" routerLink="/events/{{previous.key}}">
-            <hr class="hidden-tablet-plus" />
+<section id="nextprev" class="columns is-mobile is-multiline listing">
+    <!-- Prev event can have an empty column on non-mobile -->
+    <div class="item column is-full-mobile is-half-tablet" *ngIf="!isPhone || (isPhone && previous)">
+        <a id="prev" class="prev" routerLink="/events/{{previous.key}}" *ngIf="previous">
+            <hr class="hidden-mobile" />
 
             <div>
                 <h1 class="uppercase">
@@ -68,9 +69,9 @@
             </div>
         </a>
     </div>
-    <div class="event column is-full-mobile is-half-tablet" *ngIf="next">
+    <div class="item column  is-full-mobile is-half-tablet" *ngIf="next">
         <a id="next" routerLink="/events/{{next.key}}">
-            <hr class="hidden-tablet-plus" />
+            <hr class="hidden-mobile" />
 
             <div>
                 <h1 class="uppercase">
