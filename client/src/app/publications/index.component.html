@@ -9,7 +9,7 @@
     
   <div class="columns is-multiline">
     <div #publicationsList class="publication column mix {{pub.form.key}}" *ngFor="let pub of pubs">
-      <publication [pub]="pub" type="{{pub.form.key}}"></publication>
+      <publication [pub]="pub" type="{{pub.form.key}}" *ngIf="pub.form.key !== 'dummy'"></publication>
     </div>
   </div>
 
