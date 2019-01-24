@@ -1,10 +1,15 @@
 <div class="columns is-multiline theme-{{themeIndex}}">
 
-    <h2 class="column is-full">{{content?.name}}</h2>
+    <h2 class="column is-full" *ngIf="!redirecting">{{content?.name}}</h2>
 
-    <div class="blurb column is-four-fifths-desktop">
+    <div class="blurb column is-four-fifths-desktop" *ngIf="!redirecting">
         {{content?.byline}}
     </div>
+    <div class="blurb column is-four-fifths-desktop" *ngIf="redirecting">
+        Redirecting you to new URL:<br />
+        <a href="https://elab.emerson.edu/projects/{{projectKey}}">elab.emerson.edu/projects/{{projectKey}}</a>
+    </div>
+
 </div>
 
 <div #backgroundEnd id="top" class="columns is-mobile is-multiline" *ngIf="!hidden">
@@ -30,7 +35,7 @@
 
 </div>
 
-<div id="verticle-line">&nbsp;</div>
+<div id="verticle-line" *ngIf="!hidden">&nbsp;</div>
 
 <div #description class="description" *ngIf="!hidden">
 

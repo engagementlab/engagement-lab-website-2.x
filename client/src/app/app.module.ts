@@ -62,6 +62,8 @@ export const routes: Routes = [
   
   { path: 'projects', component: ProjectIndexComponent },
   { path: 'projects/:key', component: ProjectComponent },
+  // Support old URL struct
+  { path: 'projects/:category/:key', component: ProjectComponent },
 
   { path: 'events', component: EventIndexComponent },
   { path: 'events/:key', component: EventComponent },

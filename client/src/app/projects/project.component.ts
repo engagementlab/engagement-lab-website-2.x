@@ -26,8 +26,12 @@ export class ProjectComponent {
     public next: any;
     public previous: any;
     public themeIndex: number;
+
     public hidden: boolean = true;
     public isPhone: boolean;
+    public redirecting: boolean;
+    
+    public projectKey: string;
     
     private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
     private bgEndPerc: number;
@@ -39,6 +43,17 @@ export class ProjectComponent {
         
         this.isPhone = ismobile.phone;
         this._route.params.subscribe(params => {
+
+            // Redirect if user tried old url format
+            if(params['category'] !== undefined) {
+                this.redirecting = true;
+                this.projectKey = params['key'];
+
+                setTimeout(() => {
+                    window.location.href = 'projects/' + params['key'];
+                }, 4200);
+                return;
+            }
 
             this._dataSvc.getDataForUrl('projects/get/' + params['key']).subscribe(response => {
                 this.setContent(response);
