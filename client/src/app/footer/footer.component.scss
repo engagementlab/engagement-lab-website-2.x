@@ -1,12 +1,36 @@
 @import '../../styles/_variables';
 
 footer {
-    margin-top: 10%;
+    margin-top: 28%;
+
+    // @include until-tablet-wide {
+    //     margin-top: 30%;
+    // }
+
+    @include phones {
+        margin-top: 40%;
+    }
 
     #logos {
         cdn-image {
             &:nth-child(2) {
                 margin-left: 25px;
+            }
+        }
+
+        @include phones {
+            margin-top: 10%;
+
+            #el {
+                ::ng-deep img {
+                    max-width: 43px !important;
+                }
+            }
+
+            #emerson {
+                ::ng-deep img {
+                    max-width: 62px !important;
+                }
             }
         }
     }
@@ -19,14 +43,16 @@ footer {
         }
 
         input[type=email] {
-            width: 80%;
+            width: 100%;
             font-family: 'LunchtypeRegular';
             font-size: 1.5em;
             color: black;
             opacity: 1;
             border: none;
             border-bottom: solid 2px black;
-            padding-bottom: 2%;
+
+            padding-bottom: 5%;
+            padding-left: 4%;
 
             @include placeholder {
                 font-family: 'LunchtypeRegular';
@@ -37,14 +63,25 @@ footer {
 
     }
 
+    @include phones {
+        #social {
+            padding: 0;
+        }
+    }
+
     #address {
-        @include mobile-only {
+        #email {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        @include phones {
             font-size: .87em;
 
             #email {
-            display: block;
-             font-size: 1.15em;
-             margin-bottom: 10px;
+                margin-bottom: 0;
+                font-size: 1.15em;
             }
         }
     }
@@ -56,20 +93,32 @@ footer {
         font-size: 14px;
         font-weight: bold;
         align-items: center;
-        
+
         cursor: pointer;
         right: 0;
-        margin-top: 4%;
+        margin-top: -6%;
         margin-right: -5%;
-        
-        @include transform(rotate(-90deg));
+
         transform-origin: center top;
+        @include transform(rotate(-90deg));
+
+        @include phones {
+            margin-top: -10%;
+        }
+        @include until-tablet-wide {
+            margin-top: -15%;
+        }
 
         span {
             display: inline-block;
             background-color: black;
             height: 2px;
-            width: 40px;
+            width: 100px;
+            margin-right: 10px;
+
+            @include phones {
+                width: 50px;
+            }
         }
     }
 

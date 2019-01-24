@@ -49,7 +49,8 @@ Event.add({
         label: 'Event Date',
         default: Date.now,
         required: true,
-        initial: true
+        initial: true,
+        note: 'You must specify a valid start time, or the date will not save properly.'
     },
     images: {
         type: Types.CloudinaryImages,

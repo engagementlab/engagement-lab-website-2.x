@@ -31,20 +31,11 @@
     </div>
 
     <div class="column is-5">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{}" autoFormat=true width="250" height="407" alt=""
-            aria-role="img"></cdn-image>
-            
-        <cl-image 
-        responsive
-        public-id="{{about.images[1].public_id}}" 
-        secure="true"
-        width="250"
-        height="407"
-        fetch-format="auto"
-        crop="fill"
-        gravity="center"
-        attr.alt="About flavor image 2" class="cdn-image" *ngIf="isTablet">
-        <cl-transformation attr.quality="100"></cl-transformation>
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{}" autoFormat=true width="250" height="407" alt="" aria-role="img"></cdn-image>
+
+        <cl-image responsive public-id="{{about.images[1].public_id}}" secure="true" width="250" height="407"
+            fetch-format="auto" crop="fill" gravity="center" attr.alt="About flavor image 2" class="cdn-image" *ngIf="isTablet">
+            <cl-transformation attr.quality="100"></cl-transformation>
         </cl-image>
 
 
@@ -108,5 +99,23 @@
 <section id="team">
 
     <people-grid [people]="people" [preview]="true"></people-grid>
+
+</section>
+
+<section id="partners">
+
+    <hr />
+    <h1 class="uppercase">our funders</h1>
+    <div class="columns is-mobile is-multiline">
+
+        <div class="column is-2-mobile" *ngFor="let partner of partners">
+            <a href="{{partner.url}}">
+                <cdn-image cloudinaryId="{{partner.image.public_id}}" cloudinaryPrefix="/" effect="grayscale" width="50"
+                    autoFormat="true" alt="{{partner.name}} logo image" aria-role="img"></cdn-image>
+
+            </a>
+
+        </div>
+    </div>
 
 </section>
