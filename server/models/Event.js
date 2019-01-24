@@ -76,6 +76,15 @@ Event.add({
         validate: urlValidator,
         note: 'Must be in format "http://www.something.org".'
     },
+    showButton: {
+        type: Boolean,
+        label: 'Show URL link as button'
+    },
+    buttonTxt: {
+        type: String,
+        label: 'Label text on button',
+        dependsOn: {showButton: true}
+    },
     additionalURL: {
         type: String,
         label: "Summary Blog Post URL (current not used)"

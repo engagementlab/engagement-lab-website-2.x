@@ -47,7 +47,7 @@ var buildData = (options, res) => {
     
     if(options.id) {
         // Get one event
-        fields += ' description.html images.public_id';
+        fields += ' description.html images.public_id showButton buttonTxt';
         eventsData = events.findOne({key: options.id}, fields);
     }
     else {

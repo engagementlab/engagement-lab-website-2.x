@@ -1,6 +1,7 @@
 @import "~src/styles/_variables";
 
 #name {
+    
     h2 {
 
         @include phones {
@@ -8,11 +9,18 @@
             margin-bottom: 13%;
         }
 
+    
     }
 }
 
 #top {
+    
     padding-bottom: 20%;
+
+    app-button {
+        margin-top: 4%;
+    }
+
 }
 
 #date {

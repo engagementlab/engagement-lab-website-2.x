@@ -29,7 +29,6 @@ var getAdjacent = (results, res) => {
     
     // Poplulate next/prev and output response
     Bluebird.props({next: nextProject, prev: prevProject}).then(nextPrevResults => {
-        console.log('prevproject', nextPrevResults.prev)
         let output = Object.assign(nextPrevResults, {project: results.projects});
         return res.status(200).json({
             status: 200,

@@ -10,10 +10,12 @@
         {{content.date | date: 'MMMM dd, yyyy'}}
     </div>
 
-    <div class="column" *ngIf="content?.eventUrl !== null && content?.eventUrl.length > 0">
+    <div class="column" *ngIf="content?.eventUrl !== null && content?.eventUrl.length > 0 && !content?.showButton">
         <h4>Website</h4>
         <a href="{{content?.eventUrl}}" role="link">{{content?.eventUrl | prettyUrl}}</a>
     </div>
+
+    <app-button class="column is-5-tablet" label="{{content?.buttonTxt}}" href="{{content?.eventUrl}}" ariaLabel="Go to 'content?.name' website" *ngIf="content?.showButton"></app-button>
 
 </div>
 
