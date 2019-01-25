@@ -24,7 +24,7 @@ bootstrap.start(
 	app,
 	__dirname + '/', 
 	{
-		'signin logo': 'https://res.cloudinary.com/engagement-lab-home/image/upload/c_scale,f_auto,w_228/v1543437936/logos/logo-lrg.svg'
+		'name': 'Engagement Lab Home CMS'
 	},
 	() => {
 		app.listen(process.env.PORT);

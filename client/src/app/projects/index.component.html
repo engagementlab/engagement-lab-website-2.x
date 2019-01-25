@@ -30,7 +30,7 @@
 
 <div id="projects" class="columns is-multiline">
 
-    <div #projectList class="project column is-5 {{project.projectType}}" [class.mix]="project.key !== 'dummy'" *ngFor="let project of projects; let i = index;">
+    <div #projectList class="project view-tooltip column is-5 {{project.projectType}}" [class.mix]="project.key !== 'dummy'" *ngFor="let project of projects; let i = index;">
 
         <a routerLink="/projects/{{project.key}}" *ngIf="project.key !== 'dummy'">
             <div class="bg">
