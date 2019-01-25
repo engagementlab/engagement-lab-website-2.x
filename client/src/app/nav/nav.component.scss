@@ -170,16 +170,22 @@ nav {
                 content: '';
                 position: absolute;
                 width: 0%;
-                height: 5px;
+                height: 4px;
                 background: $tomato;
                 top: 50%;
                 z-index: -1;
-                animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+                animation: out 0.8s ease-in-out 1 both;
+                visibility: hidden;
             }
 
             &:hover:before {
-                animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+                animation: in 0.8s ease-in-out 1 both;
+            }
 
+            &.visible {
+                &:before {
+                    visibility: visible!important;
+                }
             }
         }
 

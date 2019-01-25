@@ -45,13 +45,18 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
 
-    this.btn = document.getElementById('menu-btn');
-   	this.tl = new TimelineLite({paused:true, reversed:true});
-    
-  	let tl = this.tl;
   	let menu = document.getElementById('menu');
     let show = document.querySelector('#menu-btn .close');
     let hide = document.querySelector('#menu-btn .open');
+
+    this.btn = document.getElementById('menu-btn');
+   	this.tl = new TimelineLite({paused:true, reversed:true, onReverseComplete:() => {
+      menu.querySelectorAll('h3 a').forEach((el: HTMLElement) => {
+        el.classList.remove('visible');
+      });
+    }});
+    
+  	let tl = this.tl;
 
     tl.add('start');
     tl.set([document.getElementById('nav'), this.btn], {className:'+=open'}, 'start');
@@ -62,7 +67,11 @@ export class NavComponent implements OnInit {
     tl.fromTo(menu, .7, {autoAlpha:0}, {autoAlpha:1, display:'flex', ease:Circ.easeOut}, '-=.7');
     tl.fromTo(document.getElementById('menu-overlay'), .5, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'}, '-=.7');
 
-    tl.staggerFromTo(menu.querySelectorAll('h3'), .2, {autoAlpha:0, yPercent:-20}, {autoAlpha:1, yPercent:0}, .1, '-=.5');
+    tl.staggerFromTo(menu.querySelectorAll('h3'), .2, {autoAlpha:0, yPercent:-20}, {autoAlpha:1, yPercent:0}, .1, '-=.5', () => {
+      menu.querySelectorAll('h3 a').forEach((el: HTMLElement) => {
+        el.classList.add('visible');
+      });
+    });
 
   }
 
