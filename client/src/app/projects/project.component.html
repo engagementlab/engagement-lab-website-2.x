@@ -26,7 +26,7 @@
         <a href="{{content?.externalLinkUrl}}" role="link">{{content?.externalLinkUrl | prettyUrl}}</a>
     </div>
 
-    <div class="column is-full-mobile is-one-quarter-tablet">
+    <div class="column is-full-mobile">
         <h4>Principal Investigator</h4>
         <div *ngFor="let pi of content?.principalInvestigator">
             {{pi.name}}

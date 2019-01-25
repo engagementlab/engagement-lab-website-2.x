@@ -1,7 +1,8 @@
 import {
     Component,
     ViewChild,
-    ElementRef
+    ElementRef,
+    OnInit
 } from '@angular/core';
 import {
     ActivatedRoute
@@ -20,7 +21,7 @@ import * as ismobile from 'ismobilejs';
     templateUrl: './project.component.html',
     styleUrls: ['./project.component.scss']
 })
-export class ProjectComponent {
+export class ProjectComponent implements OnInit {
 
     public content: any;
     public next: any;
@@ -42,7 +43,11 @@ export class ProjectComponent {
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
         
         this.isPhone = ismobile.phone;
+
         this._route.params.subscribe(params => {
+
+            // Force content reset
+            this.content = undefined;
 
             // Redirect if user tried old url format
             if(params['category'] !== undefined) {
@@ -61,6 +66,10 @@ export class ProjectComponent {
             });
 
         });
+
+    }
+
+    ngOnInit() {
 
     }
 
