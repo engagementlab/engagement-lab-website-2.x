@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationStart } from '@angular/router';
+import { Component, AfterViewInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 import { DataService } from '../utils/data.service';
-
 import { filter } from 'rxjs/operators';
 
 import { TimelineLite, Circ, Linear, TweenMax } from "gsap";
@@ -12,19 +11,27 @@ import { TimelineLite, Circ, Linear, TweenMax } from "gsap";
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements AfterViewInit {
 
-  tl: TimelineLite; 
-  btn: HTMLElement;
+  public navLinks: object[] = [
+      {url: 'about', label: 'About'},
+      {url: 'projects', label: 'Projects'},
+      {url: 'publications', label: 'Publications'},
+      {url: 'masters', label: 'Masters Program'},
+      {url: 'getinvolved', label: 'Get Involved'}
+  ];
+
+  private tl: TimelineLite; 
+  private btn: HTMLElement;
   
   private wasLoading: boolean = false;
+  private currentUrl: string;
 
   constructor(private _router: Router, private _dataSvc: DataService) {
 
-    // Hide nav when nav occurs
-    _router.events.pipe(filter(e => e instanceof NavigationStart)).subscribe(e => {
-      // if(document.getElementById('menu-btn').classList.contains('open'))
-        // this.tl.reverse();
+    // Get nav route when nav ends
+    _router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
+      this.currentUrl = _router.url;
     });
 
 		this._dataSvc.isLoading.subscribe( value => {
@@ -43,7 +50,7 @@ export class NavComponent implements OnInit {
   
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
 
   	let menu = document.getElementById('menu');
     let show = document.querySelector('#menu-btn .close');
@@ -75,12 +82,27 @@ export class NavComponent implements OnInit {
 
   }
 
-  openNav() {
+  openCloseNav() {
 
     if(!this.tl.reversed())
       this.tl.reverse().timeScale(1.3);
     else
       this.tl.play();
+
+  }
+
+  // Is passed route active?
+  itemActive(route: string) {
+
+    return '/'+route == this.currentUrl;
+
+  }
+
+  // If on home when logo clicked, just close menu
+  logoClick() {
+
+    if(this.currentUrl === '/')
+      this.openCloseNav();
 
   }
 

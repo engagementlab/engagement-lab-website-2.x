@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/observable/of';
-import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 
 @Injectable()
 export class DataService {

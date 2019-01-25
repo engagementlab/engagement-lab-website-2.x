@@ -161,6 +161,18 @@ nav {
             color: black;
             position: relative;
             display: inline-block;
+            cursor: pointer;
+
+            &.active {
+                &:before {
+                    visibility: visible!important;
+                    width: 100%;
+                    animation: none;
+                }
+                &:hover:before {
+                    animation: none;
+                }
+            }
 
             &:visited {
                 color: black;
