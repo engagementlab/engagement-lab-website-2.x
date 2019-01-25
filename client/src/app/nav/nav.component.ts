@@ -62,18 +62,14 @@ export class NavComponent implements OnInit {
     tl.fromTo(menu, .7, {autoAlpha:0}, {autoAlpha:1, display:'flex', ease:Circ.easeOut}, '-=.7');
     tl.fromTo(document.getElementById('menu-overlay'), .5, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'}, '-=.7');
 
+    tl.staggerFromTo(menu.querySelectorAll('h3'), .2, {autoAlpha:0, yPercent:-20}, {autoAlpha:1, yPercent:0}, .1, '-=.5');
 
-    /* var i = {x: -425};
-    var gradient      = document.getElementById('gradient');
-    this.tlLogo = TweenMax.to(i, 5, {score:"+=850", onUpdate:() => {
-      gradient.setAttribute('gradientTransform', 'translate('+i.x+')');
-    }, ease:Linear.easeNone, paused: true}); */
   }
 
   openNav() {
 
     if(!this.tl.reversed())
-      this.tl.reverse();
+      this.tl.reverse().timeScale(1.3);
     else
       this.tl.play();
 

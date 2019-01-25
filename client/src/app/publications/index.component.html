@@ -1,8 +1,10 @@
 <div class="controls" *ngIf="pubTypesCount !== undefined">
+  
     <button type="button" class="control" data-filter="all">All <sup>{{pubTypesTotal}}</sup></button>
     <button type="button" class="control" data-filter=".book">Books <sup>{{pubTypesCount['book']}}</sup></button>
     <button type="button" class="control" data-filter=".guide">Guides <sup>{{pubTypesCount['guide']}}</sup></button>
     <button type="button" class="control" data-filter=".article-chapter">Articles <sup>{{pubTypesCount['article-chapter']}}</sup></button>
+
 </div>
 
 <div id="publications">
