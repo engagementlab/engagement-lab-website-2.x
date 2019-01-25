@@ -56,7 +56,7 @@ export class EventComponent implements OnInit {
     ngOnDestroy() {
 
       // Skip bg fade out if going to other event
-      if (this._router.routerState.snapshot.url.indexOf('/event') > -1)
+      if (this._router.url.split('/events')[1])
         return;
 
       // Undo bg gradient
