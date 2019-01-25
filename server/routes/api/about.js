@@ -17,7 +17,7 @@ mongoose.Promise = require('bluebird');
 var buildData = (res) => {
 
     let aboutFields = 'missionStatement summary1 summary2 images.public_id research workshops tools teaching design -_id';
-    let partnerFields = 'image.public_id url -_id';
+    let partnerFields = 'name image.public_id url -_id';
     let personFields = 'name title key image.public_id url -_id';
 
     let about = keystone.list('About').model;

@@ -13,6 +13,7 @@ import {
 import {
     TweenLite
 } from 'gsap';
+import * as ismobile from 'ismobilejs';
 
 @Component({
     selector: 'app-project',
@@ -22,18 +23,37 @@ import {
 export class ProjectComponent {
 
     public content: any;
+    public next: any;
+    public previous: any;
     public themeIndex: number;
-    public hidden: boolean = true;
 
+    public hidden: boolean = true;
+    public isPhone: boolean;
+    public redirecting: boolean;
+    
+    public projectKey: string;
+    
     private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
     private bgEndPerc: number;
-
+    
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
     @ViewChild('description') description: ElementRef;
-
+    
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
-
+        
+        this.isPhone = ismobile.phone;
         this._route.params.subscribe(params => {
+
+            // Redirect if user tried old url format
+            if(params['category'] !== undefined) {
+                this.redirecting = true;
+                this.projectKey = params['key'];
+
+                setTimeout(() => {
+                    window.location.href = 'projects/' + params['key'];
+                }, 4200);
+                return;
+            }
 
             this._dataSvc.getDataForUrl('projects/get/' + params['key']).subscribe(response => {
                 this.setContent(response);
@@ -63,16 +83,27 @@ export class ProjectComponent {
                 document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ',' + alpha.a + ' ) 0%, rgba(' + color + ',' + alpha.a + ') ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
             }
         });
+
     }
 
     setContent(data: any) {
 
-        this.content = data;
-        this.themeIndex = data['sortOrder'] % 3;
+        this.content = data.project;
+        this.next = data.next;
+        this.previous = data.prev;
+        this.themeIndex = data.project['sortOrder'] % 3;
 
+        // Slight timeout of 0 hack to allow page content to load in
         setTimeout(() => {
 
             let color = this.themeColors[this.themeIndex];
+
+            // Skip bg fade if coming from other project, only adjust height
+            if(this._dataSvc.previousUrl.split('/projects')[1]) {
+                document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ', 1) 0%, rgba(' + color + ', 1) ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
+                return;
+            }
+
             var alpha = {
                 a: 0
             };

@@ -24,8 +24,7 @@ const urlValidator = require('../utils').url;
 var Partner = new keystone.List('Partner', 
 	{
 		sortable: true,
-		hidden: false,
-		inherits: Listing
+		hidden: false
 	});
 
 /**
@@ -33,9 +32,27 @@ var Partner = new keystone.List('Partner',
  * @main Project
  */
 Partner.add({
+    name: {
+        type: String,
+        label: 'Name',
+        required: true,
+        initial: true,
+        index: true
+    },
+    description: {
+        type: String,
+        required: true,
+        initial: true,
+    },
+    image: {
+        type: Types.CloudinaryImage,
+        label: 'Logo Image',
+        folder: 'homepage-2.0/listings',
+        autoCleanup: true, 
+    },
 	url: {
 	    type: Types.Url,
-	    label: 'Project Website URL',
+	    label: 'Website URL',
 	    validate: urlValidator,
 	    note: 'Must be in format "http://www.something.org"'
 	}

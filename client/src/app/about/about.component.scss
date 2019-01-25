@@ -70,9 +70,27 @@ h2 {
     color: white;
 
     margin-top: 10%;
-
+    
     padding: 2%;
     padding-left: 10%;
     padding-right: 10%;
+    
+}
+
+#partners {
+    
+    margin-top: 20%;
+    justify-content: space-evenly;
+    
+    @include not-phones { 
+        margin-top: 10%;
+        .column {
+            flex: none;
+
+            width: 6%;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+    }
 
 }

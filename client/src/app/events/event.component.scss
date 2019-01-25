@@ -1,0 +1,48 @@
+@import "~src/styles/_variables";
+
+#name {
+    
+    h2 {
+
+        @include phones {
+            margin-top: 40%;
+            margin-bottom: 13%;
+        }
+
+    
+    }
+}
+
+#top {
+    
+    padding-bottom: 20%;
+
+    app-button {
+        margin-top: 4%;
+    }
+
+}
+
+#date {
+
+    font-family: 'Overpass';
+    font-size: .9em;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: 0.8px;
+
+}
+
+#short {
+
+    font-size: 1.1em;
+    line-height: 1.11;
+    letter-spacing: 0.3px;
+
+    margin-top: 10%;
+
+    @include not-phones {
+        font-size: 1.5em;
+    }
+
+}

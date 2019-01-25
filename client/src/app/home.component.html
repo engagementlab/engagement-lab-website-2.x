@@ -134,7 +134,7 @@
     </div>
 
     <div id="projects" class="columns">
-        <div #projectList class="project column is-half" *ngFor="let project of featuredProjects">
+        <div #projectList class="project column is-half view-tooltip" *ngFor="let project of featuredProjects">
 
             <a routerLink="/projects/{{project.key}}">
                 <div class="bg">
@@ -167,9 +167,9 @@
         </a>
     </div>
 
-    <div #eventList class="event column is-full" *ngFor="let event of events">
+    <div #eventList class="item column  is-full" *ngFor="let event of events">
 
-        <a href="{{event.eventUrl}}">
+        <a routerLink="/events/{{event.key}}">
             <div class="columns is-mobile">
                 <div class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}}</div>
                 <div class="date column is-one-fifth hidden-tablet-plus">{{event.date | date: 'MMM dd'}}</div>

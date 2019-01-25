@@ -13,18 +13,33 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/observable/of';
+import { Router, NavigationStart } from '@angular/router';
 
 @Injectable()
 export class DataService {
 
   public isLoading: Subject<boolean> = new Subject<boolean>();
   public serverProblem: Subject<boolean> = new Subject<boolean>();
+
+  public previousUrl: string;
+  public currentUrl: string;
+
   private baseUrl: string;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient, private _router: Router) { 
 
   	this.baseUrl = (environment.production ? 'https://'+window.location.host : 'http://localhost:3000') + '/api/';
 
+    _router.events.subscribe(event => {
+      
+      this.currentUrl = this._router.url;
+      // Track prior url
+      if (event instanceof NavigationStart) {
+        this.previousUrl = this.currentUrl;
+        this.currentUrl = event.url;
+      }
+      
+    }); 
   }
 	
   public getDataForUrl(urlParam: string): Observable<any> {

@@ -9,8 +9,8 @@ export class RedirectService implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
     setTimeout(() => {
-      // window.location.href = route.queryParams['u'];
-    }, 5200);
+      window.location.href = route.queryParams['u'];
+    }, 4200);
     return true;
 
   }

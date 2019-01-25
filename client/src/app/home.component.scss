@@ -19,7 +19,16 @@ a {
             font-size: 1em;
             font-weight: 600;
             letter-spacing: normal;
-            // align-items: center;
+        }
+
+        svg {
+            @include transition(transform, .2s, ease-in-out);
+        }
+
+        &:hover {
+            svg {
+                @include translate(15%);
+            }
         }
 
         @include not-phones {

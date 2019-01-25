@@ -21,9 +21,12 @@
 
     
     <div id="list" [ngClass]="{'is-multiline' : preview === false}">
-        <div #teamList class="person" *ngFor="let person of people; let i = index;">
+        <div #teamList class="person view-tooltip" *ngFor="let person of people; let i = index;">
 
             <a *ngIf="person.name != 'dummy'" [class.white]="preview === true" routerLink="/team/{{person.key}}">
+
+                <div class="bg">
+                <span role="tooltip">view</span>
 
                 <cl-image 
                     responsive
@@ -34,6 +37,7 @@
                     crop="scale" attr.alt="Portrait image of {{person.name.first}} {{person.name.last}}" class="cdn-image">
                     <cl-transformation attr.quality="100" effect="grayscale"></cl-transformation>
                 </cl-image>
+            </div>
                 
                 <div class="name">{{person.name.first}} {{person.name.last}}</div>
                 <div class="title">{{person.title}}</div>

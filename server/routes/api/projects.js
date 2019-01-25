@@ -10,19 +10,44 @@
  */
 const keystone =  global.keystone,
     mongoose = global.keystone.get('mongoose'),
-    Bluebird = require('bluebird');
+    Bluebird = require('bluebird'),
+    list = keystone.list('Project').model;
 
 mongoose.Promise = require('bluebird');
 
+var getAdjacent = (results, res) => {
+
+    let fields = 'name key -_id';
+    // Get one next/prev project from selected project's sortorder
+    let nextProject = list.findOne({sortOrder: {
+        $gt: results.projects.sortOrder
+    }}, fields).limit(1);
+    let prevProject = list.findOne({sortOrder: {
+        $lt: results.projects.sortOrder
+    }}, fields).sort({sortOrder: -1}).limit(1);
+
+    
+    // Poplulate next/prev and output response
+    Bluebird.props({next: nextProject, prev: prevProject}).then(nextPrevResults => {
+        let output = Object.assign(nextPrevResults, {project: results.projects});
+        return res.status(200).json({
+            status: 200,
+            data: output
+        });
+    }).catch(err => {
+        console.log(err);
+    });
+
+}
+
 var buildData = (options, res) => {
 
-    let list = keystone.list('Project').model;
-    let fields = 'key image byline name featured projectType customUrl sortOrder -_id';
+    let fields = 'key image.public_id byline name featured projectType customUrl sortOrder';
     let data;
     let countData;
 
     if (options.id) {
-        let addtlFields = 'description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
+        let addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
         countData = list.count({});
         data = list.findOne({
                     key: options.id
@@ -34,7 +59,7 @@ var buildData = (options, res) => {
                  });;
     }
     else if (options.limit)
-        data = list.find({}, ).sort([
+        data = list.find({}).sort([
             ['sortOrder', 'ascending']
         ]);
 
@@ -45,21 +70,28 @@ var buildData = (options, res) => {
             .sort([['sortOrder', 'descending']]);
 
     else
-        data = list.find({'enabled': true}, fields)
+        data = list.find({'enabled': true}, fields + ' -_id')
                    .sort([['sortOrder', 'ascending']]);
 
     // Execute
     Bluebird.props({
-            jsonData: data
+            projects: data
         })
         .then(results => {
             
-            let resultObj = {
-                status: 200,
-                data: results.jsonData
-            };
+            // When retrieving one project, also get next/prev ones
+            if(options.id)
+                getAdjacent(results, res);
+            else {
+         
+                let resultObj = {
+                    status: 200,
+                    data: results.projects
+                };
 
-            return res.status(200).json(resultObj);
+                return res.status(200).json(resultObj);
+         
+            }
         }).catch(err => {
             console.log(err);
         })

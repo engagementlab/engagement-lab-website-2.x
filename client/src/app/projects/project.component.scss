@@ -7,15 +7,15 @@ h2 {
 }
 
 .blurb {
- 
+
     font-size: 2em;
     line-height: 1.43;
     letter-spacing: 0.3px;
 
     @include mobile-only {
-        font-size: 1.5em;       
+        font-size: 1.5em;
         line-height: 1.17;
-        letter-spacing: 0.5px; 
+        letter-spacing: 0.5px;
     }
 
 }
@@ -25,9 +25,9 @@ h2 {
     font-size: 1.5em;
     line-height: 1.43;
     letter-spacing: 0.3px;
-    
+
     margin-top: 15%;
-    
+
     @include mobile-only {
         font-size: 1em;
         line-height: 1.25;
@@ -55,18 +55,49 @@ h2 {
     text-align: center;
 }
 
-#verticle-line {
+.listing {
+    margin-top: 10%;
 
-    position: absolute;
-    display: block;
-    background-color: black;
-    width: 2px;
-    height: 40px;
-    margin-top: -20px;
+    .item {
+        a:hover {
 
-    @include not-phones {
-    width: 4px;
-    height: 100px;
-    margin-top: -50px;
+            &.theme-0 {
+                color: $mango;
+
+                h1,
+                h2 {
+                    color: $mango;
+                }
+
+                hr {
+                    border-color: $mango;
+                }
+
+                svg path {
+                    stroke: $mango;
+                }
+            }
+
+            &.theme-1 {
+                color: $green-blue;
+
+                h1,
+                h2 {
+                    color: $green-blue;
+                }
+
+                hr {
+                    border-color: $green-blue;
+                }
+
+                svg path {
+                    stroke: $green-blue;
+                }
+            }
+        }
+    }
+
+    @include phones {
+        padding: 0.75rem;
     }
 }

@@ -7,10 +7,12 @@ nav {
     z-index: 4;
 
     @include mobile-only {
+
         // Ignore if nav is open
         &:not(.open) {
             #logo-img {
-              // Make logo white outline
+
+                // Make logo white outline
                 &.white {
                     path {
                         stroke: white;
@@ -26,7 +28,7 @@ nav {
 
     #logo-img {
         max-width: 423px;
-        
+
     }
 
     svg {
@@ -50,7 +52,7 @@ nav {
         }
 
         path {
-          @include transition(stroke, 4s, ease-in-out);
+            @include transition(stroke, 4s, ease-in-out);
         }
 
     }
@@ -157,10 +159,77 @@ nav {
 
         a {
             color: black;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+            &.active {
+                &:before {
+                    visibility: visible!important;
+                    width: 100%;
+                    animation: none;
+                }
+                &:hover:before {
+                    animation: none;
+                }
+            }
 
             &:visited {
                 color: black;
             }
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 4px;
+                background: $tomato;
+                top: 50%;
+                z-index: -1;
+                animation: out 0.8s ease-in-out 1 both;
+                visibility: hidden;
+            }
+
+            &:hover:before {
+                animation: in 0.8s ease-in-out 1 both;
+            }
+
+            &.visible {
+                &:before {
+                    visibility: visible!important;
+                }
+            }
         }
+
+        // Animations
+        @keyframes in {
+            0% {
+                width: 0;
+                left: 0;
+                right: auto;
+            }
+        
+            100% {
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+        }
+        @keyframes out {
+            0% {
+                width: 100%;
+                left: auto;
+                right: 0;
+            }
+        
+            100% {
+                width: 0;
+                left: auto;
+                right: 0;
+            }
+        } 
+        
     }
 }
+
+//   nav

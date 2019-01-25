@@ -7,7 +7,7 @@
 <section id="jobs" *ngIf="jobs !== undefined && jobs.length > 0" class="listing">
     <h3>Please view our open positions below:</h3>
 
-    <div #eventList class="job event column is-full" *ngFor="let job of jobs">
+    <div class="job item column  is-full" *ngFor="let job of jobs">
 
       <a href="{{job.url}}">
           <!-- <div class="columns"> -->
