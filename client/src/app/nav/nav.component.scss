@@ -157,6 +157,10 @@ nav {
         line-height: 1.17;
         letter-spacing: 1.5px;
 
+        @include mq($until: mobileLg) {
+            font-size: 1.95em;
+        }
+
         a {
             color: black;
             position: relative;
@@ -231,5 +235,3 @@ nav {
         
     }
 }
-
-//   nav
