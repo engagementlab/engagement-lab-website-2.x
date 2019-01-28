@@ -1,11 +1,8 @@
 @import '../../styles/_variables';
 
 footer {
+    width: 100%;
     margin-top: 28%;
-
-    // @include until-tablet-wide {
-    //     margin-top: 30%;
-    // }
 
     @include phones {
         margin-top: 40%;

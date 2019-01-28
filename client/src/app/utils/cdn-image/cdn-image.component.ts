@@ -34,7 +34,7 @@ export class CdnImageComponent implements OnInit {
     this.imgId = (this.cloudinaryPrefix ? this.cloudinaryPrefix : 'homepage-2.0/') + this.cloudinaryId;
 
     if(this.width)
-      this.widthCss = this._sanitizer.bypassSecurityTrustStyle('max-width:' + this.width+'px');
+      this.widthCss = this._sanitizer.bypassSecurityTrustStyle('width:' + this.width + 'px; max-width:' + this.width+'px');
 
   }
 
