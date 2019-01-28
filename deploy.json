@@ -25,7 +25,7 @@
       "repo": "git@github.com:engagementlab/engagement-lab-website-2.0.git",
       "ref": "origin/master",
       "path": "/srv/engagement-lab-website-2.0",
-      "post-deploy" : "cd client ; bash ./toggledowntime.sh start ; nvm use ; npm i ; pm2 stop 'engagement-lab-website-client' ; npm run build-qa ; pm2 start 'engagement-lab-website-client'; cd ../server ; nvm use ; npm i ; pm2 restart 'engagement-lab-website-server' ; bash ./toggledowntime.sh start",
+      "post-deploy" : "bash deploy.sh qa",
       "env": {
         "NODE_ENV": "staging"
       }
