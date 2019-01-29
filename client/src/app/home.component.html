@@ -167,14 +167,15 @@
         </a>
     </div>
 
-    <div #eventList class="item column  is-full" *ngFor="let event of events">
+    <div #eventList class="item column no-pad is-full" [class.first]="i === 0" *ngFor="let event of events; let i = index;">
 
         <a routerLink="/events/{{event.key}}">
             <div class="columns is-mobile">
                 <div class="date column is-one-fifth hidden-mobile">{{event.date | date: 'MMMM dd'}}</div>
-                <div class="date column is-one-fifth hidden-tablet-plus">{{event.date | date: 'MMM dd'}}</div>
+                <div class="date column is-one-fifth hidden-tablet-plus">{{event.date | date: 'MMM'}}<br />{{event.date | date: 'dd'}}</div>
                 <h2 class="name column no-margin">{{event.name}}</h2>
             </div>
+
             <hr />
         </a>
 

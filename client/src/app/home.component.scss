@@ -324,11 +324,29 @@ a {
         }
     }
 
-    .date {
-        font-size: 1.9em;
+    .item {     
+        // What a fustercluck of padding
+        &:not(.first) {
+            .columns {
+                margin-top: 5%;
+            }
+        }
+        &.first {
+            margin-top: 3%;
+        }
+        .columns {
+            margin-bottom: 5.5%;
+        }
 
-        @include mobile-only {
-            font-size: 1.55em;
+        .date {
+            font-size: 1.9em;
+            
+            @include not-phones {
+                padding-top: 0;
+            }
+            @include mobile-only {
+                font-size: 1.55em;
+            }
         }
     }
 
