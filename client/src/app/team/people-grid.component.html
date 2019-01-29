@@ -4,7 +4,7 @@
         <h1 class="uppercase">Team</h1>
 
         <div id="right">
-            <a routerLink="/team">
+            <a routerLink="/people">
                 <h4>view all</h4>
             </a>
 
@@ -23,7 +23,7 @@
     <div id="list" [ngClass]="{'is-multiline' : preview === false}">
         <div #teamList class="person view-tooltip" *ngFor="let person of people; let i = index;">
 
-            <a *ngIf="person.name != 'dummy'" [class.white]="preview === true" routerLink="/team/{{person.key}}">
+            <a *ngIf="person.name != 'dummy'" [class.white]="preview === true" routerLink="/people/{{person.key}}">
 
                 <div class="bg">
                 <span role="tooltip">view</span>

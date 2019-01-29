@@ -26,7 +26,9 @@
         <div id="bio" class="column is-four-fifths-mobile is-half-tablet">
 
             <!-- Bio markup -->
-            <p class="hidden-mobile">{{currentPerson.title}}</p>
+            <p class="hidden-mobile" *ngIf="!currentPerson.cohortYear">{{currentPerson.title}}</p>
+            <p class="hidden-mobile" *ngIf="currentPerson.cohortYear">CMAP Student, {{currentPerson.cohortYear.name}}</p>
+
             <div class="www" [innerHtml]="currentPerson.bio.html">
             </div>
 
@@ -87,5 +89,11 @@
 <section id="fellows">
     <h1 class="column is-full uppercase">Faculty Fellows & Affiliates</h1>
     <people-grid [people]="people['fellows']"></people-grid>
+
+</section>
+
+<section id="students">
+    <h1 class="column is-full uppercase">CMAP Cohort</h1>
+    <people-grid [people]="people['students']"></people-grid>
 
 </section>
