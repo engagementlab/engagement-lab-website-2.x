@@ -56,7 +56,7 @@ var buildData = (options, res) => {
                 .populate({
                      path: 'format',
                      select: 'name -_id'
-                 });;
+                 });
     }
     else if (options.limit)
         data = list.find({}).sort([

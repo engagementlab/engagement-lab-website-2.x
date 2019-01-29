@@ -12,13 +12,13 @@ hr {
 
 #logo {
 
-    @include phones {
+    // @include phones {
         ::ng-deep img {
             width: 100%!important;
             max-width: 100%!important;
         }
     
-    }
+    // }
 }
 
 #btn {

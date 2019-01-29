@@ -51,8 +51,11 @@ export class TeamComponent implements OnInit {
 
     // Pre-load person?
     let key = this._route.snapshot.paramMap.get('key');
-    if(key)
+    if(key) {
       this.getPerson(key);
+      // TODO: load all other only on modal close
+      // return;
+    }
 
     this._dataSvc.getDataForUrl('team/get/').subscribe(response => {   
       

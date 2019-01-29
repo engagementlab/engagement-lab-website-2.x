@@ -29,7 +29,10 @@ var buildData = (options, res) => {
     else */
         data = list.find({'enabled': true}, fields)
                    .sort([['date', 'descending']])
-                   .populate('form')
+                   .populate({
+                        path: 'form',
+                        select: 'key -_id'
+                    })
                    .populate({
                         path: 'articleResource',
                         select: 'file.url -_id'

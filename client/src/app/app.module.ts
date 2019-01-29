@@ -58,7 +58,9 @@ export const routes: Routes = [
   
   { path: 'team', component: TeamComponent },  
   { path: 'team/:key', component: TeamComponent },  
+  // Alias
   { path: 'people', component: TeamComponent },  
+  { path: 'people/:key', component: TeamComponent },  
   
   { path: 'projects', component: ProjectIndexComponent },
   { path: 'projects/:key', component: ProjectComponent },
