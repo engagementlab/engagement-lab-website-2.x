@@ -71,13 +71,13 @@ export class HomeComponent implements OnInit {
     let i = 0;
     while(i < 20) {
       
-      this.tls[0].add(TweenLite.to(this.blueBg.nativeElement, 5.7, { xPercent:_.random(-10, 10), yPercent:_.random(-10, 10), ease:Sine.easeInOut}));
+      this.tls[0].add(TweenLite.to(this.blueBg.nativeElement, 8, { xPercent:_.random(-10, 10), yPercent:_.random(-10, 10), ease:Sine.easeInOut}));
       this.tls[1].add(TweenLite.to(this.bluePattern.nativeElement, 5.7, { xPercent:_.random(-15, 15), yPercent:_.random(-15, 15), ease:Sine.easeInOut}));
 
-      this.tls[2].add(TweenLite.to(this.yellowBg.nativeElement, 5.7, { xPercent:_.random(-15, 15), yPercent:_.random(-25, 25), ease:Sine.easeInOut}));
+      this.tls[2].add(TweenLite.to(this.yellowBg.nativeElement, 8, { xPercent:_.random(-15, 15), yPercent:_.random(-25, 25), ease:Sine.easeInOut}));
       this.tls[3].add(TweenLite.to(this.yellowPattern.nativeElement, 5.7, { xPercent:_.random(-10, 10), yPercent:_.random(-25, 25), ease:Sine.easeInOut}));
 
-      this.tls[4].add(TweenLite.to(this.redBg.nativeElement, 5.7, { xPercent:_.random(-7, 7), yPercent:_.random(-15, 15), ease:Sine.easeInOut}));
+      this.tls[4].add(TweenLite.to(this.redBg.nativeElement, 8, { xPercent:_.random(-7, 7), yPercent:_.random(-15, 15), ease:Sine.easeInOut}));
       this.tls[5].add(TweenLite.to(this.redPattern.nativeElement, 5.7, { xPercent:_.random(-5, 5), yPercent:_.random(-10, 10), ease:Sine.easeInOut}));
 
       i++;

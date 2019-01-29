@@ -65,6 +65,11 @@ a {
         align-items: center;
         justify-content: center;
 
+        // Shrink svgs on tablet view
+        @include mq($from: tabletPortrait, $until: desktop) {
+            @include scale(.7);
+        }
+
         &:first-child {
 
             margin-bottom: 30%;
