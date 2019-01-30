@@ -45,21 +45,6 @@ h2 {
 
     .icon {
         max-width: 100px;
-        @include phones {
-            max-width: 50px;
-        }
-
-        &.tomato {
-            @include circular-background($tomato);
-        }
-
-        &.gb {
-            @include circular-background($green-blue);
-        }
-
-        &.mango {
-            @include circular-background($mango);
-        }
     }
 
 }

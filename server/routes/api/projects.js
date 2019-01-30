@@ -19,10 +19,10 @@ var getAdjacent = (results, res) => {
 
     let fields = 'name key -_id';
     // Get one next/prev project from selected project's sortorder
-    let nextProject = list.findOne({sortOrder: {
+    let nextProject = list.findOne({enabled: true, sortOrder: {
         $gt: results.projects.sortOrder
     }}, fields).limit(1);
-    let prevProject = list.findOne({sortOrder: {
+    let prevProject = list.findOne({enabled: true, sortOrder: {
         $lt: results.projects.sortOrder
     }}, fields).sort({sortOrder: -1}).limit(1);
 
@@ -44,11 +44,8 @@ var buildData = (options, res) => {
 
     let fields = 'key image.public_id byline name featured projectType customUrl sortOrder';
     let data;
-    let countData;
-
     if (options.id) {
         let addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
-        countData = list.count({});
         data = list.findOne({
                     key: options.id
                 }, fields + ' ' + addtlFields)
@@ -56,7 +53,7 @@ var buildData = (options, res) => {
                 .populate({
                      path: 'format',
                      select: 'name -_id'
-                 });;
+                 });
     }
     else if (options.limit)
         data = list.find({}).sort([

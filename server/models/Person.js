@@ -22,7 +22,7 @@ const Types = keystone.Field.Types;
 var Person = new keystone.List('Person', {
 	label: 'People',
 	singular: 'Team Member',
-	plural: 'Team',
+	plural: 'People',
 	sortable: true,
 	autokey: {
 		path: 'key',

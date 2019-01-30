@@ -49,6 +49,25 @@ h2 {
 
 #top {
     padding-bottom: 9%;
+
+    a {
+        overflow-wrap: break-word;
+
+        &:hover:before {
+            animation: hover-white 0.3s ease-in-out 1 both;
+        }
+
+        @keyframes hover-white {
+            0% {
+                top: 100%;
+            }
+
+            100% {
+                top: 51%;
+                background: white;
+            }
+        }
+    }
 }
 
 #bottom {

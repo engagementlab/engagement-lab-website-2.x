@@ -14,8 +14,9 @@ import * as _ from 'underscore';
 export class TeamComponent implements OnInit {
 
   public currentPerson: any;
-
   public people: { [key: string]: any[] } = {};
+
+  private gettingPerson: boolean;
 
   constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router, private _location: Location) { 
   
@@ -30,18 +31,25 @@ export class TeamComponent implements OnInit {
 
   getPerson(key) {      
 
+    // No dupe requests!
+    if(this.gettingPerson)
+      return;
+
+    this.gettingPerson = true;
     this.currentPerson = undefined;
     this._dataSvc.getDataForUrl('team/get/'+key).subscribe(response => {
       
-      this.currentPerson = response.people;
+      this.currentPerson = response.person;
 
     });
   }
 
   closePerson() {
     
+    this.gettingPerson = false;
     this.currentPerson = undefined;
-    this._location.go('team');
+    
+    this._location.go('people');
 
     window.scrollTo(0, 0);
 
@@ -51,15 +59,19 @@ export class TeamComponent implements OnInit {
 
     // Pre-load person?
     let key = this._route.snapshot.paramMap.get('key');
-    if(key)
+    if(key) {
       this.getPerson(key);
+      // TODO: load all other only on modal close
+      // return;
+    }
 
     this._dataSvc.getDataForUrl('team/get/').subscribe(response => {   
       
-      this.people['faculty'] = _.filter(response.people, (person) => { return person.category === 'faculty leadership'; });
-      this.people['staff'] = _.filter(response.people, (person) => { return person.category === 'staff'; });
-      this.people['board'] = _.filter(response.people, (person) => { return person.category === 'advisory board'; });
-      this.people['fellows'] = _.filter(response.people, (person) => { return person.category === 'faculty fellows'; })
+      this.people['faculty'] = _.filter(response.staff, (person) => { return person.category === 'faculty leadership'; });
+      this.people['staff'] = _.filter(response.staff, (person) => { return person.category === 'staff'; });
+      this.people['board'] = _.filter(response.staff, (person) => { return person.category === 'advisory board'; });
+      this.people['fellows'] = _.filter(response.staff, (person) => { return person.category === 'faculty fellows'; })
+      this.people['students'] = response.students;
 
       // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
       for(key in this.people) {

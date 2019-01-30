@@ -12,7 +12,7 @@
             <h3>Students and Researchers</h3>
             {{content?.students}}
             <div class="link">
-                <a routerLink="/masters">Find out more</a>
+                <a routerLink="/masters" class="animate">Find out more</a>
             </div>
         </div>
 
@@ -24,7 +24,7 @@
             <h3>Community Partners</h3>
             {{content?.community}}
             <div class="link">
-                <a (click)="scrollToBottom()">Get in touch</a>
+                <a (click)="scrollToBottom()" class="animate">Get in touch</a>
             </div>
         </div>
     </div>
@@ -34,8 +34,8 @@
 <section id="donate" class="columns">
 
     <div id="icons" class="column is-one-quarter-tablet">
-        <cdn-image id="bg" cloudinaryId="contact/piggybank-bg" width="403" alt="Piggybank background image" aria-role="img"></cdn-image>
         <cdn-image id="pig" cloudinaryId="contact/piggybank-icon" width="140" alt="Piggybank icon image" aria-role="img"></cdn-image>
+        <cdn-image id="bg" cloudinaryId="contact/piggybank-bg" width="324" alt="Piggybank background image" aria-role="img"></cdn-image>
     </div>
 
     <h2 class="column is-5-tablet">Donate to help support the Lab</h2>

@@ -19,10 +19,10 @@ var getAdjacent = (results, res) => {
 
     let fields = 'name key -_id';
     // Get one next/prev event from selected event's date
-    let nextEvent = events.findOne({date: {
+    let nextEvent = events.findOne({enabled: true, date: {
         $gt: results.events.date
     }}, fields).limit(1);
-    let prevEvent = events.findOne({date: {
+    let prevEvent = events.findOne({enabled: true, date: {
         $lt: results.events.date
     }}, fields).limit(1);
 
@@ -53,7 +53,7 @@ var buildData = (options, res) => {
     else {
         // Get enabled events
         fields += ' -_id';
-        eventsData = events.find({ enabled: true}, fields).sort([
+        eventsData = events.find({enabled: true}, fields).sort([
             ['date', 'descending']
         ]);
     }

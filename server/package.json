@@ -18,6 +18,7 @@
     "express": "^4.16.4",
     "i": "^0.3.6",
     "keystone-storage-adapter-azure": "^1.1.0",
+    "mongoose": "^5.4.7",
     "moment": "^2.22.2",
     "validator": "^10.9.0"
   }
