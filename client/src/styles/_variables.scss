@@ -1,4 +1,5 @@
 // CDN CONFIG
+$cloudinary-account: 'engagement-lab-home';
 $cdn-product: 'homepage-2.0';
 
 @import url('https://fonts.googleapis.com/css?family=Overpass:400,600,900');
@@ -38,5 +39,4 @@ $mq-breakpoints: (
 );
 
 // Mixins 
-@import '~sass-mq/_mq';
-@import './mixins';
+@import '../../node_modules/@engagementlab/el-scss/bundle';
