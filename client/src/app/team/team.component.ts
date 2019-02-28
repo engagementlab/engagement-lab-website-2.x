@@ -75,9 +75,11 @@ export class TeamComponent implements OnInit {
 
       // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
       for(key in this.people) {
-        let mod = this.people[key].length % 4;
-        for(let i=0; i<mod; i++)
-          this.people[key].push({name:'dummy'});
+        let mod = 4-(this.people[key].length % 4);
+        if(mod !== 4) {
+          for(let i=0; i<mod; i++)
+            this.people[key].push({name:'dummy'});
+        }
       }
 
     });
