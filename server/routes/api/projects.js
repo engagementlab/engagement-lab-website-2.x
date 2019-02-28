@@ -42,7 +42,7 @@ var getAdjacent = (results, res) => {
 
 var buildData = (options, res) => {
 
-    let fields = 'key image.public_id byline name featured projectType customUrl sortOrder';
+    let fields = 'key image.public_id byline name featured archived projectType customUrl sortOrder';
     let data;
     if (options.id) {
         let addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';

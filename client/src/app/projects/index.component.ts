@@ -15,6 +15,7 @@ export class ProjectIndexComponent implements OnInit {
 
   public projects: any[];
   public projectFeatured: any;
+  public projectsArchived: any[];
   public projectTypeNames: string[];
   public projectTypesCount: Object;
   public projectTypesTotal: number;
@@ -29,6 +30,9 @@ export class ProjectIndexComponent implements OnInit {
         this.projects = response;    
         this.projectFeatured = _.find(response, (obj) => {
           return obj.featured;
+        });
+        this.projectsArchived = _.find(response, (obj) => {
+          return obj.archived;
         });
         
         // get count of each project types

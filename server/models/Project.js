@@ -42,6 +42,11 @@ Project.add({
         label: 'Featured', 
         note: 'Determines if this project appears on the home page in the featured project slider.'
     },
+    archived: {
+        type: Types.Boolean,
+        label: 'Archived', 
+        note: 'Determines if this project appears as archived (must also be "enabled").'
+    },
     customUrl: {
         type: String,
         label: 'Custom URL',
