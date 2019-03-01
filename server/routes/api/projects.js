@@ -73,12 +73,14 @@ var buildData = (options, res) => {
             projects: data
         })
         .then(results => {
+
+            if(results.projects === null || results.projects.length < 1)
+                return res.status(204).send();
             
             // When retrieving one project, also get next/prev ones
             if(options.id)
                 getAdjacent(results, res);
             else {
-         
                 let resultObj = {
                     status: 200,
                     data: results.projects
@@ -89,6 +91,7 @@ var buildData = (options, res) => {
             }
         }).catch(err => {
             console.log(err);
+            return res.status(400);
         })
 
 }

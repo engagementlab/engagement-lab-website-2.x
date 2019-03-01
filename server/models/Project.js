@@ -11,10 +11,11 @@
  * ==========
  */
 
-const keystone = global.keystone;
-const Types = keystone.Field.Types;
-const urlValidator = require('../utils').url;
-var Listing = require('./Listing');
+const keystone = global.keystone,
+      Types = keystone.Field.Types,
+      Listing = require('./Listing'),
+      mongoosastic = require('mongoosastic'),
+      urlValidator = require('../utils').url;
 
 /**
  * @module project

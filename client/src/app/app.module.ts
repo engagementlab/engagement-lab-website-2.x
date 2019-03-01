@@ -45,6 +45,7 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { DataService } from './utils/data.service';
 import { RedirectService } from './utils/redirect.service';
 import { AuthorFormatPipe } from './utils/author-format.pipe';
+import { ErrorComponent } from './error/error.component';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -85,6 +86,8 @@ export const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent },
   { path: 'jobs', component: JobsComponent },
   
+  { path: 'error', component: ErrorComponent },
+
   { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
 
   { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
@@ -124,7 +127,8 @@ export const routes: Routes = [
     EventIndexComponent,
     EventComponent,
     InitiativeComponent,
-    ProjectArchiveComponent
+    ProjectArchiveComponent,
+    ErrorComponent
   ],
   imports: [
     AppRoutingModule,

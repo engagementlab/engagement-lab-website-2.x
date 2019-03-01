@@ -11,8 +11,8 @@
  *
  * ==========
  */
-const keystone = global.keystone;
-const Types = keystone.Field.Types;
+const keystone = global.keystone,   
+      Types = keystone.Field.Types;
 
 /**
  * @module listing
@@ -92,11 +92,13 @@ Listing.schema.pre('save', function(next) {
 });
 
 Listing.schema.post('save', function(next) {
-
+    // var hook = elasticHooks.init('brand');
     // Make a post to slack when this Listing is updated
     // keystone.get('slack').Post(Listing.schema, this, true);
 
 });
+
+// Listing.schema.plugin(mongoosastic);
 
 /**
  * Model Registration
