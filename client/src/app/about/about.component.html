@@ -31,8 +31,6 @@
     </div>
 
     <div class="column is-5">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{}" autoFormat=true width="250" height="407" alt="" aria-role="img"></cdn-image>
-
         <cl-image responsive public-id="{{about.images[1].public_id}}" secure="true" width="250" height="407"
             fetch-format="auto" crop="fill" gravity="center" attr.alt="About flavor image 2" class="cdn-image" *ngIf="isTablet">
             <cl-transformation attr.quality="100"></cl-transformation>

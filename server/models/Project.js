@@ -11,10 +11,11 @@
  * ==========
  */
 
-const keystone = global.keystone;
-const Types = keystone.Field.Types;
-const urlValidator = require('../utils').url;
-var Listing = require('./Listing');
+const keystone = global.keystone,
+      Types = keystone.Field.Types,
+      Listing = require('./Listing'),
+      mongoosastic = require('mongoosastic'),
+      urlValidator = require('../utils').url;
 
 /**
  * @module project
@@ -41,6 +42,11 @@ Project.add({
         type: Types.Boolean,
         label: 'Featured', 
         note: 'Determines if this project appears on the home page in the featured project slider.'
+    },
+    archived: {
+        type: Types.Boolean,
+        label: 'Archived', 
+        note: 'Determines if this project appears as archived (must also be "enabled").'
     },
     customUrl: {
         type: String,

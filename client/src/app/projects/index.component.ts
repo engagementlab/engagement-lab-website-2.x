@@ -5,6 +5,7 @@ import { DataService } from '../utils/data.service';
 import mixitup from 'mixitup';
 import * as _ from 'underscore';
 import * as AOS from 'aos';
+import * as ismobile from 'ismobilejs';
 
 @Component({
   selector: 'app-index',
@@ -15,20 +16,28 @@ export class ProjectIndexComponent implements OnInit {
 
   public projects: any[];
   public projectFeatured: any;
+  public projectsArchived: any[];
   public projectTypeNames: string[];
   public projectTypesCount: Object;
   public projectTypesTotal: number;
+  
+  public isPhone: boolean;
 
   private mixer: mixitup.mixer;
-
-  @ViewChildren('projectList') projectList: QueryList<any>;
-
-  constructor(private _dataSvc: DataService) { 
   
+  @ViewChildren('projectList') projectList: QueryList<any>;
+  
+  constructor(private _dataSvc: DataService) { 
+    
+    this.isPhone = ismobile.phone;
+
     this._dataSvc.getDataForUrl('projects/get/').subscribe(response => {
         this.projects = response;    
         this.projectFeatured = _.find(response, (obj) => {
           return obj.featured;
+        });
+        this.projectsArchived = _.filter(response, (obj) => {
+          return obj.archived;
         });
         
         // get count of each project types

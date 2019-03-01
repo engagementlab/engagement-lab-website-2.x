@@ -38,13 +38,9 @@ export class NavComponent implements AfterViewInit {
       if(this.wasLoading && !value) {
         if(document.getElementById('menu-btn').classList.contains('open')) 
             this.tl.reverse();
-          // this.tlLogo.pause(0);
       }
           
       this.wasLoading = value;
-      if(value) {
-        // this.tlLogo.play();
-      }
 
   } );
   

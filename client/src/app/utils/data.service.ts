@@ -51,13 +51,15 @@ export class DataService {
       
       return this.http.get(url)
       .map((res:any)=> {
-        this.isLoading.next(false);
         
         // Catch no data as problem on backend
         if(res === null) {
-          this.serverProblem.next(true);
+          // this.serverProblem.next(true);
+          this._router.navigateByUrl('/error');
           return;
         }
+        
+        this.isLoading.next(false);
         
         return res.data;
       })

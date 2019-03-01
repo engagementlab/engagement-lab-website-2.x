@@ -28,6 +28,7 @@ import { EventIndexComponent } from './events/index.component';
 import { EventComponent } from './events/event.component';
 
 import { ProjectIndexComponent } from './projects/index.component';
+import { ProjectArchiveComponent } from './projects/archive.component';
 import { ProjectComponent } from './projects/project.component';
 
 import { PublicationIndexComponent } from './publications/index.component';
@@ -44,6 +45,7 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { DataService } from './utils/data.service';
 import { RedirectService } from './utils/redirect.service';
 import { AuthorFormatPipe } from './utils/author-format.pipe';
+import { ErrorComponent } from './error/error.component';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -63,6 +65,7 @@ export const routes: Routes = [
   { path: 'people/:key', component: TeamComponent },  
   
   { path: 'projects', component: ProjectIndexComponent },
+  { path: 'projects/archive', component: ProjectArchiveComponent },
   { path: 'projects/:key', component: ProjectComponent },
   // Support old URL struct
   { path: 'projects/:category/:key', component: ProjectComponent },
@@ -83,6 +86,8 @@ export const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent },
   { path: 'jobs', component: JobsComponent },
   
+  { path: 'error', component: ErrorComponent },
+
   { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
 
   { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
@@ -121,7 +126,9 @@ export const routes: Routes = [
     JobsComponent,
     EventIndexComponent,
     EventComponent,
-    InitiativeComponent
+    InitiativeComponent,
+    ProjectArchiveComponent,
+    ErrorComponent
   ],
   imports: [
     AppRoutingModule,

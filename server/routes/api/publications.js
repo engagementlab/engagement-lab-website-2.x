@@ -42,12 +42,18 @@ var buildData = (options, res) => {
             jsonData: data
         })
         .then(results => {
+
+            if(results.jsonData === null || results.jsonData.length < 1)
+                return res.status(204).send();
+
             return res.status(200).json({
                 status: 200,
                 data: results.jsonData
             });
+
         }).catch(err => {
             console.log(err);
+            return res.status(400);
         })
 
 }
