@@ -16,7 +16,8 @@
     </div>
 
     <div class="column hidden-mobile">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{projectFeatured.image.public_id}}" autoFormat="true" width="800" alt="Thumbnail image for '{{content?.name}}' project"></cdn-image>
+        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{projectFeatured.image.public_id}}" autoFormat="true" width="800"
+            alt="Thumbnail image for '{{content?.name}}' project"></cdn-image>
     </div>
 
 
@@ -30,7 +31,8 @@
 
 <div id="projects" class="columns is-multiline">
 
-    <div #projectList class="project view-tooltip column is-5 {{project.projectType}}" [class.mix]="project.key !== 'dummy'" *ngFor="let project of projects; let i = index;">
+    <div #projectList class="project view-tooltip column {{project.projectType}}" [class.mix]="project.key !== 'dummy'"
+        *ngFor="let project of projects; let i = index;">
 
         <a routerLink="/projects/{{project.key}}" *ngIf="project.key !== 'dummy'">
             <div class="bg">
@@ -45,27 +47,32 @@
 
 </div>
 
-
-<section id="archive" *ngIf="projectsArchived !== undefined" class="listing">
-    <div #archiveList class="item column is-full" *ngFor="let project of projectsArchived">
+<!-- Archived Projects -->
+<section id="archive" class="listing" *ngIf="projectsArchived !== undefined && !isPhone">
+    <div #archiveList class="item column is-full" *ngFor="let project of projectsArchived; let first = first;">
 
         <a routerLink="/projects/{{project.key}}">
-            <hr />
+            <hr *ngIf="!first" />
 
             <div class="columns is-mobile">
-                <h1 class="column is-one-fifth">{{project.type}}
-                </h1>
+                <h3 class="column is-2 type">
+                    {{project.projectType}}
+                </h3>
 
                 <div class="name column no-margin">
-                    <h2>{{project.name}}</h2>
+                    {{project.name}}
                 </div>
-                <div class="column">
-                    <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
-                            <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
-                        </svg>
+                <div class="column arrow">
+                    <svg width="102" height="72" fill="none" viewBox="0 0 102 72">
+                        <path stroke="#000" stroke-width="2" d="M0 35.27h99.866M65.268.71l35.307 35.201-35.307 35.202" />
+                    </svg>
+
                 </div>
             </div>
         </a>
-
     </div>
-    </section>
+</section>
+
+<div id="archive-mobile" class="column is-full" *ngIf="isPhone">
+    <app-button label="archived projects" class="archive" route="/projects/archive" ariaLabel="Go to 'archived projects' page"></app-button>
+</div>

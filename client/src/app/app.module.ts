@@ -28,6 +28,7 @@ import { EventIndexComponent } from './events/index.component';
 import { EventComponent } from './events/event.component';
 
 import { ProjectIndexComponent } from './projects/index.component';
+import { ProjectArchiveComponent } from './projects/archive.component';
 import { ProjectComponent } from './projects/project.component';
 
 import { PublicationIndexComponent } from './publications/index.component';
@@ -63,6 +64,7 @@ export const routes: Routes = [
   { path: 'people/:key', component: TeamComponent },  
   
   { path: 'projects', component: ProjectIndexComponent },
+  { path: 'projects/archive', component: ProjectArchiveComponent },
   { path: 'projects/:key', component: ProjectComponent },
   // Support old URL struct
   { path: 'projects/:category/:key', component: ProjectComponent },
@@ -121,7 +123,8 @@ export const routes: Routes = [
     JobsComponent,
     EventIndexComponent,
     EventComponent,
-    InitiativeComponent
+    InitiativeComponent,
+    ProjectArchiveComponent
   ],
   imports: [
     AppRoutingModule,

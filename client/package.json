@@ -1,11 +1,11 @@
 {
   "name": "engagement-lab-website-2.0",
-  "version": "2.2.0",
+  "version": "2.2.5",
   "scripts": {
     "ng": "ng",
-    "start": "npm-run-all -l -p start-browser start-api",
-    "start-browser": "ng serve",
-    "start-api": "cd ../server; nodemon",
+    "start": "npm-run-all -l -p browser api",
+    "browser": "ng serve",
+    "api": "cd ../server; nodemon",
     "build": "ng build --configuration=production --prod",
     "build-qa": "ng build --configuration=qa --prod",
     "test": "ng test",

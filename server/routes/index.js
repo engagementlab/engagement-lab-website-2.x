@@ -35,7 +35,12 @@ router.get('/api/about/get', routeIncludes, routes.api.about.get);
 router.get('/api/team/get', routeIncludes, routes.api.team.get);
 router.get('/api/team/get/:person_key?', routeIncludes, routes.api.team.get);
 router.get('/api/initiative/get/:key', routeIncludes, routes.api.initiative.get);
+
+
+router.get('/api/projects/get/archived/', routeIncludes, routes.api.projects.archived);
 router.get('/api/projects/get/:project_key?', routeIncludes, routes.api.projects.get);
+
+
 router.get('/api/publications/get/:project_key?', routeIncludes, routes.api.publications.get);
 router.get('/api/events/get/:key?', routeIncludes, routes.api.events.get);
 router.get('/api/contact/get', routeIncludes, routes.api.contact.get);

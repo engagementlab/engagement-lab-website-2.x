@@ -44,6 +44,8 @@ var buildData = (options, res) => {
 
     let fields = 'key image.public_id byline name featured archived projectType customUrl sortOrder';
     let data;
+
+    // Get one project
     if (options.id) {
         let addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
         data = list.findOne({
@@ -55,17 +57,13 @@ var buildData = (options, res) => {
                      select: 'name -_id'
                  });
     }
-    else if (options.limit)
-        data = list.find({}).sort([
-            ['sortOrder', 'ascending']
-        ]);
-
-    else if(options.featured)
+    else if(options.archived) {
         data = list.find({
             'enabled': true,
-            'featured': true})
+            'archived': true}, 
+            fields)
             .sort([['sortOrder', 'descending']]);
-
+    }
     else
         data = list.find({'enabled': true}, fields + ' -_id')
                    .sort([['sortOrder', 'ascending']]);
@@ -105,5 +103,10 @@ exports.get = function (req, res) {
         options.id = req.params.project_key;
 
     return buildData(options, res);
+
+}
+exports.archived = function (req, res) {
+
+    return buildData({archived:true}, res);
 
 }
