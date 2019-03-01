@@ -36,6 +36,7 @@ bootstrap.start(
 				host: 'localhost:9200',
 				log: 'trace'
 			});
+			global.client = client;
 
 			client.ping({
 				// ping usually has a 3000ms timeout
@@ -45,6 +46,29 @@ bootstrap.start(
 				console.trace('elasticsearch cluster is down!');
 				} else {
 				console.log('All is well');
+					client.indices.create({
+						index: 'project'
+					}, function(err, resp, status) {
+						if (err) {
+							console.log(err);
+						} else {
+							console.log("create", resp);
+						}
+					});
+					client.search({
+						index: 'project',
+						body: {
+							query: {
+								match: {
+									"name": "partnerships"
+								}
+							}
+						}
+					}).then(function(resp) {
+						console.log(resp);
+					}, function(err) {
+						console.trace(err.message);
+					});
 				}
 			});
 		}

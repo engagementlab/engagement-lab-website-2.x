@@ -184,7 +184,17 @@ Project.schema.pre('save', function(next) {
 Project.schema.post('save', (doc, next) => {
     // Make a post to slack when this Project is updated
     // keystone.get('slack').Post(Project.model, this, true);
-
+    console.log(doc._id)
+    global.client.index({
+        index: 'project',
+        id: doc._id,
+        body: {
+            "name": doc.name,
+            "key": doc.key
+        }
+    }, function(err, resp, status) {
+        console.log(resp);
+    });
     next();
 
 });
