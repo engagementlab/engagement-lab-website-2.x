@@ -18,6 +18,22 @@ const bootstrap = require('@engagementlab/el-bootstrapper'),
 	  express = require('express'),
 	  elasticsearch = require('elasticsearch');
 
+async function find() {
+
+	const response = await elasti.search({
+		index: 'listings',
+		body: {
+		  query: {
+			match: {
+			  name: '@Stake'
+			}
+		  }
+		}
+	  });
+	  for (const tweet of response.hits.hits) {
+		console.log('tweet:', tweet);
+	  }
+}
 
 var app = express();
 bootstrap.start(
@@ -32,43 +48,30 @@ bootstrap.start(
 		app.listen(process.env.PORT);
 
 		if(process.env.NODE_ENV === 'development'){
-			var client = new elasticsearch.Client({
-				host: 'localhost:9200',
-				log: 'trace'
+			var elasti = new elasticsearch.elasti({
+				host: 'localhost:9200'
 			});
-			global.client = client;
+			global.elasti = elasti;
 
-			client.ping({
+			find();
+			elasti.ping({
 				// ping usually has a 3000ms timeout
 				requestTimeout: 1000
 			}, function (error) {
 				if (error) {
-				console.trace('elasticsearch cluster is down!');
+					console.trace('elasticsearch cluster is down!');
 				} else {
-				console.log('All is well');
-					client.indices.create({
-						index: 'project'
+					console.log('All is well');
+					elasti.indices.create({
+						index: 'listings'
 					}, function(err, resp, status) {
 						if (err) {
-							console.log(err);
+							// console.log(err);
 						} else {
 							console.log("create", resp);
 						}
 					});
-					client.search({
-						index: 'project',
-						body: {
-							query: {
-								match: {
-									"name": "partnerships"
-								}
-							}
-						}
-					}).then(function(resp) {
-						console.log(resp);
-					}, function(err) {
-						console.trace(err.message);
-					});
+					   
 				}
 			});
 		}
