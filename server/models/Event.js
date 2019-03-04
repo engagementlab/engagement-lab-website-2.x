@@ -109,6 +109,28 @@ Event.schema.pre('save', function (next) {
 
 });
 
+Event.schema.post('save', (doc, next) => {
+  
+    // Index doc on elasticsearch
+    global.elasti.index({
+        index: 'event',
+        type: 'event',
+        id: doc._id.toString(),
+        body: {
+            "name": doc.name,
+            "key": doc.key,
+            "content": doc.shortDescription
+        }
+    }, function (err, resp, status) {
+        if (err)
+            console.error(err);
+    });
+    
+    next();
+
+});
+
+
 /**
  * Model Registration
  */

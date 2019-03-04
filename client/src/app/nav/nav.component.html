@@ -34,29 +34,40 @@
 
 </nav>
 
-<section id="menu" class="columns">
+<section id="menu" class="columns is-multiline">
 
     <!-- Tablet Landscape+ -->
-    <div class="column is-two-thirds is-5-tablet hidden-mobile">
-        <h3 *ngFor="let i of [0, 1, 2]">
-            <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{navLinks[i].label}}</a>
-            <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{navLinks[i].url}}">{{navLinks[i].label}}</a>
-        </h3>
-    </div>
-    <div class="column is-7-tablet hidden-mobile">
-        <h3 *ngFor="let i of [3, 4]">
-            <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{navLinks[i].label}}</a>
-            <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{navLinks[i].url}}">{{navLinks[i].label}}</a>
-        </h3>
-        <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
+    <div class="columns column is-full">
+        <div class="column is-two-thirds is-5-tablet hidden-mobile">
+            <h3 *ngFor="let i of [0, 1, 2]">
+                <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{navLinks[i].label}}</a>
+                <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{navLinks[i].url}}">{{navLinks[i].label}}</a>
+            </h3>
+        </div>
+        <div class="column is-7-tablet hidden-mobile">
+            <h3 *ngFor="let i of [3, 4]">
+                <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{navLinks[i].label}}</a>
+                <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{navLinks[i].url}}">{{navLinks[i].label}}</a>
+            </h3>
+            <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
+        </div>
+
+        <!-- Mobile -->
+        <div class="column is-full hidden-tablet-plus">
+            <h3 *ngFor="let link of navLinks">
+                <a *ngIf="itemActive(link.url)" class="active" (click)="openCloseNav()">{{link.label}}</a>
+                <a *ngIf="!itemActive(link.url)" routerLink="/{{link.url}}">{{link.label}}</a>
+            </h3>
+            <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
+        </div>
     </div>
 
-    <!-- Mobile -->
-    <div class="column is-full hidden-tablet-plus">
-        <h3 *ngFor="let link of navLinks">
-            <a *ngIf="itemActive(link.url)" class="active" (click)="openCloseNav()">{{link.label}}</a>
-            <a *ngIf="!itemActive(link.url)" routerLink="/{{link.url}}">{{link.label}}</a>
-        </h3>
-        <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
+    <div class="column is-full">
+        
+        <input #searchField placeholder="What are you looking for?" type="text" (keyup)="searchTyping(searchField.value)" />
+
+        <div class="result" *ngFor="let result of searchResults">
+            <div><a routerLink="/{{result._type}}s/{{result._source.key}}" [innerHtml]="result._source.name"></a></div>
+        </div>
     </div>
 </section>

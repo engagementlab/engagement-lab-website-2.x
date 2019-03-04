@@ -11,70 +11,70 @@
  */
 
 // Load .env vars
-if(process.env.NODE_ENV !== 'test')
+if (process.env.NODE_ENV !== 'test')
 	require('dotenv').load();
 
 const bootstrap = require('@engagementlab/el-bootstrapper'),
-	  express = require('express'),
-	  elasticsearch = require('elasticsearch');
-
-async function find() {
-
-	const response = await elasti.search({
-		index: 'listings',
-		body: {
-		  query: {
-			match: {
-			  name: '@Stake'
-			}
-		  }
-		}
-	  });
-	  for (const tweet of response.hits.hits) {
-		console.log('tweet:', tweet);
-	  }
-}
+	express = require('express'),
+	elasticsearch = require('elasticsearch');
 
 var app = express();
-bootstrap.start(
-	'./config.json', 
-	app,
-	__dirname + '/', 
-	{
-		'name': 'Engagement Lab Home CMS'
-	},
-	() => {
+// Needs be accessible all througout app 
+// TODO: module?
+global.elasti = undefined;
 
-		app.listen(process.env.PORT);
+const boot = (callback) => {
+	bootstrap.start(
+		'./config.json',
+		app,
+		__dirname + '/', {
+			'name': 'Engagement Lab Home CMS'
+		},
+		() => {
 
-		if(process.env.NODE_ENV === 'development'){
-			var elasti = new elasticsearch.elasti({
-				host: 'localhost:9200'
-			});
-			global.elasti = elasti;
+			app.listen(process.env.PORT);
 
-			find();
-			elasti.ping({
-				// ping usually has a 3000ms timeout
-				requestTimeout: 1000
-			}, function (error) {
-				if (error) {
-					console.trace('elasticsearch cluster is down!');
-				} else {
-					console.log('All is well');
-					elasti.indices.create({
-						index: 'listings'
-					}, function(err, resp, status) {
-						if (err) {
-							// console.log(err);
-						} else {
-							console.log("create", resp);
-						}
-					});
-					   
-				}
-			});
+			if(callback)
+				callback();
+
 		}
+	);
+};
 
+const search = () => {
+
+	if (process.env.NODE_ENV === 'development') {
+		elasti = new elasticsearch.Client({
+			host: 'localhost:9200'
+		});
+		// global.elasti = elasti;
+
+		elasti.ping({
+			// ping usually has a 3000ms timeout
+			requestTimeout: 1000
+		}, function (error) {
+			if (error) {
+				console.trace('elasticsearch ERROR!', error);
+			} else {
+				console.log('search cluster running!');
+/* 				elasti.indices.create({
+					index: 'publications'
+				}, function (err, resp, status) {
+					if (err) {
+						// console.log(err);
+					} else {
+						console.log("create", resp);
+					}
+				});
+ */
+					boot();
+			}
+		});
 	}
-);
+
+}
+
+if (process.env.NODE_ENV === 'development')
+	search();
+else
+	boot();

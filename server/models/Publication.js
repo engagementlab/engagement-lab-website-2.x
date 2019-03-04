@@ -69,9 +69,9 @@ Publication.add({
     note: 'This is the link text for article/chapter urls, and the link text to individual pages for books and guides.'
   },
   enabled: {
-      type: Types.Boolean,
-      label: 'Enabled', 
-      note: 'Determines if this publication appears on the live site.'
+    type: Types.Boolean,
+    label: 'Enabled',
+    note: 'Determines if this publication appears on the live site.'
   }
 }, 'Filters', {
   form: {
@@ -112,7 +112,7 @@ Publication.add({
     type: String,
     note: 'Where this publication appears, e.g. "Journal Of Civic Media Vol. 1 Issue 3".'
   },
-  
+
   date: {
     type: Date,
     label: 'Publication Date',
@@ -170,6 +170,29 @@ Publication.schema.pre('save', function (next) {
       pub.isArticle = false;
 
     next(err);
+  });
+
+});
+
+Publication.schema.post('save', (doc, next) => {
+
+  filter.model.findFilter(doc.form, function (err, result) {
+    // Index doc on elasticsearch
+    global.elasti.index({
+      index: 'publication',
+      type: result.key,
+      id: doc._id.toString(),
+      body: {
+        "name": doc.name,
+        "key": doc.key,
+        "content": doc.blurb
+      }
+    }, function (err, resp, status) {
+      if (err)
+        console.error(err);
+
+      next(err);
+    });
   });
 
 });

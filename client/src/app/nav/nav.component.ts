@@ -5,6 +5,7 @@ import { DataService } from '../utils/data.service';
 import { filter } from 'rxjs/operators';
 
 import { TimelineLite, Circ, Linear, TweenMax } from "gsap";
+import * as _ from 'underscore';
 
 @Component({
   selector: 'app-nav',
@@ -20,6 +21,7 @@ export class NavComponent implements AfterViewInit {
       {url: 'masters', label: 'Masters Program'},
       {url: 'getinvolved', label: 'Get Involved'}
   ];
+  public searchResults: any[];
 
   private tl: TimelineLite; 
   private btn: HTMLElement;
@@ -99,6 +101,22 @@ export class NavComponent implements AfterViewInit {
 
     if(this.currentUrl === '/')
       this.openCloseNav();
+
+  }
+
+  searchTyping(value: string) {
+
+    if(value.length < 3) return;
+
+    this._dataSvc.getDataForUrl('all/'+value, true).subscribe(response => {
+      
+      _.each(response, (result) => {
+        result._source.name = result._source.name.replace(new RegExp(value, 'gi'), '<span>$&</span>');
+      })
+      
+      this.searchResults = response;
+        
+    });
 
   }
 

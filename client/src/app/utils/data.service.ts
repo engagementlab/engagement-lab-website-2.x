@@ -28,7 +28,7 @@ export class DataService {
 
   constructor(private http: HttpClient, private _router: Router) { 
 
-  	this.baseUrl = (environment.production ? 'https://'+window.location.host : 'http://localhost:3000') + '/api/';
+  	this.baseUrl = (environment.production ? 'https://'+window.location.host : 'http://localhost:3000');
 
     _router.events.subscribe(event => {
       
@@ -42,12 +42,16 @@ export class DataService {
     }); 
   }
 	
-  public getDataForUrl(urlParam: string): Observable<any> {
+  public getDataForUrl(urlParam: string, search: boolean = false): Observable<any> {
 
-      this.isLoading.next(true);
+      if(!search)
+        this.isLoading.next(true);
+
       this.serverProblem.next(false);
 
-      let url = this.baseUrl+urlParam; 
+      let url = this.baseUrl; 
+      url +=  search ? '/search/' : '/api/';
+      url += urlParam;
       
       return this.http.get(url)
       .map((res:any)=> {
@@ -58,8 +62,9 @@ export class DataService {
           this._router.navigateByUrl('/error');
           return;
         }
-        
-        this.isLoading.next(false);
+
+        if(!search)        
+          this.isLoading.next(false);
         
         return res.data;
       })
