@@ -46,6 +46,7 @@ import { DataService } from './utils/data.service';
 import { RedirectService } from './utils/redirect.service';
 import { AuthorFormatPipe } from './utils/author-format.pipe';
 import { ErrorComponent } from './error/error.component';
+import { ResultComponent } from './nav/result.component';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -128,7 +129,8 @@ export const routes: Routes = [
     EventComponent,
     InitiativeComponent,
     ProjectArchiveComponent,
-    ErrorComponent
+    ErrorComponent,
+    ResultComponent
   ],
   imports: [
     AppRoutingModule,

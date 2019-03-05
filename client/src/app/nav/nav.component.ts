@@ -1,10 +1,11 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { DataService } from '../utils/data.service';
 import { filter } from 'rxjs/operators';
 
-import { TimelineLite, Circ, Linear, TweenMax } from "gsap";
+import { TimelineLite, Circ, TweenLite } from "gsap";
+import { environment } from '../../environments/environment';
 import * as _ from 'underscore';
 
 @Component({
@@ -22,12 +23,16 @@ export class NavComponent implements AfterViewInit {
       {url: 'getinvolved', label: 'Get Involved'}
   ];
   public searchResults: any[];
+  public isProduction: boolean;
 
   private tl: TimelineLite; 
   private btn: HTMLElement;
   
   private wasLoading: boolean = false;
   private currentUrl: string;
+
+  @ViewChild('searchField') searchField: ElementRef;
+  @ViewChild('menuLinks') menuLinks: ElementRef;
 
   constructor(private _router: Router, private _dataSvc: DataService) {
 
@@ -37,14 +42,16 @@ export class NavComponent implements AfterViewInit {
     });
 
 		this._dataSvc.isLoading.subscribe( value => {
-      if(this.wasLoading && !value) {
-        if(document.getElementById('menu-btn').classList.contains('open')) 
-            this.tl.reverse();
-      }
-          
-      this.wasLoading = value;
+        if(this.wasLoading && !value) {
+          if(document.getElementById('menu-btn').classList.contains('open')) 
+              this.tl.reverse();
+        }
+            
+        this.wasLoading = value;
 
-  } );
+    });
+  
+    this.isProduction = environment.production;
   
   }
 
@@ -82,8 +89,12 @@ export class NavComponent implements AfterViewInit {
 
   openCloseNav() {
 
-    if(!this.tl.reversed())
+    if(!this.tl.reversed()) {
       this.tl.reverse().timeScale(1.3);
+      
+      this.searchField.nativeElement.value = '';
+      this.searchResults = null;
+    }
     else
       this.tl.play();
 
@@ -104,16 +115,35 @@ export class NavComponent implements AfterViewInit {
 
   }
 
+  searchFocus() {
+
+    TweenLite.to(this.menuLinks.nativeElement, .4, {height:0, autoAlpha:0});
+
+    this.searchField.nativeElement.className = 'focus';
+
+  }
+
+  searchBlur() {
+
+    TweenLite.to(this.menuLinks.nativeElement, .4, {height:'auto', autoAlpha:1});
+
+    this.searchField.nativeElement.className = '';
+    
+  }
+
+
   searchTyping(value: string) {
+
+    if(value.length < 1)
+      this.searchResults = null;
 
     if(value.length < 3) return;
 
     this._dataSvc.getDataForUrl('all/'+value, true).subscribe(response => {
       
       _.each(response, (result) => {
-        result._source.name = result._source.name.replace(new RegExp(value, 'gi'), '<span>$&</span>');
-      })
-      
+        result._source.name = result._source.name.replace(new RegExp(value, 'gi'), '<span style="color:black">$&</span>');
+      });
       this.searchResults = response;
         
     });
