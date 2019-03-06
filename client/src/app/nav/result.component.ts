@@ -12,7 +12,7 @@ export class ResultComponent implements OnInit {
   @Input() type: string;
   @Input() key: string;
   
-  private html: SafeHtml;
+  public html: SafeHtml;
 
   constructor(private _sanitizer: DomSanitizer) { }
 
