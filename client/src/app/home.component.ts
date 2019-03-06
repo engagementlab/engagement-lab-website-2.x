@@ -58,15 +58,32 @@ export class HomeComponent implements OnInit {
   		paths = [],
   		circles = [],
   		patterns = [],
-  		offsets = [];
+      offsets = [],
+      mouseTool = new paper.Tool(),
+      mousePos: paper.Point,
+      followMouse = false,
+      resume = 0;
+      
   	const svgs = [
   			this.pattern1.nativeElement,
   			this.pattern2.nativeElement,
   			this.pattern3.nativeElement
   		],
   		fps = 10;
+    
+    mouseTool.onMouseMove = (evt: paper.ToolEvent) => {
+      if(followMouse)
+        mousePos = evt.point;
+    };
 
-  	let arr
+    _paper.view.on('mouseenter', () => {
+      followMouse = true;
+      resume = 0;
+    });
+    _paper.view.on('mouseleave', () => {
+      followMouse = false;
+      resume = 6;
+    });
     
   	figures[0] = {
   		x: 300,
@@ -75,7 +92,9 @@ export class HomeComponent implements OnInit {
   		points: _.times(10, () =>
       {
         return new paper.Point(_.random(150, 300), _.random(110, 250))
-      })
+      }),
+      lastPathPos: new paper.Point(0, 0),
+      lastPatternPos: new paper.Point(0, 0)
   	};
   	figures[1] = {
   		x: 270,
@@ -84,7 +103,9 @@ export class HomeComponent implements OnInit {
   		points: _.times(10, () =>
   		{
   			return new paper.Point(_.random(110, 230), _.random(350, 550))
-  		})
+  		}),
+      lastPathPos: new paper.Point(0, 0),
+      lastPatternPos: new paper.Point(0, 0)
   	};
   	figures[2] = {
   		x: 500,
@@ -93,7 +114,9 @@ export class HomeComponent implements OnInit {
   		points: _.times(10, () =>
   		{
   			return new paper.Point(_.random(450, 550), _.random(150, 320))
-  		})
+  		}),
+      lastPathPos: new paper.Point(0, 0),
+      lastPatternPos: new paper.Point(0, 0)
   	};
 
   	_.each(figures, (figure, i: number) =>
@@ -110,16 +133,34 @@ export class HomeComponent implements OnInit {
   		circles[i].blendMode = 'multiply';
   		circles[i].onFrame = (evt) =>
   		{
-  			if (offsets[i] < paths[i].length)
-  			{
-  				circles[i].position = paths[i].getPointAt(offsets[i]);
-  				offsets[i] += evt.delta * fps;
-  			}
-  			else
-  				offsets[i] = 0;
+        
+        if(resume > 0) {
+          circles[i].position.x += (figure.lastPathPos[i].x - circles[i].position.x) * .05;
+          circles[i].position.y += (figure.lastPathPos[i].y - circles[i].position.y) * .05;
+
+          if(Math.round(circles[i].position.x - figure.lastPathPos[i].x) == 0 &&
+            Math.round(circles[i].position.y - figure.lastPathPos[i].y) == 0)
+          resume--;
+        }
+        else if(!followMouse) {
+          if (offsets[i] < paths[i].length)
+          {
+            figure.lastPathPos[i] = paths[i].getPointAt(offsets[i])
+            circles[i].position = figure.lastPathPos[i];
+            offsets[i] += evt.delta * fps;
+          }
+          else
+            offsets[i] = 0;
+        }
+        else {
+          circles[i].position.x += (mousePos.x - circles[i].position.x) * .005;
+          circles[i].position.y += (mousePos.y - circles[i].position.y) * .005;
+        }
+
   		}
   		_paper.project.activeLayer.addChild(circles[i]);
-  		_paper.project.activeLayer.addChild(paths[i]);
+      _paper.project.activeLayer.addChild(paths[i]);
+      
 
   	});
 
@@ -139,16 +180,36 @@ export class HomeComponent implements OnInit {
       
   		patterns[i - 3].onFrame = (evt) =>
   		{
-  			if (offsets[i] < paths[i].length)
-  			{
-  				patterns[i - 3].position = paths[i].getPointAt(offsets[i]);
-  				offsets[i] += evt.delta * fps;
-  			}
-  			else
-          offsets[i] = 0;
+        if(resume > 0) {
           
+          patterns[i - 3].position.x += (figure.lastPatternPos[i].x - patterns[i - 3].position.x) * .05;
+          patterns[i - 3].position.y += (figure.lastPatternPos[i].y - patterns[i - 3].position.y) * .05;
+
+          if(Math.round(patterns[i - 3].position.x - figure.lastPatternPos[i].x) == 0 &&
+            Math.round(patterns[i - 3].position.y - figure.lastPatternPos[i].y) == 0)
+          resume--;
+
+        }
+        else if(!followMouse) {
+
+          if (offsets[i] < paths[i].length)
+          {
+            figure.lastPatternPos[i] = paths[i].getPointAt(offsets[i])
+            patterns[i - 3].position = paths[i].getPointAt(offsets[i]);
+            offsets[i] += evt.delta * fps;
+          }
+          else
+            offsets[i] = 0;
+            
           patterns[i - 3].rotate(.15*evt.delta*fps);
-  		}
+
+        }
+        else {
+          patterns[i - 3].position.x += (mousePos.x - patterns[i - 3].position.x) * .005;
+          patterns[i - 3].position.y += (mousePos.y - patterns[i - 3].position.y) * .005;
+        }
+      }
+      patterns[i - 3].on
 
   	});
 
