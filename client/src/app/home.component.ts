@@ -5,6 +5,8 @@ import * as AOS from 'aos';
 import * as _ from 'underscore';
 import * as ismobile from 'ismobilejs';
 import * as paper from 'paper';
+import { ConsoleReporter } from 'jasmine';
+import { del } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-home',
@@ -55,15 +57,18 @@ export class HomeComponent implements OnInit {
   	_paper.setup(this.canvasElement.nativeElement);
 
   	let figures = [],
-  		paths = [],
+  		paths:paper.Path[] = [],
   		circles = [],
   		patterns = [],
       offsets = [],
+      mouseOffsets = [],
       mouseTool = new paper.Tool(),
       mousePos: paper.Point,
       followMouse = false,
       resume = 0;
       
+var RADIUS = 70;
+var RADIUS_SCALE = 1;
   	const svgs = [
   			this.pattern1.nativeElement,
   			this.pattern2.nativeElement,
@@ -79,6 +84,8 @@ export class HomeComponent implements OnInit {
     _paper.view.on('mouseenter', () => {
       followMouse = true;
       resume = 0;
+
+      mouseOffsets = _.times(6, () => { return _.random(-250, 250); });
     });
     _paper.view.on('mouseleave', () => {
       followMouse = false;
@@ -94,7 +101,8 @@ export class HomeComponent implements OnInit {
         return new paper.Point(_.random(150, 300), _.random(110, 250))
       }),
       lastPathPos: new paper.Point(0, 0),
-      lastPatternPos: new paper.Point(0, 0)
+      lastPatternPos: new paper.Point(0, 0),
+      orbit: .5 * .5 * Math.random()
   	};
   	figures[1] = {
   		x: 270,
@@ -105,7 +113,8 @@ export class HomeComponent implements OnInit {
   			return new paper.Point(_.random(110, 230), _.random(350, 550))
   		}),
       lastPathPos: new paper.Point(0, 0),
-      lastPatternPos: new paper.Point(0, 0)
+      lastPatternPos: new paper.Point(0, 0),
+      orbit: RADIUS*.5 + (RADIUS * .5 * Math.random())
   	};
   	figures[2] = {
   		x: 500,
@@ -116,13 +125,14 @@ export class HomeComponent implements OnInit {
   			return new paper.Point(_.random(450, 550), _.random(150, 320))
   		}),
       lastPathPos: new paper.Point(0, 0),
-      lastPatternPos: new paper.Point(0, 0)
+      lastPatternPos: new paper.Point(0, 0),
+      orbit: .5 * .5 * Math.random()
   	};
 
   	_.each(figures, (figure, i: number) =>
   	{
 
-  		paths[i] = new paper.Path(figures[i].points);
+  		paths[i] = new paper.Path(figure.points);
   		paths[i].closed = true;
   		paths[i].smooth();
 
@@ -142,7 +152,7 @@ export class HomeComponent implements OnInit {
             Math.round(circles[i].position.y - figure.lastPathPos[i].y) == 0)
           resume--;
         }
-        else if(!followMouse) {
+        else {
           if (offsets[i] < paths[i].length)
           {
             figure.lastPathPos[i] = paths[i].getPointAt(offsets[i])
@@ -151,11 +161,24 @@ export class HomeComponent implements OnInit {
           }
           else
             offsets[i] = 0;
+            
+          if(followMouse) {
+            var delta = (mousePos.x - paths[i].position.x)*.005;
+            var space = Math.abs(mousePos.x - paths[i].position.x)
+            var deltaY = (mousePos.y - paths[i].position.y)*.005;
+            var spaceY = Math.abs(mousePos.y - paths[i].position.y)
+            if(space < 100) delta = 0; 
+            if(spaceY < 100) deltaY = 0; 
+            console.log(delta)
+            paths[i].translate(new paper.Point(delta, deltaY));
+          }
         }
-        else {
-          circles[i].position.x += (mousePos.x - circles[i].position.x) * .005;
-          circles[i].position.y += (mousePos.y - circles[i].position.y) * .005;
-        }
+        // else {
+          // console.log(figure.orbit)
+          // circles[i].position.x += (Math.cos(mousePos.x + mouseOffsets[i]) - circles[i].position.x) * .005;
+          // circles[i].position.y += (Math.sin(mousePos.y + mouseOffsets[i]) - circles[i].position.y) * .005;
+
+        // }
 
   		}
   		_paper.project.activeLayer.addChild(circles[i]);
@@ -164,54 +187,54 @@ export class HomeComponent implements OnInit {
 
   	});
 
-  	_.each(figures, (figure, i: number) =>
-  	{
+  	// _.each(figures, (figure, i: number) =>
+  	// {
 
-  		i = i + 3;
+  	// 	i = i + 3;
 
-  		offsets[i] = 0;
-  		paths[i] = new paper.Path(figure.points.reverse());
-  		paths[i].closed = true;
-  		paths[i].smooth();
+  	// 	offsets[i] = 0;
+  	// 	paths[i] = new paper.Path(figure.points.reverse());
+  	// 	paths[i].closed = true;
+  	// 	paths[i].smooth();
 
-  		patterns[i - 3] = _paper.project.importSVG(svgs[i - 3]);
-      patterns[i - 3].position = new paper.Point(figure.x, figure.y);
-  		// patterns[i - 3].blendMode = 'screen';
+  	// 	patterns[i - 3] = _paper.project.importSVG(svgs[i - 3]);
+    //   patterns[i - 3].position = new paper.Point(figure.x, figure.y);
+  	// 	// patterns[i - 3].blendMode = 'screen';
       
-  		patterns[i - 3].onFrame = (evt) =>
-  		{
-        if(resume > 0) {
+  	// 	patterns[i - 3].onFrame = (evt) =>
+  	// 	{
+    //     if(resume > 0) {
           
-          patterns[i - 3].position.x += (figure.lastPatternPos[i].x - patterns[i - 3].position.x) * .05;
-          patterns[i - 3].position.y += (figure.lastPatternPos[i].y - patterns[i - 3].position.y) * .05;
+    //       patterns[i - 3].position.x += (figure.lastPatternPos[i].x - patterns[i - 3].position.x) * .05;
+    //       patterns[i - 3].position.y += (figure.lastPatternPos[i].y - patterns[i - 3].position.y) * .05;
 
-          if(Math.round(patterns[i - 3].position.x - figure.lastPatternPos[i].x) == 0 &&
-            Math.round(patterns[i - 3].position.y - figure.lastPatternPos[i].y) == 0)
-          resume--;
+    //       if(Math.round(patterns[i - 3].position.x - figure.lastPatternPos[i].x) == 0 &&
+    //         Math.round(patterns[i - 3].position.y - figure.lastPatternPos[i].y) == 0)
+    //       resume--;
 
-        }
-        else if(!followMouse) {
+    //     }
+    //     else if(!followMouse) {
 
-          if (offsets[i] < paths[i].length)
-          {
-            figure.lastPatternPos[i] = paths[i].getPointAt(offsets[i])
-            patterns[i - 3].position = paths[i].getPointAt(offsets[i]);
-            offsets[i] += evt.delta * fps;
-          }
-          else
-            offsets[i] = 0;
+    //       if (offsets[i] < paths[i].length)
+    //       {
+    //         figure.lastPatternPos[i] = paths[i].getPointAt(offsets[i])
+    //         patterns[i - 3].position = paths[i].getPointAt(offsets[i]);
+    //         offsets[i] += evt.delta * fps;
+    //       }
+    //       else
+    //         offsets[i] = 0;
             
-          patterns[i - 3].rotate(.15*evt.delta*fps);
+    //       patterns[i - 3].rotate(.15*evt.delta*fps);
 
-        }
-        else {
-          patterns[i - 3].position.x += (mousePos.x - patterns[i - 3].position.x) * .005;
-          patterns[i - 3].position.y += (mousePos.y - patterns[i - 3].position.y) * .005;
-        }
-      }
-      patterns[i - 3].on
+    //     }
+    //     else {
+    //       patterns[i - 3].position.x += ((mousePos.x - patterns[i - 3].position.x) + mouseOffsets[i - 3]) * .005;
+    //       patterns[i - 3].position.y += ((mousePos.y - patterns[i - 3].position.y) + mouseOffsets[i - 3]) * .005;
+    //     }
+    //   }
+    //   patterns[i - 3].on
 
-  	});
+  	// });
 
     _paper.view.draw();
     
