@@ -66,9 +66,9 @@ const search = () => {
 						console.log("create", resp);
 					}
 				});
- */
-					boot();
+				*/
 			}
+			boot();
 		});
 	}
 
