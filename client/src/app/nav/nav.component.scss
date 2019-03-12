@@ -169,10 +169,11 @@ nav {
 
             &.active {
                 &:before {
-                    visibility: visible!important;
+                    visibility: visible !important;
                     width: 100%;
                     animation: none;
                 }
+
                 &:hover:before {
                     animation: none;
                 }
@@ -200,7 +201,7 @@ nav {
 
             &.visible {
                 &:before {
-                    visibility: visible!important;
+                    visibility: visible !important;
                 }
             }
         }
@@ -212,26 +213,59 @@ nav {
                 left: 0;
                 right: auto;
             }
-        
+
             100% {
                 left: 0;
                 right: auto;
                 width: 100%;
             }
         }
+
         @keyframes out {
             0% {
                 width: 100%;
                 left: auto;
                 right: 0;
             }
-        
+
             100% {
                 width: 0;
                 left: auto;
                 right: 0;
             }
-        } 
-        
+        }
+
+    }
+
+    #search {
+        @include placeholder {
+            color: black;
+            opacity: 1;
+        }
+
+        font-size: 1.3em;
+
+        line-height: 2;
+        letter-spacing: 0.2px;
+
+        padding: 2%;
+
+        border: none;
+        border-bottom: solid 2px black;
+
+        &.focus {
+            border-bottom-width: 4px;
+            font-weight: 500;
+        }
+    }
+
+    #results {
+        margin-top: 5%;
+    }
+
+    #jobs {
+        font-size: 2em;
+        line-height: 1.41;
+        letter-spacing: 0.5px;
     }
 }

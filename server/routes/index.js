@@ -11,7 +11,8 @@ keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
-    api: importRoutes('./api')
+    api: importRoutes('./api'),
+    search: require('./search')
 };
 let routeIncludes = [keystone.middleware.api, keystone.middleware.cors];
 
@@ -46,6 +47,9 @@ router.get('/api/events/get/:key?', routeIncludes, routes.api.events.get);
 router.get('/api/contact/get', routeIncludes, routes.api.contact.get);
 router.get('/api/jobs/get', routeIncludes, routes.api.jobs.get);
 router.get('/api/masters/get', routeIncludes, routes.api.masters.get);
+
+router.get('/search/all/:string?', routeIncludes, routes.search.all);
+
 
 router.all('/api/tv/get', routeIncludes, routes.api.tv.get);
 

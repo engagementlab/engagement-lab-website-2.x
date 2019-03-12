@@ -123,6 +123,9 @@ Filters.schema.pre('remove', function (next) {
 Filters.schema.statics.findFilter = function (resourceId, callback) {
 
 	Filters.model.findById(resourceId, function (err, result) {
+		if(err)
+			console.error(err);
+			
 		callback(err, result);
 	});
 
