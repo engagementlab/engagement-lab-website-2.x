@@ -19,7 +19,13 @@
 <hr />
 
 <h1 class="column is-full-mobile is-half-tablet uppercase no-pad">Media Design MA</h1>
-<h3 class="column is-full-mobile is-7-tablet no-pad blurb" [innerHtml]="content?.programDescription.html"></h3>
+
+<div class="columns is-mobile is-multiline">
+  <h3 class="column is-full-mobile is-7-tablet no-pad blurb" [innerHtml]="content?.programDescription.html"></h3>
+  <cdn-image class="hidden-mobile" id="cmap-logo" cloudinaryId="logos/cmap" width="300" alt="Pre-2018 'CMAP' Logo"></cdn-image>
+  <cdn-image class="hidden-tablet-plus column is-full-mobile" cloudinaryId="logos/cmap" width="300" alt="Pre-2018 'CMAP' Logo"></cdn-image>
+
+</div>
 
 <!-- <hr />
 

@@ -42,6 +42,7 @@ export class NavComponent implements AfterViewInit {
     });
 
 		this._dataSvc.isLoading.subscribe( value => {
+
         if(this.wasLoading && !value) {
           if(document.getElementById('menu-btn').classList.contains('open')) 
               this.tl.reverse();

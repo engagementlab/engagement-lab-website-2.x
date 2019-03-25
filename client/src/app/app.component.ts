@@ -44,9 +44,9 @@ export class AppComponent implements OnInit {
 
       // Adjust logo size based on page
       if(evt.url === '/')
-        document.getElementById('home').classList.add('lg');
+        document.getElementById('home').classList.remove('sm');
       else
-        document.getElementById('home').classList.remove('lg');
+        document.getElementById('home').classList.add('sm');
         
       // Reset relevant initiative page elements by default
       document.getElementById('logo-img').classList.remove('white');
