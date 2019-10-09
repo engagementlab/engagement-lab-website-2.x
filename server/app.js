@@ -18,27 +18,26 @@ const bootstrap = require('@engagementlab/el-bootstrapper'),
 	express = require('express'),
 	elasticsearch = require('elasticsearch');
 
-var app = express();
 // Needs be accessible all througout app 
 // TODO: module?
 global.elasti = undefined;
 
+const { keystone, apps } = require('./keystone');
+
 const boot = (callback) => {
-	bootstrap.start(
-		'./config.json',
-		app,
-		__dirname + '/', {
-			'name': 'Engagement Lab Home CMS'
-		},
-		() => {
 
-			app.listen(process.env.PORT);
+	keystone.prepare({ apps, dev: process.env.NODE_ENV !== 'production' })
+	.then(async ({ middlewares }) => {
+		await keystone.connect();
+		const app = express();
+		app.use(middlewares);
 
-			if(callback)
-				callback();
+		app.listen(process.env.PORT);
+	})
+	.catch(error => {
+		console.error(error);
+	});
 
-		}
-	);
 };
 
 const search = () => {
@@ -73,8 +72,8 @@ const search = () => {
 	}
 
 }
-
+/* 
 if (process.env.NODE_ENV === 'development')
 	search();
-else
+else */
 	boot();

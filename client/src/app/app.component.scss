@@ -1,15 +1,13 @@
 
 @import '../styles/_variables';
 
-#menu-overlay {
+#menu {
     position: fixed;
     z-index: 2;
-    opacity: 0;
-    display: none;
-    background-color: white;
+    background-color: $dark-sky-blue;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 25%;
     height: 100%;
 }
 
