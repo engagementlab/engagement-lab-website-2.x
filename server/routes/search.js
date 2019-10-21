@@ -13,9 +13,9 @@
  * Query elastisearch cluster
  */
 
-function find(nameString, res) {
+async function find(nameString, res) {
 
-	elasti.search({
+	const { body } = await elasti.search({
         index: ['listing', 'event', 'publication'],
 		body: {
 			query: {
@@ -25,15 +25,17 @@ function find(nameString, res) {
 				}
 			}
 		}
-	}).then((response) => {
-        res.status(200).json({
-            status: 200,
-            data: response.hits.hits
-        });
     });
-	// for (const result of response.hits.hits) {
-    //     console.log('res:', result);
-	// }
+    
+	for (const result of body.hits.hits) {
+        console.log('res:', result);
+    }
+    res.status(200).json({
+        status: 200,
+        data: body
+    });
+    //     data: response.hits.hits
+    // });
     // return res.status(200).json({
     //     status: 200,
     //     results: response.hits.hits
