@@ -1,6 +1,6 @@
 {
   "name": "engagement-lab-website-2.0",
-  "version": "2.2.9",
+  "version": "2.3.0",
   "scripts": {
     "ng": "ng",
     "start": "npm-run-all -l -p browser api",
