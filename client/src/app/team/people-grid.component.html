@@ -23,7 +23,7 @@
     <div id="list" [ngClass]="{'is-multiline' : preview === false}">
         <div #teamList class="person view-tooltip" [class.blank]="person.name === 'dummy'" *ngFor="let person of people; let i = index;">
 
-            <a *ngIf="person.name != 'dummy'" [class.white]="preview === true" routerLink="/people/{{person.key}}">
+            <a *ngIf="person.name != 'dummy'" [class.white]="preview === true" [routerLink]="cohort ? '/masters/cohort/'+person.key : '/people/'+person.key">
 
                 <div class="bg">
                 <span role="tooltip">view</span>

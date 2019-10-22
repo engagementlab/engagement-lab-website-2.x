@@ -8,53 +8,39 @@
  *
  * ==========
  */
-const keystone = global.keystone,
-    mongoose = require('mongoose'),
-    Bluebird = require('bluebird');
+const keystone = global.keystone;
 
-mongoose.Promise = require('bluebird');
-
-var buildData = (res) => {
+var buildData = async (res) => {
 
     let masters = keystone.list('Masters').model;
     let person = keystone.list('Person').model;
-    let filter = keystone.list('Filter').model;
 
-    let fields = 'programDescription.html applicationLink buttonTxt -_id';
+    let fields = 'programDescription.html applicationLink buttonTxt cohortYear -_id';
     let personFields = 'name title key image.public_id url -_id';
-    
-    // Spit on dev server
-    if(process.env.NODE_ENV === 'development')
-        mongoose.set('debug', true);
-    
-    // Get masters program text
-    let mastersData = masters.findOne({}, fields);
 
-    // We have to get the current cohort year manually since mongoose can't join,
-    // and returning all CMAP people is inefficient
-    filter.findOne({current: true, category: 'Cohort'}, '_id').exec((error, currentYr) => {
-
-        // Get current cohort
-        let peopleData = person.find({cohortYear: currentYr, category: 'CMAP'}, personFields)
-                            .sort([['sortOrder', 'ascending']]);
+    try {
         
-        // Execute queries
-        Bluebird.props({
+        // Get masters program info
+        let mastersQuery = masters.findOne({}, fields);
+        let mastersData = await mastersQuery.lean().exec();
+        
+        // Get current cohort via filter year in masters page data
+        let peopleData = await person.find({cohortYear: mastersData.cohortYear, category: 'Masters'}, personFields)
+        .sort([['sortOrder', 'ascending']]).lean().exec();
+        
+        return res.status(200).json({
+            status: 200,
+            data: { 
                 masters: mastersData,
                 people: peopleData
-            })
-            .then(results => {
-                return res.status(200).json({
-                    status: 200,
-                    data: results
-                });
-            }).catch(err => {
-                console.log(err);
-            });
-
-
+            }
         });
-    
+        
+    }
+    catch(e) {
+        console.log(e)
+        res.status(500).send(e.toString());
+    }
 }
 
 /*

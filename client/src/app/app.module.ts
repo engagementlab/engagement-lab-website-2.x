@@ -36,6 +36,8 @@ import { PublicationComponent } from './publications/publication.component';
 
 import { TeamComponent } from './team/team.component';
 import { PeopleGridComponent } from './team/people-grid.component';
+import { PersonModalComponent } from './team/person-modal/person-modal.component';
+
 import { ContactComponent } from './contact/contact.component';
 import { MastersComponent } from './masters/masters.component';
 import { PrivacyComponent } from './privacy/privacy.component';
@@ -80,6 +82,7 @@ export const routes: Routes = [
 
   { path: 'cmap', component: MastersComponent },
   { path: 'masters', component: MastersComponent },
+  { path: 'masters/cohort/:key', component: MastersComponent },
 
   { path: 'contact', component: ContactComponent },
   { path: 'press', component: ContactComponent },
@@ -130,7 +133,8 @@ export const routes: Routes = [
     InitiativeComponent,
     ProjectArchiveComponent,
     ErrorComponent,
-    ResultComponent
+    ResultComponent,
+    PersonModalComponent
   ],
   imports: [
     AppRoutingModule,

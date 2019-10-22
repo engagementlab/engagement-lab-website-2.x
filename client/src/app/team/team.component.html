@@ -1,72 +1,4 @@
-<section id="person-modal" *ngIf="currentPerson !== undefined" (click)="closePerson()">
-
-    <div id="header">
-
-        <cdn-image id="logo" cloudinaryId="logos/el-logo-team" width="141" alt="Engagement Lab logo" aria-role="image"></cdn-image>
-
-        <a id="menu-btn">
-            <span></span>
-            <span></span>
-        </a>
-    </div>
-
-    <div id="content" class="columns">
-
-        <div id="top" class="column is-two-thirds-mobile is-one-third-tablet">
-            <h1 class="uppercase">
-                {{currentPerson.name.first}} {{currentPerson.name.last}}
-            </h1>
-
-            <p class="hidden-tablet-plus">{{currentPerson.title}}</p>
-
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{currentPerson.image.public_id}}" autoFormat="true" effect="grayscale"
-                width="225" alt="Portrait image of {{currentPerson.name.first}} {{currentPerson.name.last}}"></cdn-image>
-        </div>
-
-        <div id="bio" class="column is-four-fifths-mobile is-half-tablet">
-
-            <!-- Bio markup -->
-            <p class="hidden-mobile" *ngIf="!currentPerson.cohortYear">{{currentPerson.title}}</p>
-            <p class="hidden-mobile" *ngIf="currentPerson.cohortYear">CMAP Student, {{currentPerson.cohortYear.name}}</p>
-
-            <div class="www" [innerHtml]="currentPerson.bio.html">
-            </div>
-
-            <div class="columns is-multiline is-mobile">
-
-                <div class="www column is-full-mobile" *ngIf="currentPerson.websiteURL.length > 0">
-                    <a href="{{currentPerson.websiteURL}}">{{currentPerson.websiteURL | prettyUrl}}</a>
-                </div>
-
-                <div class="column is-one-third" *ngIf="currentPerson.email.length > 0">
-                    {{currentPerson.email}}
-                </div>
-
-                <!-- Social links -->
-                <div id="social" class="column is-full columns is-mobile">
-
-                    <a href="{{currentPerson.fbURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.fbURL && currentPerson.fbURL.length > 0">
-                        <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image>
-                    </a>
-                    <a href="{{currentPerson.twitterURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.twitterURL && currentPerson.twitterURL.length > 0">
-                        <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image>
-                    </a>
-                    <a href="{{currentPerson.igURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.igURL && currentPerson.igURL.length > 0">
-                        <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image>
-                    </a>
-                    <a href="{{currentPerson.linkedInURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.linkedInURL && currentPerson.linkedInURL.length > 0">
-                        <cdn-image cloudinaryId="logos/li" width="24" alt="LinkedIn link image"></cdn-image>
-                    </a>
-                    <a href="{{currentPerson.githubURL}}" role="link" class="column is-one-fifth" *ngIf="currentPerson.githubURL && currentPerson.githubURL.length > 0">
-                        <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
+<person-modal *ngIf="currentPerson !== undefined" [person]="currentPerson" (onClose)="closePerson()"></person-modal>
 
 <section id="faculty">
     <h1 class="column is-full uppercase">Faculty Leadership</h1>
@@ -92,8 +24,8 @@
 
 </section>
 
-<section id="students">
+<!-- <section id="students">
     <h1 class="column is-full uppercase">CMAP Cohort</h1>
     <people-grid [people]="people['students']"></people-grid>
 
-</section>
+</section> -->
