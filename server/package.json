@@ -21,7 +21,7 @@
     "keystone-storage-adapter-azure": "^1.1.0",
     "moment": "^2.22.2",
     "mongoosastic": "^4.4.1",
-    "mongoose": "^5.4.7",
+    "mongoose": "^5.7.5",
     "validator": "^10.9.0"
   }
 }
