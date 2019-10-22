@@ -27,6 +27,10 @@ hr {
 
 }
 
+#link {
+    text-decoration: underline;
+}
+
 #cmap-logo {
     @include translate(0, 55%);
 }

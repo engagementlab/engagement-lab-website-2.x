@@ -68,7 +68,7 @@ Filters.add({
 		dependsOn: {
 			category: 'Person'
 		}
-	},
+	}/* ,
 
 	current: {
 		type: Boolean,
@@ -88,7 +88,7 @@ Filters.add({
 		dependsOn: {
 			category: 'Cohort'
 		}
-	}
+	} */
 });
 
 

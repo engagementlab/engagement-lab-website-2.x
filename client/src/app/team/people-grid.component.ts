@@ -10,6 +10,8 @@ export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
   
   @Input() people: any[];
   @Input() preview: boolean = false;
+  @Input() cohort: boolean = false;
+
   @ViewChildren('teamList') list: QueryList<any>;
 
   private slider: TinySliderInstance;

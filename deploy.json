@@ -40,7 +40,7 @@
       "pre-deploy-local" : "echo 'Cloning and building.';",
       "post-deploy" : "bash deploy.sh prod",
       "env": {
-        "NODE_ENV": "staging"
+        "NODE_ENV": "production"
       }
     }
 

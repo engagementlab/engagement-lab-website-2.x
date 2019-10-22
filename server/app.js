@@ -74,7 +74,7 @@ const search = () => {
 
 }
 
-if (process.env.NODE_ENV === 'development')
+if (process.env.SEARCH_ENABLED === true)
 	search();
 else
 	boot();
