@@ -1,0 +1,69 @@
+<section id="modal" (click)="closeModal()">
+
+  <div id="header">
+
+      <cdn-image id="logo" cloudinaryId="logos/el-logo-team" width="141" alt="Engagement Lab logo" aria-role="image"></cdn-image>
+
+      <a id="menu-btn">
+          <span></span>
+          <span></span>
+      </a>
+  </div>
+
+  <div id="content" class="columns">
+
+      <div id="top" class="column is-two-thirds-mobile is-one-third-tablet">
+          <h1 class="uppercase">
+              {{person.name.first}} {{person.name.last}}
+          </h1>
+
+          <p class="hidden-tablet-plus">{{person.title}}</p>
+
+          <cdn-image cloudinaryPrefix="/" cloudinaryId="{{person.image.public_id}}" autoFormat="true" effect="grayscale"
+              width="225" alt="Portrait image of {{person.name.first}} {{person.name.last}}"></cdn-image>
+      </div>
+
+      <div id="bio" class="column is-four-fifths-mobile is-half-tablet">
+
+          <!-- Bio markup -->
+          <p class="hidden-mobile" *ngIf="!person.cohortYear">{{person.title}}</p>
+          <p class="hidden-mobile" *ngIf="person.cohortYear">Masters Student, {{person.cohortYear.name}}</p>
+
+          <div class="www" [innerHtml]="person.bio.html">
+          </div>
+
+          <div class="columns is-multiline is-mobile">
+
+              <div class="www column is-full-mobile" *ngIf="person.websiteURL.length > 0">
+                  <a href="{{person.websiteURL}}">{{person.websiteURL | prettyUrl}}</a>
+              </div>
+
+              <div class="column is-one-third" *ngIf="person.email.length > 0">
+                  {{person.email}}
+              </div>
+
+              <!-- Social links -->
+              <div id="social" class="column is-full columns is-mobile">
+
+                  <a href="{{person.fbURL}}" role="link" class="column is-one-fifth" *ngIf="person.fbURL && person.fbURL.length > 0">
+                      <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image>
+                  </a>
+                  <a href="{{person.twitterURL}}" role="link" class="column is-one-fifth" *ngIf="person.twitterURL && person.twitterURL.length > 0">
+                      <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image>
+                  </a>
+                  <a href="{{person.igURL}}" role="link" class="column is-one-fifth" *ngIf="person.igURL && person.igURL.length > 0">
+                      <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image>
+                  </a>
+                  <a href="{{person.linkedInURL}}" role="link" class="column is-one-fifth" *ngIf="person.linkedInURL && person.linkedInURL.length > 0">
+                      <cdn-image cloudinaryId="logos/li" width="24" alt="LinkedIn link image"></cdn-image>
+                  </a>
+                  <a href="{{person.githubURL}}" role="link" class="column is-one-fifth" *ngIf="person.githubURL && person.githubURL.length > 0">
+                      <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image>
+                  </a>
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+</section>

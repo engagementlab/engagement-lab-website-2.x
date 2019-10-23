@@ -12,9 +12,7 @@ export class EventIndexComponent implements OnInit {
 
   public events: any[];
   public pastEvents: any[];
-
-  // @ViewChildren('projectList') projectList: QueryList<any>;
-
+  
   constructor(private _dataSvc: DataService) { 
   
     this._dataSvc.getDataForUrl('events/get/').subscribe(response => {

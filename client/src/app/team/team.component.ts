@@ -49,7 +49,7 @@ export class TeamComponent implements OnInit {
     this.gettingPerson = false;
     this.currentPerson = undefined;
     
-    this._location.go('people');
+    this._router.navigateByUrl('people');
 
     window.scrollTo(0, 0);
 

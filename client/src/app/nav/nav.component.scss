@@ -28,12 +28,11 @@ nav {
 
     #logo-img {
         max-width: 423px;
-
     }
 
     svg {
 
-        @include transform(scale(.4));
+        @include transform(scale(1));
         @include transition(transform, .4s, ease-in-out);
         transform-origin: left top;
 
@@ -41,14 +40,31 @@ nav {
             max-width: 200px;
         }
 
+        #engagement {
+            fill: black!important;
+        }
+
         #color-lab {
             @include transition(opacity, 1s, ease-in-out);
-            opacity: 0;
+            opacity: 1;
+
+            path {
+                &:nth-child(1) {
+                    fill: #f6a536!important;
+                }
+                &:nth-child(2) {
+                    fill: #00ab9e!important;
+                }
+                &:nth-child(3) {
+                    fill: #f72923!important;
+                }
+            }
         }
 
         #bw-lab {
             @include transition(opacity, 1s, ease-in-out);
-            opacity: 1;
+            opacity: 0;
+            fill: black!important;
         }
 
         path {
@@ -57,17 +73,17 @@ nav {
 
     }
 
-    &.lg {
+    &.sm {
 
         svg {
-            @include transform(scale(1));
+            @include transform(scale(.4));
 
             #color-lab {
-                opacity: 1;
+                opacity: 0;
             }
 
             #bw-lab {
-                opacity: 0;
+                opacity: 1;
             }
         }
 
@@ -235,9 +251,6 @@ nav {
             }
         }
 
-    }
-
-    #links {
     }
 
     #search {

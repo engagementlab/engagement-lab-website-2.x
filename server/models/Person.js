@@ -46,7 +46,7 @@ Person.add({
 	},
 	category: {
 		type: Types.Select,
-		options: 'faculty leadership, advisory board, staff, faculty fellows, CMAP, lab assistants',
+		options: 'faculty leadership, advisory board, staff, faculty fellows, CMAP, Masters, lab assistants',
 		default: 'staff',
 		required: true,
 		initial: true,
@@ -64,9 +64,9 @@ Person.add({
 	},
 	cohortYear: {
 		type: Types.Relationship,
-		label: 'Year(s)',
+		label: 'Year',
 		dependsOn: {
-			category: ['CMAP', 'advisory board']
+			category: ['CMAP', 'Masters', 'advisory board']
 		},
 		ref: 'Filter',
 		filters: {
@@ -79,9 +79,9 @@ Person.add({
 		type: Types.Markdown,
 		label: 'Project Description',
 		dependsOn: {
-			category: ['CMAP', 'advisory board']
+			category: ['CMAP', 'cohort', 'advisory board']
 		},
-		note: 'This field is for students and board members, and will display beneath the regular bio text on the person\'s individual page.'
+		note: 'This field is currently not shown.'
 	},
 
 	bio: {

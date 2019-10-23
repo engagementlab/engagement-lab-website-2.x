@@ -61,7 +61,24 @@ Masters.add({
 		label: 'Application link/button text',
 		required: true,
 		initial: true
-	}
+	},
+	// cohortYear: {
+	// 	type: Types.Select,
+	// 	options: '2018, 2019, 2020, 2021, 2022',
+	// 	required: true,
+	// 	initial: true
+	// }
+	
+	cohortYear: {
+		type: Types.Relationship,
+			label: 'Cohort Year to display',
+		ref: 'Filter',
+		filters: {
+			category: 'Cohort'
+		},
+		initial: true,
+		note: 'This field is for students and board members, and will display below the title.'
+	},
 });
 
 /**

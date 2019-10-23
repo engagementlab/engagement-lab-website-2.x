@@ -55,7 +55,7 @@ const searchBoot = () => {
 
 }
 
-if (process.env.NODE_ENV === 'development')
+if (process.env.SEARCH_ENABLED === true)
 	searchBoot();
 else
 	boot();

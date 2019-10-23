@@ -14,8 +14,12 @@ export class ResultComponent implements OnInit {
   @Input() type: string;
   @Input() key: string;
   
+<<<<<<< HEAD
   private nameMarkup: SafeHtml;
   private contentMarkup: SafeHtml;
+=======
+  public html: SafeHtml;
+>>>>>>> master
 
   constructor(private _sanitizer: DomSanitizer) { }
 
