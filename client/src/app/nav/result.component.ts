@@ -14,8 +14,8 @@ export class ResultComponent implements OnInit {
   @Input() type: string;
   @Input() key: string;
   
-  private nameMarkup: SafeHtml;
-  private contentMarkup: SafeHtml;
+  public nameMarkup: SafeHtml;
+  public contentMarkup: SafeHtml;
 
   constructor(private _sanitizer: DomSanitizer) { }
 
