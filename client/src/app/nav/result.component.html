@@ -1,1 +1,8 @@
-<a class="result" routerLink="/{{type}}s/{{key}}" [innerHtml]="html"></a>
+<a class="result" routerLink="/{{type}}s/{{key}}">
+    <div [innerHtml]="nameMarkup">
+    </div>
+    <p class="content" [innerHtml]="contentMarkup"></p>
+    <p class="type">{{type}}</p>
+
+    <hr />
+</a>

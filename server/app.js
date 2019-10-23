@@ -41,26 +41,21 @@ const boot = (callback) => {
 	);
 };
 
-const search = () => {
+const searchBoot = () => {
 
-	if (process.env.NODE_ENV === 'development') {
-		elasti = new Client({ node: 'http://localhost:9200' })
-
-		// global.elasti = elasti;
-
-		elasti.ping(function (error) {
-			if (error) {
-				console.trace('elasticsearch ERROR!', error);
-			} else {
-				console.log('search cluster running!');
-				boot();
-			}
-		});
-	}
+	elasti = new Client({ node: process.env.ELASTISEARCH_NODE_URL });
+	elasti.ping(function (error) {
+		if (error) {
+			console.trace('elasticsearch ERROR!', error);
+		} else {
+			console.log('search cluster running!');
+			boot();
+		}
+	});
 
 }
 
 if (process.env.NODE_ENV === 'development')
-	search();
+	searchBoot();
 else
 	boot();

@@ -206,9 +206,10 @@ Project.schema.post('save', (doc, next) => {
         type: 'project',
         id: doc._id.toString(),
         body: {
-            "name": doc.name,
-            "key": doc.key,
-            "content": doc.byline
+            'name': doc.name,
+            'key': doc.key,
+            'content': doc.byline,
+            'description': doc.description
         }
     }, function (err, resp, status) {
         if (err)

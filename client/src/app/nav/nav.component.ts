@@ -23,7 +23,7 @@ export class NavComponent implements AfterViewInit {
       {url: 'getinvolved', label: 'Get Involved'}
   ];
   public searchResults: any[];
-  public isProduction: boolean;
+  public searchEnabled: boolean;
 
   private tl: TimelineLite; 
   private btn: HTMLElement;
@@ -51,7 +51,7 @@ export class NavComponent implements AfterViewInit {
 
     });
   
-    this.isProduction = environment.production;
+    this.searchEnabled = environment.searchEnabled;
   
   }
 
@@ -141,9 +141,6 @@ export class NavComponent implements AfterViewInit {
 
     this._dataSvc.getDataForUrl('all/'+value, true).subscribe(response => {
       
-      _.each(response, (result) => {
-        result._source.name = result._source.name.replace(new RegExp(value, 'gi'), '<span style="color:black">$&</span>');
-      });
       this.searchResults = response;
         
     });
