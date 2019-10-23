@@ -140,7 +140,7 @@ export class NavComponent implements AfterViewInit {
 
     // if(value.length < 3) return;
 
-    this._dataSvc.getDataForUrl('all/'+value, true).subscribe(response => {
+    this._dataSvc.getDataForUrl('search/all/'+value, true).subscribe(response => {
       
       this.searchResults = response;
         
