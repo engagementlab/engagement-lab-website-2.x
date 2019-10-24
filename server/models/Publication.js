@@ -177,6 +177,7 @@ Publication.schema.pre('save', function (next) {
 Publication.schema.post('save', (doc, next) => {
 
   filter.model.findFilter(doc.form, function (err, result) {
+    
     // Index doc on elasticsearch
     global.elasti.index({
       index: 'publication',

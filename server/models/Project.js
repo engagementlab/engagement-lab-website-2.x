@@ -199,7 +199,7 @@ Project.schema.pre('save', function (next) {
 Project.schema.post('save', (doc, next) => {
     // Make a post to slack when this Project is updated
     // keystone.get('slack').Post(Project.model, this, true);
-
+    
     // Index doc on elasticsearch
     global.elasti.index({
         index: 'listing',
@@ -215,9 +215,6 @@ Project.schema.post('save', (doc, next) => {
         if (err)
             console.error(err);
     });
-
-    next();
-
 });
 
 /**
