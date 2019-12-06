@@ -1,22 +1,10 @@
 const keystone = global.keystone;
-const Listing = keystone.list('Listing').model,
-Promise = require('bluebird');
-mongoose = global.keystone.get('mongoose');
+const Project = keystone.list('Project').model;
 
-Promise.promisifyAll(mongoose);
-
-module.exports = (done) => {
+module.exports = async (done) => {
   
-            
-    Listing.find({}).execAsync().then((listings) => {
-        
-        return Promise.each(listings, (listingDoc) => {
-            return listingDoc.save();
-        }).then(() => {
-            console.log('Updated listings.');
-            done();
-        });
-        
-    });
+    await Project.updateMany({enabled: true}, {indexed: true});
+    
+    done();
 
 };

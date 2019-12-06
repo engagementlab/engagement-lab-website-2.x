@@ -66,6 +66,10 @@ Listing.add({
         folder: 'homepage-2.0/listings',
         autoCleanup: true, 
         note: 'This displays as the image/thumbnail when needed.'
+    },
+    indexed: {
+        type: Boolean,
+        hidden: true
     }
 });
 

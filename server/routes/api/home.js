@@ -19,6 +19,7 @@ var buildData = (options, res) => {
     let initiative = keystone.list('Initiative').model;
     let project = keystone.list('Project').model;
     let event = keystone.list('Event').model;
+    let about = keystone.list('About').model;
     
     let projectFields = 'name image.public_id key projectType byline -_id';
     let eventFields = 'name date key -_id';
@@ -43,12 +44,15 @@ var buildData = (options, res) => {
     let eventData = event.find({ enabled: true }, eventFields).sort([
         ['date', 'descending']
     ]).limit(3);
+    // Get tagline
+    let taglineData = about.findOne({}, 'tagline -_id');
     
     // Execute queries
     Bluebird.props({
             initiatives: initiativeData,
             projects: projectData,
-            events: eventData
+            events: eventData,
+            tagline: taglineData
         })
         .then(results => {
             return res.status(200).json({
@@ -56,7 +60,8 @@ var buildData = (options, res) => {
                 data: {
                     initiatives: results.initiatives,
                     projects: results.projects,
-                    events: results.events
+                    events: results.events,
+                    tagline: results.tagline.tagline
                 }
             });
         }).catch(err => {

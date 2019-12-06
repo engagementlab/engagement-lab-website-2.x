@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   public featuredProjects: any[];
   public events: any[];
   public latestEvent: any;
+  public tagline: string;
 
   public isPhone: boolean;
 
@@ -38,6 +39,7 @@ export class HomeComponent implements OnInit {
       this.initiatives = response.initiatives;    
       this.featuredProjects = response.projects;    
       this.events = response.events;    
+      this.tagline = response.tagline;
 
       this.latestEvent = response.events[response.events.length-1];
 
