@@ -50,7 +50,7 @@ export class DataService {
       this.serverProblem.next(false);
 
       let url = this.baseUrl; 
-      url +=  search ? '/search/' : '/api/';
+      url += '/api/';
       url += urlParam;
       
       return this.http.get(url)

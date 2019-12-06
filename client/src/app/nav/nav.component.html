@@ -65,14 +65,16 @@
     <div class="column columns is-full is-mobile is-multiline">
 
         <!-- Search feature only on non-prod for now -->
-        <div class="column is-6" *ngIf="!isProduction">
-            <input #searchField id="search" placeholder="What are you looking for?" type="text" size="45" (blur)="searchBlur()"
-                (focus)="searchFocus()" (keyup)="searchTyping(searchField.value)" />
+        <div class="column is-6" *ngIf="searchEnabled">
+            <input #searchField id="search" placeholder="What are you looking for?" type="text" size="45"
+                (blur)="searchBlur()" (focus)="searchFocus()" (keyup)="searchTyping(searchField.value)" />
         </div>
         <div id="jobs" class="column is-full-mobile is-4-tablet"><a routerLink="/jobs">Jobs</a></div>
         <div id="results" class="column is-full">
-            <search-result content="{{result._source.name}}" type="{{result._type}}" key="{{result._source.key}}"
+            <search-result sourceName="{{result._source.name}}" highlightedName="{{result.highlight.name}}"
+                content="{{result.highlight.content}}" type="{{result._type}}" key="{{result._source.key}}"
                 *ngFor="let result of searchResults"></search-result>
         </div>
+
     </div>
 </section>

@@ -15,8 +15,8 @@ if (process.env.NODE_ENV !== 'test')
 	require('dotenv').load();
 
 const bootstrap = require('@engagementlab/el-bootstrapper'),
-	express = require('express'),
-	elasticsearch = require('elasticsearch');
+	express = require('express');
+const { Client } = require('@elastic/elasticsearch')
 
 var app = express();
 // Needs be accessible all througout app 
@@ -41,40 +41,21 @@ const boot = (callback) => {
 	);
 };
 
-const search = () => {
+const searchBoot = () => {
 
-	if (process.env.NODE_ENV === 'development') {
-		elasti = new elasticsearch.Client({
-			host: 'localhost:9200'
-		});
-		// global.elasti = elasti;
-
-		elasti.ping({
-			// ping usually has a 3000ms timeout
-			requestTimeout: 1000
-		}, function (error) {
-			if (error) {
-				console.trace('elasticsearch ERROR!', error);
-			} else {
-				console.log('search cluster running!');
-/* 				elasti.indices.create({
-					index: 'publications'
-				}, function (err, resp, status) {
-					if (err) {
-						// console.log(err);
-					} else {
-						console.log("create", resp);
-					}
-				});
-				*/
-			}
+	elasti = new Client({ node: process.env.ELASTISEARCH_NODE_URL });
+	elasti.ping(function (error) {
+		if (error) {
+			console.trace('elasticsearch ERROR!', error);
+		} else {
+			console.log('search cluster running!');
 			boot();
-		});
-	}
+		}
+	});
 
 }
 
-if (process.env.SEARCH_ENABLED === true)
-	search();
+if (process.env.SEARCH_ENABLED === 'true')
+	searchBoot();
 else
 	boot();

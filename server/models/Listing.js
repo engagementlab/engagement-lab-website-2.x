@@ -66,6 +66,10 @@ Listing.add({
         folder: 'homepage-2.0/listings',
         autoCleanup: true, 
         note: 'This displays as the image/thumbnail when needed.'
+    },
+    indexed: {
+        type: Boolean,
+        hidden: true
     }
 });
 
@@ -91,12 +95,15 @@ Listing.schema.pre('save', function(next) {
 
 });
 
-Listing.schema.post('save', function(next) {
-    // var hook = elasticHooks.init('brand');
+/* 
+Listing.schema.post('save', function(doc, next) {
+    
+    var hook = elasticHooks.init('brand');
     // Make a post to slack when this Listing is updated
-    // keystone.get('slack').Post(Listing.schema, this, true);
+    keystone.get('slack').Post(Listing.schema, this, true);
 
-});
+    next();
+}); */
 
 // Listing.schema.plugin(mongoosastic);
 

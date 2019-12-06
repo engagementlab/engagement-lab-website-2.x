@@ -13,31 +13,45 @@
  * Query elastisearch cluster
  */
 
-function find(nameString, res) {
+async function find(nameString, res) {
 
-	elasti.search({
+	const { body } = await elasti.search({
         index: ['listing', 'event', 'publication'],
 		body: {
 			query: {
-				multi_match: {
-                    query: nameString,
-                    fields: ['_type', 'name', 'key']
+				query_string: {
+                    query:  nameString + '*',
+                    fields: ['_type', 'name', 'key', 'content']
 				}
-			}
+            },
+            highlight: {
+                require_field_match: true,
+                fields: {
+                    name: {
+                        pre_tags: [
+                            "<mark>"
+                        ],
+                        post_tags: [
+                            "</mark>"
+                        ]
+                    },
+                    content: {
+                        pre_tags: [
+                            "<mark>"
+                        ],
+                        post_tags: [
+                            "</mark>"
+                        ]
+                    }
+                }
+            }
 		}
-	}).then((response) => {
-        res.status(200).json({
-            status: 200,
-            data: response.hits.hits
-        });
     });
-	// for (const result of response.hits.hits) {
-    //     console.log('res:', result);
-	// }
-    // return res.status(200).json({
-    //     status: 200,
-    //     results: response.hits.hits
-    // });
+    
+    res.status(200).json({
+        status: 200,
+        data: body.hits.hits
+    });
 }
 
 exports.all = function (req, res) {
