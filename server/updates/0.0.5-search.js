@@ -3,7 +3,12 @@ const Publication = keystone.list('Publication').model;
 
 module.exports = async (done) => {
   
-    await Publication.updateMany({enabled: true}, {indexed: true});
+    let res = await Publication.find({});
+    // console.log(res)
+
+    // res.forEach(doc => {
+    //     doc.save();
+    // });
     
     done();
 

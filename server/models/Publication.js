@@ -72,6 +72,9 @@ Publication.add({
     type: Types.Boolean,
     label: 'Enabled',
     note: 'Determines if this publication appears on the live site.'
+  },
+  indexed: {
+    type: Boolean
   }
 }, 'Filters', {
   form: {
@@ -176,6 +179,7 @@ Publication.schema.pre('save', function (next) {
 
 Publication.schema.post('save', (doc, next) => {
 
+  // Get type of pub
   filter.model.findFilter(doc.form, function (err, result) {
     
     // Index doc on elasticsearch
@@ -184,11 +188,14 @@ Publication.schema.post('save', (doc, next) => {
       type: result.key,
       id: doc._id.toString(),
       body: {
-        "name": doc.name,
-        "key": doc.key,
-        "content": doc.blurb
+        'name': doc.title,
+        'key': doc.key,
+        'content': doc.blurb,
+        'author': doc.author,
+        'description': doc.description
       }
     }, function (err, resp, status) {
+      console.log(resp, status)
       if (err)
         console.error(err);
 
