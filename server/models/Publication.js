@@ -182,25 +182,32 @@ Publication.schema.post('save', (doc, next) => {
   // Get type of pub
   filter.model.findFilter(doc.form, function (err, result) {
     
-    // Index doc on elasticsearch
-    global.elasti.index({
-      index: 'publication',
-      type: result.key,
-      id: doc._id.toString(),
-      body: {
-        'name': doc.title,
-        'key': doc.key,
-        'content': doc.blurb,
-        'author': doc.author,
-        'description': doc.description
-      }
-    }, function (err, resp, status) {
-      console.log(resp, status)
-      if (err)
-        console.error(err);
+    
+    if (process.env.SEARCH_ENABLED === 'true') {
+    
+      // Index doc on elasticsearch
+      global.elasti.index({
+        index: 'publication',
+        type: result.key,
+        id: doc._id.toString(),
+        body: {
+          'name': doc.title,
+          'key': doc.key,
+          'content': doc.blurb,
+          'author': doc.author,
+          'description': doc.description
+        }
+      }, function (err, resp, status) {
+        console.log(resp, status)
+        if (err)
+          console.error(err);
 
-      next(err);
-    });
+        next(err);
+      });
+
+    }
+    else
+      next();
   });
 
 });
