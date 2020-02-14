@@ -39,10 +39,10 @@ Event.add({
     },
     name: {
         type: String,
-        default: 'Name of Event',
         required: true,
         initial: true,
-        index: true
+        index: true,
+        note: 'Name of Event'
     },
     date: {
         type: Date,

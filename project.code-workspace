@@ -4,10 +4,12 @@
 			"path": "."
 		},
 		{
-			"path": "/Users/Johnny/Documents/Projects/el-bootstrapper"
+			"path": "./client",
+			"name": "Client"
 		},
 		{
-			"path": "/Users/Johnny/Documents/Projects/el-scss"
+			"path": "./server",
+			"name": "Server"
 		}
 	]
 }
