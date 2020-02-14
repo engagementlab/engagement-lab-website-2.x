@@ -178,30 +178,34 @@ Publication.schema.pre('save', function (next) {
 });
 
 Publication.schema.post('save', (doc, next) => {
+  
+  if(process.env.SEARCH_ENABLED === true) {
+    // Get type of pub
+    filter.model.findFilter(doc.form, function (err, result) {
+      
+      // Index doc on elasticsearch
+      global.elasti.index({
+        index: 'publication',
+        type: result.key,
+        id: doc._id.toString(),
+        body: {
+          'name': doc.title,
+          'key': doc.key,
+          'content': doc.blurb,
+          'author': doc.author,
+          'description': doc.description
+        }
+      }, function (err, resp, status) {
+        console.log(resp, status)
+        if (err)
+          console.error(err);
 
-  // Get type of pub
-  filter.model.findFilter(doc.form, function (err, result) {
-    
-    // Index doc on elasticsearch
-    global.elasti.index({
-      index: 'publication',
-      type: result.key,
-      id: doc._id.toString(),
-      body: {
-        'name': doc.title,
-        'key': doc.key,
-        'content': doc.blurb,
-        'author': doc.author,
-        'description': doc.description
-      }
-    }, function (err, resp, status) {
-      console.log(resp, status)
-      if (err)
-        console.error(err);
-
-      next(err);
+        next(err);
+      });
     });
-  });
+  }
+
+  next();
 
 });
 

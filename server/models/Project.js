@@ -131,7 +131,22 @@ Project.add({
                 type: 'video'
             }
 
+        },
+        // Resource model reference for files
+        files: {
+            type: Types.Relationship,
+            ref: 'Resource',
+            label: 'Project Files',
+            filters: {
+                type: 'file'
+            },
+            many: true,
+            note: 'Will appear in \'Downloads\' column on individual project page if "Show Files" ticked.'
+        },
+        showFiles: {
+            type: Boolean
         }
+
     });
 
 /**
@@ -200,21 +215,25 @@ Project.schema.post('save', (doc, next) => {
     // Make a post to slack when this Project is updated
     // keystone.get('slack').Post(Project.model, this, true);
     
-    // Index doc on elasticsearch
-    global.elasti.index({
-        index: 'listing',
-        type: 'project',
-        id: doc._id.toString(),
-        body: {
-            'name': doc.name,
-            'key': doc.key,
-            'content': doc.byline,
-            'description': doc.description
-        }
-    }, function (err, resp, status) {
-        if (err)
-            console.error(err);
-    });
+    if(process.env.SEARCH_ENABLED === true) {
+        // Index doc on elasticsearch
+        global.elasti.index({
+            index: 'listing',
+            type: 'project',
+            id: doc._id.toString(),
+            body: {
+                'name': doc.name,
+                'key': doc.key,
+                'content': doc.byline,
+                'description': doc.description
+            }
+        }, function (err, resp, status) {
+            if (err)
+                console.error(err);
+        });
+    }
+    next();
+    
 });
 
 /**

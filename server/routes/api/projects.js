@@ -47,7 +47,7 @@ var buildData = (options, res) => {
 
     // Get one project
     if (options.id) {
-        let addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
+        let addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages files showFiles';
         data = list.findOne({
                     key: options.id
                 }, fields + ' ' + addtlFields)
@@ -55,7 +55,11 @@ var buildData = (options, res) => {
                 .populate({
                      path: 'format',
                      select: 'name -_id'
-                 });
+                 })
+                .populate({
+                    path: 'files',
+                    select: 'name file.filetype file.url fileSummary.html'
+                });
     }
     else if(options.archived) {
         data = list.find({
