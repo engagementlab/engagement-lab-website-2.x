@@ -1,9 +1,9 @@
-const { Keystone }        = require('@keystone-alpha/keystone');
+const { Keystone } = require('@keystone-alpha/keystone');
 const { MongooseAdapter } = require('@keystone-alpha/adapter-mongoose');
-const { GraphQLApp }      = require('@keystone-alpha/app-graphql');
-const { AdminUIApp }      = require('@keystone-alpha/app-admin-ui');
+const { GraphQLApp } = require('@keystone-alpha/app-graphql');
+const { AdminUIApp } = require('@keystone-alpha/app-admin-ui');
 
-const { GoogleAuthStrategy, } = require('@keystone-alpha/auth-passport');
+const { GoogleAuthStrategy } = require('@keystone-alpha/auth-passport');
 const { PasswordAuthStrategy } = require('@keystone-alpha/auth-password');
 const { Text } = require('@keystone-alpha/fields');
 
@@ -11,7 +11,7 @@ const cookieSecret = process.env.COOKIE_SECRET;
 const keystone = new Keystone({
   name: 'Engagement Lab',
   adapter: new MongooseAdapter(),
-  cookieSecret
+  cookieSecret,
 });
 
 // keystone.createList('Todo', {
@@ -22,55 +22,55 @@ const keystone = new Keystone({
 
 
 keystone.createList('User', {
-    fields: {
-        name: { type: Text },
-        email: { type: Text },
+  fields: {
+    name: { type: Text },
+    email: { type: Text },
 
-        // This field name must match the `idField` setting passed to the auth
-        // strategy constructor below
-        googleId: { type: Text },
-    },
+    // This field name must match the `idField` setting passed to the auth
+    // strategy constructor below
+    googleId: { type: Text },
+  },
 });
 
 
 const googleStrategy = keystone.createAuthStrategy({
-    type: GoogleAuthStrategy,
-    list: 'User',
-    config: {
-      idField: 'googleId',
-      appId: process.env.GOOGLE_CLIENT_ID,
-      appSecret: process.env.GOOGLE_CLIENT_SECRET,
-      loginPath: '/auth/',
-      callbackPath: '/auth/callback',
-  
-      // Once a user is found/created and successfully matched to the
-      // googleId, they are authenticated, and the token is returned here.
-      // NOTE: By default KeystoneJS sets a `keystone.sid` which authenticates the
-      // user for the API domain. If you want to authenticate via another domain,
-      // you must pass the `token` as a Bearer Token to GraphQL requests.
-      onAuthenticated: ({ token, item, isNewItem }, req, res) => {
-          debugger
-        console.log('Authenticated', token);
-        res.redirect('/');
-      },
-  
-      // If there was an error during any of the authentication flow, this
-      // callback is executed
-      onError: (error, req, res) => {
-        console.error(error);
-        res.redirect('/?error=Uh-oh');
-      },
+  type: GoogleAuthStrategy,
+  list: 'User',
+  config: {
+    idField: 'googleId',
+    appId: process.env.GOOGLE_CLIENT_ID,
+    appSecret: process.env.GOOGLE_CLIENT_SECRET,
+    loginPath: '/auth/',
+    callbackPath: '/auth/callback',
+
+    // Once a user is found/created and successfully matched to the
+    // googleId, they are authenticated, and the token is returned here.
+    // NOTE: By default KeystoneJS sets a `keystone.sid` which authenticates the
+    // user for the API domain. If you want to authenticate via another domain,
+    // you must pass the `token` as a Bearer Token to GraphQL requests.
+    onAuthenticated: ({ token, item, isNewItem }, req, res) => {
+      debugger;
+      console.log('Authenticated', token);
+      res.redirect('/');
     },
-  });
-    
+
+    // If there was an error during any of the authentication flow, this
+    // callback is executed
+    onError: (error, req, res) => {
+      console.error(error);
+      res.redirect('/?error=Uh-oh');
+    },
+  },
+});
+
 const authStrategy = keystone.createAuthStrategy({
-    type: PasswordAuthStrategy,
-    list: 'User',
-    config: {
-      identityField: 'username', // default: 'email'
-      secretField: 'password', // default: 'password'
-    },
-  });
+  type: PasswordAuthStrategy,
+  list: 'User',
+  config: {
+    identityField: 'username', // default: 'email'
+    secretField: 'password', // default: 'password'
+  },
+});
 
 module.exports = {
   keystone,

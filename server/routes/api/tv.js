@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Engagement Lab Website v2.x
  * Developed by Engagement Lab, 2015-2018
@@ -12,27 +11,26 @@
  *
  * ==========
  */
-const async = require('async')
-	  keystone = global.keystone;
 
-var TV = keystone.list('TV');
+// const async = require('async');
+
+const { keystone } = global;
+
+const TV = keystone.list('TV');
 
 /**
  * Get all TV Content
  */
-exports.get = function(req, res) {
+exports.get = (req, res) => {
+  const tvQuery = TV.model.find({}, 'currentBlurb slideshowImages.public_id displayVideo videoId');
 
-    let tvQuery = TV.model.find({}, 'currentBlurb slideshowImages.public_id displayVideo videoId');
+  tvQuery.exec((err, result) => {
+    if (err) return res.apiError('database error', err);
 
-    tvQuery.exec((err, result) => {
+    // Set CORS
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
-    	if (err) return res.apiError('database error', err);
-			
-			// Set CORS
-			res.header("Access-Control-Allow-Origin", "*");
-			res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-		
-			res.apiResponse(result);
-
-    });
+    res.apiResponse(result);
+  });
 };

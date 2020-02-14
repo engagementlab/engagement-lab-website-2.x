@@ -1,4 +1,4 @@
-'use strict';
+
 /**
  * Developed by Engagement Lab, 2018
  * ==============
@@ -8,45 +8,38 @@
  *
  * ==========
  */
-const keystone = global.keystone,
-    mongoose = global.keystone.get('mongoose'),
-    Bluebird = require('bluebird');
+const { keystone } = global;
+const mongoose = global.keystone.get('mongoose');
+const Bluebird = require('bluebird');
 
 mongoose.Promise = require('bluebird');
 
-var buildData = (options, res) => {
+const buildData = (options, res) => {
+  const contact = keystone.list('Contact').model;
+  const fields = 'name blurb students community -_id';
 
-    let contact = keystone.list('Contact').model;
-    let fields = 'name blurb students community -_id';
-    
-    // Get contact text
-    let contactData = contact.find({}, fields);
-    // Execute queries
-    contactData.exec();
+  // Get contact text
+  const contactData = contact.find({}, fields);
+  // Execute queries
+  contactData.exec();
 
-    Bluebird.props({
-            contact: contactData,
-        })
-        .then(results => {
-            return res.status(200).json({
-                status: 200,
-                data: results.contact
-            });
-        }).catch(err => {
-            console.log(err);
-        });
-
-}
+  Bluebird.props({
+    contact: contactData,
+  })
+    .then((results) => res.status(200).json({
+      status: 200,
+      data: results.contact,
+    })).catch((err) => {
+      console.log(err);
+    });
+};
 
 /*
  * Get data
  */
-exports.get = function (req, res) {
+exports.get = (req, res) => {
+  const options = {};
+  if (req.params.project_key) options.id = req.params.project_key;
 
-    let options = {};
-    if (req.params.project_key)
-        options.id = req.params.project_key;
-
-    return buildData(options, res);
-
-}
+  return buildData(options, res);
+};

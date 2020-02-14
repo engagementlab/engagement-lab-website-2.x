@@ -1,19 +1,19 @@
-'use strict';
+
 /**
  * Engagement Lab Website v2.x
- * 
+ *
  * CPI CPIPartner Model
  * @module models
  * @author Johnny Richardson
- * 
+ *
  * For field docs: http://keystonejs.com/docs/database/
  *
  * ==========
  */
 
-const keystone = global.keystone;
-const Types = keystone.Field.Types;
-var Listing = require('./Listing');
+const { keystone } = global;
+const { Types } = keystone.Field;
+const Listing = require('./Listing');
 const urlValidator = require('../utils').url;
 
 /**
@@ -21,25 +21,25 @@ const urlValidator = require('../utils').url;
  * @constructor
  * See: http://keystonejs.com/docs/database/#lists-options
  */
-var CPIPartner = new keystone.List('CPIPartner', 
-	{
-		label: 'Community PlanIt Partners',
-		sortable: true,
-		hidden: true,
-		inherits: Listing
-	});
+const CPIPartner = new keystone.List('CPIPartner',
+  {
+    label: 'Community PlanIt Partners',
+    sortable: true,
+    hidden: true,
+    inherits: Listing,
+  });
 
 /**
  * Model Fields
  * @main Project
  */
 CPIPartner.add({
-	url: {
-	    type: Types.Url,
-	    label: 'Project Website URL',
-	    validate: urlValidator,
-	    note: 'Must be in format "http://www.something.org"'
-	}
+  url: {
+    type: Types.Url,
+    label: 'Project Website URL',
+    validate: urlValidator,
+    note: 'Must be in format "http://www.something.org"',
+  },
 });
 
 /**
