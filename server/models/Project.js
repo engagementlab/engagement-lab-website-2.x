@@ -132,6 +132,21 @@ Project.add({
     },
 
   },
+  // Resource model reference for files
+  files: {
+    type: Types.Relationship,
+    ref: 'Resource',
+    label: 'Project Files',
+    filters: {
+      type: 'file',
+    },
+    many: true,
+    note: 'Will appear in \'Downloads\' column on individual project page if "Show Files" ticked.',
+  },
+  showFiles: {
+    type: Boolean,
+  },
+
 });
 
 /**
@@ -140,7 +155,7 @@ Project.add({
  */
 
 // Remove a given resource from all projects that referenced it (videos and articles as of now)
-Project.schema.statics.removeResourceRef = function (resourceId, callback) {
+Project.schema.statics.removeResourceRef = (resourceId, callback) => {
   Project.model.update({
     $or: [{
       videos: resourceId,
@@ -177,13 +192,13 @@ Project.schema.statics.removeResourceRef = function (resourceId, callback) {
  * Hooks
  * =============
  */
-Project.schema.pre('save', function (next) {
+Project.schema.pre('save', (next) => {
   // Save state for post hook
   this.wasNew = this.isNew;
   this.wasModified = this.isModified();
 
   // Override key w/ custom URL if defined
-  if (this.customUrl && this.customUrl.length > 0) this.key = this.customUrl;
+  if (this.customUrl && this.customUrl.length > 0) { this.key = this.customUrl; }
 
   next();
 });
@@ -192,7 +207,7 @@ Project.schema.post('save', (doc, next) => {
   // Make a post to slack when this Project is updated
   // keystone.get('slack').Post(Project.model, this, true);
 
-  if (process.env.SEARCH_ENABLED === 'true') {
+  if (process.env.SEARCH_ENABLED === true) {
     // Index doc on elasticsearch
     global.elasti.index({
       index: 'listing',
@@ -208,7 +223,6 @@ Project.schema.post('save', (doc, next) => {
       if (err) console.error(err);
     });
   }
-
   next();
 });
 

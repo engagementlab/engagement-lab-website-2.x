@@ -51,7 +51,7 @@ const buildData = (options, res) => {
 
   // Get one project
   if (options.id) {
-    const addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages';
+    const addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages files showFiles';
     data = list.findOne({
       key: options.id,
     }, `${fields} ${addtlFields}`)
@@ -59,6 +59,10 @@ const buildData = (options, res) => {
       .populate({
         path: 'format',
         select: 'name -_id',
+      })
+      .populate({
+        path: 'files',
+        select: 'name file.filetype file.url fileSummary.html',
       });
   } else if (options.archived) {
     data = list.find({
@@ -77,11 +81,12 @@ const buildData = (options, res) => {
     projects: data,
   })
     .then((results) => {
-      if (results.projects === null || results.projects.length < 1) return res.status(204).send();
+      if (results.projects === null || results.projects.length < 1) {
+        return res.status(204).send();
+      }
 
       // When retrieving one project, also get next/prev ones
-      if (options.id) getAdjacent(results, res);
-      else {
+      if (options.id) { getAdjacent(results, res); } else {
         const resultObj = {
           status: 200,
           data: results.projects,
@@ -100,8 +105,9 @@ const buildData = (options, res) => {
  */
 exports.get = (req, res) => {
   const options = {};
-  if (req.params.project_key) options.id = req.params.project_key;
+  if (req.params.project_key) { options.id = req.params.project_key; }
 
   return buildData(options, res);
 };
+
 exports.archived = (req, res) => buildData({ archived: true }, res);

@@ -108,7 +108,7 @@ Event.schema.pre('save', (next) => {
 });
 
 Event.schema.post('save', (doc, next) => {
-  if (process.env.SEARCH_ENABLED === 'true') {
+  if (process.env.SEARCH_ENABLED === true) {
     // Index doc on elasticsearch
     global.elasti.index({
       index: 'event',
@@ -123,6 +123,8 @@ Event.schema.post('save', (doc, next) => {
       if (err) console.error(err);
     });
   }
+
+  next();
 
   next();
 });

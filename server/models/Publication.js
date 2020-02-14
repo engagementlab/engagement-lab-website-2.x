@@ -176,9 +176,9 @@ Publication.schema.pre('save', (next) => {
 });
 
 Publication.schema.post('save', (doc, next) => {
-  // Get type of pub
-  filter.model.findFilter(doc.form, (err, result) => {
-    if (process.env.SEARCH_ENABLED === 'true') {
+  if (process.env.SEARCH_ENABLED === true) {
+    // Get type of pub
+    filter.model.findFilter(doc.form, (err, result) => {
       // Index doc on elasticsearch
       global.elasti.index({
         index: 'publication',
@@ -197,8 +197,10 @@ Publication.schema.post('save', (doc, next) => {
 
         next(err);
       });
-    } else next();
-  });
+    });
+  }
+
+  next();
 });
 
 
