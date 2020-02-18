@@ -1,4 +1,4 @@
-'use strict';
+
 /**
  * Developed by Engagement Lab, 2018
  * ==============
@@ -8,55 +8,47 @@
  *
  * ==========
  */
-const keystone = global.keystone,
-    mongoose = global.keystone.get('mongoose'),
-    Bluebird = require('bluebird');
+const { keystone } = global;
+const mongoose = global.keystone.get('mongoose');
+const Bluebird = require('bluebird');
 
 mongoose.Promise = require('bluebird');
 
-var buildData = (res) => {
+const buildData = (res) => {
+  const aboutFields = 'missionStatement summary1 summary2 images.public_id research workshops tools teaching design -_id';
+  const partnerFields = 'name image.public_id url -_id';
+  const personFields = 'name title key image.public_id url -_id';
 
-    let aboutFields = 'missionStatement summary1 summary2 images.public_id research workshops tools teaching design -_id';
-    let partnerFields = 'name image.public_id url -_id';
-    let personFields = 'name title key image.public_id url -_id';
+  const about = keystone.list('About').model;
+  const partner = keystone.list('Partner').model;
+  const person = keystone.list('Person').model;
 
-    let about = keystone.list('About').model;
-    let partner = keystone.list('Partner').model;
-    let person = keystone.list('Person').model;
+  // Get about
+  const aboutData = about.find({}, aboutFields);
+  // Get a couple featured projects
+  const partnersData = partner.find({}, partnerFields);
+  // Get faculty and staff
+  const peopleData = person.find({ category: { $in: ['faculty leadership', 'staff'] } }, personFields)
+    .sort([['sortOrder', 'ascending']]);
 
-    // Get about
-    let aboutData = about.find({}, aboutFields);
-    // Get a couple featured projects
-    let partnersData = partner.find({}, partnerFields);
-    // Get faculty and staff
-    let peopleData = person.find({category: {$in: ['faculty leadership', 'staff']}}, personFields)
-                           .sort([['sortOrder', 'ascending']]);
-    
-    Bluebird.props({
-            about: aboutData,
-            partners: partnersData,
-            people: peopleData
-        })
-        .then(results => {
-            return res.status(200).json({
-                status: 200,
-                data: {
-                    about: results.about,
-                    partners: results.partners,
-                    people: results.people
-                }
-            });
-        }).catch(err => {
-            console.error(err);
-        });
-
-}
+  Bluebird.props({
+    about: aboutData,
+    partners: partnersData,
+    people: peopleData,
+  })
+    .then((results) => res.status(200).json({
+      status: 200,
+      data: {
+        about: results.about,
+        partners: results.partners,
+        people: results.people,
+      },
+    })).catch((err) => {
+      console.error(err);
+    });
+};
 
 /*
  * Get data
  */
-exports.get = function (req, res) {
-
-    return buildData(res);
-
-}
+exports.get = (req, res) => buildData(res);

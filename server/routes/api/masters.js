@@ -1,4 +1,4 @@
-'use strict';
+
 /**
  * Developed by Engagement Lab, 2018-2019
  * ==============
@@ -8,46 +8,38 @@
  *
  * ==========
  */
-const keystone = global.keystone;
+const { keystone } = global;
 
-var buildData = async (res) => {
+const buildData = async (res) => {
+  const masters = keystone.list('Masters').model;
+  const person = keystone.list('Person').model;
 
-    let masters = keystone.list('Masters').model;
-    let person = keystone.list('Person').model;
+  const fields = 'programDescription.html applicationLink buttonTxt cohortYear -_id';
+  const personFields = 'name title key image.public_id url -_id';
 
-    let fields = 'programDescription.html applicationLink buttonTxt cohortYear -_id';
-    let personFields = 'name title key image.public_id url -_id';
+  try {
+    // Get masters program info
+    const mastersQuery = masters.findOne({}, fields);
+    const mastersData = await mastersQuery.lean().exec();
 
-    try {
-        
-        // Get masters program info
-        let mastersQuery = masters.findOne({}, fields);
-        let mastersData = await mastersQuery.lean().exec();
-        
-        // Get current cohort via filter year in masters page data
-        let peopleData = await person.find({cohortYear: mastersData.cohortYear, category: 'Masters'}, personFields)
-        .sort([['sortOrder', 'ascending']]).lean().exec();
-        
-        return res.status(200).json({
-            status: 200,
-            data: { 
-                masters: mastersData,
-                people: peopleData
-            }
-        });
-        
-    }
-    catch(e) {
-        console.log(e)
-        res.status(500).send(e.toString());
-    }
-}
+    // Get current cohort via filter year in masters page data
+    const peopleData = await person.find({ cohortYear: mastersData.cohortYear, category: 'Masters' }, personFields)
+      .sort([['sortOrder', 'ascending']]).lean().exec();
+
+    return res.status(200).json({
+      status: 200,
+      data: {
+        masters: mastersData,
+        people: peopleData,
+      },
+    });
+  } catch (e) {
+    console.log(e);
+    res.status(500).send(e.toString());
+  }
+};
 
 /*
  * Get data
  */
-exports.get = function (req, res) {
-
-    return buildData(res);
-
-}
+exports.get = (req, res) => buildData(res);
