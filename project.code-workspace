@@ -11,5 +11,11 @@
 			"path": "./server",
 			"name": "Server"
 		}
-	]
+	],
+	"settings": {
+	  "eslint.linkTask.enabled": true,
+	  "editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	  }
+	}
 }

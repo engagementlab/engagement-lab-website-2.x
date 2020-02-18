@@ -32,10 +32,11 @@ const boot = (callback) => {
 		},
 		() => {
 
-			app.listen(process.env.PORT);
+			// app.listen(process.env.PORT);
 
-			if(callback)
-				callback();
+			// if(callback)
+			// 	callback();
+			require('./build')
 
 		}
 	);
