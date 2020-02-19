@@ -13,7 +13,7 @@
 // Load .env vars
 if (process.env.NODE_ENV !== 'test') require('dotenv').load();
 
-const bootstrap = require('@engagementlab/el-bootstrapper');
+const bootstrap = require('el-bootstrapper');
 const express = require('express');
 const { Client } = require('@elastic/elasticsearch');
 
