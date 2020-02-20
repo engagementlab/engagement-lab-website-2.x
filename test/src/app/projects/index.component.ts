@@ -48,8 +48,15 @@ export class ProjectIndexComponent implements OnInit {
   }
 
   ngOnInit() {
-    let req = this._injector.get(REQUEST);
-    console.log(req['content'])
+    let content = this._injector.get(REQUEST)['content'];
+    this.projects = content;    
+    this.projectFeatured = _.find(content, (obj) => {
+      return obj.featured;
+    });
+    this.projectsArchived = _.filter(content, (obj) => {
+      return obj.archived;
+    });
+
   }
 
   ngAfterViewInit() {

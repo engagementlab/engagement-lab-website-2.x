@@ -10,7 +10,7 @@ var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database(path.join(__dirname, '../../../../' ,'engagement-lab.db'));
 
 // mock
-// global['window'] = win;
+global['window'] = win;
 // not implemented property and functions
 Object.defineProperty(win.document.body.style, 'transform', {
   value: () => {
@@ -35,6 +35,9 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 
+// Import module map for lazy loading
+import {MODULE_MAP} from '@nguniversal/module-map-ngfactory-loader';
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
@@ -44,6 +47,13 @@ export function app() {
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
     bootstrap: AppServerModule,
+    providers: [
+      {
+        provide: MODULE_MAP,
+        useValue: 'lazy'
+      }
+    ]
+
   }));
 
   server.set('view engine', 'html');

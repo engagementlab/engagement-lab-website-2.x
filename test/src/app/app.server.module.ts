@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { DataService } from './utils/data.service';
 import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
+import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
+
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AppModule } from './app.module';
@@ -15,6 +17,7 @@ import { AppModule } from './app.module';
     AppModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
+    ModuleMapLoaderModule,
     RouterModule,
     ServerModule,
     ServerTransferStateModule

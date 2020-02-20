@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject, PLATFORM_ID } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'cdn-image',
@@ -25,11 +26,14 @@ export class CdnImageComponent implements OnInit {
   public widthCss: SafeStyle;
   public widthAuto: SafeStyle;
   public imgId: string;
+  public show: boolean;
 
-  constructor(private _sanitizer: DomSanitizer) {
+  constructor(private _sanitizer: DomSanitizer, @Inject(PLATFORM_ID) private platform: Object) {
   }
   
   ngOnInit() {
+
+    this.show = isPlatformBrowser(this.platform);
 
     this.imgId = (this.cloudinaryPrefix ? this.cloudinaryPrefix : 'homepage-2.0/') + this.cloudinaryId;
 

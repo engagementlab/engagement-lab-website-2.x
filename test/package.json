@@ -27,6 +27,7 @@
     "@cloudinary/angular-5.x": "1.2.0-rc.0",
     "@engagementlab/el-scss": "latest",
     "@nguniversal/express-engine": "^9.0.0",
+    "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
     "@nicky-lenaers/ngx-scroll-to": "^1.0.0",
     "@types/ismobilejs": "^0.4.1",
     "@types/paper": "^0.12.3",
