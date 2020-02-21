@@ -2,9 +2,9 @@ import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } fro
 import { DataService } from './utils/data.service';
 
 import * as AOS from 'aos';
-import * as _ from 'underscore';
-import * as ismobile from 'ismobilejs';
+import * as _ from 'underscore';;
 import * as paper from 'paper';
+import isMobile from 'ismobilejs/types';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('pattern3') pattern3: ElementRef;
 
   constructor(private _dataSvc: DataService) {
-    this.isPhone = ismobile.phone;
+    this.isPhone = isMobile(window.navigator.userAgent).phone;
   }
 
   ngOnInit() {

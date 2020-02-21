@@ -1,8 +1,9 @@
 <!-- For non-responsive png/jpg images -->
-<cl-image *ngIf="show && (cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===false && svg===false && autoFormat===false" 
+<cl-image *ngIf="(cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===false && svg===false && autoFormat===false" 
     public-id="{{imgId}}" 
     secure="true"
     fetch-format="auto"
+    loading="lazy"
     crop="scale" attr.alt="{{alt}}" class="cdn-image">
 
   <!-- Photo (jpg,png) transforms -->
@@ -10,7 +11,7 @@
   
 </cl-image>
 
-<cl-image *ngIf="show && cloudinaryId !== undefined && cloudinaryId.length > 0 && autoFormat && responsive===true && svg===false" 
+<cl-image *ngIf="cloudinaryId !== undefined && cloudinaryId.length > 0 && autoFormat && responsive===true && svg===false" 
     responsive
     public-id="{{imgId}}" 
     secure="true"
@@ -24,7 +25,7 @@
 </cl-image>
 
 <!-- Automated image sizing based on client width -->
-<cl-image *ngIf="show && (cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===true && autoFormat===false && svg===false"
+<cl-image *ngIf="(cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===true && autoFormat===false && svg===false"
         secure="true" public-id="{{imgId}}" attr.width="auto:breakpoints:{{width}}" 
         sizes="100vw" client_hints="true" attr.alt="{{alt}}" [style]="widthCss" class="cdn-image">
       

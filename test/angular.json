@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "test": {
+    "cloudinary": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test/browser",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,7 +29,8 @@
             ],
             "styles": [
               "src/styles/global.scss"
-            ]
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -65,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "test:build"
+            "browserTarget": "cloudinary:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "test:build:production"
+              "browserTarget": "cloudinary:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test:build"
+            "browserTarget": "cloudinary:build"
           }
         },
         "test": {
@@ -113,27 +114,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "test:serve"
+            "devServerTarget": "cloudinary:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "test:serve:production"
+              "devServerTarget": "cloudinary:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/test/server",
+            "outputPath": "dist/server",
             "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "externalDependencies": [
-              "canvas",
-              "paper",
-              "ismobilejs",
-              "better-sqlite3",
-              "sqlite3"
-            ]
+            "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
             "production": {
@@ -144,29 +138,29 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "sourceMap": true,
-              "optimization": false
+              "sourceMap": false,
+              "optimization": true
             }
           }
         },
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "test:build",
-            "serverTarget": "test:server"
+            "browserTarget": "cloudinary:build",
+            "serverTarget": "cloudinary:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "test:build:production",
-              "serverTarget": "test:server:production"
+              "browserTarget": "cloudinary:build:production",
+              "serverTarget": "cloudinary:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "test:build:production",
-            "serverTarget": "test:server:production",
+            "browserTarget": "cloudinary:build:production",
+            "serverTarget": "cloudinary:server:production",
             "routes": [
               "/"
             ]
@@ -177,5 +171,5 @@
         }
       }
     }},
-  "defaultProject": "test"
+  "defaultProject": "cloudinary"
 }

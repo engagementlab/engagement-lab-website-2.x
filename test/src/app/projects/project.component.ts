@@ -11,7 +11,7 @@ import {
 import {
     DataService
 } from '../utils/data.service';
-import * as ismobile from 'ismobilejs';
+import isMobile from 'ismobilejs';
 
 @Component({
     selector: 'app-project',
@@ -39,7 +39,7 @@ export class ProjectComponent implements OnInit {
     
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
         
-        this.isPhone = ismobile.phone;
+        this.isPhone = isMobile(window.navigator.userAgent).phone;
 
         this._route.params.subscribe(params => {
 

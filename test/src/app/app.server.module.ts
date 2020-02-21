@@ -1,34 +1,20 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'; 
+import { NgModule } from '@angular/core';
+import { ServerModule } from '@angular/platform-server';
 
-import { DataService } from './utils/data.service';
-import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
-import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
-
+import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { AppModule } from './app.module';
+import { CommonModule } from '@angular/common';
+import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
 
 @NgModule({
-  declarations: [
-  ],
   imports: [
     AppModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    HttpClientModule,
-    ModuleMapLoaderModule,
+    CommonModule,
+    ModuleMapLoaderModule,    
     RouterModule,
     ServerModule,
-    ServerTransferStateModule
   ],
-  providers: [
-    DataService,
-    Title
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent],
 })
-
-export class AppServerModule { }
+export class AppServerModule {}

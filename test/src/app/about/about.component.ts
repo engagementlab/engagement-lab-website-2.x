@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
-import * as ismobile from 'ismobilejs';
+import isMobile from 'ismobilejs';
 
 @Component({
   selector: 'app-about',
@@ -18,8 +18,9 @@ export class AboutComponent implements OnInit {
 
   constructor(private _dataSvc: DataService) { 
     
-    this.isPhone = ismobile.phone;
-    this.isTablet = ismobile.tablet;
+    let agent = isMobile(window.navigator.userAgent);
+    this.isPhone = agent.phone;
+    this.isTablet = agent.tablet;
 
    }
 

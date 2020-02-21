@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChildren, QueryList, Injector } from '@angular/core';
+import { REQUEST } from '@nguniversal/express-engine/tokens';
 
 import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
-import * as ismobile from 'ismobilejs';
-import { REQUEST } from '@nguniversal/express-engine/tokens';
+import isMobile from 'ismobilejs';
 
 @Component({
   selector: 'app-index',
@@ -26,7 +26,7 @@ export class ProjectIndexComponent implements OnInit {
   
   constructor(private _dataSvc: DataService, private _injector: Injector) { 
     
-    this.isPhone = ismobile.phone;
+    this.isPhone = isMobile(window.navigator.userAgent).phone;
 
     // this._dataSvc.getDataForUrl('projects/get/').subscribe(response => {
     //     this.projects = response;    
