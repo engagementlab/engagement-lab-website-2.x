@@ -4,7 +4,6 @@ import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
-import isMobile from 'ismobilejs';
 
 @Component({
   selector: 'app-index',
@@ -26,8 +25,6 @@ export class ProjectIndexComponent implements OnInit {
   
   constructor(private _dataSvc: DataService, private _injector: Injector) { 
     
-    this.isPhone = isMobile(window.navigator.userAgent).phone;
-
     // this._dataSvc.getDataForUrl('projects/get/').subscribe(response => {
     //     this.projects = response;    
     //     this.projectFeatured = _.find(response, (obj) => {

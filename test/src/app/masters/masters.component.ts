@@ -67,7 +67,7 @@ export class MastersComponent implements OnInit {
     
     this._router.navigateByUrl('masters');
 
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
   }
 

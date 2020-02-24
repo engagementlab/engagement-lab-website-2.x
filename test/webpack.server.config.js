@@ -7,7 +7,7 @@ module.exports = {
   target: "node",
   mode: "none",
   // this makes sure we include node_modules and other 3rd party libraries
-  externals: [/node_modules/],
+  externals: {node_modules: /node_modules/, canvas: 'canvas commonjs', sqlite3: 'sqlite3' },
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].js"

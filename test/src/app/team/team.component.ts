@@ -51,7 +51,7 @@ export class TeamComponent implements OnInit {
     
     this._router.navigateByUrl('people');
 
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
   }
 

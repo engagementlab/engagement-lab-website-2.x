@@ -1,10 +1,8 @@
 import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from './utils/data.service';
 
-import * as AOS from 'aos';
-import * as _ from 'underscore';;
+import * as _ from 'underscore';
 import * as paper from 'paper';
-import isMobile from 'ismobilejs/types';
 
 @Component({
   selector: 'app-home',
@@ -28,9 +26,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('pattern2') pattern2: ElementRef;
   @ViewChild('pattern3') pattern3: ElementRef;
 
-  constructor(private _dataSvc: DataService) {
-    this.isPhone = isMobile(window.navigator.userAgent).phone;
-  }
+  constructor(private _dataSvc: DataService) {}
 
   ngOnInit() {
 
@@ -198,6 +194,7 @@ var RADIUS = 70;
   		paths[i].closed = true;
   		paths[i].smooth();
 
+      console.log(svgs[i-3])
   		patterns[i - 3] = _paper.project.importSVG(svgs[i - 3]);
       patterns[i - 3].position = new paper.Point(figure.x, figure.y);
       

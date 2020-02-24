@@ -37,12 +37,22 @@ export class NavComponent implements AfterViewInit {
 
   @ViewChild('searchField') searchField: ElementRef;
   @ViewChild('menuLinks') menuLinks: ElementRef;
+  @ViewChild('home') homeLogo: ElementRef;
 
   constructor(private _router: Router, private _dataSvc: DataService) {
 
     // Get nav route when nav ends
     _router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
       this.currentUrl = _router.url;
+
+      // Adjust logo size based on page
+      let classes = this.homeLogo.nativeElement.classList;
+      if(classes) {
+        if(this.currentUrl === '/')
+          classes.remove('sm');
+        else
+          classes.add('sm');
+      }
     });
 
 		this._dataSvc.isLoading.subscribe( value => {
@@ -57,9 +67,9 @@ export class NavComponent implements AfterViewInit {
 
   ngAfterViewInit() {
 
-  	let menu = document.getElementById('menu');
-    let show = document.querySelector('#menu-btn .close');
-    let hide = document.querySelector('#menu-btn .open');
+  	// let menu = document.getElementById('menu');
+    // let show = document.querySelector('#menu-btn .close');
+    // let hide = document.querySelector('#menu-btn .open');
 
 
   }

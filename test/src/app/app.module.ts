@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,9 @@ import { ProjectArchiveComponent } from './projects/archive.component';
 import { ErrorComponent } from './error/error.component';
 import { ResultComponent } from './nav/result.component';
 import { AuthorFormatPipe } from './utils/author-format.pipe';
+import { HomeComponent } from './home.component';
+import { DataService } from './utils/data.service';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore
@@ -42,16 +46,10 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
   declarations: [
     AppComponent,
 
-    CdnImageComponent
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
-    CloudinaryModule.forRoot(cloudinary, config),
-    AppRoutingModule,
+    CdnImageComponent,
 
     // Components
+    HomeComponent,
     NavComponent,
     FooterComponent,
 
@@ -72,12 +70,23 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
     // Utils
     AuthorFormatPipe,
     ButtonComponent,
-    PrettyUrlPipe
+    PrettyUrlPipe,
+  ],
+  imports: [
+    AppRoutingModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    CommonModule,
+    CloudinaryModule.forRoot(cloudinary, config),
+    HttpClientModule,
+    ScrollToModule.forRoot(),
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [RedirectService],
+  providers: [
+    DataService,
+    RedirectService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
