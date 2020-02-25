@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { ServerModule } from '@angular/platform-server';
+import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
+import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
 @NgModule({
   imports: [
@@ -14,6 +14,7 @@ import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
     ModuleMapLoaderModule,    
     RouterModule,
     ServerModule,
+    ServerTransferStateModule,
   ],
   bootstrap: [AppComponent],
 })

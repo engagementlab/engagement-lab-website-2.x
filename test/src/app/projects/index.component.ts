@@ -1,9 +1,11 @@
-import { Component, OnInit, ViewChildren, QueryList, Injector } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, Injector, Inject, PLATFORM_ID, Optional } from '@angular/core';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 
 import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
+import { isPlatformServer } from '@angular/common';
+import { TransferState, makeStateKey } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-index',
@@ -21,9 +23,11 @@ export class ProjectIndexComponent implements OnInit {
   
   public isPhone: boolean;
   
+  private STATE_KEY = makeStateKey<any>('content');
+
   @ViewChildren('projectList') projectList: QueryList<any>;
   
-  constructor(private _dataSvc: DataService, private _injector: Injector) { 
+  constructor(@Inject(PLATFORM_ID) private platformId, @Optional() @Inject(REQUEST) private _request: Injector, private _transferState: TransferState) { 
     
     // this._dataSvc.getDataForUrl('projects/get/').subscribe(response => {
     //     this.projects = response;    
@@ -44,8 +48,17 @@ export class ProjectIndexComponent implements OnInit {
   
   }
 
+
+
   ngOnInit() {
-    let content = this._injector.get(REQUEST)['content'];
+    if (isPlatformServer(this.platformId)) {
+    let content = this._request['content'];
+    this._transferState.set(this.STATE_KEY, content);
+  }
+  else {
+    
+    let content = this._transferState.get(this.STATE_KEY, null);
+    
     this.projects = content;    
     this.projectFeatured = _.find(content, (obj) => {
       return obj.featured;
@@ -53,6 +66,10 @@ export class ProjectIndexComponent implements OnInit {
     this.projectsArchived = _.filter(content, (obj) => {
       return obj.archived;
     });
+    console.log(this._request)
+
+    console.log(this.projects.length)
+  }
 
   }
 

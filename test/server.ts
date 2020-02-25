@@ -1,7 +1,7 @@
 import 'zone.js/dist/zone-node';
 import 'core-js/es/reflect';
- import 'core-js/stable/reflect'; 
- import 'core-js/features/reflect';
+import 'core-js/stable/reflect'; 
+import 'core-js/features/reflect';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
@@ -10,7 +10,6 @@ import { join } from 'path';
 import { AppServerModule } from './src/main.server';
 import { existsSync } from 'fs';
 import { MODULE_MAP } from '@nguniversal/module-map-ngfactory-loader';
-
 
 const path = require('path');
 // The Express app is exported so that it can be used by serverless Functions.
@@ -46,6 +45,12 @@ app.get('*.*', express.static(distFolder, {
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
+  
+  if(req.originalUrl === '/index.js.map') {
+    res.render(join(process.cwd(), 'dist/browser/main-es5.js.map'));
+    return;
+  }
+
   db.all("SELECT * FROM projects", (err, rows) => {
     // let data = JSON.parse(rows);
     if(err) {
@@ -55,7 +60,14 @@ app.get('*', (req, res) => {
     let dataParse = rows.map(d => JSON.parse(d.body));
     req['content'] = dataParse;
     let mobile = ismobile(req.headers['user-agent'].toLowerCase());
-    res.render(indexHtml, { req, ismobile: mobile });
+    res.render(indexHtml, { req: req, res: res, ismobile: mobile, providers: [
+      {
+        provide: 'REQUEST', useValue: (req)
+      },
+      {
+        provide: 'RESPONSE', useValue: (res)
+      }
+    ] });
   });
 
 });

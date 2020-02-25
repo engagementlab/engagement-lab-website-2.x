@@ -1,6 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
@@ -75,6 +76,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
   imports: [
     AppRoutingModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserTransferStateModule,
     CommonModule,
     CloudinaryModule.forRoot(cloudinary, config),
     HttpClientModule,
