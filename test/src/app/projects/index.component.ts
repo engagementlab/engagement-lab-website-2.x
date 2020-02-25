@@ -27,49 +27,37 @@ export class ProjectIndexComponent implements OnInit {
 
   @ViewChildren('projectList') projectList: QueryList<any>;
   
-  constructor(@Inject(PLATFORM_ID) private platformId, @Optional() @Inject(REQUEST) private _request: Injector, private _transferState: TransferState) { 
-    
-    // this._dataSvc.getDataForUrl('projects/get/').subscribe(response => {
-    //     this.projects = response;    
-    //     this.projectFeatured = _.find(response, (obj) => {
-    //       return obj.featured;
-    //     });
-    //     this.projectsArchived = _.filter(response, (obj) => {
-    //       return obj.archived;
-    //     });
-        
-    //     // get count of each project types
-    //     this.projectTypesCount = _.countBy(response, (obj) => {
-    //       return obj.projectType;
-    //     });
-    //     this.projectTypeNames = Object.keys(this.projectTypesCount);
-    //     this.projectTypesTotal = _.reduce(this.projectTypesCount, (memo, num) => { return memo + num; });
-    // });
-  
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId, @Optional() @Inject(REQUEST) private _request: Injector, private _transferState: TransferState) {}
 
 
 
   ngOnInit() {
-    if (isPlatformServer(this.platformId)) {
-    let content = this._request['content'];
-    this._transferState.set(this.STATE_KEY, content);
-  }
-  else {
-    
-    let content = this._transferState.get(this.STATE_KEY, null);
-    
-    this.projects = content;    
-    this.projectFeatured = _.find(content, (obj) => {
-      return obj.featured;
-    });
-    this.projectsArchived = _.filter(content, (obj) => {
-      return obj.archived;
-    });
-    console.log(this._request)
 
-    console.log(this.projects.length)
-  }
+    // TODO: Use datasvc
+    if (isPlatformServer(this.platformId)) {
+      let content = this._request['content'];
+      this._transferState.set(this.STATE_KEY, content);
+    }
+    else {
+      
+      let content = this._transferState.get(this.STATE_KEY, null);
+      
+      this.projects = content;    
+      this.projectFeatured = _.find(content, (obj) => {
+        return obj.featured;
+      });
+      this.projectsArchived = _.filter(content, (obj) => {
+        return obj.archived;
+      });
+          
+      //     // get count of each project types
+      //     this.projectTypesCount = _.countBy(response, (obj) => {
+      //       return obj.projectType;
+      //     });
+      //     this.projectTypeNames = Object.keys(this.projectTypesCount);
+      //     this.projectTypesTotal = _.reduce(this.projectTypesCount, (memo, num) => { return memo + num; });
+      // });
+    }
 
   }
 

@@ -1,11 +1,14 @@
 // Bulma framework
 $tablet: 768px;
-// @import "~bulma/sass/utilities/mixins";
-// @import "~bulma/sass/grid/columns";
-// @import "~bulma/sass/elements/container";
 
 // Site vars
 @import "./variables";
+
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/mixins";
+@import "~bulma/sass/grid/columns";
+@import "~bulma/sass/elements/container";
 
 body {
     font-family: 'LunchtypeRegular';
