@@ -7,10 +7,17 @@ const { GoogleAuthStrategy } = require('@keystone-alpha/auth-passport');
 const { PasswordAuthStrategy } = require('@keystone-alpha/auth-password');
 const { Text } = require('@keystone-alpha/fields');
 
+const isDocker = require('is-docker');
+
+const mongoUri = `mongodb://${isDocker() ? 'host.docker.internal' : 'localhost'}/engagement-lab`;
+console.log('[Docker] mongoUri: ', mongoUri);
+
 const cookieSecret = process.env.COOKIE_SECRET;
 const keystone = new Keystone({
   name: 'Engagement Lab',
-  adapter: new MongooseAdapter(),
+  adapter: new MongooseAdapter({
+    mongoUri,
+  }),
   cookieSecret,
 });
 

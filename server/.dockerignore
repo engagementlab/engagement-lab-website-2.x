@@ -1,9 +1,3 @@
-# Don't copy node_modules
-node_modules
-
-# Ignore built files
-dist
-
 ########## Standard Node Ignore ################################################
 
 # Logs
