@@ -1,4 +1,4 @@
-<nav class="columns is-mobile" id="nav">
+<nav #nav class="columns is-mobile" id="nav">
 
     <div class="column is-three-fifths-mobile is-three-quarters-tablet is-four-fifths-desktop">
         <a id="home" #home routerLink="/" (click)="logoClick()">
@@ -20,21 +20,21 @@
     </div>
 
     <div class="column">
-        <a id="menu-btn" (click)="openCloseNav()" class="columns uppercase">
+        <a #menuBtn id="menu-btn" (click)="openCloseNav()" class="columns uppercase">
             <div id="lines" class="column is-one-quarter">
                 <span></span>
                 <span></span>
             </div>
             <div id="label" class="column">
-                <div class="open">Menu</div>
-                <div class="close">Close</div>
+                <div #menuOpen class="open">Menu</div>
+                <div #menuClose class="close">Close</div>
             </div>
         </a>
     </div>
 
 </nav>
 
-<section id="menu" class="columns is-mobile is-multiline">
+<section #menu id="menu" class="columns is-mobile is-multiline">
 
     <!-- Tablet Landscape+ -->
     <div #menuLinks id="links" class="columns column is-full">
