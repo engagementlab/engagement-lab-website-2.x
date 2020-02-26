@@ -12,7 +12,7 @@ export class JobsComponent implements OnInit {
 
   constructor(private _dataSvc: DataService) { 
   
-    this._dataSvc.getDataForUrl('jobs/get/').subscribe(response => {
+    this._dataSvc.retrieve('jobs/get/').subscribe(response => {
       
       this.jobs = response;
       

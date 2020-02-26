@@ -12,7 +12,7 @@ export class ProjectArchiveComponent implements OnInit {
   
   constructor(private _dataSvc: DataService) { 
     
-    this._dataSvc.getDataForUrl('projects/get/archived/').subscribe(response => {
+    this._dataSvc.retrieve('projects/get/archived/').subscribe(response => {
         this.projectsArchived = response;
     });
   

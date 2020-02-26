@@ -28,7 +28,7 @@ export class MastersComponent implements OnInit {
 
   ngOnInit() {
 
-    this._dataSvc.getDataForUrl('masters/get/').subscribe(response => {
+    this._dataSvc.retrieve('masters/get/').subscribe(response => {
       
       this.content = response.masters;
       this.people = response.people;
@@ -52,7 +52,7 @@ export class MastersComponent implements OnInit {
     this.gettingPerson = true;
     this.currentPerson = undefined;
     
-    this._dataSvc.getDataForUrl('team/get/'+key).subscribe(response => {
+    this._dataSvc.retrieve('team/get/'+key).subscribe(response => {
       
       this.currentPerson = response.person;
 

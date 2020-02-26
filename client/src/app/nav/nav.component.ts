@@ -62,6 +62,14 @@ export class NavComponent implements AfterViewInit {
           classes.add('sm');
       }
     });
+      
+    _router.events.pipe(filter(e => e instanceof NavigationStart)).subscribe(e => {
+      
+      // Close menu when nav starts
+      if(this.menuBtn.nativeElement.classList.contains('open')) 
+        this.tl.reverse();
+
+    });
 
 		this._dataSvc.isLoading.subscribe( value => {
             
@@ -150,7 +158,7 @@ export class NavComponent implements AfterViewInit {
 
     // if(value.length < 3) return;
 
-    this._dataSvc.getDataForUrl('search/all/'+value, true).subscribe(response => {
+    this._dataSvc.retrieve('search/all/'+value, null, true).subscribe(response => {
       
       this.searchResults = response;
         

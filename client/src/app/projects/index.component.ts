@@ -22,17 +22,13 @@ export class ProjectIndexComponent implements OnInit {
   public projectTypesTotal: number;
   
   public isPhone: boolean;
-  
-  private STATE_KEY = makeStateKey<any>('content');
 
   @ViewChildren('projectList') projectList: QueryList<any>;
   
-  constructor(@Inject(PLATFORM_ID) private platformId, @Optional() @Inject(REQUEST) private _request: Injector, private _transferState: TransferState) {}
-
-
+  constructor() {}
 
   ngOnInit() {
-
+/* 
     // TODO: Use datasvc
     if (isPlatformServer(this.platformId)) {
       let content = this._request['content'];
@@ -50,16 +46,14 @@ export class ProjectIndexComponent implements OnInit {
         return obj.archived;
       });
           
-      //     // get count of each project types
-      //     this.projectTypesCount = _.countBy(response, (obj) => {
-      //       return obj.projectType;
-      //     });
-      //     this.projectTypeNames = Object.keys(this.projectTypesCount);
-      //     this.projectTypesTotal = _.reduce(this.projectTypesCount, (memo, num) => { return memo + num; });
-      // });
+          // get count of each project types
+          this.projectTypesCount = _.countBy(response, (obj) => {
+            return obj.projectType;
+          });
+          this.projectTypeNames = Object.keys(this.projectTypesCount);
+          this.projectTypesTotal = _.reduce(this.projectTypesCount, (memo, num) => { return memo + num; });
+      }); */
     }
-
-  }
 
   ngAfterViewInit() {
 

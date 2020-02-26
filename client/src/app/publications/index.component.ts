@@ -21,7 +21,7 @@ export class PublicationIndexComponent implements OnInit {
 
   constructor(private _dataSvc: DataService) { 
   
-    this._dataSvc.getDataForUrl('publications/get/').subscribe(response => {
+    this._dataSvc.retrieve('publications/get/').subscribe(response => {
       
         this.pubs = response;
                
