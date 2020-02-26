@@ -24,24 +24,24 @@ export class DataService {
   public previousUrl: string;
   public currentUrl: string;
 
-  private baseUrl: string;
+  private devUrl: string;
 
-  constructor(private http: HttpClient, private _router: Router) { 
+  constructor(private http: HttpClient, private _router: Router) {
 
-  	this.baseUrl = 'http://localhost:3000';
+  	this.devUrl = '//localhost:3000';
 
     _router.events.subscribe(event => {
-      
+
       this.currentUrl = this._router.url;
       // Track prior url
       if (event instanceof NavigationStart) {
         this.previousUrl = this.currentUrl;
         this.currentUrl = event.url;
       }
-      
-    }); 
+
+    });
   }
-	
+
   public getDataForUrl(urlParam: string, search: boolean = false): Observable<any> {
 
       if(!search)
@@ -49,13 +49,13 @@ export class DataService {
 
       this.serverProblem.next(false);
 
-      let url = this.baseUrl; 
+      let url = this.devUrl;
       url += '/api/';
       url += urlParam;
-      
+
       return this.http.get(url)
       .map((res:any)=> {
-        
+
         // Catch no data as problem on backend
         if(res === null) {
           // this.serverProblem.next(true);
@@ -63,16 +63,16 @@ export class DataService {
           return;
         }
 
-        if(!search)        
+        if(!search)
           this.isLoading.next(false);
-        
+
         return res.data;
       })
-      .catch((error:any) => { 
+      .catch((error:any) => {
           this.isLoading.next(false);
           return throwError(error);
       });
 
   }
-  
+
 }

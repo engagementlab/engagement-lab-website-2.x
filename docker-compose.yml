@@ -1,0 +1,21 @@
+# elhome docker-compose.yml
+# Notes:
+#   - Run with `docker-compose up --build` to rebuild images if files change
+#   - API uses the .env file that we were already using
+
+version: "3"
+services:
+  client:
+    build: ./client
+    ports:
+      - "3001:80"
+    depends_on:
+      - "api"
+  api:
+    env_file:
+      - ./server/.env
+    environment:
+      - NODE_ENV=production
+    build: ./server
+    ports:
+      - "3000:3000"
