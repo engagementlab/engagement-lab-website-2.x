@@ -9,7 +9,7 @@ import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
 import { existsSync } from 'fs';
-import { MODULE_MAP } from '@nguniversal/module-map-ngfactory-loader';
+// import { MODULE_MAP } from '@nguniversal/module-map-ngfactory-loader';
 
 const path = require('path');
 // The Express app is exported so that it can be used by serverless Functions.
@@ -25,12 +25,6 @@ const db = new sqlite3.Database(path.join(__dirname, '../../../' ,'engagement-la
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
 app.engine('html', ngExpressEngine({
   bootstrap: AppServerModule,
-  providers: [
-    {
-      provide: MODULE_MAP,
-      useValue: 'lazy'
-    }
-  ]
 }));
 
 app.set('view engine', 'html');
@@ -52,7 +46,6 @@ app.get('*', (req, res) => {
   }
 
   db.all("SELECT * FROM projects", (err, rows) => {
-    // let data = JSON.parse(rows);
     if(err) {
       console.error(err);
       return;
@@ -87,3 +80,4 @@ const moduleFilename = mainModule && mainModule.filename || '';
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }
+export * from './src/main.server';
