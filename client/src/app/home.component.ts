@@ -30,7 +30,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this._dataSvc.retrieve('homepage').subscribe(response => {
+    this._dataSvc.getSet('homepage').subscribe(response => {
+
+      if(response.cached) { 
+        console.log('saved')
+        return;
+      }
      
       this.initiatives = response.initiatives;    
       this.featuredProjects = response.projects;    

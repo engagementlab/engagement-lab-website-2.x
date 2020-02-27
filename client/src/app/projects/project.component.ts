@@ -54,7 +54,7 @@ export class ProjectComponent implements OnInit {
                 return;
             }
 
-            this._dataSvc.retrieve('projects/get/' + params['key']).subscribe(response => {
+            this._dataSvc.getSet('projects/get/' + params['key']).subscribe(response => {
                 this.setContent(response);
                 this.hidden = false;
             });

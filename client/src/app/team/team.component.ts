@@ -37,7 +37,7 @@ export class TeamComponent implements OnInit {
 
     this.gettingPerson = true;
     this.currentPerson = undefined;
-    this._dataSvc.retrieve('team/get/'+key).subscribe(response => {
+    this._dataSvc.getSet('team/get/'+key).subscribe(response => {
       
       this.currentPerson = response.person;
 
@@ -65,7 +65,7 @@ export class TeamComponent implements OnInit {
       // return;
     }
 
-    this._dataSvc.retrieve('team/get/').subscribe(response => {   
+    this._dataSvc.getSet('team/get/').subscribe(response => {   
       
       this.people['faculty'] = _.filter(response.staff, (person) => { return person.category === 'faculty leadership'; });
       this.people['staff'] = _.filter(response.staff, (person) => { return person.category === 'staff'; });

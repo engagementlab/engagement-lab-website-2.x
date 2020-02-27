@@ -1,5 +1,7 @@
 export const environment = {
   production: true,
   qa: true,
-  searchEnabled: true
+  development: false,
+  searchEnabled: true,
+  universal: true
 };

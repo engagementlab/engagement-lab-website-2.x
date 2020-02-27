@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
 
-    this._dataSvc.retrieve('about/get/').subscribe(response => {
+    this._dataSvc.getSet('about/get/').subscribe(response => {
       this.about = response.about[0];    
       this.partners = response.partners;    
       this.people = response.people;    

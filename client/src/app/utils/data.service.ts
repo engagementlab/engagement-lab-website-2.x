@@ -52,28 +52,36 @@ export class DataService {
     });
   }
 
-  public retrieve(page: string, param: string = '', search: boolean = false): Observable<any> {
+  public getSet(page: string, param: string = null, search: boolean = false): Observable<any> {
 
     if(!search)
       this.isLoading.next(true);
 
     // If universal build, cache express content data in transferstate
     if (isPlatformServer(this.platformId)) {
+      return new Observable(sub => {
+        let content = this._request['content'];
+        this._transferState.set(this.STATE_KEY, content);
 
-      let content = this._request['content'];
-      this._transferState.set(this.STATE_KEY, content);
+        sub.next({cached: true});
+      });
 
     }
     else {
 
-      // if(!(environment.production && environment.qa)) {        
-        let result = this._transferState.get(this.STATE_KEY, null);
-        if(result) return result;
-      // }
+      console.log('CLIENT')
+      if(environment.universal) {        
+       return new Observable(sub => {
+          let result = this._transferState.get(this.STATE_KEY, null);
+          sub.next(result);
+          this.isLoading.next(false);
+        });
+      }
 
       this.serverProblem.next(false);
 
-      let url = `${this.devUrl}/api/${page}/get/${param}`;
+      let url = `${this.devUrl}/api/${page}/get/`;
+      if(param) url = url+param;
      
       return this.http.get(url)
       .map((res:any)=> {
