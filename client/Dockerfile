@@ -2,7 +2,7 @@
 FROM node:13-slim as build
 
 # For node-gyp (node-sass)
-#RUN apt-get update && apt-get install -y build-essential python
+RUN apt-get update && apt-get install -y build-essential python
 
 WORKDIR /app/client
 
@@ -16,8 +16,11 @@ RUN npm ci
 
 COPY . .
 
+# Prerender app (fill data from API)
+RUN npm run prerender:compile && ng run prerender:express
+
 # Run Angular build in production mode
-RUN ./node_modules/@angular/cli/bin/ng build --prod="true" --progress
+#RUN ng build --prod="true" --progress
 
 
 ##########  Part 2: Serve compiled files  ######################################
