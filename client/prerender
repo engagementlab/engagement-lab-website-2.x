@@ -7,5 +7,5 @@ echo "Running prerender"
 
 nvm use;
 
-npm run prerender:express;
-./node_modules/@angular/cli/bin/ng run prerender:compile;
+npm run prerender:express &
+npm run prerender:compile;
