@@ -73,6 +73,7 @@
     "protractor": "~5.4.3",
     "sass": "^1.26.0",
     "sass-loader": "^8.0.2",
+    "sqlite": "^3.0.3",
     "ts-loader": "^6.2.1",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",

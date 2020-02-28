@@ -1,11 +1,7 @@
-import { Component, OnInit, ViewChildren, QueryList, Injector, Inject, PLATFORM_ID, Optional } from '@angular/core';
-import { REQUEST } from '@nguniversal/express-engine/tokens';
-
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
-import { isPlatformServer } from '@angular/common';
-import { TransferState, makeStateKey } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-index',
@@ -25,35 +21,31 @@ export class ProjectIndexComponent implements OnInit {
 
   @ViewChildren('projectList') projectList: QueryList<any>;
   
-  constructor() {}
+  constructor(private _dataSvc: DataService) {}
 
   ngOnInit() {
-/* 
-    // TODO: Use datasvc
-    if (isPlatformServer(this.platformId)) {
-      let content = this._request['content'];
-      this._transferState.set(this.STATE_KEY, content);
-    }
-    else {
+    
+    this._dataSvc.getSet('projects').subscribe(response => {
       
-      let content = this._transferState.get(this.STATE_KEY, null);
-      
-      this.projects = content;    
-      this.projectFeatured = _.find(content, (obj) => {
+      this.projects = response;    
+      this.projectFeatured = _.find(response, (obj) => {
         return obj.featured;
       });
-      this.projectsArchived = _.filter(content, (obj) => {
+      this.projectsArchived = _.filter(response, (obj) => {
         return obj.archived;
       });
           
-          // get count of each project types
-          this.projectTypesCount = _.countBy(response, (obj) => {
-            return obj.projectType;
-          });
-          this.projectTypeNames = Object.keys(this.projectTypesCount);
-          this.projectTypesTotal = _.reduce(this.projectTypesCount, (memo, num) => { return memo + num; });
-      }); */
-    }
+      // get count of each project types
+      this.projectTypesCount = _.countBy(response, (obj) => {
+        return obj.projectType;
+      });
+
+      this.projectTypeNames = Object.keys(this.projectTypesCount);
+      this.projectTypesTotal = _.reduce(this.projectTypesCount, (memo, num) => { return memo + num; });
+
+    });
+
+  }
 
   ngAfterViewInit() {
 
