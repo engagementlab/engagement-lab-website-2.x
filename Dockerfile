@@ -34,11 +34,18 @@ RUN npm ci
 COPY ./client .
 
 
+##########  Step 3.1: Install client content  ##################################
+
+WORKDIR /app/client/content
+
+RUN npm ci
+
+
 ##########  Step 4: Build static site  #########################################
 
-# We're already in /app/client
+WORKDIR /app/client
 
-RUN npm run prerender:compile && npm run prerender:express
+RUN npm run prerender:express & npm run prerender:compile
 
 
 ##########  Step 5: Serve compiled content  ####################################
