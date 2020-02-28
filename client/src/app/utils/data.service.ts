@@ -16,8 +16,6 @@ import 'rxjs/add/observable/of';
 import { environment } from '../../environments/environment';
 
 import * as _ from 'underscore';
-// import * as path from 'path';
-import * as sqlite3 from 'sqlite3';
 
 @Injectable()
 export class DataService {
@@ -29,7 +27,7 @@ export class DataService {
   public currentUrl: string;
 
   private devUrl: string;
-  private db: any;
+  private buildUrl: string;
   
   private STATE_KEY = makeStateKey<any>('content');
 
@@ -39,10 +37,7 @@ export class DataService {
     private http: HttpClient, 
     private _router: Router) {
 
-      // console.log('__dirname',__dirname)
-    // this.db = new sqlite3.Database(path.join(__dirname, '../../../' ,'engagement-lab.db'));
-
-  	this.devUrl = '//localhost:3000';
+  	this.devUrl = 'http://localhost:3000';
 
     _router.events.subscribe(event => {
 
@@ -63,49 +58,38 @@ export class DataService {
 
     // If universal build, cache express content data in transferstate
     if (isPlatformServer(this.platformId)) {
-      return new Observable(sub => {
-        // db.all("SELECT * FROM homepage", (err, rows) => {
-        // let content = this._request['content'];
+    //   return new Observable(sub => {
+    //     // db.all("SELECT * FROM homepage", (err, rows) => {
+    //     // let content = this._request['content'];
 
-        sub.next({})
-      });
-
-    }
-    else {
-
-      console.log('CLIENT')
-      if(environment.universal) {        
-       return new Observable(sub => {
-          let result = this._transferState.get(this.STATE_KEY, null);
-          sub.next(result);
-          this.isLoading.next(false);
-        });
-      }
-
-      this.serverProblem.next(false);
-
-      let url = `${this.devUrl}/api/${page}/get/`;
-      if(param) url = url+param;
+    //     sub.next({})
+    //   });
      
+      let url = `${this.devUrl}/get/${page}`;
+      if(param) url = url+param;
+    
       return this.http.get(url)
       .map((res:any)=> {
-
-        // Catch no data as problem on backend
-        if(res === null) {
-          // this.serverProblem.next(true);
-          this._router.navigateByUrl('/error');
-          return;
-        }
-
-        if(!search)
-          this.isLoading.next(false);
-
-        return res.data;
+        this._transferState.set(this.STATE_KEY, res);
+        return res;
       })
       .catch((error:any) => {
           this.isLoading.next(false);
           return throwError(error);
       });
+
+
+    }
+    else {
+
+      console.log('CLIENT')
+      // if(environment.universal) {        
+       return new Observable(sub => {
+          let result = this._transferState.get(this.STATE_KEY, null);
+          sub.next(result);
+          this.isLoading.next(false);
+        });
+      // }
 
     }
 

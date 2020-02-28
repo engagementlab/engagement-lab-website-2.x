@@ -59,7 +59,7 @@ const boot = (callback) => {
 
       if (callback) callback();
 
-    logger.info(colors.bgCyan.bold.black('<==== Running Data Builder ====>'));
+      logger.info(colors.bgCyan.bold.black('<==== Running Data Builder ====>'));
       require('./build')
     },
   );
