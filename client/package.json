@@ -6,8 +6,8 @@
     "start": "npm-run-all -l -p browser api",
     "browser": "ng serve",
     "api": "cd ../server; nodemon",
-    "build": "ng build --configuration=production --prod",
-    "build-qa": "ng build --configuration=qa --prod",
+    "build": "ng build --configuration=production --progress",
+    "build-qa": "ng build --configuration=qa --progress",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
