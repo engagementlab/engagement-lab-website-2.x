@@ -8,19 +8,15 @@ WORKDIR /app/client
 
 ENV PATH /app/client/node_modules/.bin:$PATH
 ENV NODE_OPTIONS --max-old-space-size=1024
-# ENV npm_config_loglevel silent
 
 COPY package*.json ./
 
 # Install dependencies
 RUN npm ci
-#RUN npm install --quiet > /dev/null 2>&1
-#RUN npm install -g @angular/cli@7.1 --quiet
 
 COPY . .
 
-# Build
-#RUN ng build --aot --buildOptimizer --prod --progress
+# Run Angular build in production mode
 RUN ./node_modules/@angular/cli/bin/ng build --prod="true" --progress
 
 
