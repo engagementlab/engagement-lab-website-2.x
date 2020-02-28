@@ -8,7 +8,4 @@ echo "Running prerender"
 nvm use;
 
 npm run prerender:express &
-SERVERPID=$! &
-echo $SERVERPID &
 npm run prerender:compile;
-kill -9 $SERVERPID;
