@@ -3,7 +3,6 @@ import { isPlatformServer } from '@angular/common';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router, NavigationStart } from '@angular/router';
 import { makeStateKey, TransferState } from '@angular/platform-browser';
-import { REQUEST } from '@nguniversal/express-engine/tokens';
 
 import { Subject } from 'rxjs';
 import { Observable } from 'rxjs/Observable';
@@ -17,6 +16,8 @@ import 'rxjs/add/observable/of';
 import { environment } from '../../environments/environment';
 
 import * as _ from 'underscore';
+// import * as path from 'path';
+import * as sqlite3 from 'sqlite3';
 
 @Injectable()
 export class DataService {
@@ -28,15 +29,18 @@ export class DataService {
   public currentUrl: string;
 
   private devUrl: string;
+  private db: any;
   
   private STATE_KEY = makeStateKey<any>('content');
 
   constructor(
     @Inject(PLATFORM_ID) private platformId, 
-    @Optional() @Inject(REQUEST) private _request: Injector, 
     private _transferState: TransferState,
     private http: HttpClient, 
     private _router: Router) {
+
+      // console.log('__dirname',__dirname)
+    // this.db = new sqlite3.Database(path.join(__dirname, '../../../' ,'engagement-lab.db'));
 
   	this.devUrl = '//localhost:3000';
 
@@ -60,10 +64,10 @@ export class DataService {
     // If universal build, cache express content data in transferstate
     if (isPlatformServer(this.platformId)) {
       return new Observable(sub => {
-        let content = this._request['content'];
-        this._transferState.set(this.STATE_KEY, content);
+        // db.all("SELECT * FROM homepage", (err, rows) => {
+        // let content = this._request['content'];
 
-        sub.next({cached: true});
+        sub.next({})
       });
 
     }

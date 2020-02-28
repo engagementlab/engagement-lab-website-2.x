@@ -16,31 +16,31 @@ import { RedirectService } from './utils/redirect.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },  
+  // { path: 'about', component: AboutComponent },  
   
-  { path: 'projects', component: ProjectIndexComponent },
-  { path: 'projects/archive', component: ProjectArchiveComponent },
+  // { path: 'projects', component: ProjectIndexComponent },
+  // { path: 'projects/archive', component: ProjectArchiveComponent },
   
-  { path: 'getinvolved', component: ContactComponent },
+  // { path: 'getinvolved', component: ContactComponent },
 
-  { path: 'cmap', component: MastersComponent },
-  { path: 'masters', component: MastersComponent },
-  { path: 'masters/cohort/:key', component: MastersComponent },
+  // { path: 'cmap', component: MastersComponent },
+  // { path: 'masters', component: MastersComponent },
+  // { path: 'masters/cohort/:key', component: MastersComponent },
 
-  { path: 'contact', component: ContactComponent },
-  { path: 'press', component: ContactComponent },
+  // { path: 'contact', component: ContactComponent },
+  // { path: 'press', component: ContactComponent },
 
-  { path: 'privacy', component: PrivacyComponent },
-  { path: 'jobs', component: JobsComponent },
+  // { path: 'privacy', component: PrivacyComponent },
+  // { path: 'jobs', component: JobsComponent },
   
-  { path: 'error', component: ErrorComponent },
+  // { path: 'error', component: ErrorComponent },
 
-  { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
+  // { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
 
-  { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
-      externalUrl: 'https://www.launchpad6.com/contestpad'
-    }
-  },
+  // { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
+  //     externalUrl: 'https://www.launchpad6.com/contestpad'
+  //   }
+  // },
 
 ];
 

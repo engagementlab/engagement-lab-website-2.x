@@ -32,22 +32,24 @@ export class HomeComponent implements OnInit {
 
     this._dataSvc.getSet('homepage').subscribe(response => {
 
-      if(response.cached) { 
+      if(response && response.cached) { 
         console.log('saved')
         return;
       }
      
-      this.initiatives = response.initiatives;    
-      this.featuredProjects = response.projects;    
-      this.events = response.events;    
-      this.tagline = response.tagline;
+      // this.initiatives = response.initiatives;    
+      // this.featuredProjects = response.projects;    
+      // this.events = response.events;    
+      // this.tagline = response.tagline;
 
-      this.latestEvent = response.events[response.events.length-1];
+      // this.latestEvent = response.events[response.events.length-1];
 
     });
   }
 
   ngAfterViewInit()  {
+
+    return;
 
   	this.initiativeList.changes.subscribe(t =>
   	{

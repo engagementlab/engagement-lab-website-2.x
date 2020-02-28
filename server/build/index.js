@@ -8,7 +8,7 @@
  * ==========
  */
 
-require('dotenv').load();
+const colors = require('colors');
 const db = require('better-sqlite3')('../engagement-lab.db');
 
 const MakeBuild = async function () {
@@ -20,22 +20,14 @@ const MakeBuild = async function () {
     const mongo = mongoose.connection;
     mongo.on('error', console.error.bind(console, 'connection error:'));
 
-        const winston = require('winston');
-        const logger = winston.createLogger({
-            level: 'info',
-            format: winston.format.simple(),
-            transports: [
-                new(winston.transports.Console)({level: 'info'})
-            ]
-        });
-
     logger.info('----' + new Date() + '----');
 
      try {
         db.pragma('journal_mode = WAL');
-        const create = db.prepare('CREATE TABLE IF NOT EXISTS projects(key text, body text)');
-        create.run();
-        require('./routes/projects')(db);
+        // const create = db.prepare('CREATE TABLE IF NOT EXISTS projects(key text, body text)');
+        // create.run();
+        // require('./routes/projects')(db);
+        require('./routes/homepage')(db, colors);
     }
     catch(e) {
         logger.error('Mongo error', e);
