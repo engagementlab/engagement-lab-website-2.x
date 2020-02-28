@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "elab-web": {
@@ -47,7 +47,7 @@
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
+              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {
@@ -95,10 +95,11 @@
               "outputHashing": "all",
               "sourceMap": true,
               "extractCss": true,
-              "namedChunks": false,
+              "namedChunks": true,
+              "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": false,
+              "vendorChunk": true,
+              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -238,6 +239,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "elab-web"
 }

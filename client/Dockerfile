@@ -10,7 +10,7 @@ ENV PATH /app/client/node_modules/.bin:$PATH
 ENV NODE_OPTIONS --max-old-space-size=1024
 # ENV npm_config_loglevel silent
 
-COPY package*.json /app/client/
+COPY package*.json ./
 
 # Install dependencies
 RUN npm ci
@@ -21,8 +21,7 @@ COPY . .
 
 # Build
 #RUN ng build --aot --buildOptimizer --prod --progress
-RUN /app/client/node_modules/@angular/cli/bin/ng \
-  build --aot --buildOptimizer --prod --progress
+RUN ./node_modules/@angular/cli/bin/ng build --prod="true" --progress
 
 
 ##########  Part 2: Serve compiled files  ######################################
