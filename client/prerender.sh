@@ -7,5 +7,8 @@ echo "Running prerender"
 
 nvm use;
 
-npm run prerender:express &
+# npm run prerender:express &
+# SERVERPID=`echo $!` &
 npm run prerender:compile;
+# echo "PID of API server: ${SERVERPID}; attempting to kill." &
+# kill -9 $SERVERPID;

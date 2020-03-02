@@ -3,6 +3,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 
+import { ScullyLibModule } from '@scullyio/ng-lib';
+
+
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -75,12 +78,13 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: 'elabHome' }),
     BrowserTransferStateModule,
     CommonModule,
     CloudinaryModule.forRoot(cloudinary, config),
     HttpClientModule,
     ScrollToModule.forRoot(),
+    ScullyLibModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -8,6 +8,8 @@ import { Subject } from 'rxjs';
 import { Observable } from 'rxjs/Observable';
 import { throwError } from 'rxjs';
 
+import {isScullyGenerated, TransferStateService} from '@scullyio/ng-lib';
+
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -33,7 +35,7 @@ export class DataService {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId, 
-    private _transferState: TransferState,
+    private _transferState: TransferStateService,
     private http: HttpClient, 
     private _router: Router) {
 
@@ -53,24 +55,19 @@ export class DataService {
 
   public getSet(page: string, param: string = null, search: boolean = false): Observable<any> {
 
+    let stateKey = makeStateKey<any>(`content-${page}`)
     if(!search)
       this.isLoading.next(true);
 
-    // If universal build, cache express content data in transferstate
-    if (isPlatformServer(this.platformId)) {
-    //   return new Observable(sub => {
-    //     // db.all("SELECT * FROM homepage", (err, rows) => {
-    //     // let content = this._request['content'];
-
-    //     sub.next({})
-    //   });
+    // If universal build, cache data from content API in transferstate
+    if (!isScullyGenerated()) {
      
       let url = `${this.devUrl}/get/${page}`;
       if(param) url = url+param;
     
       return this.http.get(url)
-      .map((res:any)=> {
-        this._transferState.set(this.STATE_KEY, res);
+      .pipe((res:any)=> {
+        this._transferState.setState(stateKey, res);
         return res;
       })
       .catch((error:any) => {
@@ -85,10 +82,14 @@ export class DataService {
       console.log('CLIENT')
       // if(environment.universal) {        
        return new Observable(sub => {
-          let result = this._transferState.get(this.STATE_KEY, null);
-          sub.next(result);
+          this._transferState.getState(stateKey).subscribe(res => {
+            console.log(res)
+            // sub.next(result);
+            // this._transferState.remove(stateKey)
+          });
           this.isLoading.next(false);
         });
+        
       // }
 
     }

@@ -27,22 +27,6 @@ export class ProjectIndexComponent implements OnInit {
     
     this._dataSvc.getSet('projects').subscribe(response => {
       
-      this.projects = response;    
-      this.projectFeatured = _.find(response, (obj) => {
-        return obj.featured;
-      });
-      this.projectsArchived = _.filter(response, (obj) => {
-        return obj.archived;
-      });
-          
-      // get count of each project types
-      this.projectTypesCount = _.countBy(response, (obj) => {
-        return obj.projectType;
-      });
-
-      this.projectTypeNames = Object.keys(this.projectTypesCount);
-      this.projectTypesTotal = _.reduce(this.projectTypesCount, (memo, num) => { return memo + num; });
-
     });
 
   }
