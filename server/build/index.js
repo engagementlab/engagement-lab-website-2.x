@@ -24,10 +24,9 @@ const MakeBuild = async function () {
 
      try {
         db.pragma('journal_mode = WAL');
-        // const create = db.prepare('CREATE TABLE IF NOT EXISTS projects(key text, body text)');
-        // create.run();
-        // require('./routes/projects')(db);
+        
         require('./routes/homepage')(db, colors);
+        require('./routes/projects')(db, colors);
     }
     catch(e) {
         logger.error('Mongo error', e);

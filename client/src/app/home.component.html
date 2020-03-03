@@ -1,7 +1,8 @@
+<div *ngIf="content$ | async as content">
 <section id="intro" class="column columns is-full">
 
     <div id="text" class="column is-4">
-        {{tagline}}
+        {{content.tagline}}
     </div>
 
     <div id="shapes" class="column columns is-multiline is-7-tablet hidden-mobile">
@@ -44,7 +45,7 @@
 <!-- initiatives -->
 <section id="initiatives">
 
-    <div #initiativeList class="initiative" *ngFor="let initiative of initiatives; let i = index; let first = first;">
+    <div #initiativeList class="initiative" *ngFor="let initiative of content.initiatives; let i = index; let first = first;">
 
         <div class="label" [class.first]="i === 1" [class.second]="i === 2" *ngIf="!first">
             <div class="text">
@@ -89,7 +90,7 @@
         <h1 class="column is-6-mobile is-7-tablet uppercase">Recent Projects</h1>
 
         <a class="column is-4-mobile view" routerLink="/projects">
-            <h1> view all&nbsp;
+            <h1>view all&nbsp;
                 <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
                     <path stroke="#fff" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
                 </svg>
@@ -98,7 +99,7 @@
     </div>
 
     <div id="projects" class="columns">
-        <div #projectList class="project column is-half view-tooltip" *ngFor="let project of featuredProjects">
+        <div #projectList class="project column is-half view-tooltip" *ngFor="let project of content.projects">
 
             <a routerLink="/projects/{{project.key}}">
                 <div class="bg">
@@ -131,7 +132,7 @@
         </a>
     </div>
 
-    <div #eventList class="item column no-pad is-full" [class.first]="i === 0" *ngFor="let event of events; let i = index;">
+    <div #eventList class="item column no-pad is-full" [class.first]="i === 0" *ngFor="let event of content.events; let i = index;">
 
         <a routerLink="/events/{{event.key}}">
             <div class="columns is-mobile">
@@ -145,3 +146,4 @@
 
     </div>
 </section>
+</div>

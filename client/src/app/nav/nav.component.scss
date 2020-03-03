@@ -2,8 +2,9 @@
 
 nav {
     position: relative;
+    
     padding-top: 3%;
-    margin-bottom: 0 !important;
+    margin-bottom: 3% !important;
     z-index: 4;
 
     @include mobile-only {
@@ -22,10 +23,6 @@ nav {
             }
         }
     }
-
-    // &.open {
-    //     height: 100%;
-    // }
 }
 
 #home {

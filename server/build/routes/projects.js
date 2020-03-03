@@ -30,6 +30,11 @@ var buildData = async (db) => {
 
     // Execute
     try {
+
+        const create = db.prepare('CREATE TABLE IF NOT EXISTS projects(key text, body text)');
+        create.run();
+        db.prepare('DELETE FROM projects').run();
+
         let results = await data.exec();
         let stmt = db.prepare("INSERT INTO projects (key, body) VALUES (@key, @body)");
         
@@ -41,6 +46,7 @@ var buildData = async (db) => {
     
             stmt.run({key:id, body:json});
 
+            logger.info(colors.bgBrightCyan.black('<====== Data: Projects table done ======>'));
         
             });
         });

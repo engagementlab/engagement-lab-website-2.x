@@ -19,7 +19,10 @@ module.exports = (req, res) => {
         console.error(err);
         return;
       }
-      res.status(200).json(content);
+      let formatted = content.map(c => { return JSON.parse(c.body);} );
+      formatted.sort((a, b) => { return a.sortOrder - b.sortOrder; });
+
+      res.status(200).json(formatted);
       
     });
 

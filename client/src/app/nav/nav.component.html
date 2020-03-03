@@ -34,31 +34,15 @@
 
 </nav>
 
-<section #menu id="menu" class="columns is-mobile is-multiline">
+<section #menu id="menu" class="columns is-mobile is-multiline" style="display: none">
 
     <!-- Tablet Landscape+ -->
     <div #menuLinks id="links" class="columns column is-full">
         <div class="column is-two-thirds is-5-tablet hidden-mobile">
-            <h3 *ngFor="let i of [0, 1, 2]">
+            <h3 *ngFor="let i of [1]">
                 <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{navLinks[i].label}}</a>
                 <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{navLinks[i].url}}">{{navLinks[i].label}}</a>
             </h3>
-        </div>
-        <div class="column is-7-tablet hidden-mobile">
-            <h3 *ngFor="let i of [3, 4]">
-                <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{navLinks[i].label}}</a>
-                <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{navLinks[i].url}}">{{navLinks[i].label}}</a>
-            </h3>
-            <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
-        </div>
-
-        <!-- Mobile -->
-        <div class="column is-full hidden-tablet-plus">
-            <h3 *ngFor="let link of navLinks">
-                <a *ngIf="itemActive(link.url)" class="active" (click)="openCloseNav()">{{link.label}}</a>
-                <a *ngIf="!itemActive(link.url)" routerLink="/{{link.url}}">{{link.label}}</a>
-            </h3>
-            <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
         </div>
     </div>
 

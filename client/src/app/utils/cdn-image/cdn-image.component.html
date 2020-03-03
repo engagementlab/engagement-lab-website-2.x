@@ -1,5 +1,4 @@
 <!-- For non-responsive png/jpg images -->
-{{cloudinaryId}}
 <cl-image *ngIf="(cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===false && svg===false && autoFormat===false" 
     public-id="{{imgId}}" 
     secure="true"
@@ -28,7 +27,7 @@
 <!-- Automated image sizing based on client width -->
 <cl-image *ngIf="(cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===true && autoFormat===false && svg===false"
         secure="true" public-id="{{imgId}}" attr.width="auto:breakpoints:{{width}}" 
-        sizes="100vw" client_hints="true" attr.alt="{{alt}}" [style]="widthCss" class="cdn-image">
+        loading="lazy" sizes="100vw" client_hints="true" attr.alt="{{alt}}" [style]="widthCss" class="cdn-image">
       
   <cl-transformation crop="scale" dpr="auto" crop="fill"></cl-transformation>
 </cl-image>

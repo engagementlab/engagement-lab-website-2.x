@@ -83,8 +83,6 @@ export class NavComponent implements AfterViewInit {
 
   ngAfterViewInit() {
 
-    if (!isPlatformBrowser(this.platformId)) return;
-
     this.tl = new TimelineLite({paused:true, reversed:true, onReverseComplete:() => {
       this.menu.nativeElement.querySelectorAll('h3 a').forEach((el: HTMLElement) => {
         el.classList.remove('visible');
@@ -94,7 +92,7 @@ export class NavComponent implements AfterViewInit {
   	let tl = this.tl;
 
     tl.add('start');
-    tl.set([this.nav.nativeElement, this.menuBtn.nativeElement], {className:'+=open'}, 'start');
+    // tl.set([], {className:'+=open'}, 'start');
     
     tl.fromTo(this.menuBtnClose.nativeElement, .7, {xPercent:100, autoAlpha:0}, { xPercent:0, autoAlpha:1, ease:Circ.easeOut});
     tl.fromTo(this.menuBtnOpen.nativeElement, .7, {xPercent:0, autoAlpha:1}, { xPercent:100, autoAlpha:0, ease:Circ.easeOut}, '-=.7');
@@ -113,14 +111,20 @@ export class NavComponent implements AfterViewInit {
   openCloseNav() {
     
     if(!this.tl.reversed()) {
+      this.nav.nativeElement.classList.remove('open');
+      this.menuBtn.nativeElement.classList.remove('open');
+
       this.tl.reverse().timeScale(1.3);
-      
       this.searchField.nativeElement.value = '';
       this.searchResults = null;
     }
-    else
+    else {
+      this.nav.nativeElement.classList.add('open');
+      this.menuBtn.nativeElement.classList.add('open');
+      
       this.tl.play();
-    
+    }
+
   }
 
   // Is passed route active?

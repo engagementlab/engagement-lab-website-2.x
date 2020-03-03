@@ -29,15 +29,15 @@ export class AppComponent implements OnInit {
         return;
         
       // Reset relevant initiative page elements by default
-      // document.getElementById('logo-img').classList.remove('white');
-      // if(!evt.url.includes('initiatives'))
-      //   document.getElementById('initiative-bg').classList.value = '';
+      document.getElementById('logo-img').classList.remove('white');
+      if(!evt.url.includes('initiatives'))
+        document.getElementById('initiative-bg').classList.value = '';
 
       if(evt.url.indexOf('/#') === 0)
         return;
 
       // Always go to top of page
-      // window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
 
     });
   }
