@@ -18,6 +18,7 @@ import 'rxjs/add/observable/of';
 import { environment } from '../../environments/environment';
 
 import * as _ from 'underscore';
+import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class DataService {
@@ -59,6 +60,20 @@ export class DataService {
     if(!search)
       this.isLoading.next(true);
 
+    // responses.pipe(
+    //     switchMap(id =>
+    //       this.http.get<Post[]>(`http://localhost:8200/posts?userId=${id}`).pipe(
+    //         catchError(() =>
+    //           of({
+    //             id,
+    //             title: 'not found',
+    //           } as Post)
+    //         )
+    //       )
+    //     ),
+    //     shareReplay(1)
+    //   );
+
     // If universal build, cache data from content API in transferstate
     if (!isScullyGenerated()) {
      
@@ -82,11 +97,12 @@ export class DataService {
       console.log('CLIENT')
       // if(environment.universal) {        
        return new Observable(sub => {
-          this._transferState.getState(stateKey).subscribe(res => {
+         this._transferState.getState(stateKey)
+          .pipe(tap(res => {
             console.log(res)
-            // sub.next(result);
+            sub.next(res);
             // this._transferState.remove(stateKey)
-          });
+          }));
           this.isLoading.next(false);
         });
         

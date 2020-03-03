@@ -1,7 +1,12 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
+import {isScullyGenerated, TransferStateService} from '@scullyio/ng-lib';
+
 import * as _ from 'underscore';
+import { shareReplay, catchError, tap } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-index',
@@ -19,15 +24,27 @@ export class ProjectIndexComponent implements OnInit {
   
   public isPhone: boolean;
 
-  @ViewChildren('projectList') projectList: QueryList<any>;
+  @ViewChildren('projectList') projectList: QueryList<any>;  
+
+  apiContent$ = this.http.get<any[]>(`http://localhost:3000/get/projects`).pipe(
+    catchError(() => of([] as any[])),
+    shareReplay(1)
+  );
+
+  content$ = isScullyGenerated() ? 
+            this._transferState.getState<any[]>('content-projects') : 
+            this.apiContent$.pipe(tap(project => {
+              this._transferState.setState('content-projects', project);
+            }));
   
-  constructor(private _dataSvc: DataService) {}
+  constructor(private _dataSvc: DataService, private _transferState: TransferStateService, private http: HttpClient) {}
 
   ngOnInit() {
     
-    this._dataSvc.getSet('projects').subscribe(response => {
+    // this._dataSvc.getSet('projects').subscribe(response => {
       
-    });
+    // });
+
 
   }
 

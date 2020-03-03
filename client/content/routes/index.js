@@ -3,8 +3,8 @@ const router = express.Router();
 
 // Setup Route Bindings
 // CORS
-/* router.all('/*', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+router.all('/*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:1864');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, HEAD, PUT');
   res.header('Access-Control-Expose-Headers', 'Content-Length');
   res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method');
@@ -12,7 +12,7 @@ const router = express.Router();
   if (req.method === 'OPTIONS') res.send(200);
   else next();
 });
- */
+
 router.get('/get/homepage', require('./get/home'));
 router.get('/get/projects', require('./get/projects'));
 // router.get('/get/about/get', routeIncludes, routes.api.about.get);

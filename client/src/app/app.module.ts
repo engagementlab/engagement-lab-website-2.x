@@ -84,7 +84,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
     CloudinaryModule.forRoot(cloudinary, config),
     HttpClientModule,
     ScrollToModule.forRoot(),
-    ScullyLibModule,
+    ScullyLibModule.forRoot({useTranferState: true}),
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

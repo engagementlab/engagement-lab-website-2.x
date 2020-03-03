@@ -13,14 +13,14 @@
  * Get data
  */
 module.exports = (req, res) => {
-    
-    global.db.all("SELECT * FROM projects", (err, content) => {
+   
+    global.db.all("SELECT body FROM projects", (err, content) => {
       if(err) {
         console.error(err);
         return;
       }
+      res.status(200).json(content);
       
-        res.json(content);
     });
-  
-};
+
+  };
