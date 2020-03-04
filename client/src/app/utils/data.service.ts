@@ -48,7 +48,7 @@ export class DataService {
       this.isLoading.next(true);
 
     let url = `${this.devUrl}/get/${page}`;
-    if(param) url = url+param;
+    if(param) url = url + '/' + param;
 
     // If scully is building or dev build, cache data from content API in transferstate
     if (!isScullyGenerated()) {

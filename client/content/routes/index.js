@@ -18,8 +18,12 @@ function Routes(prodMode) {
 
   });
 
+  const projects = require('./get/projects');
+  
   router.get('/get/homepage', require('./get/home'));
-  router.get('/get/projects', require('./get/projects'));
+  router.get('/get/projects', projects);
+  router.get('/get/projects/:key', projects);
+
   // router.get('/get/about/get', routeIncludes, routes.api.about.get);
   // router.get('/get/team/get', routeIncludes, routes.api.team.get);
   // router.get('/get/team/get/:person_key?', routeIncludes, routes.api.team.get);

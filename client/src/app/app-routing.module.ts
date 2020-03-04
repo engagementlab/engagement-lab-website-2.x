@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectIndexComponent } from './projects/index.component';
+import { ProjectComponent } from './projects/project.component';
 import { ProjectArchiveComponent } from './projects/archive.component';
 import { ContactComponent } from './contact/contact.component';
 import { MastersComponent } from './masters/masters.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   // { path: 'about', component: AboutComponent },  
   
   { path: 'projects', component: ProjectIndexComponent },
+  { path: 'projects/:key', component: ProjectComponent },
   // { path: 'projects/archive', component: ProjectArchiveComponent },
   
   // { path: 'getinvolved', component: ContactComponent },

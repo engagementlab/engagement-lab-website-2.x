@@ -4,11 +4,10 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { DataService } from '../utils/data.service';
 import { filter } from 'rxjs/operators';
 
-import { TimelineLite, Circ } from "gsap/all";
-
 import { environment } from '../../environments/environment';
+
+import { TimelineLite, Circ } from "gsap/all";
 import * as _ from 'underscore';
-import { isPlatformBrowser } from '@angular/common';
 
 interface Link {
   url: string,
@@ -32,6 +31,7 @@ export class NavComponent implements AfterViewInit {
   ];
   public searchResults: any[];
   public searchEnabled: boolean;
+  public logoSm: boolean;
 
   private wasLoading: boolean = false;
   private currentUrl: string;
@@ -47,20 +47,14 @@ export class NavComponent implements AfterViewInit {
   @ViewChild('menuOpen') menuBtnOpen: ElementRef;
   @ViewChild('menuClose') menuBtnClose: ElementRef;
 
-  constructor(@Inject(PLATFORM_ID) private platformId, private _router: Router, private _dataSvc: DataService) {
+  constructor(private _router: Router, private _dataSvc: DataService) {
 
     // Get nav route when nav ends
     this._router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
       this.currentUrl = this._router.url;
 
       // Adjust logo size based on page
-      let classes = this.homeLogo.nativeElement.classList;
-      if(classes) {
-        if(this.currentUrl === '/')
-          classes.remove('sm');
-        else
-          classes.add('sm');
-      }
+      this.logoSm = this.currentUrl !== '/';
     });
       
     _router.events.pipe(filter(e => e instanceof NavigationStart)).subscribe(e => {

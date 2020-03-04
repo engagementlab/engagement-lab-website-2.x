@@ -25,25 +25,12 @@ export class ProjectIndexComponent implements OnInit {
   public isPhone: boolean;
 
   @ViewChildren('projectList') projectList: QueryList<any>;  
-
-  apiContent$ = this.http.get<any[]>(`http://localhost:3000/get/projects`).pipe(
-    catchError(() => of([] as any[])),
-    shareReplay(1)
-  );
-
-  content$ = isScullyGenerated() ? 
-            this._transferState.getState<any[]>('content-projects') : 
-            this.apiContent$.pipe(tap(project => {
-              this._transferState.setState('content-projects', project);
-            }));
   
   constructor(private _dataSvc: DataService, private _transferState: TransferStateService, private http: HttpClient) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     
-    // this._dataSvc.getSet('projects').subscribe(response => {
-      
-    // });
+    this.projects = await this._dataSvc.getSet('projects');
 
 
   }

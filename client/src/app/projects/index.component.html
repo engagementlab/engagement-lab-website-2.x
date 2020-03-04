@@ -1,5 +1,5 @@
 
-<div id="projects" class="columns is-multiline" *ngIf="content$ | async as projects">
+<div id="projects" class="columns is-multiline" *ngIf="projects">
 
     <div #projectList class="project view-tooltip column {{project.projectType}}" [class.mix]="project.key !== 'dummy'"
         *ngFor="let project of projects; let i = index;">

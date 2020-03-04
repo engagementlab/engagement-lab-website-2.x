@@ -11,6 +11,7 @@ import {
 import {
     DataService
 } from '../utils/data.service';
+import { async } from '@angular/core/testing';
 
 @Component({
     selector: 'app-project',
@@ -38,7 +39,7 @@ export class ProjectComponent implements OnInit {
     
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
         
-        this._route.params.subscribe(params => {
+        this._route.params.subscribe(async params => {
 
             // Force content reset
             this.content = undefined;
@@ -54,10 +55,14 @@ export class ProjectComponent implements OnInit {
                 return;
             }
 
-            /* this._dataSvc.getSet('projects/get/' + params['key']).subscribe(response => {
-                this.setContent(response);
-                this.hidden = false;
-            }); */
+            let content = await this._dataSvc.getSet('projects', params['key']);
+            debugger
+            this.setContent(content);
+            this.hidden = false;
+
+            // this._dataSvc.getSet('projects', params['key']).subscribe(response => {
+            //     this.setContent(response);
+            // });
 
         });
 
