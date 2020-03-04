@@ -12,12 +12,12 @@ export class JobsComponent implements OnInit {
 
   constructor(private _dataSvc: DataService) { 
   
-    this._dataSvc.getSet('jobs/get/').subscribe(response => {
+/*     this._dataSvc.getSet('jobs/get/').subscribe(response => {
       
       this.jobs = response;
       
     });
-  
+   */
   }
 
   ngOnInit() {

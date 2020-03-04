@@ -1,12 +1,7 @@
-import { Injectable, Inject, PLATFORM_ID, Optional, Injector } from '@angular/core';
-import { isPlatformServer } from '@angular/common';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Router, NavigationStart } from '@angular/router';
-import { makeStateKey, TransferState } from '@angular/platform-browser';
-
 import { Subject } from 'rxjs';
-import { Observable } from 'rxjs/Observable';
-import { throwError } from 'rxjs';
 
 import {isScullyGenerated, TransferStateService} from '@scullyio/ng-lib';
 
@@ -14,11 +9,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/observable/of';
-
-import { environment } from '../../environments/environment';
-
 import * as _ from 'underscore';
-import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class DataService {
@@ -30,14 +21,10 @@ export class DataService {
   public currentUrl: string;
 
   private devUrl: string;
-  private buildUrl: string;
-  
-  private STATE_KEY = makeStateKey<any>('content');
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId, 
     private _transferState: TransferStateService,
-    private http: HttpClient, 
+    private _http: HttpClient, 
     private _router: Router) {
 
   	this.devUrl = 'http://localhost:3000';
@@ -54,59 +41,47 @@ export class DataService {
     });
   }
 
-  public getSet(page: string, param: string = null, search: boolean = false): Observable<any> {
+  public async getSet(page: string, param: string = null, search: boolean = false): Promise<any[]> {
 
-    let stateKey = makeStateKey<any>(`content-${page}`)
+    let stateKey = page;
     if(!search)
       this.isLoading.next(true);
 
-    // responses.pipe(
-    //     switchMap(id =>
-    //       this.http.get<Post[]>(`http://localhost:8200/posts?userId=${id}`).pipe(
-    //         catchError(() =>
-    //           of({
-    //             id,
-    //             title: 'not found',
-    //           } as Post)
-    //         )
-    //       )
-    //     ),
-    //     shareReplay(1)
-    //   );
+    let url = `${this.devUrl}/get/${page}`;
+    if(param) url = url+param;
 
-    // If universal build, cache data from content API in transferstate
+    // If scully is building or dev build, cache data from content API in transferstate
     if (!isScullyGenerated()) {
-     
-      let url = `${this.devUrl}/get/${page}`;
-      if(param) url = url+param;
-    
-      return this.http.get(url)
-      .pipe((res:any)=> {
+      
+      try {
+        let res = await this._http.get<any[]>(url).toPromise();
         this._transferState.setState(stateKey, res);
-        return res;
-      })
-      .catch((error:any) => {
-          this.isLoading.next(false);
-          return throwError(error);
-      });
 
+        return res;
+      }
+      catch(error) {
+          this.isLoading.next(false);
+          throw Error(error);
+      };
 
     }
     else {
 
-      console.log('CLIENT')
       // if(environment.universal) {        
-       return new Observable(sub => {
-         this._transferState.getState(stateKey)
-          .pipe(tap(res => {
-            console.log(res)
-            sub.next(res);
-            // this._transferState.remove(stateKey)
-          }));
-          this.isLoading.next(false);
-        });
-        
-      // }
+      const state = new Promise<any[]>((resolve, reject) => {
+
+          try {
+            this._transferState.getState<any[]>(stateKey).subscribe(res => {
+              resolve(res);
+            });          
+          }
+          catch(error) {
+            this.isLoading.next(false);
+            reject(error);             
+          }
+          
+      });
+      return state;
 
     }
 

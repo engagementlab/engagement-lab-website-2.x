@@ -14,7 +14,7 @@
  */
 module.exports = (req, res) => {
    
-    global.db.all("SELECT body FROM projects", (err, content) => {
+  res.locals.db.all("SELECT body FROM projects", (err, content) => {
       if(err) {
         console.error(err);
         return;

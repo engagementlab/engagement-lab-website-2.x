@@ -27,7 +27,7 @@ export class MastersComponent implements OnInit {
   }
 
   ngOnInit() {
-
+/* 
     this._dataSvc.getSet('masters/get/').subscribe(response => {
       
       this.content = response.masters;
@@ -39,7 +39,7 @@ export class MastersComponent implements OnInit {
         this.people.push({name:'dummy'});
         
     });
-
+ */
   }
 
 
@@ -52,11 +52,11 @@ export class MastersComponent implements OnInit {
     this.gettingPerson = true;
     this.currentPerson = undefined;
     
-    this._dataSvc.getSet('team/get/'+key).subscribe(response => {
+/*     this._dataSvc.getSet('team/get/'+key).subscribe(response => {
       
       this.currentPerson = response.person;
 
-    });
+    }); */
   }
 
 

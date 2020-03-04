@@ -12,10 +12,10 @@ export class ProjectArchiveComponent implements OnInit {
   
   constructor(private _dataSvc: DataService) { 
     
-    this._dataSvc.getSet('projects/get/archived/').subscribe(response => {
+/*     this._dataSvc.getSet('projects/get/archived/').subscribe(response => {
         this.projectsArchived = response;
     });
-  
+   */
   }
 
   ngOnInit() {}

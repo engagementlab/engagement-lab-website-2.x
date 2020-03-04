@@ -15,11 +15,11 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
 
-    this._dataSvc.getSet('contact/get/').subscribe(response => {
+   /*  this._dataSvc.getSet('contact/get/').subscribe(response => {
       
       this.content = response[0];
 
-    });
+    }); */
 
   }
   

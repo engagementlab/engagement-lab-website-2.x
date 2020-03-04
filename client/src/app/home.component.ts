@@ -1,13 +1,8 @@
 import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from './utils/data.service';
 
-import {isScullyGenerated, TransferStateService} from '@scullyio/ng-lib';
-
 import * as _ from 'underscore';
 import * as paper from 'paper';
-import { catchError, shareReplay, tap } from 'rxjs/operators';
-import { of } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  public initiatives: any[];
-  public featuredProjects: any[];
-  public events: any[];
+  public content: any;
   public latestEvent: any;
   public tagline: string;
 
@@ -31,34 +24,17 @@ export class HomeComponent implements OnInit {
   @ViewChild('pattern2') pattern2: ElementRef;
   @ViewChild('pattern3') pattern3: ElementRef;
 
-  apiContent$ = this.http.get<any[]>(`http://localhost:3000/get/homepage`).pipe(
-    catchError(() => of([] as any[])),
-    shareReplay(1)
-  );
+  constructor(private _dataSvc: DataService) {}
 
-  content$ = isScullyGenerated() ? 
-            this._transferState.getState<any[]>('content') : 
-            this.apiContent$.pipe(tap(project => {
-              this._transferState.setState('content', project);
-            }));
+  async ngOnInit() {
 
-  constructor(private _dataSvc: DataService, private _transferState: TransferStateService, private http: HttpClient) {}
+    this.content = await this._dataSvc.getSet('homepage');
 
-  ngOnInit() {
+    this.drawArt();
 
-    // this._dataSvc.getSet('homepage').subscribe(response => {
-     
-    //   this.initiatives = response.initiatives;
-    //   this.featuredProjects = response.projects;    
-    //   this.events = response.events;    
-    //   this.tagline = response.tagline;
-
-    //   this.latestEvent = response.events[response.events.length-1];
-
-    // });
   }
 
-  ngAfterViewInit()  {
+  drawArt()  {
 
     setTimeout(() => {
 

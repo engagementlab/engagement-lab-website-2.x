@@ -14,7 +14,7 @@
  */
 module.exports = (req, res) => {
     
-    global.db.all("SELECT * FROM homepage", (err, content) => {
+  res.locals.db.all("SELECT * FROM homepage", (err, content) => {
       if(err) {
         console.error(err);
         return;

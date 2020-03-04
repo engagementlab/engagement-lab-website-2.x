@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run elab-web:serve-ssr",
+    "dev:content": "npm-run-all -p serve:content start",
     "build:bundles": "ng build --prod && ng run elab-web:server:production",
     "build-dev:bundles": "ng build --prod --configuration=local && ng run elab-web:server:development",
     "build:ssr": "npm run build:bundles && npm run webpack:server",
@@ -17,7 +18,9 @@
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "prerender:express": "node content/bin/www.js",
     "prerender:compile": "ng run elab-web:prerender --configuration=production",
-    "serve:ssr": "node dist/server/main.js",
+    "serve:content": "cd content; nodemon;",
+    "serve:content:prod": "cd content; nodemon prod;",
+    "serve:ssr": "npm-run-all -p serve:content:prod scully",
     "scully": "scully",
     "scully:serve": "scully serve"
   },

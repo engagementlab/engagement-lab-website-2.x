@@ -162,11 +162,11 @@ export class NavComponent implements AfterViewInit {
 
     // if(value.length < 3) return;
 
-    this._dataSvc.getSet('search/all/'+value, null, true).subscribe(response => {
+/*     this._dataSvc.getSet('search/all/'+value, null, true).subscribe(response => {
       
       this.searchResults = response;
         
-    });
+    }); */
 
   }
 

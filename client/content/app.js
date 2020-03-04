@@ -1,17 +1,41 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+/**
+ * Engagement Lab Website v2.x content service
+ * Developed by Engagement Lab, 2020
+ * ==============
+ * App start
+ *
+ * @author Johnny Richardson
+ * @author Ralph Drake
+ *
+ * ==========
+ */
 
-var app = express();
+'use strict';
+const start = (productionMode) => {
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+
+const indexRouter = require('./routes/index');
+
+const app = express();
+
+// Sqlite db connection, accessible to all 
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database(path.join(__dirname, '../../' ,'engagement-lab.db'));
+
+app.use(function(req, res, next) {
+  res.locals.db = db;
+  next();
+});
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/', indexRouter);
+app.use('/', indexRouter(productionMode, db));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -27,8 +51,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+return app;
+}
 
-const sqlite3 = require('sqlite3').verbose();
-global.db = new sqlite3.Database(path.join(__dirname, '../../' ,'engagement-lab.db'));
-
-module.exports = app;
+module.exports = start;

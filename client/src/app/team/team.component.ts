@@ -37,11 +37,11 @@ export class TeamComponent implements OnInit {
 
     this.gettingPerson = true;
     this.currentPerson = undefined;
-    this._dataSvc.getSet('team/get/'+key).subscribe(response => {
+/*     this._dataSvc.getSet('team/get/'+key).subscribe(response => {
       
       this.currentPerson = response.person;
 
-    });
+    }); */
   }
 
   closePerson() {
@@ -64,7 +64,7 @@ export class TeamComponent implements OnInit {
       // TODO: load all other only on modal close
       // return;
     }
-
+/* 
     this._dataSvc.getSet('team/get/').subscribe(response => {   
       
       this.people['faculty'] = _.filter(response.staff, (person) => { return person.category === 'faculty leadership'; });
@@ -82,7 +82,7 @@ export class TeamComponent implements OnInit {
         }
       }
 
-    });
+    }); */
 
   }
 
