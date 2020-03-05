@@ -13,45 +13,57 @@
 
 'use strict';
 const start = (productionMode) => {
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const logger = require('morgan');
 
-const indexRouter = require('./routes/index');
+  const bootstrap = require('el-bootstrapper');
+  const createError = require('http-errors');
+  const express = require('express');
+  const path = require('path');
+  const fs = require('fs');
+  const logger = require('morgan');
 
-const app = express();
+  // const indexRouter = require('./routes/index');
 
-// Sqlite db connection, accessible to all 
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database(path.join(__dirname, '../../' ,'engagement-lab.db'));
+  const app = express();
 
-app.use(function(req, res, next) {
-  res.locals.db = db;
-  next();
-});
+  // Mongodb connection
+  const mongoose = require('mongoose');
+  mongoose.connect('mongodb://localhost/engagement-lab', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
+  
+  const mongo = mongoose.connection;
+  mongo.on('error', console.error.bind(console, 'connection error:'));
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+  app.use(logger('dev'));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
 
-app.use('/', indexRouter(productionMode, db));
+  // app.use('/', indexRouter(productionMode));
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+      app.use(function(req, res, next) {
+        res.locals.db = global.keystone;
+        next();
+      });
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
+  bootstrap.start(
+    './config.json',
+    app,
+    `${__dirname}/`, {
+      name: 'Engagement Lab Home CMS',
+    },
+    () => {
+      // if (callback) callback();
+      // var models_path = __dirname + '/models'
+      // fs.readdirSync(models_path).forEach(function (file) {
+      //   let a = require(models_path+'/'+file).schema
+      //   if(a) mongoose.model(file.replace('.js', ''), a)
+      //   console.log(a)
+        
+      // });
+      // logger.info(colors.bgCyan.bold.black('<==== Running Data Builder ====>'));
+    },
+  );
+  
+  return app;
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
-return app;
 }
 
 module.exports = start;

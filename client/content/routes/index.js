@@ -1,7 +1,16 @@
 function Routes(prodMode) {
 
+  const { keystone } = global;
   const express = require('express')
   const router = express.Router();
+
+  const importRoutes = keystone.importer(__dirname);
+  
+  // Import Route Controllers
+  const routes = {
+    get: importRoutes('./get'),
+  };
+  const routeIncludes = [keystone.middleware.api, keystone.middleware.cors];
 
   // Setup Route Bindings
   // CORS
@@ -18,11 +27,11 @@ function Routes(prodMode) {
 
   });
 
-  const projects = require('./get/projects');
-  
-  router.get('/get/homepage', require('./get/home'));
-  router.get('/get/projects', projects);
-  router.get('/get/projects/:key', projects);
+  // If production mode, load routes that build app contnet
+  // const projects = require('./build/projects');
+  router.get('/get/homepage', routeIncludes, routes.get.homepage);
+  // router.get('/get/projects', projects);
+  // router.get('/get/projects/:key', projects);
 
   // router.get('/get/about/get', routeIncludes, routes.api.about.get);
   // router.get('/get/team/get', routeIncludes, routes.api.team.get);
@@ -44,4 +53,4 @@ function Routes(prodMode) {
 
 }
 
-module.exports = Routes;
+module.exports = Routes();

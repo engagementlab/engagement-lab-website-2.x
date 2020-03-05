@@ -3,6 +3,9 @@
 /**
  * Module dependencies.
  */
+// Load .env vars
+require('dotenv').config();
+
 const productionMode = process.argv.slice(2)[0] && process.argv.slice(2)[0] === 'prod';
 const app = require('../app')(productionMode);
 const debug = require('debug')('content:server');

@@ -63,3 +63,5 @@ Initiative.add({
  * =============
  */
 Initiative.register();
+
+exports = module.exports = Initiative;

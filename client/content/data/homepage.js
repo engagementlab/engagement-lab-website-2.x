@@ -1,21 +1,10 @@
-'use strict';
-/**
- * Lab website backend builder
- * Developed by Engagement Lab, 2020
- *
- * @author Johnny Richardson
- *
- * ==========
- */
 
-const keystone =  global.keystone;
-
-var buildData = async (db, colors) => {
+const BuildData = async (mongo) => {
     
-    const initiative = keystone.list('Initiative').model;
-    const project = keystone.list('Project').model;
-    const event = keystone.list('Event').model;
-    const about = keystone.list('About').model;
+    const initiative = mongo.model('Initiative');
+    const project = mongo.model('Project');
+    const event = mongo.model('Event');
+    const about = mongo.model('About');
 
     const projectFields = 'name image.public_id key projectType byline -_id';
     const eventFields = 'name date key -_id';
@@ -47,22 +36,7 @@ var buildData = async (db, colors) => {
         tagline: tagLineExec.tagline
     };
 
-    // Execute sql
-    try {
-        const create = db.prepare('CREATE TABLE IF NOT EXISTS homepage(body text)');
-        create.run();
-        db.prepare('DELETE FROM homepage').run();
+    return data;
 
-        let json = JSON.stringify(data);
-        let stmt = db.prepare("INSERT INTO homepage (body) VALUES (?)")
-        stmt.run(json);
-
-        logger.info(colors.bgBrightCyan.black('<====== Data: Homepage table done ======>'));
-    }
-    catch (err) {
-        throw new Error(err);
-    }
-
-}
-
-module.exports = buildData;
+};
+module.exports = BuildData;

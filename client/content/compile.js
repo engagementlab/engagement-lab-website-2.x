@@ -9,9 +9,32 @@
  */
 
 const colors = require('colors');
+const winston = require('winston');
 const db = require('better-sqlite3')('../engagement-lab.db');
 
 const MakeBuild = async function () {
+
+    const logFormat = winston.format.combine(
+    winston.format.colorize(),
+    winston.format.timestamp(),
+    winston.format.align(),
+    winston.format.printf((info) => {
+        const {
+        timestamp, level, message, ...args
+        } = info;
+
+        const ts = timestamp.slice(0, 19).replace('T', ' ');
+        return `${ts} [${level}]: ${message} ${Object.keys(args).length ? JSON.stringify(args, null, 2) : ''}`;
+    }),
+    );
+    
+    global.logger = winston.createLogger({
+    level: 'info',
+    format: logFormat,
+    transports: [
+        new winston.transports.Console()
+    ]
+    });
 
     // Hook up mongo
     const mongoose = require('mongoose');
@@ -25,8 +48,8 @@ const MakeBuild = async function () {
      try {
         db.pragma('journal_mode = WAL');
         
-        require('./routes/homepage')(db, colors);
-        require('./routes/projects')(db, colors);
+        require('./routes/homepage')(db, colors, mongoose);
+        // require('./routes/projects')(db, mongoose, colors);
     }
     catch(e) {
         logger.error('Mongo error', e);
