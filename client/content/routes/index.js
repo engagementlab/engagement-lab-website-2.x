@@ -1,11 +1,19 @@
-function Routes(prodMode) {
 
+/**
+ * Engagement Lab Website v2.x content service
+ * Developed by Engagement Lab, 2020
+ *
+ * @author Johnny Richardson
+ * Content API routing
+ * ==========
+ */
+const Routes = (prodMode) => {
   const { keystone } = global;
-  const express = require('express')
+  const express = require('express');
   const router = express.Router();
 
   const importRoutes = keystone.importer(__dirname);
-  
+
   // Import Route Controllers
   const routes = {
     get: importRoutes('./get'),
@@ -16,7 +24,6 @@ function Routes(prodMode) {
   // CORS
   const corsPort = prodMode ? 1864 : 4200;
   router.all('/*', (req, res, next) => {
-
     res.header('Access-Control-Allow-Origin', `http://localhost:${corsPort}`);
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, HEAD, PUT');
     res.header('Access-Control-Expose-Headers', 'Content-Length');
@@ -24,14 +31,12 @@ function Routes(prodMode) {
 
     if (req.method === 'OPTIONS') res.send(200);
     else next();
-
   });
 
   // If production mode, load routes that build app contnet
   // const projects = require('./build/projects');
   router.get('/get/homepage', routeIncludes, routes.get.homepage);
-  // router.get('/get/projects', projects);
-  // router.get('/get/projects/:key', projects);
+  router.get('/get/projects/:key?', routes.get.project);
 
   // router.get('/get/about/get', routeIncludes, routes.api.about.get);
   // router.get('/get/team/get', routeIncludes, routes.api.team.get);
@@ -50,7 +55,6 @@ function Routes(prodMode) {
   // router.get('/get/masters/get', routeIncludes, routes.api.masters.get);
 
   return router;
-
-}
+};
 
 module.exports = Routes();

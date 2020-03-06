@@ -11,37 +11,53 @@
  * ==========
  */
 
-'use strict';
+
+const bootstrap = require('el-bootstrapper');
+const mongoose = require('mongoose');
+const express = require('express');
+const winston = require('winston');
+const colors = require('colors');
+
 const start = (productionMode) => {
-
-  const bootstrap = require('el-bootstrapper');
-  const createError = require('http-errors');
-  const express = require('express');
-  const path = require('path');
-  const fs = require('fs');
-  const logger = require('morgan');
-
-  // const indexRouter = require('./routes/index');
-
   const app = express();
 
+  const logFormat = winston.format.combine(
+    winston.format.colorize(),
+    winston.format.timestamp(),
+    winston.format.align(),
+    winston.format.printf((info) => {
+      const {
+        timestamp, level, message, ...args
+      } = info;
+
+      const ts = timestamp.slice(0, 19).replace('T', ' ');
+      return `${ts} [${level}]: ${message} ${Object.keys(args).length ? JSON.stringify(args, null, 2) : ''}`;
+    }),
+  );
+
+  global.logger = winston.createLogger({
+    level: 'info',
+    format: logFormat,
+    transports: [
+      new winston.transports.Console(),
+    ],
+  });
+
   // Mongodb connection
-  const mongoose = require('mongoose');
-  mongoose.connect('mongodb://localhost/engagement-lab', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
-  
+  mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+
   const mongo = mongoose.connection;
   mongo.on('error', console.error.bind(console, 'connection error:'));
 
-  app.use(logger('dev'));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
 
   // app.use('/', indexRouter(productionMode));
 
-      app.use(function(req, res, next) {
-        res.locals.db = global.keystone;
-        next();
-      });
+  app.use((req, res, next) => {
+    res.locals.db = global.keystone;
+    next();
+  });
 
   bootstrap.start(
     './config.json',
@@ -50,20 +66,11 @@ const start = (productionMode) => {
       name: 'Engagement Lab Home CMS',
     },
     () => {
-      // if (callback) callback();
-      // var models_path = __dirname + '/models'
-      // fs.readdirSync(models_path).forEach(function (file) {
-      //   let a = require(models_path+'/'+file).schema
-      //   if(a) mongoose.model(file.replace('.js', ''), a)
-      //   console.log(a)
-        
-      // });
-      // logger.info(colors.bgCyan.bold.black('<==== Running Data Builder ====>'));
+      global.logger.info(colors.bgCyan.bold.black(`Content API started (${productionMode ? 'Production' : 'Development'} Mode).`));
     },
   );
-  
-  return app;
 
-}
+  return app;
+};
 
 module.exports = start;

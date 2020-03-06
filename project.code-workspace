@@ -1,21 +1,42 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "./client",
-			"name": "Client"
-		},
-		{
-			"path": "./server",
-			"name": "Server"
-		}
-	],
-	"settings": {
-	  "eslint.linkTask.enabled": true,
-	  "editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	  }
-	}
+  "folders": [
+    {
+      "path": "./client",
+      "name": "Client"
+    },
+    {
+      "path": "./client/content",
+      "name": "Content"
+    },
+    {
+      "path": "./server",
+      "name": "Server (Deprecated)"
+    },
+
+  ],
+  "settings": {
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      { "language": "typescript" },
+      { "language": "typescriptreact" }
+    ],
+    "editor.formatOnSave": true,
+    "eslint.linkTask.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": false
+    },
+    "[typescript]": {
+      "editor.formatOnSave": false
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": false
+    }
+  }
 }
