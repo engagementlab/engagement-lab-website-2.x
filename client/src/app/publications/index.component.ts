@@ -5,23 +5,21 @@ import { DataService } from '../utils/data.service';
 import * as _ from 'underscore';
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.scss']
+    selector: 'app-index',
+    templateUrl: './index.component.html',
+    styleUrls: ['./index.component.scss'],
 })
 export class PublicationIndexComponent implements OnInit {
+    public pubs: any[];
 
-  public pubs: any[];
-  
-  public pubTypesCount: Object;
-  public pubTypesTotal: number;
-  public pubTypeKeys: string[]; 
+    public pubTypesCount: Record<string, any>;
+    public pubTypesTotal: number;
+    public pubTypeKeys: string[];
 
-  @ViewChildren('publicationList') publicationList: QueryList<any>;
+    @ViewChildren('publicationList') publicationList: QueryList<any>;
 
-  constructor(private _dataSvc: DataService) { 
-  
-    /* this._dataSvc.getSet('publications/get/').subscribe(response => {
+    constructor(private _dataSvc: DataService) {
+        /* this._dataSvc.getSet('publications/get/').subscribe(response => {
       
         this.pubs = response;
                
@@ -42,28 +40,20 @@ export class PublicationIndexComponent implements OnInit {
         }
 
     }); */
-  
-  }
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {}
 
-  ngAfterViewInit() {
+    ngAfterViewInit() {
+        this.publicationList.changes.subscribe(t => {
+            // mixitup(document.getElementById('publications'), {
+            //   animation: {
+            //     effects: 'fade'
+            //   }
+            // });
+            // AOS.init();
+        });
+    }
 
-    this.publicationList.changes.subscribe(t => {
-  
-        // mixitup(document.getElementById('publications'), {
-        //   animation: {
-        //     effects: 'fade'
-        //   }
-        // });
-        // AOS.init();
-    });
-
-  }
-
-  ngOnDestroy() {
-
-  }
-
+    ngOnDestroy() {}
 }

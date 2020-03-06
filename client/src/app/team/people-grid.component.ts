@@ -2,54 +2,45 @@ import { Component, OnInit, ViewChildren, QueryList, Input, OnDestroy, AfterView
 import { tns, TinySliderInstance } from 'tiny-slider';
 
 @Component({
-  selector: 'people-grid',
-  templateUrl: './people-grid.component.html',
-  styleUrls: ['./people-grid.component.scss']
+    selector: 'people-grid',
+    templateUrl: './people-grid.component.html',
+    styleUrls: ['./people-grid.component.scss'],
 })
 export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
-  
-  @Input() people: any[];
-  @Input() preview: boolean = false;
-  @Input() cohort: boolean = false;
+    @Input() people: any[];
+    @Input() preview = false;
+    @Input() cohort = false;
 
-  @ViewChildren('teamList') list: QueryList<any>;
+    @ViewChildren('teamList') list: QueryList<any>;
 
-  private slider: TinySliderInstance;
-  
-  constructor() { }
+    private slider: TinySliderInstance;
 
-  ngOnInit() {
-  }
+    constructor() {}
 
-  ngAfterViewInit() {
+    ngOnInit() {}
 
-    if(!this.preview) return;
+    ngAfterViewInit() {
+        if (!this.preview) return;
 
-    this.list.changes.subscribe(t => {
+        this.list.changes.subscribe(t => {
+            // Create slider once staff list pouplates
+            this.slider = tns({
+                container: '#list',
+                items: 3,
+                slideBy: 1,
+                gutter: 28,
+                fixedWidth: 270,
+                autoplay: false,
+                nav: false,
+                arrowKeys: true,
+                mouseDrag: true,
+                controlsContainer: document.getElementById('controls'),
+            });
+        });
+    }
 
-      // Create slider once staff list pouplates
-      this.slider = tns({
-        container: '#list',
-        items: 3,
-        slideBy: 1,
-        gutter: 28,
-        fixedWidth: 270,
-        autoplay: false,
-        nav: false,
-        arrowKeys: true,
-        mouseDrag: true,
-        controlsContainer: document.getElementById('controls')
-      });
-
-    });
-
-  }
-
-  ngOnDestroy() {
-
-    // Destroy slider when user leaves
-    if(this.slider)
-      this.slider.destroy();
-
-  }
+    ngOnDestroy() {
+        // Destroy slider when user leaves
+        if (this.slider) this.slider.destroy();
+    }
 }

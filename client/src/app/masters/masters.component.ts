@@ -3,31 +3,26 @@ import { DataService } from '../utils/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-masters',
-  templateUrl: './masters.component.html',
-  styleUrls: ['./masters.component.scss']
+    selector: 'app-masters',
+    templateUrl: './masters.component.html',
+    styleUrls: ['./masters.component.scss'],
 })
 export class MastersComponent implements OnInit {
+    public content: any;
+    public people: any;
+    public currentPerson: any;
 
-  public content: any;  
-  public people: any;  
-  public currentPerson: any;
+    private gettingPerson: boolean;
 
-  private gettingPerson: boolean;
+    constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
+        this._route.params.subscribe(params => {
+            if (Object.keys(params).length < 1) return;
+            this.getPerson(params['key']);
+        });
+    }
 
-  constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) { 
-
-    this._route.params.subscribe(params => {
-      
-      if(Object.keys(params).length < 1) return;
-      this.getPerson(params['key']);
-
-    });
-    
-  }
-
-  ngOnInit() {
-/* 
+    ngOnInit() {
+        /* 
     this._dataSvc.getSet('masters/get/').subscribe(response => {
       
       this.content = response.masters;
@@ -40,35 +35,28 @@ export class MastersComponent implements OnInit {
         
     });
  */
-  }
+    }
 
+    getPerson(key) {
+        // No dupe requests!
+        if (this.gettingPerson) return;
 
-  getPerson(key) {      
+        this.gettingPerson = true;
+        this.currentPerson = undefined;
 
-    // No dupe requests!
-    if(this.gettingPerson)
-      return;
-
-    this.gettingPerson = true;
-    this.currentPerson = undefined;
-    
-/*     this._dataSvc.getSet('team/get/'+key).subscribe(response => {
+        /*     this._dataSvc.getSet('team/get/'+key).subscribe(response => {
       
       this.currentPerson = response.person;
 
     }); */
-  }
+    }
 
+    closePerson() {
+        this.gettingPerson = false;
+        this.currentPerson = undefined;
 
-  closePerson() {
-    
-    this.gettingPerson = false;
-    this.currentPerson = undefined;
-    
-    this._router.navigateByUrl('masters');
+        this._router.navigateByUrl('masters');
 
-    // window.scrollTo(0, 0);
-
-  }
-
+        // window.scrollTo(0, 0);
+    }
 }

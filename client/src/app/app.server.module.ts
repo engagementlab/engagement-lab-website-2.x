@@ -10,17 +10,15 @@ import { AppComponent } from './app.component';
 import { DataService } from './utils/data.service';
 
 @NgModule({
-  imports: [
-    AppModule,
-    CommonModule,
-    // ModuleMapLoaderModule,    
-    RouterModule,
-    ServerModule,
-    ServerTransferStateModule,
-  ],
-  providers: [
-    DataService,
-  ],
-  bootstrap: [AppComponent],
+    imports: [
+        AppModule,
+        CommonModule,
+        // ModuleMapLoaderModule,
+        RouterModule,
+        ServerModule,
+        ServerTransferStateModule,
+    ],
+    providers: [DataService],
+    bootstrap: [AppComponent],
 })
 export class AppServerModule {}

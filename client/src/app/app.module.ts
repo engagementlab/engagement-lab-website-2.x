@@ -5,7 +5,6 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 
 import { ScullyLibModule } from '@scullyio/ng-lib';
 
-
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,57 +41,52 @@ import { DataService } from './utils/data.service';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 export const cloudinary = {
-  Cloudinary: CloudinaryCore
+    Cloudinary: CloudinaryCore,
 };
 export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 
 @NgModule({
-  declarations: [
-    AppComponent,
+    declarations: [
+        AppComponent,
 
-    CdnImageComponent,
+        CdnImageComponent,
 
-    // Components
-    HomeComponent,
-    NavComponent,
-    FooterComponent,
+        // Components
+        HomeComponent,
+        NavComponent,
+        FooterComponent,
 
-    ProjectComponent,
-    ProjectIndexComponent,
-    PublicationIndexComponent,
-    AboutComponent,
-    RedirectComponent,
-    PublicationComponent,
-    ContactComponent,
-    PrivacyComponent,
-    MastersComponent,
-    JobsComponent,
-    ProjectArchiveComponent,
-    ErrorComponent,
-    ResultComponent,
+        ProjectComponent,
+        ProjectIndexComponent,
+        PublicationIndexComponent,
+        AboutComponent,
+        RedirectComponent,
+        PublicationComponent,
+        ContactComponent,
+        PrivacyComponent,
+        MastersComponent,
+        JobsComponent,
+        ProjectArchiveComponent,
+        ErrorComponent,
+        ResultComponent,
 
-    // Utils
-    AuthorFormatPipe,
-    ButtonComponent,
-    PrettyUrlPipe,
-  ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule.withServerTransition({ appId: 'elabHome' }),
-    BrowserTransferStateModule,
-    CommonModule,
-    CloudinaryModule.forRoot(cloudinary, config),
-    HttpClientModule,
-    ScrollToModule.forRoot(),
-    ScullyLibModule.forRoot({useTranferState: true}),
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
-  providers: [
-    DataService,
-    RedirectService,
-  ],
-  bootstrap: [AppComponent]
+        // Utils
+        AuthorFormatPipe,
+        ButtonComponent,
+        PrettyUrlPipe,
+    ],
+    imports: [
+        AppRoutingModule,
+        BrowserModule.withServerTransition({ appId: 'elabHome' }),
+        BrowserTransferStateModule,
+        CommonModule,
+        CloudinaryModule.forRoot(cloudinary, config),
+        HttpClientModule,
+        ScrollToModule.forRoot(),
+        ScullyLibModule.forRoot({ useTranferState: true }),
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    providers: [DataService, RedirectService],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

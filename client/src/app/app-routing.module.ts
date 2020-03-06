@@ -16,40 +16,41 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  // { path: 'about', component: AboutComponent },  
-  
-  { path: 'projects', component: ProjectIndexComponent },
-  { path: 'projects/:key', component: ProjectComponent },
-  // { path: 'projects/archive', component: ProjectArchiveComponent },
-  
-  // { path: 'getinvolved', component: ContactComponent },
+    { path: '', component: HomeComponent },
+    // { path: 'about', component: AboutComponent },
 
-  // { path: 'cmap', component: MastersComponent },
-  // { path: 'masters', component: MastersComponent },
-  // { path: 'masters/cohort/:key', component: MastersComponent },
+    { path: 'projects', component: ProjectIndexComponent },
+    { path: 'projects/:key', component: ProjectComponent },
+    // { path: 'projects/archive', component: ProjectArchiveComponent },
 
-  // { path: 'contact', component: ContactComponent },
-  // { path: 'press', component: ContactComponent },
+    // { path: 'getinvolved', component: ContactComponent },
 
-  // { path: 'privacy', component: PrivacyComponent },
-  // { path: 'jobs', component: JobsComponent },
-  
-  // { path: 'error', component: ErrorComponent },
+    // { path: 'cmap', component: MastersComponent },
+    // { path: 'masters', component: MastersComponent },
+    // { path: 'masters/cohort/:key', component: MastersComponent },
 
-  // { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
+    // { path: 'contact', component: ContactComponent },
+    // { path: 'press', component: ContactComponent },
 
-  // { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
-  //     externalUrl: 'https://www.launchpad6.com/contestpad'
-  //   }
-  // },
+    // { path: 'privacy', component: PrivacyComponent },
+    // { path: 'jobs', component: JobsComponent },
 
+    // { path: 'error', component: ErrorComponent },
+
+    // { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
+
+    // { path: 'pokemon', component: RedirectComponent, canActivate:[RedirectService], data: {
+    //     externalUrl: 'https://www.launchpad6.com/contestpad'
+    //   }
+    // },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-})],
-  exports: [RouterModule]
+    imports: [
+        RouterModule.forRoot(routes, {
+            initialNavigation: 'enabled',
+        }),
+    ],
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
