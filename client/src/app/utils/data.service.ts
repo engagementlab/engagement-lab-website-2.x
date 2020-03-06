@@ -28,7 +28,6 @@ export class DataService {
             this.currentUrl = this._router.url;
             // Track prior url
             if (event instanceof NavigationStart) {
-                debugger;
                 this.previousUrl = this.currentUrl;
                 this.currentUrl = event.url;
             }

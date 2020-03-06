@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 import { DataService } from '../utils/data.service';
@@ -6,7 +6,7 @@ import { filter } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 
-import { TimelineLite, Circ } from 'gsap/all';
+import { TimelineLite, Circ } from 'gsap/src/all';
 import * as _ from 'underscore';
 
 interface Link {
@@ -111,19 +111,19 @@ export class NavComponent implements AfterViewInit {
             '-=.7',
         );
 
-        this.tl.staggerFromTo(
-            this.menu.nativeElement.querySelectorAll('h3'),
-            0.2,
-            { autoAlpha: 0, yPercent: -20 },
-            { autoAlpha: 1, yPercent: 0 },
-            0.1,
-            '-=.5',
-            () => {
-                this.menu.nativeElement.querySelectorAll('h3 a').forEach((el: HTMLElement) => {
-                    el.classList.add('visible');
-                });
-            },
-        );
+        // this.tl.staggerFromTo(
+        //     this.menu.nativeElement.querySelectorAll('h3'),
+        //     0.2,
+        //     { autoAlpha: 0, yPercent: -20 },
+        //     { autoAlpha: 1, yPercent: 0 },
+        //     0.1,
+        //     '-=.5',
+        //     () => {
+        //         this.menu.nativeElement.querySelectorAll('h3 a').forEach((el: HTMLElement) => {
+        //             el.classList.add('visible');
+        //         });
+        //     },
+        // );
     }
 
     openCloseNav() {
