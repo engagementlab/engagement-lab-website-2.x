@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { TweenLite } from 'gsap';
 
 import { DataService } from '../utils/data.service';
-import { async } from '@angular/core/testing';
+import { isScullyGenerated, isScullyRunning } from '@scullyio/ng-lib';
 
 @Component({
     selector: 'app-project',
@@ -30,6 +30,8 @@ export class ProjectComponent implements OnInit {
     @ViewChild('description') description: ElementRef;
 
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
+        if (isScullyGenerated()) return;
+
         this._route.params.subscribe(async params => {
             // Force content reset
             this.content = undefined;
@@ -53,7 +55,12 @@ export class ProjectComponent implements OnInit {
         });
     }
 
-    ngOnInit() {}
+    async ngOnInit() {
+        if (isScullyGenerated()) {
+            const content = await this._dataSvc.getSet('projects', this._route.snapshot.params.key);
+            this.setContent(content);
+        }
+    }
 
     ngOnDestroy(): void {
         // Undo bg gradient

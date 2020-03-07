@@ -22,7 +22,8 @@
     "serve:content:prod": "cd content; nodemon prod;",
     "serve:ssr": "npm-run-all -p serve:content:prod scully",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "scully:scan": "scully -- --scanRoutes"
   },
   "private": true,
   "dependencies": {

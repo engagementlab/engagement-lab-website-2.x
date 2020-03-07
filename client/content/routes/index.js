@@ -36,7 +36,9 @@ const Routes = (prodMode) => {
   // If production mode, load routes that build app contnet
   // const projects = require('./build/projects');
   router.get('/get/homepage', routeIncludes, routes.get.homepage);
-  router.get('/get/projects/:key?', routes.get.project);
+  router.get('/get/projects', routes.get.project.data);
+  router.get('/get/projects/:key', routes.get.project.data);
+  router.get('/keys/projects', routes.get.project.keys);
 
   // router.get('/get/about/get', routeIncludes, routes.api.about.get);
   // router.get('/get/team/get', routeIncludes, routes.api.team.get);

@@ -35,11 +35,14 @@ export class DataService {
     }
 
     public async getSet(page: string, param: string = null, search = false): Promise<any[]> {
-        const stateKey = page;
+        let stateKey = page;
         if (!search) this.isLoading.next(true);
 
         let url = `${this.devUrl}/get/${page}`;
-        if (param) url = url + '/' + param;
+        if (param) {
+            url = url + '/' + param;
+            stateKey += '_' + param;
+        }
 
         // If scully is building or dev build, cache data from content API in transferstate
         if (!isScullyGenerated()) {
