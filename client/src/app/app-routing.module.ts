@@ -19,8 +19,13 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     // { path: 'about', component: AboutComponent },
 
-    { path: 'projects', component: ProjectIndexComponent },
-    { path: 'projects/:key', component: ProjectComponent },
+    {
+        path: 'projects',
+        loadChildren: () => {
+            return import('./projects/projects.module').then(m => m.ProjectsModule);
+        },
+    },
+    // { path: 'projects/:key', component: ProjectComponent },
     // { path: 'projects/archive', component: ProjectArchiveComponent },
 
     // { path: 'getinvolved', component: ContactComponent },
@@ -46,11 +51,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [
-        RouterModule.forRoot(routes, {
-            initialNavigation: 'enabled',
-        }),
-    ],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}

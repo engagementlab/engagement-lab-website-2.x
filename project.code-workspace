@@ -1,6 +1,5 @@
 {
-  "folders": [
-    {
+  "folders": [{
       "path": "./client",
       "name": "Client"
     },
@@ -12,14 +11,20 @@
       "path": "./server",
       "name": "Server (Deprecated)"
     },
-
+    {
+      "path": "/Users/john_richardson/Documents/Projects/scully/projects/sampleBlog"
+    }
   ],
   "settings": {
     "eslint.validate": [
       "javascript",
       "javascriptreact",
-      { "language": "typescript" },
-      { "language": "typescriptreact" }
+      {
+        "language": "typescript"
+      },
+      {
+        "language": "typescriptreact"
+      }
     ],
     "editor.formatOnSave": true,
     "eslint.linkTask.enabled": true,

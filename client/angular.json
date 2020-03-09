@@ -30,9 +30,6 @@
             ],
             "styles": [
               "src/styles/global.scss"
-            ],
-            "scripts": [
-              "node_modules/gsap/gsap-core.js"
             ]
           },
           "configurations": {
@@ -175,12 +172,7 @@
             "outputPath": "dist/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
-            "externalDependencies": [
-              "gsap",
-              "canvas",
-              "paper",
-              "better-sqlite3"
-            ]
+            "externalDependencies": []
           },
           "configurations": {
             "development": {

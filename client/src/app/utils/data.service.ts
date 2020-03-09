@@ -60,7 +60,8 @@ export class DataService {
             const state = new Promise<any[]>((resolve, reject) => {
                 try {
                     this._transferState.getState<any[]>(stateKey).subscribe(res => {
-                        resolve(res);
+                        if (res) resolve(res);
+                        else reject();
                     });
                 } catch (error) {
                     this.isLoading.next(false);

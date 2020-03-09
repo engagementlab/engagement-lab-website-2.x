@@ -1,11 +1,8 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
-import { isScullyGenerated, TransferStateService } from '@scullyio/ng-lib';
+import { TransferStateService } from '@scullyio/ng-lib';
 
-import * as _ from 'underscore';
-import { shareReplay, catchError, tap } from 'rxjs/operators';
-import { of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -23,16 +20,19 @@ export class ProjectIndexComponent implements OnInit {
 
     public isPhone: boolean;
 
+    // links$: Observable<any> = this.scully.available$;
+
     @ViewChildren('projectList') projectList: QueryList<any>;
 
     constructor(
         private _dataSvc: DataService,
         private _transferState: TransferStateService,
-        private http: HttpClient,
+        private http: HttpClient, // private scully: ScullyRoutesService,
     ) {}
 
     async ngOnInit() {
         this.projects = await this._dataSvc.getSet('projects');
+        // console.log(this.links$);
     }
 
     ngAfterViewInit() {

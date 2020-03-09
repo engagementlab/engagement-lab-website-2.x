@@ -7,10 +7,13 @@
  * Content API routing
  * ==========
  */
-const Routes = (prodMode) => {
+
+const express = require('express');
+
+const Routes = () => {
   const { keystone } = global;
-  const express = require('express');
   const router = express.Router();
+  const productionMode = process.argv.slice(2)[0] && process.argv.slice(2)[0] === 'prod';
 
   const importRoutes = keystone.importer(__dirname);
 
@@ -22,7 +25,8 @@ const Routes = (prodMode) => {
 
   // Setup Route Bindings
   // CORS
-  const corsPort = prodMode ? 1864 : 4200;
+  const corsPort = productionMode ? 1864 : 4200;
+  console.log(corsPort);
   router.all('/*', (req, res, next) => {
     res.header('Access-Control-Allow-Origin', `http://localhost:${corsPort}`);
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, HEAD, PUT');

@@ -52,8 +52,6 @@ const start = (productionMode) => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
 
-  // app.use('/', indexRouter(productionMode));
-
   app.use((req, res, next) => {
     res.locals.db = global.keystone;
     next();

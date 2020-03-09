@@ -1,10 +1,11 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 import { TweenLite } from 'gsap';
 
 import { DataService } from '../utils/data.service';
 import { isScullyGenerated, isScullyRunning } from '@scullyio/ng-lib';
+import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'app-project',
@@ -29,37 +30,45 @@ export class ProjectComponent implements OnInit {
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
     @ViewChild('description') description: ElementRef;
 
-    constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
-        if (isScullyGenerated()) return;
+    constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
+        if (isScullyGenerated()) {
+            _router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(async e => {
+                // Force content reset
+                this.content = undefined;
 
-        this._route.params.subscribe(async params => {
-            // Force content reset
-            this.content = undefined;
+                const content = await this._dataSvc.getSet('projects', this._route.snapshot.params.key);
+                if (content) this.setContent(content);
+                console.log(this._route.snapshot.params.key);
+            });
+        }
+        // this._route.params.subscribe(async params => {
 
-            // Redirect if user tried old url format
-            if (params['category'] !== undefined) {
-                this.redirecting = true;
+        // Redirect if user tried old url format
+        // if (params['category'] !== undefined) {
+        //     this.redirecting = true;
 
-                this.projectKey = params['key'];
+        //     this.projectKey = params['key'];
 
-                setTimeout(() => {
-                    window.location.href = 'projects/' + params['key'];
-                }, 4200);
-                return;
-            }
+        //     setTimeout(() => {
+        //         window.location.href = 'projects/' + params['key'];
+        //     }, 4200);
+        //     return;
+        // }
 
-            const content = await this._dataSvc.getSet('projects', params['key']);
-
-            this.setContent(content);
-            this.hidden = false;
-        });
+        // });
     }
 
     async ngOnInit() {
-        if (isScullyGenerated()) {
-            const content = await this._dataSvc.getSet('projects', this._route.snapshot.params.key);
-            this.setContent(content);
-        }
+        // if (isScullyRunning()) {
+        const content = await this._dataSvc.getSet('projects', this._route.snapshot.params.key);
+        this.setContent(content);
+        // }
+        //  else {
+        //     const content = await this._dataSvc.getSet('projects', 'atstake');
+
+        //     this.setContent(content);
+        //     this.hidden = false;
+        // }
     }
 
     ngOnDestroy(): void {
