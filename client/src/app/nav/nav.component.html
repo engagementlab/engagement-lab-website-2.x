@@ -30,8 +30,7 @@
     </div>
 
     <div class="column">
-        <!-- (click)="openCloseNav()" -->
-        <a #menuBtn id="menu-btn" class="columns uppercase">
+        <a #menuBtn id="menu-btn" class="columns uppercase" (click)="openCloseNav()">
             <div id="lines" class="column is-one-quarter">
                 <span></span>
                 <span></span>
@@ -44,11 +43,11 @@
     </div>
 </nav>
 
-<section #menu id="menu" class="columns is-mobile is-multiline" style="display: none">
+<section #menu id="menu" class="columns is-mobile is-multiline">
     <!-- Tablet Landscape+ -->
     <div #menuLinks id="links" class="columns column is-full">
         <div class="column is-two-thirds is-5-tablet hidden-mobile">
-            <h3 *ngFor="let i of [1]">
+            <h3 *ngFor="let i of [0, 1, 2]">
                 <!-- (click)="openCloseNav()" -->
                 <a *ngIf="itemActive(navLinks[i].url)" class="active">{{ navLinks[i].label }}</a>
                 <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{ navLinks[i].url }}">{{ navLinks[i].label }}</a>

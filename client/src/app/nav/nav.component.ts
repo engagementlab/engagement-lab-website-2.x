@@ -6,9 +6,6 @@ import { filter } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 
-// import { TimelineLite, Circ } from 'gsap/src/all';
-import * as _ from 'underscore';
-
 interface Link {
     url: string;
     label: string;
@@ -64,6 +61,13 @@ export class NavComponent {
         });
 
         this.searchEnabled = environment.searchEnabled;
+    }
+
+    openCloseNav(): void {
+        this.menuBtn.nativeElement.classList.toggle('isOpen');
+        this.menu.nativeElement.classList.toggle('isOpen');
+
+        document.getElementById('menu-overlay').classList.toggle('open');
     }
 
     // Is passed route active?
