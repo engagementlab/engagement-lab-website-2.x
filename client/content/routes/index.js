@@ -26,7 +26,7 @@ const Routes = () => {
   // Setup Route Bindings
   // CORS
   const corsPort = productionMode ? 1864 : 4200;
-  console.log(corsPort);
+
   router.all('/*', (req, res, next) => {
     res.header('Access-Control-Allow-Origin', `http://localhost:${corsPort}`);
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, HEAD, PUT');
@@ -37,14 +37,13 @@ const Routes = () => {
     else next();
   });
 
-  // If production mode, load routes that build app contnet
-  // const projects = require('./build/projects');
+  router.get('/get/about', routeIncludes, routes.get.about);
   router.get('/get/homepage', routeIncludes, routes.get.homepage);
   router.get('/get/projects', routes.get.project.data);
   router.get('/get/projects/:key', routes.get.project.data);
+
   router.get('/keys/projects', routes.get.project.keys);
 
-  // router.get('/get/about/get', routeIncludes, routes.api.about.get);
   // router.get('/get/team/get', routeIncludes, routes.api.team.get);
   // router.get('/get/team/get/:person_key?', routeIncludes, routes.api.team.get);
   // router.get('/get/initiative/get/:key', routeIncludes, routes.api.initiative.get);

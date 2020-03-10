@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
     constructor(private _dataSvc: DataService) {}
 
-    async ngOnInit() {
+    async ngOnInit(): Promise<any> {
         this.content = await this._dataSvc.getSet('homepage');
 
         this.drawArt();

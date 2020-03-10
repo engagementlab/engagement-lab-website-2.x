@@ -1,11 +1,9 @@
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TransferHttpCacheModule } from '@nguniversal/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ScullyLibModule } from '@scullyio/ng-lib';
-
-import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +37,7 @@ import { AuthorFormatPipe } from './utils/author-format.pipe';
 import { HomeComponent } from './home.component';
 import { DataService } from './utils/data.service';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { PeopleGridComponent } from './team/people-grid.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -52,22 +51,22 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         CdnImageComponent,
 
         // Components
-        HomeComponent,
-        NavComponent,
+        AboutComponent,
+        ContactComponent,
+        ErrorComponent,
         FooterComponent,
-
+        HomeComponent,
+        JobsComponent,
+        MastersComponent,
+        NavComponent,
+        PrivacyComponent,
+        PeopleGridComponent,
+        ProjectArchiveComponent,
         ProjectComponent,
         ProjectIndexComponent,
-        PublicationIndexComponent,
-        AboutComponent,
-        RedirectComponent,
         PublicationComponent,
-        ContactComponent,
-        PrivacyComponent,
-        MastersComponent,
-        JobsComponent,
-        ProjectArchiveComponent,
-        ErrorComponent,
+        PublicationIndexComponent,
+        RedirectComponent,
         ResultComponent,
 
         // Utils

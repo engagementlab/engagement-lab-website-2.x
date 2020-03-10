@@ -4,9 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about/about.component';
-import { ProjectIndexComponent } from './projects/index.component';
-import { ProjectComponent } from './projects/project.component';
-import { ProjectArchiveComponent } from './projects/archive.component';
 import { ContactComponent } from './contact/contact.component';
 import { MastersComponent } from './masters/masters.component';
 import { PrivacyComponent } from './privacy/privacy.component';
@@ -17,7 +14,7 @@ import { RedirectService } from './utils/redirect.service';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    // { path: 'about', component: AboutComponent },
+    { path: 'about', component: AboutComponent },
 
     {
         path: 'projects',
@@ -25,8 +22,6 @@ const routes: Routes = [
             return import('./projects/projects.module').then(m => m.ProjectsModule);
         },
     },
-    // { path: 'projects/:key', component: ProjectComponent },
-    // { path: 'projects/archive', component: ProjectArchiveComponent },
 
     // { path: 'getinvolved', component: ContactComponent },
 

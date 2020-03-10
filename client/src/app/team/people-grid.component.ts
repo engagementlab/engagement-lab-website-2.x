@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChildren, QueryList, Input, OnDestroy, AfterViewInit } from '@angular/core';
-import { tns, TinySliderInstance } from 'tiny-slider';
+import { tns, TinySliderInstance } from 'tiny-slider/src/tiny-slider';
 
 @Component({
     selector: 'people-grid',
@@ -8,8 +8,8 @@ import { tns, TinySliderInstance } from 'tiny-slider';
 })
 export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
     @Input() people: any[];
-    @Input() preview = false;
-    @Input() cohort = false;
+    @Input() preview: boolean;
+    @Input() cohort: boolean;
 
     @ViewChildren('teamList') list: QueryList<any>;
 
@@ -32,6 +32,7 @@ export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
                 fixedWidth: 270,
                 autoplay: false,
                 nav: false,
+                // loop: false,
                 arrowKeys: true,
                 mouseDrag: true,
                 controlsContainer: document.getElementById('controls'),

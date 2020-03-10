@@ -1,9 +1,10 @@
 
 /**
- * Lab website backend builder
- * Developed by Engagement Lab, 2020
+ * @fileoverview Engagement Lab Website v2.x content service
+ * @copyright Engagement Lab at Emerson College, 2020
  *
  * @author Johnny Richardson
+ * @description Route to retrieve home data
  *
  * ==========
  */
