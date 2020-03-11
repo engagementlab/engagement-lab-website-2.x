@@ -3,27 +3,27 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Components
 import { HomeComponent } from './home.component';
+import { ProjectIndexComponent } from './projects/index.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { MastersComponent } from './masters/masters.component';
-import { PrivacyComponent } from './privacy/privacy.component';
-import { JobsComponent } from './jobs/jobs.component';
-import { ErrorComponent } from './error/error.component';
-import { RedirectComponent } from './redirect/redirect.component';
-import { RedirectService } from './utils/redirect.service';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'about', component: AboutComponent },
+    { path: 'pubs', component: AboutComponent },
+    // {
+    //     path: 'about',
+    //     loadChildren: () => {
+    //         return import('./lazy-routes.module').then(m => m.LazyRoutesModule);
+    //     },
+    // },
 
-    {
-        path: 'projects',
-        loadChildren: () => {
-            return import('./projects/projects.module').then(m => m.ProjectsModule);
-        },
-    },
+    // {
+    //     path: '*',
+    //     loadChildren: () => {
+    //         return import('./projects/projects.module').then(m => m.ProjectsModule);
+    //     },
+    // },
 
-    // { path: 'getinvolved', component: ContactComponent },
+    // { path: 'projects', component: ProjectIndexComponent },
 
     // { path: 'cmap', component: MastersComponent },
     // { path: 'masters', component: MastersComponent },

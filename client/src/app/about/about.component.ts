@@ -15,12 +15,9 @@ export class AboutComponent implements OnInit {
     public partners: any[];
     public people: any[];
 
-    constructor(private _dataSvc: DataService) {
-        this.isPhone = isMobile().phone;
-        this.isTablet = isMobile().tablet;
-    }
+    constructor(private _dataSvc: DataService) {}
 
-    async ngOnInit(): Promise<any> {
+    async ngOnInit() {
         const response = await this._dataSvc.getSet('about');
 
         this.about = response['about'];
