@@ -1,8 +1,8 @@
-##########  Part 1: Build Angular App  #########################################
+##########  Part 1: Install Base Dependencies  #################################
 FROM node:13-slim as build
 
 # For node-gyp (node-sass)
-RUN apt-get update && apt-get install -y build-essential python
+RUN apt-get update && apt-get install -y build-essential git python
 
 WORKDIR /app/client
 
@@ -11,22 +11,29 @@ ENV NODE_OPTIONS --max-old-space-size=1024
 
 COPY package*.json ./
 
-# Install dependencies
 RUN npm ci
+
+
+##########  Part 2: Install Content Dependencies  ##############################
+WORKDIR /app/client/content
+
+COPY content/package*.json ./
+
+RUN npm ci
+
+
+##########  Part 3: Compile  ###################################################
+WORKDIR /app/client
 
 COPY . .
 
-# Prerender app (fill data from API)
-RUN npm run prerender:compile && ng run prerender:express
-
-# Run Angular build in production mode
-#RUN ng build --prod="true" --progress
+RUN ./docker-build.sh
 
 
-##########  Part 2: Serve compiled files  ######################################
+##########  Part 4: Serve compiled files  ######################################
 FROM nginx:alpine
 
-COPY --from=build /app/client/dist /usr/share/nginx/html
+COPY --from=build /app/client/dist/static /usr/share/nginx/html
 
 EXPOSE 80
 
