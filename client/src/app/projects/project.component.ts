@@ -41,8 +41,8 @@ export class ProjectComponent implements OnInit {
                 console.log(this._route.snapshot.params.key);
             });
         }
-        // this._route.params.subscribe(async params => {
 
+        // TODO: Re-introduce
         // Redirect if user tried old url format
         // if (params['category'] !== undefined) {
         //     this.redirecting = true;

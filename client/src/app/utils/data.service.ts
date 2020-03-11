@@ -56,7 +56,6 @@ export class DataService {
                 throw Error(error);
             }
         } else {
-            // if(environment.universal) {
             const state = new Promise<any[]>((resolve, reject) => {
                 try {
                     this._transferState.getState<any[]>(stateKey).subscribe(res => {
