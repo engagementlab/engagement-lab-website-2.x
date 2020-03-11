@@ -1,6 +1,6 @@
 # content
 content/node_modules
-#content/.env
+content/.env
 
 # dist
 dist/node_modules
@@ -10,6 +10,7 @@ dist/src
 # Misc project-specific
 .cms_pid
 .vscode
+.env.sh
 
 # Don't copy node_modules
 node_modules
