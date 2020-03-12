@@ -27,6 +27,7 @@ export class NavComponent {
     public searchResults: any[];
     public searchEnabled: boolean;
     public logoSm: boolean;
+    public menuEnabled: boolean;
 
     private wasLoading = false;
     private currentUrl: string;
@@ -61,11 +62,16 @@ export class NavComponent {
         });
 
         this.searchEnabled = environment.searchEnabled;
+
+        setTimeout(() => {
+            this.menuEnabled = true;
+        }, 15000);
     }
 
     openCloseNav(): void {
         this.menuBtn.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.toggle('isOpen');
+        this.menu.nativeElement.classList.add('wasOpened');
 
         document.getElementById('menu-overlay').classList.toggle('open');
     }

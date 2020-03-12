@@ -182,8 +182,17 @@ nav {
 
 #menu {
   position: absolute;
+  visibility: hidden;
   z-index: 3;
-  animation: close-menu 0.2s ease-in-out 1s 1 both;
+
+  &.wasOpened {
+    animation: close-menu 0.2s ease-in-out 1s 1 both;
+
+    h3 {
+      display: block;
+      animation: hide .1s ease-in-out 1 both;
+    }
+  }
 
   &.isOpen {
     animation: open-menu 0.2s ease-in-out 1 both;
@@ -201,6 +210,8 @@ nav {
 
   h3 {
 
+    display: none;
+
     font-family: 'LunchtypeMedium';
     font-size: 2.4em;
     font-weight: 500;
@@ -208,8 +219,6 @@ nav {
     letter-spacing: 1.5px;
 
     margin: 18% 0 0 0;
-
-    animation: hide .1s ease-in-out 1 both;
 
     @for $i from 6 through 1 {
       &:nth-of-type(#{$i}) {

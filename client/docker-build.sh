@@ -1,6 +1,6 @@
 #!/bin/bash
 cd content
-node bin/www &
+node bin/www prod &
 CMS_PID=$!
 
 cd ..
