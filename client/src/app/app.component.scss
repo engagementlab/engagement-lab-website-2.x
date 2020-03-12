@@ -4,15 +4,14 @@
   position: fixed;
   z-index: 2;
   opacity: 0;
-  //   display: none;
+
   background-color: white;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 
-  animation: close 0.2s ease-in-out 1s both;
-  // @include multi-transition(opacity .5s, visibility 0s, ease-in-out);
+  animation: close 0.2s ease-in-out .81s both;
 
   @keyframes open {
 

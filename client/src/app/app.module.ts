@@ -38,6 +38,7 @@ import { HomeComponent } from './home.component';
 import { DataService } from './utils/data.service';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { PeopleGridComponent } from './team/people-grid.component';
+import { InitiativeComponent } from './initiatives/initiative.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -57,6 +58,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         FooterComponent,
         HomeComponent,
         JobsComponent,
+        InitiativeComponent,
         MastersComponent,
         NavComponent,
         PrivacyComponent,
@@ -75,7 +77,6 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         PrettyUrlPipe,
     ],
     imports: [
-        AppRoutingModule,
         BrowserModule.withServerTransition({ appId: 'elabHome' }),
         BrowserTransferStateModule,
         CommonModule,
@@ -83,6 +84,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         HttpClientModule,
         ScrollToModule.forRoot(),
         ScullyLibModule.forRoot({ useTranferState: true }),
+        AppRoutingModule,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     providers: [DataService, RedirectService],

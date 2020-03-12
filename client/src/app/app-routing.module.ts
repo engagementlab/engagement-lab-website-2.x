@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { HomeComponent } from './home.component';
 import { MastersComponent } from './masters/masters.component';
+import { InitiativeComponent } from './initiatives/initiative.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
         },
     },
 
+    { path: 'initiatives', component: InitiativeComponent },
     { path: 'cmap', redirectTo: 'masters' },
     { path: 'masters', component: MastersComponent },
     { path: 'masters/cohort/:key', component: MastersComponent },

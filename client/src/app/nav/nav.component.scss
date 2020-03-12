@@ -1,4 +1,5 @@
 @import "~src/styles/_variables";
+$jobs-delay: 1.4s;
 
 nav {
   position: relative;
@@ -185,12 +186,13 @@ nav {
   visibility: hidden;
   z-index: 3;
 
+  // Only applied after first menu open to prevent flash on load
   &.wasOpened {
     animation: close-menu 0.2s ease-in-out 1s 1 both;
 
     h3 {
       display: block;
-      animation: hide .1s ease-in-out 1 both;
+      animation: hide .01s ease-in-out 1 both;
     }
   }
 
@@ -206,6 +208,12 @@ nav {
         }
       }
     }
+
+    #jobs {
+      animation: show-jobs 0.2s ease-in-out 1 both;
+      animation-delay: $jobs-delay;
+    }
+
   }
 
   h3 {
@@ -218,7 +226,15 @@ nav {
     line-height: 1.17;
     letter-spacing: 1.5px;
 
-    margin: 18% 0 0 0;
+
+    // Apply top margin for only links after first in column(s)
+    &:not(.no-margin) {
+      margin: 18% 0 0 0;
+
+      @include phones {
+        margin-top: 9%;
+      }
+    }
 
     @for $i from 6 through 1 {
       &:nth-of-type(#{$i}) {
@@ -287,6 +303,18 @@ nav {
       }
     }
 
+    @keyframes show-jobs {
+      0% {
+        opacity: 0;
+        @include translate(0, 20%);
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
     @keyframes hide {
       0% {
         opacity: 1;
@@ -332,11 +360,16 @@ nav {
     .column {
       break-inside: avoid;
 
+      // Two columns on non-mobile
       @include not-phones {
-
         columns: 2;
       }
     }
+  }
+
+  #jobs {
+    animation: hide .1s ease-in-out 1 both;
+    animation-delay: $jobs-delay;
   }
 
   #search {
