@@ -60,7 +60,6 @@ export class DataService {
                 try {
                     this._transferState.getState<any[]>(stateKey).subscribe(res => {
                         if (res) resolve(res);
-                        else reject();
                     });
                 } catch (error) {
                     this.isLoading.next(false);

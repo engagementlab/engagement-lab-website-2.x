@@ -2,7 +2,11 @@
 
 <div class="columns hidden-mobile">
     <div id="btn" class="column is-5-tablet is-half-desktop">
-        <app-button label="{{content?.buttonTxt}}" href="{{content?.applicationLink}}" ariaLabel="Go to Emerson application page"></app-button>
+        <app-button
+            label="{{ content.buttonTxt }}"
+            href="{{ content.applicationLink }}"
+            ariaLabel="Go to Emerson application page"
+        ></app-button>
     </div>
     <div class="column">
         <cdn-image id="design" cloudinaryId="logos/design-logo" alt="Masters of Media Design logo 2"></cdn-image>
@@ -10,17 +14,22 @@
 </div>
 
 <div id="btn" class="hidden-tablet-plus">
-  <div id="mobile">
-    <cdn-image cloudinaryId="logos/design-logo" width="149" alt="Masters of Media Design logo 2"></cdn-image>
-  </div>  
-    <app-button label="{{content?.buttonTxt}}" href="{{content?.applicationLink}}" ariaLabel="Go to Emerson application page"></app-button>
+    <div id="mobile">
+        <cdn-image cloudinaryId="logos/design-logo" width="149" alt="Masters of Media Design logo 2"></cdn-image>
+    </div>
+    <app-button
+        label="{{ content.buttonTxt }}"
+        href="{{ content.applicationLink }}"
+        ariaLabel="Go to Emerson application page"
+    ></app-button>
 </div>
 
 <div class="column is-half" id="link">
-  <a href="https://admissions.emerson.edu/register/GROpenHouse2019"><h3>
-    Attend the Graduate Admission Open House!
-  </h3>
-  </a>
+    <a href="https://admissions.emerson.edu/register/GROpenHouse2019"
+        ><h3>
+            Attend the Graduate Admission Open House!
+        </h3>
+    </a>
 </div>
 
 <hr />
@@ -28,5 +37,12 @@
 <h1 class="column is-full-mobile is-half-tablet uppercase no-pad">Media Design MA</h1>
 
 <div class="columns is-mobile is-multiline">
-  <h3 class="column is-full-mobile is-7-tablet no-pad blurb" [innerHtml]="content?.programDescription.html"></h3>
+    <h3 class="column is-full-mobile is-7-tablet no-pad blurb" [innerHtml]="content.programDescription.html"></h3>
+</div>
+
+<div *ngIf="people && people.length > 0">
+    <hr />
+    <h1 class="column is-full-mobile is-half-tablet uppercase no-pad">Current Cohort</h1>
+
+    <people-grid [people]="people" [cohort]="true"></people-grid>
 </div>

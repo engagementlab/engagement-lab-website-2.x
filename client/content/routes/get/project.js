@@ -57,39 +57,39 @@ const BuildData = async (req, res) => {
   const fields = 'key image.public_id byline name featured archived projectType customUrl sortOrder';
   let data;
 
-  // Get one project
-  if (options.id) {
-    const addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages.public_id files showFiles';
-    data = list.findOne({
-      key: options.id,
-    }, `${fields} ${addtlFields}`)
-      .populate({
-        path: 'principalInvestigator',
-        select: 'name -_id',
-      })
-      .populate({
-        path: 'format',
-        select: 'name -_id',
-      })
-      .populate({
-        path: 'files',
-        select: 'name file.filetype file.url fileSummary.html',
-      });
-  } else if (options.archived) {
-    data = list.find({
-      enabled: true,
-      archived: true,
-    },
-    fields)
-      .sort([['sortOrder', 'descending']]);
-  } else {
-    data = list.find({ enabled: true }, `${fields} -_id`)
-      .sort([['sortOrder', 'ascending']]);
-  }
-
-  const results = await data.exec();
-
   try {
+    // Get one project
+    if (options.id) {
+      const addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages.public_id files showFiles';
+      data = list.findOne({
+        key: options.id,
+      }, `${fields} ${addtlFields}`)
+        .populate({
+          path: 'principalInvestigator',
+          select: 'name -_id',
+        })
+        .populate({
+          path: 'format',
+          select: 'name -_id',
+        })
+        .populate({
+          path: 'files',
+          select: 'name file.filetype file.url fileSummary.html',
+        });
+    } else if (options.archived) {
+      data = list.find({
+        enabled: true,
+        archived: true,
+      },
+      fields)
+        .sort([['sortOrder', 'descending']]);
+    } else {
+      data = list.find({ enabled: true }, `${fields} -_id`)
+        .sort([['sortOrder', 'ascending']]);
+    }
+
+    const results = await data.exec();
+
     if (results === null || results.length < 1) {
       res.status(204).send();
     }

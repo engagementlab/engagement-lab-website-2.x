@@ -3,31 +3,27 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Components
 import { HomeComponent } from './home.component';
-import { ProjectIndexComponent } from './projects/index.component';
-import { AboutComponent } from './about/about.component';
+import { MastersComponent } from './masters/masters.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'pubs', component: AboutComponent },
-    // {
-    //     path: 'about',
-    //     loadChildren: () => {
-    //         return import('./lazy-routes.module').then(m => m.LazyRoutesModule);
-    //     },
-    // },
+    {
+        path: 'about',
+        loadChildren: () => {
+            return import('./lazy-routes.module').then(m => m.LazyRoutesModule);
+        },
+    },
 
-    // {
-    //     path: '*',
-    //     loadChildren: () => {
-    //         return import('./projects/projects.module').then(m => m.ProjectsModule);
-    //     },
-    // },
+    {
+        path: 'projects',
+        loadChildren: () => {
+            return import('./projects/projects.module').then(m => m.ProjectsModule);
+        },
+    },
 
-    // { path: 'projects', component: ProjectIndexComponent },
-
-    // { path: 'cmap', component: MastersComponent },
-    // { path: 'masters', component: MastersComponent },
-    // { path: 'masters/cohort/:key', component: MastersComponent },
+    { path: 'cmap', redirectTo: 'masters' },
+    { path: 'masters', component: MastersComponent },
+    { path: 'masters/cohort/:key', component: MastersComponent },
 
     // { path: 'contact', component: ContactComponent },
     // { path: 'press', component: ContactComponent },

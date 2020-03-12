@@ -21,34 +21,25 @@ export class MastersComponent implements OnInit {
         });
     }
 
-    ngOnInit() {
-        /* 
-    this._dataSvc.getSet('masters/get/').subscribe(response => {
-      
-      this.content = response.masters;
-      this.people = response.people;
+    async ngOnInit(): Promise<any> {
+        const response = await this._dataSvc.getSet('masters');
+        this.content = response['masters'];
+        this.people = response['people'];
 
-      // We have to add dummy/empty people if non-x4 count to allow for correct flex layout
-      let mod = this.people.length % 4;
-      for(let i=0; i<mod; i++)
-        this.people.push({name:'dummy'});
-        
-    });
- */
+        // We have to add dummy/empty people if non-x4 count to allow for correct flex layout
+        const mod = this.people.length % 4;
+        for (let i = 0; i < mod; i++) this.people.push({ name: 'dummy' });
     }
 
-    getPerson(key) {
+    getPerson(key: string): void {
         // No dupe requests!
         if (this.gettingPerson) return;
 
         this.gettingPerson = true;
         this.currentPerson = undefined;
 
-        /*     this._dataSvc.getSet('team/get/'+key).subscribe(response => {
-      
-      this.currentPerson = response.person;
-
-    }); */
+        const response = this._dataSvc.getSet('team', key);
+        this.currentPerson = response['person'];
     }
 
     closePerson() {
@@ -56,7 +47,5 @@ export class MastersComponent implements OnInit {
         this.currentPerson = undefined;
 
         this._router.navigateByUrl('masters');
-
-        // window.scrollTo(0, 0);
     }
 }

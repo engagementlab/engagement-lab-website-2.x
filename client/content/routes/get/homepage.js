@@ -19,33 +19,37 @@ const BuildData = async (req, res) => {
   const eventFields = 'name date key -_id';
   const initiativeFields = 'name description image.public_id key projects -_id';
 
-  // Get initiatives
-  const initiativeData = initiative.find({}, initiativeFields).sort([
-    ['sortOrder', 'ascending'],
-  ])
-    .populate({
-      path: 'projects',
-      select: 'name key -_id',
-      options: { limit: 3, sort: 'name' },
-    });
+  try {
+    // Get initiatives
+    const initiativeData = initiative.find({}, initiativeFields).sort([
+      ['sortOrder', 'ascending'],
+    ])
+      .populate({
+        path: 'projects',
+        select: 'name key -_id',
+        options: { limit: 3, sort: 'name' },
+      });
     // Get a couple featured projects
-  const projectData = project.find({ featured: true }, projectFields).limit(2);
-  // Get 3 events most recent by date
-  const eventData = event.find({ enabled: true }, eventFields).sort([
-    ['date', 'descending'],
-  ]).limit(3);
+    const projectData = project.find({ featured: true }, projectFields).limit(2);
+    // Get 3 events most recent by date
+    const eventData = event.find({ enabled: true }, eventFields).sort([
+      ['date', 'descending'],
+    ]).limit(3);
     // Get tagline
-  const taglineData = about.findOne({}, 'tagline -_id');
+    const taglineData = about.findOne({}, 'tagline -_id');
 
-  const tagLineExec = await taglineData.exec();
-  const data = {
-    initiatives: await initiativeData.exec(),
-    projects: await projectData.exec(),
-    events: await eventData.exec(),
-    tagline: tagLineExec.tagline,
-  };
+    const tagLineExec = await taglineData.exec();
+    const data = {
+      initiatives: await initiativeData.exec(),
+      projects: await projectData.exec(),
+      events: await eventData.exec(),
+      tagline: tagLineExec.tagline,
+    };
 
-  res.json(data);
+    res.json(data);
+  } catch (e) {
+    res.status(500).send(e.toString());
+  }
 };
 
 module.exports = (req, res) => BuildData(req, res);

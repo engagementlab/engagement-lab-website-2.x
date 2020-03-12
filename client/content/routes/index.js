@@ -39,10 +39,16 @@ const Routes = () => {
 
   router.get('/get/about', routeIncludes, routes.get.about);
   router.get('/get/homepage', routeIncludes, routes.get.homepage);
+  router.get('/get/masters', routes.get.masters);
   router.get('/get/projects', routes.get.project.data);
   router.get('/get/projects/:key', routes.get.project.data);
 
   router.get('/keys/projects', routes.get.project.keys);
+
+  // Error
+  router.get('*', (req, res) => {
+    res.status(500).send(`No route found for path ${req.url}.`);
+  });
 
   // router.get('/get/team/get', routeIncludes, routes.api.team.get);
   // router.get('/get/team/get/:person_key?', routeIncludes, routes.api.team.get);
