@@ -16,7 +16,7 @@
         "serve:scully": "npm-run-all -p serve:content:prod scully",
         "kill-node": "killall node",
         "scully": "scully",
-        "scully:build": "scully --sr --sb --RSD --sge --killServer",
+        "scully:build": "scully --sr --sb --RSD --sge --nw --killServer",
         "scully:serve": "scully serve"
     },
     "private": true,
