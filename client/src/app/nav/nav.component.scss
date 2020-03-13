@@ -1,5 +1,5 @@
 @import "~src/styles/_variables";
-$jobs-delay: 1.4s;
+$jobs-delay: .75s;
 
 nav {
   position: relative;
@@ -188,11 +188,11 @@ nav {
 
   // Only applied after first menu open to prevent flash on load
   &.wasOpened {
-    animation: close-menu 0.2s ease-in-out 1s 1 both;
+    animation: close-menu 0.2s ease-in-out 2.4s 1 both;
 
     h3 {
       display: block;
-      animation: hide .01s ease-in-out 1 both;
+      animation: hide .5s cubic-bezier(0.950, 0.050, 0.795, 0.035) 1 both;
     }
   }
 
@@ -200,11 +200,11 @@ nav {
     animation: open-menu 0.2s ease-in-out 1 both;
 
     h3 {
-      animation: show 0.2s ease-in-out 1 both;
+      animation: show 0.15s ease-in-out 1 both;
 
       @for $i from 1 through 6 {
         &:nth-of-type(#{$i}) {
-          animation-delay: .2s * $i;
+          animation-delay: .1s * $i;
         }
       }
     }
@@ -225,7 +225,6 @@ nav {
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 1.5px;
-
 
     // Apply top margin for only links after first in column(s)
     &:not(.no-margin) {
@@ -322,7 +321,7 @@ nav {
 
       100% {
         opacity: 0;
-        @include translate(0, -20%);
+        @include translate(0, -40%);
       }
     }
 

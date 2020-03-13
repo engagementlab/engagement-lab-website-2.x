@@ -54,7 +54,7 @@ export class NavComponent {
 
         _router.events.pipe(filter(e => e instanceof NavigationStart)).subscribe(e => {
             // Close menu when nav starts
-            // if (this.menuBtn.nativeElement.classList.contains('open')) this.tl.reverse();
+            if (this.menuBtn.nativeElement.classList.contains('isOpen')) this.openCloseNav();
         });
 
         this._dataSvc.isLoading.subscribe(value => {
@@ -83,7 +83,7 @@ export class NavComponent {
 
     // If on home when logo clicked, just close menu
     logoClick() {
-        // if (this.currentUrl === '/') this.openCloseNav();
+        if (this.currentUrl === '/') this.openCloseNav();
     }
 
     searchFocus() {

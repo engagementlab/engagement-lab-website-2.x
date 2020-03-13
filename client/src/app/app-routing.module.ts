@@ -4,14 +4,17 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { HomeComponent } from './home.component';
 import { MastersComponent } from './masters/masters.component';
-import { InitiativeComponent } from './initiatives/initiative.component';
+import { ContactComponent } from './contact/contact.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     {
         path: 'about',
         loadChildren: () => {
-            return import('./lazy-routes.module').then(m => m.LazyRoutesModule);
+            return import('./about/about.module').then(m => m.AboutModule);
         },
     },
 
@@ -22,18 +25,25 @@ const routes: Routes = [
         },
     },
 
-    { path: 'initiatives', component: InitiativeComponent },
+    {
+        path: 'initiatives',
+        loadChildren: () => {
+            return import('./initiatives/initiatives.module').then(m => m.InitiativesModule);
+        },
+    },
+
+    // TODO: load lazily
     { path: 'cmap', redirectTo: 'masters' },
     { path: 'masters', component: MastersComponent },
     { path: 'masters/cohort/:key', component: MastersComponent },
 
-    // { path: 'contact', component: ContactComponent },
-    // { path: 'press', component: ContactComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'press', component: ContactComponent },
 
-    // { path: 'privacy', component: PrivacyComponent },
-    // { path: 'jobs', component: JobsComponent },
+    { path: 'privacy', component: PrivacyComponent },
+    { path: 'jobs', component: JobsComponent },
 
-    // { path: 'error', component: ErrorComponent },
+    { path: 'error', component: ErrorComponent },
 
     // { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
 

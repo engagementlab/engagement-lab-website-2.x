@@ -39,4 +39,10 @@ exports.get = (req, res) => {
   return buildData(options, res);
 };
 
-module.exports = (req, res) => BuildData(req, res);
+exports.data = (req, res) => BuildData(req, res);
+exports.keys = async (req, res) => {
+  const list = res.locals.db.list('Initiative').model;
+  const keys = await list.find({}, 'key -_id').exec();
+
+  res.status(200).json(keys);
+};

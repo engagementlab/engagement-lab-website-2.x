@@ -17,21 +17,19 @@ export class InitiativeComponent implements OnInit {
 
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
         this.upperBg = document.getElementById('initiative-bg');
-        this._route.params.subscribe(params => {
+        const logoClasses = document.getElementById('logo-img').classList;
+        this._route.params.subscribe(async params => {
             this.initiativeType = params['key'];
 
-            const response = this._dataSvc.getSet('initiative', this.initiativeType);
+            const response = await this._dataSvc.getSet('initiative', this.initiativeType);
 
             this.content = response;
 
             this.upperBg.classList.value = this.initiativeType;
             // TweenLite.fromTo(this.upperBg, 1, {autoAlpha:0}, {autoAlpha:1, display:'block', delay:1});
 
-            // document.getElementById('logo-img').classList.add('white');
-
-            // AOS.init({
-            //   mirror: true
-            // });
+            this.upperBg.classList.add('show');
+            logoClasses.add('white');
         });
     }
 
