@@ -49,7 +49,7 @@ Privacy.add({
 
 });
 
-Privacy.schema.pre('save', (doc, next) => {
+Privacy.schema.post('save', (doc, next) => {
   doc.lastUpdated = new Date();
   next();
 });
