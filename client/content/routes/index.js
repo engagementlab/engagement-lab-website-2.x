@@ -43,6 +43,7 @@ const Routes = () => {
   router.get('/get/contact', routes.get.contact);
   router.get('/get/jobs', routes.get.jobs);
   router.get('/get/masters', routes.get.masters);
+  router.get('/get/privacy', routes.get.privacy);
   router.get('/get/projects', routes.get.project.data);
   router.get('/get/projects/:key', routes.get.project.data);
   router.get('/get/publications', routes.get.publication.data);

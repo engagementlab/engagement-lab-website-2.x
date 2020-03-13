@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../utils/data.service';
 
 @Component({
     selector: 'app-privacy',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./privacy.component.scss'],
 })
 export class PrivacyComponent implements OnInit {
-    constructor() {}
+    public content: any;
 
-    ngOnInit() {}
+    constructor(private _dataSvc: DataService) {}
+
+    async ngOnInit(): Promise<any> {
+        this.content = await this._dataSvc.getSet('privacy');
+    }
 }
