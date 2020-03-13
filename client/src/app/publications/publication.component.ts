@@ -16,9 +16,7 @@ export class PublicationComponent implements OnInit {
     public hasResource: boolean;
     public isExternal: boolean;
 
-    constructor() {}
-
-    ngOnInit() {
+    ngOnInit(): void {
         const p = this.pub;
         if (!p) return;
 

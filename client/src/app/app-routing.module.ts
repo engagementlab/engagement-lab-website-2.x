@@ -44,8 +44,9 @@ const routes: Routes = [
     { path: 'masters', component: MastersComponent },
     { path: 'masters/cohort/:key', component: MastersComponent },
 
-    { path: 'contact', component: ContactComponent },
-    { path: 'press', component: ContactComponent },
+    { path: 'contact', redirectTo: 'getinvolved' },
+    { path: 'press', redirectTo: 'getinvolved' },
+    { path: 'getinvolved', component: ContactComponent },
 
     { path: 'privacy', component: PrivacyComponent },
     { path: 'jobs', component: JobsComponent },

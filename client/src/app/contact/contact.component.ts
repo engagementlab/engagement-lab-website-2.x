@@ -12,12 +12,8 @@ export class ContactComponent implements OnInit {
 
     constructor(private _dataSvc: DataService, private _scrollToSvc: ScrollToService) {}
 
-    ngOnInit() {
-        /*  this._dataSvc.getSet('contact/get/').subscribe(response => {
-      
-      this.content = response[0];
-
-    }); */
+    async ngOnInit(): Promise<any> {
+        this.content = await this._dataSvc.getSet('contact');
     }
 
     public scrollToBottom() {

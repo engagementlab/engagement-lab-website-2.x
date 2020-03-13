@@ -1,8 +1,8 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 import { DataService } from '../utils/data.service';
-import { isScullyGenerated, isScullyRunning } from '@scullyio/ng-lib';
+import { isScullyGenerated } from '@scullyio/ng-lib';
 import { filter } from 'rxjs/operators';
 
 @Component({

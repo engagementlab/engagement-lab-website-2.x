@@ -9,14 +9,9 @@ import { DataService } from '../utils/data.service';
 export class JobsComponent implements OnInit {
     public jobs: any[];
 
-    constructor(private _dataSvc: DataService) {
-        /*     this._dataSvc.getSet('jobs/get/').subscribe(response => {
-      
-      this.jobs = response;
-      
-    });
-   */
-    }
+    constructor(private _dataSvc: DataService) {}
 
-    ngOnInit() {}
+    async ngOnInit(): Promise<any> {
+        this.jobs = await this._dataSvc.getSet('jobs');
+    }
 }
