@@ -19,6 +19,13 @@ const routes: Routes = [
     },
 
     {
+        path: 'initiatives',
+        loadChildren: () => {
+            return import('./initiatives/initiatives.module').then(m => m.InitiativesModule);
+        },
+    },
+
+    {
         path: 'projects',
         loadChildren: () => {
             return import('./projects/projects.module').then(m => m.ProjectsModule);
@@ -26,9 +33,9 @@ const routes: Routes = [
     },
 
     {
-        path: 'initiatives',
+        path: 'publications',
         loadChildren: () => {
-            return import('./initiatives/initiatives.module').then(m => m.InitiativesModule);
+            return import('./publications/publications.module').then(m => m.PublicationsModule);
         },
     },
 

@@ -1,8 +1,6 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationStart, NavigationEnd } from '@angular/router';
 
-import { TweenLite } from 'gsap';
-
 import { DataService } from '../utils/data.service';
 import { isScullyGenerated, isScullyRunning } from '@scullyio/ng-lib';
 import { filter } from 'rxjs/operators';
@@ -77,25 +75,25 @@ export class ProjectComponent implements OnInit {
         const alpha = {
             a: 1,
         };
-        TweenLite.to(alpha, 1, {
-            a: '-=1',
-            onUpdate: () => {
-                document.body.style.backgroundImage =
-                    'linear-gradient(to bottom, rgba(' +
-                    color +
-                    ',' +
-                    alpha.a +
-                    ' ) 0%, rgba(' +
-                    color +
-                    ',' +
-                    alpha.a +
-                    ') ' +
-                    this.bgEndPerc +
-                    '%, white ' +
-                    this.bgEndPerc +
-                    '%, white 100%)';
-            },
-        });
+        // TweenLite.to(alpha, 1, {
+        //     a: '-=1',
+        //     onUpdate: () => {
+        //         document.body.style.backgroundImage =
+        //             'linear-gradient(to bottom, rgba(' +
+        //             color +
+        //             ',' +
+        //             alpha.a +
+        //             ' ) 0%, rgba(' +
+        //             color +
+        //             ',' +
+        //             alpha.a +
+        //             ') ' +
+        //             this.bgEndPerc +
+        //             '%, white ' +
+        //             this.bgEndPerc +
+        //             '%, white 100%)';
+        //     },
+        // });
     }
 
     setContent(data: any) {
@@ -136,26 +134,26 @@ export class ProjectComponent implements OnInit {
                 a: 0,
             };
 
-            TweenLite.to(alpha, 1, {
-                a: '+=1',
-                onUpdate: () => {
-                    // Set bg to generated gradient
-                    document.body.style.backgroundImage =
-                        'linear-gradient(to bottom, rgba(' +
-                        color +
-                        ',' +
-                        alpha.a +
-                        ' ) 0%, rgba(' +
-                        color +
-                        ',' +
-                        alpha.a +
-                        ') ' +
-                        this.bgEndPerc +
-                        '%, white ' +
-                        this.bgEndPerc +
-                        '%, white 100%)';
-                },
-            });
+            // TweenLite.to(alpha, 1, {
+            //     a: '+=1',
+            //     onUpdate: () => {
+            //         // Set bg to generated gradient
+            //         document.body.style.backgroundImage =
+            //             'linear-gradient(to bottom, rgba(' +
+            //             color +
+            //             ',' +
+            //             alpha.a +
+            //             ' ) 0%, rgba(' +
+            //             color +
+            //             ',' +
+            //             alpha.a +
+            //             ') ' +
+            //             this.bgEndPerc +
+            //             '%, white ' +
+            //             this.bgEndPerc +
+            //             '%, white 100%)';
+            //     },
+            // });
         }, 50);
     }
 }

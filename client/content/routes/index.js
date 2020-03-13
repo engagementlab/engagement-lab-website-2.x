@@ -43,9 +43,12 @@ const Routes = () => {
   router.get('/get/masters', routes.get.masters);
   router.get('/get/projects', routes.get.project.data);
   router.get('/get/projects/:key', routes.get.project.data);
+  router.get('/get/publications', routes.get.publication.data);
+  router.get('/get/publications/:key', routes.get.publication.data);
 
-  router.get('/keys/projects', routes.get.project.keys);
   router.get('/keys/initiatives', routes.get.initiative.keys);
+  router.get('/keys/projects', routes.get.project.keys);
+  router.get('/keys/publications', routes.get.publication.keys);
 
   // Error
   router.get('*', (req, res) => {

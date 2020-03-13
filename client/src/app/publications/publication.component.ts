@@ -20,6 +20,7 @@ export class PublicationComponent implements OnInit {
 
     ngOnInit() {
         const p = this.pub;
+        if (!p) return;
 
         this.iconWidth = this.type === 'book' ? 37 : 50;
         this.year = new Date(p.date).getFullYear();

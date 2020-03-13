@@ -32,8 +32,6 @@ export class NavComponent {
     private wasLoading = false;
     private currentUrl: string;
 
-    private tl: TimelineLite;
-
     @ViewChild('nav') nav: ElementRef;
     @ViewChild('searchField') searchField: ElementRef;
     @ViewChild('menuLinks') menuLinks: ElementRef;
