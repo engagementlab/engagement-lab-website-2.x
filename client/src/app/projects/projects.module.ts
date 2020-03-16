@@ -8,7 +8,13 @@ import { ProjectComponent } from './project.component';
 const routes: Routes = [
     { path: '', component: ProjectIndexComponent },
     { path: 'archive', component: ProjectArchiveComponent },
-    { path: ':key', component: ProjectComponent },
+    {
+        path: ':key',
+        component: ProjectComponent,
+        data: {
+            animation: { value: 'project' },
+        },
+    },
 ];
 
 @NgModule({

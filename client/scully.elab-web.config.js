@@ -1,4 +1,5 @@
-require('./plugins/title')
+require('./plugins/projectBackground');
+
 exports.config = {
   projectRoot: './src',
   projectName: 'elab-web',
@@ -6,7 +7,6 @@ exports.config = {
   routes: {
     // All initiative pages
     '/initiatives/:key': {
-      postRenderers: ['defaultTitle'],
       type: 'json',
       key: {
         url: 'http://localhost:3000/keys/initiatives',
@@ -15,6 +15,7 @@ exports.config = {
     },
     // All project pages
     '/projects/:key': {
+      // postRenderers: ['projectBackground'],
       type: 'json',
       key: {
         url: 'http://localhost:3000/keys/projects',

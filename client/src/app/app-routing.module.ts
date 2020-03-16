@@ -11,19 +11,19 @@ import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    {
-        path: 'about',
-        loadChildren: () => {
-            return import('./about/about.module').then(m => m.AboutModule);
-        },
-    },
+    // {
+    //     path: 'about',
+    //     loadChildren: () => {
+    //         return import('./about/about.module').then(m => m.AboutModule);
+    //     },
+    // },
 
-    {
-        path: 'initiatives',
-        loadChildren: () => {
-            return import('./initiatives/initiatives.module').then(m => m.InitiativesModule);
-        },
-    },
+    // {
+    //     path: 'initiatives',
+    //     loadChildren: () => {
+    //         return import('./initiatives/initiatives.module').then(m => m.InitiativesModule);
+    //     },
+    // },
 
     {
         path: 'projects',
@@ -32,26 +32,26 @@ const routes: Routes = [
         },
     },
 
-    {
-        path: 'publications',
-        loadChildren: () => {
-            return import('./publications/publications.module').then(m => m.PublicationsModule);
-        },
-    },
+    // {
+    //     path: 'publications',
+    //     loadChildren: () => {
+    //         return import('./publications/publications.module').then(m => m.PublicationsModule);
+    //     },
+    // },
 
-    // TODO: load lazily
-    { path: 'cmap', redirectTo: 'masters' },
-    { path: 'masters', component: MastersComponent },
-    { path: 'masters/cohort/:key', component: MastersComponent },
+    // // TODO: load lazily
+    // { path: 'cmap', redirectTo: 'masters' },
+    // { path: 'masters', component: MastersComponent },
+    // { path: 'masters/cohort/:key', component: MastersComponent },
 
-    { path: 'contact', redirectTo: 'getinvolved' },
-    { path: 'press', redirectTo: 'getinvolved' },
-    { path: 'getinvolved', component: ContactComponent },
+    // { path: 'contact', redirectTo: 'getinvolved' },
+    // { path: 'press', redirectTo: 'getinvolved' },
+    // { path: 'getinvolved', component: ContactComponent },
 
-    { path: 'privacy', component: PrivacyComponent },
-    { path: 'jobs', component: JobsComponent },
+    // { path: 'privacy', component: PrivacyComponent },
+    // { path: 'jobs', component: JobsComponent },
 
-    { path: 'error', component: ErrorComponent },
+    // { path: 'error', component: ErrorComponent },
 
     // { path: 'redirect', component: RedirectComponent, canActivate:[RedirectService] },
 

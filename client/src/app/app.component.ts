@@ -1,13 +1,24 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { trigger, transition, style, query, group, animate } from '@angular/animations';
 
 import { environment } from '../environments/environment';
+
+export const projectTransition = [
+    // group([
+    query('#top', [
+        style({ transform: 'translate3d(77%, 0, 0)' }),
+        animate(0, style({ transform: 'translate3d(0, 0, 0)' })),
+    ]),
+    // ]),
+];
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    animations: [trigger('routerAnimations', [transition('project => project', projectTransition)])],
 })
 export class AppComponent implements OnInit {
     public isQABuild: boolean;
@@ -31,5 +42,10 @@ export class AppComponent implements OnInit {
             // Always go to top of page
             window.scrollTo(0, 0);
         });
+    }
+
+    public prepareRouteTransition(outlet: any): void {
+        const animation = outlet.activatedRouteData['animation'] || {};
+        return animation['value'] || null;
     }
 }

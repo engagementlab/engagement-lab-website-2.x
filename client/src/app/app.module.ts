@@ -39,6 +39,7 @@ import { DataService } from './utils/data.service';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { PeopleGridComponent } from './team/people-grid.component';
 import { InitiativeComponent } from './initiatives/initiative.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -78,6 +79,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'elabHome' }),
+        BrowserAnimationsModule,
         BrowserTransferStateModule,
         CommonModule,
         CloudinaryModule.forRoot(cloudinary, config),

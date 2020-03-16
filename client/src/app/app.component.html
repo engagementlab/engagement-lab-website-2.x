@@ -1,7 +1,9 @@
 <app-nav></app-nav>
 
 <div id="menu-overlay"></div>
-<router-outlet></router-outlet>
+<div [@routerAnimations]="prepareRouteTransition(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <app-footer></app-footer>
 
 <!-- QA Build Banner -->
