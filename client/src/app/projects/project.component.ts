@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 import { DataService } from '../utils/data.service';
 import { filter } from 'rxjs/operators';
+import { Observable, Subscription } from 'rxjs';
 
 // "Slider nav"
 export enum KEY_CODE {
@@ -15,7 +16,7 @@ export enum KEY_CODE {
     templateUrl: './project.component.html',
     styleUrls: ['./project.component.scss'],
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
     public content: any;
     public next: any;
     public previous: any;
@@ -31,12 +32,18 @@ export class ProjectComponent implements OnInit {
     private bgEndPerc: number;
     private bgAlpha = 0;
 
+    private bgInterval: any;
+    private bgTimeout: any;
+
+    private subscriber: Subscription;
+
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
     @ViewChild('description') description: ElementRef;
 
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
-        // if (isScullyGenerated()) {
-        _router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(async e => {
+        this.subscriber = _router.events.subscribe(async e => {
+            if (!(e instanceof NavigationEnd)) return;
+
             const key = this._route.snapshot.params.key;
 
             // Force content reset
@@ -62,17 +69,15 @@ export class ProjectComponent implements OnInit {
                 if (this.bgAlpha >= 1) clearInterval(alphaInterval);
             }, 15);
         });
-        // }
-    }
-
-    async ngOnInit() {
-        const content = await this._dataSvc.getSet('projects', this._route.snapshot.params.key);
-        await this.setContent(content);
     }
 
     ngOnDestroy(): void {
-        // Undo bg gradient
-        this.bgAlpha = 0;
+        // Cancel timers for bg
+        clearInterval(this.bgInterval);
+        clearTimeout(this.bgTimeout);
+
+        // Cancel router subscribe
+        this.subscriber.unsubscribe();
     }
 
     setContent(data: any): void {
@@ -93,7 +98,7 @@ export class ProjectComponent implements OnInit {
     setBgHeight(): void {
         // Run every 1ms for 3s for the end of gradient always end at desired % after full page load
         // This is slightly hacky but the only way to really ensure proper render.
-        const bgInterval = setInterval(() => {
+        this.bgInterval = setInterval(() => {
             if (this.backgroundEnd === undefined || this.description === undefined) return;
 
             const endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
@@ -112,8 +117,8 @@ export class ProjectComponent implements OnInit {
         }, 1);
 
         // Cancel soon
-        setTimeout(() => {
-            clearInterval(bgInterval);
+        this.bgTimeout = setTimeout(() => {
+            clearInterval(this.bgInterval);
         }, 3000);
     }
     @HostListener('window:keyup', ['$event'])
