@@ -62,8 +62,8 @@ export class ProjectComponent {
             }
 
             const content = await this._dataSvc.getSet('projects', key);
-            this.bgAlpha = 0;
             if (content) this.setContent(content);
+            this.bgAlpha = 0;
             const alphaInterval = setInterval(() => {
                 this.bgAlpha += 0.015;
                 if (this.bgAlpha >= 1) clearInterval(alphaInterval);
@@ -72,6 +72,9 @@ export class ProjectComponent {
     }
 
     ngOnDestroy(): void {
+        // Reset BG
+        document.body.style.backgroundImage = '';
+
         // Cancel timers for bg
         clearInterval(this.bgInterval);
         clearTimeout(this.bgTimeout);
