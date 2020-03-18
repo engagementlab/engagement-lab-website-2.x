@@ -10,6 +10,7 @@
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "el-bootstrapper": "engagementlab/el-bootstrapper",
+    "elasticsearch": "^16.6.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "keystone": "^4.2.1",

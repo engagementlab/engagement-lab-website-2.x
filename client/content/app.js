@@ -17,6 +17,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
+const elasticsearch = require('elasticsearch');
 
 const start = (productionMode) => {
   const app = express();
@@ -42,6 +43,7 @@ const start = (productionMode) => {
       new winston.transports.Console(),
     ],
   });
+  global.elasti = undefined;
 
   // Mongodb connection
   mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
@@ -57,6 +59,13 @@ const start = (productionMode) => {
     next();
   });
 
+  if (process.env.SEARCH_ENABLED === 'true') searchBoot(app);
+  else boot(app, productionMode);
+
+  return app;
+};
+
+const boot = (app, productionMode) => {
   bootstrap.start(
     './config.json',
     app,
@@ -67,8 +76,18 @@ const start = (productionMode) => {
       global.logger.info(colors.bgCyan.bold.black(`Content API started (${productionMode ? 'Production' : 'Development'} Mode).`));
     },
   );
+};
 
-  return app;
+const searchBoot = (app) => {
+  global.elasti = new elasticsearch.Client({ node: process.env.ELASTISEARCH_NODE_URL });
+  global.elasti.ping((error) => {
+    if (error) {
+      global.logger.error('Elasticsearch ERROR!', error);
+    } else {
+      global.logger.info(colors.bgGray.yellow(`Search cluster running at ${process.env.ELASTISEARCH_NODE_URL}`));
+      boot(app);
+    }
+  });
 };
 
 module.exports = start;
