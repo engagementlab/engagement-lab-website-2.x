@@ -11,8 +11,6 @@
   width: 100%;
   height: 100%;
 
-  animation: close 0.2s ease-in-out .81s both;
-
   @keyframes open {
 
     0% {
@@ -38,6 +36,10 @@
       visibility: hidden;
     }
 
+  }
+
+  &.wasOpened {
+    animation: close 0.2s ease-in-out 1.2s both;
   }
 
   &.open {

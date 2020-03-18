@@ -17,29 +17,29 @@ import { CdnImageComponent } from './utils/cdn-image/cdn-image.component';
 import { ButtonComponent } from './utils/app-button/button.component';
 import { PrettyUrlPipe } from './utils/pretty-url.pipe';
 
-import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { AuthorFormatPipe } from './utils/author-format.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './contact/contact.component';
+import { DataService } from './utils/data.service';
+import { ErrorComponent } from './error/error.component';
 import { FooterComponent } from './footer/footer.component';
-import { RedirectService } from './utils/redirect.service';
+import { HomeComponent } from './home/home.component';
+import { InitiativeComponent } from './initiatives/initiative.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { MastersComponent } from './masters/masters.component';
+import { NavComponent } from './nav/nav.component';
+import { PeopleGridComponent } from './team/people-grid.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ProjectArchiveComponent } from './projects/archive.component';
 import { ProjectComponent } from './projects/project.component';
 import { ProjectIndexComponent } from './projects/index.component';
-import { PublicationIndexComponent } from './publications/index.component';
-import { AboutComponent } from './about/about.component';
-import { RedirectComponent } from './redirect/redirect.component';
 import { PublicationComponent } from './publications/publication.component';
-import { ContactComponent } from './contact/contact.component';
-import { PrivacyComponent } from './privacy/privacy.component';
-import { MastersComponent } from './masters/masters.component';
-import { JobsComponent } from './jobs/jobs.component';
-import { ProjectArchiveComponent } from './projects/archive.component';
-import { ErrorComponent } from './error/error.component';
+import { PublicationIndexComponent } from './publications/index.component';
+import { RedirectComponent } from './redirect/redirect.component';
+import { RedirectService } from './utils/redirect.service';
 import { ResultComponent } from './nav/result.component';
-import { AuthorFormatPipe } from './utils/author-format.pipe';
-import { HomeComponent } from './home.component';
-import { DataService } from './utils/data.service';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { PeopleGridComponent } from './team/people-grid.component';
-import { InitiativeComponent } from './initiatives/initiative.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,

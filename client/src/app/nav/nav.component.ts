@@ -27,7 +27,6 @@ export class NavComponent {
     public searchResults: any[];
     public searchEnabled: boolean;
     public logoSm: boolean;
-    public menuEnabled: boolean;
 
     private wasLoading = false;
     private currentUrl: string;
@@ -60,10 +59,6 @@ export class NavComponent {
         });
 
         this.searchEnabled = environment.searchEnabled;
-
-        setTimeout(() => {
-            this.menuEnabled = true;
-        }, 15000);
     }
 
     openCloseNav(): void {
@@ -71,7 +66,14 @@ export class NavComponent {
         this.menu.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.add('wasOpened');
 
-        document.getElementById('menu-overlay').classList.toggle('open');
+        const overlay = document.getElementById('menu-overlay');
+        overlay.classList.toggle('open');
+
+        // This makes it so overlay/label does not do fade out on app load
+        if (!overlay.classList.contains('open')) {
+            overlay.classList.add('wasOpened');
+            this.menuBtnClose.nativeElement.classList.add('wasOpened');
+        }
     }
 
     // Is passed route active?

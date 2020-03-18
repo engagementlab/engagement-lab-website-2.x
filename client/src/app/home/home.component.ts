@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } from '@angular/core';
-import { DataService } from './utils/data.service';
+import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
 import * as paper from 'paper';
@@ -36,15 +36,15 @@ export class HomeComponent implements OnInit {
             const _paper = new paper.PaperScope();
             _paper.setup(this.canvasElement.nativeElement);
 
-            let figures = [],
+            const figures = [],
                 paths: paper.Path[] = [],
                 prevPathPositions = [],
                 circles = [],
                 patterns = [],
                 offsets = [],
+                mouseTool = new paper.Tool();
+            let mousePos: paper.Point,
                 mouseOffsets = [],
-                mouseTool = new paper.Tool(),
-                mousePos: paper.Point,
                 followMouse = false,
                 resume = 0;
 

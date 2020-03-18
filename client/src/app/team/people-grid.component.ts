@@ -32,7 +32,6 @@ export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
                 fixedWidth: 270,
                 autoplay: false,
                 nav: false,
-                // loop: false,
                 arrowKeys: true,
                 mouseDrag: true,
                 controlsContainer: document.getElementById('controls'),
