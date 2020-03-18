@@ -13,7 +13,6 @@
 
 
 const bootstrap = require('el-bootstrapper');
-const mongoose = require('mongoose');
 const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
@@ -44,12 +43,6 @@ const start = (productionMode) => {
     ],
   });
   global.elasti = undefined;
-
-  // Mongodb connection
-  mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
-
-  const mongo = mongoose.connection;
-  mongo.on('error', console.error.bind(console, 'connection error:'));
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
