@@ -49,6 +49,8 @@ const Routes = () => {
   router.get('/get/publications', routes.get.publication.data);
   router.get('/get/publications/:key', routes.get.publication.data);
 
+  router.get('/get/search/:string', routes.get.search);
+
   router.get('/keys/initiatives', routes.get.initiative.keys);
   router.get('/keys/projects', routes.get.project.keys);
   router.get('/keys/publications', routes.get.publication.keys);
