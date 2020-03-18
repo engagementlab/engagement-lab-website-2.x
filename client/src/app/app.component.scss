@@ -2,7 +2,7 @@
 
 #menu-overlay {
   position: fixed;
-  visibility: hidden;
+  // visibility: hidden;
 
   z-index: 2;
   opacity: 0;
@@ -42,6 +42,10 @@
 
   &.wasOpened {
     animation: close 0.2s ease-in-out 1.2s both;
+  }
+
+  &:not(.wasOpened) {
+    visibility: hidden;
   }
 
   &.open {
