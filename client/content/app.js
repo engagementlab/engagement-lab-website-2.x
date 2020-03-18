@@ -12,7 +12,7 @@
  */
 
 
-const bootstrap = require('el-bootstrapper');
+const bootstrap = require('@engagementlab/el-bootstrapper');
 const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
