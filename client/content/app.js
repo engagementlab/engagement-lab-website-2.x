@@ -17,6 +17,7 @@ const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
 const elasticsearch = require('elasticsearch');
+const mongoose = require('mongoose');
 
 const start = (productionMode) => {
   const app = express();
@@ -34,6 +35,13 @@ const start = (productionMode) => {
       return `${ts} [${level}]: ${message} ${Object.keys(args).length ? JSON.stringify(args, null, 2) : ''}`;
     }),
   );
+
+  // Mongodb connection
+  mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+
+  const mongo = mongoose.connection;
+  mongo.on('error', console.error.bind(console, 'connection error:'));
+
 
   global.logger = winston.createLogger({
     level: 'info',

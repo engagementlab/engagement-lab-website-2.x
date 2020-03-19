@@ -15,7 +15,7 @@ export class EventIndexComponent implements OnInit {
     constructor(private _dataSvc: DataService) {}
 
     async ngOnInit(): Promise<any> {
-        const response = await this._dataSvc.getSet('projects');
+        const response = await this._dataSvc.getSet('events');
         this.groupDates(response);
     }
 

@@ -14,6 +14,8 @@ export class EventComponent {
     public next: any;
     public previous: any;
 
+    public isPhone: boolean;
+
     private bgEndPerc: number;
     private bgAlpha = 0;
 
@@ -25,12 +27,6 @@ export class EventComponent {
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
 
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
-        // this._route.params.subscribe(params => {
-        //     this._dataSvc.getDataForUrl('events/get/' + params['key']).subscribe(response => {
-        //         this.setContent(response);
-        //         this.hidden = false;
-        //     });
-        // });
         this.subscriber = _router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
@@ -39,7 +35,7 @@ export class EventComponent {
             // Force content reset
             this.content = undefined;
 
-            const content = await this._dataSvc.getSet('projects', key);
+            const content = await this._dataSvc.getSet('events', key);
             if (content) this.setContent(content);
             this.bgAlpha = 0;
             const alphaInterval = setInterval(() => {
@@ -62,7 +58,7 @@ export class EventComponent {
     }
 
     setContent(data: any): void {
-        this.content = data.project;
+        this.content = data.event;
         this.next = data.next;
         this.previous = data.prev;
 
@@ -101,7 +97,7 @@ export class EventComponent {
     }
     @HostListener('window:keyup', ['$event'])
     keyEvent(event: KeyboardEvent): void {
-        if (event.keyCode === KEY_CODE.RIGHT_ARROW) this._router.navigateByUrl(`/projects/${this.next.key}`);
-        if (event.keyCode === KEY_CODE.LEFT_ARROW) this._router.navigateByUrl(`/projects/${this.previous.key}`);
+        if (event.keyCode === KEY_CODE.RIGHT_ARROW) this._router.navigateByUrl(`/events/${this.next.key}`);
+        if (event.keyCode === KEY_CODE.LEFT_ARROW) this._router.navigateByUrl(`/events/${this.previous.key}`);
     }
 }

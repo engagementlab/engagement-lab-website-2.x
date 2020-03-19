@@ -4,31 +4,31 @@
  * @copyright Engagement Lab at Emerson College, 2020
  *
  * @author Johnny Richardson
- * @description Project data route
+ * @description Event data route
  *
  * ==========
  */
 
 const GetAdjacent = async (list, results, res) => {
   const fields = 'name key -_id';
-  // Get one next/prev project from selected project's sortorder
-  const nextProject = list
+  // Get one next/prev event from selected event's sortorder
+  const nextEvent = list
     .findOne(
       {
         enabled: true,
-        sortOrder: {
-          $gt: results.sortOrder,
+        date: {
+          $gt: results.date,
         },
       },
       fields,
     )
     .limit(1);
-  const prevProject = list
+  const prevEvent = list
     .findOne(
       {
         enabled: true,
-        sortOrder: {
-          $lt: results.sortOrder,
+        date: {
+          $lt: results.date,
         },
       },
       fields,
@@ -37,13 +37,13 @@ const GetAdjacent = async (list, results, res) => {
     .limit(1);
 
   const nextPrevResults = {
-    next: await nextProject,
-    prev: await prevProject,
+    next: await nextEvent,
+    prev: await prevEvent,
   };
 
   // Poplulate next/prev and output response
   try {
-    const output = Object.assign(nextPrevResults, { project: results });
+    const output = Object.assign(nextPrevResults, { event: results });
     return output;
   } catch (err) {
     res.status(500).send(err);
@@ -51,31 +51,19 @@ const GetAdjacent = async (list, results, res) => {
 };
 
 const BuildData = async (req, res) => {
-  const list = res.locals.db.list('Project').model;
+  const list = res.locals.db.list('Event').model;
   const options = { id: req.params.key };
 
-  const fields = 'key image.public_id byline name featured archived projectType customUrl sortOrder';
+  const fields = 'name date key shortDescription eventUrl';
   let data;
 
   try {
-    // Get one project
+    // Get one event
     if (options.id) {
-      const addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages.public_id files showFiles';
+      const addtlFields = 'description.html images.public_id showButton buttonTxt';
       data = list.findOne({
         key: options.id,
-      }, `${fields} ${addtlFields}`)
-        .populate({
-          path: 'principalInvestigator',
-          select: 'name -_id',
-        })
-        .populate({
-          path: 'format',
-          select: 'name -_id',
-        })
-        .populate({
-          path: 'files',
-          select: 'name file.filetype file.url fileSummary.html',
-        });
+      }, `${fields} ${addtlFields}`);
     } else if (options.archived) {
       data = list.find({
         enabled: true,
@@ -108,7 +96,7 @@ const BuildData = async (req, res) => {
 
 exports.data = (req, res) => BuildData(req, res);
 exports.keys = async (req, res) => {
-  const list = res.locals.db.list('Project').model;
+  const list = res.locals.db.list('Event').model;
   const keys = await list.find({}, 'key -_id').exec();
 
   res.status(200).json(keys);

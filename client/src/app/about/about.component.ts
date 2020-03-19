@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
-import isMobile from 'ismobilejs';
-
 @Component({
     selector: 'app-about',
     templateUrl: './about.component.html',

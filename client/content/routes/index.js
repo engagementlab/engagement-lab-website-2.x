@@ -38,6 +38,8 @@ const Routes = () => {
   });
 
   router.get('/get/about', routeIncludes, routes.get.about);
+  router.get('/get/events', routes.get.event.data);
+  router.get('/get/events/:key', routes.get.event.data);
   router.get('/get/homepage', routeIncludes, routes.get.homepage);
   router.get('/get/initiative/:key', routes.get.initiative.data);
   router.get('/get/contact', routes.get.contact);
