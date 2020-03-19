@@ -28,6 +28,13 @@ const routes: Routes = [
     },
 
     {
+        path: 'events',
+        loadChildren: () => {
+            return import('./events/events.module').then(m => m.EventsModule);
+        },
+    },
+
+    {
         path: 'projects',
         loadChildren: () => {
             return import('./projects/projects.module').then(m => m.ProjectsModule);

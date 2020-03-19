@@ -23,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { DataService } from './utils/data.service';
 import { ErrorComponent } from './error/error.component';
+import { EventComponent } from './events/event.component';
+import { EventIndexComponent } from './events/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { InitiativeComponent } from './initiatives/initiative.component';
@@ -56,6 +58,8 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         AboutComponent,
         ContactComponent,
         ErrorComponent,
+        EventIndexComponent,
+        EventComponent,
         FooterComponent,
         HomeComponent,
         JobsComponent,
