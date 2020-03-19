@@ -53,6 +53,7 @@ const Routes = () => {
 
   router.get('/get/search/:string', routes.get.search);
 
+  router.get('/keys/events', routes.get.event.keys);
   router.get('/keys/initiatives', routes.get.initiative.keys);
   router.get('/keys/projects', routes.get.project.keys);
   router.get('/keys/publications', routes.get.publication.keys);
