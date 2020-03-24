@@ -43,6 +43,7 @@
         "express": "^4.15.2",
         "ismobilejs": "^1.0.3",
         "jsdom": "^16.2.1",
+        "matter-js": "^0.14.2",
         "mixitup": "^3.3.1",
         "node-pre-gyp": "^0.14.0",
         "paper": "^0.12.4",

@@ -36,6 +36,10 @@ export class HomeComponent implements OnInit {
             const _paper = new paper.PaperScope();
             _paper.setup(this.canvasElement.nativeElement);
 
+            const MOUSE_RADIUS = 90;
+            const ORBIT_RADIUS = 70;
+            const FPS = 10;
+
             const figures = [],
                 paths: paper.Path[] = [],
                 prevPathPositions = [],
@@ -44,17 +48,25 @@ export class HomeComponent implements OnInit {
                 offsets = [],
                 mouseTool = new paper.Tool();
             let mousePos: paper.Point,
+                mouseShape = new paper.Shape.Circle(new paper.Point(-400, -4000), MOUSE_RADIUS),
                 mouseOffsets = [],
                 followMouse = false,
                 resume = 0;
-
-            const RADIUS = 70;
-            const svgs = [this.pattern1.nativeElement, this.pattern2.nativeElement, this.pattern3.nativeElement],
-                fps = 10;
+            mouseShape.fillColor = new paper.Color('black');
 
             mouseTool.onMouseMove = (evt: paper.ToolEvent) => {
-                if (followMouse) mousePos = evt.point;
+                if (followMouse) {
+                    mousePos = evt.point;
+                    mouseShape.position = mousePos;
+                }
             };
+
+            const boundsRect = new paper.Shape.Rectangle(
+                new paper.Point(52, 52),
+                new paper.Point(_paper.view.bounds.bottomRight.subtract(52)),
+            );
+            boundsRect.addChild(mouseShape);
+            _paper.project.activeLayer.addChild(boundsRect);
 
             _paper.view.on('mouseenter', () => {
                 followMouse = true;
@@ -74,45 +86,62 @@ export class HomeComponent implements OnInit {
             });
 
             figures[0] = {
-                x: 300,
+                x: 1200,
                 y: 110,
+                limitX: 150,
                 color: '#00ab9e',
                 points: _.times(10, () => {
                     return new paper.Point(_.random(150, 300), _.random(110, 250));
                 }),
-                lastPatternPos: new paper.Point(0, 0),
+                momentum: new paper.Point(0, 0),
+                lastInBoundsPos: new paper.Point(0, 0),
                 orbit: 0.5 * 0.5 * Math.random(),
             };
             figures[1] = {
-                x: 270,
+                x: 1270,
                 y: 350,
+                limitX: 150,
                 color: '#f72923',
                 points: _.times(10, () => {
                     return new paper.Point(_.random(110, 230), _.random(350, 550));
                 }),
-                lastPatternPos: new paper.Point(0, 0),
-                orbit: RADIUS * 0.5 + RADIUS * 0.5 * Math.random(),
+                momentum: new paper.Point(0, 0),
+                lastInBoundsPos: new paper.Point(0, 0),
+                orbit: ORBIT_RADIUS * 0.5 + ORBIT_RADIUS * 0.5 * Math.random(),
             };
             figures[2] = {
                 x: 500,
                 y: 250,
+                limitX: 350,
                 color: '#f6a536',
                 points: _.times(10, () => {
-                    return new paper.Point(_.random(450, 550), _.random(150, 320));
+                    return new paper.Point(_.random(620, 700), _.random(150, 320));
                 }),
-                lastPatternPos: new paper.Point(0, 0),
+                momentum: new paper.Point(0, 0),
+                lastInBoundsPos: new paper.Point(0, 0),
                 orbit: 0.5 * 0.5 * Math.random(),
             };
 
             _.each(figures, (figure, i: number) => {
-                paths[i] = new paper.Path(figure.points);
+                // Create all paths and circles
+                paths[i] = new paper.Path.Circle({ center: [figure.x, figure.y], radius: 52 });
+                paths[i].strokeColor = '#000';
+                paths[i].strokeWidth = 1;
+                // _.times(6, n => paths[i].divideAt(n));
+
+                _.each(paths[i].curves, c => {
+                    c.point1 = new paper.Point(c.point1.x + _.random(-10, 10), c.point1.y + _.random(-20, 20));
+                });
                 paths[i].smooth();
+                console.log(paths[i].curves);
 
                 offsets[i] = 0;
 
                 circles[i] = new paper.Path.Circle(new paper.Point(figure.x, figure.y), 104);
-                circles[i].fillColor = figure.color;
-                circles[i].blendMode = 'multiply';
+                // circles[i].fillColor = figure.color;
+                circles[i].blendMode = 'difference';
+
+                // Circle movement
                 circles[i].onFrame = evt => {
                     if (resume > 0) {
                         const deltaX = (prevPathPositions[i].x - paths[i].position.x) * 0.05;
@@ -129,23 +158,31 @@ export class HomeComponent implements OnInit {
 
                     if (offsets[i] < paths[i].length) {
                         circles[i].position = paths[i].getPointAt(offsets[i]);
-                        offsets[i] += evt.delta * fps;
+                        offsets[i] += evt.delta * FPS;
                     } else offsets[i] = 0;
 
                     if (followMouse) {
-                        let delta = (mousePos.x - paths[i].position.x) * 0.005;
-                        const space = Math.abs(mousePos.x - paths[i].position.x);
-                        let deltaY = (mousePos.y - paths[i].position.y) * 0.005;
-                        const spaceY = Math.abs(mousePos.y - paths[i].position.y);
+                        // console.log(circles[i].position.subtract(mousePos).y);
+                        const distance = new paper.Point(circles[i].position.subtract(mousePos));
+                        // figures[i].momentum = figures[i].momentum.subtract(distance.divide(3));
+                        figures[i].momentum = distance.multiply(0.007);
 
-                        if (space < 150) delta = 0;
-                        if (spaceY < 150) deltaY = 0;
+                        const newPosition = paths[i].position.add(figures[i].momentum);
+                        const predictedBounds = paths[i].bounds.include(newPosition).expand(2);
+                        const pathOutside = !boundsRect.bounds.contains(predictedBounds);
 
-                        paths[i].translate(new paper.Point(delta, deltaY));
+                        figures[i].wasInBounds = !pathOutside;
+                        if (pathOutside) {
+                            figures[i].momentum = 0;
+                            paths[i].position = figures[i].lastInBoundsPos;
+                            return;
+                        }
+                        figures[i].lastInBoundsPos = newPosition;
+                        paths[i].position = newPosition;
                     }
                 };
-                _paper.project.activeLayer.addChild(circles[i]);
-                _paper.project.activeLayer.addChild(paths[i]);
+                boundsRect.addChild(circles[i]);
+                boundsRect.addChild(paths[i]);
             });
 
             _.each(figures, (figure, i: number) => {
@@ -175,21 +212,24 @@ export class HomeComponent implements OnInit {
 
                     if (offsets[i] < paths[i].length) {
                         patterns[i - 3].position = paths[i].getPointAt(offsets[i]);
-                        offsets[i] += evt.delta * fps;
+                        offsets[i] += evt.delta * FPS;
                     } else offsets[i] = 0;
 
                     patterns[i - 3].rotate(0.15 * evt.delta * fps);
 
                     if (followMouse) {
                         let delta = (mousePos.x - paths[i].position.x) * 0.005;
-                        const space = Math.abs(mousePos.x - paths[i].position.x);
                         let deltaY = (mousePos.y - paths[i].position.y) * 0.005;
+                        const space = Math.abs(mousePos.x - paths[i].position.x);
                         const spaceY = Math.abs(mousePos.y - paths[i].position.y);
 
-                        if (space < 150) delta = 0;
-                        if (spaceY < 150) deltaY = 0;
+                        if (space < 1150) delta = 0;
+                        // if (spaceY < 1150)
+                        deltaY = 0;
 
-                        paths[i].translate(new paper.Point(delta, deltaY));
+                        const newTranslate = paths[i].position.x + delta;
+                        console.log(space);
+                        if (newTranslate > Math.abs(figures[i].x)) paths[i].translate(new paper.Point(delta, deltaY));
                     }
                 };
             });
