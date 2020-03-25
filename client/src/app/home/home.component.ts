@@ -136,7 +136,6 @@ export class HomeComponent implements OnInit {
                         const deltaX = (prevPathPositions[i].x - paths[i].position.x) * 0.05;
                         const deltaY = (prevPathPositions[i].y - paths[i].position.y) * 0.05;
 
-                        console.log(deltaX, deltaY);
                         paths[i].translate(new paper.Point(deltaX, deltaY));
 
                         if (
