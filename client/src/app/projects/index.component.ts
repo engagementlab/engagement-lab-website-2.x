@@ -27,17 +27,15 @@ export class ProjectIndexComponent implements OnInit {
     }
 
     ngAfterViewInit() {
-        // this.projectList.changes.subscribe(t => {
-        //     // this.mixer = mixitup(document.getElementById('projects'), {
-        //     //   animation: {
-        //     //     effects: 'fade'
-        //     //   }
-        //     // });
-        //   // if not even count of projects, add a dummy once so last one doesn't center
-        //   if(this.projects.length % 2 === 1)
-        //     this.projects.push({projectType: 'dummy', key: 'dummy'});
-        //     // AOS.init();
-        // });
+        this.projectList.changes.subscribe(t => {
+            if (this.projects.length % 2 === 1) this.projects.push({ projectType: 'dummy', key: 'dummy' });
+            //     // this.mixer = mixitup(document.getElementById('projects'), {
+            //     //   animation: {
+            //     //     effects: 'fade'
+            //     //   }
+            //     // });
+            //   // if not even count of projects, add a dummy once so last one doesn't center
+        });
     }
 
     ngOnDestroy() {

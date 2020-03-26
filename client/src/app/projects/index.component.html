@@ -23,13 +23,13 @@
 </div>
 
 <!-- Archived Projects -->
-<section id="archive" class="listing hidden-mobile" *ngIf="projectsArchived">
+<section id="archive" class="listing" *ngIf="projectsArchived">
     <div #archiveList class="item column is-full" *ngFor="let project of projectsArchived; let first = first">
-        <a routerLink="/projects/{{ project.key }}">
+        <a routerLink="/projects/{{ project.key }}" class="theme-{{ project.sortOrder % 3 }}">
             <hr *ngIf="!first" />
 
-            <div class="columns is-mobile">
-                <h3 class="column is-2 type">
+            <div class="columns">
+                <h3 class="column is-3-tablet is-2-desktop type">
                     {{ project.projectType }}
                 </h3>
 
@@ -50,7 +50,7 @@
     </div>
 </section>
 
-<div id="archive-mobile" class="column is-full hidden-tablet-plus">
+<div id="archive-mobile" class="column is-full hidden-not-mobile">
     <app-button
         label="archived projects"
         class="archive"

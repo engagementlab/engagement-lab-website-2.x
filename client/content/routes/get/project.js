@@ -85,7 +85,7 @@ const BuildData = async (req, res) => {
         archived: true,
       },
       `${fields} -_id`)
-        .sort([['sortOrder', 'descending']]);
+        .sort([['sortOrder', 'ascending']]);
     } else {
       data = list.find({ enabled: true }, `${fields} -_id`)
         .sort([['sortOrder', 'ascending']]);

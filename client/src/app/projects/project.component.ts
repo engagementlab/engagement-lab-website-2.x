@@ -90,8 +90,8 @@ export class ProjectComponent {
         this.previous = data.prev;
 
         this.themeIndex = data.project['sortOrder'] % 3;
-        this.themeIndexNext = this.next['sortOrder'] % 3;
-        this.themeIndexPrevious = this.previous['sortOrder'] % 3;
+        if (this.next) this.themeIndexNext = this.next['sortOrder'] % 3;
+        if (this.previous) this.themeIndexPrevious = this.previous['sortOrder'] % 3;
 
         this.setBgHeight();
 

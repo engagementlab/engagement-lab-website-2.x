@@ -71,8 +71,12 @@ app-button {
       font-size: 1.7em;
     }
 
-    @include phones {
+    @include mq($until: mobileLg) {
       width: 93%;
+    }
+
+    @include mq($from: mobileLg) {
+      width: 45%;
     }
 
   }
@@ -80,9 +84,26 @@ app-button {
 
 #archive {
 
+  @include mq($until: mobileLg) {
+    display: none;
+  }
+
   h3,
   div {
     align-items: center;
+  }
+
+  .item {
+    a:hover {
+
+      &.theme-0 {
+        color: $mango;
+      }
+
+      &.theme-1 {
+        color: $green-blue;
+      }
+    }
   }
 
   .columns {
@@ -110,7 +131,7 @@ app-button {
 
 }
 
-@include phones {
+@include mq($until: mobileLg) {
   #archive-mobile {
     justify-content: center;
     display: flex;
