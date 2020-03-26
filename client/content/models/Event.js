@@ -102,7 +102,7 @@ Event.add({
 Event.schema.pre('save', (next) => {
   // Save state for post hook
   this.wasNew = this.isNew;
-  this.wasModified = this.isModified();
+  // this.wasModified = this.isModified();
 
   next();
 });

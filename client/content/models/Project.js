@@ -195,7 +195,8 @@ Project.schema.statics.removeResourceRef = (resourceId, callback) => {
 Project.schema.pre('save', (next) => {
   // Save state for post hook
   this.wasNew = this.isNew;
-  this.wasModified = this.isModified();
+  // // this.wasModified = this.isModified();
+  console.log(this);
 
   // Override key w/ custom URL if defined
   if (this.customUrl && this.customUrl.length > 0) { this.key = this.customUrl; }

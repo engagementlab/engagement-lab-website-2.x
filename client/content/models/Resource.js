@@ -136,7 +136,7 @@ Resource.schema.pre('save', (next) => {
 
   // Save state for post hook
   this.wasNew = this.isNew;
-  this.wasModified = this.isModified();
+  // this.wasModified = this.isModified();
 
   /*
     If Azure file upload succeeded but returned no filename, we have to generate

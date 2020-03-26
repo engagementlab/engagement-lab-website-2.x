@@ -63,21 +63,6 @@ const Routes = () => {
     res.status(500).send(`No route found for path ${req.url}.`);
   });
 
-  // router.get('/get/team/get', routeIncludes, routes.api.team.get);
-  // router.get('/get/team/get/:person_key?', routeIncludes, routes.api.team.get);
-  // router.get('/get/initiative/get/:key', routeIncludes, routes.api.initiative.get);
-
-
-  // router.get('/get/projects/get/archived/', routeIncludes, routes.api.projects.archived);
-  // router.get('/get/projects/get/:project_key?', routeIncludes, routes.api.projects.get);
-
-
-  // router.get('/get/publications/get/:project_key?', routeIncludes, routes.api.publications.get);
-  // router.get('/get/events/get/:key?', routeIncludes, routes.api.events.get);
-  // router.get('/get/contact/get', routeIncludes, routes.api.contact.get);
-  // router.get('/get/jobs/get', routeIncludes, routes.api.jobs.get);
-  // router.get('/get/masters/get', routeIncludes, routes.api.masters.get);
-
   return router;
 };
 

@@ -10,7 +10,7 @@
  */
 
 const GetAdjacent = async (list, results, res) => {
-  const fields = 'name key -_id';
+  const fields = 'name key sortOrderž -_id';
   // Get one next/prev project from selected project's sortorder
   const nextProject = list
     .findOne(
@@ -53,13 +53,16 @@ const GetAdjacent = async (list, results, res) => {
 const BuildData = async (req, res) => {
   const list = res.locals.db.list('Project').model;
   const options = { id: req.params.key };
+  const archived = req.params.key === 'archive';
 
-  const fields = 'key image.public_id byline name featured archived projectType customUrl sortOrder';
+  let fields = 'key image.public_id byline name featured archived projectType customUrl sortOrder';
+
+  if (archived) { fields = 'key name archived projectType sortOrder'; }
   let data;
 
   try {
     // Get one project
-    if (options.id) {
+    if (options.id && !archived) {
       const addtlFields = '_id description challengeTxt strategyTxt resultsTxt externalLinkUrl githubUrl projectImages.public_id files showFiles';
       data = list.findOne({
         key: options.id,
@@ -76,11 +79,12 @@ const BuildData = async (req, res) => {
           path: 'files',
           select: 'name file.filetype file.url fileSummary.html',
         });
-    } else if (options.archived) {
+    } else if (archived) {
       data = list.find({
         enabled: true,
+        archived: true,
       },
-      fields)
+      `${fields} -_id`)
         .sort([['sortOrder', 'descending']]);
     } else {
       data = list.find({ enabled: true }, `${fields} -_id`)
@@ -94,7 +98,7 @@ const BuildData = async (req, res) => {
     }
 
     let resultObj = null;
-    if (options.id) {
+    if (options.id && !archived) {
       resultObj = await GetAdjacent(list, results, res);
     } else {
       resultObj = results;
@@ -102,6 +106,7 @@ const BuildData = async (req, res) => {
 
     res.status(200).json(resultObj);
   } catch (err) {
+    console.error(err);
     res.status(500).send(`${err}`);
   }
 };

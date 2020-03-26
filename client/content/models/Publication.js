@@ -53,12 +53,6 @@ const azureFile = new keystone.Storage({
 });
 
 /**
- * Caching fields for 'post' save hook
- */
-// let docIsNew;
-// let docIsModified;
-
-/**
  * Model Fields
  * @main Publication
  */
@@ -164,7 +158,7 @@ Publication.add({
 Publication.schema.pre('save', (next) => {
   // Save state for post hook
   this.wasNew = this.isNew;
-  this.wasModified = this.isModified();
+  // this.wasModified = this.isModified();
 
   const pub = this;
   filter.model.findFilter(this.form, (err, result) => {

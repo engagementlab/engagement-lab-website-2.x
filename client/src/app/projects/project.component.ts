@@ -1,9 +1,8 @@
-import { Component, ViewChild, ElementRef, OnInit, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 import { DataService } from '../utils/data.service';
-import { filter } from 'rxjs/operators';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 // "Slider nav"
 export enum KEY_CODE {
@@ -20,15 +19,17 @@ export class ProjectComponent {
     public content: any;
     public next: any;
     public previous: any;
+
     public themeIndex: number;
+    public themeIndexNext: number;
+    public themeIndexPrevious: number;
+    private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
 
     public hidden = true;
-    public isPhone: boolean;
     public redirecting: boolean;
 
     public projectKey: string;
 
-    private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
     private bgEndPerc: number;
     private bgAlpha = 0;
 
@@ -87,7 +88,10 @@ export class ProjectComponent {
         this.content = data.project;
         this.next = data.next;
         this.previous = data.prev;
+
         this.themeIndex = data.project['sortOrder'] % 3;
+        this.themeIndexNext = this.next['sortOrder'] % 3;
+        this.themeIndexPrevious = this.previous['sortOrder'] % 3;
 
         this.setBgHeight();
 

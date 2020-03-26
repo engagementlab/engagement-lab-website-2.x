@@ -111,8 +111,13 @@
 
 <section id="nextprev" class="columns is-mobile is-multiline listing">
     <!-- Prev project can have an empty column on non-mobile -->
-    <div class="item column is-full-mobile is-half-tablet" *ngIf="!isPhone || (isPhone && previous)">
-        <a id="prev" class="prev theme-{{ themeIndex }}" routerLink="/projects/{{ previous.key }}" *ngIf="previous">
+    <div class="item column is-full-mobile is-half-tablet">
+        <a
+            id="prev"
+            class="prev theme-{{ themeIndexPrevious }}"
+            routerLink="/projects/{{ previous.key }}"
+            *ngIf="previous"
+        >
             <hr class="hidden-mobile" />
 
             <div>
@@ -128,7 +133,7 @@
         </a>
     </div>
     <div class="item column is-full-mobile is-half-tablet" *ngIf="next">
-        <a id="next" class="theme-{{ themeIndex }}" routerLink="/projects/{{ next.key }}">
+        <a id="next" class="theme-{{ themeIndexNext }}" routerLink="/projects/{{ next.key }}">
             <hr class="hidden-mobile" />
 
             <div>

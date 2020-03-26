@@ -14,17 +14,16 @@ export class ProjectIndexComponent implements OnInit {
     public projectTypesCount: Record<string, any>;
     public projectTypesTotal: number;
 
-    public isPhone: boolean;
-
-    // links$: Observable<any> = this.scully.available$;
-
     @ViewChildren('projectList') projectList: QueryList<any>;
 
     constructor(private _dataSvc: DataService) {}
 
     async ngOnInit() {
-        this.projects = await this._dataSvc.getSet('projects');
-        // console.log(this.links$);
+        const content = await this._dataSvc.getSet('projects');
+
+        this.projects = content.filter(p => !p.archived);
+        this.projectsArchived = content.filter(p => p.archived);
+        this.projectFeatured = content.filter(p => p.featured)[0];
     }
 
     ngAfterViewInit() {

@@ -77,18 +77,6 @@ Listing.add({
  */
 Listing.schema.methods.safeName = () => safeString(this.name);
 
-/**
- * Hooks
- * =============
- */
-Listing.schema.pre('save', (next) => {
-  // Save state for post hook
-  this.wasNew = this.isNew;
-  this.wasModified = this.isModified();
-
-  next();
-});
-
 /*
 Listing.schema.post('save', function(doc, next) {
 
