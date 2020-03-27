@@ -5,6 +5,7 @@ import { DataService } from '../utils/data.service';
 import { filter } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 interface Link {
     url: string;
@@ -69,11 +70,16 @@ export class NavComponent {
         const overlay = document.getElementById('menu-overlay');
         overlay.classList.toggle('open');
 
+        // Nav is being closed...
         // This makes it so overlay/label does not do fade out on app load
         if (!overlay.classList.contains('open')) {
             overlay.classList.add('wasOpened');
             this.menuBtnClose.nativeElement.classList.add('wasOpened');
+
+            enableBodyScroll(this.nav.nativeElement);
         }
+        // ...opened
+        else disableBodyScroll(this.nav.nativeElement);
     }
 
     // Is passed route active?

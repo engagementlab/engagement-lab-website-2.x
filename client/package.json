@@ -38,6 +38,7 @@
         "@scullyio/ng-lib": "latest",
         "@scullyio/scully": "latest",
         "aos": "^2.3.4",
+        "body-scroll-lock": "^3.0.1",
         "bulma": "^0.8.0",
         "core-js": "^3.6.4",
         "express": "^4.15.2",
