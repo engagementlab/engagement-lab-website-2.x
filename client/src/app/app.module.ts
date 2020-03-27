@@ -42,6 +42,8 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 import { ResultComponent } from './nav/result.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { PersonModalComponent } from './team/person-modal/person-modal.component';
+import { TeamComponent } from './team/team.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -68,6 +70,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         NavComponent,
         PrivacyComponent,
         PeopleGridComponent,
+        PersonModalComponent,
         ProjectArchiveComponent,
         ProjectComponent,
         ProjectIndexComponent,
@@ -75,6 +78,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         PublicationIndexComponent,
         RedirectComponent,
         ResultComponent,
+        TeamComponent,
 
         // Utils
         AuthorFormatPipe,

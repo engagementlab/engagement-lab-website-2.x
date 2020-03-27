@@ -38,25 +38,24 @@ const Routes = () => {
   });
 
   router.get('/get/about', routeIncludes, routes.get.about);
-  router.get('/get/events', routes.get.event.data);
-  router.get('/get/events/:key', routes.get.event.data);
+  router.get('/get/events/:key?', routes.get.event.data);
   router.get('/get/homepage', routeIncludes, routes.get.homepage);
   router.get('/get/initiative/:key', routes.get.initiative.data);
   router.get('/get/contact', routes.get.contact);
   router.get('/get/jobs', routes.get.jobs);
   router.get('/get/masters', routes.get.masters);
   router.get('/get/privacy', routes.get.privacy);
-  router.get('/get/projects', routes.get.project.data);
-  router.get('/get/projects/:key', routes.get.project.data);
-  router.get('/get/publications', routes.get.publication.data);
-  router.get('/get/publications/:key', routes.get.publication.data);
+  router.get('/get/projects/:key?', routes.get.project.data);
+  router.get('/get/publications/:key?', routes.get.publication.data);
 
   router.get('/get/search/:string', routes.get.search);
+  router.get('/get/team/:key?', routes.get.team.data);
 
   router.get('/keys/events', routes.get.event.keys);
   router.get('/keys/initiatives', routes.get.initiative.keys);
   router.get('/keys/projects', routes.get.project.keys);
   router.get('/keys/publications', routes.get.publication.keys);
+  router.get('/keys/team', routes.get.team.keys);
 
   // Error
   router.get('*', (req, res) => {

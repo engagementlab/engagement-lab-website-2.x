@@ -68,16 +68,15 @@ Filters.add({
     dependsOn: {
       category: 'Person',
     },
-  }, /* ,
-
+  },
   current: {
     type: Boolean,
     label: 'Is this the current cohort?',
     note: 'Cohort will appear on the people page as \'Current\'',
     required: false,
     dependsOn: {
-      category: 'Cohort'
-    }
+      category: 'Cohort',
+    },
   },
 
   previous: {
@@ -86,9 +85,9 @@ Filters.add({
     note: 'Cohort will appear on the people page as \'Most Recent\'',
     required: false,
     dependsOn: {
-      category: 'Cohort'
-    }
-  } */
+      category: 'Cohort',
+    },
+  },
 });
 
 

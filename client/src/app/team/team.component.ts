@@ -29,17 +29,47 @@ export class TeamComponent implements OnInit {
         });
     }
 
-    getPerson(key) {
+    async ngOnInit() {
+        // Pre-load person?
+        const key = this._route.snapshot.paramMap.get('key');
+        if (key) {
+            this.getPerson(key);
+            // TODO: load all other only on modal close
+            // return;
+        }
+
+        const response = await this._dataSvc.getSet('team');
+
+        this.people['faculty'] = _.filter(response['staff'], person => {
+            return person.category === 'faculty leadership';
+        });
+        this.people['staff'] = _.filter(response['staff'], person => {
+            return person.category === 'staff';
+        });
+        this.people['board'] = _.filter(response['staff'], person => {
+            return person.category === 'advisory board';
+        });
+        this.people['fellows'] = _.filter(response['staff'], person => {
+            return person.category === 'faculty fellows';
+        });
+        this.people['students'] = response['students'];
+
+        // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
+        for (const personKey in this.people) {
+            const mod = 4 - (this.people[personKey].length % 4);
+            if (mod !== 4) {
+                for (let i = 0; i < mod; i++) this.people[personKey].push({ name: 'dummy' });
+            }
+        }
+    }
+
+    async getPerson(key) {
         // No dupe requests!
         if (this.gettingPerson) return;
 
         this.gettingPerson = true;
         this.currentPerson = undefined;
-        /*     this._dataSvc.getSet('team/get/'+key).subscribe(response => {
-      
-      this.currentPerson = response.person;
-
-    }); */
+        this.currentPerson = await this._dataSvc.getSet('team', key);
     }
 
     closePerson() {
@@ -49,34 +79,5 @@ export class TeamComponent implements OnInit {
         this._router.navigateByUrl('people');
 
         // window.scrollTo(0, 0);
-    }
-
-    ngOnInit() {
-        // Pre-load person?
-        const key = this._route.snapshot.paramMap.get('key');
-        if (key) {
-            this.getPerson(key);
-            // TODO: load all other only on modal close
-            // return;
-        }
-        /* 
-    this._dataSvc.getSet('team/get/').subscribe(response => {   
-      
-      this.people['faculty'] = _.filter(response.staff, (person) => { return person.category === 'faculty leadership'; });
-      this.people['staff'] = _.filter(response.staff, (person) => { return person.category === 'staff'; });
-      this.people['board'] = _.filter(response.staff, (person) => { return person.category === 'advisory board'; });
-      this.people['fellows'] = _.filter(response.staff, (person) => { return person.category === 'faculty fellows'; })
-      this.people['students'] = response.students;
-
-      // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
-      for(key in this.people) {
-        let mod = 4-(this.people[key].length % 4);
-        if(mod !== 4) {
-          for(let i=0; i<mod; i++)
-            this.people[key].push({name:'dummy'});
-        }
-      }
-
-    }); */
     }
 }

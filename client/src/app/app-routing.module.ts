@@ -10,6 +10,7 @@ import { MastersComponent } from './masters/masters.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -49,6 +50,9 @@ const routes: Routes = [
     },
 
     // TODO: load lazily
+    { path: 'people', component: TeamComponent },
+    { path: 'people/:key', component: TeamComponent },
+
     { path: 'cmap', redirectTo: 'masters' },
     { path: 'masters', component: MastersComponent },
     { path: 'masters/cohort/:key', component: MastersComponent },
