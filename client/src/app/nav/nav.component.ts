@@ -94,15 +94,9 @@ export class NavComponent {
         this.searchField.nativeElement.className = '';
     }
 
-    searchTyping(value: string) {
-        if (value.length < 1) this.searchResults = null;
+    async searchTyping(value: string) {
+        if (value.length < 3) return;
 
-        // if(value.length < 3) return;
-
-        /*     this._dataSvc.getSet('search/all/'+value, null, true).subscribe(response => {
-      
-      this.searchResults = response;
-        
-    }); */
+        this.searchResults = await this._dataSvc.getSet('search', value);
     }
 }
