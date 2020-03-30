@@ -1,23 +1,22 @@
-import { Component, OnInit, ViewChildren, QueryList, Input, OnDestroy, AfterViewInit } from '@angular/core';
-import { tns, TinySliderInstance } from 'tiny-slider/src/tiny-slider';
+import { Component, ViewChildren, QueryList, Input, OnDestroy, AfterViewInit } from '@angular/core';
+import { tns, TinySliderInstance, TinySliderInfo } from 'tiny-slider/src/tiny-slider';
 
 @Component({
     selector: 'people-grid',
     templateUrl: './people-grid.component.html',
     styleUrls: ['./people-grid.component.scss'],
 })
-export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
+export class PeopleGridComponent implements AfterViewInit, OnDestroy {
     @Input() people: any[];
     @Input() preview: boolean;
     @Input() cohort: boolean;
+    @Input() title: string;
 
     @ViewChildren('teamList') list: QueryList<any>;
 
     private slider: TinySliderInstance;
 
     constructor() {}
-
-    ngOnInit() {}
 
     ngAfterViewInit() {
         if (!this.preview) return;
@@ -35,6 +34,13 @@ export class PeopleGridComponent implements OnInit, AfterViewInit, OnDestroy {
                 arrowKeys: true,
                 mouseDrag: true,
                 controlsContainer: document.getElementById('controls'),
+            });
+            this.slider.events.on('transitionStart', (info: TinySliderInfo) => {
+                // Make sure any slides in queue are not invisible
+                // This is a workaround for apparent bug in tns with class used by BrowserAnimationsModule
+                document.querySelectorAll('.tns-item.tns-slide-active:not(.ng-star-inserted)').forEach(el => {
+                    el.classList.add('visible');
+                });
             });
         });
     }

@@ -11,6 +11,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 import { TeamComponent } from './team/team.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -55,7 +56,7 @@ const routes: Routes = [
 
     { path: 'cmap', redirectTo: 'masters' },
     { path: 'masters', component: MastersComponent },
-    { path: 'masters/cohort/:key', component: MastersComponent },
+    { path: 'masters/student/:key', component: MastersComponent },
 
     { path: 'contact', redirectTo: 'getinvolved' },
     { path: 'press', redirectTo: 'getinvolved' },
@@ -76,6 +77,8 @@ const routes: Routes = [
             externalUrl: 'https://www.launchpad6.com/contestpad',
         },
     },
+
+    { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

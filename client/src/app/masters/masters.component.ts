@@ -22,6 +22,10 @@ export class MastersComponent implements OnInit {
     }
 
     async ngOnInit(): Promise<any> {
+        // Pre-load person?
+        const key = this._route.snapshot.paramMap.get('key');
+        if (key) this.getPerson(key);
+
         const response = await this._dataSvc.getSet('masters');
         this.content = response['masters'];
         this.people = response['people'];

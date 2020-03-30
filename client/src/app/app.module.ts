@@ -44,6 +44,7 @@ import { ResultComponent } from './nav/result.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { PersonModalComponent } from './team/person-modal/person-modal.component';
 import { TeamComponent } from './team/team.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -68,6 +69,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         InitiativeComponent,
         MastersComponent,
         NavComponent,
+        NotFoundComponent,
         PrivacyComponent,
         PeopleGridComponent,
         PersonModalComponent,

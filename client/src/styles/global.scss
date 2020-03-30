@@ -421,3 +421,22 @@ hr {
   font-family: 'LunchtypeRegular' !important;
 
 }
+
+// Overrides tinyslider opacity: 0, pos: absolute bug in people-slider
+.tns-slide-active {
+
+  &.visible {
+    img {
+      position: relative !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.tns-item {
+  &:not(.tns-slide-active):not(.ng-star-inserted) {
+    a {
+      display: none;
+    }
+  }
+}
