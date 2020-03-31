@@ -28,7 +28,7 @@
             <a
                 *ngIf="person.name != 'dummy'"
                 [class.white]="preview === true"
-                [routerLink]="cohort ? '/masters/student/' + person.key : '/people/' + person.key"
+                [routerLink]="cohort ? '/masters/people/' + person.key : '/people/' + person.key"
             >
                 <div class="bg">
                     <span role="tooltip">view</span>

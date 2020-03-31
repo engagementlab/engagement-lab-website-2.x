@@ -64,7 +64,8 @@
     [style]="widthCss"
     class="cdn-image"
 >
-    <cl-transformation crop="scale" dpr="auto" crop="fill"></cl-transformation>
+    <!-- Photo (jpg,png) transforms -->
+    <cl-transformation crop="scale" dpr="auto" crop="fill" attr.effect="{{ effect }}"></cl-transformation>
 </cl-image>
 
 <!-- Load svg w/ no changes -->

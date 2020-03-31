@@ -7,11 +7,12 @@ import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { MastersComponent } from './masters/masters.component';
+import { MastersPeopleComponent } from './masters/people/people.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 import { TeamComponent } from './team/team.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -56,7 +57,8 @@ const routes: Routes = [
 
     { path: 'cmap', redirectTo: 'masters' },
     { path: 'masters', component: MastersComponent },
-    { path: 'masters/student/:key', component: MastersComponent },
+    { path: 'masters/people', component: MastersPeopleComponent },
+    { path: 'masters/people/:key', component: MastersPeopleComponent },
 
     { path: 'contact', redirectTo: 'getinvolved' },
     { path: 'press', redirectTo: 'getinvolved' },
