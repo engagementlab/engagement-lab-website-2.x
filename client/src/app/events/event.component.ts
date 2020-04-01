@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { DataService } from '../utils/data.service';
 import { Subscription } from 'rxjs';
+import { DataService } from '../utils/data.service';
 import { KEY_CODE } from '../projects/project.component';
 
 @Component({
@@ -11,15 +11,21 @@ import { KEY_CODE } from '../projects/project.component';
 })
 export class EventComponent {
     public content: any;
+
     public next: any;
+
     public previous: any;
 
     public isPhone: boolean;
 
     private bgEndPerc: number;
+
     private bgAlpha = 0;
 
+    private alphaInterval: any;
+
     private bgInterval: any;
+
     private bgTimeout: any;
 
     private subscriber: Subscription;
@@ -30,7 +36,7 @@ export class EventComponent {
         this.subscriber = _router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
-            const key = this._route.snapshot.params.key;
+            const { key } = this._route.snapshot.params;
 
             // Force content reset
             this.content = undefined;
@@ -38,9 +44,9 @@ export class EventComponent {
             const content = await this._dataSvc.getSet('events', key);
             if (content) this.setContent(content);
             this.bgAlpha = 0;
-            const alphaInterval = setInterval(() => {
+            this.alphaInterval = setInterval(() => {
                 this.bgAlpha += 0.015;
-                if (this.bgAlpha >= 1) clearInterval(alphaInterval);
+                if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
             }, 15);
         });
     }
@@ -50,6 +56,7 @@ export class EventComponent {
         document.body.style.backgroundImage = '';
 
         // Cancel timers for bg
+        clearInterval(this.alphaInterval);
         clearInterval(this.bgInterval);
         clearTimeout(this.bgTimeout);
 
@@ -65,9 +72,9 @@ export class EventComponent {
         this.setBgHeight();
 
         // Fade in
-        const alphaInterval = setInterval(() => {
+        this.alphaInterval = setInterval(() => {
             this.bgAlpha += 0.015;
-            if (this.bgAlpha >= 1) clearInterval(alphaInterval);
+            if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
         }, 15);
     }
 
@@ -95,6 +102,7 @@ export class EventComponent {
             clearInterval(this.bgInterval);
         }, 3000);
     }
+
     @HostListener('window:keyup', ['$event'])
     keyEvent(event: KeyboardEvent): void {
         if (event.keyCode === KEY_CODE.RIGHT_ARROW) this._router.navigateByUrl(`/events/${this.next.key}`);

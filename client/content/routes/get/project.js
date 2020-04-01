@@ -10,7 +10,7 @@
  */
 
 const GetAdjacent = async (list, results, res) => {
-  const fields = 'name key sortOrderž -_id';
+  const fields = 'name key sortOrder -_id';
   // Get one next/prev project from selected project's sortorder
   const nextProject = list
     .findOne(

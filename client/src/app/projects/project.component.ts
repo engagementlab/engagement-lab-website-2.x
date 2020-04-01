@@ -1,8 +1,8 @@
 import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
-import { DataService } from '../utils/data.service';
 import { Subscription } from 'rxjs';
+import { DataService } from '../utils/data.service';
 
 // "Slider nav"
 export enum KEY_CODE {
@@ -17,47 +17,58 @@ export enum KEY_CODE {
 })
 export class ProjectComponent {
     public content: any;
+
     public next: any;
+
     public previous: any;
 
     public themeIndex: number;
+
     public themeIndexNext: number;
+
     public themeIndexPrevious: number;
+
     private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
 
     public hidden = true;
+
     public redirecting: boolean;
 
     public projectKey: string;
 
     private bgEndPerc: number;
+
     private bgAlpha = 0;
 
+    private alphaInterval: any;
+
     private bgInterval: any;
+
     private bgTimeout: any;
 
     private subscriber: Subscription;
 
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
+
     @ViewChild('description') description: ElementRef;
 
     constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
         this.subscriber = _router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
-            const key = this._route.snapshot.params.key;
+            const { key } = this._route.snapshot.params;
 
             // Force content reset
             this.content = undefined;
 
             // Redirect if user tried old url format
-            if (this._route.snapshot.params['category'] !== undefined) {
+            if (this._route.snapshot.params.category !== undefined) {
                 this.redirecting = true;
 
                 this.projectKey = key;
 
                 setTimeout(() => {
-                    window.location.href = 'projects/' + key;
+                    window.location.href = `projects/${key}`;
                 }, 4200);
                 return;
             }
@@ -65,9 +76,9 @@ export class ProjectComponent {
             const content = await this._dataSvc.getSet('projects', key);
             if (content) this.setContent(content);
             this.bgAlpha = 0;
-            const alphaInterval = setInterval(() => {
+            this.alphaInterval = setInterval(() => {
                 this.bgAlpha += 0.015;
-                if (this.bgAlpha >= 1) clearInterval(alphaInterval);
+                if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
             }, 15);
         });
     }
@@ -77,6 +88,7 @@ export class ProjectComponent {
         document.body.style.backgroundImage = '';
 
         // Cancel timers for bg
+        clearInterval(this.alphaInterval);
         clearInterval(this.bgInterval);
         clearTimeout(this.bgTimeout);
 
@@ -89,16 +101,16 @@ export class ProjectComponent {
         this.next = data.next;
         this.previous = data.prev;
 
-        this.themeIndex = data.project['sortOrder'] % 3;
-        if (this.next) this.themeIndexNext = this.next['sortOrder'] % 3;
-        if (this.previous) this.themeIndexPrevious = this.previous['sortOrder'] % 3;
+        this.themeIndex = data.project.sortOrder % 3;
+        if (this.next) this.themeIndexNext = this.next.sortOrder % 3;
+        if (this.previous) this.themeIndexPrevious = this.previous.sortOrder % 3;
 
         this.setBgHeight();
 
         // Fade in
-        const alphaInterval = setInterval(() => {
+        this.alphaInterval = setInterval(() => {
             this.bgAlpha += 0.015;
-            if (this.bgAlpha >= 1) clearInterval(alphaInterval);
+            if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
         }, 15);
     }
 
@@ -128,6 +140,7 @@ export class ProjectComponent {
             clearInterval(this.bgInterval);
         }, 3000);
     }
+
     @HostListener('window:keyup', ['$event'])
     keyEvent(event: KeyboardEvent): void {
         if (event.keyCode === KEY_CODE.RIGHT_ARROW) this._router.navigateByUrl(`/projects/${this.next.key}`);
