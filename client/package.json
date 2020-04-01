@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration=production --progress",
+    "build-qa": "ng build --configuration=qa --progress",
     "build:static": "npm-run-all -p serve:content:prod scully:build",
     "test": "ng test",
     "lint": "ng lint",
