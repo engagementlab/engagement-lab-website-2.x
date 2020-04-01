@@ -4,8 +4,8 @@
       "name": "Client"
     },
     {
-      "path": "./client/content",
-      "name": "Content"
+      "path": "./api",
+      "name": "API"
     },
     {
       "path": "./",
