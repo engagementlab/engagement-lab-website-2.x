@@ -26,11 +26,11 @@ fi
 
 pm2 start 'engagement-lab-website-client';
 
-# Server
-cd ../server;
+# API
+cd content;
 nvm use;
 npm i;
-pm2 restart 'engagement-lab-website-server';
+pm2 restart 'engagement-lab-website-api';
 
 # Stop downtime page
 cd ../client;
