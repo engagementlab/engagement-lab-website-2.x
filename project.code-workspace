@@ -6,10 +6,6 @@
     {
       "path": "./client/content",
       "name": "Content"
-    },
-    {
-      "path": "./server",
-      "name": "Server (Deprecated)"
     }
   ],
   "settings": {
