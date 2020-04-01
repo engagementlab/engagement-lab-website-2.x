@@ -3,7 +3,7 @@
         <h1 class="uppercase">{{ title }}</h1>
 
         <div id="right">
-            <a routerLink="/people">
+            <a [routerLink]="cohort ? '/masters/people' : '/people'">
                 <h4>view all</h4>
             </a>
 

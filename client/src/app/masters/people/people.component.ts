@@ -8,6 +8,10 @@ import { Router, ActivatedRoute } from '@angular/router';
     styleUrls: ['./people.component.scss'],
 })
 export class MastersPeopleComponent implements OnInit {
+    public cohorts: any[];
+
+    public cohortKeys: string[];
+
     public currentPerson: any;
 
     private gettingPerson: boolean;
@@ -15,7 +19,7 @@ export class MastersPeopleComponent implements OnInit {
     constructor(private _dataSvc: DataService, private _router: Router, private _route: ActivatedRoute) {
         this._route.params.subscribe(params => {
             if (Object.keys(params).length < 1) return;
-            this.getPerson(params['key']);
+            this.getPerson(params.key);
         });
     }
 
@@ -23,6 +27,9 @@ export class MastersPeopleComponent implements OnInit {
         // Pre-load person
         const key = this._route.snapshot.paramMap.get('key');
         if (key) this.getPerson(key);
+
+        this.cohorts = await this._dataSvc.getSet('masters', 'people');
+        this.cohortKeys = Object.keys(this.cohorts);
     }
 
     async getPerson(key: string): Promise<void> {

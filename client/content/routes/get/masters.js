@@ -27,9 +27,12 @@ const BuildData = async (req, res) => {
       // We have to get all cohorts and then assign their respective students to them in data object
       const filterQuery = filter.find({
         category: 'Cohort',
-      }, 'key name _id');
+      }, 'key name _id')
+        .sort([
+          ['key', 'ascending'],
+        ]);
       const cohorts = await filterQuery.exec();
-
+      const orderedData = {};
       await Promise.all(
         cohorts.map(async (cohort) => {
           // Get all people in cohort and assign to object
@@ -45,7 +48,10 @@ const BuildData = async (req, res) => {
           data[cohort.key] = { name: cohort.name, people: query };
         }),
       );
-      res.json(data);
+      Object.keys(data).sort().forEach((key) => {
+        orderedData[key] = data[key];
+      });
+      res.json(orderedData);
     } else {
       // Get masters program info
       const mastersQuery = masters.findOne({}, fields).lean();
