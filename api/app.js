@@ -1,3 +1,4 @@
+#!/usr/bin/env node;
 
 /**
  * Engagement Lab Website v2.x content service
@@ -12,14 +13,25 @@
  */
 
 
-const bootstrap = require('@engagementlab/el-bootstrapper');
+/**
+ * Module dependencies.
+ */
+// Load .env vars
+require('dotenv').config();
+
+const http = require('http');
 const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
 const elasticsearch = require('elasticsearch');
-const mongoose = require('mongoose');
+const ServerUtils = require('./utils');
 
-const start = (productionMode) => {
+const start = () => {
+  /**
+ * Get port from environment and store in Express.
+ */
+
+  const productionMode = process.argv.slice(2)[0] && process.argv.slice(2)[0] === 'prod';
   const app = express();
 
   const logFormat = winston.format.combine(
@@ -55,21 +67,23 @@ const start = (productionMode) => {
 
   if (process.env.SEARCH_ENABLED === 'true') searchBoot(app);
   else boot(app, productionMode);
-
-  return app;
 };
 
 const boot = (app, productionMode) => {
-  bootstrap.start(
-    './config.json',
-    app,
-    `${__dirname}/`, {
-      name: 'Engagement Lab Home CMS',
-    },
-    () => {
-      global.logger.info(colors.bgCyan.bold.black(`Content API started (${productionMode ? 'Production' : 'Development'} Mode).`));
-    },
-  );
+  const keystone = require('./keystone.js');
+  keystone((middleware) => {
+    /**
+     * Create HTTP server.
+     */
+    const port = ServerUtils.normalizePort(process.env.PORT || '3000');
+    const server = http.createServer(app);
+
+    /**
+     * Listen on provided port, on all network interfaces.
+     */
+    app.use(middleware).listen(port);
+    global.logger.info(colors.bgCyan.bold.black(`Content API started (${productionMode ? 'Production' : 'Development'} Mode).`));
+  });
 };
 
 const searchBoot = (app) => {
@@ -84,4 +98,4 @@ const searchBoot = (app) => {
   });
 };
 
-module.exports = start;
+module.exports = start();

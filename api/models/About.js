@@ -4,7 +4,6 @@
  *
  * About page Model
  * @module about
- * @class about
  * @author Johnny Richardson
  *
  * For field docs: http://keystonejs.com/docs/database/
@@ -12,60 +11,65 @@
  * ==========
  */
 
-const { keystone } = global;
-const { Types } = keystone.Field;
+const { Text, CloudinaryImage } = require('@keystonejs/fields');
 
-/**
- * about model
- * @constructor
- * See: http://keystonejs.com/docs/database/#lists-options
- */
-const About = new keystone.List('About',
-  {
-    label: 'About Page',
-    singular: 'About Page',
-    nodelete: true,
-    nocreate: true,
-  });
 
-/**
+const About = (keystone, cloudinary) => {
+  /**
  * Model Fields
  * @main About
  */
-About.add({
-  name: {
-    type: String, default: 'About Page', hidden: true, required: true, initial: true,
-  },
-  tagline: { type: String, required: true, initial: true },
-  missionStatement: {
-    type: String, label: 'Mission Statement', required: true, initial: true,
-  },
+  const fields = {
+    name: {
+      type: String, default: 'About Page', hidden: true, isRequired: true, initial: true,
+    },
+    tagline: { type: String, isRequired: true, initial: true },
+    missionStatement: {
+      type: String, label: 'Mission Statement', isRequired: true, initial: true,
+    },
 
-  summary1: {
-    type: Types.Textarea, label: 'Summary Paragraph 1', required: true, note: 'First (required) paragraph',
-  },
-  summary2: {
-    type: Types.Textarea, label: 'Summart Paragraph 2', required: true, note: 'Second (required) paragraph',
-  },
+    summary1: {
+      type: Text, label: 'Summary Paragraph 1', isRequired: true, note: 'First (required) paragraph',
+    },
+    summary2: {
+      type: Text, label: 'Summart Paragraph 2', isRequired: true, note: 'Second (required) paragraph',
+    },
 
-  images: {
-    type: Types.CloudinaryImages,
-    label: 'Summary Images (Requires EXACTLY 2)',
-    folder: 'homepage-2.0/about',
-    autoCleanup: true,
-  },
+    images: {
+      type: CloudinaryImage,
+      label: 'Summary Images (Requires EXACTLY 2)',
+      adapter: cloudinary,
+    },
 
-  research: { type: Types.Textarea, label: 'Research Text', required: true },
-  workshops: { type: Types.Textarea, label: 'Workshops Text', required: true },
-  tools: { type: Types.Textarea, label: 'Tools Text', required: true },
-  teaching: { type: Types.Textarea, label: 'Teaching Text', required: true },
-  design: { type: Types.Textarea, label: 'Design Text', required: true },
+    research: { type: Text, label: 'Research Text', isRequired: true },
+    workshops: { type: Text, label: 'Workshops Text', isRequired: true },
+    tools: { type: Text, label: 'Tools Text', isRequired: true },
+    teaching: { type: Text, label: 'Teaching Text', isRequired: true },
+    design: { type: Text, label: 'Design Text', isRequired: true },
 
-});
+  };
+
+  /**
+ * Model Options
+ * See: https://www.keystonejs.com/api/create-list
+ */
+  const options = {
+    fields,
+    plural: 'About Page',
+    singular: 'About Page',
+    path: 'about',
+    // adminConfig: {
+    //   defaultColumns: 'label',
+    // },
+    access: {
+      create: false,
+      delete: false,
+    },
+  };
+  keystone.createList('About', options);
+};
 
 /**
  * Model Registration
  */
-About.defaultSort = '-createdAt';
-About.defaultColumns = 'name';
-About.register();
+module.exports = About;
