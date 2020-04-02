@@ -1,6 +1,6 @@
 /**
  * Engagement Lab SCSS Mixin Library
- * 
+ *
  * created by Johnny Richardson
  * 2017-19
  * ==========
@@ -18,7 +18,7 @@ $cdn-product: 'homepage' !default;
 
 /**
 * Apply any type of filter to element.
-* @usage: 
+* @usage:
     filter(grayscale, 100%), etc:
     sepia          -> filter: sepia(100%);
     saturate       -> filter: saturate(0%);
@@ -85,7 +85,7 @@ $cdn-product: 'homepage' !default;
 
     $imgParams: ();
     $version: random(500000) + 10000000;
-    $strPrefix: "https://res.cloudinary.com/#{$cloudinary-account}/image/upload/";
+    $strPrefix: "//res.cloudinary.com/#{$cloudinary-account}/image/upload/";
 
     @each $value in $options {
         $strPrefix: $strPrefix + ","+ $value;

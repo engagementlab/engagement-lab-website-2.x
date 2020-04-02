@@ -1,31 +1,49 @@
+@import "~src/styles/_variables";
+
 #archive {
 
-    h3, div {
-        align-items: center;
-    }
-    
-    .type {
-        display: flex;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1.33;
-        letter-spacing: 1.5px;
+  h3,
+  div {
+    align-items: center;
+  }
 
-        word-wrap: break-word;
+  .item {
+    a:hover {
 
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
+      &.theme-0 {
+        color: $mango;
+      }
+
+      &.theme-1 {
+        color: $green-blue;
+      }
     }
-    .name {
-        font-size: 1.9em;
-        line-height: 1.41;
-        letter-spacing: 0.5px;
-    }
-    .arrow {
-        justify-content: right;
-        text-align: right;
-    }
+  }
+
+  .type {
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.33;
+    letter-spacing: 1.5px;
+
+    word-wrap: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .name {
+    font-size: 1.9em;
+    line-height: 1.41;
+    letter-spacing: 0.5px;
+  }
+
+  .arrow {
+    justify-content: right;
+    text-align: right;
+  }
 
 }

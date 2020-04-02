@@ -1,142 +1,149 @@
-import {
-    Component,
-    ViewChild,
-    ElementRef,
-    OnInit
-} from '@angular/core';
-import {
-    ActivatedRoute
-} from '@angular/router';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
-import {
-    DataService
-} from '../utils/data.service';
-import {
-    TweenLite
-} from 'gsap';
-import * as ismobile from 'ismobilejs';
+import { Subscription } from 'rxjs';
+import { DataService } from '../utils/data.service';
+
+// "Slider nav"
+export enum KEY_CODE {
+    RIGHT_ARROW = 39,
+    LEFT_ARROW = 37,
+}
 
 @Component({
     selector: 'app-project',
     templateUrl: './project.component.html',
-    styleUrls: ['./project.component.scss']
+    styleUrls: ['./project.component.scss'],
 })
-export class ProjectComponent implements OnInit {
-
+export class ProjectComponent {
     public content: any;
+
     public next: any;
+
     public previous: any;
+
     public themeIndex: number;
 
-    public hidden: boolean = true;
-    public isPhone: boolean;
-    public redirecting: boolean;
-    
-    public projectKey: string;
-    
-    private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
-    private bgEndPerc: number;
-    
-    @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
-    @ViewChild('description') description: ElementRef;
-    
-    constructor(private _dataSvc: DataService, private _route: ActivatedRoute) {
-        
-        this.isPhone = ismobile.phone;
+    public themeIndexNext: number;
 
-        this._route.params.subscribe(params => {
+    public themeIndexPrevious: number;
+
+    private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
+
+    public hidden = true;
+
+    public redirecting: boolean;
+
+    public projectKey: string;
+
+    private bgEndPerc: number;
+
+    private bgAlpha = 0;
+
+    private alphaInterval: any;
+
+    private bgInterval: any;
+
+    private bgTimeout: any;
+
+    private subscriber: Subscription;
+
+    @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
+
+    @ViewChild('description') description: ElementRef;
+
+    constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
+        this.subscriber = _router.events.subscribe(async e => {
+            if (!(e instanceof NavigationEnd)) return;
+
+            const { key } = this._route.snapshot.params;
 
             // Force content reset
             this.content = undefined;
 
             // Redirect if user tried old url format
-            if(params['category'] !== undefined) {
+            if (this._route.snapshot.params.category !== undefined) {
                 this.redirecting = true;
-                this.projectKey = params['key'];
+
+                this.projectKey = key;
 
                 setTimeout(() => {
-                    window.location.href = 'projects/' + params['key'];
+                    window.location.href = `projects/${key}`;
                 }, 4200);
                 return;
             }
 
-            this._dataSvc.getDataForUrl('projects/get/' + params['key']).subscribe(response => {
-                this.setContent(response);
-                this.hidden = false;
-            });
-
+            const content = await this._dataSvc.getSet('projects', key);
+            if (content) this.setContent(content);
+            this.bgAlpha = 0;
+            this.alphaInterval = setInterval(() => {
+                this.bgAlpha += 0.015;
+                if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
+            }, 15);
         });
-
     }
 
-    ngOnInit() {
+    ngOnDestroy(): void {
+        // Reset BG
+        document.body.style.backgroundImage = '';
 
+        // Cancel timers for bg
+        clearInterval(this.alphaInterval);
+        clearInterval(this.bgInterval);
+        clearTimeout(this.bgTimeout);
+
+        // Cancel router subscribe
+        this.subscriber.unsubscribe();
     }
 
-    ngAfterViewChecked() {
-
-        this.setBgHeight();
-
-    }
-
-    ngOnDestroy() {
-
-        // Undo bg gradient
-        let color = this.themeColors[this.themeIndex];
-        let alpha = {
-            a: 1
-        };
-        TweenLite.to(alpha, 1, {
-            a: '-=1',
-            onUpdate: () => {
-                document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ',' + alpha.a + ' ) 0%, rgba(' + color + ',' + alpha.a + ') ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
-            }
-        });
-
-    }
-
-    setContent(data: any) {
-
+    setContent(data: any): void {
         this.content = data.project;
         this.next = data.next;
         this.previous = data.prev;
-        this.themeIndex = data.project['sortOrder'] % 3;
 
-        // Slight timeout of 0 hack to allow page content to load in
-        setTimeout(() => {
+        this.themeIndex = data.project.sortOrder % 3;
+        if (this.next) this.themeIndexNext = this.next.sortOrder % 3;
+        if (this.previous) this.themeIndexPrevious = this.previous.sortOrder % 3;
 
-            let color = this.themeColors[this.themeIndex];
+        this.setBgHeight();
+
+        // Fade in
+        this.alphaInterval = setInterval(() => {
+            this.bgAlpha += 0.015;
+            if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
+        }, 15);
+    }
+
+    setBgHeight(): void {
+        // Run every 1ms for 3s for the end of gradient always end at desired % after full page load
+        // This is slightly hacky but the only way to really ensure proper render.
+        this.bgInterval = setInterval(() => {
+            if (this.backgroundEnd === undefined || this.description === undefined) return;
+
+            const endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
+            const windowHeight = document.body.clientHeight;
+            this.bgEndPerc = (endY / windowHeight) * 100;
+            const color = this.themeColors[this.themeIndex];
 
             // Skip bg fade if coming from other project, only adjust height
-            if(this._dataSvc.previousUrl.split('/projects')[1]) {
-                document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ', 1) 0%, rgba(' + color + ', 1) ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
-                return;
-            }
+            // if (this._dataSvc.previousUrl && this._dataSvc.previousUrl.split('/projects')[1]) {
+            document.body.style.backgroundImage = `linear-gradient(
+                to bottom, 
+                rgba(${color}, ${this.bgAlpha}) 0%, 
+                rgba(${color}, ${this.bgAlpha}) ${this.bgEndPerc}%, 
+                white ${this.bgEndPerc}%, 
+                white 100%)`;
+        }, 1);
 
-            var alpha = {
-                a: 0
-            };
-
-            TweenLite.to(alpha, 1, {
-                a: '+=1',
-                onUpdate: () => {
-                    // Set bg to generated gradient
-                    document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(' + color + ',' + alpha.a + ' ) 0%, rgba(' + color + ',' + alpha.a + ') ' + this.bgEndPerc + '%, white ' + this.bgEndPerc + '%, white 100%)';
-                }
-            });
-
-        }, 0);
-
+        // Cancel soon
+        this.bgTimeout = setTimeout(() => {
+            clearInterval(this.bgInterval);
+        }, 3000);
     }
 
-    setBgHeight() {
-
-        if (this.backgroundEnd === undefined || this.description === undefined) return;
-
-        let endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
-        let windowHeight = document.body.clientHeight;
-        this.bgEndPerc = (endY / windowHeight) * 100;
-
+    @HostListener('window:keyup', ['$event'])
+    keyEvent(event: KeyboardEvent): void {
+        if (event.keyCode === KEY_CODE.RIGHT_ARROW) this._router.navigateByUrl(`/projects/${this.next.key}`);
+        if (event.keyCode === KEY_CODE.LEFT_ARROW) this._router.navigateByUrl(`/projects/${this.previous.key}`);
     }
-
 }

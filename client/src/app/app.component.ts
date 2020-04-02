@@ -1,64 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { trigger, transition, style, query, group, animate } from '@angular/animations';
 
 import { environment } from '../environments/environment';
-import { TweenLite, Expo, Back } from "gsap";
+
+export const projectTransition = [
+    // group([
+    query('#top', [
+        style({ transform: 'translate3d(77%, 0, 0)' }),
+        animate(0, style({ transform: 'translate3d(0, 0, 0)' })),
+    ]),
+    // ]),
+];
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    animations: [trigger('routerAnimations', [transition('project => project', projectTransition)])],
 })
 export class AppComponent implements OnInit {
+    public isQABuild: boolean;
+    title = 'Engagement Lab @ Emerson College';
 
-  public isQABuild: boolean;
-  title = 'Engagement Lab @ Emerson College';
-
-
-  constructor(private _router: Router, private _titleSvc: Title) {
-
-    this.isQABuild = environment.qa;
-    this._titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
-
-   }
- 
-  ngOnInit() {
-    
-    if(this.isQABuild) {
-      setTimeout(() => {
-
-        TweenLite.fromTo(document.getElementById('qa-build'), .7, {autoAlpha:0, bottom:'-100%'}, {autoAlpha:1, bottom:0, ease:Expo.easeOut});
-        TweenLite.fromTo(document.querySelector('#qa-build img'), .7, {autoAlpha:0, scale:0}, {autoAlpha:1, scale:1, delay:.7, ease:Back.easeOut});
-        TweenLite.fromTo(document.querySelector('#qa-build #text'), .7, {autoAlpha:0, left:'-100%'}, {autoAlpha:1, left:0, delay:.9, ease:Back.easeOut});
-        TweenLite.fromTo(document.getElementById('qa-build'), .7, {autoAlpha:1, bottom:0}, {autoAlpha:0, bottom:'-100%', display:'none', delay:4, ease:Expo.easeIn});
-    
-      }, 2000);
+    constructor(private _router: Router, private _titleSvc: Title) {
+        this.isQABuild = environment.qa;
+        this._titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
     }
 
-    this._router.events.subscribe((evt) => {
+    ngOnInit() {
+        this._router.events.subscribe(evt => {
+            if (!(evt instanceof NavigationEnd)) return;
 
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
+            // Reset relevant initiative page elements by default
+            document.getElementById('logo-img').classList.remove('white');
+            if (!evt.url.includes('initiatives')) document.getElementById('initiative-bg').classList.value = '';
 
-      // Adjust logo size based on page
-      if(evt.url === '/')
-        document.getElementById('home').classList.remove('sm');
-      else
-        document.getElementById('home').classList.add('sm');
-        
-      // Reset relevant initiative page elements by default
-      document.getElementById('logo-img').classList.remove('white');
-      if(!evt.url.includes('initiatives'))
-        document.getElementById('initiative-bg').classList.value = '';
+            if (evt.url.indexOf('/#') === 0) return;
 
-      if(evt.url.indexOf('/#') === 0)
-        return;
+            // Always go to top of page
+            window.scrollTo(0, 0);
+        });
+    }
 
-      // Always go to top of page
-      window.scrollTo(0, 0);
-
-    });
-  }
+    public prepareRouteTransition(outlet: any): void {
+        const animation = outlet.activatedRouteData['animation'] || {};
+        return animation['value'] || null;
+    }
 }

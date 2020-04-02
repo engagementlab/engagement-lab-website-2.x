@@ -2,30 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
 @Component({
-  selector: 'app-masters',
-  templateUrl: './masters.component.html',
-  styleUrls: ['./masters.component.scss']
+    selector: 'app-masters',
+    templateUrl: './masters.component.html',
+    styleUrls: ['./masters.component.scss'],
 })
 export class MastersComponent implements OnInit {
+    public content: any;
+    public people: any;
 
-  public content: any;  
-  public people: any;  
+    constructor(private _dataSvc: DataService) {}
 
-  constructor(private _dataSvc: DataService) { }
+    async ngOnInit(): Promise<any> {
+        // Pre-load person?
+        // const key = this._route.snapshot.paramMap.get('key');
+        // if (key) this.getPerson(key);
 
-  ngOnInit() {
+        const response = await this._dataSvc.getSet('masters');
+        this.content = response['masters'];
+        this.people = response['people'];
 
-    this._dataSvc.getDataForUrl('masters/get/').subscribe(response => {
-      
-      this.content = response.masters;
-      this.people = response.people;
-
-      // We have to add dummy/empty people if non-x4 count to allow for correct flex layout
-      let mod = this.people.length % 4;
-      for(let i=0; i<mod; i++)
-        this.people.push({name:'dummy'});
-        
-    });
-  }
-
+        // We have to add dummy/empty people if non-x4 count to allow for correct flex layout
+        const mod = this.people.length % 4;
+        for (let i = 0; i < mod; i++) this.people.push({ name: 'dummy' });
+    }
 }

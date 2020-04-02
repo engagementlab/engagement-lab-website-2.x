@@ -1,403 +1,442 @@
 // Bulma framework
 $tablet: 768px;
-@import "~bulma/sass/utilities/mixins";
-@import "~bulma/sass/grid/columns";
-@import "~bulma/sass/elements/container";
 
 // Site vars
 @import "./variables";
 
+@import "~bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/mixins";
+@import "~bulma/sass/grid/columns";
+@import "~bulma/sass/elements/container";
+
 body {
-    font-family: 'LunchtypeRegular';
-    font-size: 18px;
-    color: black;
-    background-size: 100% 101%;
+  font-family: 'LunchtypeRegular';
+  font-size: 18px;
+  color: black;
+  background-size: 100% 101%;
 
-    @include mobile-only {
-        font-size: 16px;
-    }
-
-    @include transition(opacity, 1s, linear);
-
-    &.show {
-        opacity: 1;
-    }
+  @include mobile-only {
+    font-size: 16px;
+  }
 }
 
 // GLOBAL STYLING
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 
-    &.href {
-        border-bottom: solid 2px black;
+  &.href {
+    border-bottom: solid 2px black;
+  }
+
+  &.animate {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: black;
+      top: 101%;
+      z-index: -1;
+      animation: exit 0.3s ease-in-out 1 both;
+      // visibility: hidden;
     }
 
-    &.animate {
-        position: relative;
-        display: inline-block;
-
-        &:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: black;
-            top: 101%;
-            z-index: -1;
-            animation: exit 0.3s ease-in-out 1 both;
-            // visibility: hidden;
-        }
-
-        &:hover:before {
-            animation: hover 0.3s ease-in-out 1 both;
-        }
-
-        // Animations
-        @keyframes exit {
-            0% {
-                top: 51%;
-                background: $tomato;
-            }
-
-            100% {
-                top: 100%;
-            }
-        }
-
-        @keyframes hover {
-            0% {
-                top: 100%;
-            }
-
-            100% {
-                top: 51%;
-                background: $tomato;
-            }
-        }
+    &:hover:before {
+      animation: hover 0.3s ease-in-out 1 both;
     }
+
+    // Animations
+    @keyframes exit {
+      0% {
+        top: 51%;
+        background: $tomato;
+      }
+
+      100% {
+        top: 100%;
+      }
+    }
+
+    @keyframes hover {
+      0% {
+        top: 100%;
+      }
+
+      100% {
+        top: 51%;
+        background: $tomato;
+      }
+    }
+  }
 }
 
 h1 {
-    font-family: Overpass;
-    font-size: 1.3em;
-    font-weight: 900;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.29;
-    letter-spacing: 2px;
-    color: #000000;
+  font-family: Overpass;
+  font-size: 1.3em;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: 2px;
+  color: #000000;
 }
 
 h2 {
-    font-family: Overpass;
-    font-size: 2.8em;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.27;
-    letter-spacing: 1.3px;
-    color: #000000;
+  font-family: Overpass;
+  font-size: 2.8em;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: 1.3px;
+  color: #000000;
 
-    @include mobile-only {
-        font-size: 2.2em;
-    }
+  @include mobile-only {
+    font-size: 2.2em;
+  }
 }
 
 h3 {
-    font-family: Overpass;
-    font-weight: 600;
-    font-size: 1.35em;
-    line-height: 1.38;
-    letter-spacing: 1.5px;
+  font-family: Overpass;
+  font-weight: 600;
+  font-size: 1.35em;
+  line-height: 1.38;
+  letter-spacing: 1.5px;
 
-    &.blurb {
+  &.blurb {
 
-        font-family: 'LunchtypeRegular';
-        font-size: 2em;
-        font-weight: normal;
+    font-family: 'LunchtypeRegular';
+    font-size: 2em;
+    font-weight: normal;
 
-        margin-top: 5%;
-        margin-bottom: 7%;
-        line-height: 1.17;
-        letter-spacing: 0.5px;
+    margin-top: 5%;
+    margin-bottom: 7%;
+    line-height: 1.17;
+    letter-spacing: 0.5px;
 
-        @include phones {
-            font-size: 1.5em;
-        }
-
+    @include phones {
+      font-size: 1.5em;
     }
+
+  }
 }
 
 h4 {
-    font-family: Overpass;
-    font-size: .9em;
-    font-weight: 600;
+  font-family: Overpass;
+  font-size: .9em;
+  font-weight: 600;
 }
 
 button {
-    background: none;
-    border: 0;
+  background: none;
+  border: 0;
 }
 
 hr {
-    border-bottom: solid 2px black;
+  border-bottom: solid 2px black;
 
-    &.thick {
-        border-bottom: solid 4px black;
-    }
+  &.thick {
+    border-bottom: solid 4px black;
+  }
 }
 
 // Project/event
 #verticle-line {
 
-    position: absolute;
-    display: block;
-    background-color: black;
-    width: 2px;
-    height: 40px;
-    margin-top: -20px;
+  position: absolute;
+  display: block;
+  background-color: black;
+  width: 2px;
+  height: 40px;
+  margin-top: -20px;
 
-    @include not-phones {
-        width: 4px;
-        height: 100px;
-        margin-top: -50px;
-    }
+  @include not-phones {
+    width: 4px;
+    height: 100px;
+    margin-top: -50px;
+  }
 }
 
 // Initiative landing image
 #initiative-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1021px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1021px;
 
-    @include phones {
-        height: 588px;
+  @include phones {
+    height: 588px;
+  }
+
+  visibility: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &.smart-cities {
+    background-image: cdn-image('initiatives/smartcities-bg.jpg', c_fill, g_south_east, h_1021, w_1440);
+  }
+
+  &.trust-and-the-news {
+    background-image: cdn-image('initiatives/trust-news-bg.jpg', c_fill, h_1021, w_1440);
+  }
+
+  &.health-advocacy {
+    background-image: cdn-image('initiatives/health-bg.jpg', c_fill, h_1021, w_1440);
+  }
+
+  &.show {
+    animation: show-initiative-bg 1s 1 both;
+  }
+
+  @keyframes show-initiative-bg {
+    0% {
+      opacity: 0;
     }
 
-    display: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    &.smart-cities {
-        background-image: cdn-image('initiatives/smartcities-bg.jpg', c_fill, g_south_east, h_1021, w_1440);
+    100% {
+      opacity: 1;
+      visibility: visible;
     }
-
-    &.trust-and-the-news {
-        background-image: cdn-image('initiatives/trust-news-bg.jpg', c_fill, h_1021, w_1440);
-    }
-
-    &.health-advocacy {
-        background-image: cdn-image('initiatives/health-bg.jpg', c_fill, h_1021, w_1440);
-    }
+  }
 
 }
 
 // Bulma container adjustments
 .container {
-    @include not-desktop {
-        margin-left: 3%;
-        margin-right: 3%;
-    }
+  @include not-desktop {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
 }
 
 // Shared event listing style
 .listing {
 
-    .item {
-        padding-left: 0;
-        padding-right: 0;
+  .item {
+    padding-left: 0;
+    padding-right: 0;
+
+    svg {
+      @include transition(transform, .2s, ease-in-out);
+    }
+
+    a {
+      &:hover {
+        color: $tomato;
+
+        h1,
+        h2 {
+          color: $tomato;
+        }
+
+        hr {
+          border-color: $tomato;
+        }
 
         svg {
-            @include transition(transform, .2s, ease-in-out);
+          @include translate(15%);
         }
 
-        a {
-            &:hover {
-                color: $tomato;
-
-                h1,
-                h2 {
-                    color: $tomato;
-                }
-
-                hr {
-                    border-color: $tomato;
-                }
-
-                svg {
-                    @include translate(15%);
-                }
-
-                svg path {
-                    stroke: $tomato;
-                }
-            }
+        svg path {
+          stroke: $tomato;
         }
-
-        .prev {
-
-            svg {
-                @include rotate(-180);
-            }
-
-            &:hover {
-                svg {
-                    @include transform(rotate(-180deg) translate(15%, 0));
-                }
-            }
-        }
-
-        #next {
-            @include not-phones {
-                text-align: end;
-            }
-        }
+      }
     }
+
+    .prev {
+
+      svg {
+        @include rotate(-180);
+      }
+
+      &:hover {
+        svg {
+          @include transform(rotate(-180deg) translate(15%, 0));
+        }
+      }
+    }
+
+    #next {
+      @include not-phones {
+        text-align: end;
+      }
+    }
+  }
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .medium {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .small {
-    font-size: small;
+  font-size: small;
 }
 
 .xx-large {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .uppercase {
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
 }
 
 .blurb {
 
-    font-size: 1.3em;
-    line-height: 1.43;
-    letter-spacing: 0.3px;
+  font-size: 1.3em;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
 
 }
 
 .auto {
-    margin: auto !important;
+  margin: auto !important;
 }
 
 .no-margin {
-    margin: 0;
+  margin: 0;
 }
 
 .no-pad {
-    padding: 0;
+  padding: 0;
 }
 
 .vert-center {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .vert-center-desktop {
-    @include mq($from: tablet) {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+  @include mq($from: tablet) {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .hidden-desktop {
-    @include mq($from: tablet) {
-        display: none;
-    }
+  @include mq($from: tablet) {
+    display: none;
+  }
 }
 
 .hidden-tablet-plus {
-    @include mq($from: tabletPortrait) {
-        display: none;
-    }
+  @include mq($from: tabletPortrait) {
+    display: none;
+  }
 }
 
 .hidden-mobile {
-    @include mobile-only {
-        display: none;
-    }
+  @include mobile-only {
+    display: none;
+  }
 }
 
 .hidden-not-mobile {
-    @include mq($from: mobileLg) {
-        display: none;
-    }
+  @include mq($from: mobileLg) {
+    display: none;
+  }
 }
 
 // Global project styles
 .view-tooltip {
-    
+
+  .bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      display: flex;
+      position: absolute;
+      color: black;
+      background-color: white;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      align-items: center;
+      justify-content: center;
+      font-family: Overpass;
+      font-size: 1.3em;
+      font-weight: bold;
+      opacity: 0;
+      @include transform(scale(.9));
+      @include transition(all, .8s, ease-in-out);
+    }
+  }
+
+  &:hover {
     .bg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        span {
-            display: flex;
-            position: absolute;
-            color: black;
-            background-color: white;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            align-items: center;
-            justify-content: center;
-            font-family: Overpass;
-            font-size: 1.3em;
-            font-weight: bold;
-            opacity: 0;
-            @include transform(scale(.9));
-            @include transition(all, .8s, ease-in-out);
-        }
-    }
-
-    &:hover {
-        .bg {
-            span {
-                opacity: 1;
-                @include transform(scale(1));
-                @include transition(all, .8s, ease-in-out);
-            }
-        }
-    }
-
-    &.project {
-
-      &:nth-child(3n+1) {
-          .bg {
-              background-color: $tomato;
-          }
+      span {
+        opacity: 1;
+        @include transform(scale(1));
+        @include transition(all, .8s, ease-in-out);
       }
+    }
+  }
 
-      &:nth-child(3n+2) {
-          .bg {
-              background-color: $mango;
-          }
-      }
+  &.project {
 
-      &:nth-child(3n+3) {
-          .bg {
-              background-color: $green-blue;
-          }
+    &:nth-child(3n+1) {
+      .bg {
+        background-color: $tomato;
       }
     }
 
+    &:nth-child(3n+2) {
+      .bg {
+        background-color: $mango;
+      }
+    }
+
+    &:nth-child(3n+3) {
+      .bg {
+        background-color: $green-blue;
+      }
+    }
+  }
+
+}
+
+// Cookie notice override
+.cc-revoke,
+.cc-window {
+  font-family: 'LunchtypeRegular' !important;
+
+}
+
+// Overrides tinyslider opacity: 0, pos: absolute bug in people-slider
+.tns-slide-active {
+
+  &.visible {
+    img {
+      position: relative !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.tns-item {
+  &:not(.tns-slide-active):not(.ng-star-inserted) {
+    a {
+      display: none;
+    }
+  }
 }

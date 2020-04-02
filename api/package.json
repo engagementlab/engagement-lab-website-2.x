@@ -1,0 +1,33 @@
+{
+  "name": "content",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "clean": "kill -9 $(lsof -t -i:3000)"
+  },
+  "dependencies": {
+    "@engagementlab/el-bootstrapper": "git+https://github.com/engagementlab/el-bootstrapper.git",
+    "colors": "^1.4.0",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "elasticsearch": "^16.6.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "keystone": "^4.2.1",
+    "keystone-storage-adapter-azure": "^1.1.0",
+    "mongoose": "^5.9.3",
+    "morgan": "~1.9.1",
+    "validator": "^12.2.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3"
+  }
+}

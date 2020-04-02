@@ -2,31 +2,48 @@
 
 hr {
 
-    margin-top: 15%;
+  margin-top: 15%;
 
-    @include phones {
-        margin-top: 30%;
-    }
+  @include phones {
+    margin-top: 30%;
+  }
 
 }
 
 #btn {
 
-    margin-top: 2%;
+  margin-top: 2%;
 
-    @include phones {
-        app-button {
-            display: block;
-            margin-top: 10%;
-        }
+  @include phones {
+    app-button {
+      display: block;
+      margin-top: 10%;
     }
+  }
 
-    #mobile {
-        text-align: right;
-    }
+  #mobile {
+    text-align: right;
+  }
 
 }
 
+#link {
+  text-decoration: underline;
+}
+
 #cmap-logo {
-    @include translate(0, 55%);
+  @include translate(0, 55%);
+}
+
+#cohort {
+
+  background-color: black;
+  color: white;
+
+  margin-top: 10%;
+
+  padding: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
+
 }

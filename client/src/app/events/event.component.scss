@@ -1,7 +1,6 @@
 @import "~src/styles/_variables";
 
 #name {
-    
     h2 {
 
         @include phones {
@@ -9,18 +8,11 @@
             margin-bottom: 13%;
         }
 
-    
     }
 }
 
 #top {
-    
     padding-bottom: 20%;
-
-    app-button {
-        margin-top: 4%;
-    }
-
 }
 
 #date {
@@ -45,4 +37,21 @@
         font-size: 1.5em;
     }
 
+}
+
+#prev {
+    svg {
+        @include rotate(-180);
+    }
+    &:hover {
+        svg {
+            @include transform(rotate( -180deg) translate(15%,0));
+        }
+    }
+}
+
+#next {
+    @include not-phones {
+        text-align: end;
+    }
 }

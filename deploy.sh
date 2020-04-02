@@ -10,8 +10,8 @@ fi
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh;
 
 # Client
-cd client; 
 bash ./toggledowntime.sh start; 
+cd client; 
 
 nvm use;
 npm i;
@@ -26,12 +26,12 @@ fi
 
 pm2 start 'engagement-lab-website-client';
 
-# Server
-cd ../server;
+# API
+cd content;
 nvm use;
 npm i;
-pm2 restart 'engagement-lab-website-server';
+pm2 restart 'engagement-lab-website-api';
 
 # Stop downtime page
-cd ../client;
-bash toggledowntime.sh stop
+cd ../..;
+bash ./toggledowntime.sh stop

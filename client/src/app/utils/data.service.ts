@@ -1,78 +1,72 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-
+import { HttpClient } from '@angular/common/http';
+import { Router, NavigationStart } from '@angular/router';
 import { Subject } from 'rxjs';
-import { Observable } from 'rxjs/Observable';
-import { throwError } from 'rxjs';
 
-import { environment } from '../../environments/environment';
-
-import * as _ from 'underscore';
+import { isScullyGenerated, TransferStateService } from '@scullyio/ng-lib';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/observable/of';
-import { Router, NavigationStart } from '@angular/router';
+import * as _ from 'underscore';
 
 @Injectable()
 export class DataService {
+    public isLoading: Subject<boolean> = new Subject<boolean>();
+    public serverProblem: Subject<boolean> = new Subject<boolean>();
 
-  public isLoading: Subject<boolean> = new Subject<boolean>();
-  public serverProblem: Subject<boolean> = new Subject<boolean>();
+    public previousUrl: string;
+    public currentUrl: string;
 
-  public previousUrl: string;
-  public currentUrl: string;
+    private devUrl: string;
 
-  private baseUrl: string;
+    constructor(private _transferState: TransferStateService, private _http: HttpClient, private _router: Router) {
+        this.devUrl = 'http://localhost:3000';
 
-  constructor(private http: HttpClient, private _router: Router) { 
+        _router.events.subscribe(event => {
+            this.currentUrl = this._router.url;
+            // Track prior url
+            if (event instanceof NavigationStart) {
+                this.previousUrl = this.currentUrl;
+                this.currentUrl = event.url;
+            }
+        });
+    }
 
-  	this.baseUrl = (environment.production ? 'https://'+window.location.host : 'http://localhost:3000');
+    public async getSet(page: string, param: string = null, search = false): Promise<any[]> {
+        let stateKey = page;
+        if (!search) this.isLoading.next(true);
 
-    _router.events.subscribe(event => {
-      
-      this.currentUrl = this._router.url;
-      // Track prior url
-      if (event instanceof NavigationStart) {
-        this.previousUrl = this.currentUrl;
-        this.currentUrl = event.url;
-      }
-      
-    }); 
-  }
-	
-  public getDataForUrl(urlParam: string, search: boolean = false): Observable<any> {
-
-      if(!search)
-        this.isLoading.next(true);
-
-      this.serverProblem.next(false);
-
-      let url = this.baseUrl; 
-      url +=  search ? '/search/' : '/api/';
-      url += urlParam;
-      
-      return this.http.get(url)
-      .map((res:any)=> {
-        
-        // Catch no data as problem on backend
-        if(res === null) {
-          // this.serverProblem.next(true);
-          this._router.navigateByUrl('/error');
-          return;
+        let url = `${this.devUrl}/get/${page}`;
+        if (param) {
+            url = url + '/' + param;
+            stateKey += '_' + param;
         }
 
-        if(!search)        
-          this.isLoading.next(false);
-        
-        return res.data;
-      })
-      .catch((error:any) => { 
-          this.isLoading.next(false);
-          return throwError(error);
-      });
+        // If scully is building or dev build, cache data from content API in transferstate
+        if (!isScullyGenerated()) {
+            try {
+                const res = await this._http.get<any[]>(url).toPromise();
+                this._transferState.setState(stateKey, res);
 
-  }
-  
+                return res;
+            } catch (error) {
+                this.isLoading.next(false);
+                throw Error(error);
+            }
+        } else {
+            const state = new Promise<any[]>((resolve, reject) => {
+                try {
+                    this._transferState.getState<any[]>(stateKey).subscribe(res => {
+                        if (res) resolve(res);
+                    });
+                } catch (error) {
+                    this.isLoading.next(false);
+                    reject(error);
+                }
+            });
+            return state;
+        }
+    }
 }

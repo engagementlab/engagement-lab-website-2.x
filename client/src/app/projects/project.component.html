@@ -1,54 +1,73 @@
-<div class="columns is-multiline theme-{{themeIndex}}">
-
-    <h2 class="column is-full" *ngIf="!redirecting">{{content?.name}}</h2>
-
+<div class="columns is-multiline theme-{{ themeIndex }}">
+    <h2 class="column is-full" *ngIf="!redirecting">{{ content?.name }}</h2>
+    <a routerLink="/events/philosophy-coffee-finding-malcolm-finding-boston">evt</a>
     <div class="blurb column is-four-fifths-desktop" *ngIf="!redirecting">
-        {{content?.byline}}
+        {{ content?.byline }}
     </div>
     <div class="blurb column is-four-fifths-desktop" *ngIf="redirecting">
         Redirecting you to new URL:<br />
-        <a href="https://elab.emerson.edu/projects/{{projectKey}}">elab.emerson.edu/projects/{{projectKey}}</a>
+        <a href="//elab.emerson.edu/projects/{{ projectKey }}">elab.emerson.edu/projects/{{ projectKey }}</a>
     </div>
-
 </div>
 
-<div #backgroundEnd id="top" class="columns is-mobile is-multiline" *ngIf="!hidden">
-
+<div #backgroundEnd id="top" class="columns is-mobile is-multiline">
     <div class="column is-two-fifths-mobile is-one-quarter-tablet" *ngIf="content?.format !== undefined">
         <h4>Product</h4>
         <div *ngFor="let format of content?.format">
-            {{format.name}}
+            {{ format.name }}
         </div>
     </div>
 
-    <div class="column is-two-fifths-mobile is-one-quarter-tablet" *ngIf="content?.externalLinkUrl !== null && content?.externalLinkUrl.length > 0">
+    <div
+        class="column is-two-fifths-mobile is-one-quarter-tablet"
+        *ngIf="content?.externalLinkUrl !== null && content?.externalLinkUrl.length > 0"
+    >
         <h4>Website</h4>
-        <a href="{{content?.externalLinkUrl}}" role="link">{{content?.externalLinkUrl | prettyUrl}}</a>
+        <a href="{{ content?.externalLinkUrl }}" role="link">{{ content?.externalLinkUrl | prettyUrl }}</a>
     </div>
 
     <div class="column is-full-mobile">
         <h4>Principal Investigator</h4>
         <div *ngFor="let pi of content?.principalInvestigator">
-            {{pi.name}}
+            {{ pi.name }}
         </div>
     </div>
-
+    <div class="column is-full" *ngIf="content?.showFiles">
+        <h4>Downloads</h4>
+        <div *ngFor="let file of content?.files">
+            <a href="{{ file.file.url }}">{{ file.name }}</a>
+        </div>
+    </div>
 </div>
 
-<div id="verticle-line" *ngIf="!hidden">&nbsp;</div>
+<div id="verticle-line">&nbsp;</div>
 
-<div #description class="description" *ngIf="!hidden">
+<div #description class="description">
+    <div class="column is-two-thirds">{{ content?.description }}</div>
 
-    <div class="column is-two-thirds">{{content?.description}}</div>
-
-    <div class="columns is-mobile is-centered" *ngIf="content?.projectImages !== undefined && content?.projectImages.length > 0">
+    <div
+        class="columns is-mobile is-centered"
+        *ngIf="content?.projectImages !== undefined && content?.projectImages.length > 0"
+    >
         <div class="column is-two-fifths-mobile is-one-third-tablet">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[0].public_id}}" autoFormat="true"
-                width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[0] !== undefined"></cdn-image>
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ (content?.projectImages)[0].public_id }}"
+                autoFormat="true"
+                width="450"
+                alt="Image for '{{ content?.name }}' project"
+                *ngIf="(content?.projectImages)[0] !== undefined"
+            ></cdn-image>
         </div>
         <div class="column is-two-fifths-mobile is-one-third-tablet">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.projectImages[1].public_id}}" autoFormat="true"
-                width="450" alt="Image for '{{content?.name}}' project" *ngIf="content?.projectImages[1] !== undefined"></cdn-image>
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ (content?.projectImages)[1].public_id }}"
+                autoFormat="true"
+                width="450"
+                alt="Image for '{{ content?.name }}' project"
+                *ngIf="(content?.projectImages)[1] !== undefined"
+            ></cdn-image>
         </div>
     </div>
 
@@ -57,17 +76,15 @@
             Challenge
         </h3>
         <div class="column text">
-            {{content?.challengeTxt}}
+            {{ content?.challengeTxt }}
             <hr />
         </div>
     </div>
 
     <div *ngIf="content?.strategyTxt" class="columns">
-        <h3 class="column is-one-third uppercase">
-            Strategy +<br />Approach
-        </h3>
+        <h3 class="column is-one-third uppercase">Strategy +<br />Approach</h3>
         <div class="column text">
-            {{content?.strategyTxt}}
+            {{ content?.strategyTxt }}
             <hr />
         </div>
     </div>
@@ -77,21 +94,30 @@
             Results
         </h3>
         <div class="column text">
-            {{content?.resultsTxt}}
+            {{ content?.resultsTxt }}
         </div>
     </div>
 
     <div id="bottom" class="column is-full" *ngIf="content !== undefined && content.projectImages[2] !== undefined">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content.projectImages[2].public_id}}" autoFormat="true" width="800"
-            alt="Image for '{{content?.name}}' project"></cdn-image>
+        <cdn-image
+            cloudinaryPrefix="/"
+            cloudinaryId="{{ content.projectImages[2].public_id }}"
+            autoFormat="true"
+            width="800"
+            alt="Image for '{{ content?.name }}' project"
+        ></cdn-image>
     </div>
-
 </div>
 
 <section id="nextprev" class="columns is-mobile is-multiline listing">
     <!-- Prev project can have an empty column on non-mobile -->
-    <div class="item column is-full-mobile is-half-tablet" *ngIf="!isPhone || (isPhone && previous)">
-        <a id="prev" class="prev theme-{{themeIndex}}" routerLink="/projects/{{previous.key}}" *ngIf="previous">
+    <div class="item column is-full-mobile is-half-tablet">
+        <a
+            id="prev"
+            class="prev theme-{{ themeIndexPrevious }}"
+            routerLink="/projects/{{ previous.key }}"
+            *ngIf="previous"
+        >
             <hr class="hidden-mobile" />
 
             <div>
@@ -99,8 +125,7 @@
                     previous project
                 </h1>
 
-                <h2>{{previous.name}}
-                </h2>
+                <h2>{{ previous.name }}</h2>
                 <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
                     <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
                 </svg>
@@ -108,7 +133,7 @@
         </a>
     </div>
     <div class="item column is-full-mobile is-half-tablet" *ngIf="next">
-        <a id="next" class="theme-{{themeIndex}}" routerLink="/projects/{{next.key}}">
+        <a id="next" class="theme-{{ themeIndexNext }}" routerLink="/projects/{{ next.key }}">
             <hr class="hidden-mobile" />
 
             <div>
@@ -116,8 +141,7 @@
                     next project
                 </h1>
 
-                <h2>{{next.name}}
-                </h2>
+                <h2>{{ next.name }}</h2>
                 <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
                     <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
                 </svg>

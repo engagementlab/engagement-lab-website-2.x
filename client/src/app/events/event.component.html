@@ -1,91 +1,114 @@
-<div id="name" class="columns is-multiline">
-
-    <h2 class="column is-full">{{content?.name}}</h2>
-
-</div>
-
-<div #backgroundEnd id="top" class="columns is-mobile is-multiline" *ngIf="!hidden">
-
-    <div id="date" class="column is-full">
-        {{content.date | date: 'MMMM dd, yyyy'}}
+<div *ngIf="content">
+    <div id="name" class="columns is-multiline">
+        <h2 class="column is-full">{{ content?.name }}</h2>
     </div>
 
-    <div class="column" *ngIf="content?.eventUrl !== null && content?.eventUrl.length > 0 && !content?.showButton">
-        <h4>Website</h4>
-        <a href="{{content?.eventUrl}}" role="link">{{content?.eventUrl | prettyUrl}}</a>
+    <div #backgroundEnd id="top" class="columns is-mobile is-multiline">
+        <div id="date" class="column is-full">
+            {{ content.date | date: 'MMMM dd, yyyy' }}
+        </div>
+
+        <div class="column" *ngIf="content?.eventUrl !== null && content?.eventUrl.length > 0 && !content?.showButton">
+            <h4>Website</h4>
+            <a href="{{ content?.eventUrl }}" role="link">{{ content?.eventUrl | prettyUrl }}</a>
+        </div>
+
+        <app-button
+            class="column is-4-tablet"
+            label="{{ content?.buttonTxt }}"
+            href="{{ content?.eventUrl }}"
+            ariaLabel="Go to 'content?.name' website"
+            *ngIf="content?.showButton"
+        ></app-button>
     </div>
 
-    <app-button class="column is-4-tablet" label="{{content?.buttonTxt}}" href="{{content?.eventUrl}}" ariaLabel="Go to 'content?.name' website" *ngIf="content?.showButton"></app-button>
+    <div id="verticle-line">&nbsp;</div>
 
-</div>
+    <div #description class="description">
+        <div id="short" class="column is-full-mobile is-three-quarters-tablet">{{ content.shortDescription }}</div>
+        <div class="column is-full-mobile is-three-quarters-tablet" [innerHtml]="content?.description.html"></div>
 
-<div id="verticle-line">&nbsp;</div>
-
-<div #description class="description" *ngIf="!hidden">
-
-    <div id="short" class="column is-full-mobile is-three-quarters-tablet">{{content.shortDescription}}</div>
-    <div class="column is-full-mobile is-three-quarters-tablet" [innerHtml]="content?.description.html"></div>
-
-    <div class="columns is-mobile is-multiline is-centered" *ngIf="content?.images !== undefined && content?.images.length > 0">
-        <div class="column is-full-mobile is-one-third-tablet">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.images[0].public_id}}" height="450" alt="Image for '{{content?.name}}' event"
-                *ngIf="content?.images[0] !== undefined"></cdn-image>
-        </div>
-        <div class="column is-full-mobile is-one-third-tablet">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.images[1].public_id}}" height="700" alt="Image for '{{content?.name}}' event"
-                *ngIf="content?.images[1] !== undefined"></cdn-image>
-        </div>
-        <div class="column is-full-mobile is-5-tablet">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.images[2].public_id}}" height="725" alt="Image for '{{content?.name}}' event"
-                *ngIf="content?.images[2] !== undefined"></cdn-image>
-        </div>
-        <div class="column is-full-mobile is-7-tablet">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content?.images[3].public_id}}" width="700" alt="Image for '{{content?.name}}' event"
-                *ngIf="content?.images[3] !== undefined"></cdn-image>
-        </div>
-    </div>
-    <!-- 
-    <div id="bottom" class="column is-full" *ngIf="content !== undefined && content.projectImages[2] !== undefined">
-        <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content.projectImages[2].public_id}}" autoFormat="true"
-        width="800" alt="Image for '{{content?.name}}' project"></cdn-image>
-    </div> -->
-
-</div>
-
-<section id="nextprev" class="columns is-mobile is-multiline listing">
-    <!-- Prev event can have an empty column on non-mobile -->
-    <div class="item column is-full-mobile is-half-tablet" *ngIf="!isPhone || (isPhone && previous)">
-        <a id="prev" class="prev" routerLink="/events/{{previous.key}}" *ngIf="previous">
-            <hr class="hidden-mobile" />
-
-            <div>
-                <h1 class="uppercase">
-                    previous event
-                </h1>
-
-                <h2>{{previous.name}}
-                </h2>
-                <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
-                    <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
-                </svg>
+        <div
+            class="columns is-mobile is-multiline is-centered"
+            *ngIf="content?.images !== undefined && content?.images.length > 0"
+        >
+            <div class="column is-full-mobile is-one-third-tablet">
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ (content?.images)[0].public_id }}"
+                    height="450"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="(content?.images)[0] !== undefined"
+                ></cdn-image>
             </div>
-        </a>
-    </div>
-    <div class="item column  is-full-mobile is-half-tablet" *ngIf="next">
-        <a id="next" routerLink="/events/{{next.key}}">
-            <hr class="hidden-mobile" />
-
-            <div>
-                <h1 class="uppercase">
-                    next event
-                </h1>
-
-                <h2>{{next.name}}
-                </h2>
-                <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
-                    <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
-                </svg>
+            <div class="column is-full-mobile is-one-third-tablet">
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ (content?.images)[1].public_id }}"
+                    height="700"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="(content?.images)[1] !== undefined"
+                ></cdn-image>
             </div>
-        </a>
+            <div class="column is-full-mobile is-5-tablet">
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ (content?.images)[2].public_id }}"
+                    height="725"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="(content?.images)[2] !== undefined"
+                ></cdn-image>
+            </div>
+            <div class="column is-full-mobile is-7-tablet">
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ (content?.images)[3].public_id }}"
+                    width="700"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="(content?.images)[3] !== undefined"
+                ></cdn-image>
+            </div>
+        </div>
+        <!-- 
+        <div id="bottom" class="column is-full" *ngIf="content !== undefined && content.projectImages[2] !== undefined">
+            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content.projectImages[2].public_id}}" autoFormat="true"
+            width="800" alt="Image for '{{content?.name}}' project"></cdn-image>
+        </div> -->
     </div>
-</section>
+
+    <section id="nextprev" class="columns is-mobile is-multiline listing">
+        <!-- Prev event can have an empty column on non-mobile -->
+        <div class="item column is-full-mobile is-half-tablet" *ngIf="!isPhone || (isPhone && previous)">
+            <a id="prev" class="prev" routerLink="/events/{{ previous.key }}" *ngIf="previous">
+                <hr class="hidden-mobile" />
+
+                <div>
+                    <h1 class="uppercase">
+                        previous event
+                    </h1>
+
+                    <h2>{{ previous.name }}</h2>
+                    <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                        <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="item column  is-full-mobile is-half-tablet" *ngIf="next">
+            <a id="next" routerLink="/events/{{ next.key }}">
+                <hr class="hidden-mobile" />
+
+                <div>
+                    <h1 class="uppercase">
+                        next event
+                    </h1>
+
+                    <h2>{{ next.name }}</h2>
+                    <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                        <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>

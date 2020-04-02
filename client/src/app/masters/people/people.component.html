@@ -1,0 +1,13 @@
+<person-modal *ngIf="currentPerson !== undefined" [person]="currentPerson" (onClose)="closePerson()"></person-modal>
+
+<cdn-image id="logo" cloudinaryId="logos/media-logo" alt="Masters of Media Design logo 1" width="400"></cdn-image>
+
+<div class="column is-3">
+    <cdn-image id="design" cloudinaryId="logos/design-logo" alt="Masters of Media Design logo 2"></cdn-image>
+</div>
+<section id="{{ cohort.key }}" *ngFor="let cohort of cohorts | keyvalue">
+    <ng-container *ngIf="cohort.value.people.length > 0">
+        <h1 class="column is-full uppercase">{{ cohort.value.name }}</h1>
+        <people-grid [people]="cohort.value.people" [cohort]="true"></people-grid>
+    </ng-container>
+</section>
