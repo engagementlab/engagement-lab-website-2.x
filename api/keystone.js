@@ -23,6 +23,7 @@ const KeystoneApp = (callback) => {
   // TODO: Load all ./models in one call
   // All models need access to KS Instance and cloudinary adapter
   require('./models/About')(keystone, cloudinaryAdapter);
+  require('./models/Image')(keystone, cloudinaryAdapter);
 
   keystone
     .prepare({

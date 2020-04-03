@@ -9,7 +9,7 @@
  * ==========
  */
 
-const { Text, CloudinaryImage } = require('@keystonejs/fields');
+const { Text, Relationship } = require('@keystonejs/fields');
 
 const About = (keystone, cloudinary) => {
   /**
@@ -34,9 +34,10 @@ const About = (keystone, cloudinary) => {
 
     // TODO: Custom multi-image field
     images: {
-      type: CloudinaryImage,
+      type: Relationship,
       label: 'Summary Images (Requires EXACTLY 2)',
-      adapter: cloudinary,
+      ref: 'Image',
+      many: true,
     },
 
     research: { type: Text, label: 'Research Text', isRequired: true },

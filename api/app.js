@@ -19,7 +19,6 @@
 // Load .env vars
 require('dotenv').config();
 
-const http = require('http');
 const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
@@ -72,11 +71,7 @@ const start = () => {
 const boot = (app, productionMode) => {
   const keystone = require('./keystone.js');
   keystone((middleware) => {
-    /**
-     * Create HTTP server.
-     */
     const port = ServerUtils.normalizePort(process.env.PORT || '3000');
-    const server = http.createServer(app);
 
     /**
      * Listen on provided port, on all network interfaces.

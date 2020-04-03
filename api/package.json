@@ -11,6 +11,7 @@
     "@engagementlab/el-bootstrapper": "git+https://github.com/engagementlab/el-bootstrapper.git",
     "@keystonejs/app-admin-ui": "^5.9.3",
     "@keystonejs/app-static": "^5.1.1",
+    "@keystonejs/build-field-types": "^5.2.4",
     "@keystonejs/file-adapters": "^6.0.0",
     "@keystonejs/keystone": "^7.0.0",
     "colors": "^1.4.0",
