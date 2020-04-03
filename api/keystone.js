@@ -27,12 +27,13 @@ const KeystoneApp = (callback) => {
 
   keystone
     .prepare({
-      apps: [new GraphQLApp(), new AdminUIApp({ adminPath: '/cms' })],
+      apps: [new GraphQLApp({
+      }), new AdminUIApp({ adminPath: '/cms' })],
       dev: process.env.NODE_ENV !== 'production',
     })
     .then(async ({ middlewares }) => {
       await keystone.connect();
-      callback(middlewares);
+      callback(middlewares, keystone);
     });
 };
 

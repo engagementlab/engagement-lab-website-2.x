@@ -8,20 +8,18 @@
  * ==========
  */
 
-const express = require('express');
+const importer = require('./importer');
 
-const Routes = () => {
-  const { keystone } = global;
-  const router = express.Router();
+const Routes = (app) => {
+  const router = app;
   const productionMode = process.argv.slice(2)[0] && process.argv.slice(2)[0] === 'prod';
 
-  const importRoutes = keystone.importer(__dirname);
+  const importRoutes = importer(__dirname);
 
   // Import Route Controllers
   const routes = {
     get: importRoutes('./get'),
   };
-  const routeIncludes = [keystone.middleware.api, keystone.middleware.cors];
 
   // Setup Route Bindings
   // CORS
@@ -37,9 +35,9 @@ const Routes = () => {
     else next();
   });
 
-  router.get('/get/about', routeIncludes, routes.get.about);
+  router.get('/get/about', routes.get.about);
   router.get('/get/events/:key?', routes.get.event.data);
-  router.get('/get/homepage', routeIncludes, routes.get.homepage);
+  router.get('/get/homepage', routes.get.homepage);
   router.get('/get/initiative/:key', routes.get.initiative.data);
   router.get('/get/contact', routes.get.contact);
   router.get('/get/jobs', routes.get.jobs);
@@ -65,4 +63,4 @@ const Routes = () => {
   return router;
 };
 
-module.exports = Routes();
+module.exports = Routes;

@@ -4,9 +4,9 @@
 <div class="column is-full">
     <hr />
 </div>
-
+<img clSrc="{{ about }}" type="fetch" fetch-format="auto" quality="auto" />
 <!-- Mobile-only -->
-<section class="columns is-centered is-mobile is-multiline" *ngIf="about !== undefined && isPhone">
+<!-- <section class="columns is-centered is-mobile is-multiline" *ngIf="about !== undefined && isPhone">
     <div class="column is-two-fifths-mobile is-half-mobile">
         {{ about?.summary1 }}
         <cdn-image
@@ -28,7 +28,7 @@
         ></cdn-image>
         {{ about?.summary2 }}
     </div>
-</section>
+</section> -->
 
 <!-- Tablet/desktop-only -->
 <section class="columns is-multiline summary" *ngIf="about !== undefined && !isPhone">
@@ -36,7 +36,7 @@
         {{ about?.summary1 }}
     </div>
     <div class="column is-4 is-offset-1">
-        <cdn-image
+        <!-- <cdn-image
             cloudinaryPrefix="/"
             cloudinaryId="{{ about.images[0].public_id }}"
             autoFormat="true"
@@ -46,10 +46,11 @@
             crop="lfill"
             alt="About flavor image 1"
             aria-role="img"
-        ></cdn-image>
+        ></cdn-image> -->
+        <img cl-src="{{ about.images[0].image.publicUrl }}" type="fetch" fetch-format="auto" quality="auto" />
     </div>
 
-    <div class="column is-5">
+    <!-- <div class="column is-5">
         <cl-image
             responsive
             public-id="{{ about.images[1].public_id }}"
@@ -78,7 +79,7 @@
     </div>
     <div class="column is-4 is-offset-1">
         {{ about?.summary2 }}
-    </div>
+    </div> -->
 </section>
 
 <section id="portfolio" *ngIf="about !== undefined">
@@ -147,13 +148,12 @@
             <h3>Design</h3>
             {{ about?.design }}
         </div>
-
-        <!-- Empty -->
         <div class="column is-two-fifths-mobile is-one-third-tablet"></div>
     </div>
 </section>
+-->
 
-<section id="team">
+<!--<section id="team">
     <people-grid [people]="people" [preview]="true" title="Team"></people-grid>
 </section>
 
@@ -176,3 +176,4 @@
         </div>
     </div>
 </section>
+  -->

@@ -25,6 +25,9 @@ const colors = require('colors');
 const elasticsearch = require('elasticsearch');
 const ServerUtils = require('./utils');
 
+const keystone = require('./keystone');
+const routes = require('./routes');
+
 const start = () => {
   /**
  * Get port from environment and store in Express.
@@ -59,19 +62,21 @@ const start = () => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
 
-  app.use((req, res, next) => {
-    res.locals.db = global.keystone;
-    next();
-  });
-
   if (process.env.SEARCH_ENABLED === 'true') searchBoot(app);
   else boot(app, productionMode);
 };
 
 const boot = (app, productionMode) => {
-  const keystone = require('./keystone.js');
-  keystone((middleware) => {
+  keystone((middleware, keystoneInstance) => {
     const port = ServerUtils.normalizePort(process.env.PORT || '3000');
+
+    app.use((req, res, next) => {
+      res.locals.db = keystoneInstance;
+      next();
+    });
+
+    // Load all routes for api
+    routes(app);
 
     /**
      * Listen on provided port, on all network interfaces.

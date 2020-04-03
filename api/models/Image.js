@@ -26,7 +26,7 @@ const Image = (keystone, cloudinary) => {
       adminDoc: 'hi',
     },
     // TODO: Custom multi-image field
-    images: {
+    image: {
       type: CloudinaryImage,
       adapter: cloudinary,
     },
