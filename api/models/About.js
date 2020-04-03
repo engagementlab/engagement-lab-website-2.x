@@ -3,21 +3,18 @@
  * Engagement Lab Website v2.x
  *
  * About page Model
- * @module about
+ * @module models
  * @author Johnny Richardson
- *
- * For field docs: http://keystonejs.com/docs/database/
  *
  * ==========
  */
 
 const { Text, CloudinaryImage } = require('@keystonejs/fields');
 
-
 const About = (keystone, cloudinary) => {
   /**
    * Model Fields
-   * @main About
+   * @memberof About
    */
   const fields = {
     name: {
@@ -29,12 +26,13 @@ const About = (keystone, cloudinary) => {
     },
 
     summary1: {
-      type: Text, label: 'Summary Paragraph 1', isRequired: true, note: 'First (required) paragraph',
+      type: Text, label: 'Summary Paragraph 1', isRequired: true, isMultiline: true, note: 'First (required) paragraph',
     },
     summary2: {
-      type: Text, label: 'Summart Paragraph 2', isRequired: true, note: 'Second (required) paragraph',
+      type: Text, label: 'Summart Paragraph 2', isRequired: true, isMultiline: true, note: 'Second (required) paragraph',
     },
 
+    // TODO: Custom multi-image field
     images: {
       type: CloudinaryImage,
       label: 'Summary Images (Requires EXACTLY 2)',
@@ -51,6 +49,7 @@ const About = (keystone, cloudinary) => {
 
   /**
    * Model Options
+   * @memberof About
    * See: https://www.keystonejs.com/api/create-list
    */
   const options = {
