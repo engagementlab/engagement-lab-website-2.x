@@ -16,16 +16,16 @@ const { Text, CloudinaryImage } = require('@keystonejs/fields');
 
 const About = (keystone, cloudinary) => {
   /**
- * Model Fields
- * @main About
- */
+   * Model Fields
+   * @main About
+   */
   const fields = {
     name: {
       type: String, default: 'About Page', hidden: true, isRequired: true, initial: true,
     },
     tagline: { type: String, isRequired: true, initial: true },
     missionStatement: {
-      type: String, label: 'Mission Statement', isRequired: true, initial: true,
+      type: String, label: 'Mission Statement', isRequired: true, initial: true, isMultiline: true,
     },
 
     summary1: {
@@ -50,23 +50,23 @@ const About = (keystone, cloudinary) => {
   };
 
   /**
- * Model Options
- * See: https://www.keystonejs.com/api/create-list
- */
+   * Model Options
+   * See: https://www.keystonejs.com/api/create-list
+   */
   const options = {
-    fields,
+    label: 'About Page',
     plural: 'About Page',
     singular: 'About Page',
     path: 'about',
-    // adminConfig: {
-    //   defaultColumns: 'label',
-    // },
+    adminConfig: {
+      defaultColumns: 'label',
+    },
     access: {
       create: false,
       delete: false,
     },
   };
-  keystone.createList('About', options);
+  keystone.createList('About', { fields, ...options });
 };
 
 /**

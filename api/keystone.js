@@ -20,7 +20,8 @@ const KeystoneApp = (callback) => {
     adapter: new MongooseAdapter(),
   });
 
-  //   TODO: Load all ./models in one call
+  // TODO: Load all ./models in one call
+  // All models need access to KS Instance and cloudinary adapter
   require('./models/About')(keystone, cloudinaryAdapter);
 
   keystone
