@@ -61,6 +61,7 @@ const start = () => {
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
+  app.set('view engine', 'pug');
 
   if (process.env.SEARCH_ENABLED === 'true') searchBoot(app);
   else boot(app, productionMode);
@@ -70,6 +71,10 @@ const boot = (app, productionMode) => {
   keystone((middleware, keystoneInstance) => {
     const port = ServerUtils.normalizePort(process.env.PORT || '3000');
 
+    app.get('/api/quit', (req, res) => {
+      keystone.disconnect();
+      res.send('quit!');
+    });
     app.use((req, res, next) => {
       res.locals.db = keystoneInstance;
       next();

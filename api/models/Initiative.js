@@ -12,56 +12,66 @@
  * ==========
  */
 
-const { keystone } = global;
-const { Types } = keystone.Field;
-
 /**
  * @module initiative
  * @constructor
  * See: http://keystonejs.com/docs/database/#lists-options
  */
-const Initiative = new keystone.List('Initiative',
-  {
-    hidden: false,
-    autokey: { path: 'key', from: 'name', unique: true },
-    sortable: true,
-    nodelete: true,
-  });
+// const Initiative = new keystone.List('Initiative',
+//   {
+//     hidden: false,
+//     autokey: { path: 'key', from: 'name', unique: true },
+//     sortable: true,
+//     nodelete: true,
+//   });
 
-/**
- * Model Fields
- * @main Listing
- */
-Initiative.add({
+const { Text, Relationship, CloudinaryImage } = require('@keystonejs/fields');
+
+const Initiative = (keystone, cloudinary) => {
+  /**
+   * Model Fields
+   * @memberof Initiative
+   */
+  const fields = {
   name: {
-    type: String, label: 'Initiative Name', required: true, initial: true, index: true, note: 'This is the name or title of the directory',
+    type: String, label: 'Initiative Name', isRequired: true, initial: true, index: true, note: 'This is the name or title of the directory',
   },
   description: {
-    type: String, required: true, initial: true, note: 'This displays next to/near the initiative name',
+    type: String, isRequired: true, initial: true, note: 'This displays next to/near the initiative name',
   },
   longDescription: {
-    type: Types.Textarea, required: true, initial: true, note: 'This displays on the initiative landing',
+    type: Text, isRequired: true, initial: true, isMultiline: true, note: 'This displays on the initiative landing',
   },
   image: {
-    type: Types.CloudinaryImage,
+    type: CloudinaryImage,
     label: 'Initiative Image',
     folder: 'homepage-2.0/initiatives',
+    adapter: cloudinary
   },
-  projects: {
-    type: Types.Relationship,
+  /* projects: {
+    type: Relationship,
     ref: 'Project',
     label: 'Project(s)',
     note: 'Projects that are part of this initiative',
-    required: true,
+    isRequired: true,
     many: true,
     initial: true,
-  },
-});
+  }, */
+}
 
-/**
- * Model Registration
- * =============
- */
-Initiative.register();
 
-exports = module.exports = Initiative;
+  /**
+   * Model Options
+   * @memberof Initiative
+   * See: https://www.keystonejs.com/api/create-list
+   */
+  const options = {
+    access: {
+      create: false,
+      delete: false,
+    },
+  };
+  keystone.createList('Initiative', { fields, ...options });
+};
+
+module.exports = Initiative;

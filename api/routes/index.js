@@ -56,6 +56,9 @@ const Routes = () => {
   router.get('/keys/publications', routes.get.publication.keys);
   router.get('/keys/team', routes.get.team.keys);
 
+  router.get('/', (req, res) => {
+    res.render('index', { title: 'Hey', message: 'Hello there!' });
+  });
   // Error
   router.get('*', (req, res) => {
     res.status(500).send(`No route found for path ${req.url}.`);

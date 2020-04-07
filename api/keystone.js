@@ -24,6 +24,7 @@ const KeystoneApp = (callback) => {
   // All models need access to KS Instance and cloudinary adapter
   require('./models/About')(keystone, cloudinaryAdapter);
   require('./models/Image')(keystone, cloudinaryAdapter);
+  require('./models/Initiative')(keystone, cloudinaryAdapter);
 
   keystone
     .prepare({
@@ -34,6 +35,7 @@ const KeystoneApp = (callback) => {
       await keystone.connect();
       callback(middlewares, keystone);
     });
+  keystone.disconnect();
 };
 
 module.exports = KeystoneApp;
