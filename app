@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # Script for launching dev, CMS, or static/prod builds
-
+WARN='\033[1;33m'
+NC='\033[0m'
 DEV=false
 
 if [ "$1" == "" ]; then
-    echo "No argument provided, defaulting to '--dev'";
+    printf "${WARN}No argument provided, defaulting to '--dev'${NC}\n";
     DEV=true;
 fi
 

@@ -76,12 +76,13 @@ const boot = (app, productionMode) => {
     });
 
     // Load all routes for api
-    routes(app);
+    const apiRoutes = routes(app);
 
     /**
-     * Listen on provided port, on all network interfaces.
+     * Listen on provided port w/ both keystone instance and API
      */
-    app.use(middleware).listen(port);
+    app.use([middleware, apiRoutes]).listen(port);
+
     global.logger.info(colors.bgCyan.bold.black(`Content API started (${productionMode ? 'Production' : 'Development'} Mode).`));
   });
 };

@@ -36,9 +36,9 @@
         {{ about?.summary1 }}
     </div>
     <div class="column is-4 is-offset-1">
-        <!-- <cdn-image
+        <cdn-image
             cloudinaryPrefix="/"
-            cloudinaryId="{{ about.images[0].public_id }}"
+            cloudinaryId="{{ about.images[0].image.publicUrl }}"
             autoFormat="true"
             width="140"
             height="217"
@@ -46,8 +46,8 @@
             crop="lfill"
             alt="About flavor image 1"
             aria-role="img"
-        ></cdn-image> -->
-        <img cl-src="{{ about.images[0].image.publicUrl }}" type="fetch" fetch-format="auto" quality="auto" />
+        ></cdn-image>
+        <!-- <img clSrc="{{ about.images[0].image.publicUrl }}" type="fetch" fetch-format="auto" quality="auto" /> -->
     </div>
 
     <!-- <div class="column is-5">

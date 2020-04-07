@@ -8,10 +8,11 @@
  * ==========
  */
 
+const express = require('express');
 const importer = require('./importer');
 
-const Routes = (app) => {
-  const router = app;
+const Routes = () => {
+  const router = express.Router();
   const productionMode = process.argv.slice(2)[0] && process.argv.slice(2)[0] === 'prod';
 
   const importRoutes = importer(__dirname);

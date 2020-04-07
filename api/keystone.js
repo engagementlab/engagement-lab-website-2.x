@@ -27,8 +27,7 @@ const KeystoneApp = (callback) => {
 
   keystone
     .prepare({
-      apps: [new GraphQLApp({
-      }), new AdminUIApp({ adminPath: '/cms' })],
+      apps: [new GraphQLApp({ graphiqlPath: '/api/graphiql', adminPath: '/cms' }), new AdminUIApp({ adminPath: '/cms', graphiqlPath: '/api/graphiql' })],
       dev: process.env.NODE_ENV !== 'production',
     })
     .then(async ({ middlewares }) => {
