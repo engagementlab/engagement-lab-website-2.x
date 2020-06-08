@@ -1,17 +1,4 @@
 {
-  "folders": [{
-      "path": "./client",
-      "name": "Client"
-    },
-    {
-      "path": "./api",
-      "name": "API"
-    },
-    {
-      "path": "./",
-      "name": "All"
-    }
-  ],
   "settings": {
     "eslint.validate": [
       "javascript",
@@ -40,5 +27,12 @@
     "[typescriptreact]": {
       "editor.formatOnSave": false
     }
-  }
+  },
+  "folders": [{
+      "path": "."
+    },
+    {
+      "path": "../el-api/packages/engagement-lab-home"
+    }
+  ]
 }

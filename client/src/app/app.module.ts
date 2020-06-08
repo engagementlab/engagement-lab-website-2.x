@@ -12,6 +12,11 @@ import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
 import { CloudinaryConfiguration, CloudinaryModule } from '@cloudinary/angular-5.x';
 import cloudinaryConfiguration from './config';
 
+// Apollo/Graphql
+import { ApolloModule, APOLLO_OPTIONS } from "apollo-angular";
+import { HttpLinkModule, HttpLink } from "apollo-angular-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
+
 // Utils
 import { CdnImageComponent } from './utils/cdn-image/cdn-image.component';
 import { ButtonComponent } from './utils/app-button/button.component';
@@ -97,11 +102,28 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         CloudinaryModule.forRoot(cloudinary, config),
         HttpClientModule,
         ScrollToModule.forRoot(),
-        ScullyLibModule.forRoot({ useTranferState: true }),
+        ScullyLibModule.forRoot({useTransferState: true}),
         AppRoutingModule,
+        ApolloModule,
+        HttpLinkModule,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    providers: [DataService, RedirectService],
+    providers: [
+        DataService, 
+        RedirectService,
+        {
+            provide: APOLLO_OPTIONS,
+            useFactory: (httpLink: HttpLink) => {
+              return {
+                cache: new InMemoryCache(),
+                link: httpLink.create({
+                  uri: "https://o5x5jzoo7z.sse.codesandbox.io/graphql"
+                })
+              }
+            },
+            deps: [HttpLink]
+        }
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
