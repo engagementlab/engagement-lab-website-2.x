@@ -1,4 +1,8 @@
 import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } from '@angular/core';
+
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
+
 import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
@@ -10,6 +14,7 @@ import * as paper from 'paper';
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+    public errors: any;
     public content: any;
     public latestEvent: any;
     public tagline: string;
@@ -23,12 +28,40 @@ export class HomeComponent implements OnInit {
     @ViewChild('pattern2') pattern2: ElementRef;
     @ViewChild('pattern3') pattern3: ElementRef;
 
-    constructor(private _dataSvc: DataService) {}
+    constructor(private _dataSvc: DataService, private apollo: Apollo) {}
 
     async ngOnInit(): Promise<any> {
-        this.content = await this._dataSvc.getSet('homepage');
-
-        this.drawArt();
+        // this.content = await this._dataSvc.getSet('homepage');
+        this.apollo
+            .watchQuery({
+                query: gql`
+                    {
+                        allAboutPages {
+                            tagline
+                        }
+                        allEvents(first: 3, orderBy: "date_ASC") {
+                            name
+                            key
+                            date
+                            image {
+                                publicId
+                            }
+                        }
+                        allNewsItems {
+                            title
+                        }
+                    }
+                `,
+            })
+            .valueChanges.subscribe(result => {
+                console.log(result);
+                if (result.errors) {
+                    this.errors = result.errors;
+                    return;
+                }
+                this.content = result.data;
+                this.drawArt();
+            });
     }
 
     drawArt() {

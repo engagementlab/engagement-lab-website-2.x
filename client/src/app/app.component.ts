@@ -6,12 +6,10 @@ import { trigger, transition, style, query, group, animate } from '@angular/anim
 import { environment } from '../environments/environment';
 
 export const projectTransition = [
-    // group([
     query('#top', [
         style({ transform: 'translate3d(77%, 0, 0)' }),
         animate(0, style({ transform: 'translate3d(0, 0, 0)' })),
     ]),
-    // ]),
 ];
 
 @Component({

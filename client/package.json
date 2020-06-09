@@ -74,7 +74,7 @@
         "@types/jasmine": "~3.5.0",
         "@types/jasminewd2": "~2.0.3",
         "@types/node": "^12.11.1",
-        "@typescript-eslint/eslint-plugin": "^2.26.0",
+        "@typescript-eslint/eslint-plugin": "^2.34.0",
         "@typescript-eslint/parser": "^2.26.0",
         "browserslist-useragent-regexp": "^2.0.1",
         "cloudinary-core": "^2.5.0",

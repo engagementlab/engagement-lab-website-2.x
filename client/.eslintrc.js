@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 2018,
   },
   plugins: [
-    '@typescript-eslint',
+    '@typescript-eslint/eslint-plugin',
   ],
   rules: {
     'import/prefer-default-export': 'off'

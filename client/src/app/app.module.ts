@@ -13,9 +13,11 @@ import { CloudinaryConfiguration, CloudinaryModule } from '@cloudinary/angular-5
 import cloudinaryConfiguration from './config';
 
 // Apollo/Graphql
-import { ApolloModule, APOLLO_OPTIONS } from "apollo-angular";
-import { HttpLinkModule, HttpLink } from "apollo-angular-link-http";
-import { InMemoryCache } from "apollo-cache-inmemory";
+import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
+import { ApolloLink } from 'apollo-link';
+import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
+import { onError } from 'apollo-link-error';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 // Utils
 import { CdnImageComponent } from './utils/cdn-image/cdn-image.component';
@@ -102,27 +104,48 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
         CloudinaryModule.forRoot(cloudinary, config),
         HttpClientModule,
         ScrollToModule.forRoot(),
-        ScullyLibModule.forRoot({useTransferState: true}),
+        ScullyLibModule.forRoot({ useTransferState: true }),
         AppRoutingModule,
         ApolloModule,
         HttpLinkModule,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     providers: [
-        DataService, 
+        DataService,
         RedirectService,
         {
             provide: APOLLO_OPTIONS,
             useFactory: (httpLink: HttpLink) => {
-              return {
-                cache: new InMemoryCache(),
-                link: httpLink.create({
-                  uri: "https://o5x5jzoo7z.sse.codesandbox.io/graphql"
-                })
-              }
+                // Apollo link w/ error handling
+                const link = httpLink.create({
+                    uri: 'https://ceca62de352f.ngrok.io/ql',
+                });
+                // Watch for graphql errors
+                const errors = onError(({ graphQLErrors, networkError }) => {
+                    if (graphQLErrors)
+                        graphQLErrors.map(({ message, locations, path }) =>
+                            console.log(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`),
+                        );
+
+                    if (networkError) {
+                        networkError['error']['errors'].forEach(err => {
+                            console.log(`[GraphQL network error]: ${err['message']}`);
+                        });
+                    }
+                });
+
+                return {
+                    cache: new InMemoryCache(),
+                    link: ApolloLink.from([errors, link]),
+                    defaultOptions: {
+                        watchQuery: {
+                            errorPolicy: 'all',
+                        },
+                    },
+                };
             },
-            deps: [HttpLink]
-        }
+            deps: [HttpLink],
+        },
     ],
     bootstrap: [AppComponent],
 })
