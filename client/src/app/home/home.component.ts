@@ -54,7 +54,6 @@ export class HomeComponent implements OnInit {
                 `,
             })
             .valueChanges.subscribe(result => {
-                console.log(result);
                 if (result.errors) {
                     this.errors = result.errors;
                     return;

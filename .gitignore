@@ -107,3 +107,4 @@ dist
 .vscode-test
 Icon*
 client/.yalc
+scully.elab-web.config.js
