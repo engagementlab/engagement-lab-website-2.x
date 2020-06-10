@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@engagementlab/el-bootstrapper": "git+https://github.com/engagementlab/el-bootstrapper.git",
+    "apollo-server-express": "^2.14.3",
     "colors": "^1.4.0",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",

@@ -9,13 +9,13 @@ exports.config = {
             type: 'initiatives',
         },
         // All event pages
-        // '/events/:key': {
-        //   type: 'json',
-        //   key: {
-        //     url: 'http://localhost:3000/keys/events',
-        //     property: 'key',
-        //   },
-        // },
+        '/events/:key': {
+            type: 'json',
+            key: {
+                url: 'http://localhost:3000/keys/events',
+                property: 'key',
+            },
+        },
         // All project pages
         '/projects/:key': {
             type: 'projects',

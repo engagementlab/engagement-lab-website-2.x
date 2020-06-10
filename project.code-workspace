@@ -28,10 +28,6 @@
     }
   },
   "folders": [{
-      "path": "."
-    },
-    {
-      "path": "../el-api/packages/engagement-lab-home"
-    }
-  ]
+    "path": "."
+  }]
 }

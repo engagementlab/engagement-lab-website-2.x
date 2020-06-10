@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
 
     async ngOnInit(): Promise<any> {
         // this.content = await this._dataSvc.getSet('homepage');
-        this.apollo
+        /* this.apollo
             .watchQuery({
                 query: gql`
                     {
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
                 }
                 this.content = result.data;
                 this.drawArt();
-            });
+            }); */
     }
 
     drawArt() {
