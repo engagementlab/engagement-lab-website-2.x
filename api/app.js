@@ -11,13 +11,19 @@
  * ==========
  */
 
-
+const {
+  GraphQLScalarType,
+} = require('graphql');
+const {
+  ApolloServer,
+  ApolloError,
+  gql,
+} = require('apollo-server');
 const bootstrap = require('@engagementlab/el-bootstrapper');
 const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
 const elasticsearch = require('elasticsearch');
-const mongoose = require('mongoose');
 
 const start = (productionMode) => {
   const app = express();
@@ -53,9 +59,11 @@ const start = (productionMode) => {
     next();
   });
 
+  apollo(app);
+  
   if (process.env.SEARCH_ENABLED === 'true') searchBoot(app);
   else boot(app, productionMode);
-
+  
   return app;
 };
 
@@ -83,5 +91,83 @@ const searchBoot = (app) => {
     }
   });
 };
+
+const apollo = (app) => {
+
+  const schemaModules = require('./schemas')();
+  const schemas = schemaModules.map(mod => mod.schema)
+  const queries = schemaModules.map(mod => mod.queries)
+  const resolvers = schemaModules.map(mod => mod.resolvers)
+  const resolversObj = {};
+
+  /**
+   * Custom scalar type for Dates in schema
+   */
+  const DateType = new GraphQLScalarType({
+    name: 'Date',
+    description: 'Date and time field.',
+    serialize(value) {
+        const result = new Date(value).toDateString();
+        return result;
+    },
+  });
+  
+    /**
+     * App's GraphQL types
+     */
+    const TypeDefs = gql `
+    scalar Date
+    """Image type definition"""
+    type Image {
+      public_id: String
+      version: Int!
+      signature: String!
+      width: Int!
+      height: Int!
+      format: String!
+      resource_type: String!
+      url: String!
+      secure_url: String!
+    }
+    ${schemas.join(' ')}
+	  type Query {
+      ${queries.join(' ')}
+    }
+  `;
+    resolvers.forEach(res => 
+      Object.keys(res).forEach(k =>
+        resolversObj[k] = res[k]
+      )
+    );
+  
+
+
+
+    /**
+     * App's GraphQL resolvers
+     */
+    const Resolvers = {
+        Query: resolversObj,
+        Date: DateType,
+    };
+
+    /**
+     * App's Apollo server instance
+     */
+    const Apollo = new ApolloServer({
+        typeDefs: TypeDefs,
+        resolvers: Resolvers,
+        formatError: err => {
+            // Otherwise return the original error.  The error can also
+            // be manipulated in other ways, so long as it's returned.
+            global.logger.error(err);
+            return err;
+        }
+    });
+
+    // Mount apollo middleware (/graphql)
+    app.use(Apollo.getMiddleware())
+
+}
 
 module.exports = start;

@@ -32,23 +32,27 @@ export class HomeComponent implements OnInit {
 
     async ngOnInit(): Promise<any> {
         // this.content = await this._dataSvc.getSet('homepage');
-        /* this.apollo
+        this.apollo
             .watchQuery({
                 query: gql`
                     {
                         allAboutPages {
                             tagline
                         }
-                        allEvents(first: 3, orderBy: "date_ASC") {
+                        recentEvents {
                             name
                             key
                             date
-                            image {
-                                publicId
+                            images {
+                                public_id
                             }
                         }
-                        allNewsItems {
+                        allNewsItems(featured: true) {
                             title
+                            url
+                            image {
+                                public_id
+                            }
                         }
                     }
                 `,
@@ -56,11 +60,12 @@ export class HomeComponent implements OnInit {
             .valueChanges.subscribe(result => {
                 if (result.errors) {
                     this.errors = result.errors;
+                    console.log(result);
                     return;
                 }
                 this.content = result.data;
                 this.drawArt();
-            }); */
+            });
     }
 
     drawArt() {

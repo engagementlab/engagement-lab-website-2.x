@@ -118,7 +118,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
             useFactory: (httpLink: HttpLink) => {
                 // Apollo link w/ error handling
                 const link = httpLink.create({
-                    uri: 'https://ceca62de352f.ngrok.io/ql',
+                    uri: 'https://ceca62de352f.ngrok.io/graphql',
                 });
                 // Watch for graphql errors
                 const errors = onError(({ graphQLErrors, networkError }) => {
@@ -128,6 +128,7 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
                         );
 
                     if (networkError) {
+                        console.log(networkError['error']);
                         networkError['error']['errors'].forEach(err => {
                             console.log(`[GraphQL network error]: ${err['message']}`);
                         });

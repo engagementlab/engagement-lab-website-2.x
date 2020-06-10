@@ -13,7 +13,7 @@
  */
 
 const { keystone } = global;
-const { Types } = keystone.Field;
+const { Types } = require('keystone').Field;
 
 /**
  * about model
@@ -69,3 +69,25 @@ About.add({
 About.defaultSort = '-createdAt';
 About.defaultColumns = 'name';
 About.register();
+
+module.exports = {
+  schema: `
+    type About {
+      id: ID!
+      date: Date
+      tagline: String
+      missionStatement: String
+      summary1: String
+      summary2: String
+      images: [Image]
+      research: String!
+      workshops: String!
+      tools: String!
+      teaching: String!
+      design: String!
+    }
+    type Query {
+      allAbouts: About
+    }
+  `
+}
