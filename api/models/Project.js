@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -231,5 +230,5 @@ Project.schema.post('save', (doc, next) => {
  * Model Registration
  */
 Project.defaultSort = 'sortOrder';
-Project.defaultColumns = 'name, subdirectory, enabled, featured';
+Project.defaultColumns = 'name, enabled, featured';
 Project.register();

@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -21,7 +20,9 @@ const News = new keystone.List('NewsItem', {
     from: 'title',
     unique: true,
   },
-  hidden: false,
+  map: {
+    name: 'title',
+  },
 });
 
 /**
@@ -51,7 +52,7 @@ News.add({
   },
   url: {
     type: Types.Url,
-	label: 'Link to Medium Post',
+    label: 'Link to Medium Post',
     validate: urlValidator,
     note: 'Must be in format "http://www.something.org".',
   },
@@ -70,10 +71,9 @@ News.schema.pre('save', (next) => {
   next();
 });
 
-
 /**
  * Model Registration
  */
 News.defaultSort = '-createdAt';
-News.defaultColumns = 'title, date, enabled';
+News.defaultColumns = 'title, datePosted, enabled';
 News.register();
