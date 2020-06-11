@@ -128,21 +128,16 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
                         );
 
                     if (networkError) {
-                        console.log(networkError['error']);
+                        // console.log(networkError['error']);
                         networkError['error']['errors'].forEach(err => {
-                            console.log(`[GraphQL network error]: ${err['message']}`);
+                            // console.log(`[GraphQL network error]: ${err['message']}`);
                         });
                     }
                 });
 
                 return {
                     cache: new InMemoryCache(),
-                    link: ApolloLink.from([errors, link]),
-                    defaultOptions: {
-                        watchQuery: {
-                            errorPolicy: 'all',
-                        },
-                    },
+                    link,
                 };
             },
             deps: [HttpLink],

@@ -29,19 +29,23 @@ export class DataService {
             // Query apollo w/ provided string
             const content = new Promise<unknown>((resolve, reject) => {
                 this._apollo
-                    .watchQuery({
+                    .query({
                         query: gql`
                             ${query}
                         `,
+                        errorPolicy: 'all',
                     })
-                    .valueChanges.subscribe(result => {
+                    .subscribe(result => {
                         if (result.errors) {
                             // this.errors = result.errors;
-                            this.isLoading.next(false);
+                            this.isLoading.next(result.loading);
                             reject(result.errors);
                             return;
                         }
+                        // Cache result in state
                         this._transferState.setState(stateKey, result);
+                        this.isLoading.next(false);
+
                         resolve(result.data);
                     });
             });

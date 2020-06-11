@@ -4,6 +4,7 @@ import { Title } from '@angular/platform-browser';
 import { trigger, transition, style, query, group, animate } from '@angular/animations';
 
 import { environment } from '../environments/environment';
+import { DataService } from './utils/data.service';
 
 export const projectTransition = [
     query('#top', [
@@ -22,7 +23,7 @@ export class AppComponent implements OnInit {
     public isQABuild: boolean;
     title = 'Engagement Lab @ Emerson College';
 
-    constructor(private _router: Router, private _titleSvc: Title) {
+    constructor(private _router: Router, private _titleSvc: Title, private _dataSvc: DataService) {
         this.isQABuild = environment.qa;
         this._titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
     }
@@ -40,6 +41,9 @@ export class AppComponent implements OnInit {
             // Always go to top of page
             window.scrollTo(0, 0);
         });
+
+        // TODO: Watch for any data/graphql errors
+        this._dataSvc.errors.subscribe(value => {});
     }
 
     public prepareRouteTransition(outlet: any): void {
