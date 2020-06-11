@@ -20,7 +20,7 @@ const Event = {
 		date: Date
 		images: [Image]
 		shortDescription: String
-		description: String
+		description: Markdown
 		eventUrl: String
 		showButton: Boolean
 		buttonTxt: String
@@ -29,7 +29,7 @@ const Event = {
 	`,
 	queries: ['allEvents: [Event]', 'recentEvents: [Event]'],
 	resolvers: {
-		allEvents: async () => global.keystone.list('Event').model.find({enabled: true}).exec(),
+		allEvents: async () => global.keystone.list('Event').model.find({enabled: true}).sort([['date', 'descending'],]).exec(),
 		recentEvents: async () => global.keystone.list('Event').model.find({enabled: true}).sort([['date', 'descending'],]).limit(3).exec()
 	}
 	

@@ -129,6 +129,11 @@ const apollo = (app) => {
       url: String!
       secure_url: String!
     }
+    """Markdown type definition"""
+    type Markdown {
+      html: String
+      md: String
+    }
     ${schemas.join(' ')}
 	  type Query {
       ${queries.join(' ')}
@@ -139,9 +144,6 @@ const apollo = (app) => {
         resolversObj[k] = res[k]
       )
     );
-  
-
-
 
     /**
      * App's GraphQL resolvers

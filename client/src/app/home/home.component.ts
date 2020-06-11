@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewChildren, QueryList, ViewChild, ElementRef } from '@angular/core';
 
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
-
 import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
@@ -28,44 +25,33 @@ export class HomeComponent implements OnInit {
     @ViewChild('pattern2') pattern2: ElementRef;
     @ViewChild('pattern3') pattern3: ElementRef;
 
-    constructor(private _dataSvc: DataService, private apollo: Apollo) {}
+    constructor(private _dataSvc: DataService) {}
 
     async ngOnInit(): Promise<any> {
-        // this.content = await this._dataSvc.getSet('homepage');
-        this.apollo
-            .watchQuery({
-                query: gql`
-                    {
-                        allAboutPages {
-                            tagline
-                        }
-                        recentEvents {
-                            name
-                            key
-                            date
-                            images {
-                                public_id
-                            }
-                        }
-                        allNewsItems(featured: true) {
-                            title
-                            url
-                            image {
-                                public_id
-                            }
-                        }
-                    }
-                `,
-            })
-            .valueChanges.subscribe(result => {
-                if (result.errors) {
-                    this.errors = result.errors;
-                    console.log(result);
-                    return;
+        const query = `
+            {
+                allAboutPages {
+                    tagline
                 }
-                this.content = result.data;
-                this.drawArt();
-            });
+                recentEvents {
+                    name
+                    key
+                    date
+                    images {
+                        public_id
+                    }
+                }
+                allNewsItems(featured: true) {
+                    title
+                    url
+                    image {
+                        public_id
+                    }
+                }
+            }
+        `;
+        this.content = await this._dataSvc.getSet('homepage', query);
+        this.drawArt();
     }
 
     drawArt() {

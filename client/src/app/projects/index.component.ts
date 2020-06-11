@@ -21,9 +21,9 @@ export class ProjectIndexComponent implements OnInit {
     async ngOnInit() {
         const content = await this._dataSvc.getSet('projects');
 
-        this.projects = content.filter(p => !p.archived);
-        this.projectsArchived = content.filter(p => p.archived);
-        this.projectFeatured = content.filter(p => p.featured)[0];
+        // this.projects = content.filter(p => !p.archived);
+        // this.projectsArchived = content.filter(p => p.archived);
+        // this.projectFeatured = content.filter(p => p.featured)[0];
     }
 
     ngAfterViewInit() {

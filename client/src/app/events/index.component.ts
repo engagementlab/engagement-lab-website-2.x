@@ -9,17 +9,39 @@ import * as _ from 'underscore';
     styleUrls: ['./index.component.scss'],
 })
 export class EventIndexComponent implements OnInit {
-    public events: any[];
-    public pastEvents: any[];
+    public events: unknown;
+    public pastEvents: unknown;
 
     constructor(private _dataSvc: DataService) {}
 
-    async ngOnInit(): Promise<any> {
-        const response = await this._dataSvc.getSet('events');
+    async ngOnInit() {
+        // const response = await this._dataSvc.getSet('events');
+        const query = `
+            {
+                allEvents {
+                    name
+                    key
+                    date
+                    shortDescription 
+                    eventUrl
+                    description
+                    {
+                        html
+                    }
+                    showButton
+                    buttonTxt
+                    images {
+                        public_id
+                    }
+                }
+            }
+        `;
+        const response = await this._dataSvc.getSet('homepage', query);
         this.groupDates(response);
     }
 
-    groupDates(returnedEvents: any[]): void {
+    groupDates(data: unknown): void {
+        const returnedEvents = data['allEvents'];
         _.each(returnedEvents, event => {
             event.future = new Date(event.date).getTime() > new Date().getTime();
         });

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router, NavigationStart } from '@angular/router';
 import { Subject } from 'rxjs';
+
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
 
 import { isScullyGenerated, TransferStateService } from '@scullyio/ng-lib';
 
@@ -14,49 +15,40 @@ import * as _ from 'underscore';
 @Injectable()
 export class DataService {
     public isLoading: Subject<boolean> = new Subject<boolean>();
-    public serverProblem: Subject<boolean> = new Subject<boolean>();
+    public errors: Subject<string[]> = new Subject<string[]>();
 
-    public previousUrl: string;
-    public currentUrl: string;
+    constructor(private _transferState: TransferStateService, private _apollo: Apollo) {}
 
-    private devUrl: string;
-
-    constructor(private _transferState: TransferStateService, private _http: HttpClient, private _router: Router) {
-        this.devUrl = 'http://localhost:3000';
-
-        _router.events.subscribe(event => {
-            this.currentUrl = this._router.url;
-            // Track prior url
-            if (event instanceof NavigationStart) {
-                this.previousUrl = this.currentUrl;
-                this.currentUrl = event.url;
-            }
-        });
-    }
-
-    public async getSet(page: string, param: string = null, search = false): Promise<any[]> {
+    public async getSet(page: string, query: string, param: string = null, search = false): Promise<unknown> {
         let stateKey = page;
         if (!search) this.isLoading.next(true);
-
-        let url = `${this.devUrl}/get/${page}`;
-        if (param) {
-            url = url + '/' + param;
-            stateKey += '_' + param;
-        }
+        if (param) stateKey += '_' + param;
 
         // If scully is building or dev build, cache data from content API in transferstate
         if (!isScullyGenerated()) {
-            try {
-                const res = await this._http.get<any[]>(url).toPromise();
-                this._transferState.setState(stateKey, res);
-
-                return res;
-            } catch (error) {
-                this.isLoading.next(false);
-                throw Error(error);
-            }
+            // Query apollo w/ provided string
+            const content = new Promise<unknown>((resolve, reject) => {
+                this._apollo
+                    .watchQuery({
+                        query: gql`
+                            ${query}
+                        `,
+                    })
+                    .valueChanges.subscribe(result => {
+                        if (result.errors) {
+                            // this.errors = result.errors;
+                            this.isLoading.next(false);
+                            reject(result.errors);
+                            return;
+                        }
+                        this._transferState.setState(stateKey, result);
+                        resolve(result.data);
+                    });
+            });
+            return content;
         } else {
-            const state = new Promise<any[]>((resolve, reject) => {
+            // Get cached state for this key
+            const state = new Promise<unknown[]>((resolve, reject) => {
                 try {
                     this._transferState.getState<any[]>(stateKey).subscribe(res => {
                         if (res) resolve(res);
