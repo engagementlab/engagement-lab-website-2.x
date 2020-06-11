@@ -1,0 +1,31 @@
+{
+  "name": "engagement-lab-website-2.0",
+  "version": "2.4.0",
+  "description": "[![Project logo](https://res.cloudinary.com/engagement-lab-home/image/upload/c_scale,f_auto,w_450/v1543629182/homepage-2.0/logos/el-logo.svg \"Project logo\")](https://elab.emerson.edu/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engagementlab/engagement-lab-website-2.0.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/engagementlab/engagement-lab-website-2.0/issues"
+  },
+  "homepage": "https://github.com/engagementlab/engagement-lab-website-2.0#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "typescript": "^3.9.5"
+  }
+}

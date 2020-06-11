@@ -4,9 +4,6 @@
       "javascript",
       {
         "language": "typescript"
-      },
-      {
-        "language": "typescriptreact"
       }
     ],
     "editor.formatOnSave": true,
@@ -17,15 +14,9 @@
     "[javascript]": {
       "editor.formatOnSave": false
     },
-    "[javascriptreact]": {
-      "editor.formatOnSave": false
-    },
     "[typescript]": {
       "editor.formatOnSave": true
     },
-    "[typescriptreact]": {
-      "editor.formatOnSave": false
-    }
   },
   "folders": [{
     "path": "."
