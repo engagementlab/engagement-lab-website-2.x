@@ -137,7 +137,8 @@ const apollo = (app) => {
       ${queries.join(' ')}
     }
   `;
-  resolvers.forEach((res) => Object.keys(res).forEach((k) => resolversObj[k] = res[k]));
+  // Assemble all resolver to object
+  resolvers.forEach((res) => Object.keys(res).forEach((k) => { resolversObj[k] = res[k]; }));
 
   /**
      * App's GraphQL resolvers
