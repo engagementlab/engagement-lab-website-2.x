@@ -12,9 +12,9 @@ const CPIPartner = {
 
   schema: `
     type CPIPartner {
-    id: ID!
-    date: Date
-    url: String!
+      id: ID!
+      date: Date
+      url: String!
     }
   `,
   queries: ['allCPIPartnerPages: CPIPartner'],

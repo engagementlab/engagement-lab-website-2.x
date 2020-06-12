@@ -12,11 +12,11 @@ const CPIContent = {
 
   schema: `
     type CPIContent {
-    id: ID!
-    date: Date
-    intro: String!
-    blurb: String!
-    videoURL: String!
+      id: ID!
+      date: Date
+      intro: String!
+      blurb: String!
+      videoURL: String!
     }
   `,
   queries: ['allCPIContentPages: CPIContent'],

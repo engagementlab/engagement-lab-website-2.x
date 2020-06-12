@@ -12,18 +12,18 @@ const About = {
 
   schema: `
     type About {
-    id: ID!
-    date: Date
-    tagline: String
-    missionStatement: String
-    summary1: String
-    summary2: String
-    images: [Image]
-    research: String!
-    workshops: String!
-    tools: String!
-    teaching: String!
-    design: String!
+      id: ID!
+      date: Date
+      tagline: String
+      missionStatement: String
+      summary1: String
+      summary2: String
+      images: [Image]
+      research: String!
+      workshops: String!
+      tools: String!
+      teaching: String!
+      design: String!
     }
   `,
   queries: ['allAboutPages: About'],

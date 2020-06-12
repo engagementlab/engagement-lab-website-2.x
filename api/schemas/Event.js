@@ -11,21 +11,21 @@
 const Event = {
 
   schema: `
-	  type Event {
-		id: ID!
-		enabled: Boolean
-		name: String
-		key: String
-		date: Date
-		images: [Image]
-		shortDescription: String
-		description: Markdown
-		eventUrl: String
-		showButton: Boolean
-		buttonTxt: String
-		additionalURL: String
-	  }
-	`,
+    type Event {
+      id: ID!
+      enabled: Boolean
+      name: String
+      key: String
+      date: Date
+      images: [Image]
+      shortDescription: String
+      description: Markdown
+      eventUrl: String
+      showButton: Boolean
+      buttonTxt: String
+      additionalURL: String
+    }
+  `,
   queries: ['allEvents: [Event]', 'recentEvents: [Event]'],
   resolvers: {
     allEvents: async () => global.keystone.list('Event').model.find({ enabled: true }).sort([['date', 'descending']]).exec(),
