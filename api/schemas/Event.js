@@ -14,12 +14,12 @@ const Event = {
     type Event {
       id: ID!
       enabled: Boolean
-      name: String
-      key: String
-      date: Date
+      name: String!
+      key: String!
+      date: Date!
       images: [Image]
-      shortDescription: String
-      description: Markdown
+      shortDescription: String!
+      description: Markdown!
       eventUrl: String
       showButton: Boolean
       buttonTxt: String

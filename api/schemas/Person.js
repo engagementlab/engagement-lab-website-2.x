@@ -18,6 +18,7 @@ const Person = {
       id: ID!
       date: Date
       name: String!
+      key: String!
       title: String!
       project: String
       bio: String!

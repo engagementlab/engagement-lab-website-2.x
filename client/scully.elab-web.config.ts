@@ -1,4 +1,5 @@
-import './plugins/initiatives';
+import './plugins/keys';
+
 exports.config = {
     projectRoot: './src',
     projectName: 'elab-web',
@@ -10,11 +11,7 @@ exports.config = {
         },
         // All event pages
         '/events/:key': {
-            type: 'json',
-            key: {
-                url: 'http://localhost:3000/keys/events',
-                property: 'key',
-            },
+            type: 'events',
         },
         // All project pages
         '/projects/:key': {

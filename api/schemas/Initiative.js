@@ -16,6 +16,7 @@ const Initiative = {
     type Initiative {
       id: ID!
       date: Date
+      key: String!
       name: String!
       description: String!
       longDescription: String!
