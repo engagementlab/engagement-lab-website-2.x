@@ -1,4 +1,3 @@
-
 /**
  * @fileoverview Engagement Lab Website v2.x content service
  * @copyright Engagement Lab at Emerson College, 2020
@@ -27,7 +26,6 @@ const BuildData = async (req, res) => {
     // Get faculty and staff
     const peopleData = person.find({ category: { $in: ['faculty leadership', 'staff'] } }, personFields)
       .sort([['sortOrder', 'ascending']]);
-
 
     const data = {
       about: await aboutData.exec(),

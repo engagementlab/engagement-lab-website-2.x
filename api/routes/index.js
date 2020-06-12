@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x content service
  * Developed by Engagement Lab, 2020

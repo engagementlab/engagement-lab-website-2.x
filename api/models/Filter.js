@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -89,7 +88,6 @@ Filters.add({
     },
   },
 });
-
 
 Filters.schema.pre('remove', (next) => {
   // Remove resource from all that referenced it

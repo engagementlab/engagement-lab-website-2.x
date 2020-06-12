@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -128,7 +127,6 @@ Event.schema.post('save', (doc, next) => {
 
   next();
 });
-
 
 /**
  * Model Registration

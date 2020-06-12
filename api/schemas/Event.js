@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -10,8 +9,8 @@
  * ==========
  */
 const Event = {
-	
-	schema: `
+
+  schema: `
 	  type Event {
 		id: ID!
 		enabled: Boolean
@@ -27,11 +26,11 @@ const Event = {
 		additionalURL: String
 	  }
 	`,
-	queries: ['allEvents: [Event]', 'recentEvents: [Event]'],
-	resolvers: {
-		allEvents: async () => global.keystone.list('Event').model.find({enabled: true}).sort([['date', 'descending'],]).exec(),
-		recentEvents: async () => global.keystone.list('Event').model.find({enabled: true}).sort([['date', 'descending'],]).limit(3).exec()
-	}
-	
-}
+  queries: ['allEvents: [Event]', 'recentEvents: [Event]'],
+  resolvers: {
+    allEvents: async () => global.keystone.list('Event').model.find({ enabled: true }).sort([['date', 'descending']]).exec(),
+    recentEvents: async () => global.keystone.list('Event').model.find({ enabled: true }).sort([['date', 'descending']]).limit(3).exec(),
+  },
+
+};
 module.exports = Event;

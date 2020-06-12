@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -10,27 +9,27 @@
  * ==========
  */
 const About = {
-	
-	schema: `
-	  type About {
-		id: ID!
-		date: Date
-		tagline: String
-		missionStatement: String
-		summary1: String
-		summary2: String
-		images: [Image]
-		research: String!
-		workshops: String!
-		tools: String!
-		teaching: String!
-		design: String!
-	  }
-	`,
-	queries: ['allAboutPages: About'],
-	resolvers: {
-		allAboutPages: async () => global.keystone.list('About').model.findOne({}).exec()
-	}
-	
-}
+
+  schema: `
+    type About {
+    id: ID!
+    date: Date
+    tagline: String
+    missionStatement: String
+    summary1: String
+    summary2: String
+    images: [Image]
+    research: String!
+    workshops: String!
+    tools: String!
+    teaching: String!
+    design: String!
+    }
+  `,
+  queries: ['allAboutPages: About'],
+  resolvers: {
+    allAboutPages: async () => global.keystone.list('About').model.findOne({}).exec(),
+  },
+
+};
 module.exports = About;

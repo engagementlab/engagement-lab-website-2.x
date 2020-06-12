@@ -32,7 +32,6 @@ User.add({
 // Provide access to Keystone
 User.schema.virtual('canAccessKeystone').get(() => this.isAdmin);
 
-
 /**
  * Registration
  */

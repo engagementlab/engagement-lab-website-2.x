@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x content service
  * Developed by Engagement Lab, 2020
@@ -60,10 +59,10 @@ const start = (productionMode) => {
   });
 
   apollo(app);
-  
+
   if (process.env.SEARCH_ENABLED === 'true') searchBoot(app);
   else boot(app, productionMode);
-  
+
   return app;
 };
 
@@ -93,11 +92,10 @@ const searchBoot = (app) => {
 };
 
 const apollo = (app) => {
-
   const schemaModules = require('./schemas')();
-  const schemas = schemaModules.map(mod => mod.schema)
-  const queries = schemaModules.map(mod => mod.queries)
-  const resolvers = schemaModules.map(mod => mod.resolvers)
+  const schemas = schemaModules.map((mod) => mod.schema);
+  const queries = schemaModules.map((mod) => mod.queries);
+  const resolvers = schemaModules.map((mod) => mod.resolvers);
   const resolversObj = {};
 
   /**
@@ -107,15 +105,15 @@ const apollo = (app) => {
     name: 'Date',
     description: 'Date and time field.',
     serialize(value) {
-        const result = new Date(value).toDateString();
-        return result;
+      const result = new Date(value).toDateString();
+      return result;
     },
   });
-  
-    /**
+
+  /**
      * App's GraphQL types
      */
-    const TypeDefs = gql `
+  const TypeDefs = gql`
     scalar Date
     """Image type definition"""
     type Image {
@@ -139,37 +137,32 @@ const apollo = (app) => {
       ${queries.join(' ')}
     }
   `;
-    resolvers.forEach(res => 
-      Object.keys(res).forEach(k =>
-        resolversObj[k] = res[k]
-      )
-    );
+  resolvers.forEach((res) => Object.keys(res).forEach((k) => resolversObj[k] = res[k]));
 
-    /**
+  /**
      * App's GraphQL resolvers
      */
-    const Resolvers = {
-        Query: resolversObj,
-        Date: DateType,
-    };
+  const Resolvers = {
+    Query: resolversObj,
+    Date: DateType,
+  };
 
-    /**
+  /**
      * App's Apollo server instance
      */
-    const Apollo = new ApolloServer({
-        typeDefs: TypeDefs,
-        resolvers: Resolvers,
-        formatError: err => {
-            // Otherwise return the original error.  The error can also
-            // be manipulated in other ways, so long as it's returned.
-            global.logger.error(err);
-            return err;
-        }
-    });
+  const Apollo = new ApolloServer({
+    typeDefs: TypeDefs,
+    resolvers: Resolvers,
+    formatError: (err) => {
+      // Otherwise return the original error.  The error can also
+      // be manipulated in other ways, so long as it's returned.
+      global.logger.error(err);
+      return err;
+    },
+  });
 
-    // Mount apollo middleware (/graphql)
-    app.use(Apollo.getMiddleware())
-
-}
+  // Mount apollo middleware (/graphql)
+  app.use(Apollo.getMiddleware());
+};
 
 module.exports = start;
