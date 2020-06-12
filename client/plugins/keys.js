@@ -2,15 +2,15 @@ const axios = require('axios');
 const { registerPlugin } = require('@scullyio/scully');
 
 const queryData = async (type) => {
-  const body = `query { all${type} { key } }`;
-  const response = await axios.post('http://localhost:3000/ql', { query: body });
+  const body = `query { all${type}Pages { key } }`;
+  const response = await axios.post('http://localhost:3000/graphql', { query: body });
 
   return response.data.data;
 };
 
 const initiativeIdPlugin = async (route, config) => {
   // Obtain all initiative keys via graphql query
-  const response = await queryData('Initiatives');
+  const response = await queryData('Initiative');
   const routes = [];
 
   response.allInitiatives.forEach((res) => {
@@ -20,7 +20,7 @@ const initiativeIdPlugin = async (route, config) => {
 };
 const projectIdPlugin = async (route, config) => {
   // Obtain all project keys via graphql query
-  const response = await queryData('Projects');
+  const response = await queryData('Project');
   const routes = [];
 
   response.allProjects.forEach((res) => {
