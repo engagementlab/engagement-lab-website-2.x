@@ -22,7 +22,7 @@ const Job = {
   `,
   queries: ['allJobPages: Job'],
   resolvers: {
-    allJobPages: async () => global.keystone.list('Job').model.findOne({}).exec(),
+    allJobPages: async () => global.keystone.list('Job').model.find({ enabled: true }).exec(),
   },
 
 };

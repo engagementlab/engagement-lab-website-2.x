@@ -13,7 +13,6 @@ const Contact = {
   schema: `
     type Contact {
       id: ID!
-      date: Date
       blurb: String
       students: String
       community: String
