@@ -15,14 +15,36 @@ import * as _ from 'underscore';
 @Injectable()
 export class DataService {
     public isLoading: Subject<boolean> = new Subject<boolean>();
+
     public errors: Subject<string[]> = new Subject<string[]>();
 
+    // eslint-disable-next-line no-useless-constructor
     constructor(private _transferState: TransferStateService, private _apollo: Apollo) {}
 
-    public async getSet(page: string, query: string, param: string = null, search = false): Promise<unknown> {
+    /**
+     * Retrieve data with page type, key, and query and get/set in transferstate
+     * @function
+     * @returns Promise
+     * @param {string} page - Name of page type, e.g. 'events'
+     * @param {string} key - Key identifying individual page, e.g. 'my-event'
+     * @param {string} query - Data query for GraphQL
+     */
+    public async getSetWithKey(page: string, key: string, query: string): Promise<unknown> {
+        return this.getSet(page, query, key);
+    }
+
+    /**
+     * Retrieve data with page name and query and get/set in transferstate
+     * @function
+     * @returns Promise
+     * @param {string} page - Name of page type, e.g. 'events'
+     * @param {string} query - Data query for GraphQL
+     * @param {string} [param] - Key identifying individual page, e.g. 'my-event'
+     */
+    public async getSet(page: string, query: string, param: string = null): Promise<unknown> {
         let stateKey = page;
-        if (!search) this.isLoading.next(true);
-        if (param) stateKey += '_' + param;
+        // if (!search) this.isLoading.next(true);
+        if (param) stateKey += `_${param}`;
 
         // If scully is building or dev build, cache data from content API in transferstate
         if (!isScullyGenerated()) {
@@ -50,19 +72,18 @@ export class DataService {
                     });
             });
             return content;
-        } else {
-            // Get cached state for this key
-            const state = new Promise<unknown[]>((resolve, reject) => {
-                try {
-                    this._transferState.getState<any[]>(stateKey).subscribe(res => {
-                        if (res) resolve(res);
-                    });
-                } catch (error) {
-                    this.isLoading.next(false);
-                    reject(error);
-                }
-            });
-            return state;
         }
+        // Get cached state for this key
+        const state = new Promise<unknown[]>((resolve, reject) => {
+            try {
+                this._transferState.getState<any[]>(stateKey).subscribe(res => {
+                    if (res) resolve(res);
+                });
+            } catch (error) {
+                this.isLoading.next(false);
+                reject(error);
+            }
+        });
+        return state;
     }
 }

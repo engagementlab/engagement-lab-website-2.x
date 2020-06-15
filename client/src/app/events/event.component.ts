@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { QueryRef } from 'apollo-angular';
 import { DataService } from '../utils/data.service';
 import { KEY_CODE } from '../projects/project.component';
 
@@ -40,9 +41,40 @@ export class EventComponent {
 
             // Force content reset
             this.content = undefined;
+            const query = `
+            {
+                getEvent(key: "${key}") {
+                    event {
+                        name
+                        key
+                        date
+                        shortDescription 
+                        eventUrl
+                        description
+                        {
+                            html
+                        }
+                        showButton
+                        buttonTxt
+                        images {
+                            public_id
+                        }
+                    }
+                    prev {
+                        name
+                        key
+                    }
+                    next {
+                        name
+                        key
+                    }
+                }
+            }
+        `;
 
-            const content = await this._dataSvc.getSet('events', key);
-            if (content) this.setContent(content);
+            const content = await this._dataSvc.getSetWithKey('events', key, query);
+            // eslint-disable-next-line dot-notation
+            if (content) this.setContent(content['getEvent']);
             this.bgAlpha = 0;
             this.alphaInterval = setInterval(() => {
                 this.bgAlpha += 0.015;

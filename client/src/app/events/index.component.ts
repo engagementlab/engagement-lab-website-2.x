@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../utils/data.service';
-
 import * as _ from 'underscore';
+import { DataService } from '../utils/data.service';
 
 @Component({
     selector: 'app-index',
@@ -10,6 +9,7 @@ import * as _ from 'underscore';
 })
 export class EventIndexComponent implements OnInit {
     public events: unknown;
+
     public pastEvents: unknown;
 
     constructor(private _dataSvc: DataService) {}
@@ -22,26 +22,15 @@ export class EventIndexComponent implements OnInit {
                     name
                     key
                     date
-                    shortDescription 
-                    eventUrl
-                    description
-                    {
-                        html
-                    }
-                    showButton
-                    buttonTxt
-                    images {
-                        public_id
-                    }
                 }
             }
         `;
-        const response = await this._dataSvc.getSet('homepage', query);
+        const response = await this._dataSvc.getSet('events', query);
         this.groupDates(response);
     }
 
     groupDates(data: unknown): void {
-        const returnedEvents = data['allEvents'];
+        const returnedEvents = data.allEvents;
         _.each(returnedEvents, event => {
             event.future = new Date(event.date).getTime() > new Date().getTime();
         });
