@@ -1,11 +1,15 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
-import { DataService } from '../utils/data.service';
 import { filter } from 'rxjs/operators';
+import {
+    disableBodyScroll,
+    enableBodyScroll,
+    clearAllBodyScrollLocks
+} from 'body-scroll-lock';
+import { DataService } from '../utils/data.service';
 
 import { environment } from '../../environments/environment';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 interface Link {
     url: string;
@@ -15,7 +19,7 @@ interface Link {
 @Component({
     selector: 'app-nav',
     templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss'],
+    styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
     public navLinks: Link[] = [
@@ -23,37 +27,53 @@ export class NavComponent {
         { url: 'projects', label: 'Projects' },
         { url: 'publications', label: 'Publications' },
         { url: 'masters', label: 'Masters Program' },
-        { url: 'getinvolved', label: 'Get Involved' },
+        { url: 'getinvolved', label: 'Get Involved' }
     ];
-    public searchResults: any[];
+
+    public searchResults: unknown[];
+
     public searchEnabled: boolean;
+
     public logoSm: boolean;
 
     private wasLoading = false;
+
     private currentUrl: string;
 
     @ViewChild('nav') nav: ElementRef;
+
     @ViewChild('searchField') searchField: ElementRef;
+
     @ViewChild('menuLinks') menuLinks: ElementRef;
+
     @ViewChild('home') homeLogo: ElementRef;
+
     @ViewChild('menu') menu: ElementRef;
+
     @ViewChild('menuBtn') menuBtn: ElementRef;
+
     @ViewChild('menuOpen') menuBtnOpen: ElementRef;
+
     @ViewChild('menuClose') menuBtnClose: ElementRef;
 
     constructor(private _router: Router, private _dataSvc: DataService) {
         // Get nav route when nav ends
-        this._router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
-            this.currentUrl = this._router.url;
+        this._router.events
+            .pipe(filter(e => e instanceof NavigationEnd))
+            .subscribe(e => {
+                this.currentUrl = this._router.url;
 
-            // Adjust logo size based on page
-            this.logoSm = this.currentUrl !== '/';
-        });
+                // Adjust logo size based on page
+                this.logoSm = this.currentUrl !== '/';
+            });
 
-        _router.events.pipe(filter(e => e instanceof NavigationStart)).subscribe(e => {
-            // Close menu when nav starts
-            if (this.menuBtn.nativeElement.classList.contains('isOpen')) this.openCloseNav();
-        });
+        _router.events
+            .pipe(filter(e => e instanceof NavigationStart))
+            .subscribe(e => {
+                // Close menu when nav starts
+                if (this.menuBtn.nativeElement.classList.contains('isOpen'))
+                    this.openCloseNav();
+            });
 
         this._dataSvc.isLoading.subscribe(value => {
             this.wasLoading = value;
@@ -84,7 +104,7 @@ export class NavComponent {
 
     // Is passed route active?
     itemActive(route: string) {
-        return '/' + route == this.currentUrl;
+        return `/${route}` == this.currentUrl;
     }
 
     // If on home when logo clicked, just close menu
