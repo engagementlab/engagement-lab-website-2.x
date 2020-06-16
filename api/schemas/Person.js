@@ -10,14 +10,14 @@
  */
 const Person = {
 
-  // TODO: add 'category' select field (see api/models/Person.js line 46)
-  // TODO: ask Johnny about managing relationships for title, cohortYear, project fields
+    // TODO: add 'category' select field (see api/models/Person.js line 46)
+    // TODO: ask Johnny about managing relationships for title, cohortYear, project fields
 
-  schema: `
+    schema: `
     type Person {
       id: ID!
       date: Date
-      name: String!
+      name: Name!
       key: String!
       title: String!
       project: String
@@ -34,10 +34,11 @@ const Person = {
       phone: String
     }
   `,
-  queries: ['allPersonPages: Person'],
-  resolvers: {
-    allPersonPages: async () => global.keystone.list('Person').model.findOne({}).exec(),
-  },
+    queries: ['allPeople: [Person]', 'allStaffPeople: [Person]'],
+    resolvers: {
+        allPeople: async () => global.keystone.list('Person').model.find({}).exec(),
+        allStaffPeople: async () => global.keystone.list('Person').model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
+    },
 
 };
 module.exports = Person;
