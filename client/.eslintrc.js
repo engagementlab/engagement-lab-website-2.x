@@ -17,6 +17,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'dot-notation': 0,
     'import/prefer-default-export': 0,
     '@typescript-eslint/no-useless-constructor': 0
   },
