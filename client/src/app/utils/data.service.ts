@@ -16,10 +16,13 @@ import * as _ from 'underscore';
 export class DataService {
     public isLoading: Subject<boolean> = new Subject<boolean>();
 
-    public errors: Subject<string[]> = new Subject<string[]>();
+    public errors: Subject<any[]> = new Subject<any[]>();
 
     // eslint-disable-next-line no-useless-constructor
-    constructor(private _transferState: TransferStateService, private _apollo: Apollo) {}
+    constructor(
+        private transferState: TransferStateService,
+        private _apollo: Apollo
+    ) {}
 
     /**
      * Retrieve data with page type, key, and query and get/set in transferstate
@@ -29,7 +32,11 @@ export class DataService {
      * @param {string} key - Key identifying individual page, e.g. 'my-event'
      * @param {string} query - Data query for GraphQL
      */
-    public async getSetWithKey(page: string, key: string, query: string): Promise<unknown> {
+    public async getSetWithKey(
+        page: string,
+        key: string,
+        query: string
+    ): Promise<unknown> {
         return this.getSet(page, query, key);
     }
 
@@ -41,7 +48,16 @@ export class DataService {
      * @param {string} query - Data query for GraphQL
      * @param {string} [param] - Key identifying individual page, e.g. 'my-event'
      */
-    public async getSet(page: string, query: string, param: string = null): Promise<unknown> {
+    public async getSet(
+        page: string,
+        query: string,
+        param: string = null
+    ): Promise<unknown> {
+        if (!query) {
+            this.errors.next([`No query provided for page "${page}"!`]);
+            return;
+        }
+
         let stateKey = page;
         // if (!search) this.isLoading.next(true);
         if (param) stateKey += `_${param}`;
@@ -55,30 +71,41 @@ export class DataService {
                         query: gql`
                             ${query}
                         `,
-                        errorPolicy: 'all',
+                        errorPolicy: 'all'
                     })
-                    .subscribe(result => {
-                        if (result.errors) {
-                            // this.errors = result.errors;
-                            this.isLoading.next(result.loading);
-                            reject(result.errors);
-                            return;
-                        }
-                        // Cache result in state
-                        this._transferState.setState(stateKey, result);
-                        this.isLoading.next(false);
+                    .subscribe(
+                        result => {
+                            if (result.errors) {
+                                this.errors.next(
+                                    result.errors.map(err => err.message)
+                                );
+                                this.isLoading.next(result.loading);
+                                reject(result.errors);
 
-                        resolve(result.data);
-                    });
+                                return;
+                            }
+                            // Cache result in state
+                            this.transferState.setState(stateKey, result);
+                            this.isLoading.next(false);
+
+                            resolve(result.data);
+                        },
+                        err => {
+                            console.log('err', err);
+                        }
+                    );
             });
             return content;
         }
+
         // Get cached state for this key
         const state = new Promise<unknown[]>((resolve, reject) => {
             try {
-                this._transferState.getState<any[]>(stateKey).subscribe(res => {
-                    if (res) resolve(res);
-                });
+                this.transferState
+                    .getState<unknown[]>(stateKey)
+                    .subscribe(res => {
+                        if (res) resolve(res);
+                    });
             } catch (error) {
                 this.isLoading.next(false);
                 reject(error);
