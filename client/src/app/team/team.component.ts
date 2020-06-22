@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { DataService } from '../utils/data.service';
-
 import * as _ from 'underscore';
+import { DataService } from '../utils/data.service';
 
 @Component({
     selector: 'app-team',
@@ -13,17 +12,18 @@ import * as _ from 'underscore';
 })
 export class TeamComponent implements OnInit {
     public currentPerson: any;
+
     public people: { [key: string]: any[] } = {};
 
     private gettingPerson: boolean;
 
     constructor(
-        private _dataSvc: DataService,
-        private _route: ActivatedRoute,
+        private dataSvc: DataService,
+        private route: ActivatedRoute,
         private _router: Router,
         private _location: Location,
     ) {
-        this._route.params.subscribe(params => {
+        this.route.params.subscribe(params => {
             if (Object.keys(params).length < 1) return;
             this.getPerson(params['key']);
         });
@@ -31,36 +31,69 @@ export class TeamComponent implements OnInit {
 
     async ngOnInit() {
         // Pre-load person?
-        const key = this._route.snapshot.paramMap.get('key');
+        const key = this.route.snapshot.paramMap.get('key');
         if (key) {
             this.getPerson(key);
             // TODO: load all other only on modal close
             // return;
         }
 
-        const response = await this._dataSvc.getSet('team');
+        const query = `   
+            {
+                allPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    title
+                    image {
+                        public_id
+                    }
+                    bio { 
+                        html
+                    }
+                    twitterURL 
+                    fbURL 
+                    igURL 
+                    linkedInURL 
+                    githubURL 
+                    websiteURL 
+                    email 
+                    phone
+                }
+            }
+        `;
 
-        this.people['faculty'] = _.filter(response['staff'], person => {
-            return person.category === 'faculty leadership';
-        });
-        this.people['staff'] = _.filter(response['staff'], person => {
-            return person.category === 'staff';
-        });
-        this.people['board'] = _.filter(response['staff'], person => {
-            return person.category === 'advisory board';
-        });
-        this.people['fellows'] = _.filter(response['staff'], person => {
-            return person.category === 'faculty fellows';
-        });
+        const response = await this.dataSvc.getSet('team', query);
+
+        this.people['faculty'] = _.filter(
+            response['staff'],
+            person => person.category === 'faculty leadership',
+        );
+        this.people['staff'] = _.filter(
+            response['staff'],
+            person => person.category === 'staff',
+        );
+        this.people['board'] = _.filter(
+            response['staff'],
+            person => person.category === 'advisory board',
+        );
+        this.people['fellows'] = _.filter(
+            response['staff'],
+            person => person.category === 'faculty fellows',
+        );
         this.people['students'] = response['students'];
 
         // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
-        for (const personKey in this.people) {
+        Object.keys(this.people).forEach(personKey => {
             const mod = 4 - (this.people[personKey].length % 4);
             if (mod !== 4) {
-                for (let i = 0; i < mod; i++) this.people[personKey].push({ name: 'dummy' });
+                for (let i = 0; i < mod; i = +1) {
+                    this.people[personKey].push({ name: 'dummy' });
+                }
             }
-        }
+        });
     }
 
     async getPerson(key) {
@@ -69,7 +102,7 @@ export class TeamComponent implements OnInit {
 
         this.gettingPerson = true;
         this.currentPerson = undefined;
-        this.currentPerson = await this._dataSvc.getSet('team', key);
+        this.currentPerson = await this.dataSvc.getSet('team', key);
     }
 
     closePerson() {

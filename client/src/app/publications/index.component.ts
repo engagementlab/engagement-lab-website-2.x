@@ -33,9 +33,14 @@ export class PublicationIndexComponent implements OnInit {
                     author
                     blurb
                     context
-                    description
                     downloadUrls
                     purchaseUrls
+                    description {
+                        html
+                    }
+                    form {
+                        key
+                    }
                 }
             }
         `;
@@ -44,7 +49,7 @@ export class PublicationIndexComponent implements OnInit {
         this.pubs = response['allPublications'];
 
         // get count of each pub type
-        this.pubTypesCount = _.countBy(response, obj => obj.form.key);
+        this.pubTypesCount = _.countBy(this.pubs, obj => obj.form.key);
         this.pubTypesTotal = _.reduce(
             this.pubTypesCount,
             (memo, num) => memo + num
