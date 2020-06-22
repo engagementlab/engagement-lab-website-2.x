@@ -8,16 +8,15 @@ import { Router, ActivatedRoute } from '@angular/router';
     styleUrls: ['./people.component.scss']
 })
 export class MastersPeopleComponent implements OnInit {
-    public people: any[];
+    public people: unknown;
 
-    public cohortKeys: string[];
-
-    public currentPerson: any;
+    // public cohortKeys: string[];
+    public currentPerson: unknown;
 
     private gettingPerson: boolean;
 
     constructor(
-        private _dataSvc: DataService,
+        private dataSvc: DataService,
         private _router: Router,
         private _route: ActivatedRoute
     ) {
@@ -59,12 +58,11 @@ export class MastersPeopleComponent implements OnInit {
             }
         `;
 
-        this.people = await this._dataSvc.getSetWithKey(
+        this.people = await this.dataSvc.getSetWithKey(
             'masters',
             'people',
             query
         );
-        console.log(this.people);
     }
 
     async getPerson(key: string): Promise<void> {
@@ -74,7 +72,7 @@ export class MastersPeopleComponent implements OnInit {
         this.gettingPerson = true;
         this.currentPerson = undefined;
 
-        const response = await this._dataSvc.getSet('team', key);
+        const response = await this.dataSvc.getSet('team', key);
         this.currentPerson = response;
     }
 

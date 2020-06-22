@@ -30,7 +30,7 @@ export class NavComponent {
         { url: 'getinvolved', label: 'Get Involved' }
     ];
 
-    public searchResults: unknown[];
+    public searchResults: unknown;
 
     public searchEnabled: boolean;
 
@@ -56,7 +56,7 @@ export class NavComponent {
 
     @ViewChild('menuClose') menuBtnClose: ElementRef;
 
-    constructor(private _router: Router, private _dataSvc: DataService) {
+    constructor(private _router: Router, private dataSvc: DataService) {
         // Get nav route when nav ends
         this._router.events
             .pipe(filter(e => e instanceof NavigationEnd))
@@ -71,11 +71,12 @@ export class NavComponent {
             .pipe(filter(e => e instanceof NavigationStart))
             .subscribe(e => {
                 // Close menu when nav starts
-                if (this.menuBtn.nativeElement.classList.contains('isOpen'))
+                if (this.menuBtn.nativeElement.classList.contains('isOpen')) {
                     this.openCloseNav();
+                }
             });
 
-        this._dataSvc.isLoading.subscribe(value => {
+        this.dataSvc.isLoading.subscribe(value => {
             this.wasLoading = value;
         });
 
@@ -123,6 +124,6 @@ export class NavComponent {
     async searchTyping(value: string) {
         if (value.length < 3) return;
 
-        this.searchResults = await this._dataSvc.getSet('search', value);
+        this.searchResults = await this.dataSvc.getSet('search', value);
     }
 }

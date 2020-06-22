@@ -1,36 +1,54 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 
-import { DataService } from '../utils/data.service';
-
 import * as _ from 'underscore';
 import mixitup from 'mixitup';
+import { DataService } from '../utils/data.service';
 
 @Component({
     selector: 'app-index',
     templateUrl: './index.component.html',
-    styleUrls: ['./index.component.scss'],
+    styleUrls: ['./index.component.scss']
 })
 export class PublicationIndexComponent implements OnInit {
-    public pubs: any[];
+    public pubs: unknown;
 
     public pubTypesCount: Record<string, any>;
+
     public pubTypesTotal: number;
+
     public pubTypeKeys: string[];
 
     @ViewChildren('publicationList') publicationList: QueryList<any>;
 
-    constructor(private _dataSvc: DataService) {}
+    // eslint-disable-next-line no-useless-constructor
+    constructor(private dataSvc: DataService) {}
 
-    async ngOnInit(): Promise<any> {
-        const response = (this.pubs = await this._dataSvc.getSet('publications'));
+    async ngOnInit(): Promise<void> {
+        const query = `   
+            {
+                allPublications {
+                    title
+                    key
+                    date
+                    author
+                    blurb
+                    context
+                    description
+                    downloadUrls
+                    purchaseUrls
+                }
+            }
+        `;
+
+        const response = await this.dataSvc.getSet('publications', query);
+        this.pubs = response['allPublications'];
 
         // get count of each pub type
-        this.pubTypesCount = _.countBy(response, obj => {
-            return obj.form.key;
-        });
-        this.pubTypesTotal = _.reduce(this.pubTypesCount, (memo, num) => {
-            return memo + num;
-        });
+        this.pubTypesCount = _.countBy(response, obj => obj.form.key);
+        this.pubTypesTotal = _.reduce(
+            this.pubTypesCount,
+            (memo, num) => memo + num
+        );
 
         // get all pub types and type names
         this.pubTypeKeys = Object.keys(this.pubTypesCount);
@@ -39,8 +57,8 @@ export class PublicationIndexComponent implements OnInit {
         if (this.pubs.length % 2 === 1) {
             this.pubs.push({
                 form: {
-                    key: 'dummy',
-                },
+                    key: 'dummy'
+                }
             });
         }
     }
@@ -49,8 +67,8 @@ export class PublicationIndexComponent implements OnInit {
         this.publicationList.changes.subscribe(t => {
             mixitup(document.getElementById('publications'), {
                 animation: {
-                    effects: 'fade',
-                },
+                    effects: 'fade'
+                }
             });
         });
     }
