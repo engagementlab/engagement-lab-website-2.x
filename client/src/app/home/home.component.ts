@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
 
     constructor(private _dataSvc: DataService) {}
 
-    async ngOnInit(): Promise<unknown> {
+    async ngOnInit(): Promise<void> {
         const query = `
             {
                 allAboutPages {

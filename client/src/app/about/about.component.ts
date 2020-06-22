@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
 
     constructor(private _dataSvc: DataService) {}
 
-    async ngOnInit() {
+    async ngOnInit(): Promise<void> {
         const query = `
             {
                 allAboutPages {
