@@ -123,7 +123,7 @@ const apollo = app => {
     scalar ObjectID
     """Image type definition"""
     type Image {
-      public_id: String
+      public_id: String!
       version: Int!
       signature: String!
       width: Int!

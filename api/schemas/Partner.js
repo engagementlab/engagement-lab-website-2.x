@@ -10,7 +10,7 @@
  */
 const Partner = {
 
-  schema: `
+    schema: `
     type Partner {
       id: ID!
       date: Date
@@ -20,10 +20,10 @@ const Partner = {
       url: String
     }
   `,
-  queries: ['allPartnerPages: Partner'],
-  resolvers: {
-    allPartnerPages: async () => global.keystone.list('Partner').model.findOne({}).exec(),
-  },
+    queries: ['allPartners: [Partner]'],
+    resolvers: {
+        allPartners: async () => global.keystone.list('Partner').model.find({}).exec(),
+    },
 
 };
 module.exports = Partner;
