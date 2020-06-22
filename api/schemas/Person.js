@@ -10,33 +10,35 @@
  */
 const Person = {
 
-    // TODO: add 'category' select field (see api/models/Person.js line 46)
-    // TODO: ask Johnny about managing relationships for title, cohortYear, project fields
-
     schema: `
-    type Person {
-      id: ID!
-      date: Date
-      name: Name!
-      key: String!
-      title: String!
-      project: String
-      bio: String!
-      image: Image
-      cmapPerson: Boolean
-      twitterURL: String
-      fbURL: String
-      igURL: String
-      linkedInURL: String
-      githubURL: String
-      websiteURL: String
-      email: String
-      phone: String
-    }
+        type Person {
+        id: ObjectID!
+        key: String!
+        date: Date
+        name: Name!
+        category: String!
+        title: String!
+        cohortYear: ObjectID
+        project: String
+        bio: String!
+        image: Image
+        cmapPerson: Boolean
+        twitterURL: String
+        fbURL: String
+        igURL: String
+        linkedInURL: String
+        githubURL: String
+        websiteURL: String
+        email: String
+        phone: String
+        }
   `,
-    queries: ['allPeople: [Person]', 'allStaffPeople: [Person]'],
+    queries: ['allPeople(cohortYear: ObjectID): [Person]', 'allStaffPeople: [Person]'],
     resolvers: {
-        allPeople: async () => global.keystone.list('Person').model.find({}).exec(),
+        allPeople: async (parent, args) => {
+            const query = args.cohortYear ? { cohortYear: args.cohortYear, category: 'Masters', } : {};
+            return global.keystone.list('Person').model.find(query).exec();
+        },
         allStaffPeople: async () => global.keystone.list('Person').model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
     },
 

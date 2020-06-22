@@ -10,24 +10,22 @@
  */
 const Masters = {
 
-  // TODO: modify cohortYear def & field? (see api/models/Masters.js line 71)
+    // TODO: modify cohortYear def & field? (see api/models/Masters.js line 71)
 
-  schema: `
+    schema: `
     type Masters {
       id: ID!
-      date: Date
-      enabled: Boolean!
       name: String!
-      programDescription: String!
+      programDescription: Markdown!
       applicationLink: String
       buttonTxt: String!
-      cohortYear: Int
+      cohortYear: ID
     }
   `,
-  queries: ['allMastersPages: Masters'],
-  resolvers: {
-    allMastersPages: async () => global.keystone.list('Masters').model.findOne({}).exec(),
-  },
+    queries: ['allMastersPages: Masters'],
+    resolvers: {
+        allMastersPages: async () => global.keystone.list('Masters').model.findOne({}).exec(),
+    },
 
 };
 module.exports = Masters;
