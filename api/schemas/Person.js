@@ -12,25 +12,25 @@ const Person = {
 
     schema: `
         type Person {
-        id: ObjectID!
-        key: String!
-        date: Date
-        name: Name!
-        category: String!
-        title: String
-        cohortYear: ObjectID
-        project: String
-        bio: Markdown!
-        image: Image!
-        cmapPerson: Boolean
-        twitterURL: String
-        fbURL: String
-        igURL: String
-        linkedInURL: String
-        githubURL: String
-        websiteURL: String
-        email: String
-        phone: String
+            id: ObjectID!
+            key: String!
+            date: Date
+            name: Name!
+            category: String!
+            title: String
+            cohortYear: ObjectID
+            project: String
+            bio: Markdown!
+            image: Image!
+            cmapPerson: Boolean
+            twitterURL: String
+            fbURL: String
+            igURL: String
+            linkedInURL: String
+            githubURL: String
+            websiteURL: String
+            email: String
+            phone: String
         }
   `,
     queries: ['allPeople(cohortYear: ObjectID): [Person]', 'allMastersPeople: [Person]', 'allStaffPeople: [Person]'],

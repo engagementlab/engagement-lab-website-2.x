@@ -10,18 +10,19 @@
  */
 const Filter = {
 
-  schema: `
+    schema: `
     type Filter {
       id: ID!
       date: Date
       category: String!
       appears: String!
+      key: String!
     }
   `,
-  queries: ['allFilterPages: Filter'],
-  resolvers: {
-    allFilterPages: async () => global.keystone.list('Filter').model.findOne({}).exec(),
-  },
+    queries: ['allFilters: Filter'],
+    resolvers: {
+        allFilters: async () => global.keystone.list('Filter').model.findOne({}).exec(),
+    },
 
 };
 module.exports = Filter;
