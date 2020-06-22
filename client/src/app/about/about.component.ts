@@ -36,6 +36,13 @@ export class AboutComponent implements OnInit {
                     teaching
                     design
                 }
+                allPartners {
+                    name 
+                    image {
+                        public_id
+                    }
+                    url
+                }
                 allStaffPeople {
                     name {
                         first
@@ -50,8 +57,7 @@ export class AboutComponent implements OnInit {
         `;
         const response = await this._dataSvc.getSet('about', query);
         this.about = response['allAboutPages'];
-        // this.partners = response['partners'];
+        this.partners = response['allPartners'];
         this.people = response['allStaffPeople'];
-        debugger;
     }
 }

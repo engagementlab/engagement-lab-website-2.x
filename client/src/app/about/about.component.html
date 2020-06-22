@@ -1,12 +1,17 @@
 <h2 class="column is-half no-pad">The Engagement Lab at Emerson College</h2>
-<h3 class="column is-full-mobile is-7-tablet no-pad blurb">{{ about?.missionStatement }}</h3>
+<h3 class="column is-full-mobile is-7-tablet no-pad blurb">
+    {{ about?.missionStatement }}
+</h3>
 
 <div class="column is-full">
     <hr />
 </div>
 
 <!-- Mobile-only -->
-<section class="columns is-centered is-mobile is-multiline" *ngIf="about !== undefined && isPhone">
+<section
+    class="columns is-centered is-mobile is-multiline"
+    *ngIf="about !== undefined && isPhone"
+>
     <div class="column is-two-fifths-mobile is-half-mobile">
         {{ about?.summary1 }}
         <cdn-image
@@ -29,7 +34,10 @@
 </section>
 
 <!-- Tablet/desktop-only -->
-<section class="columns is-multiline summary" *ngIf="about !== undefined && !isPhone">
+<section
+    class="columns is-multiline summary"
+    *ngIf="about !== undefined && !isPhone"
+>
     <div class="column is-5 ">
         {{ about?.summary1 }}
     </div>
@@ -81,7 +89,11 @@
     <div class="columns is-mobile is-centered is-multiline">
         <div class="column is-two-fifths-mobile">
             <div class="icon tomato">
-                <cdn-image cloudinaryId="about/research-icon" width="100" alt="Research icon image"></cdn-image>
+                <cdn-image
+                    cloudinaryId="about/research-icon"
+                    width="100"
+                    alt="Research icon image"
+                ></cdn-image>
             </div>
             <h3>Research</h3>
             {{ about?.research }}
@@ -89,7 +101,11 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon gb">
-                <cdn-image cloudinaryId="about/workshop-icon" width="100" alt="Workshops icon image"></cdn-image>
+                <cdn-image
+                    cloudinaryId="about/workshop-icon"
+                    width="100"
+                    alt="Workshops icon image"
+                ></cdn-image>
             </div>
             <h3>Workshops</h3>
             {{ about?.workshops }}
@@ -97,7 +113,11 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon mango">
-                <cdn-image cloudinaryId="about/tools-icon" width="100" alt="Tools icon image"></cdn-image>
+                <cdn-image
+                    cloudinaryId="about/tools-icon"
+                    width="100"
+                    alt="Tools icon image"
+                ></cdn-image>
             </div>
             <h3>Tools</h3>
             {{ about?.tools }}
@@ -105,7 +125,11 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon tomato">
-                <cdn-image cloudinaryId="about/teaching-icon" width="100" alt="Teaching icon image"></cdn-image>
+                <cdn-image
+                    cloudinaryId="about/teaching-icon"
+                    width="100"
+                    alt="Teaching icon image"
+                ></cdn-image>
             </div>
             <h3>Teaching</h3>
             {{ about?.teaching }}
@@ -113,7 +137,11 @@
 
         <div class="column is-two-fifths-mobile">
             <div class="icon gb">
-                <cdn-image cloudinaryId="about/design-icon" width="100" alt="Design icon image"></cdn-image>
+                <cdn-image
+                    cloudinaryId="about/design-icon"
+                    width="100"
+                    alt="Design icon image"
+                ></cdn-image>
             </div>
             <h3>Design</h3>
             {{ about?.design }}
