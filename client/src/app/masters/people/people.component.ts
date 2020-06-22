@@ -5,10 +5,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     templateUrl: './people.component.html',
-    styleUrls: ['./people.component.scss'],
+    styleUrls: ['./people.component.scss']
 })
 export class MastersPeopleComponent implements OnInit {
-    public cohorts: any[];
+    public people: any[];
 
     public cohortKeys: string[];
 
@@ -16,7 +16,11 @@ export class MastersPeopleComponent implements OnInit {
 
     private gettingPerson: boolean;
 
-    constructor(private _dataSvc: DataService, private _router: Router, private _route: ActivatedRoute) {
+    constructor(
+        private _dataSvc: DataService,
+        private _router: Router,
+        private _route: ActivatedRoute
+    ) {
         this._route.params.subscribe(params => {
             if (Object.keys(params).length < 1) return;
             this.getPerson(params.key);
@@ -28,8 +32,39 @@ export class MastersPeopleComponent implements OnInit {
         const key = this._route.snapshot.paramMap.get('key');
         if (key) this.getPerson(key);
 
-        this.cohorts = await this._dataSvc.getSet('masters', 'people');
-        this.cohortKeys = Object.keys(this.cohorts);
+        const query = `   
+            {
+                allMastersPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    title
+                    image {
+                        public_id
+                    }
+                    bio { 
+                        html
+                    }
+                    twitterURL 
+                    fbURL 
+                    igURL 
+                    linkedInURL 
+                    githubURL 
+                    websiteURL 
+                    email 
+                    phone
+                }
+            }
+        `;
+
+        this.people = await this._dataSvc.getSetWithKey(
+            'masters',
+            'people',
+            query
+        );
+        console.log(this.people);
     }
 
     async getPerson(key: string): Promise<void> {
