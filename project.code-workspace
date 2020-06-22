@@ -18,8 +18,8 @@
       "editor.formatOnSave": true
     },
   },
-  "folders": [
-    {
+  "folders": [{
+      "name": "./",
       "path": "."
     },
     {
