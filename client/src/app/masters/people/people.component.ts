@@ -5,20 +5,20 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     templateUrl: './people.component.html',
-    styleUrls: ['./people.component.scss']
+    styleUrls: ['./people.component.scss'],
 })
 export class MastersPeopleComponent implements OnInit {
-    public people: unknown;
+    public people: any;
 
     // public cohortKeys: string[];
-    public currentPerson: unknown;
+    public currentPerson: any;
 
     private gettingPerson: boolean;
 
     constructor(
         private dataSvc: DataService,
         private _router: Router,
-        private _route: ActivatedRoute
+        private _route: ActivatedRoute,
     ) {
         this._route.params.subscribe(params => {
             if (Object.keys(params).length < 1) return;
@@ -31,7 +31,7 @@ export class MastersPeopleComponent implements OnInit {
         const key = this._route.snapshot.paramMap.get('key');
         if (key) this.getPerson(key);
 
-        const query = `   
+        const query = `
             {
                 allMastersPeople {
                     name {
@@ -43,16 +43,16 @@ export class MastersPeopleComponent implements OnInit {
                     image {
                         public_id
                     }
-                    bio { 
+                    bio {
                         html
                     }
-                    twitterURL 
-                    fbURL 
-                    igURL 
-                    linkedInURL 
-                    githubURL 
-                    websiteURL 
-                    email 
+                    twitterURL
+                    fbURL
+                    igURL
+                    linkedInURL
+                    githubURL
+                    websiteURL
+                    email
                     phone
                 }
             }
@@ -61,7 +61,7 @@ export class MastersPeopleComponent implements OnInit {
         this.people = await this.dataSvc.getSetWithKey(
             'masters',
             'people',
-            query
+            query,
         );
     }
 

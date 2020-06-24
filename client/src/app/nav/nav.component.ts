@@ -5,7 +5,7 @@ import { filter } from 'rxjs/operators';
 import {
     disableBodyScroll,
     enableBodyScroll,
-    clearAllBodyScrollLocks
+    clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
 import { DataService } from '../utils/data.service';
 
@@ -19,7 +19,7 @@ interface Link {
 @Component({
     selector: 'app-nav',
     templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss']
+    styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
     public navLinks: Link[] = [
@@ -27,10 +27,10 @@ export class NavComponent {
         { url: 'projects', label: 'Projects' },
         { url: 'publications', label: 'Publications' },
         { url: 'masters', label: 'Masters Program' },
-        { url: 'getinvolved', label: 'Get Involved' }
+        { url: 'getinvolved', label: 'Get Involved' },
     ];
 
-    public searchResults: unknown;
+    public searchResults: any;
 
     public searchEnabled: boolean;
 

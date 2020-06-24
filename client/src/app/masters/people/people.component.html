@@ -5,9 +5,11 @@
 <div class="column is-3">
     <cdn-image id="design" cloudinaryId="logos/design-logo" alt="Masters of Media Design logo 2"></cdn-image>
 </div>
-<section id="{{ cohort.key }}" *ngFor="let cohort of cohorts | keyvalue">
+
+<!-- cohorts is no longer defined in the masters/people component -->
+<!-- <section id="{{ cohort.key }}" *ngFor="let cohort of cohorts | keyvalue">
     <ng-container *ngIf="cohort.value.people.length > 0">
         <h1 class="column is-full uppercase">{{ cohort.value.name }}</h1>
         <people-grid [people]="cohort.value.people" [cohort]="true"></people-grid>
     </ng-container>
-</section>
+</section> -->

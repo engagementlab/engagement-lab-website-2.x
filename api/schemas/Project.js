@@ -10,12 +10,12 @@
  */
 const Project = {
 
-  // TODO: add projectType select field
-  // TODO: add principalInvestigator and format relationship fields
-  // TODO: Ask Johnny about implementing 'Project Media' and 'Project
-  //       Information' categories
+    // TODO: add projectType select field
+    // TODO: add principalInvestigator and format relationship fields
+    // TODO: Ask Johnny about implementing 'Project Media' and 'Project
+    //       Information' categories
 
-  schema: `
+    schema: `
     type Project {
       id: ID!
       name: String!
@@ -30,11 +30,11 @@ const Project = {
       customURL: String
     }
   `,
-  queries: ['allProjectPages: [Project]', 'allArchivedProjectPages: [Project]'],
-  resolvers: {
-    allProjectPages: async () => global.keystone.list('Project').model.find({ enabled: true, archived: false }).exec(),
-    allArchivedProjectPages: async () => global.keystone.list('Project').model.find({ enabled: true, archived: false }).exec(),
-  },
+    queries: ['allProjectPages: [Project]', 'allArchivedProjectPages: [Project]'],
+    resolvers: {
+        allProjectPages: async () => global.keystone.list('Project').model.find({ enabled: true, archived: false, }).exec(),
+        allArchivedProjectPages: async () => global.keystone.list('Project').model.find({ enabled: true, archived: false, }).exec(),
+    },
 
 };
 module.exports = Project;

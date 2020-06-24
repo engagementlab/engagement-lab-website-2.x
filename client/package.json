@@ -3,7 +3,7 @@
     "version": "2.4.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "ng serve --vendorChunk=true",
         "build": "ng build --configuration=production --progress",
         "build-qa": "ng build --configuration=qa --progress",
         "build-static": "npm-run-all -p serve:api:prod scully:build",

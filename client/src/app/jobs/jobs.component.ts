@@ -7,9 +7,9 @@ import { DataService } from '../utils/data.service';
     styleUrls: ['./jobs.component.scss'],
 })
 export class JobsComponent implements OnInit {
-    public jobs: unknown;
+    public jobs: any;
 
-    constructor(private _dataSvc: DataService) {}
+    constructor(private _dataSvc: DataService) { }
 
     async ngOnInit(): Promise<any> {
         const query = `

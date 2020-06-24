@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import {
+    Component, OnInit, ViewChildren, QueryList,
+} from '@angular/core';
 import { DataService } from '../utils/data.service';
 
 @Component({
@@ -8,18 +10,24 @@ import { DataService } from '../utils/data.service';
 })
 export class ProjectIndexComponent implements OnInit {
     public projects: any[];
+
     public projectFeatured: any;
+
     public projectsArchived: any[];
+
     public projectTypeNames: string[];
+
     public projectTypesCount: Record<string, any>;
+
     public projectTypesTotal: number;
 
     @ViewChildren('projectList') projectList: QueryList<any>;
 
-    constructor(private _dataSvc: DataService) {}
+    constructor(private dataSvc: DataService) { }
 
     async ngOnInit() {
-        const content = await this._dataSvc.getSet('projects');
+        // FIXME: The second parameter is not a proper query
+        // const content = await this.dataSvc.getSet('projects', 'allProjectPages');
 
         // this.projects = content.filter(p => !p.archived);
         // this.projectsArchived = content.filter(p => p.archived);
@@ -38,9 +46,9 @@ export class ProjectIndexComponent implements OnInit {
         });
     }
 
-    ngOnDestroy() {
-        // Destroy mixer when user leaves
-        // if(this.mixer)
-        //   this.mixer.destroy();
-    }
+    // ngOnDestroy() {
+    //     // Destroy mixer when user leaves
+    //     if(this.mixer)
+    //       this.mixer.destroy();
+    // }
 }

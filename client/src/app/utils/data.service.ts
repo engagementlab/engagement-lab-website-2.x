@@ -21,8 +21,8 @@ export class DataService {
     // eslint-disable-next-line no-useless-constructor
     constructor(
         private transferState: TransferStateService,
-        private _apollo: Apollo
-    ) {}
+        private _apollo: Apollo,
+    ) { }
 
     /**
      * Retrieve data with page type, key, and query and get/set in transferstate
@@ -35,7 +35,7 @@ export class DataService {
     public async getSetWithKey(
         page: string,
         key: string,
-        query: string
+        query: string,
     ): Promise<unknown> {
         return this.getSet(page, query, key);
     }
@@ -51,7 +51,7 @@ export class DataService {
     public async getSet(
         page: string,
         query: string,
-        param: string = null
+        param: string = null,
     ): Promise<unknown> {
         if (!query) {
             this.errors.next([`No query provided for page "${page}"!`]);
@@ -71,13 +71,13 @@ export class DataService {
                         query: gql`
                             ${query}
                         `,
-                        errorPolicy: 'all'
+                        errorPolicy: 'all',
                     })
                     .subscribe(
                         result => {
                             if (result.errors) {
                                 this.errors.next(
-                                    result.errors.map(err => err.message)
+                                    result.errors.map(err => err.message),
                                 );
                                 this.isLoading.next(result.loading);
                                 reject(result.errors);
@@ -92,7 +92,7 @@ export class DataService {
                         },
                         err => {
                             console.log('err', err);
-                        }
+                        },
                     );
             });
             return content;
