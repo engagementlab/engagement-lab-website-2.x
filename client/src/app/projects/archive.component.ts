@@ -7,9 +7,9 @@ import { DataService } from '../utils/data.service';
     styleUrls: ['./archive.component.scss'],
 })
 export class ProjectArchiveComponent implements OnInit {
-    public projectsArchived: any[];
+    public projectsArchived: any;
 
-    constructor(private _dataSvc: DataService) {}
+    constructor(private _dataSvc: DataService) { }
 
     async ngOnInit() {
         this.projectsArchived = await this._dataSvc.getSet('projects', 'archive');

@@ -1,7 +1,8 @@
 <h2 class="column is-half no-pad">Events</h2>
 
 <section id="events" class="listing">
-    <div #eventList class="event column is-full" *ngFor="let event of contegntallEvents">
+    <!-- Property 'contegntallEvents' does not exist on type EventIndexComponent -->
+    <div #eventList class="event column is-full" *ngFor="let event of events">
         <a routerLink="/events/{{ event.key }}">
             <hr />
 

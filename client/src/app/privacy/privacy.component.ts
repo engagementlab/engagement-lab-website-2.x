@@ -4,13 +4,13 @@ import { DataService } from '../utils/data.service';
 @Component({
     selector: 'app-privacy',
     templateUrl: './privacy.component.html',
-    styleUrls: ['./privacy.component.scss']
+    styleUrls: ['./privacy.component.scss'],
 })
 export class PrivacyComponent implements OnInit {
-    public content: unknown;
+    public content: any;
 
     // eslint-disable-next-line no-useless-constructor
-    constructor(private dataSvc: DataService) {}
+    constructor(private dataSvc: DataService) { }
 
     async ngOnInit(): Promise<void> {
         const query = `
