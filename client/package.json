@@ -44,6 +44,7 @@
         "apollo-cache-inmemory": "^1.6.6",
         "apollo-client": "^2.6.10",
         "apollo-link": "^1.2.14",
+        "apollo-link-error": "^1.1.13",
         "axios": "^0.19.2",
         "body-scroll-lock": "^3.0.1",
         "bulma": "^0.8.0",
@@ -63,6 +64,7 @@
         "tiny-slider": "^2.9.2",
         "tslib": "^1.10.0",
         "underscore": "^1.9.2",
+        "webpack": "^4.43.0",
         "zone.js": "~0.10.2"
     },
     "devDependencies": {
