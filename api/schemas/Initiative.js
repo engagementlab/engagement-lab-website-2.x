@@ -10,9 +10,9 @@
  */
 const Initiative = {
 
-  // TODO: Create 'projects' relation (see api/models/Initiative.js line 49)
+    // TODO: Create 'projects' relation (see api/models/Initiative.js line 49)
 
-  schema: `
+    schema: `
     type Initiative {
       id: ID!
       date: Date
@@ -23,10 +23,10 @@ const Initiative = {
       image: Image
     }
   `,
-  queries: ['allInitiativePages: Initiative'],
-  resolvers: {
-    allInitiativePages: async () => global.keystone.list('Initiative').model.findOne({}).exec(),
-  },
+    queries: ['allInitiativePages: [Initiative]'],
+    resolvers: {
+        allInitiativePages: async () => global.keystone.list('Initiative').model.find({}).exec(),
+    },
 
 };
 module.exports = Initiative;
