@@ -1,6 +1,6 @@
 import {
     BrowserModule,
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
 } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,7 +12,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
 import {
     CloudinaryConfiguration,
-    CloudinaryModule
+    CloudinaryModule,
 } from '@cloudinary/angular-5.x';
 
 // Apollo/Graphql
@@ -62,7 +62,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { MastersPeopleComponent } from './masters/people/people.component';
 
 export const cloudinary = {
-    Cloudinary: CloudinaryCore
+    Cloudinary: CloudinaryCore,
 };
 export const config: CloudinaryConfiguration = appConfig;
 
@@ -101,7 +101,7 @@ export const config: CloudinaryConfiguration = appConfig;
         // Utils
         AuthorFormatPipe,
         ButtonComponent,
-        PrettyUrlPipe
+        PrettyUrlPipe,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'elabHome' }),
@@ -114,7 +114,7 @@ export const config: CloudinaryConfiguration = appConfig;
         ScullyLibModule.forRoot({ useTransferState: true }),
         AppRoutingModule,
         ApolloModule,
-        HttpLinkModule
+        HttpLinkModule,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     providers: [
@@ -125,15 +125,15 @@ export const config: CloudinaryConfiguration = appConfig;
             useFactory: (httpLink: HttpLink) => {
                 // Apollo link w/ error handling
                 const link = httpLink.create({
-                    uri: `${appConfig.dev_url}/graphql`
+                    uri: `${appConfig.dev_url}/graphql`,
                 });
                 // Watch for graphql errors
                 const errors = onError(({ graphQLErrors, networkError }) => {
                     if (graphQLErrors) {
                         graphQLErrors.map(({ message, locations, path }) =>
                             console.log(
-                                `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-                            )
+                                `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
+                            ),
                         );
                     }
 
@@ -144,12 +144,12 @@ export const config: CloudinaryConfiguration = appConfig;
 
                 return {
                     cache: new InMemoryCache(),
-                    link: ApolloLink.from([errors, link])
+                    link: ApolloLink.from([errors, link]),
                 };
             },
-            deps: [HttpLink]
-        }
+            deps: [HttpLink],
+        },
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
