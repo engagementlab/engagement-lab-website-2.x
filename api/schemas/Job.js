@@ -10,7 +10,7 @@
  */
 const Job = {
 
-  schema: `
+    schema: `
     type Job {
       id: ID!
       date: Date
@@ -20,10 +20,10 @@ const Job = {
       url: String!
     }
   `,
-  queries: ['allJobPages: Job'],
-  resolvers: {
-    allJobPages: async () => global.keystone.list('Job').model.find({ enabled: true }).exec(),
-  },
+    queries: ['allJobs: [Job]'],
+    resolvers: {
+        allJobs: async () => global.keystone.list('Job').model.find({ enabled: true, }).exec(),
+    },
 
 };
 module.exports = Job;
