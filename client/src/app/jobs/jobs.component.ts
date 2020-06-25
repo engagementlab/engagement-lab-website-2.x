@@ -23,6 +23,7 @@ export class JobsComponent implements OnInit {
                 }
             }
         `;
+
         const result = await this.dataSvc.getSet('jobs', query);
         this.jobs = result['allJobs'];
     }

@@ -1,6 +1,4 @@
-import {
-    Component, OnInit, ViewChildren, QueryList,
-} from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
 @Component({
@@ -23,26 +21,42 @@ export class ProjectIndexComponent implements OnInit {
 
     @ViewChildren('projectList') projectList: QueryList<any>;
 
-    constructor(private dataSvc: DataService) { }
+    // eslint-disable-next-line no-useless-constructor
+    constructor(private dataSvc: DataService) {}
 
-    async ngOnInit() {
-        // FIXME: The second parameter is not a proper query
-        // const content = await this.dataSvc.getSet('projects', 'allProjectPages');
+    async ngOnInit(): Promise<void> {
+        const query = `
+            {
+                allProjectPages {
+                    name
+                    key
+                    image {
+                        public_id
+                    }
+                }
+                allArchivedProjectPages {
+                    name
+                    key
+                }
+                allFeaturedProjectPages {
+                    name
+                    key
+                }
+            }
+        `;
 
-        // this.projects = content.filter(p => !p.archived);
-        // this.projectsArchived = content.filter(p => p.archived);
-        // this.projectFeatured = content.filter(p => p.featured)[0];
+        const content = await this.dataSvc.getSet('projects', query);
+
+        this.projects = content['allProjectPages'];
+        this.projectsArchived = content['allArchivedProjectPages'];
+        this.projectFeatured = content['allFeaturedProjectPages'];
     }
 
     ngAfterViewInit() {
         this.projectList.changes.subscribe(t => {
-            if (this.projects.length % 2 === 1) this.projects.push({ projectType: 'dummy', key: 'dummy' });
-            //     // this.mixer = mixitup(document.getElementById('projects'), {
-            //     //   animation: {
-            //     //     effects: 'fade'
-            //     //   }
-            //     // });
-            //   // if not even count of projects, add a dummy once so last one doesn't center
+            if (this.projects.length % 2 === 1) {
+                this.projects.push({ projectType: 'dummy', key: 'dummy' });
+            }
         });
     }
 

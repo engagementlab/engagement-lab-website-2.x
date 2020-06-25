@@ -28,7 +28,11 @@ export class ProjectComponent {
 
     public themeIndexPrevious: number;
 
-    private themeColors: string[] = ['246, 165, 54', '0, 171, 158', '247, 41, 35'];
+    private themeColors: string[] = [
+        '246, 165, 54',
+        '0, 171, 158',
+        '247, 41, 35',
+    ];
 
     public hidden = true;
 
@@ -52,17 +56,21 @@ export class ProjectComponent {
 
     @ViewChild('description') description: ElementRef;
 
-    constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
+    constructor(
+        private _dataSvc: DataService,
+        private route: ActivatedRoute,
+        private _router: Router,
+    ) {
         this.subscriber = _router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
-            const { key } = this._route.snapshot.params;
+            const { key } = this.route.snapshot.params;
 
             // Force content reset
             this.content = undefined;
 
             // Redirect if user tried old url format
-            if (this._route.snapshot.params.category !== undefined) {
+            if (this.route.snapshot.params.category !== undefined) {
                 this.redirecting = true;
 
                 this.projectKey = key;
@@ -73,8 +81,54 @@ export class ProjectComponent {
                 return;
             }
 
-            const content = await this._dataSvc.getSet('projects', key);
-            if (content) this.setContent(content);
+            const query = `
+                {
+                    getProject(key: "${key}") {
+                        project {
+                            byline 
+                            challengeTxt 
+                            customUrl 
+                            description 
+                            externalLinkUrl 
+                            files {
+                                url
+                                name
+                            }
+                            githubUrl 
+                            image {
+                                public_id 
+                            }
+                            key
+                            name
+                            name 
+                            projectImages {
+                                public_id
+                            } 
+                            projectType 
+                            resultsTxt 
+                            showFiles
+                            sortOrder
+                            strategyTxt 
+                        }
+                        prev {
+                            name
+                            key
+                        }
+                        next {
+                            name
+                            key
+                        }
+                    }
+                }
+            `;
+
+            const content = await this._dataSvc.getSetWithKey(
+                'events',
+                key,
+                query,
+            );
+            // const content = await this._dataSvc.getSet('projects', key);
+            if (content) this.setContent(content['getProject']);
             this.bgAlpha = 0;
             this.alphaInterval = setInterval(() => {
                 this.bgAlpha += 0.015;
@@ -103,7 +157,9 @@ export class ProjectComponent {
 
         this.themeIndex = data.project.sortOrder % 3;
         if (this.next) this.themeIndexNext = this.next.sortOrder % 3;
-        if (this.previous) this.themeIndexPrevious = this.previous.sortOrder % 3;
+        if (this.previous) {
+            this.themeIndexPrevious = this.previous.sortOrder % 3;
+        }
 
         this.setBgHeight();
 
@@ -118,9 +174,16 @@ export class ProjectComponent {
         // Run every 1ms for 3s for the end of gradient always end at desired % after full page load
         // This is slightly hacky but the only way to really ensure proper render.
         this.bgInterval = setInterval(() => {
-            if (this.backgroundEnd === undefined || this.description === undefined) return;
+            if (
+                this.backgroundEnd === undefined ||
+                this.description === undefined
+            ) {
+                return;
+            }
 
-            const endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
+            const endY =
+                this.backgroundEnd.nativeElement.offsetTop +
+                this.backgroundEnd.nativeElement.offsetHeight;
             const windowHeight = document.body.clientHeight;
             this.bgEndPerc = (endY / windowHeight) * 100;
             const color = this.themeColors[this.themeIndex];
@@ -143,7 +206,11 @@ export class ProjectComponent {
 
     @HostListener('window:keyup', ['$event'])
     keyEvent(event: KeyboardEvent): void {
-        if (event.keyCode === KEY_CODE.RIGHT_ARROW) this._router.navigateByUrl(`/projects/${this.next.key}`);
-        if (event.keyCode === KEY_CODE.LEFT_ARROW) this._router.navigateByUrl(`/projects/${this.previous.key}`);
+        if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+            this._router.navigateByUrl(`/projects/${this.next.key}`);
+        }
+        if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+            this._router.navigateByUrl(`/projects/${this.previous.key}`);
+        }
     }
 }
