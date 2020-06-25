@@ -76,6 +76,13 @@ const apollo = app => {
         first: String
         last: String
     }
+    """File type definition"""
+    type File {
+        name: String
+        fileType: String
+        url: String
+        summary: String
+    }
     ${schemas.join(' ')}
 	  type Query {
       ${queries.join(' ')}
