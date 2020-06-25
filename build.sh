@@ -8,7 +8,7 @@ echo "Running static build."
 nvm use;
 
 # npm run prerender:express &
-# SERVERPID=`echo $!` &
+# SERVERPID= `echo $!` &
 cd client;
 npm run build;
 npm run build:static;

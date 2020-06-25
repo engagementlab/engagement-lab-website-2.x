@@ -123,7 +123,7 @@ export class ProjectComponent {
             `;
 
             const content = await this.dataSvc.getSetWithKey(
-                'events',
+                'projects',
                 key,
                 query,
             );

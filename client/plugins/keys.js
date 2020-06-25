@@ -24,7 +24,7 @@ const projectIdPlugin = async (route, config) => {
     const routes = [];
 
     response.allProjectPages.forEach((res) => {
-        routes.push({ route: `/project/${res.key}` });
+        routes.push({ route: `/projects/${res.key}` });
     });
     return Promise.resolve(routes);
 };
@@ -34,7 +34,7 @@ const eventIdPlugin = async (route, config) => {
     const routes = [];
 
     response.allEvents.forEach((res) => {
-        routes.push({ route: `/event/${res.key}` });
+        routes.push({ route: `/events/${res.key}` });
     });
     return Promise.resolve(routes);
 };

@@ -22,7 +22,7 @@ export class DataService {
     constructor(
         private transferState: TransferStateService,
         private _apollo: Apollo,
-    ) { }
+    ) {}
 
     /**
      * Retrieve data with page type, key, and query and get/set in transferstate
@@ -104,7 +104,7 @@ export class DataService {
                 this.transferState
                     .getState<unknown[]>(stateKey)
                     .subscribe(res => {
-                        if (res) resolve(res);
+                        if (res) resolve(res['data']);
                     });
             } catch (error) {
                 this.isLoading.next(false);

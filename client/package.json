@@ -17,7 +17,7 @@
     "serve:api": "cd ../api; nodemon;",
     "serve:api:prod": "cd ../api; nodemon prod;",
     "scully": "scully",
-    "scully:build": "scully --sr --RSD --sge --nw --killServer",
+    "scully:build": "scully --sr --RSD --sge",
     "scully:serve": "scully serve"
   },
   "private": false,
