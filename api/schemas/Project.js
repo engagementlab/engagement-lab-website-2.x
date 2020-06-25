@@ -17,8 +17,8 @@ const GetAdjacent = async results => {
         .findOne(
             {
                 enabled: true,
-                date: {
-                    $gt: results.date,
+                sortOrder: {
+                    $gt: results.sortOrder,
                 },
             },
             fields
@@ -28,8 +28,8 @@ const GetAdjacent = async results => {
         .findOne(
             {
                 enabled: true,
-                date: {
-                    $lt: results.date,
+                sortOrder: {
+                    $lt: results.sortOrder,
                 },
             },
             fields
@@ -44,7 +44,7 @@ const GetAdjacent = async results => {
 
     // Populate next/prev and output
     try {
-        const output = Object.assign(nextPrevResults, { event: results, });
+        const output = Object.assign(nextPrevResults, { project: results, });
         return output;
     } catch (err) {
         throw new Error(err);
