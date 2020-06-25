@@ -53,6 +53,7 @@ export class TeamComponent implements OnInit {
                     bio { 
                         html
                     }
+                    category
                     twitterURL 
                     fbURL 
                     igURL 
@@ -66,30 +67,31 @@ export class TeamComponent implements OnInit {
         `;
 
         const response = await this.dataSvc.getSet('team', query);
+        const content = response['allPeople'];
 
         this.people['faculty'] = _.filter(
-            response['staff'],
+            content,
             person => person.category === 'faculty leadership',
         );
         this.people['staff'] = _.filter(
-            response['staff'],
+            content,
             person => person.category === 'staff',
         );
         this.people['board'] = _.filter(
-            response['staff'],
+            content,
             person => person.category === 'advisory board',
         );
         this.people['fellows'] = _.filter(
-            response['staff'],
+            content,
             person => person.category === 'faculty fellows',
         );
-        this.people['students'] = response['students'];
+        // this.people['students'] = response['students'];
 
         // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
         Object.keys(this.people).forEach(personKey => {
             const mod = 4 - (this.people[personKey].length % 4);
             if (mod !== 4) {
-                for (let i = 0; i < mod; i = +1) {
+                for (let i = 0; i < mod; i += 1) {
                     this.people[personKey].push({ name: 'dummy' });
                 }
             }
