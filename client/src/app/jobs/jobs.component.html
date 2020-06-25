@@ -1,23 +1,25 @@
 <h2 class="column is-half no-pad">Working at the Engagement Lab</h2>
 
-<div *ngIf="jobs !== undefined && jobs.length === 0">
+<div *ngIf="jobs && jobs.length === 0">
     <h3>No current openings! Check back often!</h3>
 </div>
 
-<section id="jobs" *ngIf="jobs !== undefined && jobs.length > 0" class="listing">
+<section
+    id="jobs"
+    *ngIf="jobs !== undefined && jobs.length > 0"
+    class="listing"
+>
     <h3>Please view our open positions below:</h3>
 
     <div class="job item column  is-full" *ngFor="let job of jobs">
-
-      <a href="{{job.url}}">
-          <!-- <div class="columns"> -->
-              <h2 class="name is-full no-margin">
-                  {{job.title}}
-              </h2>
-              <div [innerHtml]="job.description.html"></div>
-          <!-- </div> -->
-          <hr />
-      </a>
-
+        <a href="{{ job.url }}">
+            <!-- <div class="columns"> -->
+            <h2 class="name is-full no-margin">
+                {{ job.title }}
+            </h2>
+            <div [innerHtml]="job.description.html"></div>
+            <!-- </div> -->
+            <hr />
+        </a>
     </div>
 </section>

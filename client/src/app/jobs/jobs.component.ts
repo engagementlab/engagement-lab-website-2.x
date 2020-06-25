@@ -9,12 +9,13 @@ import { DataService } from '../utils/data.service';
 export class JobsComponent implements OnInit {
     public jobs: any;
 
-    constructor(private _dataSvc: DataService) { }
+    // eslint-disable-next-line no-useless-constructor
+    constructor(private dataSvc: DataService) {}
 
-    async ngOnInit(): Promise<any> {
+    async ngOnInit(): Promise<void> {
         const query = `
             {
-                allJobsPages {
+                allJobs {
                     date
                     title
                     description
@@ -22,6 +23,7 @@ export class JobsComponent implements OnInit {
                 }
             }
         `;
-        this.jobs = await this._dataSvc.getSet('jobs', query);
+        const result = await this.dataSvc.getSet('jobs', query);
+        this.jobs = result['allJobs'];
     }
 }
