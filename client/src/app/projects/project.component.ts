@@ -57,7 +57,7 @@ export class ProjectComponent {
     @ViewChild('description') description: ElementRef;
 
     constructor(
-        private _dataSvc: DataService,
+        private dataSvc: DataService,
         private route: ActivatedRoute,
         private _router: Router,
     ) {
@@ -122,7 +122,7 @@ export class ProjectComponent {
                 }
             `;
 
-            const content = await this._dataSvc.getSetWithKey(
+            const content = await this.dataSvc.getSetWithKey(
                 'events',
                 key,
                 query,
