@@ -4,10 +4,11 @@
  * Project page schema
  * @module project
  * @class project
- * @author Ralph Drake
+ * @author Ralph Drake, Johnny Richardson
  *
  * ==========
  */
+const { model, } = global.keystone.list('Project');
 const Project = {
 
     // TODO: add projectType select field
@@ -24,16 +25,18 @@ const Project = {
       enabled: Boolean!
       featured: Boolean!
       archived: Boolean!
+      image: Image!
       byline: String
       projectType: String!
       sortOrder: Int
       customURL: String
     }
   `,
-    queries: ['allProjectPages: [Project]', 'allArchivedProjectPages: [Project]'],
+    queries: ['allProjectPages: [Project]', 'allArchivedProjectPages: [Project]', 'allFeaturedProjectPages: [Project]'],
     resolvers: {
-        allProjectPages: async () => global.keystone.list('Project').model.find({ enabled: true, archived: false, }).exec(),
-        allArchivedProjectPages: async () => global.keystone.list('Project').model.find({ enabled: true, archived: false, }).exec(),
+        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, }).sort([['sortOrder', 'ascending']]).exec(),
+        allArchivedProjectPages: async () => model.find({ enabled: true, archived: true, }).exec(),
+        allFeaturedProjectPages: async () => model.find({ enabled: true, featured: true, }).exec(),
     },
 
 };
