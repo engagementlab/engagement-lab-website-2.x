@@ -11,81 +11,56 @@
  * ==========
  */
 
-const { keystone } = global;
-const { Types } = require('keystone').Field;
-
-/**
- * Model Fields
- * @main About
- */
-const aboutSchema = {
-  fields: {
-    name: {
-      type: String,
-      isRequired: true,
-      defaultValue: 'About Page',
-    },
-    tagline: {
-      type: String,
-      isRequired: true,
-    },
-    missionStatement: {
-      type: Types.Textarea,
-      isRequired: true,
-      label: 'Mission Statement',
-    },
-    summary1: {
-      type: Types.Textarea,
-      isRequired: true,
-      label: 'Summary Paragraph 1',
-      note: 'First (required) paragraph',
-    },
-    summary2: {
-      type: Types.Textarea,
-      isRequired: true,
-      label: 'Summart Paragraph 2',
-      note: 'Second (required) paragraph',
-    },
-    images: {
-      type: Types.CloudinaryImages,
-      label: 'Summary Images (Requires EXACTLY 2)',
-      folder: 'homepage-2.0/about',
-      autoCleanup: true,
-    },
-    research: {
-      type: Types.Textarea,
-      label: 'Research Text',
-      isRequired: true
-    },
-    workshops: {
-      type: Types.Textarea,
-      label: 'Workshops Text',
-      isRequired: true
-    },
-    tools: {
-      type: Types.Textarea,
-      label: 'Tools Text',
-      isRequired: true
-    },
-    teaching: {
-      type: Types.Textarea,
-      label: 'Teaching Text',
-      isRequired: true
-    },
-    design: {
-      type: Types.Textarea,
-      label: 'Design Text',
-      isRequired: true
-    },
-  }
-}
+const { keystone, } = global;
+const { Types, } = require('keystone').Field;
 
 /**
  * about model
  * @constructor
  * See: http://keystonejs.com/docs/database/#lists-options
  */
-const About = keystone.createList('About', aboutSchema);
+const About = new keystone.List('About',
+    {
+        label: 'About Page',
+        singular: 'About Page',
+        nodelete: true,
+        nocreate: true,
+    });
+
+/**
+ * Model Fields
+ * @main About
+ */
+About.add({
+    name: {
+        type: String, default: 'About Page', hidden: true, required: true, initial: true,
+    },
+    tagline: { type: String, required: true, initial: true, },
+    missionStatement: {
+        type: String, label: 'Mission Statement', required: true, initial: true,
+    },
+
+    summary1: {
+        type: Types.Textarea, label: 'Summary Paragraph 1', required: true, note: 'First (required) paragraph',
+    },
+    summary2: {
+        type: Types.Textarea, label: 'Summart Paragraph 2', required: true, note: 'Second (required) paragraph',
+    },
+
+    images: {
+        type: Types.CloudinaryImages,
+        label: 'Summary Images (Requires EXACTLY 2)',
+        folder: 'homepage-2.0/about',
+        autoCleanup: true,
+    },
+
+    research: { type: Types.Textarea, label: 'Research Text', required: true, },
+    workshops: { type: Types.Textarea, label: 'Workshops Text', required: true, },
+    tools: { type: Types.Textarea, label: 'Tools Text', required: true, },
+    teaching: { type: Types.Textarea, label: 'Teaching Text', required: true, },
+    design: { type: Types.Textarea, label: 'Design Text', required: true, },
+
+});
 
 /**
  * Model Registration
