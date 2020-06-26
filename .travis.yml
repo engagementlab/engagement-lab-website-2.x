@@ -17,7 +17,7 @@ script:
     - cd api
     - npm install
     # Start API as background proc via forever
-    - forever start ./bin/www
+    - forever start ./bin/www.js
     - cd ../client
     # Make client builds
     - npm install
