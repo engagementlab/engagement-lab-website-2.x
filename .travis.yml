@@ -16,8 +16,9 @@ before_script:
 script:
     - cd api
     - npm install
-    # Start API as background proc via forever
-    - forever start ./bin/www.js
+      # Start API as background proc via forever
+    #  - forever start ./bin/www.js
+    - node ./bin/www.js
     - cd ../client
     # Make client builds
     - npm install
