@@ -1,5 +1,5 @@
 {
-  "name": "engagement-lab-website-2.0",
+  "name": "engagement-lab-website-2.x",
   "version": "2.4.1",
   "scripts": {
     "ng": "ng",
