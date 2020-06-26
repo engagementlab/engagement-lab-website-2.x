@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { QueryRef } from 'apollo-angular';
 import { DataService } from '../utils/data.service';
 import { KEY_CODE } from '../projects/project.component';
 
@@ -32,17 +33,56 @@ export class EventComponent {
 
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
 
-    constructor(private _dataSvc: DataService, private _route: ActivatedRoute, private _router: Router) {
+    constructor(
+        private _dataSvc: DataService,
+        private route: ActivatedRoute,
+        private _router: Router,
+    ) {
         this.subscriber = _router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
-            const { key } = this._route.snapshot.params;
+            const { key } = this.route.snapshot.params;
 
             // Force content reset
             this.content = undefined;
+            const query = `
+            {
+                getEvent(key: "${key}") {
+                    event {
+                        name
+                        key
+                        date
+                        shortDescription 
+                        eventUrl
+                        description
+                        {
+                            html
+                        }
+                        showButton
+                        buttonTxt
+                        images {
+                            public_id
+                        }
+                    }
+                    prev {
+                        name
+                        key
+                    }
+                    next {
+                        name
+                        key
+                    }
+                }
+            }
+        `;
 
-            const content = await this._dataSvc.getSet('events', key);
-            if (content) this.setContent(content);
+            const content = await this._dataSvc.getSetWithKey(
+                'events',
+                key,
+                query,
+            );
+            // eslint-disable-next-line dot-notation
+            if (content) this.setContent(content['getEvent']);
             this.bgAlpha = 0;
             this.alphaInterval = setInterval(() => {
                 this.bgAlpha += 0.015;
@@ -84,7 +124,9 @@ export class EventComponent {
         this.bgInterval = setInterval(() => {
             if (this.backgroundEnd === undefined) return;
 
-            const endY = this.backgroundEnd.nativeElement.offsetTop + this.backgroundEnd.nativeElement.offsetHeight;
+            const endY =
+                this.backgroundEnd.nativeElement.offsetTop +
+                this.backgroundEnd.nativeElement.offsetHeight;
             const windowHeight = document.body.clientHeight;
             this.bgEndPerc = (endY / windowHeight) * 100;
             const color = '247, 41, 35';
@@ -105,7 +147,9 @@ export class EventComponent {
 
     @HostListener('window:keyup', ['$event'])
     keyEvent(event: KeyboardEvent): void {
-        if (event.keyCode === KEY_CODE.RIGHT_ARROW) this._router.navigateByUrl(`/events/${this.next.key}`);
-        if (event.keyCode === KEY_CODE.LEFT_ARROW) this._router.navigateByUrl(`/events/${this.previous.key}`);
+        if (event.keyCode === KEY_CODE.RIGHT_ARROW)
+            this._router.navigateByUrl(`/events/${this.next.key}`);
+        if (event.keyCode === KEY_CODE.LEFT_ARROW)
+            this._router.navigateByUrl(`/events/${this.previous.key}`);
     }
 }

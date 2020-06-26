@@ -7,11 +7,24 @@ import { DataService } from '../utils/data.service';
     styleUrls: ['./jobs.component.scss'],
 })
 export class JobsComponent implements OnInit {
-    public jobs: any[];
+    public jobs: any;
 
-    constructor(private _dataSvc: DataService) {}
+    // eslint-disable-next-line no-useless-constructor
+    constructor(private dataSvc: DataService) {}
 
-    async ngOnInit(): Promise<any> {
-        this.jobs = await this._dataSvc.getSet('jobs');
+    async ngOnInit(): Promise<void> {
+        const query = `
+            {
+                allJobs {
+                    date
+                    title
+                    description
+                    url
+                }
+            }
+        `;
+
+        const result = await this.dataSvc.getSet('jobs', query);
+        this.jobs = result['allJobs'];
     }
 }

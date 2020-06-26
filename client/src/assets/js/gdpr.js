@@ -1,17 +1,17 @@
-!(function(e) {
+!(function (e) {
     let o = !1;
     if (
-        ('function' == typeof define && define.amd && (define(e), (o = !0)),
-        'object' == typeof exports && ((module.exports = e()), (o = !0)),
+        (typeof define === 'function' && define.amd && (define(e), (o = !0)),
+        typeof exports === 'object' && ((module.exports = e()), (o = !0)),
         !o)
     ) {
-        const t = window.Cookies,
-            n = (window.Cookies = e());
-        n.noConflict = function() {
+        const t = window.Cookies;
+        const n = (window.Cookies = e());
+        n.noConflict = function () {
             return (window.Cookies = t), n;
         };
     }
-})(function() {
+}(() => {
     function k() {
         for (var e = 0, o = {}; e < arguments.length; e++) {
             const t = arguments[e];
@@ -22,10 +22,9 @@
     return (function e(p) {
         function f(e, o, t) {
             let n;
-            if ('undefined' != typeof document) {
-                if (1 < arguments.length) {
+            if (typeof document !== 'undefined') {
+                if (arguments.length > 1) {
                     if (
-                        'number' ==
                         typeof (t = k(
                             {
                                 path: '/',
@@ -33,6 +32,7 @@
                             f.defaults,
                             t,
                         )).expires
+                        === 'number'
                     ) {
                         const i = new Date();
                         i.setMilliseconds(i.getMilliseconds() + 864e5 * t.expires), (t.expires = i);
@@ -44,16 +44,16 @@
                     (o = p.write
                         ? p.write(o, e)
                         : encodeURIComponent(String(o)).replace(
-                              /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
-                              decodeURIComponent,
-                          )),
-                        (e = (e = (e = encodeURIComponent(String(e))).replace(
-                            /%(23|24|26|2B|5E|60|7C)/g,
+                            /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
                             decodeURIComponent,
-                        )).replace(/[\(\)]/g, escape));
+                        )),
+                    (e = (e = (e = encodeURIComponent(String(e))).replace(
+                        /%(23|24|26|2B|5E|60|7C)/g,
+                        decodeURIComponent,
+                    )).replace(/[\(\)]/g, escape));
                     let c = '';
-                    for (const a in t) t[a] && ((c += '; ' + a), !0 !== t[a] && (c += '=' + t[a]));
-                    return (document.cookie = e + '=' + o + c);
+                    for (const a in t) t[a] && ((c += `; ${a}`), !0 !== t[a] && (c += `=${t[a]}`));
+                    return (document.cookie = `${e}=${o}${c}`);
                 }
                 e || (n = {});
                 for (
@@ -61,15 +61,16 @@
                     d < r.length;
                     d++
                 ) {
-                    let l = r[d].split('='),
-                        m = l.slice(1).join('=');
-                    this.json || '"' !== m.charAt(0) || (m = m.slice(1, -1));
+                    const l = r[d].split('=');
+                    let m = l.slice(1).join('=');
+                    this.json || m.charAt(0) !== '"' || (m = m.slice(1, -1));
                     try {
                         const u = l[0].replace(s, decodeURIComponent);
-                        if (((m = p.read ? p.read(m, u) : p(m, u) || m.replace(s, decodeURIComponent)), this.json))
+                        if (((m = p.read ? p.read(m, u) : p(m, u) || m.replace(s, decodeURIComponent)), this.json)) {
                             try {
                                 m = JSON.parse(m);
                             } catch (e) {}
+                        }
                         if (e === u) {
                             n = m;
                             break;
@@ -81,10 +82,10 @@
             }
         }
         return (
-            ((f.set = f).get = function(e) {
+            ((f.set = f).get = function (e) {
                 return f.call(f, e);
             }),
-            (f.getJSON = function() {
+            (f.getJSON = function () {
                 return f.apply(
                     {
                         json: !0,
@@ -93,7 +94,7 @@
                 );
             }),
             (f.defaults = {}),
-            (f.remove = function(e, o) {
+            (f.remove = function (e, o) {
                 f(
                     e,
                     '',
@@ -105,39 +106,35 @@
             (f.withConverter = e),
             f
         );
-    })(function() {});
-}),
-    (window['gdpr-cookie-notice-templates'] = {}),
-    (window['gdpr-cookie-notice-templates']['bar.html'] =
-        '<div class="gdpr-cookie-notice">\n  <p class="gdpr-cookie-notice-description">{description}</p>\n  <nav class="gdpr-cookie-notice-nav">\n    <a href="#" class="gdpr-cookie-notice-nav-item gdpr-cookie-notice-nav-item-settings">{settings}</a>\n    <a href="#" class="gdpr-cookie-notice-nav-item gdpr-cookie-notice-nav-item-accept gdpr-cookie-notice-nav-item-btn">{accept}</a>\n  </nav>\n</div>\n'),
-    (window['gdpr-cookie-notice-templates']['category.html'] =
-        '<li class="gdpr-cookie-notice-modal-cookie">\n  <div class="gdpr-cookie-notice-modal-cookie-row">\n    <h3 class="gdpr-cookie-notice-modal-cookie-title">{title}</h3>\n    <input type="checkbox" name="gdpr-cookie-notice-{prefix}" checked="checked" id="gdpr-cookie-notice-{prefix}" class="gdpr-cookie-notice-modal-cookie-input">\n    <label class="gdpr-cookie-notice-modal-cookie-input-switch" for="gdpr-cookie-notice-{prefix}"></label>\n  </div>\n  <p class="gdpr-cookie-notice-modal-cookie-info">{desc}</p>\n</li>\n'),
-    (window['gdpr-cookie-notice-templates']['modal.html'] =
-        '<div class="gdpr-cookie-notice-modal">\n  <div class="gdpr-cookie-notice-modal-content">\n    <div class="gdpr-cookie-notice-modal-header">\n      <h2 class="gdpr-cookie-notice-modal-title">{settings}</h2>\n      <button type="button" class="gdpr-cookie-notice-modal-close"></button>\n    </div>\n    <ul class="gdpr-cookie-notice-modal-cookies"></ul>\n    <div class="gdpr-cookie-notice-modal-footer">\n      <a href="#" class="gdpr-cookie-notice-modal-footer-item gdpr-cookie-notice-modal-footer-item-statement">{statement}</a>\n      <a href="#" class="gdpr-cookie-notice-modal-footer-item gdpr-cookie-notice-modal-footer-item-save gdpr-cookie-notice-modal-footer-item-btn"><span>{save}</span></a>\n    </div>\n  </div>\n</div>\n');
+    }(() => {}));
+})),
+(window['gdpr-cookie-notice-templates'] = {}),
+(window['gdpr-cookie-notice-templates']['bar.html'] = '<div class="gdpr-cookie-notice">\n  <p class="gdpr-cookie-notice-description">{description}</p>\n  <nav class="gdpr-cookie-notice-nav">\n    <a href="#" class="gdpr-cookie-notice-nav-item gdpr-cookie-notice-nav-item-settings">{settings}</a>\n    <a href="#" class="gdpr-cookie-notice-nav-item gdpr-cookie-notice-nav-item-accept gdpr-cookie-notice-nav-item-btn">{accept}</a>\n  </nav>\n</div>\n'),
+(window['gdpr-cookie-notice-templates']['category.html'] = '<li class="gdpr-cookie-notice-modal-cookie">\n  <div class="gdpr-cookie-notice-modal-cookie-row">\n    <h3 class="gdpr-cookie-notice-modal-cookie-title">{title}</h3>\n    <input type="checkbox" name="gdpr-cookie-notice-{prefix}" checked="checked" id="gdpr-cookie-notice-{prefix}" class="gdpr-cookie-notice-modal-cookie-input">\n    <label class="gdpr-cookie-notice-modal-cookie-input-switch" for="gdpr-cookie-notice-{prefix}"></label>\n  </div>\n  <p class="gdpr-cookie-notice-modal-cookie-info">{desc}</p>\n</li>\n'),
+(window['gdpr-cookie-notice-templates']['modal.html'] = '<div class="gdpr-cookie-notice-modal">\n  <div class="gdpr-cookie-notice-modal-content">\n    <div class="gdpr-cookie-notice-modal-header">\n      <h2 class="gdpr-cookie-notice-modal-title">{settings}</h2>\n      <button type="button" class="gdpr-cookie-notice-modal-close"></button>\n    </div>\n    <ul class="gdpr-cookie-notice-modal-cookies"></ul>\n    <div class="gdpr-cookie-notice-modal-footer">\n      <a href="#" class="gdpr-cookie-notice-modal-footer-item gdpr-cookie-notice-modal-footer-item-statement">{statement}</a>\n      <a href="#" class="gdpr-cookie-notice-modal-footer-item gdpr-cookie-notice-modal-footer-item-save gdpr-cookie-notice-modal-footer-item-btn"><span>{save}</span></a>\n    </div>\n  </div>\n</div>\n');
 const gdprCookieNoticeLocales = {};
 
 function gdprCookieNotice(c) {
-    let n = 'gdprcookienotice',
-        a = 'gdpr-cookie-notice',
-        r = window[a + '-templates'],
-        i = Cookies.noConflict(),
-        s = !1,
-        d = !1,
-        l = !1,
-        m = ['performance', 'analytics', 'marketing'];
+    const n = 'gdprcookienotice';
+    const a = 'gdpr-cookie-notice';
+    const r = window[`${a}-templates`];
+    const i = Cookies.noConflict();
+    let s = !1;
+    let d = !1;
+    let l = !1;
+    const m = ['performance', 'analytics', 'marketing'];
     c.locale || (c.locale = 'en'),
-        c.timeout || (c.timeout = 500),
-        c.domain || (c.domain = null),
-        c.expiration || (c.expiration = 30);
-    let u = i.getJSON(n),
-        p = new CustomEvent('gdprCookiesEnabled', {
-            detail: u,
-        });
+    c.timeout || (c.timeout = 500),
+    c.domain || (c.domain = null),
+    c.expiration || (c.expiration = 30);
+    const u = i.getJSON(n);
+    let p = new CustomEvent('gdprCookiesEnabled', {
+        detail: u,
+    });
 
     function f(e) {
-        for (var o = !1, t = 0; t < m.length; t++)
-            if (c[m[t]] && !e[m[t]]) for (let n = 0; n < c[m[t]].length; n++) i.remove(c[m[t]][n]), (o = !0);
-        o ? g() : document.documentElement.classList.remove(a + '-loaded');
+        for (var o = !1, t = 0; t < m.length; t++) if (c[m[t]] && !e[m[t]]) for (let n = 0; n < c[m[t]].length; n++) i.remove(c[m[t]][n]), (o = !0);
+        o ? g() : document.documentElement.classList.remove(`${a}-loaded`);
     }
 
     function k(e) {
@@ -148,130 +145,132 @@ function gdprCookieNotice(c) {
             analytics: !0,
             marketing: !0,
         };
-        if (e) for (let t = 0; t < m.length; t++) o[m[t]] = document.getElementById(a + '-cookie_' + m[t]).checked;
+        if (e) for (let t = 0; t < m.length; t++) o[m[t]] = document.getElementById(`${a}-cookie_${m[t]}`).checked;
         i.set(n, o, {
             expires: c.expiration,
             domain: c.domain,
         }),
-            f(o),
-            (p = new CustomEvent('gdprCookiesEnabled', {
-                detail: o,
-            })),
-            document.dispatchEvent(p);
+        f(o),
+        (p = new CustomEvent('gdprCookiesEnabled', {
+            detail: o,
+        })),
+        document.dispatchEvent(p);
     }
 
     function e() {
         if (d) return !1;
-        let e,
-            o,
-            t = v('bar.html');
+        let e;
+        let o;
+        const t = v('bar.html');
         document.body.insertAdjacentHTML('beforeend', t),
-            (e = document.querySelectorAll('.' + a + '-nav-item-settings')[0]),
-            (o = document.querySelectorAll('.' + a + '-nav-item-accept')[0]),
-            e.addEventListener('click', function(e) {
-                e.preventDefault(), h();
-            }),
-            o.addEventListener('click', function(e) {
-                e.preventDefault(), k();
-            }),
-            (d = !0);
+        (e = document.querySelectorAll(`.${a}-nav-item-settings`)[0]),
+        (o = document.querySelectorAll(`.${a}-nav-item-accept`)[0]),
+        e.addEventListener('click', (e) => {
+            e.preventDefault(), h();
+        }),
+        o.addEventListener('click', (e) => {
+            e.preventDefault(), k();
+        }),
+        (d = !0);
     }
 
     function g() {
         e(),
-            setTimeout(function() {
-                document.documentElement.classList.add(a + '-loaded');
-            }, c.timeout);
+        setTimeout(() => {
+            document.documentElement.classList.add(`${a}-loaded`);
+        }, c.timeout);
     }
 
     function v(e, t) {
-        const o = r[e],
-            n = gdprCookieNoticeLocales[c.locale];
-        if ((t ? (t += '_') : (t = ''), !('string' == typeof o && n instanceof Object))) return !1;
-        for (const i in n)
-            return o.replace(/({([^}]+)})/g, function(e) {
+        const o = r[e];
+        const n = gdprCookieNoticeLocales[c.locale];
+        if ((t ? (t += '_') : (t = ''), !(typeof o === 'string' && n instanceof Object))) return !1;
+        for (const i in n) {
+            return o.replace(/({([^}]+)})/g, (e) => {
                 const o = e.replace(/{/, '').replace(/}/, '');
-                return 'prefix' == o ? t.slice(0, -1) : n[o] ? n[o] : n[t + o] ? n[t + o] : e;
+                return o == 'prefix' ? t.slice(0, -1) : n[o] ? n[o] : n[t + o] ? n[t + o] : e;
             });
+        }
     }
 
     function o() {
         if (s) return !1;
         const e = v('modal.html');
         document.body.insertAdjacentHTML('beforeend', e);
-        const o = document.querySelector('.' + a + '-modal-cookies');
+        const o = document.querySelector(`.${a}-modal-cookies`);
         o.innerHTML += v('category.html', 'cookie_essential');
-        const t = document.querySelector('.' + a + '-modal-cookie-input'),
-            n = document.querySelector('.' + a + '-modal-cookie-input-switch');
+        const t = document.querySelector(`.${a}-modal-cookie-input`);
+        const n = document.querySelector(`.${a}-modal-cookie-input-switch`);
         (n.innerHTML = gdprCookieNoticeLocales[c.locale].always_on),
-            n.classList.add(a + '-modal-cookie-state'),
-            n.classList.remove(a + '-modal-cookie-input-switch'),
-            t.remove(),
-            c.performance && (o.innerHTML += v('category.html', 'cookie_performance')),
-            c.analytics && (o.innerHTML += v('category.html', 'cookie_analytics')),
-            c.marketing && (o.innerHTML += v('category.html', 'cookie_marketing')),
-            (function() {
-                const e = document.querySelectorAll('.' + a + '-modal-close')[0],
-                    o = document.querySelectorAll('.' + a + '-modal-footer-item-statement')[0],
-                    t = document.querySelectorAll('.' + a + '-modal-cookie-title'),
-                    n = document.querySelectorAll('.' + a + '-modal-footer-item-save')[0];
-                e.addEventListener('click', function() {
-                    return document.documentElement.classList.remove(a + '-show-modal'), !1;
-                }),
-                    o.addEventListener('click', function(e) {
-                        e.preventDefault(), (window.location.href = c.statement);
-                    });
-                for (let i = 0; i < t.length; i++)
-                    t[i].addEventListener('click', function() {
-                        return this.parentNode.parentNode.classList.toggle('open'), !1;
-                    });
-                n.addEventListener('click', function(e) {
-                    e.preventDefault(),
-                        n.classList.add('saved'),
-                        setTimeout(function() {
-                            n.classList.remove('saved');
-                        }, 1e3),
-                        k(!0);
+        n.classList.add(`${a}-modal-cookie-state`),
+        n.classList.remove(`${a}-modal-cookie-input-switch`),
+        t.remove(),
+        c.performance && (o.innerHTML += v('category.html', 'cookie_performance')),
+        c.analytics && (o.innerHTML += v('category.html', 'cookie_analytics')),
+        c.marketing && (o.innerHTML += v('category.html', 'cookie_marketing')),
+        (function () {
+            const e = document.querySelectorAll(`.${a}-modal-close`)[0];
+            const o = document.querySelectorAll(`.${a}-modal-footer-item-statement`)[0];
+            const t = document.querySelectorAll(`.${a}-modal-cookie-title`);
+            const n = document.querySelectorAll(`.${a}-modal-footer-item-save`)[0];
+            e.addEventListener('click', () => (document.documentElement.classList.remove(`${a}-show-modal`), !1)),
+            o.addEventListener('click', (e) => {
+                e.preventDefault(), (window.location.href = c.statement);
+            });
+            for (let i = 0; i < t.length; i++) {
+                t[i].addEventListener('click', function () {
+                    return this.parentNode.parentNode.classList.toggle('open'), !1;
                 });
-            })(),
-            u &&
-                ((document.getElementById(a + '-cookie_performance').checked = u.performance),
-                (document.getElementById(a + '-cookie_analytics').checked = u.analytics),
-                (document.getElementById(a + '-cookie_marketing').checked = u.marketing)),
-            (s = !0);
+            }
+            n.addEventListener('click', (e) => {
+                e.preventDefault(),
+                n.classList.add('saved'),
+                setTimeout(() => {
+                    n.classList.remove('saved');
+                }, 1e3),
+                k(!0);
+            });
+        }()),
+        u
+                && ((document.getElementById(`${a}-cookie_performance`).checked = u.performance),
+                (document.getElementById(`${a}-cookie_analytics`).checked = u.analytics),
+                (document.getElementById(`${a}-cookie_marketing`).checked = u.marketing)),
+        (s = !0);
     }
 
     function h() {
-        o(), document.documentElement.classList.add(a + '-show-modal');
+        o(), document.documentElement.classList.add(`${a}-show-modal`);
     }
     u
         ? (f(u), document.dispatchEvent(p))
         : (g(),
-          c.implicit &&
-              window.addEventListener('scroll', function e() {
-                  let o, t, n, i, c;
+        c.implicit
+              && window.addEventListener('scroll', function e() {
+                  let o; let t; let n; let i; let
+                      c;
                   (o = window.innerHeight || (document.documentElement || document.body).clientHeight),
-                      (c = document),
-                      (t = Math.max(
-                          c.body.scrollHeight,
-                          c.documentElement.scrollHeight,
-                          c.body.offsetHeight,
-                          c.documentElement.offsetHeight,
-                          c.body.clientHeight,
-                          c.documentElement.clientHeight,
-                      )),
-                      (n =
-                          window.pageYOffset ||
-                          (document.documentElement || document.body.parentNode || document.body).scrollTop),
-                      (i = t - o),
-                      25 < Math.floor((n / i) * 100) && !l && (l = !0) && (k(), window.removeEventListener('click', e));
+                  (c = document),
+                  (t = Math.max(
+                      c.body.scrollHeight,
+                      c.documentElement.scrollHeight,
+                      c.body.offsetHeight,
+                      c.documentElement.offsetHeight,
+                      c.body.clientHeight,
+                      c.documentElement.clientHeight,
+                  )),
+                  (n = window.pageYOffset
+                          || (document.documentElement || document.body.parentNode || document.body).scrollTop),
+                  (i = t - o),
+                  Math.floor((n / i) * 100) > 25 && !l && (l = !0) && (k(), window.removeEventListener('click', e));
               }));
-    const t = document.querySelectorAll('.' + a + '-settings-button');
-    if (t)
-        for (let y = 0; y < t.length; y++)
-            t[y].addEventListener('click', function(e) {
+    const t = document.querySelectorAll(`.${a}-settings-button`);
+    if (t) {
+        for (let y = 0; y < t.length; y++) {
+            t[y].addEventListener('click', (e) => {
                 e.preventDefault(), h();
             });
+        }
+    }
 }
 gdprCookieNoticeLocales.en = {
     description:
@@ -294,4 +293,4 @@ gdprCookieNoticeLocales.en = {
     cookie_marketing_desc:
         'These cookies are used to make advertising messages more relevant to you and your interests. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.',
 };
-//# sourceMappingURL=script.js.map
+// # sourceMappingURL=script.js.map

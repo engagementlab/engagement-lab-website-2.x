@@ -1,4 +1,3 @@
-
 /**
  * @fileoverview Engagement Lab Website v2.x content service
  * @copyright Engagement Lab at Emerson College, 2020
@@ -13,7 +12,6 @@ const BuildData = async (req, res) => {
 
   const privacy = db.list('Privacy').model;
   const fields = 'content.html lastUpdated -_id';
-
 
   try {
     // Get privacy text

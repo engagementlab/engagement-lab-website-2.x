@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x content service
  * Developed by Engagement Lab, 2020
@@ -58,9 +57,9 @@ const Routes = () => {
   router.get('/keys/team', routes.get.team.keys);
 
   // Error
-  router.get('*', (req, res) => {
-    res.status(500).send(`No route found for path ${req.url}.`);
-  });
+  // router.get('*', (req, res) => {
+  //   res.status(500).send(`No route found for path ${req.url}.`);
+  // });
 
   return router;
 };

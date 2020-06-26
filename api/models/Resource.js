@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -181,7 +180,6 @@ Resource.schema.pre('remove', (next) => {
     next();
   });
 });
-
 
 /**
  * Relationships

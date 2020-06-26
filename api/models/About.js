@@ -1,4 +1,3 @@
-
 /**
  * Engagement Lab Website v2.x
  *
@@ -13,7 +12,7 @@
  */
 
 const { keystone } = global;
-const { Types } = keystone.Field;
+const { Types } = require('keystone').Field;
 
 /**
  * Model Fields

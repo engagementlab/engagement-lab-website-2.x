@@ -1,8 +1,8 @@
-<canvas #canvasElement id="can" width="1334" height="1000" style="position: absolute; left:0;top:0"> </canvas>
 <div *ngIf="content">
+    <canvas #canvasElement id="can" width="1334" height="1000" style="position: absolute; left:0;top:0"> </canvas>
     <section id="intro" class="column columns is-full">
         <div id="text" class="column is-4">
-            {{ content.tagline }}
+            {{ content.allAboutPages.tagline }}
         </div>
 
         <div id="shapes" class="column columns is-multiline is-7-tablet hidden-mobile">
@@ -133,66 +133,8 @@
     <hr class="thick" />
     <h1 class="column is-full uppercase no-pad">Our Initiatives</h1>
 
-    <!-- initiatives -->
-    <section id="initiatives">
-        <div
-            #initiativeList
-            class="initiative"
-            *ngFor="let initiative of content.initiatives; let i = index; let first = first"
-        >
-            <div class="label" [class.first]="i === 1" [class.second]="i === 2" *ngIf="!first">
-                <div class="text">
-                    {{ initiative.name }}
-                </div>
-                <div>&nbsp;</div>
-            </div>
-
-            <a routerLink="/initiatives/{{ initiative.key }}">
-                <div class="columns is-multiline">
-                    <!-- name -->
-                    <h2 class="column is-full">{{ initiative.name }}</h2>
-                    <!-- art -->
-                    <div class="column is-half">
-                        <cdn-image
-                            cloudinaryPrefix="/"
-                            cloudinaryId="{{ initiative.image.public_id }}"
-                            svg="true"
-                            alt="Artwork image for '{{ initiative.name }}' initiative"
-                            *ngIf="!isPhone"
-                        ></cdn-image>
-
-                        <cdn-image
-                            cloudinaryPrefix="/"
-                            cloudinaryId="{{ initiative.image.public_id }}"
-                            alt="Artwork image for '{{ initiative.name }}' initiative"
-                            [responsive]="false"
-                            *ngIf="isPhone"
-                        ></cdn-image>
-                    </div>
-                    <!-- info -->
-                    <div class="column">
-                        <p>{{ initiative.description }}</p>
-                        <div class="projects">
-                            <h3 class="uppercase">Related Projects</h3>
-
-                            <hr />
-
-                            <a
-                                class="project"
-                                routerLink="/projects/{{ project.key }}"
-                                *ngFor="let project of initiative.projects"
-                            >
-                                {{ project.name }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-
     <!-- recent/featured projects -->
-    <section id="projects-wrap">
+    <!-- <section id="projects-wrap">
         <div class="columns is-mobile">
             <h1 class="column is-6-mobile is-7-tablet uppercase">Recent Projects</h1>
 
@@ -226,7 +168,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- events -->
     <section id="events" class="listing">
@@ -248,7 +190,7 @@
             #eventList
             class="item column no-pad is-full"
             [class.first]="i === 0"
-            *ngFor="let event of content.events; let i = index"
+            *ngFor="let event of content.recentEvents; let i = index"
         >
             <a routerLink="/events/{{ event.key }}">
                 <div class="columns is-mobile">

@@ -1,7 +1,17 @@
 <app-nav></app-nav>
 
+<h3 id="errors" *ngIf="dataErrors">
+    <p>Data service errors:</p>
+    <span>
+        {{ dataErrors }}
+    </span>
+</h3>
+
 <div id="menu-overlay"></div>
-<div [@routerAnimations]="prepareRouteTransition(outlet)">
+<div
+    *ngIf="!dataErrors || dataErrors.length < 1"
+    [@routerAnimations]="prepareRouteTransition(outlet)"
+>
     <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <app-footer></app-footer>

@@ -1,4 +1,3 @@
-
 /**
  * @fileoverview Engagement Lab Website v2.x content service
  * @copyright Engagement Lab at Emerson College, 2020

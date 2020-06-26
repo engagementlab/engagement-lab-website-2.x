@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router, NavigationStart } from '@angular/router';
 import { Subject } from 'rxjs';
+
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
 
 import { isScullyGenerated, TransferStateService } from '@scullyio/ng-lib';
 
@@ -14,59 +15,102 @@ import * as _ from 'underscore';
 @Injectable()
 export class DataService {
     public isLoading: Subject<boolean> = new Subject<boolean>();
-    public serverProblem: Subject<boolean> = new Subject<boolean>();
 
-    public previousUrl: string;
-    public currentUrl: string;
+    public errors: Subject<any[]> = new Subject<any[]>();
 
-    private devUrl: string;
+    // eslint-disable-next-line no-useless-constructor
+    constructor(
+        private transferState: TransferStateService,
+        private _apollo: Apollo,
+    ) {}
 
-    constructor(private _transferState: TransferStateService, private _http: HttpClient, private _router: Router) {
-        this.devUrl = 'http://localhost:3000';
-
-        _router.events.subscribe(event => {
-            this.currentUrl = this._router.url;
-            // Track prior url
-            if (event instanceof NavigationStart) {
-                this.previousUrl = this.currentUrl;
-                this.currentUrl = event.url;
-            }
-        });
+    /**
+     * Retrieve data with page type, key, and query and get/set in transferstate
+     * @function
+     * @returns Promise
+     * @param {string} page - Name of page type, e.g. 'events'
+     * @param {string} key - Key identifying individual page, e.g. 'my-event'
+     * @param {string} query - Data query for GraphQL
+     */
+    public async getSetWithKey(
+        page: string,
+        key: string,
+        query: string,
+    ): Promise<unknown> {
+        return this.getSet(page, query, key);
     }
 
-    public async getSet(page: string, param: string = null, search = false): Promise<any[]> {
-        let stateKey = page;
-        if (!search) this.isLoading.next(true);
-
-        let url = `${this.devUrl}/get/${page}`;
-        if (param) {
-            url = url + '/' + param;
-            stateKey += '_' + param;
+    /**
+     * Retrieve data with page name and query and get/set in transferstate
+     * @function
+     * @returns Promise
+     * @param {string} page - Name of page type, e.g. 'events'
+     * @param {string} query - Data query for GraphQL
+     * @param {string} [param] - Key identifying individual page, e.g. 'my-event'
+     */
+    public async getSet(
+        page: string,
+        query: string,
+        param: string = null,
+    ): Promise<unknown> {
+        if (!query) {
+            this.errors.next([`No query provided for page "${page}"!`]);
+            return;
         }
+
+        let stateKey = page;
+        // if (!search) this.isLoading.next(true);
+        if (param) stateKey += `_${param}`;
 
         // If scully is building or dev build, cache data from content API in transferstate
         if (!isScullyGenerated()) {
-            try {
-                const res = await this._http.get<any[]>(url).toPromise();
-                this._transferState.setState(stateKey, res);
+            // Query apollo w/ provided string
+            const content = new Promise<unknown>((resolve, reject) => {
+                this._apollo
+                    .query({
+                        query: gql`
+                            ${query}
+                        `,
+                        errorPolicy: 'all',
+                    })
+                    .subscribe(
+                        result => {
+                            if (result.errors) {
+                                this.errors.next(
+                                    result.errors.map(err => err.message),
+                                );
+                                this.isLoading.next(result.loading);
+                                reject(result.errors);
 
-                return res;
+                                return;
+                            }
+                            // Cache result in state
+                            this.transferState.setState(stateKey, result);
+                            this.isLoading.next(false);
+
+                            resolve(result.data);
+                        },
+                        err => {
+                            console.log('err', err);
+                        },
+                    );
+            });
+            return content;
+        }
+
+        // Get cached state for this key
+        const state = new Promise<unknown[]>((resolve, reject) => {
+            try {
+                this.transferState
+                    .getState<unknown[]>(stateKey)
+                    .subscribe(res => {
+                        if (res) resolve(res['data']);
+                    });
             } catch (error) {
                 this.isLoading.next(false);
-                throw Error(error);
+                reject(error);
             }
-        } else {
-            const state = new Promise<any[]>((resolve, reject) => {
-                try {
-                    this._transferState.getState<any[]>(stateKey).subscribe(res => {
-                        if (res) resolve(res);
-                    });
-                } catch (error) {
-                    this.isLoading.next(false);
-                    reject(error);
-                }
-            });
-            return state;
-        }
+        });
+        return state;
     }
 }
