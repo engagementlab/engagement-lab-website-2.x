@@ -7,7 +7,7 @@
         "clean": "kill -9 $(lsof -t -i:3000)"
     },
     "dependencies": {
-        "@engagementlab/el-bootstrapper": "git+https://github.com/engagementlab/el-bootstrapper.git",
+        "@engagementlab/el-bootstrapper": "0.1.0",
         "apollo-server": "^2.14.3",
         "apollo-server-express": "^2.14.3",
         "colors": "^1.4.0",
@@ -17,7 +17,6 @@
         "express": "~4.16.1",
         "graphql": "^15.1.0",
         "http-errors": "~1.6.3",
-        "keystone": "^4.2.1",
         "keystone-storage-adapter-azure": "^1.1.0",
         "mongoose": "^5.9.3",
         "morgan": "~1.9.1",
