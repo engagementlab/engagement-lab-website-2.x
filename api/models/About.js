@@ -12,7 +12,7 @@
  */
 
 const { keystone, } = global;
-const { Types, } = require('keystone').Field;
+const { Types, } = keystone.Field;
 
 /**
  * about model
