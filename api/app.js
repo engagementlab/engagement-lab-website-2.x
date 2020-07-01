@@ -171,7 +171,6 @@ const searchBoot = (app, productionMode) => {
 
 const start = productionMode => {
     const app = express();
-
     const logFormat = winston.format.combine(
         winston.format.colorize(),
         winston.format.timestamp(),
@@ -194,6 +193,7 @@ const start = productionMode => {
         ],
     });
     global.elasti = undefined;
+    global.logger.info(`The following env keys found: ${Object.keys(process.env)}`);
 
     app.use(express.json());
     app.use(express.urlencoded({ extended: false, }));
