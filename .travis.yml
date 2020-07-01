@@ -1,26 +1,22 @@
 language: node_js
-
 node_js:
-    - '14.4.0'
-
+- 14.4.0
 branches:
-    only:
-        - master
-
+  only:
+  - master
 before_script:
-    - npm install -g @angular/cli
-    - npm install -g bower
-    - npm install -g firebase-tools
-    - npm install -g forever
-
+- npm install -g @angular/cli
+- npm install -g bower
+- npm install -g firebase-tools
+- npm install -g forever
 script:
-    - cd api
-    - npm install
-      # Start API as background proc via forever
-    #  - forever start ./bin/www.js
-    - node ./bin/www.js
-    - cd ../client
-    # Make client builds
-    - npm install
-    - npm run build
-    - npx scully --sr
+- cd api
+- npm install
+- node ./bin/www.js
+- cd ../client
+- npm install
+- npm run build
+- npx scully --sr
+env:
+  global:
+    secure: LZ86odpTMCSu28CdNwQALrF0S8PMr0T7WEaBV9hHmQyFVMTcaPdM/hYmtVgh6THQTKp+FeJ+O6tV/XzmuWI+4Q2cIzfX4wVkTlIK88QdQCpGhO5a8ucDJSa3ktk5JNsxNnFOzM4sqYQSqc79ooMYmc/x6sF4HGclql1bn/xvsDnkQhJYiZKcRm5adsZdmmupn5n7SfZfhcMrfV2t/QU3JZrX1gCNBoSv+LFxmXtDb34sBK6cJCSAUkIe2es9v7gX9ZvfI382c2lBwv2ezll27vuGNjrgODseElKUaclatPF+U7wHv4RUxnUBsqYG2SYLvQZ/cpmAlxy9LoS8/3hLkQx7dTF7fwLgqnxxFXt1Fq42vqC7s+2CpZIMWOyUCLyaW1vrCa7/Xt9iyc1To7xWCVdVH9+WoQykpJsSBiXmflE7CsZq2jEY5LIEFntRm4lDd1uZbSoqSpAqwNdq6N2+MtoPNoPw2fhCkG4c+0AiL0BV3dH6DOo+qGdrhh4oaEpcwNYOOVKw2EiGQAImgJmDonowmxzrE3EHzjVrwH5EG4EuSdwJFk9wuqJl2gemY+vnVIj5sCIDPnu/Ax9ZzasPBKO3fIctrH87T+Gs3HpMqwTo4ga1X9Z3cJdG37Rnp3+WF78CesLI1i3L+4nbNewjDKHmWvOHpSAXpRNAciVkQBk=
