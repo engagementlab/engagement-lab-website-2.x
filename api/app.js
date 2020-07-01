@@ -16,10 +16,10 @@ const {
 } = require('graphql');
 const {
     ObjectID,
+// eslint-disable-next-line import/no-extraneous-dependencies
 } = require('mongodb');
 const {
     ApolloServer,
-    ApolloError,
     gql,
 } = require('apollo-server');
 const bootstrap = require('@engagementlab/el-bootstrapper');
@@ -29,6 +29,7 @@ const colors = require('colors');
 const elasticsearch = require('elasticsearch');
 
 const apollo = app => {
+    // eslint-disable-next-line global-require
     const schemaModules = require('./schemas')();
     const schemas = schemaModules.map(mod => mod.schema);
     const queries = schemaModules.map(mod => mod.queries);
