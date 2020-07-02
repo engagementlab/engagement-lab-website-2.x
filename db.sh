@@ -29,5 +29,6 @@ git remote set-url origin git@github.com:engagementlab/engagement-lab-website-2.
 git add bin/db
 git commit --message "Automated database export (Travis build #$TRAVIS_BUILD_NUMBER)"
 git branch -f master temp
+git checkout master
 git branch -d temp
 git push origin master
