@@ -8,11 +8,20 @@ filter_mongodb_debug_messages() {
     grep -vE '^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}[+-][0-9]{4}\s+'
 }
 
+# Create bin/db/ if needed
+mkdir -p bin;
+mkdir -p bin/db;
+
 # DB_URI defined in travis config 
 DB=${DB_URI}
 Collections=$( mongo $DB --quiet --eval "db.getCollectionNames().join('\n')"| filter_mongodb_debug_messages )
 
+# Export all collections to bin/db/
 for collection in $Collections; do
     echo ">> $collection"
-    mongoexport --uri $DB -c $collection -o ./_db/$collection.json
+    mongoexport --uri $DB -c $collection -o ./bin/db/$collection.json
 done
+
+git commit --message "Automated database export (Travis build #$TRAVIS_BUILD_NUMBER)"
+git add bin/db
+git push
