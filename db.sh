@@ -22,6 +22,9 @@ for collection in $Collections; do
     mongoexport --uri $DB -c $collection -o ./bin/db/$collection.json
 done
 
+git config --global user.name "ELDevBot"
+git config --global user.email engagementlab@emerson.edu
+
 git branch temp
 git checkout temp
 
@@ -30,5 +33,6 @@ git add bin/db
 git commit --message "Automated database export (Travis build #$TRAVIS_BUILD_NUMBER)"
 git branch -f master temp
 git checkout master
+
 git branch -d temp
 git push origin master

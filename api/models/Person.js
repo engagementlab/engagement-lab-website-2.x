@@ -161,18 +161,6 @@ Person.schema.pre('save', next => {
     next();
 });
 
-Person.schema.post('save', next => {
-    // Make a post to slack when this Person is updated
-    // const person = this;
-
-    // keystone.get('slack').Post(
-    //   Person.model, this, true,
-    //   function() { return person.name.first + ' ' + person.name.last; }
-    // );
-
-    next();
-});
-
 /**
  * Model Registration
  */
