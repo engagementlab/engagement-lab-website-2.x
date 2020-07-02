@@ -153,7 +153,8 @@ const boot = (app, productionMode) => {
             apollo(app);
 
             global.logger.info(colors.bgCyan.bold.black(`Content API started (${productionMode ? 'Production' : 'Development'} Mode).`));
-        }
+        },
+        process.env.DB_URI
     );
 };
 
