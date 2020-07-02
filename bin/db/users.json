@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5ec6b1327e2b4515cdf2001a"},"permissions":[],"email":"engagementlab@emerson.edu","name":"Dev User","__v":0}
+{"_id":{"$oid":"5efb80011affe4f0a86b2419"},"email":"john_richardson@emerson.edu","isAdmin":true,"name":{"last":"Richardson","first":"Johnny"},"__v":0}
