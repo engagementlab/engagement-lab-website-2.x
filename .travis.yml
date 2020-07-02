@@ -12,7 +12,10 @@ before_script:
 script:
     - cd api
     - npm install
-    - node ./bin/www.js
+    - forever start ./bin/www.js
+    - echo "Pause for 1 min and output API log."
+    - sleep 60
+    - forever logs 0
     - cd ../client
     - npm install
     - npm run build
