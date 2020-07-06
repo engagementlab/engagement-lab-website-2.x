@@ -108,3 +108,4 @@ dist
 Icon*
 client/.yalc
 scully.elab-web.config.js
+bin/app
