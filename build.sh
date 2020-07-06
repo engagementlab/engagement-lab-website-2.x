@@ -12,5 +12,3 @@ nvm use;
 cd client;
 npm run build;
 npm run build:static;
-# echo "PID of API server: ${SERVERPID}; attempting to kill." &
-# kill -9 $SERVERPID;

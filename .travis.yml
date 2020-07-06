@@ -6,6 +6,11 @@ branches:
         - master
 services:
     - mongodb
+deploy:
+    provider: azure_web_apps
+    verbose: true
+    edge: true
+    skip_cleanup: true
 
 before_install:
     # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key

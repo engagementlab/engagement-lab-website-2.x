@@ -3,7 +3,7 @@ import './plugins/keys';
 exports.config = {
     projectRoot: './src',
     projectName: 'elab-web',
-    outDir: './dist/static',
+    outDir: '../bin/app',
     routes: {
         // All initiative pages
         '/initiatives/:key': {
