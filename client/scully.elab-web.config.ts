@@ -17,5 +17,9 @@ exports.config = {
         '/projects/:key': {
             type: 'projects',
         },
+        // All people
+        '/people/:key': {
+            type: 'people',
+        },
     },
 };

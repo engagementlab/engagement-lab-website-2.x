@@ -38,9 +38,19 @@ const eventIdPlugin = async (route, config) => {
     });
     return Promise.resolve(routes);
 };
+const personIdPlugin = async (route, config) => {
+    // Obtain all person keys via graphql query
+    const response = await queryData('allPeople');
+    const routes = [];
 
+    response.allPeople.forEach((res) => {
+        routes.push({ route: `/people/${res.key}` });
+    });
+    return Promise.resolve(routes);
+};
 
 const validator = async (config) => [];
 registerPlugin('router', 'initiatives', initiativeIdPlugin, validator);
 registerPlugin('router', 'projects', projectIdPlugin, validator);
 registerPlugin('router', 'events', eventIdPlugin, validator);
+registerPlugin('router', 'people', personIdPlugin, validator);
