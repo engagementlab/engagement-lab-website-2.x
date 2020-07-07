@@ -1,6 +1,8 @@
 import './plugins/keys';
 
 exports.config = {
+    // logFileSeverity: 0,
+    // inlineStateOnly: false,
     projectRoot: './src',
     projectName: 'elab-web',
     outDir: '../bin/app',
