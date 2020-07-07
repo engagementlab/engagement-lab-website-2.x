@@ -47,5 +47,6 @@ script:
 
 # Deploy static build to Azure storage if succeeded
 after_success:
+    - cd ../
     - chmod 777 upload.sh
     - ./upload.sh
