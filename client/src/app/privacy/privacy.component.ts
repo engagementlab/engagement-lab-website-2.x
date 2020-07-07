@@ -10,22 +10,21 @@ export class PrivacyComponent implements OnInit {
     public content: any;
 
     // eslint-disable-next-line no-useless-constructor
-    constructor(private dataSvc: DataService) { }
+    constructor(private dataSvc: DataService) {}
 
     async ngOnInit(): Promise<void> {
         const query = `
             {
                 allPrivacyPages {
-                        date: Date
-                        name: String!
-                        content: String!
-                        lastUpdated: Date
+                    content {
+                        html
+                    }
+                    lastUpdated
                 }
             }
         `;
 
-        this.content = await this.dataSvc.getSet('privacy', query)[
-            'allPrivacyPages'
-        ];
+        const response = await this.dataSvc.getSet('privacy', query);
+        this.content = response['allPrivacyPages'];
     }
 }
