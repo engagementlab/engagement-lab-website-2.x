@@ -1,12 +1,28 @@
 <div *ngIf="content">
-    <canvas #canvasElement id="can" width="1334" height="1000" style="position: absolute; left:0;top:0"> </canvas>
+    <canvas
+        #canvasElement
+        id="can"
+        width="1334"
+        height="1000"
+        style="position: absolute; left:0;top:0"
+    >
+    </canvas>
     <section id="intro" class="column columns is-full">
         <div id="text" class="column is-4">
             {{ content.allAboutPages.tagline }}
         </div>
 
-        <div id="shapes" class="column columns is-multiline is-7-tablet hidden-mobile">
-            <svg #pattern1 width="130" height="248" fill="none" viewBox="0 0 130 248">
+        <div
+            id="shapes"
+            class="column columns is-multiline is-7-tablet hidden-mobile"
+        >
+            <svg
+                #pattern1
+                width="130"
+                height="248"
+                fill="none"
+                viewBox="0 0 130 248"
+            >
                 <path
                     stroke="#000"
                     stroke-miterlimit="10"
@@ -39,7 +55,13 @@
                     d="M 50.899 8.179 C 50.899 8.179 25.016 38.14 16.46 57.282 C 7.905 76.424 5.171 89.91 5.171 89.91 C 5.171 89.91 -5.487 132.473 7.274 170.829 C 20.035 209.186 32.797 228.328 52.011 232.606 C 71.225 236.884 90.368 234.708 107.407 243.264 C 124.446 251.748 128.724 245.367 128.724 228.328 C 128.724 211.288 124.446 147.409 109.582 111.228 C 94.718 75.047 81.884 49.452 79.782 38.865 C 77.605 28.207 63.811 -10.997 50.899 8.179 Z"
                 ></path>
             </svg>
-            <svg #pattern2 width="255" height="263" fill="none" viewBox="0 0 255 263">
+            <svg
+                #pattern2
+                width="255"
+                height="263"
+                fill="none"
+                viewBox="0 0 255 263"
+            >
                 <path
                     stroke="#000"
                     stroke-miterlimit="10"
@@ -83,7 +105,13 @@
                     d="M187.105 259.463c29.919-8.313 58.038-25.412 65.413-57.978 5.202-22.948-3.528-29.474-22.48-36.753-11.539-4.408-22.942-11.415-29.131-22.738-5.473-10.013-5.751-20.087-13.601-29.203-9.672-11.222-22.952-18.81-32.477-30.351-12.293-14.909-13.362-27.982-15.226-46.408-1.348-12.917-8.722-43.749-27.818-32.674-5.257 3.004-8.402 9.9-13.199 13.815-5.37 4.374-11.759 6.806-18 9.59-7.38 3.293-13.26 5.52-19.661 11.124C46.87 50.3 48.073 63.875 42.959 80.56c-3.825 12.421-8.643 23.353-11.861 36.028-6.689 26.294-46.023 36.034-22.882 64.72 10.092 12.5 20.188 22.574 26.743 37.373 5.962 13.389 12.006 26.376 25.451 33.832 22.91 12.719 51.078.628 75.383 8.46 0 0 35.255 2.954 51.312-1.511z"
                 />
             </svg>
-            <svg #pattern3 width="348" height="175" fill="none" viewBox="0 0 348 175">
+            <svg
+                #pattern3
+                width="348"
+                height="175"
+                fill="none"
+                viewBox="0 0 348 175"
+            >
                 <path
                     stroke="#000"
                     stroke-miterlimit="10"
@@ -130,57 +158,23 @@
         </div>
     </section>
 
-    <hr class="thick" />
-    <h1 class="column is-full uppercase no-pad">Our Initiatives</h1>
-
-    <!-- recent/featured projects -->
-    <!-- <section id="projects-wrap">
-        <div class="columns is-mobile">
-            <h1 class="column is-6-mobile is-7-tablet uppercase">Recent Projects</h1>
-
-            <a class="column is-4-mobile view" routerLink="/projects">
-                <h1>
-                    view all&nbsp;
-                    <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
-                        <path stroke="#fff" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
-                    </svg>
-                </h1>
-            </a>
-        </div>
-
-        <div id="projects" class="columns">
-            <div #projectList class="project column is-half view-tooltip" *ngFor="let project of content.projects">
-                <a routerLink="/projects/{{ project.key }}">
-                    <div class="bg">
-                        <span role="tooltip">view</span>
-                        <cdn-image
-                            cloudinaryPrefix="/"
-                            cloudinaryId="{{ project.image.public_id }}"
-                            autoFormat="true"
-                            width="450"
-                            alt="Thumbnail image for '{{ project.name }}' project"
-                        ></cdn-image>
-                    </div>
-
-                    <p class="name">{{ project.name }}</p>
-                    <p class="type uppercase">{{ project.projectType }}</p>
-                    <p class="byline">{{ project.byline }}</p>
-                </a>
-            </div>
-        </div>
-    </section> -->
-
     <!-- events -->
     <section id="events" class="listing">
         <hr class="thick" />
         <div class="columns is-mobile">
-            <h1 class="column is-7-mobile is-half-tablet uppercase">Events</h1>
+            <h1 class="column is-7-mobile is-half-tablet uppercase">
+                Upcoming Events
+            </h1>
 
             <a class="column view" routerLink="/events">
                 <h1>
                     view all&nbsp;
                     <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
-                        <path stroke="#000" stroke-width="2" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"></path>
+                        <path
+                            stroke="#000"
+                            stroke-width="2"
+                            d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                        ></path>
                     </svg>
                 </h1>
             </a>
@@ -194,7 +188,9 @@
         >
             <a routerLink="/events/{{ event.key }}">
                 <div class="columns is-mobile">
-                    <div class="date column is-one-fifth hidden-mobile">{{ event.date | date: 'MMMM dd' }}</div>
+                    <div class="date column is-one-fifth hidden-mobile">
+                        {{ event.date | date: 'MMMM dd' }}
+                    </div>
                     <div class="date column is-one-fifth hidden-tablet-plus">
                         {{ event.date }}<br />{{ event.date }}
                     </div>
@@ -204,5 +200,12 @@
                 <hr />
             </a>
         </div>
+    </section>
+
+    <section id="projects" class="column columns is-full">
+        <h1 class="column is-full-mobile is-half uppercase">
+            [Featured project here]
+        </h1>
+        <h1 class="column uppercase">[MD student/project here]</h1>
     </section>
 </div>

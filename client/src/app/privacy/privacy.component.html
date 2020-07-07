@@ -4,7 +4,9 @@
             <div class="col-md-12">
                 <h1>Engagement Lab @ Emerson College Privacy Policy</h1>
                 <div [innerHtml]="content.content.html"></div>
-                <p>Last updated on {{ content.lastUpdated | date: 'long' }}</p>
+                <h4 class="bold">
+                    Last updated on {{ content.lastUpdated | date: 'short' }}
+                </h4>
             </div>
         </div>
     </div>
