@@ -9,19 +9,17 @@
  * ==========
  */
 const Privacy = {
-  schema: `
+    schema: `
     type Privacy {
       id: ID!
-      date: Date
-      name: String!
-      content: String!
+      content: Markdown!
       lastUpdated: Date
     }
   `,
-  queries: ['allPrivacyPages: Privacy'],
-  resolvers: {
-    allPrivacyPages: async () => global.keystone.list('Privacy').model.findOne({}).exec(),
-  },
+    queries: ['allPrivacyPages: Privacy'],
+    resolvers: {
+        allPrivacyPages: async () => global.keystone.list('Privacy').model.findOne({}).exec(),
+    },
 
 };
 module.exports = Privacy;
