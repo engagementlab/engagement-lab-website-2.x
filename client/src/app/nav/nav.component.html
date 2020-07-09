@@ -1,6 +1,14 @@
 <nav #nav class="columns is-mobile" id="nav">
-    <div class="column is-10-mobile is-three-quarters-tablet is-four-fifths-desktop">
-        <a id="home" #home routerLink="/" (click)="logoClick()" [class.sm]="logoSm">
+    <div
+        class="column is-10-mobile is-three-quarters-tablet is-four-fifths-desktop"
+    >
+        <a
+            id="home"
+            #home
+            routerLink="/"
+            (click)="logoClick()"
+            [class.sm]="logoSm"
+        >
             <svg id="logo-img" viewBox="0 0 425 150.39">
                 <g id="logo-group">
                     <g id="color-lab">
@@ -12,7 +20,10 @@
                             d="M400.33,80,405,66.59,409.72,80Zm15.13,16.33h7.83L408.94,55.46h-7.83L386.76,96.28h7.83l2.87-8.16h15.13l2.87,8.16Z"
                             style="fill: #fff"
                         />
-                        <path d="M419,32.68v7.74H391.06V1.74h7.6V32.68Z" style="fill: #fff" />
+                        <path
+                            d="M419,32.68v7.74H391.06V1.74h7.6V32.68Z"
+                            style="fill: #fff"
+                        />
                     </g>
                     <path
                         id="bw-lab"
@@ -29,52 +40,35 @@
         </a>
     </div>
 
-    <div class="column">
-        <a #menuBtn id="menu-btn" class="columns uppercase" (click)="openCloseNav()">
-            <div id="lines" class="column is-one-quarter">
-                <span></span>
-                <span></span>
-            </div>
-            <div id="label" class="column">
-                <div #menuOpen class="open">Menu</div>
-                <div #menuClose class="close">Close</div>
-            </div>
-        </a>
-    </div>
+    <a #menuBtn id="menu-btn" (click)="openCloseNav()">
+        <div id="label" class="column">
+            <div #menuOpen class="open">Menu</div>
+            <div #menuClose class="close">Close Menu</div>
+        </div>
+    </a>
 </nav>
 
-<section #menu id="menu" class="columns is-mobile is-multiline">
-    <!-- Tablet Landscape+ -->
-    <div #menuLinks id="links" class="columns column is-full">
-        <div class="column is-full-tablet is-10-desktop hidden-mobile">
-            <h3 *ngFor="let i of [0, 1, 2]" [class.no-margin]="i === 0">
-                <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{
-                    navLinks[i].label
-                }}</a>
-                <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{ navLinks[i].url }}">{{ navLinks[i].label }}</a>
-            </h3>
-            <h3 *ngFor="let i of [3, 4]" [class.no-margin]="i === 3">
-                <a *ngIf="itemActive(navLinks[i].url)" class="active" (click)="openCloseNav()">{{
-                    navLinks[i].label
-                }}</a>
-                <a *ngIf="!itemActive(navLinks[i].url)" routerLink="/{{ navLinks[i].url }}">{{ navLinks[i].label }}</a>
-            </h3>
-            <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
-        </div>
-
-        <!-- Mobile -->
-        <div class="column is-full hidden-tablet-plus">
-            <h3 *ngFor="let link of navLinks">
-                <a *ngIf="itemActive(link.url)" class="active" (click)="openCloseNav()">{{ link.label }}</a>
-                <a *ngIf="!itemActive(link.url)" routerLink="/{{ link.url }}">{{ link.label }}</a>
-            </h3>
-            <h3><a href="https://medium.com/engagement-lab-emerson-college">Blog</a></h3>
-        </div>
+<section #menu id="menu">
+    <div #menuLinks id="links">
+        <h3 *ngFor="let link of navLinks">
+            <a
+                *ngIf="itemActive(link.url)"
+                class="active"
+                (click)="openCloseNav()"
+                >{{ link.label }}</a
+            >
+            <a *ngIf="!itemActive(link.url)" routerLink="/{{ link.url }}">{{
+                link.label
+            }}</a>
+        </h3>
+        <h3>
+            <a href="https://medium.com/engagement-lab-emerson-college">Blog</a>
+        </h3>
     </div>
 
     <div class="column columns is-full is-mobile is-multiline">
         <!-- Search feature only on non-prod for now -->
-        <div class="column is-6" *ngIf="searchEnabled">
+        <!-- <div class="column is-6" *ngIf="searchEnabled">
             <input
                 #searchField
                 id="search"
@@ -85,8 +79,10 @@
                 (focus)="searchFocus()"
                 (keyup)="searchTyping(searchField.value)"
             />
+        </div> -->
+        <div id="jobs" class="column is-full-mobile is-4-tablet">
+            <a routerLink="/jobs">Jobs</a>
         </div>
-        <div id="jobs" class="column is-full-mobile is-4-tablet"><a routerLink="/jobs">Jobs</a></div>
         <div id="results" class="column is-full">
             <search-result
                 sourceName="{{ result._source.name }}"

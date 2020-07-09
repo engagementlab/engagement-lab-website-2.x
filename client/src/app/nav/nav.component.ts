@@ -12,7 +12,8 @@ import { DataService } from '../utils/data.service';
 import { environment } from '../../environments/environment';
 
 interface Link {
-    url: string;
+    url?: string;
+    href?: string;
     label: string;
 }
 
@@ -23,11 +24,29 @@ interface Link {
 })
 export class NavComponent {
     public navLinks: Link[] = [
+        { url: '', label: 'Home' },
+        { url: 'studios', label: 'Studios' },
+        { url: 'masters', label: 'Graduate Program' },
+        { url: 'research', label: 'Research' },
+        { url: 'people', label: 'People' },
         { url: 'about', label: 'About' },
-        { url: 'projects', label: 'Projects' },
-        { url: 'publications', label: 'Publications' },
-        { url: 'masters', label: 'Masters Program' },
-        { url: 'getinvolved', label: 'Get Involved' },
+    ];
+
+    public navSubLinks: Link[] = [
+        { url: 'resources', label: 'Resources' },
+        { url: 'events', label: 'Events Calendar' },
+        {
+            href: 'https://medium.com/engagement-lab-emerson-college',
+            label: 'Lab Blog',
+        },
+        { url: 'contact', label: 'Partner With Us' },
+        { url: 'contact', label: 'Contact Us' },
+        // TODO: in CMS?
+        {
+            href:
+                'https://giving.emerson.edu/give-now?fid=h0ZJD8gm3R4%3d&fdesc=i%2bI0v73Km%2bQCb1p7mjPYeYE68k%2f8URMG',
+            label: 'Donate',
+        },
     ];
 
     public searchResults: any;
@@ -88,19 +107,16 @@ export class NavComponent {
         this.menu.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.add('wasOpened');
 
-        const overlay = document.getElementById('menu-overlay');
-        overlay.classList.toggle('open');
-
         // Nav is being closed...
         // This makes it so overlay/label does not do fade out on app load
-        if (!overlay.classList.contains('open')) {
-            overlay.classList.add('wasOpened');
-            this.menuBtnClose.nativeElement.classList.add('wasOpened');
+        // if (!overlay.classList.contains('open')) {
+        //     overlay.classList.add('wasOpened');
+        //     this.menuBtnClose.nativeElement.classList.add('wasOpened');
 
-            enableBodyScroll(this.nav.nativeElement);
-        }
+        //     enableBodyScroll(this.nav.nativeElement);
+        // }
         // ...opened
-        else disableBodyScroll(this.nav.nativeElement);
+        // else disableBodyScroll(this.nav.nativeElement);
     }
 
     // Is passed route active?
