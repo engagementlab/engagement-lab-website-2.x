@@ -47,6 +47,7 @@ export class NavComponent {
                 'https://giving.emerson.edu/give-now?fid=h0ZJD8gm3R4%3d&fdesc=i%2bI0v73Km%2bQCb1p7mjPYeYE68k%2f8URMG',
             label: 'Donate',
         },
+        { url: 'jobs', label: 'Jobs' },
     ];
 
     public searchResults: any;

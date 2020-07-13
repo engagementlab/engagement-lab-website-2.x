@@ -1,6 +1,6 @@
 <nav #nav class="columns is-mobile" id="nav">
     <div
-        class="column is-10-mobile is-three-quarters-tablet is-four-fifths-desktop"
+        class="column is-6-mobile is-three-quarters-tablet is-four-fifths-desktop"
     >
         <a
             id="home"
@@ -43,7 +43,7 @@
     <a #menuBtn id="menu-btn" (click)="openCloseNav()">
         <div id="label" class="column">
             <div #menuOpen class="open">Menu</div>
-            <div #menuClose class="close">Close Menu</div>
+            <div #menuClose class="close"><span>Close</span> Menu</div>
         </div>
     </a>
 </nav>
@@ -61,8 +61,14 @@
                 link.label
             }}</a>
         </h3>
-        <h3>
-            <a href="https://medium.com/engagement-lab-emerson-college">Blog</a>
+        <hr />
+        <h3 *ngFor="let link of navSubLinks" class="sub">
+            <a *ngIf="itemActive(link.url)" (click)="openCloseNav()">{{
+                link.label
+            }}</a>
+            <a *ngIf="!itemActive(link.url)" routerLink="/{{ link.url }}">{{
+                link.label
+            }}</a>
         </h3>
     </div>
 
@@ -80,9 +86,6 @@
                 (keyup)="searchTyping(searchField.value)"
             />
         </div> -->
-        <div id="jobs" class="column is-full-mobile is-4-tablet">
-            <a routerLink="/jobs">Jobs</a>
-        </div>
         <div id="results" class="column is-full">
             <search-result
                 sourceName="{{ result._source.name }}"
