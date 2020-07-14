@@ -18,8 +18,12 @@ Collections=$( mongo $DB --quiet --eval "db.getCollectionNames().join('\n')"| fi
 
 # Export all collections to bin/db/
 for collection in $Collections; do
-    echo ">> $collection"
-    mongoexport --uri $DB -c $collection -o ./bin/db/$collection.json
+    if [[ "$collection" != "sessions" ]]; then
+        echo ">> $collection"
+        mongoexport --uri $DB -c $collection -o ./bin/db/$collection.json
+    else
+        echo "Skip sessions"
+    fi
 done
 
 git config --global user.name "ELDevBot"
