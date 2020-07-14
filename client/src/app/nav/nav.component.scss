@@ -226,7 +226,7 @@ nav {
         }
 
         @include phones {
-            margin-top: 1%;
+            margin-top: 3%;
         }
 
         @for $i from 6 through 1 {
@@ -329,6 +329,11 @@ nav {
                 right: 0;
             }
         }
+    }
+
+    hr {
+        display: block;
+        margin-left: 18%;
     }
 
     #links {
