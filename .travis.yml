@@ -33,7 +33,7 @@ before_script:
     - npm install -g forever
 script:
     - chmod 777 db.sh
-    - ./db.sh
+    - ./scripts/db.sh
     - cd api
     - npm install
     # Start API in background
@@ -50,5 +50,5 @@ script:
 # Deploy static build to Azure storage if succeeded
 after_success:
     - cd ../
-    - chmod 777 upload.sh
-    - ./upload.sh
+    - chmod 777 ./scripts/upload.sh
+    - ./scripts/upload.sh
