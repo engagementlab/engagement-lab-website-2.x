@@ -32,7 +32,7 @@ before_script:
     - npm install -g firebase-tools
     - npm install -g forever
 script:
-    - chmod 777 db.sh
+    - chmod 777 ./scripts/db.sh
     - ./scripts/db.sh
     - cd api
     - npm install
