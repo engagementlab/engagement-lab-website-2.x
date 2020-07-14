@@ -4,3 +4,11 @@
 
 > This an Engagment Lab MEAN stack project. Please see [engagementlab.github.io](https://engagementlab.github.io) for help.
 > [![Build Status](https://travis-ci.org/engagementlab/engagement-lab-website-2.x.svg?branch=master)](https://travis-ci.org/engagementlab/engagement-lab-website-2.x)
+
+# Quick Install
+
+In terminal, run `chmod 777 ./scripts/install.sh && ./scripts/install.sh`. This will run the dev environment installer.
+
+You will need to create a file called `/api/.env`. You can roll your own env or obtain confidential contents from the Lab's google drive.
+
+_If you commit, please follow [commit message guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)._
