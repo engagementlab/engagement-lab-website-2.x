@@ -2,407 +2,410 @@
 $jobs-delay: 0.75s;
 
 nav {
-    position: relative;
+  position: relative;
 
-    padding-top: 3%;
-    margin-bottom: 3% !important;
-    z-index: 11;
+  padding-top: 3%;
+  margin-bottom: 3% !important;
+  z-index: 11;
 
-    @include mobile-only {
-        // Ignore if nav is open
-        &:not(.open) {
-            #logo-img {
-                // Make logo white outline
-                &.white {
-                    path {
-                        stroke: white;
-                        fill: white;
-                    }
-                }
-            }
+  @include mobile-only {
+
+    // Ignore if nav is open
+    &:not(.open) {
+      #logo-img {
+
+        // Make logo white outline
+        &.white {
+          path {
+            stroke: white;
+            fill: white;
+          }
         }
+      }
     }
+  }
 }
 
 #home {
-    #logo-img {
-        max-width: 423px;
+  #logo-img {
+    max-width: 423px;
+  }
+
+  svg {
+    @include transform(scale(.4));
+    @include transition(transform, 0.4s, ease-in-out);
+    transform-origin: left top;
+
+    @include mobile-only {
+      max-width: 200px;
     }
 
+    #engagement {
+      fill: black !important;
+    }
+
+    #color-lab {
+      @include transition(opacity, 1s, ease-in-out);
+      opacity: 1;
+
+      path {
+        &:nth-child(1) {
+          fill: #f6a536 !important;
+        }
+
+        &:nth-child(2) {
+          fill: #00ab9e !important;
+        }
+
+        &:nth-child(3) {
+          fill: #f72923 !important;
+        }
+      }
+    }
+
+    #bw-lab {
+      @include transition(opacity, 1s, ease-in-out);
+      opacity: 0;
+      fill: black !important;
+    }
+
+    path {
+      @include transition(stroke, 4s, ease-in-out);
+    }
+  }
+
+  &.sm {
     svg {
-        @include transform(scale(1));
-        @include transition(transform, 0.4s, ease-in-out);
-        transform-origin: left top;
 
-        @include mobile-only {
-            max-width: 200px;
-        }
+      #color-lab {
+        opacity: 0;
+      }
 
-        #engagement {
-            fill: black !important;
-        }
-
-        #color-lab {
-            @include transition(opacity, 1s, ease-in-out);
-            opacity: 1;
-
-            path {
-                &:nth-child(1) {
-                    fill: #f6a536 !important;
-                }
-
-                &:nth-child(2) {
-                    fill: #00ab9e !important;
-                }
-
-                &:nth-child(3) {
-                    fill: #f72923 !important;
-                }
-            }
-        }
-
-        #bw-lab {
-            @include transition(opacity, 1s, ease-in-out);
-            opacity: 0;
-            fill: black !important;
-        }
-
-        path {
-            @include transition(stroke, 4s, ease-in-out);
-        }
+      #bw-lab {
+        opacity: 1;
+      }
     }
-
-    &.sm {
-        svg {
-            @include transform(scale(0.4));
-
-            #color-lab {
-                opacity: 0;
-            }
-
-            #bw-lab {
-                opacity: 1;
-            }
-        }
-    }
+  }
 }
 
 #menu-btn {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 
-    font-family: Overpass;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 2.3px;
-    cursor: pointer;
+  font-family: Overpass;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+  cursor: pointer;
 
-    color: black;
+  color: black;
 
-    @include transition(color, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+  @include transition(color, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
 
-    &.isOpen {
-        #label {
-            color: white;
-            .open {
-                opacity: 0;
-                // @include translate(100%, 0);
-            }
-
-            .close {
-                opacity: 1;
-                @include translate(0%, 0);
-                span {
-                    opacity: 1;
-                    @include translate(0%, 0);
-                }
-            }
-        }
-    }
-
+  &.isOpen {
     #label {
-        display: flex;
-        justify-content: flex-end;
+      color: white;
 
-        .open {
-            position: absolute;
-            @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+      .open {
+        opacity: 0;
+        // @include translate(100%, 0);
+      }
+
+      .close {
+        opacity: 1;
+        @include translate(0%, 0);
+
+        span {
+          opacity: 1;
+          @include translate(0%, 0);
         }
-
-        .close {
-            opacity: 0;
-            @include translate(100%, 0);
-
-            // Only play translation after first open
-            &.wasOpened {
-                @include transition(
-                    all,
-                    0.7s,
-                    cubic-bezier(0.075, 0.82, 0.165, 1)
-                );
-                // "Close"
-                span {
-                }
-            }
-            // "Close"
-            span {
-                display: inline-block;
-                opacity: 0;
-                @include translate(0%, 50%);
-                @include transition(
-                    all,
-                    0.7s,
-                    cubic-bezier(0.075, 0.82, 0.165, 1)
-                );
-            }
-        }
+      }
     }
+  }
+
+  #label {
+    display: flex;
+    justify-content: flex-end;
+
+    .open {
+      position: absolute;
+      @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+    }
+
+    .close {
+      opacity: 0;
+      @include translate(100%, 0);
+
+      // Only play translation after first open
+      &.wasOpened {
+        @include transition(all,
+          0.7s,
+          cubic-bezier(0.075, 0.82, 0.165, 1));
+
+        // "Close"
+        span {}
+      }
+
+      // "Close"
+      span {
+        display: inline-block;
+        opacity: 0;
+        @include translate(0%, 50%);
+        @include transition(all,
+          0.7s,
+          cubic-bezier(0.075, 0.82, 0.165, 1));
+      }
+    }
+  }
 }
 
 #menu {
-    position: fixed;
-    @include translate(100%);
+  position: fixed;
+  @include translate(100%);
 
-    background-color: black;
-    text-align: right;
+  background-color: black;
+  text-align: right;
 
-    z-index: 10;
-    top: 0;
-    right: 0;
-    bottom: 0;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
 
-    @include transition(transform, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
-    @include not-phones {
-        min-width: 500px;
+  @include transition(transform, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+
+  @include not-phones {
+    min-width: 500px;
+  }
+
+  // Full-bleed on phones
+  @include phones {
+    width: 95%;
+    height: 100%;
+  }
+
+  // Only applied after first menu open to prevent flash on load
+  &.wasOpened {
+    // animation: close-menu 0.2s ease-in-out 2.4s 1 both;
+  }
+
+  &.isOpen {
+    // animation: open-menu 0.2s ease-in-out 1 both;
+    @include translate(0);
+
+    h3 {
+      animation: show 0.7s ease-in-out 1 both;
+
+      // @for $i from 1 through 6 {
+      //     &:nth-of-type(#{$i}) {
+      //         animation-delay: 0.1s * $i;
+      //     }
+      // }
     }
-    // Full-bleed on phones
+
+    #jobs {
+      animation: show-jobs 0.2s ease-in-out 1 both;
+      animation-delay: $jobs-delay;
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+  h3 {
+    font-family: 'LunchtypeMedium';
+    font-size: 1.6em;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 1.5px;
+
+    margin: 5% 0 0 0;
+
+    &.sub {
+      font-family: 'LunchtypeRegular';
+      font-size: 1.1em;
+      font-weight: 100;
+    }
+
     @include phones {
-        width: 95%;
-        height: 100%;
+      margin-top: 3%;
     }
 
-    // Only applied after first menu open to prevent flash on load
-    &.wasOpened {
-        // animation: close-menu 0.2s ease-in-out 2.4s 1 both;
+    @for $i from 6 through 1 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: 0.05s * (6 - $i);
+      }
     }
 
-    &.isOpen {
-        // animation: open-menu 0.2s ease-in-out 1 both;
-        @include translate(0);
-
-        h3 {
-            animation: show 0.7s ease-in-out 1 both;
-
-            // @for $i from 1 through 6 {
-            //     &:nth-of-type(#{$i}) {
-            //         animation-delay: 0.1s * $i;
-            //     }
-            // }
-        }
-
-        #jobs {
-            animation: show-jobs 0.2s ease-in-out 1 both;
-            animation-delay: $jobs-delay;
-        }
+    @include mq($until: mobileLg) {
+      font-size: 1.95em;
     }
 
     a {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+
+      &.active {
+        &:before {
+          visibility: visible !important;
+          width: 100%;
+          animation: none;
+        }
+
+        &:hover:before {
+          animation: none;
+        }
+      }
+
+      &:visited {
         color: white;
-    }
+      }
 
-    h3 {
-        font-family: 'LunchtypeMedium';
-        font-size: 1.6em;
-        font-weight: 500;
-        line-height: 1.17;
-        letter-spacing: 1.5px;
-
-        margin: 5% 0 0 0;
-
-        &.sub {
-            font-family: 'LunchtypeRegular';
-            font-size: 1.1em;
-            font-weight: 100;
+      &.visible {
+        &:before {
+          visibility: visible !important;
         }
-
-        @include phones {
-            margin-top: 3%;
-        }
-
-        @for $i from 6 through 1 {
-            &:nth-of-type(#{$i}) {
-                animation-delay: 0.05s * (6 - $i);
-            }
-        }
-
-        @include mq($until: mobileLg) {
-            font-size: 1.95em;
-        }
-
-        a {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-
-            &.active {
-                &:before {
-                    visibility: visible !important;
-                    width: 100%;
-                    animation: none;
-                }
-
-                &:hover:before {
-                    animation: none;
-                }
-            }
-
-            &:visited {
-                color: white;
-            }
-
-            &.visible {
-                &:before {
-                    visibility: visible !important;
-                }
-            }
-        }
-
-        // Animations
-        @keyframes show {
-            0% {
-                opacity: 0;
-                @include translate(0, 20%);
-            }
-
-            100% {
-                opacity: 1;
-                @include translate(0, 0%);
-            }
-        }
-
-        @keyframes show-jobs {
-            0% {
-                opacity: 0;
-                @include translate(0, 20%);
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes hide {
-            0% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-                @include translate(0, -40%);
-            }
-        }
-
-        @keyframes in {
-            0% {
-                width: 0;
-                left: 0;
-                right: auto;
-            }
-
-            100% {
-                left: 0;
-                right: auto;
-                width: 100%;
-            }
-        }
-
-        @keyframes out {
-            0% {
-                width: 100%;
-                left: auto;
-                right: 0;
-            }
-
-            100% {
-                width: 0;
-                left: auto;
-                right: 0;
-            }
-        }
-    }
-
-    hr {
-        display: block;
-        margin-left: 18%;
-    }
-
-    #links {
-        margin-top: 32%;
-        margin-right: 18%;
-        @include phones {
-            margin-top: 13%;
-            margin-right: 9%;
-        }
-    }
-
-    #jobs {
-        animation: hide 0.1s ease-in-out 1 both;
-        animation-delay: $jobs-delay;
-    }
-
-    #search {
-        @include placeholder {
-            color: black;
-            opacity: 1;
-        }
-
-        font-size: 1.3em;
-
-        line-height: 2;
-        letter-spacing: 0.2px;
-
-        padding: 2%;
-
-        border: none;
-        border-bottom: solid 2px black;
-
-        &.focus {
-            border-bottom-width: 4px;
-            font-weight: 500;
-        }
-    }
-
-    #results {
-        margin-top: 5%;
-    }
-
-    #jobs {
-        font-size: 2em;
-        line-height: 1.41;
-        letter-spacing: 0.5px;
+      }
     }
 
     // Animations
-    @keyframes open-menu {
-        0% {
-            opacity: 0;
-        }
+    @keyframes show {
+      0% {
+        opacity: 0;
+        @include translate(0, 20%);
+      }
 
-        100% {
-            opacity: 1;
-            visibility: visible;
-        }
+      100% {
+        opacity: 1;
+        @include translate(0, 0%);
+      }
     }
 
-    @keyframes close-menu {
-        0% {
-            opacity: 1;
-            visibility: visible;
-        }
+    @keyframes show-jobs {
+      0% {
+        opacity: 0;
+        @include translate(0, 20%);
+      }
 
-        100% {
-            opacity: 0;
-            visibility: hidden;
-        }
+      100% {
+        opacity: 1;
+      }
     }
+
+    @keyframes hide {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        @include translate(0, -40%);
+      }
+    }
+
+    @keyframes in {
+      0% {
+        width: 0;
+        left: 0;
+        right: auto;
+      }
+
+      100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+
+    @keyframes out {
+      0% {
+        width: 100%;
+        left: auto;
+        right: 0;
+      }
+
+      100% {
+        width: 0;
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  hr {
+    display: block;
+    margin-left: 18%;
+  }
+
+  #links {
+    margin-top: 32%;
+    margin-right: 18%;
+
+    @include phones {
+      margin-top: 13%;
+      margin-right: 9%;
+    }
+  }
+
+  #jobs {
+    animation: hide 0.1s ease-in-out 1 both;
+    animation-delay: $jobs-delay;
+  }
+
+  #search {
+    @include placeholder {
+      color: black;
+      opacity: 1;
+    }
+
+    font-size: 1.3em;
+
+    line-height: 2;
+    letter-spacing: 0.2px;
+
+    padding: 2%;
+
+    border: none;
+    border-bottom: solid 2px black;
+
+    &.focus {
+      border-bottom-width: 4px;
+      font-weight: 500;
+    }
+  }
+
+  #results {
+    margin-top: 5%;
+  }
+
+  #jobs {
+    font-size: 2em;
+    line-height: 1.41;
+    letter-spacing: 0.5px;
+  }
+
+  // Animations
+  @keyframes open-menu {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @keyframes close-menu {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 }

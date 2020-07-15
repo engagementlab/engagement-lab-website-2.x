@@ -1,5 +1,7 @@
 // Bulma framework
+$fullhd: 1800px;
 $tablet: 768px;
+// $gap: 100px;
 
 // Site vars
 @import "./variables";
@@ -303,6 +305,10 @@ hr {
 
 .auto {
   margin: auto !important;
+}
+
+.center {
+  text-align: center;
 }
 
 .no-margin {
