@@ -48,72 +48,86 @@ a {
 
   padding-bottom: 12%;
 
-  #text {
+  h1 {
+    font-weight: 300;
+    font-size: 2.7em;
 
+    a {
+      border-bottom: 1px solid black;
+    }
+
+    strong {
+      font-weight: 300;
+
+      &:nth-of-type(1) a {
+        color: $mango;
+      }
+
+      &:nth-of-type(2) a {
+        color: $tomato;
+      }
+
+      &:nth-of-type(3) a {
+        color: $green-blue;
+      }
+    }
+  }
+
+  #tagline {
+
+    font-family: 'LunchtypeMedium';
     font-size: 2em;
     line-height: 1.41;
     letter-spacing: 0.5px;
 
-    margin-top: 8%;
-    margin-bottom: 8%;
+    ::ng-deep p {
+      strong {
+        &:nth-child(1) {
+          color: $tomato;
+        }
+
+        &:nth-child(2) {
+          color: $green-blue;
+        }
+
+        &:nth-child(3) {
+          color: $mango;
+        }
+      }
+    }
 
   }
 
-  .decor {
+  #button {
+    max-width: 300px;
+  }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  // MC Email form
+  #newsletter {
 
-    // Shrink svgs on tablet view
-    @include mq($from: tabletPortrait, $until: desktop) {
-      @include scale(.7);
+    h3 {
+      font-size: 1em;
     }
 
-    &:first-child {
+    input[type=email] {
+      width: 100%;
+      font-family: 'LunchtypeRegular';
+      font-size: 1.5em;
+      color: black;
+      opacity: 1;
+      border: none;
+      border-bottom: solid 2px black;
 
-      margin-bottom: 30%;
-      margin-left: -16%;
+      padding-bottom: 5%;
+      padding-left: 4%;
 
-    }
-
-    &:nth-child(2) {
-
-      margin-left: 15%;
-
-    }
-
-    &:nth-child(3) {
-
-      margin-top: -35%;
-
-    }
-
-    .ellipse {
-
-      position: absolute;
-      display: block;
-      width: 204px;
-      height: 205px;
-      border-radius: 50%;
-
-
-      &#blue {
-        background-color: $green-blue;
-      }
-
-      &#red {
-        background-color: $tomato;
-      }
-
-      &#yellow {
-        background-color: $mango;
+      @include placeholder {
+        font-family: 'LunchtypeRegular';
+        color: black;
+        opacity: 1;
       }
     }
 
-    svg {
-      position: absolute;
-    }
   }
 
 }
@@ -151,113 +165,7 @@ a {
 
 }
 
-#initiatives {
-
-  >div:not(:first-child) {
-    margin-top: 10%;
-
-    @include phones {
-      margin-top: 20%;
-    }
-  }
-
-  h3 {
-    font-size: 1.3em;
-  }
-
-  p {
-    font-size: 1.5em;
-  }
-
-  .initiative {
-
-    cdn-image {
-      display: block;
-      padding-top: 15%;
-    }
-
-    h2 {
-      margin-bottom: 0;
-      transform-origin: 0%;
-      @include transition(transform, .2s, ease-in-out);
-    }
-
-    &:hover {
-      h2 {
-        @include scale(1.05);
-      }
-    }
-
-    // project hover coloring
-    &:nth-child(1) {
-      .project {
-        &:hover {
-          color: $mango;
-          border-color: $mango !important;
-        }
-      }
-    }
-
-    &:nth-child(2) {
-      .project {
-        &:hover {
-          color: $tomato;
-          border-bottom-color: $tomato !important;
-        }
-      }
-    }
-
-    &:nth-child(3) {
-      .project {
-        &:hover {
-          color: $green-blue;
-          border-bottom-color: $green-blue !important;
-        }
-      }
-    }
-
-    .label {
-      font-family: 'Overpass';
-      font-size: 1em;
-      font-weight: 600;
-
-      line-height: 1.29;
-      letter-spacing: 0.8px;
-
-      &.first {
-        border-left: solid 4px $tomato;
-      }
-
-      &.second {
-        border-left: solid 4px $green-blue;
-      }
-
-      .text {
-        border-bottom: solid 1px black;
-        padding-left: 3%;
-        padding-bottom: 1%;
-      }
-    }
-
-    .projects {
-      @include not-phones {
-        padding-top: 20%;
-      }
-
-      .project {
-        display: block;
-
-        margin-top: 8%;
-        padding-bottom: 8%;
-
-        border-bottom: solid 1px black;
-      }
-    }
-  }
-
-}
-
-#projects-wrap {
+#news-wrap {
 
   background-color: black;
   color: white;
@@ -295,13 +203,9 @@ a {
     }
   }
 
-  #projects {
+  #news {
     padding-left: 2%;
     padding-right: 6%;
-
-    .bg {
-      // height: 304px;
-    }
   }
 
 }

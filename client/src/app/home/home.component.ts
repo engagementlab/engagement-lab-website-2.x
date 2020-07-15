@@ -4,7 +4,7 @@ import {
     ViewChildren,
     QueryList,
     ViewChild,
-    ElementRef
+    ElementRef,
 } from '@angular/core';
 
 import * as _ from 'underscore';
@@ -14,7 +14,7 @@ import { DataService } from '../utils/data.service';
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
     public errors: any;
@@ -31,19 +31,24 @@ export class HomeComponent implements OnInit {
 
     @ViewChild('canvasElement') canvasElement: ElementRef;
 
+    @ViewChild('newsletter') newsletter: ElementRef;
+
     @ViewChild('pattern1') pattern1: ElementRef;
 
     @ViewChild('pattern2') pattern2: ElementRef;
 
     @ViewChild('pattern3') pattern3: ElementRef;
 
-    constructor(private _dataSvc: DataService) {}
+    // eslint-disable-next-line no-useless-constructor
+    constructor(private dataSvc: DataService) {}
 
     async ngOnInit(): Promise<void> {
         const query = `
             {
                 allAboutPages {
-                    tagline
+                    tagline {
+                        html
+                    }
                 }
                 recentEvents {
                     name
@@ -62,8 +67,9 @@ export class HomeComponent implements OnInit {
                 }
             }
         `;
-        this.content = await this._dataSvc.getSet('homepage', query);
-        this.drawArt();
+
+        this.content = await this.dataSvc.getSet('homepage', query);
+        // this.drawArt();
     }
 
     drawArt() {
@@ -77,7 +83,7 @@ export class HomeComponent implements OnInit {
             const SVGS = [
                 this.pattern1.nativeElement,
                 this.pattern2.nativeElement,
-                this.pattern3.nativeElement
+                this.pattern3.nativeElement,
             ];
 
             const figures = [];
@@ -101,8 +107,8 @@ export class HomeComponent implements OnInit {
             const boundsRect = new paper.Shape.Rectangle(
                 new paper.Point(CIRCLE_RADIUS / 2, CIRCLE_RADIUS / 2),
                 new paper.Point(
-                    _paper.view.bounds.bottomRight.subtract(CIRCLE_RADIUS / 2)
-                )
+                    _paper.view.bounds.bottomRight.subtract(CIRCLE_RADIUS / 2),
+                ),
             );
             _paper.project.activeLayer.addChild(boundsRect);
 
@@ -126,22 +132,22 @@ export class HomeComponent implements OnInit {
                 points: _.times(
                     10,
                     () =>
-                        new paper.Point(_.random(150, 300), _.random(110, 250))
+                        new paper.Point(_.random(150, 300), _.random(110, 250)),
                 ),
                 center: new paper.Point(800, 250),
                 momentum: new paper.Point(0, 0),
-                lastInBoundsPos: new paper.Point(0, 0)
+                lastInBoundsPos: new paper.Point(0, 0),
             };
             figures[1] = {
                 color: '#f72923',
                 points: _.times(
                     10,
                     () =>
-                        new paper.Point(_.random(110, 230), _.random(350, 550))
+                        new paper.Point(_.random(110, 230), _.random(350, 550)),
                 ),
                 center: new paper.Point(770, 550),
                 momentum: new paper.Point(0, 0),
-                lastInBoundsPos: new paper.Point(0, 0)
+                lastInBoundsPos: new paper.Point(0, 0),
             };
             figures[2] = {
                 color: '#f6a536',
@@ -150,26 +156,26 @@ export class HomeComponent implements OnInit {
                     () =>
                         new paper.Point(
                             _.random(1620, 1700),
-                            _.random(150, 320)
-                        )
+                            _.random(150, 320),
+                        ),
                 ),
                 center: new paper.Point(1100, 350),
                 momentum: new paper.Point(0, 0),
-                lastInBoundsPos: new paper.Point(0, 0)
+                lastInBoundsPos: new paper.Point(0, 0),
             };
 
             _.each(figures, (figure, i: number) => {
                 // Create all paths and circles
                 paths[i] = new paper.Path.Circle({
                     center: [figure.center.x, figure.center.y],
-                    radius: CIRCLE_RADIUS / 2
+                    radius: CIRCLE_RADIUS / 2,
                 });
                 _.times(6, n => paths[i].divideAt(n));
 
                 _.each(paths[i].curves, c => {
                     c.point1 = new paper.Point(
                         c.point1.x + _.random(-10, 10),
-                        c.point1.y + _.random(-20, 20)
+                        c.point1.y + _.random(-20, 20),
                     );
                 });
                 paths[i].smooth();
@@ -179,7 +185,7 @@ export class HomeComponent implements OnInit {
 
                 circles[i] = new paper.Path.Circle(
                     figure.center,
-                    CIRCLE_RADIUS
+                    CIRCLE_RADIUS,
                 );
                 circles[i].fillColor = figure.color;
                 circles[i].blendMode = 'difference';
@@ -198,10 +204,10 @@ export class HomeComponent implements OnInit {
 
                         if (
                             Math.abs(
-                                prevPathPositions[i].x - paths[i].position.x
+                                prevPathPositions[i].x - paths[i].position.x,
                             ) <= 0.0 &&
                             Math.abs(
-                                prevPathPositions[i].y - paths[i].position.y
+                                prevPathPositions[i].y - paths[i].position.y,
                             ) <= 0.0
                         ) {
                             resume -= evt.delta;
@@ -215,26 +221,26 @@ export class HomeComponent implements OnInit {
 
                     if (followMouse) {
                         const distance = new paper.Point(
-                            circles[i].position.subtract(mousePos)
+                            circles[i].position.subtract(mousePos),
                         );
                         figures[i].momentum = figures[i].momentum.subtract(
-                            distance.divide(3)
+                            distance.divide(3),
                         );
                         figures[i].momentum = distance.multiply(0.005);
 
                         const newPosition = paths[i].position.add(
-                            figures[i].momentum
+                            figures[i].momentum,
                         );
                         const predictedBounds = paths[i].bounds
                             .include(newPosition)
                             .expand(2);
                         let pathOutside = !boundsRect.bounds.contains(
-                            predictedBounds
+                            predictedBounds,
                         );
 
                         figures[i].wasInBounds = !pathOutside;
                         const distanceCenter = newPosition.subtract(
-                            figures[i].center
+                            figures[i].center,
                         );
                         if (!pathOutside) {
                             pathOutside =
@@ -266,12 +272,12 @@ export class HomeComponent implements OnInit {
                 offsets[i] = 0;
                 const path = new paper.Path.Circle({
                     center: figure.center,
-                    radius: CIRCLE_RADIUS / 3
+                    radius: CIRCLE_RADIUS / 3,
                 });
                 _.each(path.curves, c => {
                     c.point1 = new paper.Point(
                         c.point1.x + _.random(-20, 20),
-                        c.point1.y + _.random(-20, 20)
+                        c.point1.y + _.random(-20, 20),
                     );
                 });
                 path.smooth();
@@ -350,5 +356,9 @@ export class HomeComponent implements OnInit {
             this.pattern2.nativeElement.remove();
             this.pattern3.nativeElement.remove();
         }, 100);
+    }
+
+    openSignup() {
+        this.newsletter.nativeElement.style.display = 'block';
     }
 }

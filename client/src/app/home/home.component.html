@@ -1,17 +1,15 @@
 <div *ngIf="content">
-    <canvas
+    <!-- <canvas
         #canvasElement
         id="can"
         width="1334"
         height="1000"
         style="position: absolute; left:0;top:0"
     >
-    </canvas>
-    <section id="intro" class="column columns is-full">
-        <div id="text" class="column is-4">
-            {{ content.allAboutPages.tagline }}
-        </div>
+    </canvas> -->
 
+    <section id="intro" class="column columns is-centered is-multiline is-full">
+        <!-- 
         <div
             id="shapes"
             class="column columns is-multiline is-7-tablet hidden-mobile"
@@ -155,6 +153,126 @@
                     d="M4.787 98.118c-3.198 15.531-12.204 51.869 17.767 60.818 29.971 8.948 52.705 1.32 64.746-4.086 12.04-5.405 59.537-13.047 80.939 7.281 21.403 20.328 59.456 10.185 77.078-4.863 17.623-15.049 82.287 4.098 82.287 4.098s29.971 8.949 15.4-25.747-36.655-65.82-69.611-73.032c-32.957-7.211-31.805-13.478-39.999-20.703-8.195-7.226-18.888-5.002-30.831 1.945-11.944 6.948-17.055-.472-23.708-7.795-6.653-7.322-25.93-18.494-47.609-18.674-21.679-.181-26.343-.506-32.86-5.67-7.644-5.866-20.055-23.51-38.344 5.517-18.288 29.027-18.398 22.375-26.093 27.97-16.276 11.867-20.901 12.159-29.162 52.94z"
                 />
             </svg>
+        </div> -->
+        <h1 id="mouseover" class="column is-7 center">
+            Our <a href="#">faculty</a>, <a href="#">staff</a>, and
+            <a href="#">students</a> do participatory
+            <strong><a href="#">research</a></strong
+            >, <strong><a href="#">design</a></strong
+            >, and <strong><a href="#">art</a></strong
+            >.
+        </h1>
+        <div
+            id="tagline"
+            class="column is-half center"
+            [innerHTML]="content.allAboutPages.tagline.html"
+        ></div>
+        <div class="column is-full center">
+            <div id="button">
+                <app-button
+                    label="Join our newsletter"
+                    ariaLabel="Button to open newsletter sign-up"
+                    clickData="true"
+                    (clickEvent)="openSignup()"
+                ></app-button>
+            </div>
+            <div id="newsletter" class="hidden" #newsletter>
+                <form
+                    action="https://engagementgamelab.us6.list-manage.com/subscribe/post?u=8cb16e3042072f11cc0680d36&amp;id=e9f56f4f4d"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    class="validate"
+                    target="_blank"
+                    novalidate
+                >
+                    <div id="mc_embed_signup_scroll">
+                        <div class="mc-field-group">
+                            <input
+                                type="email"
+                                placeholder="Your email"
+                                name="EMAIL"
+                                class="required email"
+                                id="mce-EMAIL"
+                            />
+                            <input
+                                type="submit"
+                                value="Subscribe to Newsletter"
+                                name="subscribe"
+                                id="mc-embedded-subscribe"
+                                class="button hidden"
+                                aria-hidden="true"
+                            />
+                        </div>
+
+                        <div id="mce-responses" class="clear">
+                            <div
+                                class="response"
+                                id="mce-error-response"
+                                style="display:none"
+                            ></div>
+                            <div
+                                class="response"
+                                id="mce-success-response"
+                                style="display:none"
+                            ></div>
+                        </div>
+                        <div
+                            style="position: absolute; left: -5000px;"
+                            aria-hidden="true"
+                        >
+                            <input
+                                type="text"
+                                name="b_8cb16e3042072f11cc0680d36_e9f56f4f4d"
+                                tabindex="-1"
+                                value=""
+                            />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- news -->
+    <section id="news-wrap" class="column is-full">
+        <div class="columns is-mobile">
+            <h1 class="column is-full-mobile is-half uppercase">
+                latest news
+            </h1>
+
+            <a
+                class="column view"
+                href="https://medium.com/engagement-lab-emerson-college/"
+            >
+                <h1 class="uppercase">
+                    view all&nbsp;
+                    <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
+                        <path
+                            stroke="#fff"
+                            stroke-width="2"
+                            d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                        ></path>
+                    </svg>
+                </h1>
+            </a>
+        </div>
+        <div class="columns is-mobile">
+            <div
+                class="item column is-4"
+                *ngFor="let newsItem of content.allNewsItems; let i = index"
+            >
+                <a href="{{ newsItem.url }}">
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ newsItem.image.public_id }}"
+                        autoFormat="true"
+                        width="800"
+                        alt="Image for '{{ newsItem.title }}' news item"
+                    ></cdn-image>
+                </a>
+                <h3>{{ newsItem.title }}</h3>
+            </div>
         </div>
     </section>
 
@@ -167,7 +285,7 @@
             </h1>
 
             <a class="column view" routerLink="/events">
-                <h1>
+                <h1 class="uppercase">
                     view all&nbsp;
                     <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
                         <path
@@ -201,11 +319,11 @@
             </a>
         </div>
     </section>
-
+    <!-- 
     <section id="projects" class="column columns is-full">
         <h1 class="column is-full-mobile is-half uppercase">
             [Featured project here]
         </h1>
         <h1 class="column uppercase">[MD student/project here]</h1>
-    </section>
+    </section> -->
 </div>
