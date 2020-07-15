@@ -10,11 +10,11 @@
  */
 const About = {
 
-  schema: `
+    schema: `
     type About {
       id: ID!
       date: Date
-      tagline: String
+      tagline: Markdown
       missionStatement: String
       summary1: String
       summary2: String
@@ -26,10 +26,10 @@ const About = {
       design: String!
     }
   `,
-  queries: ['allAboutPages: About'],
-  resolvers: {
-    allAboutPages: async () => global.keystone.list('About').model.findOne({}).exec(),
-  },
+    queries: ['allAboutPages: About'],
+    resolvers: {
+        allAboutPages: async () => global.keystone.list('About').model.findOne({}).exec(),
+    },
 
 };
 module.exports = About;

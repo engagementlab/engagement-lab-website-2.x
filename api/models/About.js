@@ -35,7 +35,9 @@ About.add({
     name: {
         type: String, default: 'About Page', hidden: true, required: true, initial: true,
     },
-    tagline: { type: String, required: true, initial: true, },
+    tagline: {
+        type: Types.Markdown, required: true, initial: true, note: 'Bolded phrases will show as blue, red, yellow.',
+    },
     missionStatement: {
         type: String, label: 'Mission Statement', required: true, initial: true,
     },

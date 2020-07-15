@@ -52,6 +52,8 @@ News.add({
     },
     url: {
         type: Types.Url,
+        required: true,
+        initial: true,
         label: 'Link to Medium Post',
         validate: urlValidator,
         note: 'Must be in format "http://www.something.org".',
