@@ -44,5 +44,17 @@ $mq-breakpoints: (mobile: 320px,
   desktopAd: 810px,
   mobileLandscape: 480px);
 
+// FONT CONFIG
+$base-font-size: 18;
+$base-font-size-mobile: 16;
+
+@mixin pxtoem($mobile, $desktop: $base-font-size) {
+  font-size: ($desktop / $base-font-size) + em;
+
+  @include mq($until: tabletPortrait) {
+    font-size: ($mobile / $base-font-size-mobile) + em;
+  }
+}
+
 // Mixins 
 @import '../../node_modules/@engagementlab/el-scss/bundle';

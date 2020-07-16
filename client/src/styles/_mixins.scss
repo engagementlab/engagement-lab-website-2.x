@@ -29,29 +29,29 @@ $cdn-product: 'homepage' !default;
     blur           -> filter: blur(2px);
 */
 @mixin filter($filter-type, $filter-amount) {
-    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
-    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
-    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
-    -o-filter: $filter-type+unquote('(#{$filter-amount})');
-    filter: $filter-type+unquote('(#{$filter-amount})');
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
 }
 
 /**
 * Apply box shadow to element.
 * @usage: box-shadow(2px, 2px, 2px, 1px, rgba(0, 0, 0, 0.2))
 */
-@mixin box-shadow($top, $left,  $blur, $color, $inset: false) {
-    @if $inset {
-        -webkit-box-shadow: inset $top $left $blur $color;
-        -moz-box-shadow: inset $top $left $blur $color;
-        box-shadow: inset $top $left $blur $color;
-    }
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  }
 
-    @else {
-        -webkit-box-shadow: $top $left $blur $color;
-        -moz-box-shadow: $top $left $blur $color;
-        box-shadow: $top $left $blur $color;
-    }
+  @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
 }
 
 /**
@@ -60,9 +60,9 @@ $cdn-product: 'homepage' !default;
 */
 @mixin border-radius($radius) {
 
-    -webkit-border-radius: #{$radius + "px"};
-    -moz-border-radius: #{$radius + "px"};
-    border-radius: #{$radius + "px"};
+  -webkit-border-radius: #{$radius + "px"};
+  -moz-border-radius: #{$radius + "px"};
+  border-radius: #{$radius + "px"};
 
 }
 
@@ -72,9 +72,19 @@ $cdn-product: 'homepage' !default;
 */
 @mixin circular-background($color) {
 
-    background: -moz-radial-gradient(center, ellipse cover, $color 1%, $color 70%, white 1%);
-    background: -webkit-radial-gradient(center, ellipse cover, $color 1%, $color 70%, white 1%);
-    background: radial-gradient(ellipse at center, $color 1%, $color 70%, white 1%);
+  background: -moz-radial-gradient(center, ellipse cover, $color 1%, $color 70%, white 1%);
+  background: -webkit-radial-gradient(center, ellipse cover, $color 1%, $color 70%, white 1%);
+  background: radial-gradient(ellipse at center, $color 1%, $color 70%, white 1%);
+}
+
+
+/// Scale element included on by given factor on Y axis.
+/// @example scss
+///     @include scaleY(.5)
+///
+/// @param {decimal} $scale - the amount to scale
+@mixin scaleY($scale) {
+  @include transform(scale(1, $scale));
 }
 
 /**
@@ -83,13 +93,13 @@ $cdn-product: 'homepage' !default;
 */
 @function cdn-image($imgName, $options...) {
 
-    $imgParams: ();
-    $version: random(500000) + 10000000;
-    $strPrefix: "//res.cloudinary.com/#{$cloudinary-account}/image/upload/";
+  $imgParams: ();
+  $version: random(500000) + 10000000;
+  $strPrefix: "//res.cloudinary.com/#{$cloudinary-account}/image/upload/";
 
-    @each $value in $options {
-        $strPrefix: $strPrefix + ","+ $value;
-    }
+  @each $value in $options {
+    $strPrefix: $strPrefix + ","+ $value;
+  }
 
-    @return url("#{$strPrefix}/v#{$version}/#{$cdn-product}/#{$imgName}");
+  @return url("#{$strPrefix}/v#{$version}/#{$cdn-product}/#{$imgName}");
 }
