@@ -1,21 +1,61 @@
-<app-nav></app-nav>
-
-<h3 id="errors" *ngIf="dataErrors">
-    <p>Data service errors:</p>
-    <span>
-        {{ dataErrors }}
-    </span>
-</h3>
-
-<div id="menu-overlay"></div>
-<div
-    *ngIf="!dataErrors || dataErrors.length < 1"
-    [@routerAnimations]="prepareRouteTransition(outlet)"
->
-    <router-outlet #outlet="outlet"></router-outlet>
+<div id="home-bg">
+    <div id="slides">
+        <p style="background-color: blueviolet;"></p>
+        <p style="background-color: coral;"></p>
+        <p style="background-color: crimson;"></p>
+    </div>
+    <!-- <cdn-image
+        cloudinaryId="projects/i27vn6imb5ochbdha2fu"
+        autoFormat="true"
+        width="1889"
+        alt=""
+    ></cdn-image>
+    https://res.cloudinary.com/engagement-lab-home/image/upload/c_crop,g_center,h_500,w_2018/v1560978900/homepage-2.0/projects/i27vn6imb5ochbdha2fu.png -->
+    <!-- <cl-image
+        secure="true"
+        public-id="homepage-2.0/projects/i27vn6imb5ochbdha2fu"
+        attr.width="auto:breakpoints:1889"
+        sizes="100vw"
+        client_hints="true"
+        aria-role="img"
+        class="cdn-image"
+    >
+        <cl-transformation gravity="center" height="500" crop="crop">
+        </cl-transformation>
+    </cl-image>
+    <cl-image
+        secure="true"
+        public-id="homepage-2.0/projects/porruledqxufpxduqkfj"
+        attr.width="auto:breakpoints:1889"
+        sizes="100vw"
+        client_hints="true"
+        aria-role="img"
+        class="cdn-image"
+    >
+        <cl-transformation gravity="center" height="500" crop="crop">
+        </cl-transformation>
+    </cl-image> -->
 </div>
-<app-footer></app-footer>
 
+<section class="container desktop">
+    <app-nav></app-nav>
+
+    <h3 id="errors" *ngIf="dataErrors">
+        <p>Data service errors:</p>
+        <span>
+            {{ dataErrors }}
+        </span>
+    </h3>
+
+    <div id="menu-overlay"></div>
+    <div
+        *ngIf="!dataErrors || dataErrors.length < 1"
+        [@routerAnimations]="prepareRouteTransition(outlet)"
+    >
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</section>
 <!-- QA Build Banner -->
 <div *ngIf="isQABuild === true" id="qa-build">
     <img
