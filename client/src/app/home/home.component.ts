@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit {
 
     @ViewChild('canvasElement') canvasElement: ElementRef;
 
+    @ViewChild('newsletterBtn') newsletterBtn: ElementRef;
+
     @ViewChild('newsletter') newsletter: ElementRef;
 
     @ViewChild('pattern1') pattern1: ElementRef;
@@ -359,6 +361,21 @@ export class HomeComponent implements OnInit {
     }
 
     openSignup() {
-        this.newsletter.nativeElement.style.display = 'block';
+        this.newsletterBtn.nativeElement.classList.add('closed');
+        setTimeout(() => {
+            this.newsletterBtn.nativeElement.style.display = 'none';
+            this.newsletter.nativeElement.style.display = 'inline-block';
+
+            this.newsletter.nativeElement.classList.add('open');
+        }, 200);
+    }
+
+    taglineAnim(position: int) {
+        if (!document.querySelector('#home-bg').classList.contains('open')) {
+            document.querySelector('#home-bg').classList.add('open');
+        }
+        document.querySelector(
+            '#home-bg #slides',
+        ).style.transform = `translate(-${position * 1905}px)`;
     }
 }
