@@ -298,20 +298,6 @@ hr {
   font-weight: 500;
 }
 
-.small {
-  font-size: small;
-}
-
-.xx-large {
-  font-size: xx-large;
-}
-
-.uppercase {
-
-  text-transform: uppercase;
-
-}
-
 .blurb {
 
   font-size: 1.3em;
@@ -322,18 +308,6 @@ hr {
 
 .auto {
   margin: auto !important;
-}
-
-.center {
-  text-align: center;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-pad {
-  padding: 0;
 }
 
 .vert-center {
@@ -347,34 +321,6 @@ hr {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-  }
-}
-
-.hidden {
-  display: none;
-}
-
-.hidden-desktop {
-  @include mq($from: tablet) {
-    display: none;
-  }
-}
-
-.hidden-tablet-plus {
-  @include mq($from: tabletPortrait) {
-    display: none;
-  }
-}
-
-.hidden-mobile {
-  @include mobile-only {
-    display: none;
-  }
-}
-
-.hidden-not-mobile {
-  @include mq($from: mobileLg) {
-    display: none;
   }
 }
 

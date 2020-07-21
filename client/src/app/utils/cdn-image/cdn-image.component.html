@@ -26,7 +26,13 @@
 </cl-image>
 
 <cl-image
-    *ngIf="cloudinaryId !== undefined && cloudinaryId.length > 0 && autoFormat && responsive === true && svg === false"
+    *ngIf="
+        cloudinaryId !== undefined &&
+        cloudinaryId.length > 0 &&
+        autoFormat &&
+        responsive === true &&
+        svg === false
+    "
     responsive
     public-id="{{ imgId }}"
     secure="true"
@@ -38,8 +44,6 @@
     aria-role="img"
     class="cdn-image"
 >
-    <!-- 
-    flags="progressive:steep" -->
     <!-- Photo (jpg,png) transforms -->
     <cl-transformation
         attr.width="{{ widthCss }}"
@@ -70,7 +74,12 @@
     class="cdn-image"
 >
     <!-- Photo (jpg,png) transforms -->
-    <cl-transformation crop="scale" dpr="auto" crop="fill" attr.effect="{{ effect }}"></cl-transformation>
+    <cl-transformation
+        crop="scale"
+        dpr="auto"
+        crop="fill"
+        attr.effect="{{ effect }}"
+    ></cl-transformation>
 </cl-image>
 
 <!-- Load svg w/ no changes -->

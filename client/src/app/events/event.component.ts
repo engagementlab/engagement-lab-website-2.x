@@ -3,7 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { QueryRef } from 'apollo-angular';
 import { DataService } from '../utils/data.service';
-import { KEY_CODE } from '../projects/project.component';
+import { KEY_CODE } from '../research/projects/project.component';
 
 @Component({
     selector: 'app-event',
