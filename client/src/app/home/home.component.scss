@@ -116,7 +116,7 @@ a {
     transform: scaleY(0);
     width: 460px;
 
-    @include transition(transform, .2s, ease-in-out);
+    @include transition(transform, .8s, ease-in-out);
 
     &.open {
       transform: scaleY(1);

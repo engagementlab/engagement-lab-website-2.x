@@ -1,5 +1,97 @@
 @import '../styles/_variables';
 
+@include keyframes(border-anim) {
+
+  0% {
+    border-width: 0;
+  }
+
+  20% {
+    border-width: 20px;
+    background-color: rgba($color: #000000, $alpha: .2);
+  }
+
+  80% {
+    border-width: 20px;
+    background-color: rgba($color: #000000, $alpha: .2);
+  }
+
+  100% {
+    border-width: 0;
+    background-color: rgba($color: #000000, $alpha: 0);
+  }
+}
+
+@include keyframes(banner) {
+
+  0% {
+    top: -96px;
+  }
+
+  20% {
+    top: 20px;
+
+  }
+
+  80% {
+    top: 20px;
+  }
+
+  100% {
+    top: -96px;
+  }
+}
+
+@include keyframes(banner-tab) {
+
+  0% {
+    @include translate(0, -20px);
+  }
+
+  100% {
+    @include translate(0, 0);
+  }
+
+}
+
+// Test home BG 
+#home-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  opacity: 0;
+
+  &.open {
+    animation: open 0.2s ease-in-out 1 both;
+  }
+
+  #slides {
+
+    display: flex;
+    width: 300%;
+    @include transition(transform, 1s, cubic-bezier(1.000, 0.000, 0.000, 1.000));
+
+    p {
+      display: block;
+      width: 100%;
+      height: 500px;
+      margin: 0;
+    }
+  }
+
+  @include phones {
+    height: 588px;
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  // background-color: aqua;
+}
+
 #errors {
   background-color: beige;
   font-family: 'Courier New', Courier, monospace;
@@ -64,17 +156,38 @@
   }
 }
 
+#qa-border {
+  position: fixed;
+  display: block;
+  border: solid 0px $mango;
+
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  z-index: 100;
+
+  background-color: rgba($color: #000000, $alpha: 0);
+  animation: border-anim 4s cubic-bezier(1.000, 0.000, 0.000, 1.000) .6s 1 forwards;
+
+}
+
 #qa-build {
   position: fixed;
-  bottom: 100%;
+
+  top: -96px;
   left: 0;
   right: 0;
+
   color: white;
-  background-color: $tomato;
+  background-color: $mango;
   text-align: center;
   font-weight: bold;
   font-size: large;
-  z-index: 100;
+  z-index: 101;
+  padding-bottom: 1%;
+  animation: banner 4s cubic-bezier(1.000, 0.000, 0.000, 1.000) .6s 1 forwards;
 
   #text {
     font-size: xx-large;
@@ -83,5 +196,23 @@
   span {
     vertical-align: top;
   }
+
+  // &:after {
+  //   content: " ";
+  //   display: block;
+  //   position: absolute;
+
+  //   width: 20px;
+  //   height: 40px;
+  //   top: -100%;
+
+  //   left: 1%;
+  //   border-radius: 20px;
+  //   background: url("data:image/svg+xml; charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 14.759 15 14.135' width='15' height='14.135'><path d='M 14.688 25.578 L 9.391 15.839 C 8.536 14.399 6.465 14.399 5.609 15.839 L 0.313 25.578 C -0.558 27.049 0.493 28.894 2.203 28.894 L 12.797 28.894 C 14.508 28.894 15.558 27.049 14.688 25.578 Z M 7.5 27.139 C 7.02 27.139 6.63 26.748 6.63 26.268 C 6.63 25.773 7.02 25.383 7.5 25.383 C 7.995 25.383 8.386 25.773 8.386 26.268 C 8.386 26.748 7.995 27.139 7.5 27.139 Z M 8.386 23.627 C 8.386 24.107 7.995 24.498 7.5 24.498 C 7.02 24.498 6.63 24.107 6.63 23.627 L 6.63 19.231 C 6.63 18.75 7.02 18.345 7.5 18.345 C 7.995 18.345 8.386 18.75 8.386 19.231 L 8.386 23.627 Z' style='fill: rgb(255, 255, 255);'></path></svg>") no-repeat;
+  //   background-position: 50.5% 78%;
+  //   background-color: #000;
+  //   animation: banner-tab 1s cubic-bezier(1.000, 0.000, 0.000, 1.000) 4.6s 1 forwards;
+
+  // }
 
 }

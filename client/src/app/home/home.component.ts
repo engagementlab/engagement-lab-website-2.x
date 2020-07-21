@@ -370,7 +370,7 @@ export class HomeComponent implements OnInit {
         }, 200);
     }
 
-    taglineAnim(position: int) {
+    taglineAnim(position: number) {
         if (!document.querySelector('#home-bg').classList.contains('open')) {
             document.querySelector('#home-bg').classList.add('open');
         }

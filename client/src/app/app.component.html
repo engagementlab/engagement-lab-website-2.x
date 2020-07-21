@@ -4,38 +4,21 @@
         <p style="background-color: coral;"></p>
         <p style="background-color: crimson;"></p>
     </div>
-    <!-- <cdn-image
-        cloudinaryId="projects/i27vn6imb5ochbdha2fu"
-        autoFormat="true"
-        width="1889"
-        alt=""
-    ></cdn-image>
-    https://res.cloudinary.com/engagement-lab-home/image/upload/c_crop,g_center,h_500,w_2018/v1560978900/homepage-2.0/projects/i27vn6imb5ochbdha2fu.png -->
-    <!-- <cl-image
-        secure="true"
-        public-id="homepage-2.0/projects/i27vn6imb5ochbdha2fu"
-        attr.width="auto:breakpoints:1889"
-        sizes="100vw"
-        client_hints="true"
-        aria-role="img"
-        class="cdn-image"
-    >
-        <cl-transformation gravity="center" height="500" crop="crop">
-        </cl-transformation>
-    </cl-image>
-    <cl-image
-        secure="true"
-        public-id="homepage-2.0/projects/porruledqxufpxduqkfj"
-        attr.width="auto:breakpoints:1889"
-        sizes="100vw"
-        client_hints="true"
-        aria-role="img"
-        class="cdn-image"
-    >
-        <cl-transformation gravity="center" height="500" crop="crop">
-        </cl-transformation>
-    </cl-image> -->
 </div>
+
+<!-- QA Build Banner/Border -->
+<div *ngIf="isQABuild === true" id="qa-build">
+    <svg viewBox="0 14.759 50 47.117" width="50" height="47.117">
+        <path
+            d="M 48.961 50.813 L 31.299 18.344 C 28.461 13.567 21.543 13.561 18.702 18.344 L 1.04 50.813 C -1.861 55.695 1.651 61.876 7.337 61.876 L 42.663 61.876 C 48.344 61.876 51.862 55.7 48.961 50.813 Z M 25 56.017 C 23.385 56.017 22.07 54.702 22.07 53.087 C 22.07 51.472 23.385 50.158 25 50.158 C 26.615 50.158 27.93 51.472 27.93 53.087 C 27.93 54.702 26.615 56.017 25 56.017 Z M 27.93 44.298 C 27.93 45.913 26.615 47.228 25 47.228 C 23.385 47.228 22.07 45.913 22.07 44.298 L 22.07 29.65 C 22.07 28.035 23.385 26.72 25 26.72 C 26.615 26.72 27.93 28.035 27.93 29.65 L 27.93 44.298 Z"
+            style="fill: rgb(255, 255, 255);"
+        ></path>
+    </svg>
+    <span id="text">QA BUILD</span>
+    <div>Work in progress. Not intended for external use.</div>
+</div>
+
+<div *ngIf="isQABuild === true" id="qa-border"></div>
 
 <section class="container desktop">
     <app-nav></app-nav>
@@ -56,13 +39,7 @@
     </div>
     <app-footer></app-footer>
 </section>
-<!-- QA Build Banner -->
-<div *ngIf="isQABuild === true" id="qa-build">
-    <img
-        src="//res.cloudinary.com/engagement-lab-home/image/upload/v1544209738/homepage-2.0/qa-build.svg"
-        style="max-width:50px"
-        alt="QA Build icon"
-    />
-    <span id="text">QA BUILD</span>
-    <div>Work in progress. Not intended for external use.</div>
-</div>
+
+<!-- Attributions
+Somem icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+-->

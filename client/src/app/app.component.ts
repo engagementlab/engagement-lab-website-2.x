@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import {
     trigger,
@@ -7,7 +7,7 @@ import {
     style,
     query,
     group,
-    animate
+    animate,
 } from '@angular/animations';
 
 import { environment } from '../environments/environment';
@@ -16,8 +16,8 @@ import { DataService } from './utils/data.service';
 export const projectTransition = [
     query('#top', [
         style({ transform: 'translate3d(77%, 0, 0)' }),
-        animate(0, style({ transform: 'translate3d(0, 0, 0)' }))
-    ])
+        animate(0, style({ transform: 'translate3d(0, 0, 0)' })),
+    ]),
 ];
 
 @Component({
@@ -26,9 +26,9 @@ export const projectTransition = [
     styleUrls: ['./app.component.scss'],
     animations: [
         trigger('routerAnimations', [
-            transition('project => project', projectTransition)
-        ])
-    ]
+            transition('project => project', projectTransition),
+        ]),
+    ],
 })
 export class AppComponent implements OnInit {
     public isQABuild: boolean;
@@ -38,16 +38,16 @@ export class AppComponent implements OnInit {
     title = 'Engagement Lab @ Emerson College';
 
     constructor(
-        private _router: Router,
-        private _titleSvc: Title,
-        private _dataSvc: DataService
+        private router: Router,
+        private titleSvc: Title,
+        private dataSvc: DataService,
     ) {
         this.isQABuild = environment.qa;
-        this._titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
+        this.titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
     }
 
     ngOnInit() {
-        this._router.events.subscribe(evt => {
+        this.router.events.subscribe(evt => {
             if (!(evt instanceof NavigationEnd)) return;
 
             // Reset relevant initiative page elements by default
@@ -62,8 +62,8 @@ export class AppComponent implements OnInit {
             window.scrollTo(0, 0);
         });
 
-        // TODO: Watch for any data/graphql errors
-        this._dataSvc.errors.subscribe(value => {
+        // Watch for any data/graphql errors
+        this.dataSvc.errors.subscribe(value => {
             if (value) {
                 this.dataErrors = value.join(', ');
             }

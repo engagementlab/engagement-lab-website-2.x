@@ -107,17 +107,6 @@ export class NavComponent {
         this.menuBtn.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.add('wasOpened');
-
-        // Nav is being closed...
-        // This makes it so overlay/label does not do fade out on app load
-        // if (!overlay.classList.contains('open')) {
-        //     overlay.classList.add('wasOpened');
-        //     this.menuBtnClose.nativeElement.classList.add('wasOpened');
-
-        //     enableBodyScroll(this.nav.nativeElement);
-        // }
-        // ...opened
-        // else disableBodyScroll(this.nav.nativeElement);
     }
 
     // Is passed route active?

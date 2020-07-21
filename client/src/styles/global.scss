@@ -34,6 +34,8 @@ body {
   color: black;
   background-size: 100% 101%;
 
+  margin: 0;
+
   @include mobile-only {
     font-size: 16px;
   }
@@ -223,45 +225,6 @@ hr {
     }
   }
 
-}
-
-// Test home BG 
-#home-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 500px;
-  opacity: 0;
-
-  &.open {
-    animation: open 0.2s ease-in-out 1 both;
-  }
-
-  #slides {
-
-    display: flex;
-    width: 300%;
-    @include transition(transform, .6s, cubic-bezier(1.000, 0.000, 0.000, 1.000));
-
-    p {
-      display: block;
-      width: 100%;
-      height: 500px;
-      margin: 0;
-    }
-  }
-
-  @include phones {
-    height: 588px;
-  }
-
-  // visibility: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  overflow: hidden;
-  // background-color: aqua;
 }
 
 // Bulma container adjustments

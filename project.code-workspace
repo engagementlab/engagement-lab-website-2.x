@@ -18,8 +18,7 @@
             "editor.formatOnSave": true
         }
     },
-    "folders": [
-        {
+    "folders": [{
             "name": "./",
             "path": "."
         },
@@ -34,9 +33,6 @@
         {
             "path": "./scripts",
             "name": "Scripts"
-        },
-        {
-            "path": "../el-scss"
         }
     ]
 }
