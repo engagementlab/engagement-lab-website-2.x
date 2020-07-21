@@ -56,11 +56,12 @@ News.add({
         initial: true,
         label: 'Link to Medium Post',
         validate: urlValidator,
-        note: 'Must be in format "http://www.something.org".',
+        note: 'Must be in format "https://medium.com/engagement-lab-emerson-college/post-title". <br /><br /> **Please ensure image height is 300px, or it will render oddly.**',
     },
     image: {
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/news',
+        note: '',
     },
 
 });
