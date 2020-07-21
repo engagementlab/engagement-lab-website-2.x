@@ -28,14 +28,10 @@ nav {
 
 #home {
   #logo-img {
-    max-width: 423px;
+    max-width: 166px;
   }
 
   svg {
-    @include transform(scale(.4));
-    @include transition(transform, 0.4s, ease-in-out);
-    transform-origin: left top;
-
     @include mobile-only {
       max-width: 200px;
     }

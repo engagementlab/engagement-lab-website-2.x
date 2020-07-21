@@ -374,8 +374,8 @@ export class HomeComponent implements OnInit {
         if (!document.querySelector('#home-bg').classList.contains('open')) {
             document.querySelector('#home-bg').classList.add('open');
         }
-        document.querySelector(
-            '#home-bg #slides',
-        ).style.transform = `translate(-${position * 1905}px)`;
+        // document.querySelector(
+        //     '#home-bg #slides',
+        // ).style.transform = `translate(-${position * 1905}px)`;
     }
 }

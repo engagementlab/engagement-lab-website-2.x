@@ -271,7 +271,8 @@
                         cloudinaryPrefix="/"
                         cloudinaryId="{{ newsItem.image.public_id }}"
                         autoFormat="true"
-                        width="800"
+                        [responsive]="true"
+                        height="300"
                         alt="Image for '{{ newsItem.title }}' news item"
                     ></cdn-image>
                 </a>
