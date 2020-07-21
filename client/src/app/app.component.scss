@@ -92,6 +92,58 @@
   // background-color: aqua;
 }
 
+// Subnav for some sections 
+.subnav {
+
+  position: relative;
+  z-index: 5;
+
+  background-color: black;
+
+  @include pxtoem(16, 18);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  text-align: center;
+
+  margin: 0 0 4.7% 0;
+
+  .columns {
+    height: 80px;
+
+    .column {
+      display: block;
+      height: 100%;
+
+      a {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        color: white;
+
+        justify-content: center;
+        align-content: center;
+
+        &:hover,
+        &.active {
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+
+  .border {
+    border-right: 4px solid white;
+  }
+
+  #initiatives {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+
 #errors {
   background-color: beige;
   font-family: 'Courier New', Courier, monospace;

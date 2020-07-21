@@ -32,8 +32,10 @@ export const projectTransition = [
 })
 export class AppComponent implements OnInit {
     public isQABuild: boolean;
+    public showResearchNav: boolean;
 
     public dataErrors: string;
+    private currentUrl: string;
 
     title = 'Engagement Lab @ Emerson College';
 
@@ -50,11 +52,17 @@ export class AppComponent implements OnInit {
         this.router.events.subscribe(evt => {
             if (!(evt instanceof NavigationEnd)) return;
 
+            // Get nav route when nav ends
+            this.currentUrl = this.router.url;
+
             // Reset relevant initiative page elements by default
             document.getElementById('logo-img').classList.remove('white');
             if (!evt.url.includes('initiatives')) {
                 document.getElementById('initiative-bg').classList.value = '';
             }
+
+            // Show research nav?
+            this.showResearchNav = evt.url.includes('research');
 
             if (evt.url.indexOf('/#') === 0) return;
 
@@ -68,6 +76,11 @@ export class AppComponent implements OnInit {
                 this.dataErrors = value.join(', ');
             }
         });
+    }
+
+    // Is passed route active?
+    subNavitemActive(route: string) {
+        return `/${route}` == this.currentUrl;
     }
 
     public prepareRouteTransition(outlet: any): void {

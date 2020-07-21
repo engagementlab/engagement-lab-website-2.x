@@ -19,10 +19,33 @@
 </div>
 
 <div *ngIf="isQABuild === true" id="qa-border"></div>
-
+<app-nav></app-nav>
+<nav *ngIf="showResearchNav" id="subnav" class="subnav">
+    <div class="columns is-mobile uppercase">
+        <div class="column is-3 border">
+            <a
+                routerLink="/research/projects"
+                [class.active]="subNavitemActive('research/projects')"
+                >Projects</a
+            >
+        </div>
+        <div class="column is-3 border">
+            <a routerLink="/research/publications">Publications</a>
+        </div>
+        <div id="initiatives" class="column">
+            <a routerLink="/research/initiatives/engaged-journalism"
+                >Engaged Journalism</a
+            >
+            <a routerLink="/research/initiatives/health-advocacy"
+                >Health Advocacy</a
+            >
+            <a routerLink="/research/initiatives/civic-smart-cities"
+                >Civic Smart Cities</a
+            >
+        </div>
+    </div>
+</nav>
 <section class="container desktop">
-    <app-nav></app-nav>
-
     <h3 id="errors" *ngIf="dataErrors">
         <p>Data service errors:</p>
         <span>

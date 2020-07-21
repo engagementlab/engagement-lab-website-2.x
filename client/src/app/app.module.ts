@@ -45,21 +45,21 @@ import { HomeComponent } from './home/home.component';
 import { InitiativeComponent } from './initiatives/initiative.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { MastersComponent } from './masters/masters.component';
+import { MastersPeopleComponent } from './masters/people/people.component';
 import { NavComponent } from './nav/nav.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { PeopleGridComponent } from './team/people-grid.component';
 import { PrivacyComponent } from './privacy/privacy.component';
-import { ProjectArchiveComponent } from './projects/archive.component';
-import { ProjectComponent } from './projects/project.component';
-import { ProjectIndexComponent } from './projects/index.component';
-import { PublicationComponent } from './publications/publication.component';
-import { PublicationIndexComponent } from './publications/index.component';
+import { ProjectArchiveComponent } from './research/projects/archive.component';
+import { ProjectComponent } from './research/projects/project.component';
+import { ProjectIndexComponent } from './research/projects/index.component';
+import { PublicationComponent } from './research/publications/publication.component';
+import { PublicationIndexComponent } from './research/publications/index.component';
 import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 import { ResultComponent } from './nav/result.component';
 import { PersonModalComponent } from './team/person-modal/person-modal.component';
 import { TeamComponent } from './team/team.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { MastersPeopleComponent } from './masters/people/people.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
