@@ -1,0 +1,78 @@
+@import "~src/styles/_variables";
+
+h2 {
+    font-family: 'LunchtypeRegular';
+    font-size: 1.9em;
+    font-weight: normal;
+    line-height: 1.29;
+    letter-spacing: 0.3px;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'LunchtypeMedium';
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.44;
+    letter-spacing: 0.5px;
+}
+
+hr {
+    border: 2px solid;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+        flex: 1 0 17%;
+        margin-right: 3%;
+        text-align: center;
+        span {
+            font-family: 'Overpass';
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-family: Overpass;
+        font-weight: 900;
+
+        margin-top: 6%;
+
+        div.context {
+            width: 75%;
+        }
+        
+        div.a {
+            display: flex;
+            // justify-self: right;
+            align-content: center;
+        }
+    }
+}
+
+.book {
+    .icon {
+        color: $tomato;
+    }
+}
+
+.guide {
+    .icon {
+        color: $green-blue;
+    }
+}
+
+.article-chapter {
+    .icon {
+        color: $mango;
+    }    
+}
