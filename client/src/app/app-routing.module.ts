@@ -18,38 +18,42 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     {
         path: 'about',
-        loadChildren: () => {
-            return import('./about/about.module').then(m => m.AboutModule);
-        },
+        loadChildren: () =>
+            import('./about/about.module').then(m => m.AboutModule),
     },
 
     {
         path: 'initiatives',
-        loadChildren: () => {
-            return import('./initiatives/initiatives.module').then(m => m.InitiativesModule);
-        },
+        loadChildren: () =>
+            import('./initiatives/initiatives.module').then(
+                m => m.InitiativesModule,
+            ),
     },
 
     {
         path: 'events',
-        loadChildren: () => {
-            return import('./events/events.module').then(m => m.EventsModule);
-        },
+        loadChildren: () =>
+            import('./events/events.module').then(m => m.EventsModule),
     },
 
     {
-        path: 'projects',
-        loadChildren: () => {
-            return import('./projects/projects.module').then(m => m.ProjectsModule);
-        },
+        path: 'research',
+        loadChildren: () =>
+            import('./research/research.module').then(m => m.ResearchModule),
     },
 
-    {
-        path: 'publications',
-        loadChildren: () => {
-            return import('./publications/publications.module').then(m => m.PublicationsModule);
-        },
-    },
+    // {
+    //     path: 'publications',
+    //     loadChildren: () =>
+    //         import('./publications/publications.module').then(
+    //             m => m.PublicationsModule,
+    //         ),
+    // },
+
+    // Preserve old paths (pre-v2.5)
+    { path: 'projects', redirectTo: 'research/projects' },
+    { path: 'projects/:key', redirectTo: 'research/projects/:key' },
+    { path: 'publications', redirectTo: 'research/publications' },
 
     // TODO: load lazily
     { path: 'people', component: TeamComponent },
@@ -69,7 +73,11 @@ const routes: Routes = [
 
     { path: 'error', component: ErrorComponent },
 
-    { path: 'redirect', component: RedirectComponent, canActivate: [RedirectService] },
+    {
+        path: 'redirect',
+        component: RedirectComponent,
+        canActivate: [RedirectService],
+    },
 
     {
         path: 'pokemon',
