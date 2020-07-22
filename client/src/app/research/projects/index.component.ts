@@ -46,6 +46,7 @@ export class ProjectIndexComponent implements OnInit {
                     initiatives {
                         key
                     }
+                    status
                 }
                 allArchivedProjectPages {
                     name
@@ -73,6 +74,9 @@ export class ProjectIndexComponent implements OnInit {
             mixitup(document.getElementById('projects'), {
                 animation: {
                     effects: 'fade',
+                },
+                controls: {
+                    toggleLogic: 'and',
                 },
             });
         });

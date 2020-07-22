@@ -4,26 +4,45 @@
     <h3 class="blurb">{{ researchBlurb }}</h3>
 
     <div id="filters" class="uppercase">
-        <div id="initiatives">
-            <span class="bold">Initiatives:</span>
-            <span
+        <div id="initiatives" class="columns is-mobile">
+            <span class="bold column is-1">Initiatives:</span>
+            <span class="controls column"
                 ><a
                     aria-label="Button to filter projects by all initiatives"
-                    data-filter="all"
+                    data-toggle="all"
                     >All Research</a
-                ></span
-            >
-            <span *ngFor="let initiative of initiatives"
-                ><a
+                >
+                <a
+                    *ngFor="let initiative of initiatives"
                     [attr.aria-label]="
                         'Button to filter projects by ' +
                         initiative.name +
                         ' initiative'
                     "
-                    [attr.data-filter]="'.' + initiative.key"
+                    [attr.data-toggle]="'.' + initiative.key"
                 >
                     {{ initiative.name }}
                 </a>
+            </span>
+        </div>
+        <div id="status" class="columns is-mobile">
+            <span class="bold column is-1">Status:</span>
+            <span class="controls column">
+                <a
+                    aria-label="Button to filter projects by any status"
+                    data-toggle="all"
+                    >Any</a
+                >
+                <a
+                    aria-label="Button to filter projects by ongoing status'"
+                    data-filter=".ongoing"
+                    >Ongoing</a
+                >
+                <a
+                    aria-label="Button to filter projects by completed status'"
+                    data-filter=".completed"
+                    >Completed</a
+                >
             </span>
         </div>
     </div>
@@ -37,7 +56,7 @@
             project.initiatives !== undefined
                 ? (project.initiatives | pluck: 'key' | join: ' ')
                 : 'all'
-        }}"
+        }} {{ project.status | lowercase }}"
         [class.mix]="project.key !== 'dummy'"
     >
         <a

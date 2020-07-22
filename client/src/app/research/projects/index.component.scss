@@ -59,15 +59,19 @@ app-button {
 
   a {
     cursor: pointer;
+
+    // Current filter
+    &.mixitup-control-active {
+      text-decoration: underline;
+    }
   }
 
   .bold {
     font-weight: 900;
   }
 
-  #initiatives {
-    display: flex;
-    justify-content: space-between;
+  .controls a {
+    margin-right: 2%;
   }
 }
 
