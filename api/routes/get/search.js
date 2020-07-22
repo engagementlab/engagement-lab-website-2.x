@@ -13,7 +13,7 @@ async function find(nameString, res) {
         const {
             body,
         } = await global.elasti.search({
-            index: ['listing', 'event', 'publication'],
+            index: ['projects', 'events', 'publications', 'teams'],
             body: {
                 // TODO: none of this returns anything even when all indices are populated
                 query: {
