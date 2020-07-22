@@ -81,6 +81,7 @@ const Project = {
             showFiles: Boolean
             sortOrder: Int
             strategyTxt: String!
+            initiatives: [Initiative]
         }
         type ProjectResult {
             project: Project
@@ -93,9 +94,17 @@ const Project = {
         'allFeaturedProjectPages: [Project]',
         'getProject(key: String): ProjectResult'],
     resolvers: {
-        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, }).sort([['sortOrder', 'ascending']]).exec(),
+        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, })
+            .populate({
+                path: 'initiatives',
+                select: 'key -_id',
+            })
+            .sort([['sortOrder', 'ascending']]).exec(),
+
         allArchivedProjectPages: async () => model.find({ enabled: true, archived: true, }).exec(),
+
         allFeaturedProjectPages: async () => model.find({ enabled: true, featured: true, }).exec(),
+
         getProject: async (parent, args) => {
             const project = await model.findOne({ key: args.key, })
                 .populate({

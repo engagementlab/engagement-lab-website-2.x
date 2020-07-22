@@ -8,9 +8,6 @@
  *
  * ==========
  */
-
-const { response, } = require('express');
-
 const { keystone, } = global;
 const { Types, } = keystone.Field;
 

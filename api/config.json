@@ -6,7 +6,7 @@
 	"admin_nav": {
 		"about": ["About", "Contact", "partners", "jobs"],
 		"people": ["people"],
-		"research": ["projects", "publications", "initiatives"],
+		"research": ["researches", "projects", "publications", "initiatives"],
 		"Masters": ["masters", "mdprojects"],
 		"files/resources": ["resources"],
 		"other": ["events", "NewsItem", "Filter"]

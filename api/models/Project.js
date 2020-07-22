@@ -51,14 +51,6 @@ Project.add({
         label: 'Custom URL',
         note: 'Must be format of "projecturl". Overrides default "/projects/projectname".',
     },
-    projectType: {
-        type: Types.Select,
-        label: 'Type',
-        options: 'Curriculum, Event, Game, Tool',
-        default: 'Curriculum',
-        required: true,
-        initial: true,
-    },
     principalInvestigator: {
         type: Types.Relationship,
         ref: 'Filter',
@@ -80,6 +72,15 @@ Project.add({
         label: 'Type/Format of Product(s)',
         many: true,
         note: 'What kind of project is this? Choose from below or add a Format Filter and choose \'Project\' as its destination.',
+    },
+
+    // Initiative model reference for which one(s) this belongs to
+    initiatives: {
+        type: Types.Relationship,
+        label: 'Initiative(s)',
+        ref: 'Initiative',
+        many: true,
+        note: 'Will classify which initiative(s) this project is sorted under.',
     },
 },
 
