@@ -4,6 +4,10 @@ h1 {
   letter-spacing: 1.5px;
 }
 
+h3 {
+  font-family: 'LunchtypeMedium';
+}
+
 app-button {
   @include not-phones {
     display: block;
@@ -21,62 +25,68 @@ app-button {
   }
 }
 
-.controls {
+// .controls {
 
-  margin-top: 17%;
+//   margin-top: 17%;
 
-  @include not-phones {
-    margin-top: 5%;
+//   @include not-phones {
+//     margin-top: 5%;
+//   }
+
+//   button {
+//     font-family: 'LunchtypeRegular';
+//     font-size: 1em;
+//     margin-bottom: 7%;
+
+//     @include not-phones {
+//       font-size: 1.4em;
+//     }
+
+//     sup {
+//       font-size: .9em;
+//     }
+
+//     &.mixitup-control-active {
+//       font-family: 'LunchtypeMedium';
+//       font-weight: bold;
+//     }
+//   }
+
+// }
+
+#intro {
+  font-family: 'Overpass';
+
+  a {
+    cursor: pointer;
   }
 
-  button {
-    font-family: 'LunchtypeRegular';
-    font-size: 1em;
-    margin-bottom: 7%;
-
-    @include not-phones {
-      font-size: 1.4em;
-    }
-
-    sup {
-      font-size: .9em;
-    }
-
-    &.mixitup-control-active {
-      font-family: 'LunchtypeMedium';
-      font-weight: bold;
-    }
+  .bold {
+    font-weight: 900;
   }
 
+  #initiatives {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-
-
 
 #projects {
   justify-content: space-evenly;
 
   .project {
 
-    flex: none;
-    width: 48%;
-
     .bg {
       display: flex;
       text-align: center;
       align-items: center;
-      max-height: 450px;
+      max-height: 330px;
+
+      overflow: hidden;
     }
 
     h4 {
       font-size: 1.7em;
-    }
-
-    @include mq($until: mobileLg) {
-      width: 93%;
-    }
-
-    @include mq($from: mobileLg) {
-      width: 45%;
     }
 
   }

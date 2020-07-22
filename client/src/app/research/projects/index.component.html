@@ -1,18 +1,57 @@
-<div id="projects" class="columns is-multiline" *ngIf="projects">
+<!-- Research intro -->
+<section id="intro" class="column is-8 is-full-mobile">
+    <h2>Research</h2>
+    <h3 class="blurb">{{ researchBlurb }}</h3>
+
+    <div id="filters" class="uppercase">
+        <div id="initiatives">
+            <span class="bold">Initiatives:</span>
+            <span
+                ><a
+                    aria-label="Button to filter projects by all initiatives"
+                    data-filter="all"
+                    >All Research</a
+                ></span
+            >
+            <span *ngFor="let initiative of initiatives"
+                ><a
+                    [attr.aria-label]="
+                        'Button to filter projects by ' +
+                        initiative.name +
+                        ' initiative'
+                    "
+                    [attr.data-filter]="'.' + initiative.key"
+                >
+                    {{ initiative.name }}
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
+<section id="projects" class="columns is-multiline" *ngIf="projects">
+    <!-- We have to map array of initiative keys and then join result w/ space -->
     <div
         #projectList
-        class="project view-tooltip column {{ project.projectType }}"
-        [class.mix]="project.key !== 'dummy'"
         *ngFor="let project of projects; let i = index"
+        class="project view-tooltip column is-3 {{
+            project.initiatives !== undefined
+                ? (project.initiatives | pluck: 'key' | join: ' ')
+                : 'all'
+        }}"
+        [class.mix]="project.key !== 'dummy'"
     >
-        <a routerLink="/projects/{{ project.key }}" *ngIf="project.key !== 'dummy'">
+        <a
+            routerLink="/projects/{{ project.key }}"
+            *ngIf="project.key !== 'dummy'"
+        >
             <div class="bg">
                 <span role="tooltip">view</span>
                 <cdn-image
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ project.image.public_id }}"
                     autoFormat="true"
-                    height="490"
+                    [responsive]="true"
+                    height="350"
                     alt="Thumbnail image for '{{ project.name }}' project"
                     *ngIf="project.image !== undefined"
                 ></cdn-image>
@@ -20,12 +59,19 @@
             <h4>{{ project.name }}</h4>
         </a>
     </div>
-</div>
+</section>
 
 <!-- Archived Projects -->
 <section id="archive" class="listing" *ngIf="projectsArchived">
-    <div #archiveList class="item column is-full" *ngFor="let project of projectsArchived; let first = first">
-        <a routerLink="/projects/{{ project.key }}" class="theme-{{ project.sortOrder % 3 }}">
+    <div
+        #archiveList
+        class="item column is-full"
+        *ngFor="let project of projectsArchived; let first = first"
+    >
+        <a
+            routerLink="/projects/{{ project.key }}"
+            class="theme-{{ project.sortOrder % 3 }}"
+        >
             <hr *ngIf="!first" />
 
             <div class="columns">
@@ -37,7 +83,12 @@
                     {{ project.name }}
                 </div>
                 <div class="column arrow">
-                    <svg width="102" height="72" fill="none" viewBox="0 0 102 72">
+                    <svg
+                        width="102"
+                        height="72"
+                        fill="none"
+                        viewBox="0 0 102 72"
+                    >
                         <path
                             stroke="#000"
                             stroke-width="2"

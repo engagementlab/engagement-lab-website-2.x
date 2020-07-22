@@ -361,27 +361,6 @@ hr {
     }
   }
 
-  &.project {
-
-    &:nth-child(3n+1) {
-      .bg {
-        background-color: $tomato;
-      }
-    }
-
-    &:nth-child(3n+2) {
-      .bg {
-        background-color: $mango;
-      }
-    }
-
-    &:nth-child(3n+3) {
-      .bg {
-        background-color: $green-blue;
-      }
-    }
-  }
-
 }
 
 // Cookie notice override

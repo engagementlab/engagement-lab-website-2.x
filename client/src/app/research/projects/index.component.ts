@@ -1,12 +1,16 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { DataService } from '../../utils/data.service';
 
+import mixitup from 'mixitup';
+
 @Component({
     selector: 'projects-index',
     templateUrl: './index.component.html',
     styleUrls: ['./index.component.scss'],
 })
 export class ProjectIndexComponent implements OnInit {
+    public researchBlurb: string;
+    public initiatives: any;
     public projects: any[];
 
     public projectFeatured: any;
@@ -21,24 +25,29 @@ export class ProjectIndexComponent implements OnInit {
 
     @ViewChildren('projectList') projectList: QueryList<any>;
 
-    // eslint-disable-next-line no-useless-constructor
     constructor(private dataSvc: DataService) {}
 
     async ngOnInit(): Promise<void> {
         const query = `
             {
+                allResearchPages {
+                    blurb
+                }
+                allInitiativePages {
+                    name
+                    key
+                }
                 allProjectPages {
                     name
                     key
                     image {
                         public_id
                     }
+                    initiatives {
+                        key
+                    }
                 }
                 allArchivedProjectPages {
-                    name
-                    key
-                }
-                allFeaturedProjectPages {
                     name
                     key
                 }
@@ -50,6 +59,8 @@ export class ProjectIndexComponent implements OnInit {
         this.projects = content['allProjectPages'];
         this.projectsArchived = content['allArchivedProjectPages'];
         this.projectFeatured = content['allFeaturedProjectPages'];
+        this.initiatives = content['allInitiativePages'];
+        this.researchBlurb = content['allResearchPages'].blurb;
     }
 
     ngAfterViewInit() {
@@ -57,6 +68,13 @@ export class ProjectIndexComponent implements OnInit {
             if (this.projects.length % 2 === 1) {
                 this.projects.push({ projectType: 'dummy', key: 'dummy' });
             }
+
+            // Init mixitup filtering
+            mixitup(document.getElementById('projects'), {
+                animation: {
+                    effects: 'fade',
+                },
+            });
         });
     }
 

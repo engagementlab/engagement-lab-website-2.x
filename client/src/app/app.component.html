@@ -20,8 +20,10 @@
 
 <div *ngIf="isQABuild === true" id="qa-border"></div>
 <app-nav></app-nav>
+
+<!-- Show on all research pages -->
 <nav *ngIf="showResearchNav" id="subnav" class="subnav">
-    <div class="columns is-mobile uppercase">
+    <div class="columns is-mobile uppercase no-margin">
         <div class="column is-3 border">
             <a
                 routerLink="/research/projects"

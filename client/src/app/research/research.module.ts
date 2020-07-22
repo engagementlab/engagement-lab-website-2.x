@@ -2,6 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ResearchComponent } from './research.component';
 import { ProjectIndexComponent } from './projects/index.component';
+import { PublicationIndexComponent } from './publications/index.component';
 
 const routes: Routes = [
     {
@@ -13,12 +14,16 @@ const routes: Routes = [
                 component: ProjectIndexComponent,
                 pathMatch: 'full',
             },
+            {
+                path: 'publications',
+                component: PublicationIndexComponent,
+                pathMatch: 'full',
+            },
         ],
     },
 
     // Child paths
     // { path: 'projects/:key', redirectTo: 'research/projects/:key' },
-    // { path: 'publications', redirectTo: 'research/publications' },
 ];
 
 @NgModule({
