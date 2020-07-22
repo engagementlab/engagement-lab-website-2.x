@@ -60,6 +60,8 @@ import { RedirectService } from './utils/redirect.service';
 import { ResultComponent } from './nav/result.component';
 import { PersonModalComponent } from './team/person-modal/person-modal.component';
 import { TeamComponent } from './team/team.component';
+import { PluckPipe } from './utils/pluck.pipe';
+import { JoinPipe } from './utils/join.pipe';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -102,6 +104,8 @@ export const config: CloudinaryConfiguration = appConfig;
         AuthorFormatPipe,
         ButtonComponent,
         PrettyUrlPipe,
+        JoinPipe,
+        PluckPipe,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'elabHome' }),
