@@ -72,6 +72,7 @@ const Project = {
             githubUrl: String
             id: ID!
             image: Image!
+            initiatives: [Initiative]
             key: String!
             name: String!
             principalInvestigator: [String]
@@ -80,8 +81,8 @@ const Project = {
             resultsTxt: String!
             showFiles: Boolean
             sortOrder: Int
+            status: String
             strategyTxt: String!
-            initiatives: [Initiative]
         }
         type ProjectResult {
             project: Project

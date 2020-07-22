@@ -82,6 +82,13 @@ Project.add({
         many: true,
         note: 'Will classify which initiative(s) this project is sorted under.',
     },
+    status: {
+        type: Types.Select,
+        options: 'Completed, Ongoing',
+        required: true,
+        initial: true,
+        note: 'Used as a filter on `/research/projects`.',
+    },
 },
 
 'Project Information', {
