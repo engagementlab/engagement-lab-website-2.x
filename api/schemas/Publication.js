@@ -11,6 +11,12 @@
 const Publication = {
 
     schema: `
+
+        """Publication results type definition"""
+        type PublicationResults {
+            _id: String!
+            publications: [Publication]
+        }
         type Publication {
             id: ID!
             title: String!
@@ -25,18 +31,27 @@ const Publication = {
             form: Filter
         }
     `,
-    queries: ['allPublications: [Publication]'],
+    queries: ['allPublications: [PublicationResults]'],
     resolvers: {
-        allPublications: async () => global.keystone.list('Publication').model.find({})
-            .sort([['date', 'descending']])
-            .populate({
-                path: 'form',
-                select: 'key -_id',
-            })
-            .populate({
-                path: 'articleResource',
-                select: 'file.url -_id',
-            }),
+        // We show the publications descending by year, so group by year and then sort groups
+        allPublications: async () => global.keystone.list('Publication').model.aggregate([
+            {
+                $match: {
+                    enabled: true,
+                },
+            },
+            {
+                $group: {
+                    _id: { $dateToString: { format: '%Y', date: '$date', }, },
+                    publications: { $push: '$$ROOT', },
+                },
+            },
+            {
+                $sort: {
+                    _id: -1,
+                },
+            }
+        ]).exec(),
     },
 
 };
