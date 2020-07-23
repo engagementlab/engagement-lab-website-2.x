@@ -127,8 +127,8 @@ export class ProjectComponent {
                 key,
                 query,
             );
-            // const content = await this._dataSvc.getSet('projects', key);
             if (content) this.setContent(content['getProject']);
+
             this.bgAlpha = 0;
             this.alphaInterval = setInterval(() => {
                 this.bgAlpha += 0.015;

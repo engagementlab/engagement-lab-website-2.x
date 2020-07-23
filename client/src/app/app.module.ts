@@ -42,7 +42,7 @@ import { EventComponent } from './events/event.component';
 import { EventIndexComponent } from './events/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { InitiativeComponent } from './initiatives/initiative.component';
+import { InitiativeComponent } from './research/initiatives/initiative.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { MastersComponent } from './masters/masters.component';
 import { MastersPeopleComponent } from './masters/people/people.component';
