@@ -1,22 +1,21 @@
-<div class="controls" *ngIf="pubTypesCount !== undefined">
-    <button type="button" class="control" data-filter="all">
-        All <sup>{{ pubTypesTotal }}</sup>
-    </button>
-    <button type="button" class="control" data-filter=".book">
-        Books <sup>{{ pubTypesCount['book'] }}</sup>
-    </button>
-    <button type="button" class="control" data-filter=".guide">
-        Guides <sup>{{ pubTypesCount['guide'] }}</sup>
-    </button>
-    <button type="button" class="control" data-filter=".article-chapter">
-        Articles <sup>{{ pubTypesCount['article-chapter'] }}</sup>
-    </button>
-</div>
+<!-- Pubs intro -->
+<section id="intro">
+    <h2>Publications</h2>
+    <hr />
+</section>
 
-<div id="publications">
-    <div class="columns is-multiline">
-        <div #publicationsList class="publication column mix {{ pub.form.key }}" *ngFor="let pub of pubs">
-            <publication [pub]="pub" [type]="pub.form.key" *ngIf="pub.form.key !== 'dummy'"></publication>
-        </div>
+<div
+    #publicationsList
+    id="publications"
+    class="columns is-multiline"
+    *ngFor="let group of publicationsGrouped"
+>
+    <!-- Year -->
+    <h3 class="column is-3">{{ group._id }}</h3>
+    <div class="column">
+        <publication
+            [pub]="pub"
+            *ngFor="let pub of group.publications"
+        ></publication>
     </div>
 </div>

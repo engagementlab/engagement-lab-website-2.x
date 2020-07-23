@@ -7,9 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PublicationComponent implements OnInit {
     @Input() pub: any;
-    @Input() type: string;
 
-    public iconWidth: number;
     public year: number;
     public link: string;
     public hasDownloads: boolean;
@@ -20,12 +18,7 @@ export class PublicationComponent implements OnInit {
         const p = this.pub;
         if (!p) return;
 
-        this.iconWidth = this.type === 'book' ? 37 : 50;
         this.year = new Date(p.date).getFullYear();
-
-        this.hasDownloads = p.downloadUrls && p.downloadUrls.length > 0;
-        this.hasResource = p.articleResource && p.articleResource.file !== undefined;
-        this.isExternal = p.purchaseUrls && p.purchaseUrls.length > 0;
 
         // Set link for pub
         if (this.hasDownloads) this.link = p.downloadUrls;
