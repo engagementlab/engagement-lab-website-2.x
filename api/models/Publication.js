@@ -86,6 +86,14 @@ Publication.add({
         many: false,
         initial: true,
     },
+    // Initiative model reference for which one(s) this belongs to
+    initiatives: {
+        type: Types.Relationship,
+        label: 'Initiative(s)',
+        ref: 'Initiative',
+        many: true,
+        note: 'Will classify which initiative(s) this publication appears under.',
+    },
 }, 'Publication Information', {
     author: {
         type: String,
