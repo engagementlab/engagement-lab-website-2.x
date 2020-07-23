@@ -16,7 +16,7 @@ const Filter = {
       date: Date
       category: String!
       appears: String!
-      key: String!
+      key: String
     }
   `,
     queries: ['allFilters: Filter'],

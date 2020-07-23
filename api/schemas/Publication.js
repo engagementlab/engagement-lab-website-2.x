@@ -28,7 +28,8 @@ const Publication = {
             description: Markdown!
             downloadUrls: String
             purchaseUrls: String
-            form: Filter
+            file: File
+            form: [Filter]
         }
     `,
     queries: ['allPublications: [PublicationResults]'],
