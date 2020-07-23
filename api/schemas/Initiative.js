@@ -15,17 +15,26 @@ const Initiative = {
     schema: `
     type Initiative {
       id: ID!
-      date: Date
       key: String!
       name: String!
       description: String!
       longDescription: String!
-      image: Image
+      image: Image,
+      projects: [Project]
     }
   `,
-    queries: ['allInitiativePages: [Initiative]'],
+    queries: ['allInitiativePages: [Initiative]',
+        'getInitiative(key: String): Initiative'],
     resolvers: {
         allInitiativePages: async () => global.keystone.list('Initiative').model.find({}).exec(),
+        getInitiative: async (parent, args) => {
+            const res = await global.keystone.list('Initiative').model.findOne({ key: args.key, }).populate({
+                path: 'projects',
+                select: 'name key image -_id',
+                options: { sort: 'name', },
+            }).exec();
+            return res;
+        },
     },
 
 };
