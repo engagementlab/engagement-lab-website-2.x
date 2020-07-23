@@ -32,7 +32,11 @@
             >
         </div>
         <div class="column is-3 border">
-            <a routerLink="/research/publications">Publications</a>
+            <a
+                routerLink="/research/publications"
+                [class.active]="subNavitemActive('research/publications')"
+                >Publications</a
+            >
         </div>
         <div id="initiatives" class="column">
             <a routerLink="/research/initiatives/engaged-journalism"

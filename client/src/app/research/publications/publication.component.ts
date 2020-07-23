@@ -9,6 +9,7 @@ export class PublicationComponent implements OnInit {
     @Input() pub: any;
 
     public year: number;
+    public publishDate: string;
     public link: string;
     public hasDownloads: boolean;
     public hasResource: boolean;
@@ -18,7 +19,11 @@ export class PublicationComponent implements OnInit {
         const p = this.pub;
         if (!p) return;
 
-        this.year = new Date(p.date).getFullYear();
+        const date = new Date(p.date);
+        this.year = date.getFullYear();
+        this.publishDate = `${date.toLocaleString('default', {
+            month: 'short',
+        })} ${date.getDate()} ${date.getFullYear()}`;
 
         // Set link for pub
         if (p.downloadUrls) this.link = p.downloadUrls;
