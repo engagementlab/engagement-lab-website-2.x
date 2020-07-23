@@ -2,32 +2,41 @@
 
 .controls {
 
-    button {
-        font-family: 'LunchtypeRegular';
-        font-size: 1.4em;
-        &.mixitup-control-active {
-            font-weight: bold;
-        }
+  button {
+    font-family: 'LunchtypeRegular';
+    font-size: 1.4em;
+
+    &.mixitup-control-active {
+      font-weight: bold;
     }
+  }
 
 }
 
 #publications {
-    
-    .columns {
-        margin-top: 5%;
-        
+
+  h3 {
+    font-weight: 900;
+  }
+
+  .columns {
+    margin-top: 5%;
+  }
+
+  .right {
+    margin-top: 2%;
+  }
+
+  .publication {
+    flex-basis: 47%;
+    margin-top: 2%;
+
+    @include phones {
+      flex-basis: 100%;
     }
 
-    .publication {
-        flex-basis: 47%;
-        margin-top: 2%;
-
-        @include phones {
-            flex-basis: 100%;
-        }
-        @include tablet-portrait {
-            flex-basis: 33%;
-        }
+    @include tablet-portrait {
+      flex-basis: 33%;
     }
+  }
 }

@@ -21,8 +21,8 @@ export class PublicationComponent implements OnInit {
         this.year = new Date(p.date).getFullYear();
 
         // Set link for pub
-        if (this.hasDownloads) this.link = p.downloadUrls;
-        else if (this.hasResource) this.link = p.articleResource.file.url;
+        if (p.downloadUrls) this.link = p.downloadUrls;
+        else if (p.articleResource) this.link = p.articleResource.file.url;
         else this.link = p.purchaseUrls;
     }
 }
