@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ResearchComponent } from './research.component';
 import { ProjectIndexComponent } from './projects/index.component';
 import { PublicationIndexComponent } from './publications/index.component';
+import { InitiativeComponent } from './initiatives/initiative.component';
 
 const routes: Routes = [
     {
@@ -18,6 +19,10 @@ const routes: Routes = [
                 path: 'publications',
                 component: PublicationIndexComponent,
                 pathMatch: 'full',
+            },
+            {
+                path: 'initiatives/:key',
+                component: InitiativeComponent,
             },
         ],
     },

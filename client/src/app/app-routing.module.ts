@@ -23,14 +23,6 @@ const routes: Routes = [
     },
 
     {
-        path: 'initiatives',
-        loadChildren: () =>
-            import('./initiatives/initiatives.module').then(
-                m => m.InitiativesModule,
-            ),
-    },
-
-    {
         path: 'events',
         loadChildren: () =>
             import('./events/events.module').then(m => m.EventsModule),
@@ -42,15 +34,17 @@ const routes: Routes = [
             import('./research/research.module').then(m => m.ResearchModule),
     },
 
-    // {
-    //     path: 'publications',
-    //     loadChildren: () =>
-    //         import('./publications/publications.module').then(
-    //             m => m.PublicationsModule,
-    //         ),
-    // },
-
     // Preserve old paths (pre-v2.5)
+    {
+        path: 'initiatives/smart-cities',
+        redirectTo: 'research/initiatives/civic-smart-cities',
+    },
+    {
+        path: 'initiatives/trust-and-the-news',
+        redirectTo: 'research/initiatives/engaged-journalism',
+    },
+    { path: 'initiatives/:key', redirectTo: 'research/initiatives/:key' },
+
     { path: 'projects', redirectTo: 'research/projects' },
     { path: 'projects/:key', redirectTo: 'research/projects/:key' },
     { path: 'publications', redirectTo: 'research/publications' },
