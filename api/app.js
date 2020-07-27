@@ -130,6 +130,7 @@ const apollo = app => {
     const Apollo = new ApolloServer({
         typeDefs: TypeDefs,
         resolvers: Resolvers,
+        playground: process.env.NODE_ENV !== 'development',
         formatError: err => {
             // Otherwise return the original error.  The error can also
             // be manipulated in other ways, so long as it's returned.
