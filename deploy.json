@@ -1,9 +1,8 @@
 {
-  "apps": [
-    {
+  "apps": [{
       "name": "engagement-lab-website-api",
       "script": "app.js",
-      "exec_interpreter": "/home/node/.nvm/versions/node/v13/bin/node",
+      "exec_interpreter": "/home/node/.nvm/versions/node/v14/bin/node",
       "env_production": {
         "NODE_ENV": "production"
       },
@@ -13,8 +12,8 @@
     },
     {
       "name": "engagement-lab-website-client",
-      "exec_interpreter": "/home/node/.nvm/versions/node/v13.12.0/bin/node",
-      "script": "/home/node/.nvm/versions/node/v13.12.0/bin/http-server",
+      "exec_interpreter": "/home/node/.nvm/versions/node/v14.4.0/bin/node",
+      "script": "/home/node/.nvm/versions/node/v14.4.0/bin/http-server",
       "args": "/srv/engagement-lab-website-2.0/source/client/dist -p 8082"
     }
   ],
@@ -22,10 +21,10 @@
     "staging": {
       "user": "node",
       "host": "199.94.80.19",
-      "repo": "git@github.com:engagementlab/engagement-lab-website-2.0.git",
+      "repo": "git@github.com:engagementlab/engagement-lab-website-2.x.git",
       "ref": "origin/master",
       "path": "/srv/engagement-lab-website-2.0",
-      "post-deploy": "bash deploy.sh qa",
+      "post-deploy": "bash ./scripts/deploy.sh qa",
       "env": {
         "NODE_ENV": "staging"
       }
@@ -34,11 +33,11 @@
     "production": {
       "user": "node",
       "host": "199.94.80.32",
-      "repo": "git@github.com:engagementlab/engagement-lab-website-2.0.git",
+      "repo": "git@github.com:engagementlab/engagement-lab-website-2.x.git",
       "ref": "origin/production",
       "path": "/srv/engagement-lab-website-2.0",
       "pre-deploy-local": "echo 'Cloning and building.';",
-      "post-deploy": "bash deploy.sh prod",
+      "post-deploy": "bash ./scripts/deploy.sh prod",
       "env": {
         "NODE_ENV": "production"
       }
