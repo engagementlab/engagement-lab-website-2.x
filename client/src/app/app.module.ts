@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { environment } from '../environments/environment';
+
 import { ScullyLibModule } from '@scullyio/ng-lib';
 
 import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
@@ -129,7 +131,7 @@ export const config: CloudinaryConfiguration = appConfig;
             useFactory: (httpLink: HttpLink) => {
                 // Apollo link w/ error handling
                 const link = httpLink.create({
-                    uri: `${appConfig.dev_url}/graphql`,
+                    uri: `${environment.api_url}/graphql`,
                 });
                 // Watch for graphql errors
                 const errors = onError(({ graphQLErrors, networkError }) => {

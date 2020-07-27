@@ -8,6 +8,8 @@ export const environment = {
     development: true,
     searchEnabled: true,
     universal: false,
+    // api_url: 'http://localhost:3000'
+    api_url: 'https://qa.elab.emerson.edu',
 };
 
 /*
