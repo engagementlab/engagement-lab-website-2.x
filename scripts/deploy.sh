@@ -16,21 +16,21 @@ cd client;
 nvm use;
 npm i;
 
-pm2 stop 'engagement-lab-website-client'; 
+pm2 stop 'elab-web-client'; 
 
 if [ "$1" == "prod" ]; then
     npm run build;
 else
-    npm run build-qa;
+    npm run build:qa;
 fi
 
-pm2 start 'engagement-lab-website-client';
+pm2 start 'elab-web-client';
 
 # API
 cd content;
 nvm use;
 npm i;
-pm2 restart 'engagement-lab-website-api';
+pm2 restart 'elab-web-api';
 
 # Stop downtime page
 cd ../..;
