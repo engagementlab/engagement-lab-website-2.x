@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
     public showResearchNav: boolean;
 
     public dataErrors: string;
+    public initiatives: any[];
     private currentUrl: string;
 
     title = 'Engagement Lab @ Emerson College';
@@ -49,7 +50,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.router.events.subscribe(evt => {
+        this.router.events.subscribe(async evt => {
             if (!(evt instanceof NavigationEnd)) return;
 
             // Get nav route when nav ends
@@ -63,6 +64,24 @@ export class AppComponent implements OnInit {
 
             // Show research nav?
             this.showResearchNav = evt.url.includes('research');
+
+            // Get all current initiatives if on a research page
+            if (this.showResearchNav) {
+                const query = `
+                {
+                    allInitiativePages {
+                    name
+                        key
+                    }
+                }
+            `;
+
+                const content = await this.dataSvc.getSet(
+                    'app-initiatives',
+                    query,
+                );
+                this.initiatives = content['allInitiativePages'];
+            }
 
             if (evt.url.indexOf('/#') === 0) return;
 

@@ -8,8 +8,14 @@ import { InitiativeComponent } from './initiatives/initiative.component';
 const routes: Routes = [
     {
         path: '',
-        component: ResearchComponent,
         children: [
+            {
+                // Redir base route to projects
+                path: '',
+                redirectTo: 'projects',
+                component: ResearchComponent,
+                pathMatch: 'full',
+            },
             {
                 path: 'projects',
                 component: ProjectIndexComponent,
