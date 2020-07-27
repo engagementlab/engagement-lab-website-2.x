@@ -4,12 +4,11 @@
 
 export const environment = {
     production: false,
-    qa: false,
+    qa: true,
     development: true,
     searchEnabled: true,
     universal: false,
-    // api_url: 'http://localhost:3000'
-    api_url: 'https://qa.elab.emerson.edu',
+    api_url: 'http://localhost:3000',
 };
 
 /*
