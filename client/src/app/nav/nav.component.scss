@@ -204,10 +204,6 @@ nav {
     }
   }
 
-  a {
-    color: white;
-  }
-
   h3 {
     font-family: 'LunchtypeMedium';
     font-size: 1.6em;
@@ -216,6 +212,12 @@ nav {
     letter-spacing: 1.5px;
 
     margin: 5% 0 0 0;
+
+    &.disabled {
+      a {
+        text-decoration: line-through;
+      }
+    }
 
     &.sub {
       font-family: 'LunchtypeRegular';
@@ -239,8 +241,13 @@ nav {
 
     a {
       position: relative;
-      display: inline-block;
       cursor: pointer;
+
+      color: white;
+
+      svg {
+        padding-left: 3%;
+      }
 
       &.active {
         &:before {

@@ -15,6 +15,7 @@ interface Link {
     url?: string;
     href?: string;
     label: string;
+    enabled?: boolean;
 }
 
 @Component({
@@ -25,19 +26,20 @@ interface Link {
 export class NavComponent {
     public navLinks: Link[] = [
         { url: '', label: 'Home' },
-        { url: 'studios', label: 'Studios' },
-        { url: 'masters', label: 'Graduate Program' },
-        { url: 'research', label: 'Research' },
-        { url: 'people', label: 'People' },
-        { url: 'about', label: 'About' },
+        { url: 'studios', label: 'Studios', enabled: false },
+        { url: 'masters', label: 'Graduate Program', enabled: false },
+        { url: 'research', label: 'Research', enabled: true },
+        { url: 'people', label: 'People', enabled: false },
+        { url: 'about', label: 'About', enabled: false },
     ];
 
     public navSubLinks: Link[] = [
         { url: 'resources', label: 'Resources' },
-        { url: 'events', label: 'Events Calendar' },
+        { url: 'events', label: 'Events Calendar', enabled: true },
         {
             href: 'https://medium.com/engagement-lab-emerson-college',
             label: 'Lab Blog',
+            enabled: true,
         },
         { url: 'contact', label: 'Partner With Us' },
         { url: 'contact', label: 'Contact Us' },
@@ -46,6 +48,7 @@ export class NavComponent {
             href:
                 'https://giving.emerson.edu/give-now?fid=h0ZJD8gm3R4%3d&fdesc=i%2bI0v73Km%2bQCb1p7mjPYeYE68k%2f8URMG',
             label: 'Donate',
+            enabled: true,
         },
         { url: 'jobs', label: 'Jobs' },
     ];
