@@ -240,10 +240,10 @@ nav {
     }
 
     a {
+      color: white;
       position: relative;
       cursor: pointer;
 
-      color: white;
 
       svg {
         padding-left: 3%;
@@ -349,6 +349,23 @@ nav {
       margin-top: 13%;
       margin-right: 9%;
     }
+
+    section {
+      a {
+        @include transition(opacity, .25s, ease-in-out);
+      }
+
+      &:hover {
+        a {
+          opacity: 50%;
+
+          &:hover {
+            opacity: 100%;
+          }
+        }
+      }
+    }
+
   }
 
   #jobs {
