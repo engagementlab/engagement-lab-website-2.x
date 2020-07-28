@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
                         html
                     }
                 }
-                recentEvents {
+                upcomingEvents {
                     name
                     key
                     date
@@ -374,8 +374,12 @@ export class HomeComponent implements OnInit {
         if (!document.querySelector('#home-bg').classList.contains('open')) {
             document.querySelector('#home-bg').classList.add('open');
         }
-        // document.querySelector(
-        //     '#home-bg #slides',
-        // ).style.transform = `translate(-${position * 1905}px)`;
+        (<HTMLElement>(
+            document.querySelector('#home-bg #slides')
+        )).style.transform = `translate(-${position * 1905}px)`;
+    }
+
+    taglineHide() {
+        document.querySelector('#home-bg').classList.remove('open');
     }
 }

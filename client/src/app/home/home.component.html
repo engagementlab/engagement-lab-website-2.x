@@ -8,7 +8,11 @@
     >
     </canvas> -->
 
-    <section id="intro" class="column columns is-centered is-multiline is-full">
+    <section
+        id="intro"
+        class="column columns is-centered is-multiline is-full"
+        (mouseleave)="taglineHide()"
+    >
         <!-- 
         <div
             id="shapes"
@@ -154,7 +158,11 @@
                 />
             </svg>
         </div> -->
-        <h1 id="mouseover" class="column is-7 center">
+        <h1
+            id="mouseover"
+            class="column is-7 center"
+            (mouseleave)="taglineHide()"
+        >
             Our <a href="#">faculty</a>, <a href="#">staff</a>, and
             <a href="#">students</a> do participatory
             <strong
@@ -251,19 +259,32 @@
             >
                 <h1 class="uppercase">
                     view all&nbsp;
-                    <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
-                        <path
-                            stroke="#fff"
-                            stroke-width="2"
-                            d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
-                        ></path>
+                    <svg viewBox="0 0 26 26" width="26" height="26">
+                        <g transform="matrix(0.091574, 0, 0, 0.091574, 0, 0)">
+                            <g>
+                                <path
+                                    d="M266.422,0h-97.625c-9.65,0-17.5,7.851-17.5,17.5c0,9.649,7.85,17.5,17.5,17.5h55.377l-92.375,92.374   c-3.307,3.305-5.127,7.699-5.127,12.375c0,4.676,1.819,9.069,5.125,12.371c3.306,3.309,7.699,5.13,12.375,5.13   c4.674,0,9.069-1.82,12.376-5.127l92.374-92.375v55.377c0,9.649,7.851,17.5,17.5,17.5c9.649,0,17.5-7.851,17.5-17.5V17.5   C283.922,7.851,276.071,0,266.422,0z"
+                                    data-original="#000000"
+                                    class="active-path"
+                                    data-old_color="#000000"
+                                    fill="#FFFFFF"
+                                ></path>
+                                <path
+                                    d="M201.137,253.922H30V82.785h128.711l30-30H15c-8.284,0-15,6.716-15,15v201.137c0,8.284,6.716,15,15,15h201.137   c8.284,0,15-6.716,15-15V95.211l-30,30V253.922z"
+                                    data-original="#000000"
+                                    class="active-path"
+                                    data-old_color="#000000"
+                                    fill="#FFFFFF"
+                                ></path>
+                            </g>
+                        </g>
                     </svg>
                 </h1>
             </a>
         </div>
         <div class="columns is-mobile">
             <div
-                class="item column is-4"
+                class="item column"
                 *ngFor="let newsItem of content.allNewsItems; let i = index"
             >
                 <a href="{{ newsItem.url }}">
@@ -288,7 +309,6 @@
             <h1 class="column is-7-mobile is-half-tablet uppercase">
                 Upcoming Events
             </h1>
-
             <a class="column view" routerLink="/events">
                 <h1 class="uppercase">
                     view all&nbsp;
@@ -302,6 +322,10 @@
                 </h1>
             </a>
         </div>
+
+        <h3 *ngIf="!content.recentEvents || content.recentEvents.length === 0">
+            No upcoming events. Check back soon!
+        </h3>
 
         <div
             #eventList
