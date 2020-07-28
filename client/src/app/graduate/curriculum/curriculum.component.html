@@ -1,0 +1,18 @@
+<div class="columns is-mobile is-multiline content" *ngIf="content">
+    <h2 class="column is-full">
+        The Engagement Lab offers an MA in Media Design.
+    </h2>
+
+    <h3 class="column is-full blurb">{{ content.programDescription }}</h3>
+
+    <h3 class="column is-half blurb">{{ content.learningObjectives }}</h3>
+    <h3 class="column blurb">{{ content.partnerships }}</h3>
+</div>
+
+<section id="cohort">
+    <people-grid
+        [people]="people"
+        [preview]="true"
+        title="Current Cohort"
+    ></people-grid>
+</section>

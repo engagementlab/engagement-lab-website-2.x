@@ -64,6 +64,7 @@ import { PersonModalComponent } from './team/person-modal/person-modal.component
 import { TeamComponent } from './team/team.component';
 import { PluckPipe } from './utils/pluck.pipe';
 import { JoinPipe } from './utils/join.pipe';
+import { GraduateCurriculumComponent } from './graduate/curriculum/curriculum.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -83,6 +84,7 @@ export const config: CloudinaryConfiguration = appConfig;
         EventIndexComponent,
         EventComponent,
         FooterComponent,
+        GraduateCurriculumComponent,
         HomeComponent,
         JobsComponent,
         InitiativeComponent,
