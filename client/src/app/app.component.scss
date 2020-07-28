@@ -156,59 +156,6 @@
   }
 }
 
-#menu-overlay {
-  position: fixed;
-  // visibility: hidden;
-
-  z-index: 2;
-  opacity: 0;
-
-  background-color: white;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  @keyframes open {
-
-    0% {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    100% {
-      opacity: 1;
-      visibility: visible;
-    }
-
-  }
-
-  @keyframes close {
-
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-  }
-
-  &.wasOpened {
-    animation: close 0.2s ease-in-out 1.2s both;
-  }
-
-  &:not(.wasOpened) {
-    visibility: hidden;
-  }
-
-  &.open {
-    animation: open 0.2s ease-in-out 1 both;
-  }
-}
-
 #qa-border {
   position: fixed;
   display: block;

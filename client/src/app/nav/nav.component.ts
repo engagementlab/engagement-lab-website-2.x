@@ -25,7 +25,7 @@ interface Link {
 })
 export class NavComponent {
     public navLinks: Link[] = [
-        { url: '', label: 'Home' },
+        { url: '', label: 'Home', enabled: true },
         { url: 'studios', label: 'Studios', enabled: false },
         { url: 'masters', label: 'Graduate Program', enabled: false },
         { url: 'research', label: 'Research', enabled: true },
@@ -79,6 +79,8 @@ export class NavComponent {
 
     @ViewChild('menuClose') menuBtnClose: ElementRef;
 
+    @ViewChild('menuBg') menuBg: ElementRef;
+
     constructor(private _router: Router, private dataSvc: DataService) {
         // Get nav route when nav ends
         this._router.events
@@ -110,6 +112,7 @@ export class NavComponent {
         this.menuBtn.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.add('wasOpened');
+        this.menuBg.nativeElement.classList.toggle('open');
     }
 
     // Is passed route active?
