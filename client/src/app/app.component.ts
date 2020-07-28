@@ -33,6 +33,7 @@ export const projectTransition = [
 export class AppComponent implements OnInit {
     public isQABuild: boolean;
     public showResearchNav: boolean;
+    public showGradNav: boolean;
 
     public dataErrors: string;
     public initiatives: any[];
@@ -64,6 +65,8 @@ export class AppComponent implements OnInit {
 
             // Show research nav?
             this.showResearchNav = evt.url.includes('research');
+            // Show graduate nav?
+            this.showGradNav = evt.url.includes('graduate');
 
             // Get all current initiatives if on a research page
             if (this.showResearchNav) {

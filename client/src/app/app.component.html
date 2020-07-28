@@ -22,7 +22,7 @@
 <app-nav></app-nav>
 
 <!-- Show on all research pages -->
-<nav *ngIf="showResearchNav" id="subnav" class="subnav">
+<nav *ngIf="showResearchNav" id="subnav-research" class="subnav">
     <div class="columns is-mobile uppercase no-margin">
         <div class="column is-3 border">
             <a
@@ -53,6 +53,49 @@
             >
                 {{ initiative.name }}
             </a>
+        </div>
+    </div>
+</nav>
+<!-- Show on all grad pages -->
+<nav *ngIf="showGradNav" id="subnav" class="subnav">
+    <div class="columns is-mobile uppercase no-margin">
+        <div class="column">
+            <a
+                routerLink="/graduate/curriculum"
+                [class.active]="subNavitemActive('graduate/curriculum')"
+                [attr.aria-label]="
+                    'Link to go to graduate program curriculum page'
+                "
+                >Curriculum</a
+            >
+        </div>
+        <div class="column">
+            <a
+                routerLink="/graduate/alumni"
+                [class.active]="subNavitemActive('graduate/alumni')"
+                [attr.aria-label]="'Link to go to graduate program alumni page'"
+                >Alumni</a
+            >
+        </div>
+        <div class="column">
+            <a
+                routerLink="/graduate/thesis"
+                [class.active]="subNavitemActive('graduate/thesis')"
+                [attr.aria-label]="
+                    'Link to go to graduate program thesis studios page'
+                "
+                >Thesis Studios</a
+            >
+        </div>
+        <div class="column">
+            <a
+                routerLink="/graduate/info"
+                [class.active]="subNavitemActive('graduate/info')"
+                [attr.aria-label]="
+                    'Link to go to graduate program info and application page'
+                "
+                >Application & Info</a
+            >
         </div>
     </div>
 </nav>

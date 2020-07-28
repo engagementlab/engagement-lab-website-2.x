@@ -27,7 +27,7 @@ export class NavComponent {
     public navLinks: Link[] = [
         { url: '', label: 'Home', enabled: true },
         { url: 'studios', label: 'Studios', enabled: false },
-        { url: 'masters', label: 'Graduate Program', enabled: false },
+        { url: 'graduate', label: 'Graduate Program', enabled: true },
         { url: 'research', label: 'Research', enabled: true },
         { url: 'people', label: 'People', enabled: false },
         { url: 'about', label: 'About', enabled: false },

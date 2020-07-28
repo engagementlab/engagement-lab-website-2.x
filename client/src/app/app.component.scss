@@ -99,8 +99,6 @@
   position: relative;
   z-index: 5;
 
-  background-color: black;
-
   @include pxtoem(16, 18);
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -120,7 +118,6 @@
         display: flex;
         height: 100%;
         width: 100%;
-        color: white;
 
         justify-content: center;
         align-content: center;
@@ -141,6 +138,15 @@
   #initiatives {
     display: flex;
     justify-content: space-evenly;
+  }
+
+  &#subnav-research {
+    background-color: black;
+
+    a {
+      color: white;
+
+    }
   }
 }
 
