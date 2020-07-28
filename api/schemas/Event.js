@@ -73,10 +73,11 @@ const Event = {
       next: Event
     }
   `,
-    queries: ['allEvents: [Event]', 'recentEvents: [Event]', 'getEvent(key: String): EventResult'],
+    queries: ['allEvents: [Event]', 'recentEvents: [Event]', 'upcomingEvents: [Event]', 'getEvent(key: String): EventResult'],
     resolvers: {
         allEvents: async () => model.find({ enabled: true, }).sort([['date', 'descending']]).exec(),
         recentEvents: async () => model.find({ enabled: true, }).sort([['date', 'descending']]).limit(3).exec(),
+        upcomingEvents: async () => model.find({ enabled: true, date: { $gt: new Date().getTime(), }, }).sort([['date', 'descending']]).limit(3).exec(),
         getEvent: async (parent, args) => {
             const event = await model.findOne({ key: args.key, }).exec();
             return GetAdjacent(event);
