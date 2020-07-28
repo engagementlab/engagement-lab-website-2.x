@@ -132,7 +132,6 @@ export const config: CloudinaryConfiguration = appConfig;
                 // Apollo link w/ error handling
                 const link = httpLink.create({
                     uri: `${environment.api_url}/graphql`,
-                    method: 'POST',
                 });
                 // Watch for graphql errors
                 const errors = onError(({ graphQLErrors, networkError }) => {

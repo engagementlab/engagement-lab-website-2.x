@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    qa: true,
+    qa: false,
     development: true,
     searchEnabled: true,
     universal: false,
