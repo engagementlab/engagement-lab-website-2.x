@@ -20,8 +20,8 @@ const urlValidator = require('../utils').url;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Masters = new keystone.List('Masters', {
-    label: 'Masters Program',
-    singular: 'Masters Program',
+    label: 'Graduate Program',
+    singular: 'Graduate Program',
     nodelete: true,
     nocreate: true,
 });
@@ -39,9 +39,18 @@ Masters.add({
     },
 
     programDescription: {
-        type: Types.Markdown,
+        type: Types.Textarea,
         label: 'Blurb',
-        note: 'This text follows logo.',
+        required: true,
+        initial: true,
+    },
+    partnerships: {
+        type: Types.Textarea,
+        required: true,
+        initial: true,
+    },
+    learningObjectives: {
+        type: Types.Textarea,
         required: true,
         initial: true,
     },
@@ -73,17 +82,6 @@ Masters.add({
         initial: true,
         note: 'This field is for students and board members, and will display below the title.',
     },
-});
-
-/**
- * Hooks
- * =============
- */
-Masters.schema.pre('save', next => {
-    // TODO: Implement as global md sanitizer
-    this.programDescription.html = this.programDescription.html.replace(/<p[^>]+?>|<p>|<\/p>/g, '');
-
-    next();
 });
 
 /**

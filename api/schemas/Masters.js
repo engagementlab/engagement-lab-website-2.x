@@ -16,8 +16,9 @@ const Masters = {
     type Masters {
       id: ID!
       name: String!
-      programDescription: Markdown!
-      applicationLink: String
+      programDescription: String!
+      partnerships: String!
+      learningObjectives: String!
       buttonTxt: String!
       cohortYear: ID
     }
