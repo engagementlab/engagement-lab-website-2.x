@@ -1,7 +1,9 @@
 <h2 class="column is-half no-pad">Events</h2>
 
 <section id="events" class="listing">
-    <!-- Property 'contegntallEvents' does not exist on type EventIndexComponent -->
+    <h3 *ngIf="events.length === 0 || !events">
+        No upcoming events. Check back soon!
+    </h3>
     <div #eventList class="event column is-full" *ngFor="let event of events">
         <a routerLink="/events/{{ event.key }}">
             <hr />
@@ -19,8 +21,16 @@
                 <div class="name column no-margin">
                     <h2>
                         {{ event.name }}&nbsp;
-                        <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
-                            <path stroke="#000" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
+                        <svg
+                            width="32"
+                            height="23"
+                            fill="none"
+                            viewBox="0 0 32 23"
+                        >
+                            <path
+                                stroke="#000"
+                                d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                            />
                         </svg>
                     </h2>
 
@@ -33,7 +43,10 @@
 
 <section id="pastevents" *ngIf="pastEvents !== undefined">
     <h1 class="uppercase">past events</h1>
-    <div class="event column is-full" *ngFor="let event of pastEvents; last as isLast">
+    <div
+        class="event column is-full"
+        *ngFor="let event of pastEvents; last as isLast"
+    >
         <a routerLink="/events/{{ event.key }}">
             <div class="columns is-mobile">
                 <h4 class="date column is-one-fifth hidden-mobile">
@@ -41,15 +54,26 @@
                     <div class="year">{{ event.date | date: 'yyyy' }}</div>
                 </h4>
                 <h4 class="date column is-one-fifth hidden-tablet-plus">
-                    {{ event.date | date: 'MMM' }}<br />{{ event.date | date: 'dd' }}
+                    {{ event.date | date: 'MMM' }}<br />{{
+                        event.date | date: 'dd'
+                    }}
                     <div class="year">{{ event.date | date: 'yy' }}</div>
                 </h4>
 
                 <div class="name column no-margin">
                     <h3 class="blurb">
                         {{ event.name }}&nbsp;
-                        <svg width="32" height="23" fill="none" viewBox="0 0 32 23" class="hidden-mobile">
-                            <path stroke="#fff" d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22" />
+                        <svg
+                            width="32"
+                            height="23"
+                            fill="none"
+                            viewBox="0 0 32 23"
+                            class="hidden-mobile"
+                        >
+                            <path
+                                stroke="#fff"
+                                d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                            />
                         </svg>
                     </h3>
                     <div class="description">{{ event.shortDescription }}</div>
