@@ -1,0 +1,20 @@
+#intro {
+  font-family: 'Overpass';
+
+  a {
+    cursor: pointer;
+
+    // Current filter
+    &.mixitup-control-active {
+      text-decoration: underline;
+    }
+  }
+
+  .bold {
+    font-weight: 900;
+  }
+
+  .controls a {
+    margin-right: 2%;
+  }
+}
