@@ -4,7 +4,7 @@
  * Masters page schema
  * @module masters
  * @class masters
- * @author Ralph Drake
+ * @author Ralph Drake and Johnny Richardson
  *
  * ==========
  */
@@ -18,6 +18,7 @@ const Masters = {
       name: String!
       programDescription: String!
       partnerships: String!
+      phases: [String]!
       learningObjectives: String!
       buttonTxt: String!
       cohortYear: ID

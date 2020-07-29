@@ -7,7 +7,7 @@
 		"about": ["About", "Contact", "partners", "jobs"],
 		"people": ["people"],
 		"research": ["researches", "projects", "publications", "initiatives"],
-		"Masters": ["masters", "mdprojects"],
+		"Graduate Program": ["masters", "Curriculum", "mdprojects"],
 		"files/resources": ["resources"],
 		"other": ["events", "NewsItem", "Filter"]
 	}

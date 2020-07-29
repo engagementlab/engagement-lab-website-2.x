@@ -54,6 +54,11 @@ Masters.add({
         required: true,
         initial: true,
     },
+    phases: {
+        type: Types.TextArray,
+        required: true,
+        initial: true,
+    },
     applicationLink: {
         type: Types.Url,
         validate: urlValidator,
@@ -65,13 +70,6 @@ Masters.add({
         required: true,
         initial: true,
     },
-    // cohortYear: {
-    //   type: Types.Select,
-    //   options: '2018, 2019, 2020, 2021, 2022',
-    //   required: true,
-    //   initial: true
-    // }
-
     cohortYear: {
         type: Types.Relationship,
         label: 'Cohort Year to display',
