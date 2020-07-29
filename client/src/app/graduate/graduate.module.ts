@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { GraduateCurriculumComponent } from './curriculum/curriculum.component';
 import { GraduateAlumniComponent } from './alumni/alumni.component';
+import { GraduateStudiosComponent } from './studios/studios.component';
+import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
     {
@@ -25,12 +27,16 @@ const routes: Routes = [
                 component: GraduateAlumniComponent,
                 pathMatch: 'full',
             },
+            {
+                path: 'studios',
+                component: GraduateStudiosComponent,
+                pathMatch: 'full',
+            },
         ],
     },
 ];
 
 @NgModule({
-    declarations: [],
     imports: [CommonModule, RouterModule.forChild(routes)],
     exports: [RouterModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
