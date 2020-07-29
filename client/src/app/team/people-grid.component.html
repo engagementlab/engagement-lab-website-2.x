@@ -1,4 +1,4 @@
-<div class="people-grid">
+<div class="people-grid" [class.cohort]="cohort">
     <div *ngIf="preview === true" id="top">
         <h1 class="uppercase">{{ title }}</h1>
 
@@ -8,11 +8,28 @@
             </a>
 
             <div id="controls">
-                <button id="prev" type="button" class="control">
-                    <cdn-image cloudinaryId="team/nav-btn-back" width="32" alt="Previous team slides"></cdn-image>
+                <button
+                    id="prev"
+                    type="button"
+                    class="control"
+                    aria-label="Button to go to next page of people in slider"
+                >
+                    <svg width="32" height="24" fill="none" viewBox="0 0 32 24">
+                        <path
+                            stroke="#000"
+                            stroke-width="2"
+                            d="M31.5 12.191H1.712M12.032 22.5L1.5 12 12.032 1.5"
+                        />
+                    </svg>
                 </button>
                 <button id="next" type="button" class="control">
-                    <cdn-image cloudinaryId="team/nav-btn-next" width="32" alt="Next team slides"></cdn-image>
+                    <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                        <path
+                            stroke="#000"
+                            stroke-width="2"
+                            d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                        />
+                    </svg>
                 </button>
             </div>
         </div>
@@ -28,7 +45,11 @@
             <a
                 *ngIf="person.name != 'dummy'"
                 [class.white]="preview === true"
-                [routerLink]="cohort ? '/masters/people/' + person.key : '/people/' + person.key"
+                [routerLink]="
+                    cohort
+                        ? '/masters/people/' + person.key
+                        : '/people/' + person.key
+                "
             >
                 <div class="bg">
                     <span role="tooltip">view</span>
@@ -40,14 +61,21 @@
                         width="400"
                         fetch-format="auto"
                         crop="scale"
-                        attr.alt="Portrait image of {{ person.name.first }} {{ person.name.last }}"
+                        attr.alt="Portrait image of {{ person.name.first }} {{
+                            person.name.last
+                        }}"
                         class="cdn-image"
                     >
-                        <cl-transformation attr.quality="100" effect="grayscale"></cl-transformation>
+                        <cl-transformation
+                            attr.quality="100"
+                            effect="grayscale"
+                        ></cl-transformation>
                     </cl-image>
                 </div>
 
-                <div class="name">{{ person.name.first }} {{ person.name.last }}</div>
+                <div class="name">
+                    {{ person.name.first }} {{ person.name.last }}
+                </div>
                 <!-- Visible for non-grad students of now -->
                 <div class="title" *ngIf="!cohort">{{ person.title }}</div>
             </a>

@@ -11,12 +11,17 @@
 
 <section id="cohort">
     <people-grid
+        [cohort]="true"
         [people]="people"
         [preview]="true"
         title="Current Cohort"
     ></people-grid>
 </section>
-<section id="curricula" class="columns is-mobile is-multiline content">
+<section
+    id="curricula"
+    class="columns is-mobile is-multiline content"
+    *ngIf="content"
+>
     <div id="timeline">
         <div id="months" class="uppercase">
             <h3>sept</h3>
