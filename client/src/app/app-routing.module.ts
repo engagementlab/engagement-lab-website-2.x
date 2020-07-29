@@ -6,8 +6,6 @@ import { ContactComponent } from './contact/contact.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { JobsComponent } from './jobs/jobs.component';
-import { MastersComponent } from './masters/masters.component';
-import { MastersPeopleComponent } from './masters/people/people.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { RedirectComponent } from './redirect/redirect.component';
@@ -55,17 +53,14 @@ const routes: Routes = [
     { path: 'projects/:key', redirectTo: 'research/projects/:key' },
     { path: 'publications', redirectTo: 'research/publications' },
 
-    // { path: 'masters/people', component: MastersPeopleComponent },
-    // { path: 'masters/people/:key', component: MastersPeopleComponent },
+    { path: 'masters', redirectTo: 'graduate' },
+    { path: 'masters/alumni', redirectTo: 'graduate/alumni' },
 
     // TODO: load lazily
     { path: 'people', component: TeamComponent },
     { path: 'people/:key', component: TeamComponent },
 
     { path: 'cmap', redirectTo: 'masters' },
-    // { path: 'masters', component: MastersComponent },
-    // { path: 'masters/people', component: MastersPeopleComponent },
-    // { path: 'masters/people/:key', component: MastersPeopleComponent },
 
     { path: 'contact', redirectTo: 'getinvolved' },
     { path: 'press', redirectTo: 'getinvolved' },
