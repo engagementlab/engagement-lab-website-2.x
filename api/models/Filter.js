@@ -2,7 +2,7 @@
  * Engagement Lab Website v2.x
  *
  * @class Filters
- * @author Erica Salling
+ * @author Eron Salling
  *
  * For field docs: http://keystonejs.com/docs/database/
  *

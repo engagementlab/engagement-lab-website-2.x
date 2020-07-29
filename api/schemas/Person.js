@@ -18,7 +18,7 @@ const Person = {
             name: Name!
             category: String!
             title: String
-            cohortYear: ObjectID
+            cohortYear: Filter
             project: String
             bio: Markdown!
             image: Image!
@@ -40,7 +40,7 @@ const Person = {
             return global.keystone.list('Person').model.find(query).exec();
         },
         allStaffPeople: async () => global.keystone.list('Person').model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
-        allMastersPeople: async () => global.keystone.list('Person').model.find({ category: 'Masters', }).exec(),
+        allMastersPeople: async () => global.keystone.list('Person').model.find({ category: 'Masters', }).populate('cohortYear').exec(),
     },
 
 };
