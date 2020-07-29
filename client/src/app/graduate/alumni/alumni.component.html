@@ -1,0 +1,6 @@
+<person-modal
+    *ngIf="currentPerson !== undefined"
+    [person]="currentPerson"
+    (onClose)="closePerson()"
+></person-modal>
+<people-grid [people]="alumni" [cohort]="true"></people-grid>
