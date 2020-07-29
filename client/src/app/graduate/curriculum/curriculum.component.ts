@@ -30,7 +30,7 @@ export class GraduateCurriculumComponent implements OnInit {
       `;
 
         const mastersResponse = await this.dataSvc.getSet(
-            'masters',
+            'graduate',
             mastersQuery,
         );
 

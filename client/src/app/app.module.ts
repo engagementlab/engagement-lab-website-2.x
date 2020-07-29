@@ -43,11 +43,11 @@ import { ErrorComponent } from './error/error.component';
 import { EventComponent } from './events/event.component';
 import { EventIndexComponent } from './events/index.component';
 import { FooterComponent } from './footer/footer.component';
+import { GraduateCurriculumComponent } from './graduate/curriculum/curriculum.component';
+import { GraduateAlumniComponent } from './graduate/alumni/alumni.component';
 import { HomeComponent } from './home/home.component';
 import { InitiativeComponent } from './research/initiatives/initiative.component';
 import { JobsComponent } from './jobs/jobs.component';
-import { MastersComponent } from './masters/masters.component';
-import { MastersPeopleComponent } from './masters/people/people.component';
 import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PeopleGridComponent } from './team/people-grid.component';
@@ -64,7 +64,6 @@ import { PersonModalComponent } from './team/person-modal/person-modal.component
 import { TeamComponent } from './team/team.component';
 import { PluckPipe } from './utils/pluck.pipe';
 import { JoinPipe } from './utils/join.pipe';
-import { GraduateCurriculumComponent } from './graduate/curriculum/curriculum.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -85,11 +84,10 @@ export const config: CloudinaryConfiguration = appConfig;
         EventComponent,
         FooterComponent,
         GraduateCurriculumComponent,
+        GraduateAlumniComponent,
         HomeComponent,
         JobsComponent,
         InitiativeComponent,
-        MastersComponent,
-        MastersPeopleComponent,
         NavComponent,
         NotFoundComponent,
         PrivacyComponent,

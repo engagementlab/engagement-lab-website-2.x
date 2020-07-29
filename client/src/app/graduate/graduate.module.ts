@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { GraduateCurriculumComponent } from './curriculum/curriculum.component';
+import { GraduateAlumniComponent } from './alumni/alumni.component';
 
 const routes: Routes = [
     {
@@ -17,6 +18,11 @@ const routes: Routes = [
             {
                 path: 'curriculum',
                 component: GraduateCurriculumComponent,
+                pathMatch: 'full',
+            },
+            {
+                path: 'alumni',
+                component: GraduateAlumniComponent,
                 pathMatch: 'full',
             },
         ],
