@@ -12,7 +12,7 @@
                     id="prev"
                     type="button"
                     class="control"
-                    aria-label="Button to go to next page of people in slider"
+                    aria-label="Button to go to previous page of people in slider"
                 >
                     <svg width="32" height="24" fill="none" viewBox="0 0 32 24">
                         <path
@@ -22,7 +22,12 @@
                         />
                     </svg>
                 </button>
-                <button id="next" type="button" class="control">
+                <button
+                    id="next"
+                    type="button"
+                    class="control"
+                    aria-label="Button to go to next page of people in slider"
+                >
                     <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
                         <path
                             stroke="#000"
@@ -75,6 +80,9 @@
 
                 <div class="name">
                     {{ person.name.first }} {{ person.name.last }}
+                </div>
+                <div class="year" *ngIf="cohort">
+                    {{ person.cohortYear.name }}
                 </div>
                 <!-- Visible for non-grad students of now -->
                 <div class="title" *ngIf="!cohort">{{ person.title }}</div>
