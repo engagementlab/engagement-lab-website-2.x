@@ -7,6 +7,7 @@ import { DataService } from 'src/app/utils/data.service';
 })
 export class GraduateCurriculumComponent implements OnInit {
     public content: any;
+    public curricula: any;
     public people: any;
 
     constructor(private dataSvc: DataService) {}
@@ -19,6 +20,11 @@ export class GraduateCurriculumComponent implements OnInit {
                   partnerships
                   learningObjectives
                   cohortYear
+                  phases
+              }
+              allCurriculumPages {
+                name
+                description
               }
           }
       `;
@@ -29,6 +35,7 @@ export class GraduateCurriculumComponent implements OnInit {
         );
 
         this.content = mastersResponse['allMastersPages'];
+        this.curricula = mastersResponse['allCurriculumPages'];
 
         const cohortQuery = `   
           {

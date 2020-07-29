@@ -1,4 +1,4 @@
-<div class="columns is-mobile is-multiline content" *ngIf="content">
+<section class="columns is-mobile is-multiline content" *ngIf="content">
     <h2 class="column is-full">
         The Engagement Lab offers an MA in Media Design.
     </h2>
@@ -7,7 +7,7 @@
 
     <h3 class="column is-half blurb">{{ content.learningObjectives }}</h3>
     <h3 class="column blurb">{{ content.partnerships }}</h3>
-</div>
+</section>
 
 <section id="cohort">
     <people-grid
@@ -15,4 +15,42 @@
         [preview]="true"
         title="Current Cohort"
     ></people-grid>
+</section>
+<section id="curricula" class="columns is-mobile is-multiline content">
+    <div id="timeline">
+        <div id="months" class="uppercase">
+            <h3>sept</h3>
+            <h3>oct</h3>
+            <h3>nov</h3>
+            <h3>dec</h3>
+            <h3>jan</h3>
+            <h3>feb</h3>
+            <h3>mar</h3>
+            <h3>apr</h3>
+            <h3>may</h3>
+            <h3>jun</h3>
+            <h3>jul</h3>
+            <h3>aug</h3>
+        </div>
+        <hr />
+
+        <div id="phases">
+            <div *ngFor="let phase of [1, 2, 3, 4]">
+                <p class="counter">Phase</p>
+                <p class="desc">{{ content.phases[phase - 1] }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half is-full-mobile">
+        <div *ngFor="let index of [0, 1]">
+            <h3 class="blurb">{{ curricula[index].name }}</h3>
+            <p class="desc">{{ curricula[index].description }}</p>
+        </div>
+    </div>
+    <div class="column is-full-mobile">
+        <div *ngFor="let index of [2, 3]">
+            <h3 class="blurb">{{ curricula[index].name }}</h3>
+            <p class="desc">{{ curricula[index].description }}</p>
+        </div>
+    </div>
 </section>
