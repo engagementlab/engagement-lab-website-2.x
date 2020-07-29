@@ -10,11 +10,12 @@
  */
 const MDProjects = {
 
-  // TODO: add teamMembers ref field (see api/models/MDProjects.js line 102)
+    // TODO: add teamMembers ref field (see api/models/MDProjects.js line 102)
 
-  schema: `
-    type MDProjects {
+    schema: `
+    type MDProject {
       id: ID!
+      key: String!
       date: Date
       name: String!
       byline: String!
@@ -26,10 +27,10 @@ const MDProjects = {
       customUrl: String
     }
   `,
-  queries: ['allMDProjectsPages: MDProjects'],
-  resolvers: {
-    allMDProjectsPages: async () => global.keystone.list('MDProjects').model.findOne({}).exec(),
-  },
+    queries: ['allMDProjectPages: [MDProject]'],
+    resolvers: {
+        allMDProjectPages: async () => global.keystone.list('MDProject').model.find({ enabled: true, }).exec(),
+    },
 
 };
 module.exports = MDProjects;

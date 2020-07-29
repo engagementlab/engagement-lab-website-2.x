@@ -4,14 +4,14 @@
  * Page category Model
  * @module listing
  * @class listing
- * @author Jay Vachon
+ * @author Jay Vachon, Johnny Richardson, Eron Salling
  *
  * For field docs: http://keystonejs.com/docs/database/
  *
  * ==========
  */
-const { keystone } = global;
-const { Types } = keystone.Field;
+const { keystone, } = global;
+const { Types, } = keystone.Field;
 
 /**
  * @module listing
@@ -19,55 +19,55 @@ const { Types } = keystone.Field;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Listing = new keystone.List('Listing', {
-  hidden: true,
-  sortable: true,
-  autokey: {
-    path: 'key',
-    from: 'name',
-    unique: true,
-  },
+    hidden: true,
+    sortable: true,
+    autokey: {
+        path: 'key',
+        from: 'name',
+        unique: true,
+    },
 });
 
 /**
  * Local Methods
  * =============
  */
-const safeString = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(',', '');
+const safeString = str => str.toLowerCase().replace(/\s+/g, '-').replace(',', '');
 
 /**
  * Model Fields
  * @main Listing
  */
 Listing.add({
-  name: {
-    type: String,
-    label: 'Name',
-    required: true,
-    initial: true,
-    index: true,
-  },
-  byline: {
-    type: String,
-    required: true,
-    initial: true,
-    note: 'This displays under the project/event name on its page.',
-  },
-  description: {
-    type: String,
-    required: true,
-    initial: true,
-  },
-  image: {
-    type: Types.CloudinaryImage,
-    label: 'Thumbnail Image',
-    folder: 'homepage-2.0/listings',
-    autoCleanup: true,
-    note: 'This displays as the image/thumbnail when needed.',
-  },
-  indexed: {
-    type: Boolean,
-    hidden: true,
-  },
+    name: {
+        type: String,
+        label: 'Name',
+        required: true,
+        initial: true,
+        index: true,
+    },
+    byline: {
+        type: String,
+        required: true,
+        initial: true,
+        note: 'This displays under the project/event name on its page.',
+    },
+    description: {
+        type: String,
+        required: true,
+        initial: true,
+    },
+    image: {
+        type: Types.CloudinaryImage,
+        label: 'Thumbnail Image',
+        folder: 'homepage-2.0/listings',
+        autoCleanup: true,
+        note: 'This displays as the image/thumbnail when needed.',
+    },
+    indexed: {
+        type: Boolean,
+        hidden: true,
+    },
 });
 
 /**

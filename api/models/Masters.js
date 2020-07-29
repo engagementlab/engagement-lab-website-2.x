@@ -54,6 +54,11 @@ Masters.add({
         required: true,
         initial: true,
     },
+    studiosBlurb: {
+        type: Types.Textarea,
+        required: true,
+        initial: true,
+    },
     phases: {
         type: Types.TextArray,
         required: true,

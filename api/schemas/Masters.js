@@ -20,6 +20,7 @@ const Masters = {
       partnerships: String!
       phases: [String]!
       learningObjectives: String!
+      studiosBlurb: String!
       buttonTxt: String!
       cohortYear: ID
     }
