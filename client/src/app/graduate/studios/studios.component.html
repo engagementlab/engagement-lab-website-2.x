@@ -18,9 +18,9 @@
                 [attr.aria-label]="
                     'Button to filter projects by ' +
                     cohort.name.replace('Cohort', '') +
-                    ' year'
+                    'year'
                 "
-                [attr.data-toggle]="'.' + cohort.key"
+                [attr.data-filter]="'.yr-' + cohort.key"
             >
                 {{ cohort.name.replace('Cohort', '') }}
             </a>
@@ -33,11 +33,11 @@
     <div
         #projectList
         *ngFor="let project of projects; let i = index"
-        class="project view-tooltip column is-3"
+        class="project view-tooltip column is-3 yr-{{ project.cohortYear.key }}"
         [class.mix]="project.key !== 'dummy'"
     >
         <a
-            routerLink="/studios/projects/{{ project.key }}"
+            routerLink="/graduate/studios/projects/{{ project.key }}"
             *ngIf="project.key !== 'dummy'"
         >
             <div class="bg">

@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    Component,
+    OnInit,
+    AfterViewInit,
+    ViewChildren,
+    QueryList,
+} from '@angular/core';
 import { DataService } from 'src/app/utils/data.service';
+
+import mixitup from 'mixitup';
 
 @Component({
     selector: 'app-studios',
     templateUrl: './studios.component.html',
     styleUrls: ['./studios.component.scss'],
 })
-export class GraduateStudiosComponent implements OnInit {
+export class GraduateStudiosComponent implements OnInit, AfterViewInit {
     public content: any;
     public cohorts: any;
     public projects: any;
+
+    @ViewChildren('projectList') projectList: QueryList<any>;
 
     constructor(private dataSvc: DataService) {}
 
@@ -29,6 +39,9 @@ export class GraduateStudiosComponent implements OnInit {
               thumb {
                 public_id
               }
+              cohortYear {
+                  key  
+              }
             }
         }
     `;
@@ -41,5 +54,24 @@ export class GraduateStudiosComponent implements OnInit {
         this.content = mastersResponse['allMastersPages'];
         this.cohorts = mastersResponse['allCohorts'];
         this.projects = mastersResponse['allMDProjectPages'];
+    }
+
+    ngAfterViewInit() {
+        this.projectList.changes.subscribe(t => {
+            if (this.projects.length % 2 === 1) {
+                this.projects.push({
+                    projectType: 'dummy',
+                    key: 'dummy',
+                    cohortYear: { key: 'dummy' },
+                });
+            }
+
+            // Init mixitup filtering
+            mixitup(document.getElementById('projects'), {
+                animation: {
+                    effects: 'fade',
+                },
+            });
+        });
     }
 }
