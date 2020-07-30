@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PublicationComponent implements OnInit {
     @Input() pub: any;
+    // Used when syndicated on project page
+    @Input() projectView: boolean;
 
     public year: number;
     public publishDate: string;
@@ -20,6 +22,7 @@ export class PublicationComponent implements OnInit {
         if (!p) return;
 
         const date = new Date(p.date);
+        console.log(p);
         this.year = date.getFullYear();
         this.publishDate = `${date.toLocaleString('default', {
             month: 'short',
