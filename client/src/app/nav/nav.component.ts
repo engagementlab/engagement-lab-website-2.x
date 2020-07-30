@@ -2,12 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
-import {
-    disableBodyScroll,
-    enableBodyScroll,
-    clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
-import { DataService } from '../utils/data.service';
+
 import { SearchService } from '../utils/search.service';
 
 import { environment } from '../../environments/environment';
@@ -111,20 +106,20 @@ export class NavComponent {
     }
 
     // Is passed route active?
-    itemActive(route: string) {
-        return `/${route}` == this.currentUrl;
+    itemActive(route: string): boolean {
+        return `/${route}` === this.currentUrl;
     }
 
     // If on home when logo clicked, just close menu
-    logoClick() {
+    logoClick(): void {
         if (this.currentUrl === '/') this.openCloseNav();
     }
 
-    searchFocus() {
+    searchFocus(): void {
         this.searchField.nativeElement.className = 'focus';
     }
 
-    searchBlur() {
+    searchBlur(): void {
         this.searchField.nativeElement.className = '';
     }
 
