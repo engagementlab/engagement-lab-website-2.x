@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/engagementlab/engagement-lab-website-2.0/issues"
   },
-  "homepage": "https://github.com/engagementlab/engagement-lab-website-2.0#readme"
+  "homepage": "https://github.com/engagementlab/engagement-lab-website-2.0#readme",
+  "dependencies": {
+    "engagement-lab-website-2.x": "file:client"
+  }
 }
