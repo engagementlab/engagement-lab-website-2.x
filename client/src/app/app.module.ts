@@ -45,6 +45,8 @@ import { EventIndexComponent } from './events/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { GraduateCurriculumComponent } from './graduate/curriculum/curriculum.component';
 import { GraduateAlumniComponent } from './graduate/alumni/alumni.component';
+import { GraduateStudiosComponent } from './graduate/studios/studios.component';
+import { GraduateProjectComponent } from './graduate/studios/project/project.component';
 import { HomeComponent } from './home/home.component';
 import { InitiativeComponent } from './research/initiatives/initiative.component';
 import { JobsComponent } from './jobs/jobs.component';
@@ -64,7 +66,6 @@ import { PersonModalComponent } from './team/person-modal/person-modal.component
 import { TeamComponent } from './team/team.component';
 import { PluckPipe } from './utils/pluck.pipe';
 import { JoinPipe } from './utils/join.pipe';
-import { GraduateStudiosComponent } from './graduate/studios/studios.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -87,6 +88,7 @@ export const config: CloudinaryConfiguration = appConfig;
         GraduateCurriculumComponent,
         GraduateAlumniComponent,
         GraduateStudiosComponent,
+        GraduateProjectComponent,
         HomeComponent,
         JobsComponent,
         InitiativeComponent,

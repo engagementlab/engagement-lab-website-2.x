@@ -1,0 +1,18 @@
+@import "~src/styles/_variables";
+
+#slideshow {
+  overflow: hidden;
+
+  #wrapper {
+    display: flex;
+    align-content: space-around;
+    width: 150%;
+
+    @include ng-img {
+
+      flex-grow: 1;
+      margin-right: 1%;
+
+    }
+  }
+}

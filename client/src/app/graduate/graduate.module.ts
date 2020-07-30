@@ -6,6 +6,7 @@ import { GraduateCurriculumComponent } from './curriculum/curriculum.component';
 import { GraduateAlumniComponent } from './alumni/alumni.component';
 import { GraduateStudiosComponent } from './studios/studios.component';
 import { InfoComponent } from './info/info.component';
+import { GraduateProjectComponent } from './studios/project/project.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,10 @@ const routes: Routes = [
                 path: 'studios',
                 component: GraduateStudiosComponent,
                 pathMatch: 'full',
+            },
+            {
+                path: 'studios/projects/:key',
+                component: GraduateProjectComponent,
             },
         ],
     },
