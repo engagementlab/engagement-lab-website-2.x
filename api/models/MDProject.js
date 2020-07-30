@@ -39,8 +39,8 @@ const azureFile = new keystone.Storage({
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const MDProject = new keystone.List('MDProject', {
-    label: 'Masters Projects',
-    singular: 'Masters Project',
+    label: 'Thesis Projects',
+    singular: 'Thesis Project',
     sortable: true,
     autokey: {
         path: 'key',
@@ -64,6 +64,17 @@ MDProject.add({
         type: Types.Boolean,
         label: 'Enabled',
         note: 'Determines if this project appears on the live site.',
+    },
+    cohortYear: {
+        type: Types.Relationship,
+        label: 'Year',
+        ref: 'Filter',
+        filters: {
+            category: 'Cohort',
+        },
+        initial: true,
+        required: true,
+        note: 'This field is for filtering projects by year.',
     },
     /* featured: {
         type: Types.Boolean,
@@ -117,6 +128,17 @@ MDProject.add({
         note: 'Must be in format "http://www.something.org" <br> Appears on the individual project page.',
     },
 
+    partners: {
+        type: Types.Relationship,
+        ref: 'Partner',
+        many: true,
+    },
+
+    pointOfContact: {
+        type: Types.Relationship,
+        ref: 'Person',
+    },
+
 },
 
 'Project Media', {
@@ -128,11 +150,16 @@ MDProject.add({
         autoCleanup: true,
     },
 
+    imageDescriptions: {
+        type: Types.TextArray,
+        note: 'Order must match that of `Projetct Images`.',
+    },
+
     // Resource model reference for files
-    files: {
+    resources: {
         type: Types.Relationship,
         ref: 'Resource',
-        label: 'Project Files',
+        label: 'Project Resources',
         filters: {
             type: 'file',
         },
@@ -144,9 +171,6 @@ MDProject.add({
         type: Types.Relationship,
         ref: 'Publication',
         label: 'Related Publications',
-        filters: {
-            type: 'file',
-        },
         many: true,
         note: 'Will appear in \'Related Publications\' area on individual project page.',
     },
@@ -155,11 +179,6 @@ MDProject.add({
         type: Types.File,
         label: 'Thesis Document',
         storage: azureFile,
-    },
-    partners: {
-        type: Types.Relationship,
-        ref: 'Partner',
-        many: true,
     },
 
 });

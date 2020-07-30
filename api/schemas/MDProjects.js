@@ -8,6 +8,48 @@
  *
  * ==========
  */
+const { model, } = global.keystone.list('MDProject');
+
+const GetAdjacent = async results => {
+    const fields = 'key -_id';
+    // Get one next/prev event from selected event's sortorder
+    const nextProject = model
+        .findOne(
+            {
+                enabled: true,
+                sortOrder: {
+                    $gt: results.sortOrder,
+                },
+            },
+            fields
+        )
+        .limit(1);
+    const prevProject = model
+        .findOne(
+            {
+                enabled: true,
+                sortOrder: {
+                    $lt: results.sortOrder,
+                },
+            },
+            fields
+        )
+        .sort({ sortOrder: -1, })
+        .limit(1);
+
+    const nextPrevResults = {
+        next: await nextProject,
+        prev: await prevProject,
+    };
+
+    // Populate next/prev and output
+    try {
+        const output = Object.assign(nextPrevResults, { project: results, });
+        return output;
+    } catch (err) {
+        throw new Error(err);
+    }
+};
 const MDProjects = {
 
     // TODO: add teamMembers ref field (see api/models/MDProjects.js line 102)
@@ -19,17 +61,40 @@ const MDProjects = {
       date: Date
       name: String!
       byline: String!
+      cohortYear: Filter
       description: String!
       thumb: Image
       indexed: Boolean!
       enabled: Boolean!
       featured: Boolean!
-      customUrl: String
+      problem: String!
+      intervention: String!
+      impact: String!
+      externalLinkUrl: String
+      projectImages: [Image]
+      resources: [Resource]
+      publications: [Publication]
+      pointOfContact: Person
+      thesis: File
+    }
+    type MDProjectResult {
+        project: MDProject
+        prev: MDProject
+        next: MDProject
     }
   `,
-    queries: ['allMDProjectPages: [MDProject]'],
+    queries: ['allMDProjectPages: [MDProject]', 'getMDProject(key: String): MDProjectResult'],
     resolvers: {
-        allMDProjectPages: async () => global.keystone.list('MDProject').model.find({ enabled: true, }).exec(),
+        allMDProjectPages: async () => model.find({ enabled: true, }).populate('cohortYear').exec(),
+        getMDProject: async (parent, args) => {
+            const project = await model.findOne({ key: args.key, })
+                .populate('cohortYear')
+                .populate('resources', 'name url file fileSummary')
+                .populate('publications')
+                .populate('pointOfContact')
+                .exec();
+            return GetAdjacent(project);
+        },
     },
 
 };

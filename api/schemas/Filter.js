@@ -18,6 +18,7 @@ const Filter = {
       category: String!
       appears: String!
       key: String
+      label: String
     }
   `,
     queries: ['allFilters: [Filter], allCohorts: [Filter]'],
