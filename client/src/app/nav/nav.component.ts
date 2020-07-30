@@ -8,6 +8,7 @@ import {
     clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
 import { DataService } from '../utils/data.service';
+import { SearchService } from '../utils/search.service';
 
 import { environment } from '../../environments/environment';
 
@@ -76,7 +77,7 @@ export class NavComponent {
 
     @ViewChild('menuClose') menuBtnClose: ElementRef;
 
-    constructor(private _router: Router, private dataSvc: DataService) {
+    constructor(private _router: Router, private searchService: SearchService) {
         // Get nav route when nav ends
         this._router.events
             .pipe(filter(e => e instanceof NavigationEnd))
@@ -96,9 +97,9 @@ export class NavComponent {
                 }
             });
 
-        this.dataSvc.isLoading.subscribe(value => {
-            this.wasLoading = value;
-        });
+        // this.dataSvc.isLoading.subscribe(value => {
+        //     this.wasLoading = value;
+        // });
 
         this.searchEnabled = environment.searchEnabled;
     }
@@ -130,6 +131,6 @@ export class NavComponent {
     async searchTyping(value: string) {
         if (value.length < 3) return;
 
-        this.searchResults = await this.dataSvc.getSet('search', value);
+        this.searchResults = await this.searchService.search(value);
     }
 }

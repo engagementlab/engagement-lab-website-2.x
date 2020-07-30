@@ -60,6 +60,7 @@ import { RedirectService } from './utils/redirect.service';
 import { ResultComponent } from './nav/result.component';
 import { PersonModalComponent } from './team/person-modal/person-modal.component';
 import { TeamComponent } from './team/team.component';
+import { SearchService } from './utils/search.service';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -118,6 +119,7 @@ export const config: CloudinaryConfiguration = appConfig;
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     providers: [
+        SearchService,
         DataService,
         RedirectService,
         {
@@ -152,4 +154,4 @@ export const config: CloudinaryConfiguration = appConfig;
     ],
     bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
