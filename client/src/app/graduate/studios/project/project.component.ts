@@ -1,12 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/utils/data.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { projects } from 'paper';
-import { response } from 'express';
 
 @Component({
-    selector: 'app-grad-project',
     templateUrl: './project.component.html',
     styleUrls: ['./project.component.scss'],
 })
@@ -16,6 +13,8 @@ export class GraduateProjectComponent implements OnInit {
     public previous: any;
 
     private subscriber: Subscription;
+
+    @ViewChild('slideWrapper') slideWrapper: ElementRef;
 
     constructor(
         private dataSvc: DataService,
@@ -102,4 +101,14 @@ export class GraduateProjectComponent implements OnInit {
     }
 
     ngOnInit(): void {}
+
+    ngOnDestroy(): void {
+        // Cancel router subscribe
+        this.subscriber.unsubscribe();
+    }
+    public moveSlide(dir: number) {
+        this.slideWrapper.nativeElement.style.transform = `translate(${
+            dir > 0 ? '-33%' : '0'
+        })`;
+    }
 }

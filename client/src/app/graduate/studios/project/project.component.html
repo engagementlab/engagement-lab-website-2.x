@@ -54,7 +54,7 @@
         <p>{{ content.impact }}</p>
     </div>
 
-    <div class="column">
+    <div class="column is-offset-1">
         <h3>Project Resources</h3>
         <ul>
             <li *ngFor="let resource of content.resources">
@@ -91,8 +91,42 @@
     </div>
 
     <div id="slideshow" class="column is-full">
-        <div id="wrapper">
-            <div *ngFor="let slide of content.projectImages; let i = index">
+        <div id="controls">
+            <button
+                id="prev"
+                type="button"
+                class="control"
+                aria-label="Button to go to previous page of people in slider"
+                (click)="moveSlide(-1)"
+            >
+                <svg width="32" height="24" fill="none" viewBox="0 0 32 24">
+                    <path
+                        stroke="#000"
+                        stroke-width="2"
+                        d="M31.5 12.191H1.712M12.032 22.5L1.5 12 12.032 1.5"
+                    />
+                </svg>
+            </button>
+            <button
+                id="next"
+                type="button"
+                class="control"
+                (click)="moveSlide(1)"
+            >
+                <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                    <path
+                        stroke="#000"
+                        stroke-width="2"
+                        d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                    />
+                </svg>
+            </button>
+        </div>
+        <div #slideWrapper id="wrapper">
+            <div
+                class="img"
+                *ngFor="let slide of content.projectImages; let i = index"
+            >
                 <cdn-image
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ slide.public_id }}"
@@ -105,5 +139,6 @@
                 <p id="description-{{ i }}"></p>
             </div>
         </div>
+        <div id="overlay"></div>
     </div>
 </section>

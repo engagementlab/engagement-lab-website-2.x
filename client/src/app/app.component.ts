@@ -102,7 +102,7 @@ export class AppComponent implements OnInit {
 
     // Is passed route active?
     subNavitemActive(route: string) {
-        return `/${route}` == this.currentUrl;
+        return this.currentUrl.indexOf(`/${route}`) > -1;
     }
 
     public prepareRouteTransition(outlet: any): void {
