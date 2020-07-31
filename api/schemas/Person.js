@@ -37,7 +37,7 @@ const Person = {
     resolvers: {
         allPeople: async (parent, args) => {
             const query = args.cohortYear ? { cohortYear: args.cohortYear, category: 'Masters', } : {};
-            return global.keystone.list('Person').model.find(query).exec();
+            return global.keystone.list('Person').model.find(query).populate('cohortYear').exec();
         },
         allStaffPeople: async () => global.keystone.list('Person').model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
         allMastersPeople: async () => global.keystone.list('Person').model.find({ category: 'Masters', }).populate('cohortYear').exec(),

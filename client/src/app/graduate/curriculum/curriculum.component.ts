@@ -44,6 +44,9 @@ export class GraduateCurriculumComponent implements OnInit {
                       first
                       last
                   }
+                  cohortYear {
+                      name 
+                  }
                   key
                   image {
                       public_id
