@@ -47,6 +47,7 @@ import { GraduateCurriculumComponent } from './graduate/curriculum/curriculum.co
 import { GraduateAlumniComponent } from './graduate/alumni/alumni.component';
 import { GraduateStudiosComponent } from './graduate/studios/studios.component';
 import { GraduateProjectComponent } from './graduate/studios/project/project.component';
+import { GraduateInfoComponent } from './graduate/info/info.component';
 import { HomeComponent } from './home/home.component';
 import { InitiativeComponent } from './research/initiatives/initiative.component';
 import { JobsComponent } from './jobs/jobs.component';
@@ -89,6 +90,7 @@ export const config: CloudinaryConfiguration = appConfig;
         GraduateAlumniComponent,
         GraduateStudiosComponent,
         GraduateProjectComponent,
+        GraduateInfoComponent,
         HomeComponent,
         JobsComponent,
         InitiativeComponent,

@@ -1,1 +1,24 @@
-<p>info works!</p>
+<section class="columns is-mobile content" *ngIf="content">
+    <div id="left" class="column is-half">
+        <h2>
+            How to apply.
+        </h2>
+
+        <h3 [innerHtml]="content.applicationBlurb.html"></h3>
+    </div>
+    <div class="column">
+        <h1 class="uppercase">Ready to Apply?</h1>
+        <app-button
+            label="{{ content.buttonTxt }}"
+            href="{{ content.applicationLink }}"
+            ariaLabel="Go to page to apply to graduate program"
+        ></app-button>
+        <h1 class="uppercase">Questions?</h1>
+        <p>
+            Please contact
+            <a class="href" routerLink="/people/paul-mihailidis"
+                >Paul Mihailidis</a
+            >.
+        </p>
+    </div>
+</section>

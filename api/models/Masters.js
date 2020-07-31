@@ -59,6 +59,11 @@ Masters.add({
         required: true,
         initial: true,
     },
+    applicationBlurb: {
+        type: Types.Markdown,
+        required: true,
+        initial: true,
+    },
     phases: {
         type: Types.TextArray,
         required: true,

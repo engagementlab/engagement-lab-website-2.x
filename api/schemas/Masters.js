@@ -21,6 +21,8 @@ const Masters = {
       phases: [String]!
       learningObjectives: String!
       studiosBlurb: String!
+      applicationBlurb: Markdown!
+      applicationLink: String!
       buttonTxt: String!
       cohortYear: ID
     }
