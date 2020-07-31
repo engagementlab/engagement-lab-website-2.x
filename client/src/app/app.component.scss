@@ -64,8 +64,10 @@
   height: 500px;
   opacity: 0;
 
+  @include transition(opacity, .4s, ease-in-out);
+
   &.open {
-    animation: open 0.2s ease-in-out 1 both;
+    opacity: 1;
   }
 
   #slides {
@@ -79,6 +81,18 @@
       width: 100%;
       height: 500px;
       margin: 0;
+
+      &:first-child {
+        background-image: cdn-image('DSC00518-2', f_auto, c_fill, w_1900, h_500, q_100, g_center)
+      }
+
+      &:nth-child(2) {
+        background-image: cdn-image('IMG_4375', f_auto, c_fill, w_1900, h_500, q_100, g_center)
+      }
+
+      &:nth-child(3) {
+        background-image: cdn-image('IMG_4346', f_auto, c_fill, w_1900, h_500, q_100, g_center)
+      }
     }
   }
 
