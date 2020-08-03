@@ -59,15 +59,17 @@ const Project = {
     schema: `
         type Project {
             archived: Boolean
+            bgImage: Image
             byline: String
             challengeTxt: String
             customUrl: String
             date: Date
             description: String
             enabled: Boolean
+            endYear: String
             externalLinkUrl: String
             featured: Boolean
-            files: [File]
+            files: [Resource]
             format: Filter
             githubUrl: String
             id: ID!
@@ -75,14 +77,21 @@ const Project = {
             initiatives: [Initiative]
             key: String!
             name: String!
+            partners: [Partner]
+            primaryImage: Image
             principalInvestigator: [String]
-            projectImages: [Image]!
-            projectType: String!
+            projectImages: [Image]
+            primaryImageDescription: String
+            projectLeads: [String]
+            projectType: String
+            publications: [Publication]
             resultsTxt: String!
             showFiles: Boolean
             sortOrder: Int
+            startYear: String!
             status: String
             strategyTxt: String!
+            teamMembers: [String]
         }
         type ProjectResult {
             project: Project
@@ -118,8 +127,10 @@ const Project = {
                 })
                 .populate({
                     path: 'files',
-                    select: 'name file.filetype file.url fileSummary.html',
+                    select: 'name file fileSummary.html',
                 })
+                .populate('partners')
+                .populate('publications')
                 .exec();
             return GetAdjacent(project);
         },

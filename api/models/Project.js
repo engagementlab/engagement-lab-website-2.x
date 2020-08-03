@@ -51,17 +51,6 @@ Project.add({
         label: 'Custom URL',
         note: 'Must be format of "projecturl". Overrides default "/projects/projectname".',
     },
-    principalInvestigator: {
-        type: Types.Relationship,
-        ref: 'Filter',
-        filters: {
-            category: 'Person',
-        },
-        label: 'Principal Investigator(s)',
-        note: 'Appears on the individual project page.',
-        many: true,
-    },
-
     format: {
         type: Types.Relationship,
         ref: 'Filter',
@@ -82,6 +71,16 @@ Project.add({
         many: true,
         note: 'Will classify which initiative(s) this project is sorted under.',
     },
+    // Partner model reference
+    partners: {
+        type: Types.Relationship,
+        label: 'Partner(s)',
+        ref: 'Partner',
+        many: true,
+    },
+},
+
+'Project Information', {
     status: {
         type: Types.Select,
         options: 'Completed, Ongoing',
@@ -89,21 +88,37 @@ Project.add({
         initial: true,
         note: 'Used as a filter on `/research/projects`.',
     },
-},
 
-'Project Information', {
+    startYear: {
+        type: String,
+        required: true,
+        initial: true,
+    },
 
+    endYear: {
+        type: String,
+        dependsOn: {
+            status: 'Completed',
+        },
+    },
+
+    projectLeads: {
+        type: Types.TextArray,
+    },
+    teamMembers: {
+        type: Types.TextArray,
+    },
     challengeTxt: {
         type: Types.Textarea,
-        label: 'Challenge',
+        label: 'Problem Space',
     },
     strategyTxt: {
         type: Types.Textarea,
-        label: 'Strategy + Approach',
+        label: 'Intervention',
     },
     resultsTxt: {
         type: Types.Textarea,
-        label: 'Results',
+        label: 'Social Impact',
     },
 
     externalLinkUrl: {
@@ -122,23 +137,6 @@ Project.add({
 },
 
 'Project Media', {
-    // Images for project page
-    projectImages: {
-        type: Types.CloudinaryImages,
-        folder: 'homepage-2.0/projects',
-        autoCleanup: true,
-        note: 'Images below/above main project info. Please use only high-quality images. To re-order, remove and upload again. **MAX of 3 images**',
-    },
-    // Resource model reference for videos
-    video: {
-        type: Types.Relationship,
-        ref: 'Resource',
-        label: 'Project Videos',
-        filters: {
-            type: 'video',
-        },
-
-    },
     // Resource model reference for files
     files: {
         type: Types.Relationship,
@@ -150,8 +148,48 @@ Project.add({
         many: true,
         note: 'Will appear in \'Downloads\' column on individual project page if "Show Files" ticked.',
     },
-    showFiles: {
-        type: Boolean,
+    publications: {
+        type: Types.Relationship,
+        ref: 'Publication',
+        label: 'Related Publications',
+        many: true,
+    },
+    // Resource model reference for videos
+    video: {
+        type: Types.Relationship,
+        ref: 'Resource',
+        label: 'Project Videos',
+        filters: {
+            type: 'video',
+        },
+        note: '**All images below need to be very high quality.** <br />' +
+         '_Project BG_: Image shown as project background. <br />' +
+         '_Primary Image_: Image shown above `Problem Space`. <br />' +
+         '_Project Images_: Images below main project info. To re-order, remove and upload again.',
+
+    },
+    // Image for project BG
+    bgImage: {
+        type: Types.CloudinaryImage,
+        label: 'Background Image',
+        folder: 'homepage-2.0/projects',
+        autoCleanup: true,
+    },
+    // Image for project BG
+    primaryImage: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/projects',
+        autoCleanup: true,
+    },
+
+    primaryImageDescription: {
+        type: String,
+    },
+    // Images for project page
+    projectImages: {
+        type: Types.CloudinaryImages,
+        folder: 'homepage-2.0/projects',
+        autoCleanup: true,
     },
 
 });
