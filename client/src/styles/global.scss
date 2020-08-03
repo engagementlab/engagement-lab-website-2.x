@@ -32,7 +32,10 @@ body {
   font-family: 'LunchtypeRegular';
   font-size: 18px;
   color: black;
+
   background-size: 100% 101%;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   margin: 0;
 

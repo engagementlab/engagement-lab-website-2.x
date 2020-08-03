@@ -4,6 +4,7 @@ import { ResearchComponent } from './research.component';
 import { ProjectIndexComponent } from './projects/index.component';
 import { PublicationIndexComponent } from './publications/index.component';
 import { InitiativeComponent } from './initiatives/initiative.component';
+import { ProjectComponent } from './projects/project.component';
 
 const routes: Routes = [
     {
@@ -21,6 +22,7 @@ const routes: Routes = [
                 component: ProjectIndexComponent,
                 pathMatch: 'full',
             },
+            { path: 'projects/:key', component: ProjectComponent },
             {
                 path: 'publications',
                 component: PublicationIndexComponent,
@@ -32,9 +34,6 @@ const routes: Routes = [
             },
         ],
     },
-
-    // Child paths
-    // { path: 'projects/:key', redirectTo: 'research/projects/:key' },
 ];
 
 @NgModule({

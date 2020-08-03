@@ -22,33 +22,11 @@ export class ProjectComponent {
 
     public previous: any;
 
-    public themeIndex: number;
-
-    public themeIndexNext: number;
-
-    public themeIndexPrevious: number;
-
-    private themeColors: string[] = [
-        '246, 165, 54',
-        '0, 171, 158',
-        '247, 41, 35',
-    ];
-
     public hidden = true;
 
     public redirecting: boolean;
 
     public projectKey: string;
-
-    private bgEndPerc: number;
-
-    private bgAlpha = 0;
-
-    private alphaInterval: any;
-
-    private bgInterval: any;
-
-    private bgTimeout: any;
 
     private subscriber: Subscription;
 
@@ -76,7 +54,7 @@ export class ProjectComponent {
                 this.projectKey = key;
 
                 setTimeout(() => {
-                    window.location.href = `projects/${key}`;
+                    window.location.href = `/research/projects/${key}`;
                 }, 4200);
                 return;
             }
@@ -91,8 +69,10 @@ export class ProjectComponent {
                             description 
                             externalLinkUrl 
                             files {
-                                url
                                 name
+                                file {
+                                    url
+                                }
                             }
                             githubUrl 
                             image {
@@ -100,7 +80,9 @@ export class ProjectComponent {
                             }
                             key
                             name
-                            name 
+                            bgImage {
+                                public_id
+                            } 
                             projectImages {
                                 public_id
                             } 
@@ -109,6 +91,27 @@ export class ProjectComponent {
                             showFiles
                             sortOrder
                             strategyTxt 
+                            startYear
+                            endYear
+                            partners {
+                                name
+                            }
+                            projectLeads
+                            teamMembers
+                            primaryImage {
+                                public_id
+                            }
+                            primaryImageDescription
+                            publications {
+                                title
+                                key
+                                date
+                                author
+                                blurb
+                                context
+                                downloadUrls
+                                purchaseUrls
+                            }
                         }
                         prev {
                             name
@@ -128,23 +131,12 @@ export class ProjectComponent {
                 query,
             );
             if (content) this.setContent(content['getProject']);
-
-            this.bgAlpha = 0;
-            this.alphaInterval = setInterval(() => {
-                this.bgAlpha += 0.015;
-                if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
-            }, 15);
         });
     }
 
     ngOnDestroy(): void {
         // Reset BG
-        document.body.style.backgroundImage = '';
-
-        // Cancel timers for bg
-        clearInterval(this.alphaInterval);
-        clearInterval(this.bgInterval);
-        clearTimeout(this.bgTimeout);
+        document.getElementById('project-bg').classList.remove('open');
 
         // Cancel router subscribe
         this.subscriber.unsubscribe();
@@ -155,53 +147,12 @@ export class ProjectComponent {
         this.next = data.next;
         this.previous = data.prev;
 
-        this.themeIndex = data.project.sortOrder % 3;
-        if (this.next) this.themeIndexNext = this.next.sortOrder % 3;
-        if (this.previous) {
-            this.themeIndexPrevious = this.previous.sortOrder % 3;
+        // Show dynamic BG image, if any
+        if (this.content.bgImage) {
+            let bodyBg = document.getElementById('project-bg');
+            bodyBg.style.backgroundImage = `url(https://res.cloudinary.com/engagement-lab-home/image/upload/c_fill,f_auto,g_north,h_1110,w_2048/${this.content.bgImage.public_id})`;
+            bodyBg.classList.add('open');
         }
-
-        this.setBgHeight();
-
-        // Fade in
-        this.alphaInterval = setInterval(() => {
-            this.bgAlpha += 0.015;
-            if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
-        }, 15);
-    }
-
-    setBgHeight(): void {
-        // Run every 1ms for 3s for the end of gradient always end at desired % after full page load
-        // This is slightly hacky but the only way to really ensure proper render.
-        this.bgInterval = setInterval(() => {
-            if (
-                this.backgroundEnd === undefined ||
-                this.description === undefined
-            ) {
-                return;
-            }
-
-            const endY =
-                this.backgroundEnd.nativeElement.offsetTop +
-                this.backgroundEnd.nativeElement.offsetHeight;
-            const windowHeight = document.body.clientHeight;
-            this.bgEndPerc = (endY / windowHeight) * 100;
-            const color = this.themeColors[this.themeIndex];
-
-            // Skip bg fade if coming from other project, only adjust height
-            // if (this._dataSvc.previousUrl && this._dataSvc.previousUrl.split('/projects')[1]) {
-            document.body.style.backgroundImage = `linear-gradient(
-                to bottom, 
-                rgba(${color}, ${this.bgAlpha}) 0%, 
-                rgba(${color}, ${this.bgAlpha}) ${this.bgEndPerc}%, 
-                white ${this.bgEndPerc}%, 
-                white 100%)`;
-        }, 1);
-
-        // Cancel soon
-        this.bgTimeout = setTimeout(() => {
-            clearInterval(this.bgInterval);
-        }, 3000);
     }
 
     @HostListener('window:keyup', ['$event'])

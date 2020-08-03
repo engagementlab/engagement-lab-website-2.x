@@ -1,122 +1,59 @@
 @import "~src/styles/_variables";
 
-h2 {
-    // font-size: 1.6em;
-    margin-top: 1%;
-    margin-bottom: 1%;
+#bg {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3%;
+}
+
+h1.sm {
+  font-size: 1.05em;
+}
+
+h3 {
+  font-family: Overpass;
 }
 
 .blurb {
 
-    font-size: 2em;
-    line-height: 1.43;
-    letter-spacing: 0.3px;
+  font-size: 2em;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
 
-    @include mobile-only {
-        font-size: 1.5em;
-        line-height: 1.17;
-        letter-spacing: 0.5px;
-    }
+  @include mobile-only {
+    font-size: 1.5em;
+    line-height: 1.17;
+    letter-spacing: 0.5px;
+  }
 
 }
 
 .description {
 
-    font-size: 1.5em;
-    line-height: 1.43;
-    letter-spacing: 0.3px;
+  font-size: 1.5em;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
 
-    margin-top: 15%;
+  margin-top: 15%;
 
-    @include mobile-only {
-        font-size: 1em;
-        line-height: 1.25;
-        margin-top: 33%;
-    }
+  @include mobile-only {
+    font-size: 1em;
+    line-height: 1.25;
+    margin-top: 33%;
+  }
 
-    h3 {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-        font-size: 1.1em;
-    }
+  h3 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    font-size: 1.1em;
+  }
 
-    .text {
-        font-size: .9em;
-    }
+  .text {
+    font-size: .9em;
+  }
 
 }
 
-#top {
-    padding-bottom: 9%;
-
-    a {
-        overflow-wrap: break-word;
-
-        &:hover:before {
-            animation: hover-white 0.3s ease-in-out 1 both;
-        }
-
-        @keyframes hover-white {
-            0% {
-                top: 100%;
-            }
-
-            100% {
-                top: 51%;
-                background: white;
-            }
-        }
-    }
-}
-
-#bottom {
-    text-align: center;
-}
-
-.listing {
-    margin-top: 10%;
-
-    .item {
-        a:hover {
-
-            &.theme-0 {
-                color: $mango;
-
-                h1,
-                h2 {
-                    color: $mango;
-                }
-
-                hr {
-                    border-color: $mango;
-                }
-
-                svg path {
-                    stroke: $mango;
-                }
-            }
-
-            &.theme-1 {
-                color: $green-blue;
-
-                h1,
-                h2 {
-                    color: $green-blue;
-                }
-
-                hr {
-                    border-color: $green-blue;
-                }
-
-                svg path {
-                    stroke: $green-blue;
-                }
-            }
-        }
-    }
-
-    @include phones {
-        padding: 0.75rem;
-    }
+#primary {
+  padding-top: 6%;
 }
