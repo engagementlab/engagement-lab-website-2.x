@@ -113,6 +113,7 @@ export class NavComponent {
         this.menu.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.add('wasOpened');
         this.menuBg.nativeElement.classList.toggle('open');
+        this.homeLogo.nativeElement.classList.toggle('hide');
     }
 
     // Is passed route active?
