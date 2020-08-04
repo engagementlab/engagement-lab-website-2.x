@@ -10,11 +10,11 @@ fi
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh;
 
 # Client
-bash ./toggledowntime.sh start; 
 cd client; 
 
 nvm use;
 npm i;
+# TODO: Find less hacky fix
 cd node_modules/el-scss;
 npm i;
 cd ../..;
@@ -30,11 +30,7 @@ fi
 pm2 start 'elab-web-client';
 
 # API
-cd content;
+cd ../api;
 nvm use;
 npm i;
 pm2 restart 'elab-web-api';
-
-# Stop downtime page
-cd ../..;
-bash ./toggledowntime.sh stop
