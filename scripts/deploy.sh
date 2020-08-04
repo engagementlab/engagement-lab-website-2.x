@@ -15,6 +15,9 @@ cd client;
 
 nvm use;
 npm i;
+cd node_modules/el-scss;
+npm i;
+cd ../..;
 
 pm2 stop 'elab-web-client'; 
 
