@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/utils/data.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -13,8 +13,6 @@ export class GraduateProjectComponent implements OnInit {
     public previous: any;
 
     private subscriber: Subscription;
-
-    @ViewChild('slideWrapper') slideWrapper: ElementRef;
 
     constructor(
         private dataSvc: DataService,
@@ -70,9 +68,6 @@ export class GraduateProjectComponent implements OnInit {
                         projectImages {
                             public_id 
                         }
-                        projectImages {
-                            public_id
-                        }
                         cohortYear {
                             label
                         }
@@ -105,10 +100,5 @@ export class GraduateProjectComponent implements OnInit {
     ngOnDestroy(): void {
         // Cancel router subscribe
         this.subscriber.unsubscribe();
-    }
-    public moveSlide(dir: number) {
-        this.slideWrapper.nativeElement.style.transform = `translate(${
-            dir > 0 ? '-33%' : '0'
-        })`;
     }
 }

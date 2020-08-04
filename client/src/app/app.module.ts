@@ -51,6 +51,7 @@ import { GraduateInfoComponent } from './graduate/info/info.component';
 import { HomeComponent } from './home/home.component';
 import { InitiativeComponent } from './research/initiatives/initiative.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { JoinPipe } from './utils/join.pipe';
 import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PeopleGridComponent } from './team/people-grid.component';
@@ -64,9 +65,9 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 import { ResultComponent } from './nav/result.component';
 import { PersonModalComponent } from './team/person-modal/person-modal.component';
-import { TeamComponent } from './team/team.component';
 import { PluckPipe } from './utils/pluck.pipe';
-import { JoinPipe } from './utils/join.pipe';
+import { SlideshowComponent } from './utils/slideshow/slideshow.component';
+import { TeamComponent } from './team/team.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -76,8 +77,6 @@ export const config: CloudinaryConfiguration = appConfig;
 @NgModule({
     declarations: [
         AppComponent,
-
-        CdnImageComponent,
 
         // Components
         AboutComponent,
@@ -111,9 +110,11 @@ export const config: CloudinaryConfiguration = appConfig;
         // Utils
         AuthorFormatPipe,
         ButtonComponent,
-        PrettyUrlPipe,
+        CdnImageComponent,
         JoinPipe,
+        PrettyUrlPipe,
         PluckPipe,
+        SlideshowComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'elabHome' }),

@@ -77,6 +77,10 @@
                 *ngFor="let pub of content.publications"
             ></publication>
         </div>
+
+        <div class="column is-full">
+            <slideshow [images]="content.projectImages"></slideshow>
+        </div>
         <!-- <div class="blurb column is-four-fifths-desktop" *ngIf="redirecting">
             Redirecting you to new URL:<br />
             <a href="//elab.emerson.edu/research/projects/{{ projectKey }}"
