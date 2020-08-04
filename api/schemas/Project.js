@@ -107,7 +107,7 @@ const Project = {
         allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, })
             .populate({
                 path: 'initiatives',
-                select: 'key -_id',
+                select: 'key customUrl -_id',
             })
             .sort([['sortOrder', 'ascending']]).exec(),
 
@@ -116,7 +116,7 @@ const Project = {
         allFeaturedProjectPages: async () => model.find({ enabled: true, featured: true, }).exec(),
 
         getProject: async (parent, args) => {
-            const project = await model.findOne({ key: args.key, })
+            const project = await model.findOne({ $or: [{ key: args.key, }, { customUrl: args.key, }], })
                 .populate({
                     path: 'principalInvestigator',
                     select: 'name -_id',
