@@ -60,7 +60,9 @@
         [class.mix]="project.key !== 'dummy'"
     >
         <a
-            routerLink="/projects/{{ project.key }}"
+            routerLink="/projects/{{
+                project.customUrl ? project.customUrl : project.key
+            }}"
             *ngIf="project.key !== 'dummy'"
         >
             <div class="bg">

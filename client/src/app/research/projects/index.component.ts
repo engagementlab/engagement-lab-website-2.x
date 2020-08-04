@@ -40,6 +40,7 @@ export class ProjectIndexComponent implements OnInit {
                 allProjectPages {
                     name
                     key
+                    customUrl
                     image {
                         public_id
                     }
