@@ -1,0 +1,22 @@
+<!-- Studios intro -->
+<section id="intro" class="columns is-mobile" *ngIf="content">
+    <div class="column is-half">
+        <h2>Studios</h2>
+        <h3 class="blurb">{{ content.summary }}</h3>
+    </div>
+</section>
+<section id="partners" class="columns is-multiline is-mobile">
+    <hr />
+    <div class="column is-full">
+        <h1 class="uppercase">
+            Organizations we work with
+        </h1>
+    </div>
+    <div class="column is-3 is-half-mobile" *ngFor="let partner of partners">
+        <cdn-image
+            cloudinaryId="{{ partner.image.public_id }}"
+            width="130"
+            alt="Icon for {{ partner.name }} partner "
+        ></cdn-image>
+    </div>
+</section>

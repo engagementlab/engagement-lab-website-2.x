@@ -26,7 +26,7 @@ interface Link {
 export class NavComponent {
     public navLinks: Link[] = [
         { url: '', label: 'Home', enabled: true },
-        { url: 'studios', label: 'Studios', enabled: false },
+        { url: 'studios', label: 'Studios', enabled: true },
         { url: 'graduate', label: 'Graduate Program', enabled: true },
         { url: 'research', label: 'Research', enabled: true },
         { url: 'people', label: 'People', enabled: false },

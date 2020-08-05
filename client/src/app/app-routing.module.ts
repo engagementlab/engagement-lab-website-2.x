@@ -27,6 +27,12 @@ const routes: Routes = [
     },
 
     {
+        path: 'studios',
+        loadChildren: () =>
+            import('./studios/studios.module').then(m => m.StudiosModule),
+    },
+
+    {
         path: 'research',
         loadChildren: () =>
             import('./research/research.module').then(m => m.ResearchModule),
