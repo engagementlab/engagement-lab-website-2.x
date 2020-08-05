@@ -3,33 +3,27 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { StudiosIndexComponent } from './index/index.component';
-import { CdnImageComponent } from '../utils/cdn-image/cdn-image.component';
+import { StudiosPartnerComponent } from './partner/partner.component';
+import { StudiosGraduateComponent } from './graduate/graduate.component';
+import { StudiosCocurricularComponent } from './cocurricular/cocurricular.component';
 
 const routes: Routes = [
     {
         path: '',
         component: StudiosIndexComponent,
-        children: [
-            {
-                path: '',
-                pathMatch: 'full',
-            },
-            // {
-            //     path: 'projects',
-            //     component: ProjectIndexComponent,
-            //     pathMatch: 'full',
-            // },
-            // { path: 'projects/:key', component: ProjectComponent },
-            // {
-            //     path: 'publications',
-            //     component: PublicationIndexComponent,
-            //     pathMatch: 'full',
-            // },
-            // {
-            //     path: 'initiatives/:key',
-            //     component: InitiativeComponent,
-            // },
-        ],
+    },
+    {
+        path: 'partner',
+        component: StudiosPartnerComponent,
+    },
+    {
+        path: 'thesis',
+        component: StudiosGraduateComponent,
+    },
+    ,
+    {
+        path: 'cocurricular',
+        component: StudiosCocurricularComponent,
     },
 ];
 
@@ -37,5 +31,10 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    declarations: [
+        StudiosPartnerComponent,
+        StudiosGraduateComponent,
+        StudiosCocurricularComponent,
+    ],
 })
 export class StudiosModule {}
