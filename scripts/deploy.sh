@@ -14,10 +14,6 @@ cd client;
 
 nvm use;
 npm i;
-# TODO: Find less hacky fix
-cd node_modules/@engagementlab/el-scss;
-npm i;
-cd ../../..;
 
 pm2 stop 'elab-web-client'; 
 
