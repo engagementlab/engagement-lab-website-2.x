@@ -35,7 +35,7 @@
         "@angular/platform-server": "~9.0.4",
         "@angular/router": "~9.0.4",
         "@engagementlab/el-scss": "latest",
-        "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
+        "@nicky-lenaers/ngx-scroll-to": "^9.0.0",
         "@scullyio/init": "^0.0.28",
         "@scullyio/ng-lib": "latest",
         "@scullyio/scully": "latest",
