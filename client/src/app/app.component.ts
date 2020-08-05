@@ -32,6 +32,7 @@ export const projectTransition = [
 })
 export class AppComponent implements OnInit {
     public isQABuild: boolean;
+    public showStudiosNav: boolean;
     public showResearchNav: boolean;
     public showGradNav: boolean;
 
@@ -63,6 +64,8 @@ export class AppComponent implements OnInit {
                 document.getElementById('initiative-bg').classList.value = '';
             }
 
+            // Show studios nav?
+            this.showStudiosNav = evt.url.includes('studios');
             // Show research nav?
             this.showResearchNav = evt.url.includes('research');
             // Show graduate nav?

@@ -22,6 +22,35 @@
 <div *ngIf="isQABuild === true" id="qa-border"></div>
 <app-nav></app-nav>
 
+<!-- Show on all studios pages -->
+<section class="container desktop" *ngIf="showStudiosNav">
+    <nav id="subnav-studios" class="uppercase subnav flex">
+        <a
+            routerLink="/studios"
+            [class.active]="subNavitemActive('studios')"
+            [attr.aria-label]="'Link to go to studios landing page'"
+            >Studios</a
+        >
+        <a
+            routerLink="/studios/partner"
+            [class.active]="subNavitemActive('studios/partner')"
+            [attr.aria-label]="'Link to go to Partnered Studio page'"
+            >Partnered Studio</a
+        >
+        <a
+            routerLink="/studios/thesis"
+            [class.active]="subNavitemActive('studios/thesis')"
+            [attr.aria-label]="'Link to go to Graduate Thesis Studio page'"
+            >Graduate Thesis Studio</a
+        >
+        <a
+            routerLink="/studios/cocurricular"
+            [class.active]="subNavitemActive('studios/cocurricular')"
+            [attr.aria-label]="'Link to go to Co-Curricular Studio page'"
+            >Co-Curricular Studio</a
+        >
+    </nav>
+</section>
 <!-- Show on all research pages -->
 <nav *ngIf="showResearchNav" id="subnav-research" class="subnav">
     <div class="columns is-mobile uppercase no-margin">
