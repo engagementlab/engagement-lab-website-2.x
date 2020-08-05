@@ -68,6 +68,7 @@ import { PersonModalComponent } from './team/person-modal/person-modal.component
 import { PluckPipe } from './utils/pluck.pipe';
 import { SlideshowComponent } from './utils/slideshow/slideshow.component';
 import { TeamComponent } from './team/team.component';
+import { StudiosIndexComponent } from './studios/index/index.component';
 
 export const cloudinary = {
     Cloudinary: CloudinaryCore,
@@ -105,6 +106,7 @@ export const config: CloudinaryConfiguration = appConfig;
         PublicationIndexComponent,
         RedirectComponent,
         ResultComponent,
+        StudiosIndexComponent,
         TeamComponent,
 
         // Utils

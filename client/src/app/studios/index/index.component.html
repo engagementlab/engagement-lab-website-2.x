@@ -14,7 +14,10 @@
     </div>
     <div class="column is-3 is-half-mobile" *ngFor="let partner of partners">
         <cdn-image
+            cloudinaryPrefix="/"
             cloudinaryId="{{ partner.image.public_id }}"
+            autoFormat="true"
+            [responsive]="false"
             width="130"
             alt="Icon for {{ partner.name }} partner "
         ></cdn-image>

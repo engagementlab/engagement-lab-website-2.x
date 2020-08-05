@@ -34,9 +34,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [CommonModule, CdnImageComponent, RouterModule.forChild(routes)],
+    imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
-    declarations: [StudiosIndexComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class StudiosModule {}
