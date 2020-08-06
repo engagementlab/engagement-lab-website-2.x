@@ -69,6 +69,10 @@ import { PluckPipe } from './utils/pluck.pipe';
 import { SlideshowComponent } from './utils/slideshow/slideshow.component';
 import { TeamComponent } from './team/team.component';
 import { StudiosIndexComponent } from './studios/index/index.component';
+import { StudioComponent } from './studios/studio/studio.component';
+import { StudiosGraduateComponent } from './studios/graduate/graduate.component';
+import { StudiosCocurricularComponent } from './studios/cocurricular/cocurricular.component';
+import { StudiosPartnerComponent } from './studios/partner/partner.component';
 
 export const cloudinary = {
     Cloudinary,
@@ -107,6 +111,10 @@ export const config: CloudinaryConfiguration = appConfig;
         RedirectComponent,
         ResultComponent,
         StudiosIndexComponent,
+        StudioComponent,
+        StudiosGraduateComponent,
+        StudiosCocurricularComponent,
+        StudiosPartnerComponent,
         TeamComponent,
 
         // Utils

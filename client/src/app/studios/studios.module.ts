@@ -5,6 +5,7 @@ import { StudiosIndexComponent } from './index/index.component';
 import { StudiosPartnerComponent } from './partner/partner.component';
 import { StudiosGraduateComponent } from './graduate/graduate.component';
 import { StudiosCocurricularComponent } from './cocurricular/cocurricular.component';
+import { StudioComponent } from './studio/studio.component';
 
 const routes: Routes = [
     {
@@ -23,16 +24,15 @@ const routes: Routes = [
         path: 'cocurricular',
         component: StudiosCocurricularComponent,
     },
+    {
+        path: 'studio/:key',
+        component: StudioComponent,
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    declarations: [
-        StudiosPartnerComponent,
-        StudiosGraduateComponent,
-        StudiosCocurricularComponent,
-    ],
 })
 export class StudiosModule {}

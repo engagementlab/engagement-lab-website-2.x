@@ -30,10 +30,6 @@ export class ProjectComponent {
 
     private subscriber: Subscription;
 
-    @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
-
-    @ViewChild('description') description: ElementRef;
-
     constructor(
         private dataSvc: DataService,
         private route: ActivatedRoute,
