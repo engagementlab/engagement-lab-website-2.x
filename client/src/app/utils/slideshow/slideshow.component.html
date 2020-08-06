@@ -1,4 +1,4 @@
-<div id="controls">
+<!-- <div id="controls">
     <button
         id="prev"
         type="button"
@@ -23,21 +23,18 @@
             />
         </svg>
     </button>
-</div>
+</div> -->
 <div id="slideshow">
-    <div #slideWrapper id="wrapper">
-        <div class="img" *ngFor="let slide of images; let i = index">
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ slide.public_id }}"
-                [autoFormat]="true"
-                [responsive]="true"
-                width="500"
-                [attr.alt]="'Image for ' + title + ' project slideshow'"
-                [attr.aria-describedby]="'description-' + i"
-            ></cdn-image>
-            <p id="description-{{ i }}"></p>
-        </div>
+    <div class="img" *ngFor="let slide of images; let i = index">
+        <cdn-image
+            cloudinaryPrefix="/"
+            cloudinaryId="{{ slide.public_id }}"
+            [autoFormat]="true"
+            [responsive]="true"
+            width="500"
+            [attr.alt]="'Image for ' + title + ' project slideshow'"
+            [attr.aria-describedby]="'description-' + i"
+        ></cdn-image>
+        <p id="description-{{ i }}"></p>
     </div>
-    <div id="overlay"></div>
 </div>
