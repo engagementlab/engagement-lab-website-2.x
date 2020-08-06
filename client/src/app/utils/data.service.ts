@@ -6,10 +6,6 @@ import gql from 'graphql-tag';
 
 import { isScullyGenerated, TransferStateService } from '@scullyio/ng-lib';
 
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
-import 'rxjs/add/observable/of';
 import * as _ from 'underscore';
 
 @Injectable()

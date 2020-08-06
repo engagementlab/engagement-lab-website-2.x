@@ -11,7 +11,7 @@ import { environment } from '../environments/environment';
 
 import { ScullyLibModule } from '@scullyio/ng-lib';
 
-import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
+import { Cloudinary } from 'cloudinary-core';
 import {
     CloudinaryConfiguration,
     CloudinaryModule,
@@ -71,7 +71,7 @@ import { TeamComponent } from './team/team.component';
 import { StudiosIndexComponent } from './studios/index/index.component';
 
 export const cloudinary = {
-    Cloudinary: CloudinaryCore,
+    Cloudinary,
 };
 export const config: CloudinaryConfiguration = appConfig;
 
