@@ -1,0 +1,50 @@
+<section id="bg" *ngIf="content">
+    <div class="columns is-multiline">
+        <h2 class="column is-full">{{ content.name }}</h2>
+        <div class="blurb column is-four-fifths-desktop">
+            {{ content.semester }}
+        </div>
+        <div class="column is-4">
+            <h1 class="uppercase sm">
+                Faculty
+            </h1>
+            <span *ngFor="let person of content.faculty">
+                <a routerLink="/team/{{ person.key }}"
+                    >{{ person.name.first }} {{ person.name.last }}<br /> </a
+            ></span>
+        </div>
+        <div class="column is-4">
+            <h1 class="uppercase sm">
+                Department
+            </h1>
+            {{ content.department }}
+        </div>
+        <div class="column">
+            <h1 class="uppercase sm">
+                Class Sponsor
+            </h1>
+            {{ content.sponsor }}
+        </div>
+        <div class="column is-4">
+            <h1 class="uppercase sm">
+                Students
+            </h1>
+
+            <span *ngFor="let student of content.students">
+                {{ student }}<br />
+            </span>
+        </div>
+        <div class="column is-4">
+            <h1 class="uppercase sm">
+                Related Links
+            </h1>
+
+            <span *ngFor="let link of content.relatedLinks">
+                <a href="{{ link.file.url }}">{{ link.name }}<br /></a>
+            </span>
+        </div>
+        <!-- <div class="column is-full">
+            <slideshow [images]="content.galleryImages"></slideshow>
+        </div> -->
+    </div>
+</section>
