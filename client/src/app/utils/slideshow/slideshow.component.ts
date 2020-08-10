@@ -27,11 +27,13 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
     ngOnInit(): void {}
 
     ngAfterViewInit() {
-        const elem = document.getElementById('slideshow');
-        new Masonry(elem, {
-            itemSelector: '.img',
-            gutter: '.gutter-sizer',
-            percentPosition: true,
-        });
+        setTimeout(() => {
+            const elem = document.getElementById('slideshow');
+            new Masonry(elem, {
+                itemSelector: '.img',
+                gutter: '.gutter-sizer',
+                percentPosition: true,
+            });
+        }, 1000);
     }
 }

@@ -44,7 +44,11 @@
             </span>
         </div>
         <div class="column is-full">
-            <slideshow [images]="content.galleryImages"></slideshow>
+            <slideshow
+                [images]="content.galleryImages"
+                [title]="content.name"
+                [captions]="content.galleryImageCaptions"
+            ></slideshow>
         </div>
     </div>
 </section>
