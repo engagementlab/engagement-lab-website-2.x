@@ -165,26 +165,6 @@ nav {
     font-size: 1.4em;
   }
 
-  &.isOpen {
-    #label {
-      color: white;
-
-      .open {
-        opacity: 0;
-      }
-
-      .close {
-        opacity: 1;
-        @include translate(0%, 0);
-
-        span {
-          opacity: 1;
-          @include translate(0%, 0);
-        }
-      }
-    }
-  }
-
   #label {
     display: flex;
     justify-content: flex-end;
@@ -196,23 +176,24 @@ nav {
 
     .close {
       opacity: 0;
-      @include translate(100%, 0);
-
-      // Only play translation after first open
-      &.wasOpened {
-        @include transition(all,
-          0.7s,
-          cubic-bezier(0.075, 0.82, 0.165, 1));
-      }
+      color: white;
 
       // "Close"
       span {
-        display: inline-block;
+        display: none;
         opacity: 0;
         @include translate(0%, 50%);
         @include transition(all,
-          0.7s,
+          .9s,
           cubic-bezier(0.075, 0.82, 0.165, 1));
+      }
+
+      &.isOpen {
+        opacity: 1;
+
+        span {
+          display: inline-block;
+        }
       }
     }
   }
