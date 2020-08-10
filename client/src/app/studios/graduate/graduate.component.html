@@ -1,1 +1,23 @@
-Coming shortly.
+<!-- Thesis intro -->
+<section id="intro" class="columns is-mobile" *ngIf="content">
+    <div class="column is-half">
+        <h2>Graduate Thesis Studio</h2>
+        <h3 class="blurb">{{ content.gradSummary }}</h3>
+    </div>
+    <div class="column">
+        <cdn-image
+            cloudinaryPrefix="/"
+            cloudinaryId="{{ content.gradSummaryImage.public_id }}"
+            width="900"
+            alt="Graduate Thesis Studio flavor image"
+        ></cdn-image>
+    </div>
+</section>
+<div class="column is-full center">
+    <app-button
+        route="/graduate/studios"
+        label="Read more about Grad Programs"
+        ariaLabel="Button to go to page about Grad Programs"
+        class="medium"
+    ></app-button>
+</div>
