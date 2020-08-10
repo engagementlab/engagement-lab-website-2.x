@@ -13,6 +13,8 @@ const Studios = {
     schema: `
     type StudioIntro {
         summary: String
+        gradSummary: String
+        gradSummaryImage: Image
     }
     type Studio {
       id: ID!

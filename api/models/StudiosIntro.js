@@ -38,6 +38,14 @@ StudiosIntro.add({
     summary: {
         type: Types.Textarea, label: 'Summary Paragraph', required: true, initial: true,
     },
+    gradSummary: {
+        type: Types.Textarea, label: 'Graduate Summary Paragraph', required: true, initial: true,
+    },
+    gradSummaryImage: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+    },
 
 });
 
