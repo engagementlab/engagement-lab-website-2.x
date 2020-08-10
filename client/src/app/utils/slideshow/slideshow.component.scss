@@ -1,9 +1,8 @@
-@import "~src/styles/_variables";
+@import '~src/styles/_variables';
 
-#slideshow {
-
-  display: grid;
-  grid-template-columns: repeat(1, minmax(100px, 1fr));
-  grid-gap: 50px;
-  grid-auto-rows: 0;
+.gutter-sizer {
+    width: 5%;
+}
+.img {
+    width: 45%;
 }

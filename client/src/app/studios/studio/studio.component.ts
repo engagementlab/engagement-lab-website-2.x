@@ -100,8 +100,6 @@ export class StudioComponent {
         // Show dynamic BG image, if any
         if (this.content.bgImage) {
             let bodyBg = document.getElementById('project-bg');
-            debugger;
-
             bodyBg.style.backgroundImage = `url(https://res.cloudinary.com/engagement-lab-home/image/upload/c_fill,f_auto,g_north,h_1110,w_2048/${this.content.bgImage.public_id})`;
             bodyBg.classList.add('open');
         }

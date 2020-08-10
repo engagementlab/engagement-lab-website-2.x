@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 
 import isMobile from 'ismobilejs';
+import Masonry from 'masonry-layout';
 
 interface Image {
     public_id: string;
@@ -20,27 +21,17 @@ interface Image {
 })
 export class SlideshowComponent implements OnInit, AfterViewInit {
     @Input() images: Image[];
+    @Input() captions: string[];
     @Input() title: string;
-    @ViewChild('slideWrapper') slideWrapper: ElementRef;
-
-    private isMobile: boolean;
-    private wrapperWidth: number;
-    private currentSlide: number = 0;
-
-    constructor() {
-        this.isMobile = isMobile(window.navigator).phone;
-    }
 
     ngOnInit(): void {}
 
     ngAfterViewInit() {
-        this.wrapperWidth = this.images.length * (isMobile ? 80 : 47);
-        this.slideWrapper.nativeElement.style.width = `${this.wrapperWidth}%`;
-    }
-
-    public moveSlide(dir: number) {
-        this.currentSlide += dir;
-        this.slideWrapper.nativeElement.style.transform = `translate(-${this
-            .currentSlide * (isMobile ? 16 : 33)}%)`;
+        const elem = document.getElementById('slideshow');
+        new Masonry(elem, {
+            itemSelector: '.img',
+            gutter: '.gutter-sizer',
+            percentPosition: true,
+        });
     }
 }
