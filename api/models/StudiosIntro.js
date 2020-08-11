@@ -38,6 +38,47 @@ StudiosIntro.add({
     summary: {
         type: Types.Textarea, label: 'Summary Paragraph', required: true, initial: true,
     },
+    partneredStudiosThumbnail: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+    },
+    graduateThesisThumbnail: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+    },
+    cocurricularThumbnail: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+    },
+},
+
+'Partnered Studios', {
+    partneredSummary: {
+        type: Types.Textarea, label: 'Summary Paragraph', required: true, initial: true,
+    },
+    partneredCurriculum: {
+        type: Types.Textarea, label: 'Curricurlum Paragraph', required: true, initial: true,
+    },
+    partneredSummaryImage: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+    },
+    currentPartneredStudios: {
+        type: Types.Relationship,
+        ref: 'Studio',
+        many: true,
+    },
+    previousPartneredStudios: {
+        type: Types.Relationship,
+        ref: 'Studio',
+        many: true,
+    },
+},
+'Graduate Thesis Studio', {
     gradSummary: {
         type: Types.Textarea, label: 'Graduate Summary Paragraph', required: true, initial: true,
     },
@@ -46,7 +87,29 @@ StudiosIntro.add({
         folder: 'homepage-2.0/studios',
         autoCleanup: true,
     },
-
+},
+'Co-curricular Studio', {
+    coCurricularSummary: {
+        type: Types.Textarea, label: 'Summary Paragraph', required: true, initial: true,
+    },
+    coCurricularSummaryImage: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+        label: 'Co-curricular Studio Summary Image',
+    },
+    coCurricularPhases: {
+        type: Types.TextArray,
+        required: true,
+        initial: true,
+        label: 'Co-curricular Phases',
+    },
+    currentCoCurricularStudios: {
+        type: Types.Relationship,
+        label: 'Current Studios',
+        ref: 'Studio',
+        many: true,
+    },
 });
 
 /**

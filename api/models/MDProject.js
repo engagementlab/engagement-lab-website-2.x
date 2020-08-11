@@ -163,7 +163,7 @@ MDProject.add({
         label: 'Please read!',
         noedit: true,
         note: '**All images below need to be very high quality.** <br />' +
-        '_Thumbnail Image_: Image shown as thumb in listinig. <br />' +
+        '_Thumbnail Image_: Image shown as thumb in listings. <br />' +
         '_Background Image_: Image shown as project background. <br />' +
         '_Primary Image_: Image shown above body text. <br />' +
         '_Project Images_: Images below main project info. To re-order, remove and upload again. <br />' +

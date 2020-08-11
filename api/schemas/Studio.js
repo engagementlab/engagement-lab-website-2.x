@@ -13,8 +13,20 @@ const Studios = {
     schema: `
     type StudioIntro {
         summary: String
+        partneredStudiosThumbnail: Image
+        graduateThesisThumbnail: Image
+        cocurricularThumbnail: Image
+        partneredSummary: String
+        partneredCurriculum: String
+        partneredSummaryImage: Image
+        currentPartneredStudios: [Studio]
+        previousPartneredStudios: [Studio]
         gradSummary: String
         gradSummaryImage: Image
+        coCurricularSummary: String
+        coCurricularSummaryImage: Image
+        coCurricularPhases: [String]
+        currentCoCurricularStudios: [Studio]
     }
     type Studio {
       id: ID!
@@ -34,6 +46,7 @@ const Studios = {
       introduction: Markdown!
       impact: Markdown!
       roles: Markdown!
+      thumb: Image
       bgImage: Image
       galleryImages: [Image]
       galleryImageCaptions: [String]
@@ -59,7 +72,17 @@ const Studios = {
             // return GetAdjacent(project);
             return res;
         },
-        studiosIntro: async () => global.keystone.list('StudiosIntro').model.findOne({}).exec(),
+        studiosIntro: async () => global.keystone.list('StudiosIntro').model.findOne({})
+            .populate({
+                path: 'currentPartneredStudios',
+                populate: {
+                    path: 'faculty',
+                    model: 'Person',
+                },
+            })
+            .populate('previousPartneredStudios')
+            .populate('currentCoCurricularStudios')
+            .exec(),
     },
 
 };
