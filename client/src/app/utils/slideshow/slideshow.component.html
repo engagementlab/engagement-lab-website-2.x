@@ -14,6 +14,7 @@
             id="description-{{ i }}"
             [class.hidden]="captions[i] === '#'"
             class="desc medium"
+            *ngIf="captions && captions[i]"
         >
             {{
                 captions[i] !== '#'
