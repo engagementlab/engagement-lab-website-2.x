@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/utils/data.service';
 
 @Component({
     selector: 'app-cocurricular',
@@ -6,7 +7,39 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./cocurricular.component.scss'],
 })
 export class StudiosCocurricularComponent implements OnInit {
-    constructor() {}
+    public content: any;
 
-    ngOnInit(): void {}
+    constructor(private dataSvc: DataService) {}
+
+    async ngOnInit(): Promise<void> {
+        const query = `
+          {
+            studiosIntro {
+                coCurricularSummary
+                coCurricularSummaryImage
+                {
+                    public_id
+                }
+                coCurricularPhases
+                currentCoCurricularStudios
+                {
+                    department
+                    sponsor
+                    faculty {
+                        name {
+                            first
+                            last
+                        }
+                    }
+                }
+            }
+          }
+      `;
+        const response = await this.dataSvc.getSetWithKey(
+            'studios',
+            'cocurricular',
+            query,
+        );
+        this.content = response['studiosIntro'];
+    }
 }

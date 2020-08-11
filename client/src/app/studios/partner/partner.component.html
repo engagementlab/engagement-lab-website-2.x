@@ -1,1 +1,58 @@
-Coming shortly.
+<!-- Partnered studios intro -->
+<section *ngIf="content">
+    <div id="intro" class="columns is-mobile">
+        <div class="column is-half">
+            <h2>Partnered Studio</h2>
+            <h3 class="blurb">{{ content.partneredSummary }}</h3>
+        </div>
+        <div class="column">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.partneredSummaryImage.public_id }}"
+                width="900"
+                [autoFormat]="true"
+                [responsive]="true"
+                alt="Partnered Studio flavor image"
+            ></cdn-image>
+        </div>
+    </div>
+    <div class="columns is-mobile">
+        <div class="column is-full">
+            <h1 class="uppercase sm">Curriculum</h1>
+            <h3 class="blurb">
+                {{ content.partneredCurriculum }}
+            </h3>
+        </div>
+    </div>
+    <div class="columns is-mobile is-multiline">
+        <div class="column is-full">
+            <hr class="thick" />
+            <h1 class="uppercase sm">Current Studios</h1>
+        </div>
+
+        <div
+            class="column is-half is-full-mobile studios"
+            *ngFor="let studio of content.currentPartneredStudios"
+        >
+            <a routerLink="/studios/studio/{{ studio.key }}">
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ studio.thumb.public_id }}"
+                    width="301"
+                    autoFormat="true"
+                    [responsive]="true"
+                    [alt]="'Thumbnail image for project' + studio.name"
+                ></cdn-image>
+                <h3 class="blurb">{{ studio.name }}</h3>
+                <h1 class="uppercase sm no-margin">Sponsor</h1>
+                <span>{{ studio.sponsor }}</span>
+                <h1 class="uppercase sm no-margin">Department</h1>
+                <span>{{ studio.department }}</span>
+                <h1 class="uppercase sm no-margin">Faculty</h1>
+                <span *ngFor="let person of studio.faculty"
+                    >{{ person.name.first }} {{ person.name.last }}<br
+                /></span>
+            </a>
+        </div>
+    </div>
+</section>
