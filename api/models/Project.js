@@ -146,7 +146,6 @@ Project.add({
             type: 'file',
         },
         many: true,
-        note: 'Will appear in \'Downloads\' column on individual project page if "Show Files" ticked.',
     },
     publications: {
         type: Types.Relationship,
@@ -175,7 +174,6 @@ Project.add({
         folder: 'homepage-2.0/projects',
         autoCleanup: true,
     },
-    // Image for project BG
     primaryImage: {
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/projects',

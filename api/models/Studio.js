@@ -130,6 +130,7 @@ Studio.add(
             noedit: true,
             note: '**All images below need to be very high quality.** <br />' +
          '_Background Image_: Image shown as studio background. <br />' +
+         '_Primary Image_: Image shown above intro. <br />' +
          '_Gallery Images_: Images below main studio info. To re-order, remove and upload again. <br />' +
          '_Image Captions_: Please specify in order of images. If an image has no caption, enter **#** in text field.',
 
@@ -140,6 +141,14 @@ Studio.add(
             label: 'Background Image',
             folder: 'homepage-2.0/studios',
             autoCleanup: true,
+        },
+        primaryImage: {
+            type: Types.CloudinaryImage,
+            folder: 'homepage-2.0/studios',
+            autoCleanup: true,
+        },
+        primaryImageDescription: {
+            type: String,
         },
         // Images for studio gallery
         galleryImages: {

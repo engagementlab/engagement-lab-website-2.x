@@ -29,7 +29,7 @@ const Studios = {
       sponsor: String
       students: [String]
       relatedLinks: [Resource]
-      collaborator: [String]
+      collaborators: [String]
       contact: String
       introduction: Markdown!
       impact: Markdown!
@@ -37,6 +37,8 @@ const Studios = {
       bgImage: Image
       galleryImages: [Image]
       galleryImageCaptions: [String]
+      primaryImage: Image
+      primaryImageDescription: String
     }
   `,
     queries: ['allStudios: [Studio], getStudio(key: String): Studio, studiosIntro: StudioIntro'],

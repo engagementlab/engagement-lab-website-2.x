@@ -81,26 +81,21 @@ MDProject.add({
         label: 'Featured',
         note: 'Determines if this project appears on the home page.',
     }, */
-    thumb: {
-        type: Types.CloudinaryImage,
-        label: 'Thumbnail Image',
-        folder: 'homepage-2.0/listings',
-        autoCleanup: true,
-    },
     customUrl: {
         type: String,
         label: 'Custom URL',
         note: 'Must be format of "project-url". Overrides default "/masters/projects/project-name".',
     },
-
-    teamMembers: {
-        type: Types.TextArray,
-        label: 'Team Member(s)',
-        many: true,
-    },
 },
 
 'Project Information', {
+
+    teamMembers: {
+        type: Types.Relationship,
+        label: 'Team Member(s)',
+        ref: 'Person',
+        many: true,
+    },
 
     problem: {
         type: Types.Textarea,
@@ -142,7 +137,29 @@ MDProject.add({
 },
 
 'Project Media', {
-
+    instructions: {
+        type: String,
+        label: 'Please read!',
+        noedit: true,
+        note: '**All images below need to be very high quality.** <br />' +
+        '_Thumbnail Image_: Image shown as thumb in listinig. <br />' +
+        '_Background Image_: Image shown as project background. <br />' +
+        '_Project Images_: Images below main project info. To re-order, remove and upload again. <br />' +
+        '_Image Captions_: Please specify in order of images. If an image has no caption, enter **#** in text field.',
+    },
+    thumb: {
+        type: Types.CloudinaryImage,
+        label: 'Thumbnail Image',
+        folder: 'homepage-2.0/listings',
+        autoCleanup: true,
+    },
+    // Image for studio BG
+    bgImage: {
+        type: Types.CloudinaryImage,
+        label: 'Background Image',
+        folder: 'homepage-2.0/masters/project',
+        autoCleanup: true,
+    },
     // Images for project page
     projectImages: {
         type: Types.CloudinaryImages,
@@ -152,27 +169,20 @@ MDProject.add({
 
     imageDescriptions: {
         type: Types.TextArray,
-        note: 'Order must match that of `Projetct Images`.',
+        note: 'Please specify in order of images. If an image has no caption, enter **#** in text field.',
+
     },
 
     // Resource model reference for files
     resources: {
         type: Types.Relationship,
         ref: 'Resource',
-        label: 'Project Resources',
+        label: 'Project Resources/Links',
         filters: {
             type: 'file',
         },
         many: true,
-        note: 'Will appear in \'Resources\' area on individual project page.',
-    },
-
-    publications: {
-        type: Types.Relationship,
-        ref: 'Publication',
-        label: 'Related Publications',
-        many: true,
-        note: 'Will appear in \'Related Publications\' area on individual project page.',
+        note: 'Will appear in \'Related Links\' area on individual project page.',
     },
 
     thesis: {
