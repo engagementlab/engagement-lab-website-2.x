@@ -1,95 +1,72 @@
-<section id="header" class="columns is-mobile is-multiline" *ngIf="content">
-    <div class="column is-half is-full-mobile">
-        <cdn-image
-            cloudinaryPrefix="/"
-            cloudinaryId="{{ content.thumb.public_id }}"
-            autoFormat="true"
-            [responsive]="true"
-            height="350"
-            alt="Main heading image for '{{ content.name }}' project"
-        ></cdn-image>
-    </div>
-
-    <div class="column">
-        <h2>
-            {{ content.name }}
-        </h2>
-        <p>{{ content.cohortYear.label }}</p>
-        <p *ngIf="content.externalLinkUrl">
-            <a
-                href="{{ content.externalLinkUrl }}"
-                class="href"
-                [attr.aria-label]="
-                    'External website link for ' +
-                    content.name +
-                    ' thesis project'
-                "
-                >{{ content.externalLinkUrl }}</a
-            >
-        </p>
-        <p *ngIf="content.thesis">
-            <svg viewBox="0 0 44 31.59" width="44" height="31.59" fill="none">
-                <path
-                    stroke-width="2"
-                    d="M 3.576 14.809 L 33.364 14.809 M 23.044 4.5 L 33.576 15 L 23.044 25.5"
-                    style="stroke: rgb(0, 0, 0);"
-                    transform="matrix(0, 1, -1, 0, 33.576, -3.576)"
-                ></path>
-            </svg>
-            <a href="{{ content.thesis.url }}" class="href">Download Thesis</a>
-        </p>
-    </div>
-</section>
-<section
-    id="info"
-    class="columns is-mobile is-multiline content"
-    *ngIf="content"
->
-    <div class="column is-half is-full-mobile">
-        <h3>Problem Space</h3>
-        <p>{{ content.problem }}</p>
-        <h3>Proposed Intervention</h3>
-        <p>{{ content.intervention }}</p>
-        <h3>Social Impact</h3>
-        <p>{{ content.impact }}</p>
-    </div>
-
-    <div class="column is-offset-1">
-        <h3>Project Resources</h3>
-        <ul>
-            <li *ngFor="let resource of content.resources">
-                <a
-                    href="{{ resource.url }}"
-                    class="href"
-                    [attr.aria-label]="
-                        'Link for ' + resource.name + ' project resource'
-                    "
-                    >{{ resource.name }}</a
+<section id="bg" *ngIf="content">
+    <div class="columns is-multiline">
+        <div class="blurb column is-four-fifths-desktop">
+            {{ content.startYear }} -
+            <span *ngIf="!content.endYear">Present</span
+            ><span *ngIf="content.endYear">{{ content.endYear }}</span>
+            <br />
+            <a href="{{ content?.externalLinkUrl }}" role="link">{{
+                content?.externalLinkUrl | prettyUrl
+            }}</a>
+        </div>
+        <div class="column is-4" *ngIf="content.partners">
+            <h1 class="uppercase sm">
+                Partner Organization<span *ngIf="content?.partners.length > 1"
+                    >s</span
                 >
-            </li>
-        </ul>
-        <h3>Related Publications</h3>
-        <li *ngFor="let publication of content.publications">
-            <publication [pub]="publication" [projectView]="true"></publication>
-        </li>
-        <h3>Questions?</h3>
-        <p>
-            Point of Contact:
-            <a
-                class="href"
-                [routerLink]="'/people/' + content.pointOfContact.key"
-                [attr.aria-label]="
-                    'Link for person page for ' +
-                    content.pointOfContact.name.first +
-                    ' ' +
-                    content.pointOfContact.name.last
-                "
-                >{{ content.pointOfContact.name.first }}
-                {{ content.pointOfContact.name.last }}</a
-            >
-        </p>
-    </div>
-    <div class="column is-full">
-        <slideshow [images]="content.projectImages"></slideshow>
+            </h1>
+            <span *ngFor="let partner of content?.partners"
+                >{{ partner.name }}<br
+            /></span>
+        </div>
+        <div class="column is-4" *ngIf="content.partners">
+            <h1 class="uppercase sm">
+                Project Leads
+            </h1>
+            <span *ngFor="let person of content?.projectLeads"
+                >{{ person }}<br
+            /></span>
+        </div>
+        <div class="column" *ngIf="content.files">
+            <h1 class="uppercase sm">
+                Resources
+            </h1>
+            <span *ngFor="let resource of content.files"
+                ><a href="{{ resource.file.url }}">{{ resource.name }}</a
+                ><br
+            /></span>
+        </div>
+        <div class="column is-4" *ngIf="content.teamMembers">
+            <h1 class="uppercase sm/">
+                Team Members
+            </h1>
+            <span *ngFor="let person of content?.teamMembers"
+                >{{ person }}<br
+            /></span>
+        </div>
+        <div class="column" id="primary">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.primaryImage.public_id }}"
+                autoFormat="true"
+                [responsive]="true"
+                width="1080"
+                alt="Primary Image for '{{ content.name }}' project"
+                *ngIf="content.primaryImage"
+            ></cdn-image>
+            <span *ngIf="content.primaryImageDescription">{{
+                content.primaryImageDescription
+            }}</span>
+
+            <h1 class="uppercase">Problem Space</h1>
+            <p>{{ content.challengeTxt }}</p>
+            <h1 class="uppercase">Proposed Intervention</h1>
+            <p>{{ content.strategyTxt }}</p>
+            <h1 class="uppercase">Social Impact</h1>
+            <p>{{ content.resultsTxt }}</p>
+        </div>
+        <div class="column is-full">
+            <slideshow [images]="content.projectImages"></slideshow>
+        </div>
     </div>
 </section>

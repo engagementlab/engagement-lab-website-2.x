@@ -52,7 +52,7 @@ export class StudioComponent {
                           url
                       }
                   }
-                  collaborator
+                  collaborators
                   contact
                   introduction {
                       html
@@ -70,6 +70,10 @@ export class StudioComponent {
                       public_id
                   }
                   galleryImageCaptions
+                  primaryImage {
+                    public_id
+                  }
+                  primaryImageDescription
                  
                 }
             }

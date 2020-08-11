@@ -43,6 +43,41 @@
                 <a href="{{ link.file.url }}">{{ link.name }}<br /></a>
             </span>
         </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-4">
+            <h1 class="uppercase sm">
+                Collaborators
+            </h1>
+            <span *ngFor="let collaborator of content.collaborators">
+                {{ collaborator }}<br
+            /></span>
+            <h1 class="uppercase sm">
+                Contact
+            </h1>
+            <span>{{ content.contact }}</span>
+        </div>
+        <div class="column is-9">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.primaryImage.public_id }}"
+                width="1044"
+                [autoFormat]="true"
+                [responsive]="true"
+                [alt]="'Primary image for ' + content.name + ' thesis page.'"
+                [describedby]="'primary-caption'"
+            ></cdn-image>
+            <p id="primary-caption">{{ content.primaryImageDescription }}</p>
+        </div>
+    </div>
+
+    <div class="columns is-multiline">
+        <div class="column is-4"></div>
+        <div class="column">
+            <h1 class="uppercase">Introduction</h1>
+            <p [innerHtml]="content.introduction.html"></p>
+        </div>
         <div class="column is-full">
             <slideshow
                 [images]="content.galleryImages"
