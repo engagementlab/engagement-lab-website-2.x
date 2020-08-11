@@ -96,6 +96,45 @@ MDProject.add({
         ref: 'Person',
         many: true,
     },
+    faculty: {
+        type: Types.Relationship,
+        required: true,
+        initial: true,
+        ref: 'Person',
+        label: 'Advisor',
+        filters: {
+            type: ['faculty leadership', 'faculty fellows'],
+        },
+    },
+
+    partners: {
+        type: Types.Relationship,
+        ref: 'Partner',
+        many: true,
+    },
+
+    // Resource model reference for files
+    resources: {
+        type: Types.Relationship,
+        ref: 'Resource',
+        label: 'Project Resources/Links',
+        filters: {
+            type: 'file',
+        },
+        many: true,
+        note: 'Will appear in \'Related Links\' area on individual project page.',
+    },
+
+    thesis: {
+        type: Types.File,
+        label: 'Thesis Document',
+        storage: azureFile,
+    },
+
+    pointOfContact: {
+        type: Types.Relationship,
+        ref: 'Person',
+    },
 
     problem: {
         type: Types.Textarea,
@@ -116,24 +155,6 @@ MDProject.add({
         required: true,
     },
 
-    externalLinkUrl: {
-        type: Types.Url,
-        label: 'Project Website URL',
-        validate: urlValidator,
-        note: 'Must be in format "http://www.something.org" <br> Appears on the individual project page.',
-    },
-
-    partners: {
-        type: Types.Relationship,
-        ref: 'Partner',
-        many: true,
-    },
-
-    pointOfContact: {
-        type: Types.Relationship,
-        ref: 'Person',
-    },
-
 },
 
 'Project Media', {
@@ -144,6 +165,7 @@ MDProject.add({
         note: '**All images below need to be very high quality.** <br />' +
         '_Thumbnail Image_: Image shown as thumb in listinig. <br />' +
         '_Background Image_: Image shown as project background. <br />' +
+        '_Primary Image_: Image shown above body text. <br />' +
         '_Project Images_: Images below main project info. To re-order, remove and upload again. <br />' +
         '_Image Captions_: Please specify in order of images. If an image has no caption, enter **#** in text field.',
     },
@@ -160,35 +182,22 @@ MDProject.add({
         folder: 'homepage-2.0/masters/project',
         autoCleanup: true,
     },
+    primaryImage: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/masters/project',
+        autoCleanup: true,
+    },
+    primaryImageDescription: {
+        type: String,
+    },
     // Images for project page
     projectImages: {
         type: Types.CloudinaryImages,
         folder: 'homepage-2.0/masters/project',
         autoCleanup: true,
     },
-
     imageDescriptions: {
         type: Types.TextArray,
-        note: 'Please specify in order of images. If an image has no caption, enter **#** in text field.',
-
-    },
-
-    // Resource model reference for files
-    resources: {
-        type: Types.Relationship,
-        ref: 'Resource',
-        label: 'Project Resources/Links',
-        filters: {
-            type: 'file',
-        },
-        many: true,
-        note: 'Will appear in \'Related Links\' area on individual project page.',
-    },
-
-    thesis: {
-        type: Types.File,
-        label: 'Thesis Document',
-        storage: azureFile,
     },
 
 });

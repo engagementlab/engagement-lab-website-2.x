@@ -64,18 +64,22 @@ const MDProjects = {
       cohortYear: Filter
       description: String!
       thumb: Image
+      faculty: Person
       indexed: Boolean!
       enabled: Boolean!
       featured: Boolean!
       problem: String!
       intervention: String!
       impact: String!
-      externalLinkUrl: String
       projectImages: [Image]
       resources: [Resource]
       publications: [Publication]
       pointOfContact: Person
       thesis: File
+      primaryImage: Image
+      primaryImageDescription: String
+      partners: [Partner]
+      bgImage: Image
     }
     type MDProjectResult {
         project: MDProject
@@ -89,9 +93,15 @@ const MDProjects = {
         getMDProject: async (parent, args) => {
             const project = await model.findOne({ key: args.key, })
                 .populate('cohortYear')
-                .populate('resources', 'name url file fileSummary')
                 .populate('publications')
                 .populate('pointOfContact')
+                .populate('partners')
+                .populate('thesis')
+                .populate('resources', 'name url file')
+                .populate({
+                    path: 'faculty',
+                    select: 'key name -_id',
+                })
                 .exec();
             return GetAdjacent(project);
         },
