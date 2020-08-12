@@ -26,11 +26,12 @@ printf "\n\n\n${LC}----> If you are prompted to download Command Line Tools (CLT
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install mongodb-community;
+brew install mongodb/brew/mongodb-database-tools;
 sudo chown -R `id -un` /data/db;
 brew services start mongodb-community;
 
 printf "${YELLOW}-> Trying to create local database from most recent dump.${NC}\n"
-for filename in ./bin/db/*.json; do mongoimport -d engagement-lab-test --type json --file $filename; done
+for filename in ./bin/db/*.json; do mongoimport -d engagement-lab --type json --file $filename; done
 
 printf "${YELLOW}-> Trying to self-install nvm.${NC}\n"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
@@ -54,9 +55,14 @@ npm i;
 
 printf "${YELLOW}-> Trying to setup client app.${NC}\n"
 cd ../client;
+
 nvm use;
 npm i;
 npm i -g npm-run-all;
 npm i -g nodemon;
+npm i -g @angular/cli;
+
+printf "${YELLOW}-> Disabling Angular CLI analytics.${NC}\n"
+ng analytics off;
 
 printf "${YELLOW}:) This repo should be ready to go. ${NC}\n -> Please run ${LC}chmod 777 ./app.sh && ./app.sh${NC}\nAfter a little bit, the client shold be available at http://localhost:4200/\n"
