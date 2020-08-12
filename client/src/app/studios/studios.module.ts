@@ -6,6 +6,7 @@ import { StudiosPartnerComponent } from './partner/partner.component';
 import { StudiosGraduateComponent } from './graduate/graduate.component';
 import { StudiosCocurricularComponent } from './cocurricular/cocurricular.component';
 import { StudioComponent } from './studio/studio.component';
+import { StudioThumbComponent } from './studio/thumb/thumb.component';
 
 const routes: Routes = [
     {
@@ -34,5 +35,6 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    declarations: [],
 })
 export class StudiosModule {}

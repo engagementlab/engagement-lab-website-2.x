@@ -28,31 +28,40 @@
         <div class="column is-full">
             <hr class="thick" />
             <h1 class="uppercase sm">Current Studios</h1>
-        </div>
 
+            <h4
+                *ngIf="
+                    !content.currentPartneredStudios ||
+                    content.currentPartneredStudios.length < 1
+                "
+            >
+                None, for now!
+            </h4>
+        </div>
         <div
             class="column is-half is-full-mobile studios"
             *ngFor="let studio of content.currentPartneredStudios"
         >
-            <a routerLink="/studios/studio/{{ studio.key }}">
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{ studio.thumb.public_id }}"
-                    width="301"
-                    autoFormat="true"
-                    [responsive]="true"
-                    [alt]="'Thumbnail image for project' + studio.name"
-                ></cdn-image>
-                <h3 class="blurb">{{ studio.name }}</h3>
-                <h1 class="uppercase sm no-margin">Sponsor</h1>
-                <span>{{ studio.sponsor }}</span>
-                <h1 class="uppercase sm no-margin">Department</h1>
-                <span>{{ studio.department }}</span>
-                <h1 class="uppercase sm no-margin">Faculty</h1>
-                <span *ngFor="let person of studio.faculty"
-                    >{{ person.name.first }} {{ person.name.last }}<br
-                /></span>
-            </a>
+            <studio-thumb [studio]="studio"></studio-thumb>
+        </div>
+        <div class="column is-full">
+            <hr class="thick" />
+            <h1 class="uppercase sm">Previous Partnered Studios</h1>
+            <h4
+                *ngIf="
+                    !content.previousPartneredStudios ||
+                    content.previousPartneredStudios.length < 1
+                "
+            >
+                None, for now!
+            </h4>
+        </div>
+
+        <div
+            class="column is-half is-full-mobile studios"
+            *ngFor="let studio of content.previousPartneredStudios"
+        >
+            <studio-thumb [studio]="studio"></studio-thumb>
         </div>
     </div>
 </section>

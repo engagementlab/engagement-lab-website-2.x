@@ -73,6 +73,7 @@ import { StudioComponent } from './studios/studio/studio.component';
 import { StudiosGraduateComponent } from './studios/graduate/graduate.component';
 import { StudiosCocurricularComponent } from './studios/cocurricular/cocurricular.component';
 import { StudiosPartnerComponent } from './studios/partner/partner.component';
+import { StudioThumbComponent } from './studios/studio/thumb/thumb.component';
 
 export const cloudinary = {
     Cloudinary,
@@ -115,6 +116,7 @@ export const config: CloudinaryConfiguration = appConfig;
         StudiosGraduateComponent,
         StudiosCocurricularComponent,
         StudiosPartnerComponent,
+        StudioThumbComponent,
         TeamComponent,
 
         // Utils
