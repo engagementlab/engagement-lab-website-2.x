@@ -56,5 +56,6 @@ cd ../client;
 nvm use;
 npm i;
 npm i -g npm-run-all;
+npm i -g nodemon;
 
 printf "${YELLOW}:) This repo should be ready to go. ${NC}\n -> Please run ${LC}chmod 777 ./app.sh && ./app.sh${NC}\nAfter a little bit, the client shold be available at http://localhost:4200/\n"
