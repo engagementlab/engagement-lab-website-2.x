@@ -65,7 +65,8 @@ export class AppComponent implements OnInit {
             }
 
             // Show studios nav?
-            this.showStudiosNav = evt.url.includes('studios');
+            this.showStudiosNav =
+                evt.url.includes('studios') && !evt.url.includes('graduate');
             // Show research nav?
             this.showResearchNav = evt.url.includes('research');
             // Show graduate nav?
@@ -105,7 +106,7 @@ export class AppComponent implements OnInit {
 
     // Is passed route active?
     subNavitemActive(route: string) {
-        return this.currentUrl.indexOf(`/${route}`) > -1;
+        return this.currentUrl === route;
     }
 
     public prepareRouteTransition(outlet: any): void {

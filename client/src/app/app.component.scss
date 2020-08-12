@@ -137,14 +137,22 @@
     justify-content: center;
     align-content: center;
 
+    span {
+      border-bottom: 0px solid black;
+      transform-origin: top;
+      @include transition(border-width, .2s, linear);
+    }
+
     &:hover,
     &.active {
-      text-decoration: underline;
+      span {
+        border-bottom-width: 2px;
+      }
     }
   }
 
   .columns {
-    height: 80px;
+    height: 44px;
 
     .column {
       display: block;
@@ -153,7 +161,7 @@
   }
 
   .border {
-    border-right: 4px solid white;
+    border-right: 1px solid #ccc;
   }
 
   &.flex {
@@ -165,15 +173,6 @@
   #initiatives {
     display: flex;
     justify-content: space-evenly;
-  }
-
-  &#subnav-research {
-    background-color: black;
-
-    a {
-      color: white;
-
-    }
   }
 }
 

@@ -23,65 +23,69 @@
 <app-nav></app-nav>
 
 <!-- Show on all studios pages -->
-<section class="container desktop" *ngIf="showStudiosNav">
+<section *ngIf="showStudiosNav" class="container desktop">
     <nav id="subnav-studios" class="uppercase subnav flex">
         <a
             routerLink="/studios"
-            [class.active]="subNavitemActive('studios')"
+            [class.active]="subNavitemActive('/studios')"
             [attr.aria-label]="'Link to go to studios landing page'"
-            >Studios</a
+            ><span>Studios</span></a
         >
         <a
             routerLink="/studios/partner"
-            [class.active]="subNavitemActive('studios/partner')"
+            [class.active]="subNavitemActive('/studios/partner')"
             [attr.aria-label]="'Link to go to Partnered Studio page'"
-            >Partnered Studio</a
+            ><span>Partnered Studio</span></a
         >
         <a
             routerLink="/studios/thesis"
-            [class.active]="subNavitemActive('studios/thesis')"
+            [class.active]="subNavitemActive('/studios/thesis')"
             [attr.aria-label]="'Link to go to Graduate Thesis Studio page'"
-            >Graduate Thesis Studio</a
+            ><span>Graduate Thesis Studio</span></a
         >
         <a
             routerLink="/studios/cocurricular"
-            [class.active]="subNavitemActive('studios/cocurricular')"
+            [class.active]="subNavitemActive('/studios/cocurricular')"
             [attr.aria-label]="'Link to go to Co-Curricular Studio page'"
-            >Co-Curricular Studio</a
+            ><span>Co-Curricular Studio</span></a
         >
     </nav>
 </section>
 <!-- Show on all research pages -->
 <nav *ngIf="showResearchNav" id="subnav-research" class="subnav">
     <div class="columns is-mobile uppercase no-margin">
-        <div class="column is-3 border">
-            <a
-                routerLink="/research/projects"
-                [class.active]="subNavitemActive('research/projects')"
-                [attr.aria-label]="'Link to go to projects page'"
-                >Projects</a
-            >
-        </div>
-        <div class="column is-3 border">
-            <a
-                routerLink="/research/publications"
-                [class.active]="subNavitemActive('research/publications')"
-                [attr.aria-label]="'Link to go to publications page'"
-                >Publications</a
-            >
-        </div>
+        <a
+            class="column is-2 border"
+            routerLink="/research/projects"
+            [class.active]="subNavitemActive('/research/projects')"
+            [attr.aria-label]="'Link to go to projects page'"
+            ><span>
+                Projects
+            </span></a
+        >
+        <a
+            class="column is-2 border"
+            routerLink="/research/publications"
+            [class.active]="subNavitemActive('/research/publications')"
+            [attr.aria-label]="'Link to go to publications page'"
+            ><span>
+                Publications
+            </span>
+        </a>
         <div id="initiatives" class="column">
             <a
                 *ngFor="let initiative of initiatives"
                 [routerLink]="'/research/initiatives/' + initiative.key"
                 [class.active]="
-                    subNavitemActive('research/initiatives/' + initiative.key)
+                    subNavitemActive('/research/initiatives/' + initiative.key)
                 "
                 [attr.aria-label]="
                     'Link to go to ' + initiative.name + ' initiative'
                 "
             >
-                {{ initiative.name }}
+                <span>
+                    {{ initiative.name }}
+                </span>
             </a>
         </div>
     </div>
@@ -92,43 +96,44 @@
         <div class="column">
             <a
                 routerLink="/graduate/curriculum"
-                [class.active]="subNavitemActive('graduate/curriculum')"
+                [class.active]="subNavitemActive('/graduate/curriculum')"
                 [attr.aria-label]="
                     'Link to go to graduate program curriculum page'
                 "
-                >Curriculum</a
+                ><span>Curriculum</span></a
             >
         </div>
         <div class="column">
             <a
                 routerLink="/graduate/alumni"
-                [class.active]="subNavitemActive('graduate/alumni')"
+                [class.active]="subNavitemActive('/graduate/alumni')"
                 [attr.aria-label]="'Link to go to graduate program alumni page'"
-                >Alumni</a
+                ><span>Alumni</span></a
             >
         </div>
         <div class="column">
             <a
                 routerLink="/graduate/studios"
-                [class.active]="subNavitemActive('graduate/studios')"
+                [class.active]="subNavitemActive('/graduate/studios')"
                 [attr.aria-label]="
                     'Link to go to graduate program thesis studios page'
                 "
-                >Graduate Thesis Studio</a
+                ><span>Graduate Thesis Studio</span></a
             >
         </div>
         <div class="column">
             <a
                 routerLink="/graduate/info"
-                [class.active]="subNavitemActive('graduate/info')"
+                [class.active]="subNavitemActive('/graduate/info')"
                 [attr.aria-label]="
                     'Link to go to graduate program info and application page'
                 "
-                >Application & Info</a
+                ><span>Application & Info</span></a
             >
         </div>
     </div>
 </nav>
+
 <section class="container desktop">
     <h3 id="errors" *ngIf="dataErrors">
         <p>Data service errors:</p>
