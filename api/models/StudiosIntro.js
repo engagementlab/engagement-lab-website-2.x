@@ -60,7 +60,7 @@ StudiosIntro.add({
         type: Types.Textarea, label: 'Summary Paragraph', required: true, initial: true,
     },
     partneredCurriculum: {
-        type: Types.Textarea, label: 'Curricurlum Paragraph', required: true, initial: true,
+        type: Types.Textarea, label: 'Curriculum Paragraph', required: true, initial: true,
     },
     partneredSummaryImage: {
         type: Types.CloudinaryImage,
@@ -81,6 +81,9 @@ StudiosIntro.add({
 'Graduate Thesis Studio', {
     gradSummary: {
         type: Types.Textarea, label: 'Graduate Summary Paragraph', required: true, initial: true,
+    },
+    gradCurriculum: {
+        type: Types.Textarea, label: 'Curriculum Paragraph', required: true, initial: true,
     },
     gradSummaryImage: {
         type: Types.CloudinaryImage,

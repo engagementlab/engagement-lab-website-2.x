@@ -22,6 +22,7 @@ const Studios = {
         currentPartneredStudios: [Studio]
         previousPartneredStudios: [Studio]
         gradSummary: String
+        gradCurriculum: String
         gradSummaryImage: Image
         coCurricularSummary: String
         coCurricularSummaryImage: Image
@@ -80,8 +81,19 @@ const Studios = {
                     model: 'Person',
                 },
             })
-            .populate('previousPartneredStudios')
-            .populate('currentCoCurricularStudios')
+            .populate({
+                path: 'currentCoCurricularStudios',
+                populate: {
+                    path: 'faculty',
+                    model: 'Person',
+                },
+            }).populate({
+                path: 'previousPartneredStudios',
+                populate: {
+                    path: 'faculty',
+                    model: 'Person',
+                },
+            })
             .exec(),
     },
 
