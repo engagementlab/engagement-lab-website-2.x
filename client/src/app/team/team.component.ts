@@ -50,42 +50,16 @@ export class TeamComponent implements OnInit {
                     image {
                         public_id
                     }
-                    bio { 
-                        html
+                    cohortYear {
+                        name
                     }
                     category
-                    twitterURL 
-                    fbURL 
-                    igURL 
-                    linkedInURL 
-                    githubURL 
-                    websiteURL 
-                    email 
-                    phone
                 }
             }
         `;
 
         const response = await this.dataSvc.getSet('team', query);
-        const content = response['allPeople'];
-
-        this.people['faculty'] = _.filter(
-            content,
-            person => person.category === 'faculty leadership',
-        );
-        this.people['staff'] = _.filter(
-            content,
-            person => person.category === 'staff',
-        );
-        this.people['board'] = _.filter(
-            content,
-            person => person.category === 'advisory board',
-        );
-        this.people['fellows'] = _.filter(
-            content,
-            person => person.category === 'faculty fellows',
-        );
-        // this.people['students'] = response['students'];
+        this.people = response['allPeople'];
 
         // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
         Object.keys(this.people).forEach(personKey => {
@@ -104,7 +78,41 @@ export class TeamComponent implements OnInit {
 
         this.gettingPerson = true;
         this.currentPerson = undefined;
-        this.currentPerson = await this.dataSvc.getSet('team', key);
+
+        const query = `   
+        {
+            getPerson(key: "${key}") {
+                name {
+                    first
+                    last
+                }
+                key
+                title
+                image {
+                    public_id
+                }
+                bio { 
+                    html
+                }
+                cohortYear {
+                    name
+                }
+                category
+                twitterURL 
+                fbURL 
+                igURL 
+                linkedInURL 
+                githubURL 
+                websiteURL 
+                email 
+                phone
+            }
+        }`;
+        this.currentPerson = await this.dataSvc.getSetWithKey(
+            'team',
+            key,
+            query,
+        );
     }
 
     closePerson() {

@@ -9,7 +9,7 @@
                 Faculty
             </h1>
             <span *ngFor="let person of content.faculty">
-                <a routerLink="/team/{{ person.key }}"
+                <a routerLink="/people/{{ person.key }}"
                     >{{ person.name.first }} {{ person.name.last }}<br /> </a
             ></span>
         </div>

@@ -4,10 +4,12 @@
  * Person page schema
  * @module person
  * @class person
- * @author Ralph Drake
+ * @author Ralph Drake, Johnny Richardson
  *
  * ==========
  */
+const { model, } = global.keystone.list('Person');
+
 const Person = {
 
     schema: `
@@ -33,14 +35,18 @@ const Person = {
             phone: String
         }
   `,
-    queries: ['allPeople(cohortYear: ObjectID): [Person]', 'allMastersPeople: [Person]', 'allStaffPeople: [Person]'],
+    queries: ['allPeople(cohortYear: ObjectID): [Person]', 'allMastersPeople: [Person]', 'allStaffPeople: [Person]', 'getPerson(key: String): Person'],
     resolvers: {
         allPeople: async (parent, args) => {
             const query = args.cohortYear ? { cohortYear: args.cohortYear, category: 'Masters', } : {};
-            return global.keystone.list('Person').model.find(query).populate('cohortYear').exec();
+            return model.find(query).populate('cohortYear').exec();
         },
-        allStaffPeople: async () => global.keystone.list('Person').model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
-        allMastersPeople: async () => global.keystone.list('Person').model.find({ category: 'Masters', }).populate('cohortYear').exec(),
+        allStaffPeople: async () => model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
+        allMastersPeople: async () => model.find({ category: 'Masters', }).populate('cohortYear').exec(),
+        getPerson: async (parent, args) => {
+            const person = await model.findOne({ key: args.key, }).populate('cohortYear').exec();
+            return person;
+        },
     },
 
 };

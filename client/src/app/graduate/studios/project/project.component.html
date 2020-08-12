@@ -9,7 +9,7 @@
                 Team
             </h1>
             <span *ngFor="let person of content.team">
-                <a routerLink="/team/{{ person.key }}"
+                <a routerLink="/people/{{ person.key }}"
                     >{{ person.name.first }} {{ person.name.last }}<br /> </a
             ></span>
         </div>
@@ -18,7 +18,7 @@
                 Faculty Advisor
             </h1>
             <span
-                ><a routerLink="/team/{{ content.faculty.key }}"
+                ><a routerLink="/people/{{ content.faculty.key }}"
                     >{{ content.faculty.name.first }}
                     {{ content.faculty.name.last }}<br /> </a
             ></span>
@@ -62,7 +62,7 @@
                 Contact
             </h1>
             <span
-                ><a routerLink="/team/{{ content.pointOfContact.key }}"
+                ><a routerLink="/people/{{ content.pointOfContact.key }}"
                     >{{ content.pointOfContact.name.first }}
                     {{ content.pointOfContact.name.last }}<br /> </a
             ></span>
