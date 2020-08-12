@@ -17,6 +17,15 @@ export class StudiosIndexComponent implements OnInit {
           {
             studiosIntro {
                   summary
+                  partneredStudiosThumbnail {
+                    public_id
+                  }
+                  graduateThesisThumbnail {
+                    public_id
+                  }
+                  cocurricularThumbnail {
+                    public_id
+                  }
             }
             allPartners {
               name

@@ -5,12 +5,60 @@
         <h3 class="blurb">{{ content.summary }}</h3>
     </div>
 </section>
-<section id="types" class="columns is-mobile">
+<section
+    id="types"
+    class="columns is-mobile is-multiline is-centered"
+    *ngIf="content"
+>
     <div class="column is-full">
         <h1 class="uppercase">
             Studio Types
         </h1>
-        Coming shortly.
+    </div>
+    <div class="column is-full-mobile type">
+        <a routerLink="/studios/partnered">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.partneredStudiosThumbnail.public_id }}"
+                width="400"
+                autoFormat="true"
+                [responsive]="true"
+                alt="Thumbnail image for partnered studios link"
+            ></cdn-image>
+            <h3 class="blurb">Partnered Studio</h3>
+            <h1 class="uppercase sm no-margin">Duration</h1>
+            <span>1 Semester</span>
+        </a>
+    </div>
+    <div class="column is-full-mobile type">
+        <a routerLink="/studios/thesis">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.graduateThesisThumbnail.public_id }}"
+                width="400"
+                autoFormat="true"
+                [responsive]="true"
+                alt="Thumbnail image for graduate thesis studios link"
+            ></cdn-image>
+            <h3 class="blurb">Graduate Thesis Studio</h3>
+            <h1 class="uppercase sm no-margin">Duration</h1>
+            <span>1 Year</span>
+        </a>
+    </div>
+    <div class="column is-full-mobile type">
+        <a routerLink="/studios/cocurricular">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.cocurricularThumbnail.public_id }}"
+                width="400"
+                autoFormat="true"
+                [responsive]="true"
+                alt="Thumbnail image for cocurricular studios link"
+            ></cdn-image>
+            <h3 class="blurb">Graduate Thesis Studio</h3>
+            <h1 class="uppercase sm no-margin">Duration</h1>
+            <span>1 Year</span>
+        </a>
     </div>
 </section>
 <section id="partners" class="columns is-multiline is-mobile">

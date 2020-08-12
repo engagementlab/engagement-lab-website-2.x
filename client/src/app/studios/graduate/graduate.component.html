@@ -1,23 +1,41 @@
 <!-- Thesis intro -->
-<section id="intro" class="columns is-mobile" *ngIf="content">
-    <div class="column is-half">
-        <h2>Graduate Thesis Studio</h2>
-        <h3 class="blurb">{{ content.gradSummary }}</h3>
+<section *ngIf="content">
+    <div id="intro" class="columns is-mobile">
+        <div class="column is-half">
+            <h2>Graduate Thesis Studio</h2>
+            <h3 class="blurb">{{ content.gradSummary }}</h3>
+        </div>
+        <div class="column">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.gradSummaryImage.public_id }}"
+                width="900"
+                alt="Graduate Thesis Studio flavor image"
+            ></cdn-image>
+        </div>
     </div>
-    <div class="column">
-        <cdn-image
-            cloudinaryPrefix="/"
-            cloudinaryId="{{ content.gradSummaryImage.public_id }}"
-            width="900"
-            alt="Graduate Thesis Studio flavor image"
-        ></cdn-image>
+    <div class="columns is-mobile">
+        <div class="column is-full">
+            <h1 class="uppercase sm">Curriculum</h1>
+            <h3 class="blurb">
+                {{ content.gradCurriculum }}
+            </h3>
+        </div>
     </div>
 </section>
 <div class="column is-full center">
     <app-button
         route="/graduate/studios"
-        label="Read more about Grad Programs"
-        ariaLabel="Button to go to page about Grad Programs"
+        label="See Thesis Projects"
+        ariaLabel="Button to go to page about Graduate Thesis Projects"
+        class="medium"
+    ></app-button>
+    <br />
+
+    <app-button
+        route="/graduate"
+        label="Learn about the Media Design Program"
+        ariaLabel="Button to go to page to Learn about the Media Design Program"
         class="medium"
     ></app-button>
 </div>

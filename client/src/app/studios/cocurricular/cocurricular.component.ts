@@ -23,6 +23,10 @@ export class StudiosCocurricularComponent implements OnInit {
                 coCurricularPhases
                 currentCoCurricularStudios
                 {
+                    thumb {
+                        public_id
+                    }
+                    name
                     department
                     sponsor
                     faculty {

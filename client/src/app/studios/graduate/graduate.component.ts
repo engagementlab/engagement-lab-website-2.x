@@ -17,6 +17,7 @@ export class StudiosGraduateComponent implements OnInit {
           {
             studiosIntro {
                 gradSummary
+                gradCurriculum
                 gradSummaryImage {
                     public_id
                 }
