@@ -25,8 +25,9 @@ printf "${YELLOW}----> Trying to self-install pre-reqs.${NC}\n"
 printf "\n\n\n${LC}----> If you are prompted to download Command Line Tools (CLT) for Xcode, do so and then re-run this script. <---${NC}\n\n\n"
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install mongodb
-sudo chown -R `id -un` /data/db
+brew install mongodb-community;
+sudo chown -R `id -un` /data/db;
+brew services start mongodb-community;
 
 printf "${YELLOW}-> Trying to create local database from most recent dump.${NC}\n"
 for filename in ./bin/db/*.json; do mongoimport -d engagement-lab-test --type json --file $filename; done
