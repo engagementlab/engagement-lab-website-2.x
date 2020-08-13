@@ -43,9 +43,14 @@ Person.add({
         initial: true,
         index: true,
     },
+    alumni: {
+        type: Boolean,
+        label:
+        'Is Alumni/Former Staff',
+    },
     category: {
         type: Types.Select,
-        options: 'faculty leadership, advisory board, staff, faculty fellows, CMAP, Masters, lab assistants',
+        options: 'faculty leadership, staff, faculty fellows, Masters, lab assistants',
         default: 'staff',
         required: true,
         initial: true,
@@ -53,7 +58,7 @@ Person.add({
     },
 
     title: {
-        type: Types.Textarea,
+        type: String,
         label: 'Title',
         dependsOn: {
             category: ['faculty leadership', 'staff', 'faculty fellows', 'lab assistants'],
@@ -74,15 +79,6 @@ Person.add({
         initial: true,
         note: 'This field is for students and board members, and will display below the title.',
     },
-    project: {
-        type: Types.Markdown,
-        label: 'Project Description',
-        dependsOn: {
-            category: ['CMAP', 'cohort', 'advisory board'],
-        },
-        note: 'This field is currently not shown.',
-    },
-
     bio: {
         type: Types.Markdown,
         label: 'Bio',
@@ -93,47 +89,23 @@ Person.add({
         type: Types.CloudinaryImage,
         label: 'Image',
         folder: 'homepage-2.0/team',
-        note: 'Must be in square format. Will display as 192px by 192px.',
+        note: 'Must be in square format. Will display as 376px by 376px.',
     },
-
-    cmapPerson: {
-        type: Types.Boolean,
-        label: 'Show on CMAP page',
-        dependsOn: {
-            category: ['faculty leadership', 'faculty fellows', 'CMAP'],
-        },
-        note: 'This field is for faculty leadership, fellows, and CMAP students to display them in the CMAP page.',
+    relatedLinks: {
+        type: Types.TextArray,
+        note: 'Website(s), social media, etc. Please use format `https://personalwebsite.com`.',
     },
-
-    twitterURL: {
-        type: Types.Url,
-        label: 'Twitter',
-        note: 'This will display on the person\'s individual page',
+    projects: {
+        type: Types.Relationship,
+        label: 'Selected Research Projects',
+        ref: 'Project',
+        many: true,
     },
-    fbURL: {
-        type: Types.Url,
-        label: 'Facebook',
-        note: 'This will display on the person\'s individual page',
-    },
-    igURL: {
-        type: Types.Url,
-        label: 'Instagram',
-        note: 'This will display on the person\'s individual page',
-    },
-    linkedInURL: {
-        type: Types.Url,
-        label: 'LinkedIn',
-        note: 'This will display on the person\'s individual page',
-    },
-    githubURL: {
-        type: Types.Url,
-        label: 'Github',
-        note: 'This will display on the person\'s individual page',
-    },
-    websiteURL: {
-        type: Types.Url,
-        label: 'Website',
-        note: 'This will display on the person\'s individual page',
+    mdProjects: {
+        type: Types.Relationship,
+        label: 'Selected Thesis Projects',
+        ref: 'MDProject',
+        many: true,
     },
 
     email: {

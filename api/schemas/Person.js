@@ -21,30 +21,30 @@ const Person = {
             category: String!
             title: String
             cohortYear: Filter
-            project: String
             bio: Markdown!
             image: Image!
-            cmapPerson: Boolean
-            twitterURL: String
-            fbURL: String
-            igURL: String
-            linkedInURL: String
-            githubURL: String
-            websiteURL: String
+            relatedLinks: [String]
+            projects: [Project]
+            mdProjects: [MDProject] 
             email: String
             phone: String
+            alumni: Boolean
         }
   `,
     queries: ['allPeople(cohortYear: ObjectID): [Person]', 'allMastersPeople: [Person]', 'allStaffPeople: [Person]', 'getPerson(key: String): Person'],
     resolvers: {
         allPeople: async (parent, args) => {
             const query = args.cohortYear ? { cohortYear: args.cohortYear, category: 'Masters', } : {};
-            return model.find(query).populate('cohortYear').exec();
+            return model.find(query).populate('cohortYear')
+                .sort([
+                    ['sortOrder', 'ascending']
+                ]).exec();
         },
         allStaffPeople: async () => model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
         allMastersPeople: async () => model.find({ category: 'Masters', }).populate('cohortYear').exec(),
         getPerson: async (parent, args) => {
-            const person = await model.findOne({ key: args.key, }).populate('cohortYear').exec();
+            const person = await model.findOne({ key: args.key, }).populate('cohortYear').populate('projects').populate('mdProjects')
+                .exec();
             return person;
         },
     },
