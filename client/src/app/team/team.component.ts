@@ -13,7 +13,7 @@ import { DataService } from '../utils/data.service';
 export class TeamComponent implements OnInit {
     public currentPerson: any;
 
-    public people: { [key: string]: any[] } = {};
+    public people: any[];
 
     private gettingPerson: boolean;
 
@@ -62,14 +62,14 @@ export class TeamComponent implements OnInit {
         this.people = response['allPeople'];
 
         // We have to add dummy/empty people to categories with non-x4 count to allow for correct flex layout
-        Object.keys(this.people).forEach(personKey => {
-            const mod = 4 - (this.people[personKey].length % 4);
-            if (mod !== 4) {
-                for (let i = 0; i < mod; i += 1) {
-                    this.people[personKey].push({ name: 'dummy' });
-                }
-            }
-        });
+        // Object.keys(this.people).forEach(personKey => {
+        //     const mod = 4 - (this.people[personKey].length % 4);
+        //     if (mod !== 4) {
+        //         for (let i = 0; i < mod; i += 1) {
+        //             this.people[personKey].push({ name: 'dummy' });
+        //         }
+        //     }
+        // });
     }
 
     async getPerson(key) {
@@ -101,6 +101,22 @@ export class TeamComponent implements OnInit {
                 relatedLinks
                 email 
                 phone
+                projects {
+                    image {
+                        public_id
+                    }
+                    name
+                    key
+                    __typename
+                }
+                mdProjects {
+                    thumb {
+                        public_id
+                    }
+                    name
+                    key
+                    __typename
+                }
             }
         }`;
         const response = await this.dataSvc.getSetWithKey('team', key, query);

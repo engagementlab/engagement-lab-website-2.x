@@ -1,6 +1,6 @@
-<section id="modal" (click)="closeModal()">
-    <div id="content" class="columns is-mobile is-multiline">
-        <div id="close" class="column is-full">
+<section id="modal">
+    <div id="content" class="columns is-mobile is-multiline no-margin">
+        <div id="close" class="column is-full" (click)="closeModal()">
             <svg viewBox="0 -0.001 41 34" width="41" height="34">
                 <path
                     d="M 21.439 16.996 L 40.806 0.936 C 41.064 0.721 41.064 0.374 40.806 0.16 C 40.548 -0.054 40.13 -0.054 39.871 0.16 L 20.504 16.221 L 1.137 0.16 C 0.874 -0.05 0.455 -0.044 0.202 0.174 C -0.046 0.386 -0.046 0.723 0.202 0.936 L 19.569 16.996 L 0.202 33.057 C -0.061 33.268 -0.068 33.615 0.185 33.832 C 0.439 34.05 0.858 34.056 1.12 33.846 C 1.126 33.841 1.131 33.837 1.137 33.832 L 20.504 17.772 L 39.871 33.832 C 40.134 34.043 40.553 34.037 40.806 33.819 C 41.054 33.606 41.054 33.27 40.806 33.057 L 21.439 16.996 Z"
@@ -21,6 +21,7 @@
         </div>
         <div class="column is-full-mobile is-one-third-tablet">
             <cdn-image
+                id="portrait"
                 cloudinaryPrefix="/"
                 cloudinaryId="{{ person.image.public_id }}"
                 width="397"
@@ -44,9 +45,45 @@
             </div>
         </div>
 
-        <div id="bio" class="column">
+        <div id="bio" class="column is-full-mobile is-7-tablet">
             <!-- Bio markup -->
             <div [innerHtml]="person.bio.html"></div>
+        </div>
+        <div id="projects" class="column is-full-mobile is-one-third-tablet">
+            <h3 class="uppercase no-margin">Selected Projects</h3>
+            <div id="thumbs">
+                <div
+                    class="project-thumb"
+                    *ngFor="let project of projects; let i = index"
+                    (click)="projectClick(i)"
+                >
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ project.image.public_id }}"
+                        width="146"
+                        [autoFormat]="true"
+                        alt="Thumbnail image for {{ project.name }}"
+                    ></cdn-image>
+                </div>
+            </div>
+        </div>
+        <div id="border" class="column is-1"></div>
+        <div id="preview" class="column" *ngIf="selectedProject">
+            <a
+                [routerLink]="
+                    (selectedProject.__typename === 'Project'
+                        ? '/research/projects/'
+                        : '/graduate/studios/') + selectedProject.key
+                "
+            >
+                <img
+                    src="https://res.cloudinary.com/engagement-lab-home/image/upload/e_brightness:0,g_auto:none/c_scale,f_auto,w_800/v1/{{
+                        selectedProject.image.public_id
+                    }}"
+                    alt="Large preview image for {{ selectedProject.name }}"
+                />
+                <h3 class="uppercase no-margin">{{ selectedProject.name }}</h3>
+            </a>
         </div>
     </div>
 </section>

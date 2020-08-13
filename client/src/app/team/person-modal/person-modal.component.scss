@@ -3,7 +3,6 @@
 #modal {
   position: fixed;
   display: flex;
-  cursor: pointer;
   overflow-y: scroll;
 
   align-items: center;
@@ -49,6 +48,8 @@
 
     max-width: 1440px;
     margin-top: 3.5%;
+    padding-left: 5%;
+    padding-right: 5%;
 
     ::ng-deep a,
     a {
@@ -61,49 +62,50 @@
       padding-right: 0;
     }
 
-    @include ng-img {
-      max-width: 270px;
+    #portrait {
+      @include ng-img {
+        max-width: 270px;
+      }
     }
 
     #close {
       text-align: right;
+      cursor: pointer;
     }
 
     #bio {
       font-size: 1em;
-      line-height: 46px;
       font-family: 'Overpass';
+      line-height: 23px;
 
       @include not-phones {
         font-size: 1.5em;
+        line-height: 46px;
       }
 
     }
 
-  }
-
-  #menu-btn {
-    display: flex;
-    align-items: center;
-
-    width: 75px;
-    height: 40px;
-
-    span {
-      display: block;
-      position: absolute;
-      height: 1px;
-      width: 82px;
-      background: white;
-
-      &:nth-child(1) {
-        @include transform(rotate(155deg));
+    #projects {
+      h3 {
+        @include pxtoem(18, 24);
       }
 
-      &:nth-child(2) {
-        @include transform(rotate(-155deg));
-      }
+      #thumbs {
+        display: flex;
 
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .project-thumb {
+          flex: 45%;
+          margin-left: 4%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    #border {
+      border-left: 1px solid white;
     }
   }
 }
