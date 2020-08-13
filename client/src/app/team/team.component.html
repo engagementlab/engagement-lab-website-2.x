@@ -18,7 +18,12 @@
                     responsive
                     public-id="{{ person.image.public_id }}"
                     secure="true"
-                    width="400"
+                    width="270"
+                    height="300"
+                    attr.width="auto:breakpoints:400"
+                    loading="lazy"
+                    sizes="100vw"
+                    client_hints="true"
                     fetch-format="auto"
                     crop="scale"
                     attr.alt="Portrait image of {{ person.name.first }} {{
@@ -26,16 +31,22 @@
                     }}"
                     class="cdn-image"
                 >
-                    <cl-transformation attr.quality="100"></cl-transformation>
+                    <cl-transformation
+                        attr.quality="100"
+                        gravity="face"
+                        height="300"
+                        width="270"
+                        crop="fill"
+                    ></cl-transformation>
                 </cl-image>
             </div>
 
             <div class="name">
                 {{ person.name.first }} {{ person.name.last }}
                 <div class="title">{{ person.title }}</div>
-            </div>
-            <div class="year" *ngIf="person.category === 'Masters'">
-                Media Design, {{ person.cohortYear.name }}
+                <div class="year" *ngIf="person.category === 'Masters'">
+                    Media Design, {{ person.cohortYear.label }}
+                </div>
             </div>
         </a>
     </div>

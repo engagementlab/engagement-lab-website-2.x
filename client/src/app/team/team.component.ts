@@ -51,7 +51,7 @@ export class TeamComponent implements OnInit {
                         public_id
                     }
                     cohortYear {
-                        name
+                        label
                     }
                     category
                 }
@@ -95,24 +95,16 @@ export class TeamComponent implements OnInit {
                     html
                 }
                 cohortYear {
-                    name
+                    label
                 }
                 category
-                twitterURL 
-                fbURL 
-                igURL 
-                linkedInURL 
-                githubURL 
-                websiteURL 
+                relatedLinks
                 email 
                 phone
             }
         }`;
-        this.currentPerson = await this.dataSvc.getSetWithKey(
-            'team',
-            key,
-            query,
-        );
+        const response = await this.dataSvc.getSetWithKey('team', key, query);
+        this.currentPerson = response['getPerson'];
     }
 
     closePerson() {

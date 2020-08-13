@@ -1,94 +1,52 @@
 <section id="modal" (click)="closeModal()">
-    <div id="header">
-        <cdn-image
-            id="logo"
-            cloudinaryId="logos/el-logo-team"
-            width="141"
-            alt="Engagement Lab logo"
-            aria-role="image"
-        ></cdn-image>
+    <div id="content" class="columns is-mobile is-multiline">
+        <div id="close" class="column is-full">
+            <svg viewBox="0 -0.001 41 34" width="41" height="34">
+                <path
+                    d="M 21.439 16.996 L 40.806 0.936 C 41.064 0.721 41.064 0.374 40.806 0.16 C 40.548 -0.054 40.13 -0.054 39.871 0.16 L 20.504 16.221 L 1.137 0.16 C 0.874 -0.05 0.455 -0.044 0.202 0.174 C -0.046 0.386 -0.046 0.723 0.202 0.936 L 19.569 16.996 L 0.202 33.057 C -0.061 33.268 -0.068 33.615 0.185 33.832 C 0.439 34.05 0.858 34.056 1.12 33.846 C 1.126 33.841 1.131 33.837 1.137 33.832 L 20.504 17.772 L 39.871 33.832 C 40.134 34.043 40.553 34.037 40.806 33.819 C 41.054 33.606 41.054 33.27 40.806 33.057 L 21.439 16.996 Z"
+                    style="fill: rgb(255, 255, 255);"
+                ></path>
+            </svg>
+        </div>
 
-        <a id="menu-btn">
-            <span></span>
-            <span></span>
-        </a>
-    </div>
+        <div class="column is-full">
+            <h2 class="no-margin">
+                {{ person.name.first }} {{ person.name.last }}
+            </h2>
 
-    <div id="content" class="columns">
-        <div id="top" class="column is-two-thirds-mobile is-one-third-tablet">
-            <h1 class="uppercase">{{ person.name.first }} {{ person.name.last }}</h1>
-
-            <p class="hidden-tablet-plus">{{ person.title }}</p>
-
+            <p>{{ person.title }}</p>
+            <p *ngIf="person.cohortYear">
+                Media Design, {{ person.cohortYear.name }}
+            </p>
+        </div>
+        <div class="column is-full-mobile is-one-third-tablet">
             <cdn-image
                 cloudinaryPrefix="/"
                 cloudinaryId="{{ person.image.public_id }}"
-                effect="grayscale"
-                width="225"
-                alt="Portrait image of {{ person.name.first }} {{ person.name.last }}"
+                width="397"
+                [autoFormat]="true"
+                alt="Portrait image of {{ person.name.first }} {{
+                    person.name.last
+                }}"
             ></cdn-image>
+            <div *ngIf="person.email.length > 0">
+                <h3 class="uppercase no-margin">Contact</h3>
+                {{ person.email }}
+            </div>
+            <div *ngIf="person.relatedLinks && person.relatedLinks.length > 0">
+                <h3 class="uppercase no-margin">Related Links</h3>
+                <span *ngFor="let link of person.relatedLinks"
+                    ><a href="{{ link }}" class="href">
+                        {{ link }}
+                    </a>
+                    <br />
+                </span>
+            </div>
         </div>
 
-        <div id="bio" class="column is-four-fifths-mobile is-half-tablet">
+        <div id="bio" class="column">
             <!-- Bio markup -->
-            <p class="hidden-mobile" *ngIf="!person.cohortYear">{{ person.title }}</p>
-            <p class="hidden-mobile" *ngIf="person.cohortYear">Masters Student, {{ person.cohortYear.name }}</p>
-
-            <div class="www" [innerHtml]="person.bio.html"></div>
-
-            <div class="columns is-multiline is-mobile">
-                <div class="www column is-full-mobile" *ngIf="person.websiteURL.length > 0">
-                    <a href="{{ person.websiteURL }}">{{ person.websiteURL | prettyUrl }}</a>
-                </div>
-
-                <div class="column is-one-third" *ngIf="person.email.length > 0">
-                    {{ person.email }}
-                </div>
-
-                <!-- Social links -->
-                <div id="social" class="column is-full columns is-mobile">
-                    <a
-                        href="{{ person.fbURL }}"
-                        role="link"
-                        class="column is-one-fifth"
-                        *ngIf="person.fbURL && person.fbURL.length > 0"
-                    >
-                        <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image>
-                    </a>
-                    <a
-                        href="{{ person.twitterURL }}"
-                        role="link"
-                        class="column is-one-fifth"
-                        *ngIf="person.twitterURL && person.twitterURL.length > 0"
-                    >
-                        <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image>
-                    </a>
-                    <a
-                        href="{{ person.igURL }}"
-                        role="link"
-                        class="column is-one-fifth"
-                        *ngIf="person.igURL && person.igURL.length > 0"
-                    >
-                        <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image>
-                    </a>
-                    <a
-                        href="{{ person.linkedInURL }}"
-                        role="link"
-                        class="column is-one-fifth"
-                        *ngIf="person.linkedInURL && person.linkedInURL.length > 0"
-                    >
-                        <cdn-image cloudinaryId="logos/li" width="24" alt="LinkedIn link image"></cdn-image>
-                    </a>
-                    <a
-                        href="{{ person.githubURL }}"
-                        role="link"
-                        class="column is-one-fifth"
-                        *ngIf="person.githubURL && person.githubURL.length > 0"
-                    >
-                        <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image>
-                    </a>
-                </div>
-            </div>
+            <div [innerHtml]="person.bio.html"></div>
         </div>
     </div>
 </section>
