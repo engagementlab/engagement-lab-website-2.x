@@ -25,34 +25,14 @@ app-button {
   }
 }
 
-// .controls {
+.controls {
 
-//   margin-top: 17%;
+  @include phones {
+    display: flex;
+    flex-direction: column;
+  }
 
-//   @include not-phones {
-//     margin-top: 5%;
-//   }
-
-//   button {
-//     font-family: 'LunchtypeRegular';
-//     font-size: 1em;
-//     margin-bottom: 7%;
-
-//     @include not-phones {
-//       font-size: 1.4em;
-//     }
-
-//     sup {
-//       font-size: .9em;
-//     }
-
-//     &.mixitup-control-active {
-//       font-family: 'LunchtypeMedium';
-//       font-weight: bold;
-//     }
-//   }
-
-// }
+}
 
 #intro {
   font-family: 'Overpass';

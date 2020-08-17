@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
                         html
                     }
                 }
-                upcomingEvents {
+                recentEvents {
                     name
                     key
                     date
