@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import {
@@ -6,29 +6,16 @@ import {
     transition,
     style,
     query,
-    group,
     animate,
 } from '@angular/animations';
 
 import { environment } from '../environments/environment';
 import { DataService } from './utils/data.service';
 
-export const projectTransition = [
-    query('#top', [
-        style({ transform: 'translate3d(77%, 0, 0)' }),
-        animate(0, style({ transform: 'translate3d(0, 0, 0)' })),
-    ]),
-];
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    animations: [
-        trigger('routerAnimations', [
-            transition('project => project', projectTransition),
-        ]),
-    ],
 })
 export class AppComponent implements OnInit {
     public isQABuild: boolean;
@@ -41,6 +28,8 @@ export class AppComponent implements OnInit {
     private currentUrl: string;
 
     title = 'Engagement Lab @ Emerson College';
+
+    @ViewChild('initiativesEl') initiativesEl: ElementRef;
 
     constructor(
         private router: Router,
@@ -109,8 +98,7 @@ export class AppComponent implements OnInit {
         return this.currentUrl === route;
     }
 
-    public prepareRouteTransition(outlet: any): void {
-        const animation = outlet.activatedRouteData.animation || {};
-        return animation.value || null;
+    toggleInitiatives() {
+        this.initiativesEl.nativeElement.classList.toggle('open');
     }
 }
