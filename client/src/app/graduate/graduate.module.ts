@@ -29,7 +29,7 @@ const routes: Routes = [
                 pathMatch: 'full',
             },
             {
-                path: 'info',
+                path: 'apply',
                 component: GraduateInfoComponent,
                 pathMatch: 'full',
             },

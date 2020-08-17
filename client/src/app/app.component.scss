@@ -141,10 +141,26 @@
       @include transition(border-width, .2s, linear);
     }
 
-    &:hover,
-    &.active {
-      span {
-        border-bottom-width: 2px;
+    &:not(#initiatives-btn) {
+
+      &:hover,
+      &.active {
+        span {
+          border-bottom-width: 2px;
+        }
+      }
+    }
+  }
+
+  &.white {
+    a {
+      color: white;
+
+      &:hover,
+      &.active {
+        span {
+          border-color: white;
+        }
       }
     }
   }
@@ -172,6 +188,40 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include phones {
+      &#subnav-studios {
+        a {
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 50%;
+        }
+      }
+    }
+  }
+
+  &#subnav-research {
+    margin-bottom: 15%;
+  }
+
+  #initiatives-btn {
+    svg {
+      @include transition(transform, .4s, cubic-bezier(1.000, 0.000, 0.000, 1.000));
+      @include rotate(0);
+
+      transform-origin: center center;
+
+      path.white {
+        fill: white;
+      }
+    }
+
+    &.open {
+      svg {
+        @include rotate(180);
+      }
+    }
   }
 
   #initiatives {
@@ -257,23 +307,4 @@
   span {
     vertical-align: top;
   }
-
-  // &:after {
-  //   content: " ";
-  //   display: block;
-  //   position: absolute;
-
-  //   width: 20px;
-  //   height: 40px;
-  //   top: -100%;
-
-  //   left: 1%;
-  //   border-radius: 20px;
-  //   background: url("data:image/svg+xml; charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 14.759 15 14.135' width='15' height='14.135'><path d='M 14.688 25.578 L 9.391 15.839 C 8.536 14.399 6.465 14.399 5.609 15.839 L 0.313 25.578 C -0.558 27.049 0.493 28.894 2.203 28.894 L 12.797 28.894 C 14.508 28.894 15.558 27.049 14.688 25.578 Z M 7.5 27.139 C 7.02 27.139 6.63 26.748 6.63 26.268 C 6.63 25.773 7.02 25.383 7.5 25.383 C 7.995 25.383 8.386 25.773 8.386 26.268 C 8.386 26.748 7.995 27.139 7.5 27.139 Z M 8.386 23.627 C 8.386 24.107 7.995 24.498 7.5 24.498 C 7.02 24.498 6.63 24.107 6.63 23.627 L 6.63 19.231 C 6.63 18.75 7.02 18.345 7.5 18.345 C 7.995 18.345 8.386 18.75 8.386 19.231 L 8.386 23.627 Z' style='fill: rgb(255, 255, 255);'></path></svg>") no-repeat;
-  //   background-position: 50.5% 78%;
-  //   background-color: #000;
-  //   animation: banner-tab 1s cubic-bezier(1.000, 0.000, 0.000, 1.000) 4.6s 1 forwards;
-
-  // }
-
 }

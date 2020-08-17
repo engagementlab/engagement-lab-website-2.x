@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
     title = 'Engagement Lab @ Emerson College';
 
     @ViewChild('initiativesEl') initiativesEl: ElementRef;
+    @ViewChild('initiativesBtn') initiativesBtn: ElementRef;
 
     constructor(
         private router: Router,
@@ -98,7 +99,12 @@ export class AppComponent implements OnInit {
         return this.currentUrl === route;
     }
 
+    initiativeActive() {
+        return this.currentUrl.indexOf('/research/initiatives') > -1;
+    }
+
     toggleInitiatives() {
+        this.initiativesBtn.nativeElement.classList.toggle('open');
         this.initiativesEl.nativeElement.classList.toggle('open');
     }
 }

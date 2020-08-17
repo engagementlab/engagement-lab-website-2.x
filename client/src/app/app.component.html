@@ -52,7 +52,12 @@
     </nav>
 </section>
 <!-- Show on all research pages -->
-<nav *ngIf="showResearchNav" id="subnav-research" class="subnav">
+<nav
+    *ngIf="showResearchNav"
+    id="subnav-research"
+    class="subnav"
+    [class.white]="initiativeActive()"
+>
     <div class="columns is-mobile is-multiline uppercase no-margin">
         <a
             class="column is-2-tablet is-full-mobile border"
@@ -73,6 +78,7 @@
             </span>
         </a>
         <a
+            #initiativesBtn
             id="initiatives-btn"
             class="column is-full-mobile hidden-not-mobile"
             [attr.aria-label]="'Button to fold out initiatives menu'"
@@ -88,6 +94,7 @@
                                 d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0
                               c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667
                               C491.696,131.368,491.696,124.605,487.536,120.445z"
+                                [class.white]="initiativeActive()"
                             ></path>
                         </g>
                     </g>
@@ -114,43 +121,45 @@
 </nav>
 <!-- Show on all grad pages -->
 <nav *ngIf="showGradNav" id="subnav" class="subnav">
-    <div class="columns is-mobile uppercase no-margin">
-        <div class="column">
+    <div class="columns is-mobile is-multiline uppercase no-margin">
+        <div class="column is-half-mobile">
             <a
                 routerLink="/graduate/curriculum"
                 [class.active]="subNavitemActive('/graduate/curriculum')"
                 [attr.aria-label]="
                     'Link to go to graduate program curriculum page'
                 "
-                ><span>Curriculum</span></a
+                ><span>Curriculum + Faculty</span></a
             >
         </div>
         <div class="column">
             <a
-                routerLink="/graduate/alumni"
-                [class.active]="subNavitemActive('/graduate/alumni')"
-                [attr.aria-label]="'Link to go to graduate program alumni page'"
-                ><span>Alumni</span></a
-            >
-        </div>
-        <div class="column">
-            <a
-                routerLink="/graduate/studios"
-                [class.active]="subNavitemActive('/graduate/studios')"
+                routerLink="/graduate/students"
+                [class.active]="subNavitemActive('/graduate/students')"
                 [attr.aria-label]="
-                    'Link to go to graduate program thesis studios page'
+                    'Link to go to graduate program students and alumni page'
                 "
-                ><span>Graduate Thesis Studio</span></a
+                ><span>Students + Alumni</span></a
+            >
+        </div>
+        <div class="column is-half-mobile">
+            <a
+                routerLink="/graduate/projects"
+                [class.active]="subNavitemActive('/graduate/projects')"
+                [attr.aria-label]="
+                    'Link to go to graduate program thesis projects page'
+                "
+                ><span>Thesis Projects</span></a
             >
         </div>
         <div class="column">
             <a
-                routerLink="/graduate/info"
-                [class.active]="subNavitemActive('/graduate/info')"
+                routerLink="/graduate/apply"
+                [class.active]="subNavitemActive('/graduate/apply')"
                 [attr.aria-label]="
                     'Link to go to graduate program info and application page'
                 "
-                ><span>Application & Info</span></a
+                ><span>Apply</span></a
             >
         </div>
     </div>
