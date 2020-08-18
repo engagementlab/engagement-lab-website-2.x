@@ -49,7 +49,11 @@
             <!-- Bio markup -->
             <div [innerHtml]="person.bio.html"></div>
         </div>
-        <div id="projects" class="column is-full-mobile is-one-third-tablet">
+        <div
+            id="projects"
+            class="column is-full-mobile is-one-third-tablet"
+            *ngIf="projects && projects.length > 0"
+        >
             <h3 class="uppercase no-margin">Selected Projects</h3>
             <div id="thumbs">
                 <div
@@ -67,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div id="border" class="column is-1"></div>
+        <div id="border" class="column is-1" *ngIf="selectedProject"></div>
         <div id="preview" class="column" *ngIf="selectedProject">
             <a
                 [routerLink]="

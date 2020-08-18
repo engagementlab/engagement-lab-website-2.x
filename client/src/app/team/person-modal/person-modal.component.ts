@@ -16,6 +16,7 @@ export class PersonModalComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
+        if (!this.projects || this.projects.length < 1) return;
         this.projects = this.person['projects'].concat(
             this.person['mdProjects'],
         );

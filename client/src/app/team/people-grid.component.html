@@ -52,7 +52,7 @@
                 [class.white]="preview === true"
                 [routerLink]="
                     cohort
-                        ? '/masters/people/' + person.key
+                        ? '/graduate/students/' + person.key
                         : '/people/' + person.key
                 "
             >
@@ -71,10 +71,6 @@
                         }}"
                         class="cdn-image"
                     >
-                        <cl-transformation
-                            attr.quality="100"
-                            effect="grayscale"
-                        ></cl-transformation>
                     </cl-image>
                 </div>
 
