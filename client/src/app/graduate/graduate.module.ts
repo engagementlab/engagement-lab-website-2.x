@@ -24,7 +24,12 @@ const routes: Routes = [
                 pathMatch: 'full',
             },
             {
-                path: 'alumni',
+                path: 'students',
+                component: GraduateAlumniComponent,
+                pathMatch: 'full',
+            },
+            {
+                path: 'students/:key',
                 component: GraduateAlumniComponent,
                 pathMatch: 'full',
             },
