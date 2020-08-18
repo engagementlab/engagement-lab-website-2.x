@@ -42,26 +42,15 @@ export class GraduateAlumniComponent implements OnInit {
                     image {
                         public_id
                     }
-                    bio {
-                        html
-                    }
                     cohortYear {
-                        name  
+                        label
                     }
-                    twitterURL
-                    fbURL
-                    igURL
-                    linkedInURL
-                    githubURL
-                    websiteURL
-                    email
-                    phone
                 }
             }
         `;
         const result = await this.dataSvc.getSetWithKey(
             'graduate',
-            'alumni',
+            'students',
             query,
         );
         this.alumni = result['allMastersPeople'];
@@ -74,14 +63,59 @@ export class GraduateAlumniComponent implements OnInit {
         this.gettingPerson = true;
         this.currentPerson = undefined;
 
-        const response = await this.dataSvc.getSet('team', key);
-        this.currentPerson = response;
+        const query = `   
+        {
+            getPerson(key: "${key}") {
+                name {
+                    first
+                    last
+                }
+                key
+                title
+                image {
+                    public_id
+                }
+                bio { 
+                    html
+                }
+                cohortYear {
+                    label
+                }
+                category
+                relatedLinks
+                email 
+                phone
+                projects {
+                    image {
+                        public_id
+                    }
+                    name
+                    key
+                    __typename
+                }
+                mdProjects {
+                    thumb {
+                        public_id
+                    }
+                    name
+                    key
+                    __typename
+                }
+            }
+        }`;
+
+        const response = await this.dataSvc.getSetWithKey(
+            'graduate',
+            key,
+            query,
+        );
+        this.currentPerson = response['getPerson'];
     }
 
     closePerson(): void {
         this.gettingPerson = false;
         this.currentPerson = undefined;
 
-        this._router.navigateByUrl('graduate/alumni');
+        this._router.navigateByUrl('graduate/students');
     }
 }
