@@ -86,48 +86,57 @@ section {
   }
 
   #text {
-    h2 {
-      color: white;
-    }
 
     position: relative;
     z-index: 2;
     color: white;
-    top: 25%;
 
-    @include not-phones {
-      left: 2%;
-      width: 85%;
-      padding-top: 5%;
+    left: 2%;
+    top: 25%;
+    padding-top: 5%;
+
+    @include tablet-portrait {
+      top: 0%;
     }
 
-    @include desktop {
-      left: 13%;
-      width: 70%;
-      padding-top: 5%;
+    // @include tablet-portrait {
+    //   top: 50%;
+    // }
 
+    // @include desktop {
+    //   left: 13%;
+    //   width: 70%;
+    //   padding-top: 5%;
+    // }
+
+    h2 {
+      color: white;
     }
   }
 
   #bg {
     position: absolute;
+    width: 100%;
     z-index: 0;
 
     svg {
-      @include not-phones {
-        transform: scale(.8);
-        transform-origin: -50% top;
+      @include tablet-portrait {
+        transform: scale(.5);
+        transform-origin: 10% 40%;
       }
 
       @include desktop {
         transform: scale(.95);
-        transform-origin: -110% center;
+        transform-origin: -50% center;
       }
 
-      @include phones {
-        transform: scale(.6);
-        transform-origin: -50% top;
+      @include not-desktop {
+        overflow-x: hidden;
+
       }
+
+      transform: scale(.5);
+      transform-origin: -26% 19%;
     }
   }
 
@@ -137,6 +146,16 @@ h1 {
   color: white;
   width: 100%;
   text-align: center;
+
+  &.header {
+    text-align: left;
+    color: black;
+  }
+}
+
+
+h3 {
+  font-weight: 900;
 }
 
 p,
@@ -146,6 +165,10 @@ h3 {
 
   &.blurb {
     width: 70%;
+
+    @include phones {
+      width: 100%;
+    }
   }
 
   &.hidden-mobile {
@@ -153,26 +176,17 @@ h3 {
   }
 }
 
-.projects {
+#projects {
 
   margin-top: 15%;
+  justify-content: space-evenly;
 
   @include not-phones {
     margin-top: 0;
   }
 
-  h3 {
-    font-weight: 900;
-  }
-
-  .project {
-    display: block;
-    font-size: 1.9em;
-
-    margin-top: 4%;
-    padding-bottom: 4%;
-
-    border-bottom: solid 1px black;
+  h4 {
+    font-size: 1.7em;
   }
 
 }

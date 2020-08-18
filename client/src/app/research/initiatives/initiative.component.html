@@ -1,16 +1,14 @@
 <section class="{{ content.key }}" *ngIf="content !== undefined">
     <div id="upper">
         <div id="bg">
-            <svg
-                viewBox="-38.156 -99.457 1412.697 1363.459"
-                width="1412.697"
-                height="1363.459"
-                fill="none"
-            >
-                <path
-                    d="M 1121 479.982 A 510.5 510.5 0 0 1 610.5 990.482 A 510.5 510.5 0 0 1 100 479.982 A 510.5 510.5 0 0 1 610.5 -30.518 A 510.5 510.5 0 0 1 1121 479.982 Z"
+            <svg viewBox="0 0 1500 1227" width="1283" height="1227" fill="none">
+                <circle
                     style="fill: rgb(0, 0, 0);"
-                ></path>
+                    cx="510.5"
+                    cy="510.5"
+                    r="510.5"
+                ></circle>
+
                 <path
                     id="red"
                     class="shape"
@@ -38,25 +36,35 @@
         </div>
     </div>
 
-    <div class="columns">
-        <div class="column is-1 header uppercase">why we care</div>
-        <p class="column blurb hidden-tablet-plus">
+    <div class="columns is-multiline">
+        <h1 class="column is-full header uppercase">why we care</h1>
+        <p class="column blurb">
             {{ content.longDescription }}
         </p>
-        <h3 class="column blurb hidden-mobile">
-            {{ content.longDescription }}
-        </h3>
     </div>
-    <div class="projects">
-        <h3 class="uppercase">Related Projects</h3>
+    <div>
+        <h3 class="uppercase">Latest Work</h3>
         <hr class="thick" />
-
-        <a
-            class="project"
-            routerLink="/projects/{{ project.key }}"
-            *ngFor="let project of content.projects"
-        >
-            {{ project.name }}
-        </a>
+        <div id="projects" class="columns is-multiline">
+            <a
+                class="project view-tooltip column is-3-tablet"
+                routerLink="/research/projects/{{ project.key }}"
+                *ngFor="let project of content.projects"
+            >
+                <div class="bg">
+                    <span role="tooltip">view</span>
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ project.image.public_id }}"
+                        autoFormat="true"
+                        [responsive]="true"
+                        height="350"
+                        alt="Thumbnail image for '{{ project.name }}' project"
+                        *ngIf="project.image !== undefined"
+                    ></cdn-image>
+                </div>
+                <h4>{{ project.name }}</h4>
+            </a>
+        </div>
     </div>
 </section>
