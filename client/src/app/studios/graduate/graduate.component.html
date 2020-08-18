@@ -1,7 +1,7 @@
 <!-- Thesis intro -->
 <section *ngIf="content">
-    <div id="intro" class="columns is-mobile">
-        <div class="column is-half">
+    <div id="intro" class="columns is-mobile is-multiline">
+        <div class="column is-half-tablet is-11-mobile">
             <h2>Graduate Thesis Studio</h2>
             <h3 class="blurb">{{ content.gradSummary }}</h3>
         </div>
@@ -10,12 +10,14 @@
                 cloudinaryPrefix="/"
                 cloudinaryId="{{ content.gradSummaryImage.public_id }}"
                 width="900"
+                [autoFormat]="true"
+                [responsive]="true"
                 alt="Graduate Thesis Studio flavor image"
             ></cdn-image>
         </div>
     </div>
     <div class="columns is-mobile">
-        <div class="column is-full">
+        <div class="column is-full-mobile is-11-mobile">
             <h1 class="uppercase sm">Curriculum</h1>
             <h3 class="blurb">
                 {{ content.gradCurriculum }}

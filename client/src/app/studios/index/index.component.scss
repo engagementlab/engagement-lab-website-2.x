@@ -1,3 +1,5 @@
+@import "~src/styles/_variables";
+
 h3 {
   font-family: 'LunchtypeMedium';
 }
@@ -5,6 +7,24 @@ h3 {
 #buttons {
   display: inline-flex;
   justify-content: space-around;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+#types {
+  @include phones {
+    margin: 0;
+  }
+}
+
+#partners {
+  @include phones {
+    @include ng-img {
+      width: 100% !important;
+    }
+  }
 }
 
 .type {

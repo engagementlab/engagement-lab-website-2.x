@@ -17,6 +17,10 @@
     align-content: space-around;
     width: 100%;
 
+    @include phones {
+      display: none;
+    }
+
     h3 {
       font-size: 2em;
       flex-grow: 1;
@@ -29,6 +33,10 @@
     display: flex;
     align-content: space-around;
     counter-reset: item-counter;
+
+    @include phones {
+      flex-direction: column;
+    }
 
     .counter {
       counter-increment: item-counter;

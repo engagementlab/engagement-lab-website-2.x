@@ -5,7 +5,9 @@
 
     <h3 class="column is-full blurb">{{ content.programDescription }}</h3>
 
-    <h3 class="column is-half blurb">{{ content.learningObjectives }}</h3>
+    <h3 class="column is-half-tablet is-full-mobile blurb">
+        {{ content.learningObjectives }}
+    </h3>
     <h3 class="column blurb">{{ content.partnerships }}</h3>
 </section>
 
@@ -46,13 +48,13 @@
             </div>
         </div>
     </div>
-    <div class="column is-half is-full-mobile">
+    <div class="column is-half-tablet is-full-mobile">
         <div *ngFor="let index of [0, 1]">
             <h3 class="blurb">{{ curricula[index].name }}</h3>
             <p class="desc">{{ curricula[index].description }}</p>
         </div>
     </div>
-    <div class="column is-full-mobile">
+    <div class="column is-half-tablet is-full-mobile">
         <div *ngFor="let index of [2, 3]">
             <h3 class="blurb">{{ curricula[index].name }}</h3>
             <p class="desc">{{ curricula[index].description }}</p>

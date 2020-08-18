@@ -1,13 +1,14 @@
 <!-- Studios intro -->
 <section id="intro" class="columns is-mobile" *ngIf="content">
-    <div class="column is-half">
+    <div class="column is-half-tablet is-10-mobile">
         <h2>Studios</h2>
         <h3 class="blurb">{{ content.summary }}</h3>
     </div>
 </section>
+
 <section
     id="types"
-    class="columns is-mobile is-multiline is-centered"
+    class="columns is-mobile is-multiline is-centered no-margin"
     *ngIf="content"
 >
     <div class="column is-full">
@@ -61,6 +62,7 @@
         </a>
     </div>
 </section>
+
 <section id="partners" class="columns is-multiline is-mobile">
     <div class="column is-full">
         <hr class="thick" />
@@ -68,7 +70,10 @@
             Organizations we work with
         </h1>
     </div>
-    <div class="column is-1 is-half-mobile" *ngFor="let partner of partners">
+    <div
+        class="column is-1-tablet is-2-mobile"
+        *ngFor="let partner of partners"
+    >
         <cdn-image
             cloudinaryPrefix="/"
             cloudinaryId="{{ partner.image.public_id }}"
@@ -76,7 +81,7 @@
             alt="Icon for {{ partner.name }} partner "
         ></cdn-image>
     </div>
-    <div id="buttons" class="column is-full">
+    <div id="buttons" class="column is-full-tablet is-11-mobile">
         <app-button
             route="/partner"
             label="Information For Partners"
