@@ -1,4 +1,4 @@
-<div #menuBg id="menu-bg"></div>
+<div #menuBg id="menu-bg" (click)="openCloseNav()"></div>
 <div class="container desktop">
     <hr />
     <nav #nav class="columns is-mobile" id="nav">
@@ -106,9 +106,12 @@
                                 </g>
                             </g></svg
                     ></a>
-                    <a *ngIf="itemActive(link.url)" (click)="openCloseNav()">{{
-                        link.label
-                    }}</a>
+                    <a
+                        *ngIf="itemActive(link.url)"
+                        (click)="openCloseNav()"
+                        class="active"
+                        >{{ link.label }}</a
+                    >
                     <a
                         *ngIf="
                             !itemActive(link.url) && !link.href && link.enabled

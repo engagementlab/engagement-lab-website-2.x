@@ -30,7 +30,7 @@ export class NavComponent {
         { url: 'graduate', label: 'Graduate Program', enabled: true },
         { url: 'research', label: 'Research', enabled: true },
         { url: 'people', label: 'People', enabled: true },
-        { url: 'about', label: 'About', enabled: false },
+        { url: 'about', label: 'About', enabled: true },
     ];
 
     public navSubLinks: Link[] = [
@@ -54,13 +54,8 @@ export class NavComponent {
     ];
 
     public searchResults: any;
-
     public searchEnabled: boolean;
-
     public logoSm: boolean;
-
-    private wasLoading = false;
-
     private currentUrl: string;
 
     @ViewChild('nav') nav: ElementRef;
@@ -115,11 +110,18 @@ export class NavComponent {
         this.menuBg.nativeElement.classList.toggle('open');
         this.menuBtnClose.nativeElement.classList.toggle('isOpen');
         this.homeLogo.nativeElement.classList.toggle('hide');
+
+        document.querySelector('body').classList.toggle('noscroll');
     }
 
     // Is passed route active?
     itemActive(route: string) {
-        return `/${route}` == this.currentUrl;
+        if (!this.currentUrl) return;
+
+        let active = false;
+        if (route === '') active = `/${route}` === this.currentUrl;
+        else active = this.currentUrl.indexOf(`/${route}`) > -1;
+        return active;
     }
 
     // If on home when logo clicked, just close menu

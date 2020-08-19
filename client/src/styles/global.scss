@@ -44,6 +44,10 @@ body {
   @include mobile-only {
     font-size: 16px;
   }
+
+  &.noscroll {
+    overflow-y: hidden;
+  }
 }
 
 // GLOBAL STYLING
