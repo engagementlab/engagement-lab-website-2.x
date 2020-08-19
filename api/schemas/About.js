@@ -15,15 +15,9 @@ const About = {
       id: ID!
       date: Date
       tagline: Markdown
-      missionStatement: String
       summary1: String
       summary2: String
-      images: [Image]
-      research: String!
-      workshops: String!
-      tools: String!
-      teaching: String!
-      design: String!
+      image: Image!
     }
   `,
     queries: ['allAboutPages: About'],
