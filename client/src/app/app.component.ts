@@ -32,6 +32,9 @@ export class AppComponent implements OnInit {
     @ViewChild('initiativesEl') initiativesEl: ElementRef;
     @ViewChild('initiativesBtn') initiativesBtn: ElementRef;
 
+    @ViewChild('studiosEl') studiosEl: ElementRef;
+    @ViewChild('studiosBtn') studiosBtn: ElementRef;
+
     constructor(
         private router: Router,
         private titleSvc: Title,
@@ -106,5 +109,14 @@ export class AppComponent implements OnInit {
     toggleInitiatives() {
         this.initiativesBtn.nativeElement.classList.toggle('open');
         this.initiativesEl.nativeElement.classList.toggle('open');
+    }
+
+    studiosActive() {
+        return this.currentUrl.indexOf('/studios/') > -1;
+    }
+
+    toggleStudios() {
+        this.studiosBtn.nativeElement.classList.toggle('open');
+        this.studiosEl.nativeElement.classList.toggle('open');
     }
 }

@@ -4,7 +4,10 @@
         <div class="blurb column is-four-fifths-desktop">
             {{ content.cohortYear.label }}
         </div>
-        <div class="column is-4">
+        <div
+            class="column is-4"
+            *ngIf="content.team && content.team.length > 0"
+        >
             <h1 class="uppercase sm">
                 Team
             </h1>

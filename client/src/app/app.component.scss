@@ -141,7 +141,7 @@
       @include transition(border-width, .2s, linear);
     }
 
-    &:not(#initiatives-btn) {
+    &:not(.foldout-btn) {
 
       &:hover,
       &.active {
@@ -191,7 +191,7 @@
     flex-wrap: wrap;
 
     @include phones {
-      &#subnav-studios {
+      .foldout {
         a {
           flex-grow: 1;
           flex-shrink: 0;
@@ -205,7 +205,7 @@
     margin-bottom: 15%;
   }
 
-  #initiatives-btn {
+  .foldout-btn {
     svg {
       @include transition(transform, .4s, cubic-bezier(1.000, 0.000, 0.000, 1.000));
       @include rotate(0);
@@ -224,7 +224,7 @@
     }
   }
 
-  #initiatives {
+  .foldout {
     display: flex;
     justify-content: space-evenly;
 
