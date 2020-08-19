@@ -96,10 +96,6 @@ export class NavComponent {
                 }
             });
 
-        this.dataSvc.isLoading.subscribe(value => {
-            this.wasLoading = value;
-        });
-
         this.searchEnabled = environment.searchEnabled;
     }
 
