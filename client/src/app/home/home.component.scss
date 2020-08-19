@@ -229,6 +229,12 @@ a {
     padding-right: 6%;
   }
 
+  .item {
+    @include phones {
+      padding: 0;
+    }
+  }
+
 }
 
 #events {
