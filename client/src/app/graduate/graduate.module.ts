@@ -39,12 +39,12 @@ const routes: Routes = [
                 pathMatch: 'full',
             },
             {
-                path: 'studios',
+                path: 'projects',
                 component: GraduateStudiosComponent,
                 pathMatch: 'full',
             },
             {
-                path: 'studios/projects/:key',
+                path: 'projects/:key',
                 component: GraduateProjectComponent,
             },
         ],

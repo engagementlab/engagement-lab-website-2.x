@@ -3,7 +3,9 @@
         Thesis Studios
     </h2>
 
-    <h3 class="column is-3 blurb">{{ content.studiosBlurb }}</h3>
+    <h3 class="column is-3-tablet is-full-mobile blurb">
+        {{ content.studiosBlurb }}
+    </h3>
 
     <div id="filters" class="uppercase column columns is-mobile is-full">
         <span class="bold column is-1">Year:</span>
@@ -37,7 +39,7 @@
         [class.mix]="project.key !== 'dummy'"
     >
         <a
-            routerLink="/graduate/studios/projects/{{ project.key }}"
+            routerLink="/graduate/projects/{{ project.key }}"
             *ngIf="project.key !== 'dummy'"
         >
             <div class="bg">

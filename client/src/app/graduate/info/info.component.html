@@ -1,12 +1,12 @@
-<section class="columns is-mobile content" *ngIf="content">
-    <div id="left" class="column is-half">
+<section class="columns is-mobile is-multiline content" *ngIf="content">
+    <div id="left" class="column is-half-tablet is-11-mobile">
         <h2>
             How to apply.
         </h2>
 
         <h3 [innerHtml]="content.applicationBlurb.html"></h3>
     </div>
-    <div class="column">
+    <div class="column is-full-mobile">
         <h1 class="uppercase">Ready to Apply?</h1>
         <app-button
             label="{{ content.buttonTxt }}"

@@ -63,14 +63,19 @@
                         responsive
                         public-id="{{ person.image.public_id }}"
                         secure="true"
-                        width="400"
                         fetch-format="auto"
-                        crop="scale"
                         attr.alt="Portrait image of {{ person.name.first }} {{
                             person.name.last
                         }}"
                         class="cdn-image"
                     >
+                        <cl-transformation
+                            gravity="face"
+                            height="400"
+                            width="400"
+                            crop="fill"
+                        >
+                        </cl-transformation>
                     </cl-image>
                 </div>
 
