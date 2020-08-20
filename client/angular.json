@@ -235,5 +235,8 @@
       }
     }
   },
-  "defaultProject": "elab-web"
+  "defaultProject": "elab-web",
+  "cli": {
+    "analytics": false
+  }
 }
