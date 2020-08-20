@@ -72,26 +72,21 @@ Tool.add({
         required: true,
         note: 'Name of project it came from.',
     },
+    summary: {
+        type: Types.Textarea,
+        label: 'Summary',
+        initial: true,
+        required: true,
+    },
     file: {
         type: Types.File,
-        dependsOn: {
-            type: 'file',
-        },
         label: 'File',
         storage: azureFile,
     },
     url: {
         type: String,
         label: 'URL',
-        initial: true,
         note: 'Use if there is no file.',
-    },
-    summary: {
-        type: String,
-        label: 'Summary',
-        dependsOn: {
-            type: ['article', 'blog post'],
-        },
     },
     date: {
         type: Date,

@@ -26,8 +26,7 @@ const Person = {
             relatedLinks: [String]
             projects: [Project]
             mdProjects: [MDProject] 
-            email: String
-            phone: String
+            contact: String
             alumni: Boolean
         }
   `,
