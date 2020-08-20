@@ -1,0 +1,39 @@
+@import "~src/styles/_variables";
+
+.resource {
+  @include ng-img {
+    max-height: 330px
+  }
+
+  .name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.7em;
+  }
+
+  .uppercase {
+    font-weight: 900;
+  }
+
+  .dl-arrow {
+    @include transition(transform, .2s, ease-in-out);
+  }
+
+  .url-arrow {
+    @include transition(transform, .2s, ease-in-out);
+    @include translate(-40%, 40%);
+  }
+
+  &:hover {
+
+    .dl-arrow {
+      @include translate(0, 13%);
+    }
+
+    .url-arrow {
+      @include translate(0%, 0%);
+    }
+  }
+
+}

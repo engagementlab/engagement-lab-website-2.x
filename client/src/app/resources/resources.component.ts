@@ -20,6 +20,7 @@ export class ResourcesComponent implements OnInit {
             project
             summary
             url
+            date
             file {
               url
             }
