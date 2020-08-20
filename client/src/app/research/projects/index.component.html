@@ -49,12 +49,12 @@
         </div>
     </div>
 </section>
-<section id="projects" class="columns is-multiline" *ngIf="projects">
+<section id="projects" class="columns is-multiline is-mobile" *ngIf="projects">
     <!-- We have to map array of initiative keys and then join result w/ space -->
     <div
         #projectList
         *ngFor="let project of projects; let i = index"
-        class="project view-tooltip column is-3 {{
+        class="project view-tooltip column is-3-tablet is-11-mobile {{
             project.initiatives !== undefined
                 ? (project.initiatives | pluck: 'key' | join: ' ')
                 : 'all'

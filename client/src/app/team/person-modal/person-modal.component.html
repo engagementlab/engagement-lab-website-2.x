@@ -30,9 +30,9 @@
                     person.name.last
                 }}"
             ></cdn-image>
-            <div *ngIf="person.email.length > 0">
+            <div *ngIf="person.contact.length > 0">
                 <h3 class="uppercase no-margin">Contact</h3>
-                {{ person.email }}
+                {{ person.contact }}
             </div>
             <div *ngIf="person.relatedLinks && person.relatedLinks.length > 0">
                 <h3 class="uppercase no-margin">Related Links</h3>
