@@ -83,23 +83,10 @@ export class EventComponent {
             );
             // eslint-disable-next-line dot-notation
             if (content) this.setContent(content['getEvent']);
-            this.bgAlpha = 0;
-            this.alphaInterval = setInterval(() => {
-                this.bgAlpha += 0.015;
-                if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
-            }, 15);
         });
     }
 
     ngOnDestroy(): void {
-        // Reset BG
-        document.body.style.backgroundImage = '';
-
-        // Cancel timers for bg
-        clearInterval(this.alphaInterval);
-        clearInterval(this.bgInterval);
-        clearTimeout(this.bgTimeout);
-
         // Cancel router subscribe
         this.subscriber.unsubscribe();
     }
@@ -108,41 +95,6 @@ export class EventComponent {
         this.content = data.event;
         this.next = data.next;
         this.previous = data.prev;
-
-        this.setBgHeight();
-
-        // Fade in
-        this.alphaInterval = setInterval(() => {
-            this.bgAlpha += 0.015;
-            if (this.bgAlpha >= 1) clearInterval(this.alphaInterval);
-        }, 15);
-    }
-
-    setBgHeight(): void {
-        // Run every 1ms for 3s for the end of gradient always end at desired % after full page load
-        // This is slightly hacky but the only way to really ensure proper render.
-        this.bgInterval = setInterval(() => {
-            if (this.backgroundEnd === undefined) return;
-
-            const endY =
-                this.backgroundEnd.nativeElement.offsetTop +
-                this.backgroundEnd.nativeElement.offsetHeight;
-            const windowHeight = document.body.clientHeight;
-            this.bgEndPerc = (endY / windowHeight) * 100;
-            const color = '247, 41, 35';
-
-            document.body.style.backgroundImage = `linear-gradient(
-                to bottom, 
-                rgba(${color}, ${this.bgAlpha}) 0%, 
-                rgba(${color}, ${this.bgAlpha}) ${this.bgEndPerc}%, 
-                white ${this.bgEndPerc}%, 
-                white 100%)`;
-        }, 1);
-
-        // Cancel soon
-        this.bgTimeout = setTimeout(() => {
-            clearInterval(this.bgInterval);
-        }, 3000);
     }
 
     @HostListener('window:keyup', ['$event'])
