@@ -8,7 +8,7 @@
 		"Graduate Program": ["masters", "Curriculum", "mdprojects"],
 		"research": ["researches", "projects", "publications", "initiatives"],
 		"people": ["people"],
-		"files/resources": ["resources"],
+		"files/resources": ["tools", "resources"],
 		"about": ["About", "Contact", "partners", "jobs"],
 		"other": ["events", "NewsItem", "Filter"]
 	}

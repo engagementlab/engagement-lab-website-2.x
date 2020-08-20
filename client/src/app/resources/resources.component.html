@@ -1,0 +1,38 @@
+<section id="intro" class="column is-8 is-11-mobile">
+    <h2>Resources & Tools</h2>
+    <h3 class="blurb">
+        Many of our research projects result in tools, games, workshops, or
+        processes that are free to use. Please browse our resources and use them
+        for your projects. We ask only that you provide appropriate credit.
+    </h3>
+</section>
+
+<section
+    id="resources"
+    class="columns is-multiline is-mobile is-centered"
+    *ngIf="content"
+>
+    <div
+        #resourceList
+        *ngFor="let resource of content; let i = index"
+        class="resource column is-5-tablet is-11-mobile"
+    >
+        <a href="{{ resource.url || resource.file.url }}">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ resource.image.public_id }}"
+                [autoFormat]="true"
+                [responsive]="false"
+                width="600"
+                height="300"
+                alt="Thumbnail image for '{{ resource.name }}' tool or resource"
+                *ngIf="resource.image !== undefined"
+            ></cdn-image>
+            <h4>{{ resource.name }}</h4>
+            <h4>{{ resource.project }}</h4>
+            <p>{{ resource.summary }}</p>
+            <h4>Date Created</h4>
+            <p>{{ resource.date | date: 'mm dd, yyyy' }}</p>
+        </a>
+    </div>
+</section>

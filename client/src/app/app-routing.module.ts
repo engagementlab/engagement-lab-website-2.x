@@ -43,6 +43,11 @@ const routes: Routes = [
         loadChildren: () =>
             import('./graduate/graduate.module').then(m => m.GraduateModule),
     },
+    {
+        path: 'resources',
+        loadChildren: () =>
+            import('./resources/resources.module').then(m => m.ResourcesModule),
+    },
 
     // Preserve old paths (pre-v2.5)
     {

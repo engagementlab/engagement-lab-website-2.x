@@ -108,15 +108,9 @@ Person.add({
         many: true,
     },
 
-    email: {
-        type: String,
-        label: 'Email',
-        note: 'This will display on the person\'s individual page',
-    },
-    phone: {
-        type: String,
-        label: 'Phone',
-        note: 'This will display on the person\'s individual page',
+    contact: {
+        type: Types.Textarea,
+        note: 'This can contain phone, email, office, etc.',
     },
 
 });

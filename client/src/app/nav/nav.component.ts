@@ -34,7 +34,7 @@ export class NavComponent {
     ];
 
     public navSubLinks: Link[] = [
-        { url: 'resources', label: 'Resources' },
+        { url: 'resources', label: 'Resources', enabled: true },
         { url: 'events', label: 'Events Calendar', enabled: true },
         {
             href: 'https://medium.com/engagement-lab-emerson-college',
