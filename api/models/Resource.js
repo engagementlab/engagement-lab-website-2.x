@@ -1,7 +1,7 @@
 /**
  * Engagement Lab Website v2.x
  *
- * Resource page Model
+ * Resource Model
  * @module resource
  * @author Johnny Richardson
  *
@@ -26,6 +26,8 @@ const Resource = new keystone.List('Resource', {
         path: 'key',
         unique: true,
     },
+    label: 'Resources (Legacy)',
+    plural: 'Resources (Legacy)',
 });
 
 // Storage adapter for Azure
