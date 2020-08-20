@@ -41,8 +41,8 @@ export class NavComponent {
             label: 'Lab Blog',
             enabled: true,
         },
-        { url: 'contact', label: 'Partner With Us' },
-        { url: 'contact', label: 'Contact Us' },
+        { url: 'partner', label: 'Partner With Us' },
+        { url: 'getinvolved', label: 'Get Involved', enabled: true },
         // TODO: in CMS?
         {
             href:
@@ -50,7 +50,7 @@ export class NavComponent {
             label: 'Donate',
             enabled: true,
         },
-        { url: 'jobs', label: 'Jobs' },
+        { url: 'jobs', label: 'Jobs', enabled: true },
     ];
 
     public searchResults: any;

@@ -12,7 +12,10 @@ export class ContactComponent implements OnInit {
     public content: any;
 
     // eslint-disable-next-line no-useless-constructor
-    constructor(private _dataSvc: DataService, private _scrollToSvc: ScrollToService) {}
+    constructor(
+        private _dataSvc: DataService,
+        private _scrollToSvc: ScrollToService,
+    ) {}
 
     async ngOnInit(): Promise<any> {
         const query = `
@@ -24,7 +27,8 @@ export class ContactComponent implements OnInit {
                 }
             }
         `;
-        this.content = await this._dataSvc.getSet('contact', query);
+        const response = await this._dataSvc.getSet('getinvolved', query);
+        this.content = response['allContactPages'];
     }
 
     public scrollToBottom() {
