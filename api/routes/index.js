@@ -20,7 +20,6 @@ const Routes = () => {
     const routes = {
         get: importRoutes('./get'),
     };
-    const routeIncludes = [keystone.middleware.api, keystone.middleware.cors];
 
     // Setup Route Bindings
     // CORS
@@ -36,16 +35,7 @@ const Routes = () => {
         else next();
     });
 
-    router.get('/get/about', routeIncludes, routes.get.about);
-    router.get('/get/events/:key?', routes.get.event.data);
-    router.get('/get/homepage', routeIncludes, routes.get.homepage);
-    router.get('/get/initiative/:key', routes.get.initiative.data);
-    router.get('/get/contact', routes.get.contact);
-    router.get('/get/jobs', routes.get.jobs);
-    router.get('/get/masters/:key?', routes.get.masters);
-    router.get('/get/privacy', routes.get.privacy);
-    router.get('/get/projects/:key?', routes.get.project.data);
-    router.get('/get/publications/:key?', routes.get.publication.data);
+    router.get('/post/contact', routes.get.contact.send);
 
     router.get('/get/search/:string', routes.get.search);
     router.get('/get/team/:key?', routes.get.team.data);

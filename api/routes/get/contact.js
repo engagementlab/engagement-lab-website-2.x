@@ -3,26 +3,43 @@
  * @copyright Engagement Lab at Emerson College, 2020
  *
  * @author Johnny Richardson
- * @description Route to retrieve get involved/contact data
+ * @description Route to send form data as email and slack post
  *
  * ==========
  */
-const BuildData = async (req, res) => {
-  const { db } = res.locals;
 
-  const contact = db.list('Contact').model;
-  const fields = 'name blurb students community -_id';
+const _ = require('underscore');
 
-  try {
-    // Get contact text
-    const query = contact.findOne({}, fields);
-    // Execute queries
-    const data = await query.exec();
+exports.send = function (req, res) {
+    const subjectLine = 'Partner With Us Request';
+    let body = '';
+    _.each(_.keys(req.body), key => {
+        body += `${key.charAt(0).toUpperCase() + key.slice(1)}: ${req.body[key]}\n`;
+    });
 
-    res.json(data);
-  } catch (e) {
-    res.status(500).send(e.toString());
-  }
+    const mailgun = require('mailgun-js')({
+        apiKey: process.env.MAILGUN_KEY,
+        domain: process.env.MAILGUN_DOMAIN,
+    });
+    const validEmail = (req.body.email !== undefined && req.body.email.length > 0);
+    const data = {
+        from: `<${validEmail ? req.body.email : 'noreply@elab.emerson.edu'}>`,
+        to: process.env.MAILGUN_CONTACT,
+        subject: subjectLine,
+        text: body,
+    };
+
+    mailgun.messages().send(data, (error, body) => {
+        if (error) {
+            console.error(`Mailgun error: ${error}`);
+            res.status(500).json({
+                err: error,
+            });
+            return;
+        }
+
+        res.status(200).json({
+            msg: 'Message sent.',
+        });
+    });
 };
-
-module.exports = (req, res) => BuildData(req, res);
