@@ -72,35 +72,12 @@ a {
       background: black;
       top: 101%;
       z-index: -1;
-      animation: exit 0.3s ease-in-out 1 both;
-      // visibility: hidden;
+      @include transition(opacity, .3s, ease-in-out);
+      opacity: 0;
     }
 
     &:hover:before {
-      animation: hover 0.3s ease-in-out 1 both;
-    }
-
-    // Animations
-    @keyframes exit {
-      0% {
-        top: 51%;
-        background: $tomato;
-      }
-
-      100% {
-        top: 100%;
-      }
-    }
-
-    @keyframes hover {
-      0% {
-        top: 100%;
-      }
-
-      100% {
-        top: 51%;
-        background: $tomato;
-      }
+      opacity: 1;
     }
   }
 }
