@@ -26,7 +26,7 @@ before_install:
     # Add the key to the authentication agent
     - DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
     # Get ngcc
-    - npm install -g @angular/compiler-cli/ngcc
+    - npm install -g @angular/compiler-cli
 
 before_script:
     - npm install -g @angular/cli
