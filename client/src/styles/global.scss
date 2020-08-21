@@ -205,6 +205,37 @@ hr {
 
 }
 
+// Form styles
+.fields {
+  width: 100%;
+
+  input,
+  textarea {
+    width: 97%;
+    padding: 1% 0 1% 1%;
+    font-family: 'LunchtypeRegular'
+  }
+
+  button {
+    padding: 1%;
+    font-family: 'LunchtypeMedium';
+  }
+
+  input,
+  button,
+  textarea {
+    @include pxtoem(24, 30);
+    border: solid 4px black;
+  }
+
+  .formerror {
+    font-family: 'Overpass';
+    font-weight: 900;
+    font-size: .8em;
+  }
+
+}
+
 // Bulma container adjustments
 .container {
   @include not-desktop {

@@ -1,1 +1,104 @@
-<p>partner works!</p>
+<h2>Partner with us</h2>
+
+<section class="columns is-mobile is-multiline" *ngIf="content !== undefined">
+    <div class="column is-6-tablet is-full-mobile">
+        <h3 class="blurb">
+            {{ content.intro }}
+        </h3>
+    </div>
+    <div class="column">
+        <cdn-image
+            cloudinaryPrefix="/"
+            cloudinaryId="{{ content.image.public_id }}"
+            width="614"
+            alt="About flavor image"
+        ></cdn-image>
+    </div>
+    <div class="column is-full">
+        <h3 class="blurb">
+            {{ content.summary1 }}
+        </h3>
+    </div>
+    <div class="column is-full">
+        <h1 class="uppercase">
+            Benefits of Partnerships
+        </h1>
+        <h3 class="blurb">
+            {{ content.summary2 }}
+        </h3>
+    </div>
+</section>
+
+<section>
+    <h1 class="uppercase">
+        Partnership inquiry form
+    </h1>
+    <hr class="thick" />
+    <form
+        class="columns column is-full is-multiline"
+        [formGroup]="inquiryForm"
+        (submit)="submitForm()"
+        *ngIf="!received"
+    >
+        <div class="fields">
+            <div class="column is-full">
+                <span *ngIf="submitted && f.name.invalid" class="formerror">
+                    Required
+                </span>
+                <input
+                    formControlName="name"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                />
+            </div>
+            <div class="column is-full">
+                <span class="formerror" *ngIf="submitted && f.email.invalid">
+                    <span *ngIf="f.email.errors.email">
+                        Invalid Email
+                    </span>
+                    <span *ngIf="f.email.errors.required">
+                        Required
+                    </span>
+                </span>
+                <input
+                    formControlName="email"
+                    id="email"
+                    placeholder="Email address"
+                />
+            </div>
+            <div class="column is-full">
+                <span *ngIf="submitted && f.company.invalid" class="formerror">
+                    Required
+                </span>
+                <input
+                    formControlName="company"
+                    id="company"
+                    placeholder="Company or affiliation"
+                    required
+                />
+            </div>
+            <div class="column is-full">
+                <span *ngIf="submitted && f.message.invalid" class="formerror">
+                    Required
+                </span>
+
+                <textarea
+                    formControlName="message"
+                    id="message"
+                    name="message"
+                    placeholder="Please tell us about your partnership interest"
+                    rows="5"
+                    required
+                ></textarea>
+            </div>
+            <div class="column">
+                <button type="submit">Get in touch</button>
+            </div>
+        </div>
+    </form>
+    <!-- email sent -->
+    <div *ngIf="received">
+        Thanks for your feedback!
+    </div>
+</section>

@@ -4,10 +4,6 @@ h1 {
   letter-spacing: 1.5px;
 }
 
-h3 {
-  font-family: 'LunchtypeMedium';
-}
-
 app-button {
   @include not-phones {
     display: block;
