@@ -44,6 +44,11 @@ const routes: Routes = [
             import('./graduate/graduate.module').then(m => m.GraduateModule),
     },
     {
+        path: 'partner',
+        loadChildren: () =>
+            import('./partner/partner.module').then(m => m.PartnerModule),
+    },
+    {
         path: 'resources',
         loadChildren: () =>
             import('./resources/resources.module').then(m => m.ResourcesModule),
@@ -86,15 +91,6 @@ const routes: Routes = [
         path: 'redirect',
         component: RedirectComponent,
         canActivate: [RedirectService],
-    },
-
-    {
-        path: 'pokemon',
-        component: RedirectComponent,
-        canActivate: [RedirectService],
-        data: {
-            externalUrl: 'https://www.launchpad6.com/contestpad',
-        },
     },
 
     { path: '**', component: NotFoundComponent },

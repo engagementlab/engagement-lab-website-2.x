@@ -41,7 +41,7 @@ export class NavComponent {
             label: 'Lab Blog',
             enabled: true,
         },
-        { url: 'partner', label: 'Partner With Us' },
+        { url: 'partner', label: 'Partner With Us', enabled: true },
         { url: 'getinvolved', label: 'Get Involved', enabled: true },
         // TODO: in CMS?
         {

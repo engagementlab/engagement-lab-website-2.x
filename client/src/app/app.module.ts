@@ -75,6 +75,7 @@ import { StudiosCocurricularComponent } from './studios/cocurricular/cocurricula
 import { StudiosPartnerComponent } from './studios/partner/partner.component';
 import { StudioThumbComponent } from './studios/studio/thumb/thumb.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { PartnerComponent } from './partner/partner.component';
 
 export const cloudinary = {
     Cloudinary,
@@ -102,6 +103,7 @@ export const config: CloudinaryConfiguration = appConfig;
         InitiativeComponent,
         NavComponent,
         NotFoundComponent,
+        PartnerComponent,
         PrivacyComponent,
         PeopleGridComponent,
         PersonModalComponent,
