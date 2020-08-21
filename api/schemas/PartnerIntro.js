@@ -13,7 +13,7 @@ const PartnerIntro = {
     schema: `
     type PartnerIntro {
       id: ID!
-      intro: Markdown
+      intro: String
       summary1: String
       summary2: String
       image: Image!

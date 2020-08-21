@@ -40,10 +40,10 @@ About.add({
     },
 
     summary1: {
-        type: Types.Textarea, label: 'Summary Paragraph 1', required: true, note: 'First (required) paragraph',
+        type: Types.Textarea, label: 'Mission Statement', required: true, initial: true,
     },
     summary2: {
-        type: Types.Textarea, label: 'Summary Paragraph 2', required: true, note: 'Second (required) paragraph',
+        type: Types.Textarea, label: 'Value Statement', required: true, initial: true,
     },
 
     image: {
