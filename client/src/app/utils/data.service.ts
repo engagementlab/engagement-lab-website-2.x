@@ -1,5 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
+import { Subject, Observable } from 'rxjs';
+import { throwError } from 'rxjs';
+
+import { environment } from '../../environments/environment';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
@@ -11,14 +20,20 @@ import * as _ from 'underscore';
 @Injectable()
 export class DataService {
     public isLoading: Subject<boolean> = new Subject<boolean>();
-
     public errors: Subject<any[]> = new Subject<any[]>();
+
+    private baseUrl: string;
 
     // eslint-disable-next-line no-useless-constructor
     constructor(
+        private http: HttpClient,
         private transferState: TransferStateService,
         private _apollo: Apollo,
-    ) {}
+    ) {
+        this.baseUrl = environment.development
+            ? 'http://localhost:3000'
+            : 'https://' + window.location.host;
+    }
 
     /**
      * Retrieve data with page type, key, and query and get/set in transferstate
@@ -108,5 +123,31 @@ export class DataService {
             }
         });
         return state;
+    }
+
+    /**
+     * Send data package to specified url
+     * @function
+     * @returns Observable
+     * @param {string} urlParam - Relative route of endpoint
+     * @param {any} formData - Form data to send
+     */
+    public sendDataToUrl(urlParam: string, formData: any): Observable<any> {
+        this.isLoading.next(true);
+
+        let url = this.baseUrl;
+        url += urlParam;
+
+        return this.http
+            .post(url, formData)
+            .map((res: any) => {
+                this.isLoading.next(false);
+
+                return res;
+            })
+            .catch((error: any) => {
+                this.isLoading.next(false);
+                return throwError(error);
+            });
     }
 }
