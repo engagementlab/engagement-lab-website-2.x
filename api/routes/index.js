@@ -35,21 +35,12 @@ const Routes = () => {
         else next();
     });
 
-    router.get('/post/contact', routes.get.contact.send);
-
-    router.get('/get/search/:string', routes.get.search);
-    router.get('/get/team/:key?', routes.get.team.data);
-
-    router.get('/keys/events', routes.get.event.keys);
-    router.get('/keys/initiatives', routes.get.initiative.keys);
-    router.get('/keys/projects', routes.get.project.keys);
-    router.get('/keys/publications', routes.get.publication.keys);
-    router.get('/keys/team', routes.get.team.keys);
+    router.post('/post/contact', routes.get.contact.send);
 
     // Error
-    // router.get('*', (req, res) => {
-    //   res.status(500).send(`No route found for path ${req.url}.`);
-    // });
+    router.get('*', (req, res) => {
+        res.status(500).send(`No route found for path ${req.url}.`);
+    });
 
     return router;
 };
