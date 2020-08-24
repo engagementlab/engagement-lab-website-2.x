@@ -33,7 +33,9 @@
     <h1 class="uppercase">
         Partnership inquiry form
     </h1>
+
     <hr class="thick" />
+
     <form
         class="columns column is-full is-multiline"
         [formGroup]="inquiryForm"
@@ -50,6 +52,7 @@
                     id="name"
                     placeholder="Full Name"
                     required
+                    value="Johnny Test"
                 />
             </div>
             <div class="column is-full">
@@ -65,6 +68,7 @@
                     formControlName="email"
                     id="email"
                     placeholder="Email address"
+                    value="Johnny@elab.emerson.edu"
                 />
             </div>
             <div class="column is-full">
@@ -76,6 +80,7 @@
                     id="company"
                     placeholder="Company or affiliation"
                     required
+                    value="Engagement Lab"
                 />
             </div>
             <div class="column is-full">
@@ -90,6 +95,7 @@
                     placeholder="Please tell us about your partnership interest"
                     rows="5"
                     required
+                    value="Inquiry here."
                 ></textarea>
             </div>
             <div class="column">
@@ -99,6 +105,6 @@
     </form>
     <!-- email sent -->
     <div *ngIf="received">
-        Thanks for your feedback!
+        Thanks for your message! We will be in touch shortly!
     </div>
 </section>

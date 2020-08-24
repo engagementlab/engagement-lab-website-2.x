@@ -18,7 +18,14 @@ export class PartnerComponent implements OnInit {
     constructor(
         private _dataSvc: DataService,
         private _formBuilder: FormBuilder,
-    ) {}
+    ) {
+        this.inquiryForm = this._formBuilder.group({
+            name: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            company: ['', [Validators.required]],
+            message: ['', [Validators.required]],
+        });
+    }
 
     async ngOnInit(): Promise<void> {
         const query = `
@@ -36,13 +43,6 @@ export class PartnerComponent implements OnInit {
       `;
         const response = await this._dataSvc.getSet('partner-with-us', query);
         this.content = response['allPartnerIntroPages'];
-
-        this.inquiryForm = this._formBuilder.group({
-            name: ['', [Validators.required]],
-            email: ['', [Validators.required, Validators.email]],
-            company: ['', [Validators.required]],
-            message: ['', [Validators.required]],
-        });
     }
 
     // convenience getter for easy access to form fields
