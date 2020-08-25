@@ -26,7 +26,7 @@ const Initiative = {
     queries: ['allInitiativePages: [Initiative]',
         'getInitiative(key: String): Initiative'],
     resolvers: {
-        allInitiativePages: async () => global.keystone.list('Initiative').model.find({}).exec(),
+        allInitiativePages: async () => global.keystone.list('Initiative').model.find({}).sort({ sortOrder: 1, }).exec(),
         getInitiative: async (parent, args) => {
             const res = await global.keystone.list('Initiative').model.findOne({ key: args.key, }).populate({
                 path: 'projects',
