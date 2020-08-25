@@ -53,26 +53,6 @@ export class PartnerComponent implements OnInit {
     submitForm() {
         this.submitted = true;
 
-        // A little hack to get error inside input fields
-        /*         for (let id in this.inquiryForm.controls) {
-            if (
-                this.inquiryForm.controls[id].invalid ||
-                this.inquiryForm.controls[id].errors !== null
-            ) {
-                let errorEl = document.querySelector(
-                    "span[data-field='" + id + "'",
-                ) as HTMLElement;
-                let targetEl = document.getElementById(id);
-                let targetWidth = targetEl.clientWidth;
-                let offsetWidth = targetWidth - errorEl.clientWidth;
-
-                // Make error span width of input field
-                errorEl.style.width = offsetWidth + 'px';
-                errorEl.style.display = 'block';
-                targetEl.classList.add('error');
-            }
-        }
- */
         // stop here if form is invalid
         if (this.inquiryForm.invalid) {
             return;
@@ -80,7 +60,7 @@ export class PartnerComponent implements OnInit {
 
         let data = this.inquiryForm.value;
         this._dataSvc
-            .sendDataToUrl('/post/contact', data)
+            .sendDataToUrl('post/contact', data)
             .subscribe((data: any) => {
                 this.received = true;
             });

@@ -135,7 +135,7 @@ export class DataService {
     public sendDataToUrl(urlParam: string, formData: any): Observable<any> {
         this.isLoading.next(true);
 
-        let url = this.baseUrl;
+        let url = this.baseUrl + '/api/';
         url += urlParam;
 
         return this.http
