@@ -25,10 +25,6 @@ before_install:
     - eval "$(ssh-agent -s)"
     # Add the key to the authentication agent
     - DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
-    # Get angular/ngcc
-    - npm install -g @angular/cli
-    - npm install -g @angular/compiler-cli
-    - npm install -g typescript
 
 before_script:
     - npm install -g bower
