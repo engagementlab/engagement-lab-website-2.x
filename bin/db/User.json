@@ -1,1 +1,4 @@
 {"_id":{"$oid":"5efa1d646306285f27820e95"},"name":{"first":"Johnny","last":"Richardson"},"isAdmin":true,"email":"john_richardson@emerson.edu","__v":0}
+{"_id":{"$oid":"5f3565e6535f334f001b179e"},"name":{"first":"Melissa","last":"Teng"},"isAdmin":true,"email":"melissa_teng@emerson.edu","__v":0}
+{"_id":{"$oid":"5f356609535f334f001b179f"},"name":{"first":"Victoria","last":"Torres"},"isAdmin":true,"email":"victoria_torres@emerson.edu","__v":0}
+{"_id":{"$oid":"5f356736535f334f001b17a0"},"name":{"first":"Eric","last":"Gordon"},"isAdmin":true,"email":"eric_gordon@emerson.edu","__v":0}
