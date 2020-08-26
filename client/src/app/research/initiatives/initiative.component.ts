@@ -31,12 +31,22 @@ export class InitiativeComponent implements OnInit {
                         image {
                             public_id
                         }
+                        featuredProject {
+                            name
+                            key
+                            image {
+                                public_id
+                            }
+                        }
+                        featuredProjectBlurb
                         projects {
                             name
                             key
                             image {
                                 public_id
                             }
+                            startYear
+                            endYear
                         }
                         
                     }

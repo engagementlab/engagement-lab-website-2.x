@@ -14,6 +14,10 @@
 
 }
 
+h1.white {
+  color: white;
+  width: 100%;
+}
 
 section {
 
@@ -27,7 +31,7 @@ section {
 
   // Initiative coloring
   &.civic-smart-cities {
-    h1 {
+    #header {
       color: $mango;
     }
 
@@ -44,7 +48,7 @@ section {
   }
 
   &.engaged-journalism {
-    h1 {
+    #header {
       color: $tomato;
     }
 
@@ -61,7 +65,7 @@ section {
   }
 
   &.health-advocacy {
-    h1 {
+    #header {
       color: $green-blue;
     }
 
@@ -80,55 +84,54 @@ section {
 
 #upper {
 
-  position: relative;
-  left: 0;
+  @include phones {
+    color: white;
+    background-color: black;
 
-  width: 100%;
-  height: 690px;
+    #header {
+      margin: 0;
+    }
+  }
+
+  margin-left: -4%;
+  margin-right: -4%;
+  padding-left: 4%;
+  padding-right: 4%;
 
   #text {
-
-    position: relative;
-    z-index: 2;
-
-    padding-top: 5%;
+    height: 468px;
+    padding-top: 2%;
 
     h2,
     h3 {
       color: white;
     }
   }
-
-
 }
 
-h1 {
+#description {
   color: white;
-  width: 100%;
+  background-color: black;
 
-  &.header {
-    text-align: left;
-    color: black;
+  @include mq($from: mobileLg) {
+    margin-left: -4%;
+    margin-right: -4%;
+    padding-left: 4%;
   }
 }
 
 p,
 h3 {
-  position: relative;
-  z-index: 1;
-
   &.blurb {
-    width: 70%;
-
-    @include phones {
-      width: 100%;
-    }
-  }
-
-  &.hidden-mobile {
-    width: 60%;
+    @include pxtoem(28, 36);
   }
 }
+
+#featured {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 
 #projects {
 
