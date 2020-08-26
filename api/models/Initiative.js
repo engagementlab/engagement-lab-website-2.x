@@ -33,7 +33,7 @@ const Initiative = new keystone.List('Initiative',
  */
 Initiative.add({
     name: {
-        type: String, label: 'Initiative Name', required: true, initial: true, index: true, note: 'This is the name or title of the directory',
+        type: String, label: 'Initiative Name', required: true, initial: true, index: true,
     },
     description: {
         type: String, required: true, initial: true, note: 'This displays next to/near the initiative name',
@@ -41,10 +41,12 @@ Initiative.add({
     longDescription: {
         type: Types.Textarea, required: true, initial: true, note: 'This displays on the initiative landing',
     },
-    image: {
-        type: Types.CloudinaryImage,
-        label: 'Initiative Image',
-        folder: 'homepage-2.0/initiatives',
+    featuredProject: {
+        type: Types.Relationship,
+        ref: 'Project',
+    },
+    featuredProjectBlurb: {
+        type: Types.Textarea,
     },
     projects: {
         type: Types.Relationship,
@@ -54,13 +56,6 @@ Initiative.add({
         required: true,
         many: true,
         initial: true,
-    },
-    publications: {
-        type: Types.Relationship,
-        ref: 'Publication',
-        label: 'Publication(s)',
-        note: 'Publications that are part of this initiative',
-        many: true,
     },
 });
 

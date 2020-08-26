@@ -88,7 +88,7 @@ const Project = {
             resultsTxt: String!
             showFiles: Boolean
             sortOrder: Int
-            startYear: String!
+            startYear: String
             status: String
             strategyTxt: String!
             teamMembers: [String]
