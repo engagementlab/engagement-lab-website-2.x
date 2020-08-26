@@ -26,7 +26,7 @@
             class="column is-4-tablet"
             label="{{ content?.buttonTxt }}"
             href="{{ content?.eventUrl }}"
-            ariaLabel="Go to 'content?.name' website"
+            [ariaLabel]="'Go to ' + content?.name + ' website'"
             *ngIf="content?.showButton"
         ></app-button>
     </div>

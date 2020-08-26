@@ -171,6 +171,26 @@ hr {
     height: 588px;
   }
 
+  @media (min-width: 1440px) {
+    img {
+      display: block;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1439px) {
+    img {
+      display: none;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
   visibility: hidden;
   background-size: cover;
   background-repeat: no-repeat;
@@ -356,16 +376,16 @@ hr {
       font-weight: bold;
       opacity: 0;
       @include transform(scale(.9));
-      @include transition(all, .8s, ease-in-out);
+      @include transition(all, .5s, cubic-bezier(0.230, 1.000, 0.320, 1.000));
     }
   }
 
   &:hover {
     .bg {
       span {
-        opacity: 1;
+        opacity: .85;
         @include transform(scale(1));
-        @include transition(all, .8s, ease-in-out);
+        @include transition(all, .5s, cubic-bezier(0.230, 1.000, 0.320, 1.000));
       }
     }
   }
