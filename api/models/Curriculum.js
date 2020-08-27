@@ -13,7 +13,6 @@
 
 const { keystone, } = global;
 const { Types, } = keystone.Field;
-const urlValidator = require('../utils').url;
 
 /**
  * Curriculum model

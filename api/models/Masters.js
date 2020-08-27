@@ -54,6 +54,16 @@ Masters.add({
         required: true,
         initial: true,
     },
+    faculty: {
+        type: Types.Relationship,
+        required: true,
+        initial: true,
+        many: true,
+        ref: 'Person',
+        filters: {
+            type: ['faculty leadership', 'faculty fellows'],
+        },
+    },
     studiosBlurb: {
         type: Types.Textarea,
         required: true,
