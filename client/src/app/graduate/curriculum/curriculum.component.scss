@@ -9,11 +9,6 @@ h2 {
   font-weight: 400;
 }
 
-h3,
-p {
-  font-family: 'LunchtypeMedium';
-}
-
 p {
   &.desc {
     @include pxtoem(18, 24);
