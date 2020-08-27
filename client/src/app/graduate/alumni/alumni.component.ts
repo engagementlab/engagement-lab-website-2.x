@@ -83,8 +83,7 @@ export class GraduateAlumniComponent implements OnInit {
                 }
                 category
                 relatedLinks
-                email 
-                phone
+                contact
                 projects {
                     image {
                         public_id
