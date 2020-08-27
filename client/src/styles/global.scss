@@ -171,6 +171,10 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
 
+  svg {
+    display: none;
+    // max-width: 100%;
+  }
 
   @include phones {
     height: 588px;
@@ -200,6 +204,7 @@ hr {
     visibility: hidden;
     width: 0;
     height: 0;
+    overflow-x: hidden;
 
     // Maybe someday we can have one SVG morph
     svg,

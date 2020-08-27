@@ -46,6 +46,9 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.router.events.subscribe(async evt => {
+            // Close initiatives on all navigation
+            // this.initiativesEl.nativeElement.classList.remove('open');
+
             if (!(evt instanceof NavigationEnd)) return;
 
             // Get nav route when nav ends
@@ -103,7 +106,10 @@ export class AppComponent implements OnInit {
     }
 
     initiativeActive() {
-        return this.currentUrl.indexOf('/research/initiatives') > -1;
+        return (
+            this.currentUrl &&
+            this.currentUrl.indexOf('/research/initiatives') > -1
+        );
     }
 
     toggleInitiatives() {
