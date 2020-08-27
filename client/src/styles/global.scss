@@ -167,6 +167,11 @@ hr {
   left: 0;
   width: 100%;
 
+  visibility: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
   @include phones {
     height: 588px;
   }
@@ -191,20 +196,64 @@ hr {
     }
   }
 
-  visibility: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
+  .shapes {
+    visibility: hidden;
+    width: 0;
+    height: 0;
 
-  &.civic-smart-cities {
-    background-image: cdn-image('initiatives/smartcities-bg.jpg', c_fill, g_south_east, h_1021, w_1440);
+    // Maybe someday we can have one SVG morph
+    svg,
+    img {
+      @include transition(transform, 1s, ease-in-out);
+      transform: skew(0deg, random(40)+deg);
+    }
   }
 
   &.engaged-journalism {
     background-image: cdn-image('initiatives/trust-news-bg.jpg', c_fill, w_1440);
+
+    #engaged-journalism {
+      visibility: visible;
+      width: auto;
+      height: auto;
+
+      svg,
+      img {
+        transform: skew(0deg);
+      }
+    }
+  }
+
+  &.civic-smart-cities {
+    background-image: cdn-image('initiatives/smartcities-bg.jpg', c_fill, g_south_east, h_1021, w_1440);
+
+    #civic-smart-cities {
+      @include translate(0, 4%);
+      visibility: visible;
+      width: auto;
+      height: auto;
+
+      svg,
+      img {
+        transform: skew(0deg);
+      }
+    }
   }
 
   &.health-advocacy {
     background-image: cdn-image('initiatives/health-bg.jpg', c_fill, h_1021, w_1440);
+
+    #health-advocacy {
+      @include translate(0, 9%);
+      visibility: visible;
+      width: auto;
+      height: auto;
+
+      svg,
+      img {
+        transform: skew(0deg);
+      }
+    }
   }
 
   &.show {
@@ -221,7 +270,6 @@ hr {
       visibility: visible;
     }
   }
-
 }
 
 // Form styles

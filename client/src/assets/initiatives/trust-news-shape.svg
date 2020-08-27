@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="628" height="882" fill="none" viewBox="0 0 628 882">
-    <path fill="#00AB9E" d="M542.274 867.618c221.803-184.403-56.101-388.106-87.701-592.708-19-122.902-28.1-176.003-167.102-228.003C171.869 3.706 112.268-60.995 39.267 125.608c-48 122.601-64.8 453.406 24.6 553.407 75.302 84.101 371.306 253.204 478.407 188.603z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="981px" viewBox="0 0 1440 981" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Oval Copy</title>
+    <g id="All" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Research-/-Trust-in-the-News-page" transform="translate(0.000000, -40.000000)" fill="#000000">
+            <path d="M477.336668,822.500869 C477.336668,1067.62381 394.724735,1210.29047 229.500869,1250.50087 L1210.50087,1250.50087 L1207.50087,-189.500869 L1035.50087,-189.500869 C1064.59836,-24.291819 976.500869,100.378419 783.500869,227.601294 C581.99278,360.432581 477.336668,457.459643 477.336668,822.500869 Z" id="Oval-Copy" transform="translate(720.000869, 530.500000) rotate(-270.000000) translate(-720.000869, -530.500000) "></path>
+        </g>
+    </g>
 </svg>
