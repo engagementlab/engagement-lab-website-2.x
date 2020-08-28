@@ -1,0 +1,61 @@
+@import '~src/styles/_variables';
+
+$easing: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+@include keyframes(translate) {
+  0% {
+    @include translate(0, -100%);
+  }
+
+  33% {
+    @include translate(0, -66%);
+  }
+
+  66% {
+    @include translate(0, -33%);
+  }
+
+  99% {
+    @include translate(0);
+  }
+}
+
+@include keyframes(fade-1) {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+h2 {
+
+  .slider {
+    display: inline-flex;
+    position: absolute;
+    flex-direction: column;
+    animation: translate 10s $easing infinite forwards;
+
+    span {
+      //   visibility: hidden;
+
+      &:first-child {
+        animation: fade-1 3s $easing infinite forwards;
+      }
+
+      &:nth-child(2) {
+        // animation: slide-in-out-long 20s $easing 6s infinite forwards;
+      }
+
+      &:nth-child(3) {
+        // animation: slide-in-out-long 24s $easing 12s infinite forwards;
+      }
+    }
+  }
+}
