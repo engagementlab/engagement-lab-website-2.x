@@ -1,5 +1,16 @@
-import { Component, ViewChildren, QueryList, Input, OnDestroy, AfterViewInit } from '@angular/core';
-import { tns, TinySliderInstance, TinySliderInfo } from 'tiny-slider/src/tiny-slider';
+import {
+    Component,
+    ViewChildren,
+    QueryList,
+    Input,
+    OnDestroy,
+    AfterViewInit,
+} from '@angular/core';
+import {
+    tns,
+    TinySliderInstance,
+    TinySliderInfo,
+} from 'tiny-slider/src/tiny-slider';
 
 @Component({
     selector: 'people-grid',
@@ -11,6 +22,7 @@ export class PeopleGridComponent implements AfterViewInit, OnDestroy {
     @Input() preview: boolean;
     @Input() cohort: boolean;
     @Input() title: string;
+    @Input() modalRoute: string;
 
     @ViewChildren('teamList') list: QueryList<any>;
 
@@ -38,9 +50,13 @@ export class PeopleGridComponent implements AfterViewInit, OnDestroy {
             this.slider.events.on('transitionStart', (info: TinySliderInfo) => {
                 // Make sure any slides in queue are not invisible
                 // This is a workaround for apparent bug in tns with class used by BrowserAnimationsModule
-                document.querySelectorAll('.tns-item.tns-slide-active:not(.ng-star-inserted)').forEach(el => {
-                    el.classList.add('visible');
-                });
+                document
+                    .querySelectorAll(
+                        '.tns-item.tns-slide-active:not(.ng-star-inserted)',
+                    )
+                    .forEach(el => {
+                        el.classList.add('visible');
+                    });
             });
         });
     }
@@ -48,5 +64,11 @@ export class PeopleGridComponent implements AfterViewInit, OnDestroy {
     ngOnDestroy() {
         // Destroy slider when user leaves
         if (this.slider) this.slider.destroy();
+    }
+
+    getModalRoute(key) {
+        if (this.modalRoute) return `${this.modalRoute}/${key}`;
+
+        return this.cohort ? `/graduate/students/${key}` : `/people/${key}`;
     }
 }

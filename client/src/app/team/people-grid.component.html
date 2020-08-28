@@ -50,11 +50,7 @@
             <a
                 *ngIf="person.name != 'dummy'"
                 [class.white]="preview === true"
-                [routerLink]="
-                    cohort
-                        ? '/graduate/students/' + person.key
-                        : '/people/' + person.key
-                "
+                [routerLink]="getModalRoute(person.key)"
             >
                 <div class="bg">
                     <span role="tooltip">view</span>

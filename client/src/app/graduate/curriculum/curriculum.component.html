@@ -1,3 +1,8 @@
+<person-modal
+    *ngIf="currentPerson !== undefined"
+    [person]="currentPerson"
+    (onClose)="closePerson()"
+></person-modal>
 <section class="columns is-mobile is-multiline content" *ngIf="content">
     <h2 class="column is-full">
         The Engagement Lab offers an MA in Media Design.
@@ -55,10 +60,61 @@
             <p class="desc">{{ curricula[index].description }}</p>
         </div>
     </div>
-    <div class="column is-half-tablet is-full-mobile">
+    <div class="column is-full-mobile">
         <div *ngFor="let index of [2, 3]">
             <h3 class="blurb">{{ curricula[index].name }}</h3>
             <p class="desc">{{ curricula[index].description }}</p>
+        </div>
+    </div>
+</section>
+
+<section id="faculty" class="content" *ngIf="content && content.faculty">
+    <hr />
+    <h1 class="uppercase">
+        Faculty
+    </h1>
+    <people-grid
+        modalRoute="/graduate/faculty"
+        [people]="content.faculty"
+    ></people-grid>
+</section>
+
+<section id="projects" class="content" *ngIf="content && content.projects">
+    <hr />
+    <h1 class="uppercase">
+        Student Thesis Examples
+    </h1>
+
+    <div class="columns is-mobile is-multiline">
+        <div
+            class="column is-half-tablet is-11-mobile project"
+            *ngFor="let project of content.projects"
+        >
+            <a routerLink="/graduate/projects/{{ project.key }}">
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ project.thumb.public_id }}"
+                    width="301"
+                    autoFormat="true"
+                    [responsive]="true"
+                    [alt]="'Thumbnail image for project' + project.name"
+                ></cdn-image>
+                <h3 class="blurb">{{ project.name }}</h3>
+                <h1 class="uppercase sm no-margin">Year</h1>
+                <span>{{ project.cohortYear.label }}</span>
+                <h1 class="uppercase sm no-margin">Advisor</h1>
+                <span
+                    >{{ project.faculty.name.first }}
+                    {{ project.faculty.name.last }}<br
+                /></span>
+            </a>
+        </div>
+        <div class="column is-full center">
+            <app-button
+                label="See All Thesis Projects"
+                route="/graduate/projects"
+                ariaLabel="Go to graduate thesis projects page"
+            ></app-button>
         </div>
     </div>
 </section>

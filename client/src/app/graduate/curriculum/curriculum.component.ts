@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/utils/data.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     templateUrl: './curriculum.component.html',
@@ -10,9 +11,25 @@ export class GraduateCurriculumComponent implements OnInit {
     public curricula: any;
     public people: any;
 
-    constructor(private dataSvc: DataService) {}
+    public currentPerson: any;
+    private gettingPerson: boolean;
+
+    constructor(
+        private dataSvc: DataService,
+        private router: Router,
+        private _route: ActivatedRoute,
+    ) {
+        this._route.params.subscribe(params => {
+            if (Object.keys(params).length < 1) return;
+            this.getPerson(params.key);
+        });
+    }
 
     async ngOnInit(): Promise<any> {
+        // Pre-load person
+        const key = this._route.snapshot.paramMap.get('key');
+        if (key) this.getPerson(key);
+
         const mastersQuery = `
           {
               allMastersPages {
@@ -21,6 +38,32 @@ export class GraduateCurriculumComponent implements OnInit {
                   learningObjectives
                   cohortYear
                   phases
+                  faculty {
+                      key
+                      name {
+                          first
+                          last
+                      }
+                      image {
+                          public_id
+                      }
+                  }
+                  projects {
+                      key
+                      name
+                      cohortYear {
+                          label
+                      }
+                      faculty {
+                          name {
+                              first 
+                              last
+                          }
+                      }
+                      thumb {
+                          public_id
+                      }
+                  }
               }
               allCurriculumPages {
                 name
@@ -60,5 +103,55 @@ export class GraduateCurriculumComponent implements OnInit {
             cohortQuery,
         );
         this.people = cohortResponse['allPeople'];
+    }
+    async getPerson(key: string): Promise<void> {
+        // No dupe requests!
+        if (this.gettingPerson) return;
+
+        this.gettingPerson = true;
+        this.currentPerson = undefined;
+
+        const query = `   
+        {
+            getPerson(key: "${key}") {
+                name {
+                    first
+                    last
+                }
+                key
+                title
+                image {
+                    public_id
+                }
+                bio { 
+                    html
+                }
+                category
+                relatedLinks
+                contact
+                projects {
+                    image {
+                        public_id
+                    }
+                    name
+                    key
+                    __typename
+                }
+            }
+        }`;
+
+        const response = await this.dataSvc.getSetWithKey(
+            'graduate-faculty',
+            key,
+            query,
+        );
+        this.currentPerson = response['getPerson'];
+    }
+
+    closePerson(): void {
+        this.gettingPerson = false;
+        this.currentPerson = undefined;
+
+        this.router.navigateByUrl('graduate');
     }
 }
