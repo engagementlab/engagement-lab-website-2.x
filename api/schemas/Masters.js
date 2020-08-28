@@ -20,6 +20,8 @@ const Masters = {
       partnerships: String!
       phases: [String]!
       learningObjectives: String!
+      faculty: [Person]
+      projects: [MDProject]
       studiosBlurb: String!
       applicationBlurb: Markdown!
       applicationLink: String!
@@ -29,7 +31,14 @@ const Masters = {
   `,
     queries: ['allMastersPages: Masters'],
     resolvers: {
-        allMastersPages: async () => global.keystone.list('Masters').model.findOne({}).exec(),
+        allMastersPages: async () => global.keystone.list('Masters').model.findOne({}).populate('faculty').populate({
+            path: 'projects',
+            populate: [{
+                path: 'cohortYear',
+                model: 'Filter',
+            }, { path: 'faculty', model: 'Person', }
+            ],
+        }).exec(),
     },
 
 };

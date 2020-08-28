@@ -64,6 +64,12 @@ Masters.add({
             type: ['faculty leadership', 'faculty fellows'],
         },
     },
+    projects: {
+        type: Types.Relationship,
+        many: true,
+        ref: 'MDProject',
+        label: 'Example Thesis Projects',
+    },
     studiosBlurb: {
         type: Types.Textarea,
         required: true,
