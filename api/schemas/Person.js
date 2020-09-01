@@ -30,7 +30,11 @@ const Person = {
             alumni: Boolean
         }
   `,
-    queries: ['allPeople(cohortYear: ObjectID): [Person]', 'allMastersPeople: [Person]', 'allStaffPeople: [Person]', 'getPerson(key: String): Person'],
+    queries: ['allPeople(cohortYear: ObjectID): [Person]',
+        'allMastersPeople: [Person]',
+        'allAlumniPeople: [Person]',
+        'allStaffPeople: [Person]',
+        'getPerson(key: String): Person'],
     resolvers: {
         allPeople: async (parent, args) => {
             const query = args.cohortYear ? { cohortYear: args.cohortYear, category: 'Masters', } : {};
@@ -40,7 +44,8 @@ const Person = {
                 ]).exec();
         },
         allStaffPeople: async () => model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
-        allMastersPeople: async () => model.find({ category: 'Masters', }).populate('cohortYear').exec(),
+        allMastersPeople: async () => model.find({ category: 'Masters', alumni: { $ne: true, }, }).populate('cohortYear').exec(),
+        allAlumniPeople: async () => model.find({ category: 'Masters', alumni: true, }).populate('cohortYear').exec(),
         getPerson: async (parent, args) => {
             const person = await model.findOne({ key: args.key, }).populate('cohortYear').populate('projects').populate('mdProjects')
                 .exec();

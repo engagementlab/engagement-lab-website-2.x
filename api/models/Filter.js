@@ -83,16 +83,6 @@ Filters.add({
             category: 'Cohort',
         },
     },
-
-    previous: {
-        type: Boolean,
-        label: 'Is this the most recent but not current cohort?',
-        note: 'Cohort will appear on the people page as \'Most Recent\'',
-        required: false,
-        dependsOn: {
-            category: 'Cohort',
-        },
-    },
 });
 
 Filters.schema.pre('remove', next => {

@@ -70,14 +70,14 @@ Person.add({
         type: Types.Relationship,
         label: 'Year',
         dependsOn: {
-            category: ['CMAP', 'Masters', 'advisory board'],
+            category: ['CMAP', 'Masters'],
         },
         ref: 'Filter',
         filters: {
             category: 'Cohort',
         },
         initial: true,
-        note: 'This field is for students and board members, and will display below the title.',
+        note: 'This field is for students, and will display below their name or title.',
     },
     bio: {
         type: Types.Markdown,
