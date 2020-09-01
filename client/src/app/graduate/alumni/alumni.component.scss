@@ -36,17 +36,23 @@ $easing: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 
 h2 {
 
+  #slider-cover {
+    clip-path: inset(0% 0 0% 0);
+    width: 426px;
+    height: 59px;
+  }
+
   .slider {
     display: inline-flex;
     position: absolute;
     flex-direction: column;
-    animation: translate 10s $easing infinite forwards;
+    // animation: translate 10s $easing infinite forwards;
 
     span {
       //   visibility: hidden;
 
       &:first-child {
-        animation: fade-1 3s $easing infinite forwards;
+        // animation: fade-1 3s $easing infinite forwards;
       }
 
       &:nth-child(2) {
