@@ -21,6 +21,7 @@ export class PeopleGridComponent implements AfterViewInit, OnDestroy {
     @Input() people: any[];
     @Input() preview: boolean;
     @Input() cohort: boolean;
+    @Input() alumni: boolean;
     @Input() title: string;
     @Input() modalRoute: string;
 
@@ -69,6 +70,8 @@ export class PeopleGridComponent implements AfterViewInit, OnDestroy {
     getModalRoute(key) {
         if (this.modalRoute) return `${this.modalRoute}/${key}`;
 
-        return this.cohort ? `/graduate/students/${key}` : `/people/${key}`;
+        return this.cohort || this.alumni
+            ? `/graduate/students/${key}`
+            : `/people/${key}`;
     }
 }

@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     styleUrls: ['./alumni.component.scss'],
 })
 export class GraduateAlumniComponent implements OnInit {
+    public students: any;
     public alumni: any;
 
     public currentPerson: any;
@@ -38,7 +39,19 @@ export class GraduateAlumniComponent implements OnInit {
                         last
                     }
                     key
-                    title
+                    image {
+                        public_id
+                    }
+                    cohortYear {
+                        label
+                    }
+                }
+                allAlumniPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
                     image {
                         public_id
                     }
@@ -53,7 +66,8 @@ export class GraduateAlumniComponent implements OnInit {
             'students',
             query,
         );
-        this.alumni = result['allMastersPeople'];
+        this.students = result['allMastersPeople'];
+        this.alumni = result['allAlumniPeople'];
     }
 
     async getPerson(key: string): Promise<void> {
