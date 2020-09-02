@@ -28,6 +28,7 @@ const Person = {
             mdProjects: [MDProject] 
             contact: String
             alumni: Boolean
+            onLeave: Boolean
         }
   `,
     queries: ['allPeople(cohortYear: ObjectID): [Person]',

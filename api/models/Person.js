@@ -56,7 +56,12 @@ Person.add({
         initial: true,
         note: 'This determines the section in which the person displays',
     },
-
+    onLeave: {
+        type: Boolean,
+        dependsOn: {
+            category: ['faculty leadership', 'faculty fellows'],
+        },
+    },
     title: {
         type: String,
         label: 'Title',
