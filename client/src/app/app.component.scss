@@ -127,7 +127,14 @@
   line-height: 28px;
   text-align: center;
 
-  margin: 0 0 4.7% 0;
+  .uppercase {
+    display: flex;
+    justify-content: space-between;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
 
   a {
     height: 100%;
@@ -226,9 +233,13 @@
 
   .foldout {
     display: flex;
-    justify-content: space-evenly;
+    width: 75%;
+    justify-content: space-between;
 
     @include mq($until: mobileLg) {
+      justify-content: space-evenly;
+      width: 100%;
+
       flex-direction: column;
       max-height: 0;
       overflow: hidden;

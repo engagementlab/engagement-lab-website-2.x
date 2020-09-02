@@ -35,7 +35,7 @@ const Routes = () => {
         else next();
     });
 
-    router.post('/api/post/contact', routes.get.contact.send);
+    router.post('/post/contact', routes.get.contact.send);
 
     // Error
     router.get('*', (req, res) => {

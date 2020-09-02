@@ -23,12 +23,11 @@
 <app-nav></app-nav>
 
 <!-- Show on all studios pages -->
-<section *ngIf="showStudiosNav" class="container desktop">
+<section *ngIf="showStudiosNav" id="subnav" class="container desktop">
     <nav id="subnav-studios" class="subnav">
-        <div class="columns is-mobile is-multiline uppercase no-margin">
+        <div class="uppercase no-margin">
             <a
                 routerLink="/studios"
-                class="column is-2-tablet is-full-mobile"
                 [class.active]="subNavitemActive('/studios')"
                 [attr.aria-label]="'Link to go to studios landing page'"
                 ><span>Studios</span></a
@@ -36,7 +35,7 @@
             <a
                 #studiosBtn
                 id="studios-btn"
-                class="column is-full-mobile hidden-not-mobile foldout-btn"
+                class="hidden-not-mobile foldout-btn"
                 [attr.aria-label]="'Button to fold out studio types menu'"
                 (click)="toggleStudios()"
                 ><span>
@@ -57,11 +56,7 @@
                     </svg>
                 </span>
             </a>
-            <div
-                #studiosEl
-                id="studio-types"
-                class="column is-full-mobile foldout"
-            >
+            <div #studiosEl id="studio-types" class="foldout">
                 <a
                     routerLink="/studios/partner"
                     [class.active]="subNavitemActive('/studios/partner')"
@@ -162,8 +157,8 @@
 </nav>
 <!-- Show on all grad pages -->
 <nav *ngIf="showGradNav" id="subnav" class="subnav container desktop">
-    <div class="columns is-mobile is-multiline uppercase no-margin">
-        <div class="column is-half-mobile">
+    <div class="uppercase no-margin">
+        <div>
             <a
                 routerLink="/graduate/curriculum"
                 [class.active]="subNavitemActive('/graduate/curriculum')"
@@ -173,7 +168,7 @@
                 ><span>Curriculum + Faculty</span></a
             >
         </div>
-        <div class="column">
+        <div>
             <a
                 routerLink="/graduate/students"
                 [class.active]="subNavitemActive('/graduate/students')"
@@ -183,7 +178,7 @@
                 ><span>Students + Alumni</span></a
             >
         </div>
-        <div class="column is-half-mobile">
+        <div>
             <a
                 routerLink="/graduate/projects"
                 [class.active]="subNavitemActive('/graduate/projects')"
@@ -193,7 +188,7 @@
                 ><span>Thesis Projects</span></a
             >
         </div>
-        <div class="column">
+        <div>
             <a
                 routerLink="/graduate/apply"
                 [class.active]="subNavitemActive('/graduate/apply')"

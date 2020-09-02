@@ -9,11 +9,13 @@
             {{ content?.summary1 }}
         </h3>
     </div>
-    <div class="column">
+    <div class="column is-11-mobile">
         <cdn-image
             cloudinaryPrefix="/"
             cloudinaryId="{{ content.image.public_id }}"
             width="808"
+            autoFormat="true"
+            [responsive]="true"
             alt="About flavor image"
         ></cdn-image>
     </div>
@@ -43,6 +45,7 @@
             cloudinaryPrefix="/"
             cloudinaryId="{{ partner.image.public_id }}"
             width="130"
+            autoFormat="true"
             alt="Icon for {{ partner.name }} partner "
         ></cdn-image>
     </div>
