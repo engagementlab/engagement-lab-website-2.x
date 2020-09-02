@@ -84,6 +84,7 @@
                 </div>
                 <!-- Visible for non-grad students of now -->
                 <div class="title" *ngIf="!cohort">{{ person.title }}</div>
+                <em *ngIf="person.onLeave">On Leave</em>
             </a>
         </div>
     </div>

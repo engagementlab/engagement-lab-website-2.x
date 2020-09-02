@@ -18,6 +18,9 @@
             <p *ngIf="person.cohortYear">
                 Media Design, {{ person.cohortYear.label }}
             </p>
+            <p *ngIf="person.onLeave">
+                <em>On Leave</em>
+            </p>
         </div>
         <div class="column is-full-mobile is-one-third-tablet">
             <cdn-image

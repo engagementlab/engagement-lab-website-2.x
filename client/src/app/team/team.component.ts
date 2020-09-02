@@ -54,6 +54,7 @@ export class TeamComponent implements OnInit {
                         label
                     }
                     category
+                    onLeave
                 }
             }
         `;
@@ -97,6 +98,7 @@ export class TeamComponent implements OnInit {
                 category
                 relatedLinks
                 contact
+                onLeave
                 projects {
                     image {
                         public_id
