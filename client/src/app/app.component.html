@@ -203,14 +203,27 @@
 
 <section class="container desktop">
     <h3 id="errors" *ngIf="dataErrors">
-        <p>Data service errors:</p>
-        <span>
-            {{ dataErrors }}
-        </span>
+        <p>Content service errors:</p>
+        <div *ngIf="!imageErrors">
+            It looks like one or more required fields are missing on this page.
+            Details:
+            <span>
+                {{ dataErrors }}
+            </span>
+        </div>
+        <div *ngIf="imageErrors">
+            One or more required images are missing on this page, and so we
+            can't render it. The query causing this error is "{{
+                imageErrors
+            }}".
+        </div>
+        <br />
+        <br />
+        <button class="no-pad" (click)="dismissErrors()">Dismiss</button>
     </h3>
 
     <div id="menu-overlay"></div>
-    <div *ngIf="!dataErrors || dataErrors.length < 1">
+    <div>
         <router-outlet #outlet="outlet"></router-outlet>
     </div>
     <app-footer></app-footer>

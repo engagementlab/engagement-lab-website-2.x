@@ -87,9 +87,7 @@ export class DataService {
                     .subscribe(
                         result => {
                             if (result.errors) {
-                                this.errors.next(
-                                    result.errors.map(err => err.message),
-                                );
+                                this.errors.next(result.errors.map(err => err));
                                 this.isLoading.next(result.loading);
                                 reject(result.errors);
 

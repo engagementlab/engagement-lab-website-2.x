@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
     public showGradNav: boolean;
 
     public dataErrors: string;
+    public imageErrors: string;
     public initiatives: any[];
     private currentUrl: string;
 
@@ -47,7 +48,7 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.router.events.subscribe(async evt => {
             // Close initiatives on all navigation
-            // this.initiativesEl.nativeElement.classList.remove('open');
+            this.initiativesEl.nativeElement.classList.remove('open');
 
             if (!(evt instanceof NavigationEnd)) return;
 
@@ -95,7 +96,11 @@ export class AppComponent implements OnInit {
         // Watch for any data/graphql errors
         this.dataSvc.errors.subscribe(value => {
             if (value) {
-                this.dataErrors = value.join(', ');
+                const errors = value.map(v => v.message);
+                this.dataErrors = errors.join(', ');
+                // Images missing
+                if (errors[0].indexOf('Image.public_id.') > 0)
+                    this.imageErrors = value[0].path;
             }
         });
     }
@@ -124,5 +129,10 @@ export class AppComponent implements OnInit {
     toggleStudios() {
         this.studiosBtn.nativeElement.classList.toggle('open');
         this.studiosEl.nativeElement.classList.toggle('open');
+    }
+
+    dismissErrors() {
+        this.dataErrors = null;
+        this.imageErrors = null;
     }
 }

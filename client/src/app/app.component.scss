@@ -268,13 +268,28 @@
 
 
 #errors {
-  background-color: beige;
+  position: fixed;
+  display: block;
+  border: solid 0px $mango;
+
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  background-color: $yellow;
   font-family: 'Courier New', Courier, monospace;
-  padding: 5%;
+  padding: 2%;
 
   p {
     font-size: xx-large;
     color: red;
+  }
+
+  button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    text-decoration: underline;
   }
 }
 
