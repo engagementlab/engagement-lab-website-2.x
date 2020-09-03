@@ -1,3 +1,10 @@
+<!-- <div class="blurb column is-four-fifths-desktop" *ngIf="redirecting">
+            Redirecting you to new URL:<br />
+            <a href="//elab.emerson.edu/research/projects/{{ projectKey }}"
+                >elab.emerson.edu/research/projects/{{ projectKey }}</a
+            >
+        </div> -->
+
 <section id="bg" *ngIf="content">
     <div class="columns is-multiline">
         <h2 class="column is-full" *ngIf="!redirecting">{{ content.name }}</h2>
@@ -45,7 +52,7 @@
                 >{{ person }}<br
             /></span>
         </div>
-        <div class="column" id="primary">
+        <div class="column is-11-mobile" id="primary">
             <cdn-image
                 cloudinaryPrefix="/"
                 cloudinaryId="{{ content.primaryImage.public_id }}"
@@ -81,137 +88,9 @@
         <div class="column is-full">
             <slideshow [images]="content.projectImages"></slideshow>
         </div>
-        <!-- <div class="blurb column is-four-fifths-desktop" *ngIf="redirecting">
-            Redirecting you to new URL:<br />
-            <a href="//elab.emerson.edu/research/projects/{{ projectKey }}"
-                >elab.emerson.edu/research/projects/{{ projectKey }}</a
-            >
-        </div> -->
     </div>
 
-    <!-- <div id="top" class="columns is-mobile is-multiline">
-    <div
-        class="column is-two-fifths-mobile is-one-quarter-tablet"
-        *ngIf="content?.format !== undefined"
-    >
-        <h4>Product</h4>
-        <div *ngFor="let format of content?.format">
-            {{ format.name }}
-        </div>
-    </div>
-
-    <div
-        class="column is-two-fifths-mobile is-one-quarter-tablet"
-        *ngIf="
-            content?.externalLinkUrl !== null &&
-            content?.externalLinkUrl.length > 0
-        "
-    >
-        <h4>Website</h4>
-        <a href="{{ content?.externalLinkUrl }}" role="link">{{
-            content?.externalLinkUrl | prettyUrl
-        }}</a>
-    </div>
-
-    <div class="column is-full-mobile">
-        <h4>Principal Investigator</h4>
-        <div *ngFor="let pi of content?.principalInvestigator">
-            {{ pi.name }}
-        </div>
-    </div>
-    <div class="column is-full" *ngIf="content?.showFiles">
-        <h4>Downloads</h4>
-        <div *ngFor="let file of content?.files">
-            <a href="{{ file.url }}">{{ file.name }}</a>
-        </div>
-    </div>
-</div>
-
-<div class="description">
-    <div class="column is-two-thirds">{{ content?.description }}</div>
-
-    <div
-        class="columns is-mobile is-centered"
-        *ngIf="
-            content?.projectImages !== undefined &&
-            content?.projectImages.length > 0
-        "
-    >
-        <div class="column is-two-fifths-mobile is-one-third-tablet">
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ (content?.projectImages)[0].public_id }}"
-                autoFormat="true"
-                width="450"
-                alt="Image for '{{ content?.name }}' project"
-                *ngIf="(content?.projectImages)[0] !== undefined"
-            ></cdn-image>
-        </div>
-        <div class="column is-two-fifths-mobile is-one-third-tablet">
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ (content?.projectImages)[1].public_id }}"
-                autoFormat="true"
-                width="450"
-                alt="Image for '{{ content?.name }}' project"
-                *ngIf="(content?.projectImages)[1] !== undefined"
-            ></cdn-image>
-        </div>
-    </div>
-
-    <div *ngIf="content?.challengeTxt" class="columns">
-        <h3 class="column is-one-third uppercase">
-            Challenge
-        </h3>
-        <div class="column text">
-            {{ content?.challengeTxt }}
-            <hr />
-        </div>
-    </div>
-
-    <div *ngIf="content?.strategyTxt" class="columns">
-        <h3 class="column is-one-third uppercase">Strategy +<br />Approach</h3>
-        <div class="column text">
-            {{ content?.strategyTxt }}
-            <hr />
-        </div>
-    </div>
-
-    <div *ngIf="content?.strategyTxt" class="columns">
-        <h3 class="column is-one-third uppercase">
-            Results
-        </h3>
-        <div class="column text">
-            {{ content?.resultsTxt }}
-        </div>
-    </div>
-
-    <div
-        id="bottom"
-        class="column is-full"
-        *ngIf="content !== undefined && content.projectImages[2] !== undefined"
-    >
-        <cdn-image
-            cloudinaryPrefix="/"
-            cloudinaryId="{{ content.projectImages[2].public_id }}"
-            autoFormat="true"
-            width="800"
-            alt="Image for '{{ content?.name }}' project"
-        ></cdn-image>
-    </div>
-</div>
-
-<section id="nextprev" class="columns is-mobile is-multiline listing">
-    Prev project can have an empty column on non-mobile 
-    <div class="item column is-full-mobile is-half-tablet">
-        <a
-            id="prev"
-            class="prev"
-            routerLink="/projects/{{ previous.key }}"
-            *ngIf="previous"
-        >
-            <hr class="hidden-mobile" />
-
+    <!-- 
             <div>
                 <h1 class="uppercase">
                     previous project

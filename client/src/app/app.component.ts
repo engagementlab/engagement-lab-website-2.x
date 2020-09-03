@@ -47,8 +47,12 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.router.events.subscribe(async evt => {
-            // Close initiatives on all navigation
-            this.initiativesEl.nativeElement.classList.remove('open');
+            // Close initiatives nav on all navigation
+            if (this.initiativesEl)
+                this.initiativesEl.nativeElement.classList.remove('open');
+            // Close studios nav on all navigation
+            else if (this.studiosEl)
+                this.studiosEl.nativeElement.classList.remove('open');
 
             if (!(evt instanceof NavigationEnd)) return;
 

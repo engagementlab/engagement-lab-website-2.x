@@ -58,8 +58,8 @@
             </a>
             <div #studiosEl id="studio-types" class="foldout">
                 <a
-                    routerLink="/studios/partner"
-                    [class.active]="subNavitemActive('/studios/partner')"
+                    routerLink="/studios/partnered"
+                    [class.active]="subNavitemActive('/studios/partnered')"
                     [attr.aria-label]="'Link to go to Partnered Studio page'"
                     ><span>Partnered Studio</span></a
                 >
@@ -92,7 +92,7 @@
 >
     <div class="columns is-mobile is-multiline uppercase no-margin">
         <a
-            class="column is-2-tablet is-full-mobile border"
+            class="column is-2-tablet is-11-mobile border"
             routerLink="/research/projects"
             [class.active]="subNavitemActive('/research/projects')"
             [attr.aria-label]="'Link to go to projects page'"
@@ -101,7 +101,7 @@
             </span></a
         >
         <a
-            class="column is-2-tablet is-full-mobile border"
+            class="column is-2-tablet is-11-mobile border"
             routerLink="/research/publications"
             [class.active]="subNavitemActive('/research/publications')"
             [attr.aria-label]="'Link to go to publications page'"
@@ -112,7 +112,7 @@
         <a
             #initiativesBtn
             id="initiatives-btn"
-            class="column is-full-mobile hidden-not-mobile foldout-btn"
+            class="column is-11-mobile hidden-not-mobile foldout-btn"
             [attr.aria-label]="'Button to fold out initiatives menu'"
             (click)="toggleInitiatives()"
             ><span>
@@ -136,7 +136,7 @@
         <div
             #initiativesEl
             id="initiatives"
-            class="column is-full-mobile foldout"
+            class="column is-11-mobile foldout"
         >
             <a
                 *ngFor="let initiative of initiatives"

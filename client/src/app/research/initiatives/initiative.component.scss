@@ -16,7 +16,6 @@
 
 h1.white {
   color: white;
-  width: 100%;
 }
 
 section {
@@ -82,6 +81,13 @@ section {
   }
 }
 
+.bleed {
+  margin-left: -4%;
+  margin-right: -4%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 #upper {
 
   @include phones {
@@ -92,11 +98,6 @@ section {
       margin: 0;
     }
   }
-
-  margin-left: -4%;
-  margin-right: -4%;
-  padding-left: 4%;
-  padding-right: 4%;
 
   #text {
     height: 468px;
@@ -112,12 +113,6 @@ section {
 #description {
   color: white;
   background-color: black;
-
-  @include mq($from: mobileLg) {
-    margin-left: -4%;
-    margin-right: -4%;
-    padding-left: 4%;
-  }
 }
 
 p,
@@ -137,6 +132,10 @@ h3 {
 
   margin-top: 15%;
   justify-content: space-evenly;
+
+  .project {
+    padding: 0;
+  }
 
   @include not-phones {
     margin-top: 0;

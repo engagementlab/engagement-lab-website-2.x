@@ -115,8 +115,10 @@ export class NavComponent {
         if (!this.currentUrl) return;
 
         let active = false;
+        // Base root
         if (route === '') active = `/${route}` === this.currentUrl;
         else active = this.currentUrl.indexOf(`/${route}`) > -1;
+
         return active;
     }
 

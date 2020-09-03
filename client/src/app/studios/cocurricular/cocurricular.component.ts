@@ -23,6 +23,7 @@ export class StudiosCocurricularComponent implements OnInit {
                 coCurricularPhases
                 currentCoCurricularStudios
                 {
+                    key
                     thumb {
                         public_id
                     }

@@ -42,16 +42,19 @@ h2 {
       flex-grow: 1;
       flex-shrink: 0;
     }
+
+    font-size: 2em;
   }
 
   #slider-cover {
     display: inline-block;
     clip-path: inset(0% 0 0% 0);
-    width: 460px;
-    height: 35px;
+    height: 40px;
+    width: 100%;
 
     @include not-phones {
       height: 63px;
+      width: 460px;
       margin-left: 1%;
     }
   }

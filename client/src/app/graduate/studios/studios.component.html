@@ -1,9 +1,13 @@
-<section id="intro" class="columns is-mobile is-multiline" *ngIf="content">
-    <h2 class="column is-full">
+<section
+    id="intro"
+    class="columns is-mobile is-multiline no-margin"
+    *ngIf="content"
+>
+    <h2 class="column is-full-tablet is-11-mobile">
         Thesis Studios
     </h2>
 
-    <h3 class="column is-3-tablet is-full-mobile blurb">
+    <h3 class="column is-3-tablet is-11-mobile blurb">
         {{ content.studiosBlurb }}
     </h3>
 
@@ -30,12 +34,14 @@
     </div>
 </section>
 
-<section id="projects" class="columns is-multiline" *ngIf="projects">
+<section id="projects" class="columns is-multiline no-margin" *ngIf="projects">
     <!-- We have to map array of initiative keys and then join result w/ space -->
     <div
         #projectList
         *ngFor="let project of projects; let i = index"
-        class="project view-tooltip column is-3 yr-{{ project.cohortYear.key }}"
+        class="project view-tooltip column is-3-tablet is-11-mobile yr-{{
+            project.cohortYear.key
+        }}"
         [class.mix]="project.key !== 'dummy'"
     >
         <a

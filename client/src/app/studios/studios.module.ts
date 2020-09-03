@@ -13,7 +13,7 @@ const routes: Routes = [
         component: StudiosIndexComponent,
     },
     {
-        path: 'partner',
+        path: 'partnered',
         component: StudiosPartnerComponent,
     },
     {
