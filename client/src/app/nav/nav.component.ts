@@ -119,6 +119,10 @@ export class NavComponent {
         if (route === '') active = `/${route}` === this.currentUrl;
         else active = this.currentUrl.indexOf(`/${route}`) > -1;
 
+        // Handle "partner" case
+        if (route === 'partner' && this.currentUrl === '/studios/partnered')
+            return false;
+
         return active;
     }
 

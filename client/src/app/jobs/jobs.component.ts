@@ -18,7 +18,9 @@ export class JobsComponent implements OnInit {
                 allJobs {
                     date
                     title
-                    description
+                    description {
+                        html
+                    }
                     url
                 }
             }
