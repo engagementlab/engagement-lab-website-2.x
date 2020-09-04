@@ -115,6 +115,11 @@ a {
   }
 
   // MC Email form
+  #newsletter-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
   #newsletter {
     // display: none;
     // transform: scaleY(0);
@@ -127,6 +132,10 @@ a {
 
     &.open {
       transform: scaleY(1);
+    }
+
+    &.invalid {
+      border-bottom-color: $tomato;
     }
 
     h3 {

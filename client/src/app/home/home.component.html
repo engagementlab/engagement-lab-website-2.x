@@ -172,7 +172,7 @@
             class="column is-10-tablet is-half-desktop center"
             [innerHTML]="content.allAboutPages.tagline.html"
         ></div>
-        <div class="column is-full center">
+        <div id="newsletter-wrap" class="column is-full-tablet is-11-mobile">
             <!-- <div id="button" #newsletterBtn>
                 <app-button
                     label="Join our newsletter"
@@ -183,7 +183,11 @@
                 ></app-button>
             </div> -->
             <!-- class="hidden"  -->
-            <div id="newsletter" #newsletter>
+            <div
+                id="newsletter"
+                #newsletter
+                [class.invalid]="emailFieldFocused && f.email.errors"
+            >
                 <form
                     action="https://engagementgamelab.us6.list-manage.com/subscribe/post?u=8cb16e3042072f11cc0680d36&amp;id=e9f56f4f4d"
                     method="post"
@@ -192,6 +196,7 @@
                     class="validate"
                     target="_blank"
                     novalidate
+                    [formGroup]="emailForm"
                 >
                     <div id="mc_embed_signup_scroll">
                         <div class="mc-field-group">
@@ -201,6 +206,8 @@
                                 name="EMAIL"
                                 class="required email"
                                 id="mce-EMAIL"
+                                formControlName="email"
+                                (focus)="emailFocus()"
                             />
                             <input
                                 type="submit"
@@ -237,7 +244,7 @@
                         </div>
                     </div>
                 </form>
-                <button>
+                <button *ngIf="emailFieldFocused && f.email.errors">
                     <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
                         <path
                             stroke="#000"

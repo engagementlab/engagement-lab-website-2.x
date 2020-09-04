@@ -10,7 +10,7 @@ import {
 import * as _ from 'underscore';
 import * as paper from 'paper';
 import { DataService } from '../utils/data.service';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-home',
@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     public tagline: string;
 
     public isPhone: boolean;
+    public emailFieldFocused: boolean;
 
     @ViewChildren('initiativeList') initiativeList: QueryList<any>;
 
@@ -45,7 +46,14 @@ export class HomeComponent implements OnInit {
     public emailForm: FormGroup;
 
     // eslint-disable-next-line no-useless-constructor
-    constructor(private dataSvc: DataService) {}
+    constructor(
+        private dataSvc: DataService,
+        private formBuilder: FormBuilder,
+    ) {
+        this.emailForm = this.formBuilder.group({
+            email: ['', [Validators.required, Validators.email]],
+        });
+    }
 
     async ngOnInit(): Promise<void> {
         const query = `
@@ -96,6 +104,10 @@ export class HomeComponent implements OnInit {
         if (this.emailForm.invalid) {
             return;
         }
+    }
+
+    emailFocus() {
+        this.emailFieldFocused = true;
     }
 
     taglineAnim(position: number) {
