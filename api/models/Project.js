@@ -31,6 +31,12 @@ const Project = new keystone.List('Project', {
  */
 Project.add({
 
+    image: {
+        type: Types.CloudinaryImage,
+        label: 'Thumbnail Image',
+        folder: 'homepage-2.0/listings',
+        autoCleanup: true,
+    },
     enabled: {
         type: Types.Boolean,
         label: 'Enabled',

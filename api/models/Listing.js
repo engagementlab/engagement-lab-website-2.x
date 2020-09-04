@@ -57,13 +57,6 @@ Listing.add({
         required: true,
         initial: true,
     },
-    image: {
-        type: Types.CloudinaryImage,
-        label: 'Thumbnail Image',
-        folder: 'homepage-2.0/listings',
-        autoCleanup: true,
-        note: 'This displays as the image/thumbnail when needed.',
-    },
     indexed: {
         type: Boolean,
         hidden: true,
