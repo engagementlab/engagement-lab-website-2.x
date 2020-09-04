@@ -1,7 +1,7 @@
 <h2 class="column is-half no-pad">Events</h2>
 
 <section id="events" class="listing">
-    <h3 *ngIf="events.length === 0 || !events">
+    <h3 *ngIf="(events && events.length === 0) || !events">
         No upcoming events. Check back soon!
     </h3>
     <div #eventList class="event column is-full" *ngFor="let event of events">
