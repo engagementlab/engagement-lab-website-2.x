@@ -24,3 +24,6 @@
 {"_id":{"$oid":"5f4da0d3885c3c56ca643e0e"},"name":"Niantic","description":"Niantic","sortOrder":67,"__v":0,"url":""}
 {"_id":{"$oid":"5f4da0e5885c3c56ca643e0f"},"name":"Mayor's Office of New Urban Mechanics","description":"Mayor's Office of New Urban Mechanics","sortOrder":68,"__v":0,"url":""}
 {"_id":{"$oid":"5f4e41d5885c3c56ca643e5e"},"name":"Decordova Museum","description":"Decordova Museum","sortOrder":69,"__v":0,"url":""}
+{"_id":{"$oid":"5f52a9e2d328177eb830bb2a"},"type":"General","name":"Decordova Museum","description":"Decordova Museum","sortOrder":70,"__v":0,"url":""}
+{"_id":{"$oid":"5f52aacad328177eb830bb2b"},"type":"General","name":"The Indian Red Cross Society","description":"The Indian Red Cross Society","sortOrder":71,"__v":0,"url":""}
+{"_id":{"$oid":"5f52ab4ed328177eb830bb2c"},"type":"General","name":"The Mary Anne Charity Trust","description":"The Mary Anne Charity Trust","sortOrder":72,"__v":0,"url":""}
