@@ -16,7 +16,7 @@ const Job = {
       date: Date
       enabled: Boolean!
       title: String!
-      description: String!
+      description: Markdown!
       url: String!
     }
   `,
