@@ -116,9 +116,12 @@ a {
 
   // MC Email form
   #newsletter {
-    display: none;
-    transform: scaleY(0);
+    // display: none;
+    // transform: scaleY(0);
+    display: flex;
+    justify-content: space-between;
     width: 460px;
+    border-bottom: solid 2px black;
 
     @include transition(transform, .8s, ease-in-out);
 
@@ -137,9 +140,8 @@ a {
       color: black;
       opacity: 1;
       border: none;
-      border-bottom: solid 2px black;
 
-      padding-bottom: 5%;
+      padding-bottom: 2%;
       padding-left: 4%;
 
       @include placeholder {
@@ -149,6 +151,9 @@ a {
       }
     }
 
+    button {
+      display: inline-block;
+    }
   }
 
 }

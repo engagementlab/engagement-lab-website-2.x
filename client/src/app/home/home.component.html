@@ -160,7 +160,7 @@
         </div> -->
         <h1
             id="mouseover"
-            class="column is-7 center"
+            class="column is-10-tablet is-7-desktop center"
             (mouseleave)="taglineHide()"
         >
             Our students, faculty, and staff do participatory
@@ -169,11 +169,11 @@
         </h1>
         <div
             id="tagline"
-            class="column is-half center"
+            class="column is-10-tablet is-half-desktop center"
             [innerHTML]="content.allAboutPages.tagline.html"
         ></div>
         <div class="column is-full center">
-            <div id="button" #newsletterBtn>
+            <!-- <div id="button" #newsletterBtn>
                 <app-button
                     label="Join our newsletter"
                     ariaLabel="Button to open newsletter sign-up"
@@ -181,8 +181,9 @@
                     class="medium"
                     (clickEvent)="openSignup()"
                 ></app-button>
-            </div>
-            <div id="newsletter" class="hidden" #newsletter>
+            </div> -->
+            <!-- class="hidden"  -->
+            <div id="newsletter" #newsletter>
                 <form
                     action="https://engagementgamelab.us6.list-manage.com/subscribe/post?u=8cb16e3042072f11cc0680d36&amp;id=e9f56f4f4d"
                     method="post"
@@ -236,6 +237,15 @@
                         </div>
                     </div>
                 </form>
+                <button>
+                    <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
+                        <path
+                            stroke="#000"
+                            stroke-width="2"
+                            d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                        ></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
