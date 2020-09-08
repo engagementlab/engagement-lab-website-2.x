@@ -8,6 +8,7 @@
     },
     "dependencies": {
         "@engagementlab/el-bootstrapper": "^0.1.4-b",
+        "@mailchimp/mailchimp_marketing": "^3.0.15",
         "@slack/web-api": "^5.11.0",
         "apollo-server": "^2.14.3",
         "apollo-server-express": "^2.14.3",

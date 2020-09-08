@@ -8,7 +8,6 @@ import {
 } from '@angular/core';
 
 import * as _ from 'underscore';
-import * as paper from 'paper';
 import { DataService } from '../utils/data.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -34,6 +33,8 @@ export class HomeComponent implements OnInit {
     @ViewChild('canvasElement') canvasElement: ElementRef;
 
     @ViewChild('newsletterBtn') newsletterBtn: ElementRef;
+    @ViewChild('newsletterSubscribed') newsletterSubscribed: ElementRef;
+    @ViewChild('newsletterError') newsletterError: ElementRef;
 
     @ViewChild('newsletter') newsletter: ElementRef;
 
@@ -88,7 +89,7 @@ export class HomeComponent implements OnInit {
         this.newsletterBtn.nativeElement.classList.add('closed');
         setTimeout(() => {
             this.newsletterBtn.nativeElement.style.display = 'none';
-            this.newsletter.nativeElement.style.display = 'inline-block';
+            this.newsletter.nativeElement.style.display = 'flex';
 
             this.newsletter.nativeElement.classList.add('open');
         }, 200);
@@ -104,6 +105,24 @@ export class HomeComponent implements OnInit {
         if (this.emailForm.invalid) {
             return;
         }
+        this.dataSvc
+            .sendDataToUrl(`post/newsletter/${this.f['email'].value}`, null)
+            .subscribe(
+                (data: any) => {
+                    console.log(data);
+                    this.newsletterSubscribed.nativeElement.classList.add(
+                        'open',
+                    );
+                    this.newsletter.nativeElement.classList.add('done');
+                },
+                (error: any) => {
+                    console.log(error);
+                    if (error.error === 'already_subscribed')
+                        this.newsletterError.nativeElement.classList.add(
+                            'open',
+                        );
+                },
+            );
     }
 
     emailFocus() {

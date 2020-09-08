@@ -1,5 +1,31 @@
 @import '~src/styles/_variables';
 
+@include keyframes(check) {
+
+  0% {
+    opacity: 0;
+    @include scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    @include scale(1);
+  }
+}
+
+@include keyframes(subscribed) {
+
+  0% {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 a {
   color: black;
 
@@ -99,13 +125,16 @@ a {
   }
 
   #button {
+    position: relative;
     display: inline-block;
     width: 460px;
-    @include transition(transform, .2s, ease-in-out);
+    z-index: 2;
+    @include transition(all, .2s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
     transform-origin: top center;
 
     &.closed {
-      transform: scaleY(0);
+      @include translate(0, -100%);
+      opacity: 0;
     }
 
     @include phones {
@@ -117,21 +146,57 @@ a {
   // MC Email form
   #newsletter-wrap {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    #error {
+      display: none;
+      opacity: 0;
+      @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+      &.open {
+        display: block;
+        opacity: 1;
+      }
+    }
   }
 
   #newsletter {
-    // display: none;
-    // transform: scaleY(0);
-    display: flex;
+    @include translate(0, -100%);
     justify-content: space-between;
     width: 460px;
     border-bottom: solid 2px black;
+    opacity: 0;
 
-    @include transition(transform, .8s, ease-in-out);
+    @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
 
     &.open {
-      transform: scaleY(1);
+      @include translate(0);
+      opacity: 1;
+    }
+
+    &.done {
+
+      // border-width: 0;
+
+      form,
+      button {
+        display: none;
+      }
+
+      #subscribed {
+        display: block;
+
+        span {
+          animation: subscribed 1s cubic-bezier(1.000, 0.000, 0.000, 1.000) .6s 1 forwards;
+        }
+
+        svg {
+          animation: check .6s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1 forwards;
+
+        }
+      }
     }
 
     &.invalid {
@@ -140,6 +205,11 @@ a {
 
     h3 {
       font-size: 1em;
+    }
+
+    form {
+      width: 100%;
+      @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
     }
 
     input[type=email] {
@@ -162,7 +232,30 @@ a {
 
     button {
       display: inline-block;
+      cursor: pointer;
+      @include transition(all, .3s, ease-in-out);
+
+      &:hover {
+        @include translate(15%, 0);
+      }
     }
+
+  }
+
+  #subscribed {
+    display: none;
+
+    span {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    svg {
+      @include scale(0);
+      opacity: 0;
+    }
+
+    font-family: 'LunchtypeRegular';
+    font-size: 1.5em;
   }
 
 }
