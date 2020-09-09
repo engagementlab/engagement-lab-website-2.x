@@ -18,6 +18,7 @@ export class GraduateStudiosComponent implements OnInit, AfterViewInit {
     public content: any;
     public cohorts: any;
     public projects: any;
+    public currentSelector: string;
 
     @ViewChildren('projectList') projectList: QueryList<any>;
 
@@ -65,13 +66,15 @@ export class GraduateStudiosComponent implements OnInit, AfterViewInit {
                     cohortYear: { key: 'dummy' },
                 });
             }
-
-            // Init mixitup filtering
-            mixitup(document.getElementById('projects'), {
-                animation: {
-                    effects: 'fade',
-                },
-            });
         });
+    }
+    public applySelector(selector: string) {
+        this.currentSelector = selector;
+    }
+
+    public isSelected(selector: string) {
+        return (
+            !this.currentSelector || this.currentSelector.indexOf(selector) > -1
+        );
     }
 }

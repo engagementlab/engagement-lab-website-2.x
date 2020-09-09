@@ -3,11 +3,6 @@
 
   a {
     cursor: pointer;
-
-    // Current filter
-    &.mixitup-control-active {
-      text-decoration: underline;
-    }
   }
 
   .bold {
@@ -16,5 +11,11 @@
 
   .controls a {
     margin-right: 2%;
+
+
+    &:hover,
+    &.active {
+      border-bottom: 1px solid black;
+    }
   }
 }

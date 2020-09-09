@@ -16,7 +16,8 @@
         <span class="controls column"
             ><a
                 aria-label="Button to filter thesis projects by all years"
-                data-toggle="all"
+                [class.active]="!currentSelector"
+                (click)="applySelector(null)"
                 >All</a
             >
             <a
@@ -26,7 +27,8 @@
                     cohort.name.replace('Cohort', '') +
                     'year'
                 "
-                [attr.data-filter]="'.yr-' + cohort.key"
+                [class.active]="currentSelector === cohort.key"
+                (click)="applySelector(cohort.key)"
             >
                 {{ cohort.name.replace('Cohort', '') }}
             </a>
@@ -35,31 +37,28 @@
 </section>
 
 <section id="projects" class="columns is-multiline no-margin" *ngIf="projects">
-    <!-- We have to map array of initiative keys and then join result w/ space -->
-    <div
-        #projectList
-        *ngFor="let project of projects; let i = index"
-        class="project view-tooltip column is-3-tablet is-11-mobile yr-{{
-            project.cohortYear.key
-        }}"
-        [class.mix]="project.key !== 'dummy'"
-    >
-        <a
-            routerLink="/graduate/projects/{{ project.key }}"
-            *ngIf="project.key !== 'dummy'"
+    <ng-container #projectList *ngFor="let project of projects">
+        <div
+            *ngIf="isSelected(project.cohortYear.key)"
+            class="project view-tooltip column is-3-tablet is-11-mobile"
         >
-            <div class="bg">
-                <span role="tooltip">view</span>
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{ project.thumb.public_id }}"
-                    autoFormat="true"
-                    [responsive]="true"
-                    height="350"
-                    alt="Thumbnail image for '{{ project.name }}' project"
-                ></cdn-image>
-            </div>
-            <h4>{{ project.name }}</h4>
-        </a>
-    </div>
+            <a
+                routerLink="/graduate/projects/{{ project.key }}"
+                *ngIf="project.key !== 'dummy'"
+            >
+                <div class="bg">
+                    <span role="tooltip">view</span>
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ project.thumb.public_id }}"
+                        autoFormat="true"
+                        [responsive]="true"
+                        height="350"
+                        alt="Thumbnail image for '{{ project.name }}' project"
+                    ></cdn-image>
+                </div>
+                <h4>{{ project.name }}</h4>
+            </a>
+        </div>
+    </ng-container>
 </section>
