@@ -1,4 +1,12 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import {
+    trigger,
+    state,
+    style,
+    animate,
+    transition,
+} from '@angular/animations';
+
 import { DataService } from '../../utils/data.service';
 
 import * as _ from 'underscore';
@@ -7,10 +15,30 @@ import * as _ from 'underscore';
     selector: 'projects-index',
     templateUrl: './index.component.html',
     styleUrls: ['./index.component.scss'],
+
+    animations: [
+        trigger('inOutAnimation', [
+            transition(':enter', [
+                style({ transform: 'scale(0)' }),
+                animate(
+                    '.2s cubic-bezier(0.190, 1.000, 0.220, 1.000)',
+                    style({ transform: 'scale(1)', opacity: 1 }),
+                ),
+            ]),
+            transition(':leave', [
+                style({ transform: 'scale(1)' }),
+                animate(
+                    '.2s cubic-bezier(0.190, 1.000, 0.220, 1.000)',
+                    style({ transform: 'scale(0)', opacity: 0 }),
+                ),
+            ]),
+        ]),
+    ],
 })
 export class ProjectIndexComponent implements OnInit {
     public researchBlurb: string;
-    public currentSelector: string;
+    public currentSelector: string[];
+    public currentSelectorKey: string;
     public currentStatusSelector: string;
     public initiatives: any;
     public projects: any[];
@@ -79,31 +107,36 @@ export class ProjectIndexComponent implements OnInit {
     }
 
     public applySelector(selector: string) {
-        this.currentSelector = selector;
-        console.log(
-            _.pluck(
-                _.find(this.initiatives, { key: this.currentSelector })[
-                    'projects'
-                ],
-                'key',
-            ),
+        this.currentSelectorKey = null;
+        if (!selector) {
+            this.currentSelector = null;
+            return;
+        }
+
+        this.currentSelectorKey = selector;
+        this.currentSelector = _.pluck(
+            _.find(this.initiatives, { key: selector })['projects'],
+            'key',
         );
     }
 
     public applyStatusSelector(selector: string) {
+        if (!selector) {
+            this.currentStatusSelector = null;
+            return;
+        }
         this.currentStatusSelector = selector;
     }
 
     public isSelected(selector: string) {
-        // return (
-        //     !this.currentSelector ||
-        //     selectors.indexOf(this.currentSelector) > -1
-        // );
-        return true;
+        return (
+            !this.currentSelector || this.currentSelector.indexOf(selector) > -1
+        );
     }
 
     public isStatusSelected(selector: string) {
         return (
+            !selector ||
             !this.currentStatusSelector ||
             this.currentStatusSelector === selector
         );

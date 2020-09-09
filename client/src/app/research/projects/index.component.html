@@ -11,6 +11,7 @@
             <span class="controls column"
                 ><a
                     aria-label="Button to filter projects by all initiatives"
+                    [class.active]="!currentSelectorKey"
                     (click)="applySelector(null)"
                     >All Research</a
                 >
@@ -21,6 +22,7 @@
                         initiative.name +
                         ' initiative'
                     "
+                    [class.active]="currentSelectorKey === initiative.key"
                     (click)="applySelector(initiative.key)"
                 >
                     {{ initiative.name }}
@@ -34,15 +36,18 @@
                     aria-label="Button to filter projects by any status"
                     data-toggle="all"
                     (click)="applyStatusSelector(null)"
+                    [class.active]="!currentStatusSelector"
                     >Any</a
                 >
                 <a
                     aria-label="Button to filter projects by ongoing status'"
+                    [class.active]="currentStatusSelector === 'ongoing'"
                     (click)="applyStatusSelector('ongoing')"
                     >Ongoing</a
                 >
                 <a
                     aria-label="Button to filter projects by completed status'"
+                    [class.active]="currentStatusSelector === 'completed'"
                     (click)="applyStatusSelector('completed')"
                     >Completed</a
                 >
@@ -62,6 +67,7 @@
                 isSelected(project.key) &&
                 isStatusSelected(project.status | lowercase)
             "
+            [@inOutAnimation]
             class="project view-tooltip column is-4-tablet is-11-mobile"
             [class.dummy]="project.key === 'dummy'"
         >

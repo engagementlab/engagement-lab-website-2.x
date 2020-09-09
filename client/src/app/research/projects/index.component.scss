@@ -48,12 +48,15 @@ app-button {
 
   .controls a {
     margin-right: 2%;
+
+    &:hover,
+    &.active {
+      border-bottom: 1px solid black;
+    }
   }
 }
 
 #projects {
-  // justify-content: space-evenly;
-
   .project {
 
     padding: 0;
