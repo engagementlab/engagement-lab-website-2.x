@@ -27,12 +27,6 @@ export class StudiosIndexComponent implements OnInit {
                     public_id
                   }
             }
-            allPartners {
-              name
-              image {
-                public_id
-              }
-            }
           }
       `;
         const response = await this.dataSvc.getSetWithKey(
@@ -41,6 +35,5 @@ export class StudiosIndexComponent implements OnInit {
             query,
         );
         this.content = response['studiosIntro'];
-        this.partners = response['allPartners'];
     }
 }
