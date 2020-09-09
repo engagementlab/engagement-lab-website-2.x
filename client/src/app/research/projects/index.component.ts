@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { DataService } from '../../utils/data.service';
 
-import mixitup from 'mixitup';
+import * as _ from 'underscore';
 
 @Component({
     selector: 'projects-index',
@@ -10,6 +10,8 @@ import mixitup from 'mixitup';
 })
 export class ProjectIndexComponent implements OnInit {
     public researchBlurb: string;
+    public currentSelector: string;
+    public currentStatusSelector: string;
     public initiatives: any;
     public projects: any[];
 
@@ -36,6 +38,12 @@ export class ProjectIndexComponent implements OnInit {
                 allInitiativePages {
                     name
                     key
+                    featuredProject {
+                        key
+                    }
+                    projects {
+                        key
+                    }
                 }
                 allProjectPages {
                     name
@@ -43,9 +51,6 @@ export class ProjectIndexComponent implements OnInit {
                     customUrl
                     image {
                         public_id
-                    }
-                    initiatives {
-                        key
                     }
                     status
                 }
@@ -70,22 +75,37 @@ export class ProjectIndexComponent implements OnInit {
             if (this.projects.length % 2 === 1) {
                 this.projects.push({ projectType: 'dummy', key: 'dummy' });
             }
-
-            // Init mixitup filtering
-            mixitup(document.getElementById('projects'), {
-                animation: {
-                    effects: 'fade',
-                },
-                controls: {
-                    toggleLogic: 'and',
-                },
-            });
         });
     }
 
-    // ngOnDestroy() {
-    //     // Destroy mixer when user leaves
-    //     if(this.mixer)
-    //       this.mixer.destroy();
-    // }
+    public applySelector(selector: string) {
+        this.currentSelector = selector;
+        console.log(
+            _.pluck(
+                _.find(this.initiatives, { key: this.currentSelector })[
+                    'projects'
+                ],
+                'key',
+            ),
+        );
+    }
+
+    public applyStatusSelector(selector: string) {
+        this.currentStatusSelector = selector;
+    }
+
+    public isSelected(selector: string) {
+        // return (
+        //     !this.currentSelector ||
+        //     selectors.indexOf(this.currentSelector) > -1
+        // );
+        return true;
+    }
+
+    public isStatusSelected(selector: string) {
+        return (
+            !this.currentStatusSelector ||
+            this.currentStatusSelector === selector
+        );
+    }
 }

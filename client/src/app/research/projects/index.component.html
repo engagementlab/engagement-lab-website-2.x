@@ -11,7 +11,7 @@
             <span class="controls column"
                 ><a
                     aria-label="Button to filter projects by all initiatives"
-                    data-toggle="all"
+                    (click)="applySelector(null)"
                     >All Research</a
                 >
                 <a
@@ -21,7 +21,7 @@
                         initiative.name +
                         ' initiative'
                     "
-                    [attr.data-toggle]="'.' + initiative.key"
+                    (click)="applySelector(initiative.key)"
                 >
                     {{ initiative.name }}
                 </a>
@@ -33,16 +33,17 @@
                 <a
                     aria-label="Button to filter projects by any status"
                     data-toggle="all"
+                    (click)="applyStatusSelector(null)"
                     >Any</a
                 >
                 <a
                     aria-label="Button to filter projects by ongoing status'"
-                    data-filter=".ongoing"
+                    (click)="applyStatusSelector('ongoing')"
                     >Ongoing</a
                 >
                 <a
                     aria-label="Button to filter projects by completed status'"
-                    data-filter=".completed"
+                    (click)="applyStatusSelector('completed')"
                     >Completed</a
                 >
             </span>
@@ -54,38 +55,38 @@
     class="columns is-multiline is-mobile no-margin"
     *ngIf="projects"
 >
-    <!-- We have to map array of initiative keys and then join result w/ space -->
-    <div
-        #projectList
-        *ngFor="let project of projects; let i = index"
-        class="project view-tooltip column is-3-tablet is-11-mobile {{
-            project.initiatives !== undefined
-                ? (project.initiatives | pluck: 'key' | join: ' ')
-                : 'all'
-        }} {{ project.status | lowercase }}"
-        [class.mix]="project.key !== 'dummy'"
-    >
-        <a
-            routerLink="/projects/{{
-                project.customUrl ? project.customUrl : project.key
-            }}"
-            *ngIf="project.key !== 'dummy'"
+    <ng-container #projectList *ngFor="let project of projects; let i = index">
+        <div
+            *ngIf="
+                project.key !== 'dummy' &&
+                isSelected(project.key) &&
+                isStatusSelected(project.status | lowercase)
+            "
+            class="project view-tooltip column is-4-tablet is-11-mobile"
+            [class.dummy]="project.key === 'dummy'"
         >
-            <div class="bg">
-                <span role="tooltip">view</span>
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{ project.image.public_id }}"
-                    autoFormat="true"
-                    [responsive]="true"
-                    height="350"
-                    alt="Thumbnail image for '{{ project.name }}' project"
-                    *ngIf="project.image !== undefined"
-                ></cdn-image>
-            </div>
-            <h4>{{ project.name }}</h4>
-        </a>
-    </div>
+            <!-- We have to map array of initiative keys for filtering -->
+            <a
+                routerLink="/projects/{{
+                    project.customUrl ? project.customUrl : project.key
+                }}"
+            >
+                <div class="bg">
+                    <span role="tooltip">view</span>
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ project.image.public_id }}"
+                        autoFormat="true"
+                        [responsive]="true"
+                        height="350"
+                        alt="Thumbnail image for '{{ project.name }}' project"
+                        *ngIf="project.image !== undefined"
+                    ></cdn-image>
+                </div>
+                <h4>{{ project.name }}</h4>
+            </a>
+        </div>
+    </ng-container>
 </section>
 
 <!-- Archived Projects -->
