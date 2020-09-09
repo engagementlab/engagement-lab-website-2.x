@@ -36,7 +36,7 @@ const Routes = () => {
     });
 
     router.post('/post/contact', routes.get.contact.send);
-    router.post('/post/newsletter/:email', routes.get.newsletter.signup);
+    router.post('/api/post/newsletter/:email', routes.get.newsletter.signup);
 
     // Error
     router.get('*', (req, res) => {
