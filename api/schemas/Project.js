@@ -74,7 +74,6 @@ const Project = {
             githubUrl: String
             id: ID!
             image: Image!
-            initiatives: [Initiative]
             key: String!
             name: String!
             partners: [Partner]
@@ -104,12 +103,7 @@ const Project = {
         'allFeaturedProjectPages: [Project]',
         'getProject(key: String): ProjectResult'],
     resolvers: {
-        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, })
-            .populate({
-                path: 'initiatives',
-                select: 'key customUrl -_id',
-            })
-            .sort([['sortOrder', 'ascending']]).exec(),
+        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, }).sort([['sortOrder', 'ascending']]).exec(),
 
         allArchivedProjectPages: async () => model.find({ enabled: true, archived: true, }).exec(),
 

@@ -68,15 +68,6 @@ Project.add({
         many: true,
         note: 'What kind of project is this? Choose from below or add a Format Filter and choose \'Project\' as its destination.',
     },
-
-    // Initiative model reference for which one(s) this belongs to
-    initiatives: {
-        type: Types.Relationship,
-        label: 'Initiative(s)',
-        ref: 'Initiative',
-        many: true,
-        note: 'Will classify which initiative(s) this project is sorted under.',
-    },
     // Partner model reference
     partners: {
         type: Types.Relationship,
