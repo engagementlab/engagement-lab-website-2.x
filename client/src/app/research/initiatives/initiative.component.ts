@@ -64,11 +64,6 @@ export class InitiativeComponent implements OnInit {
             this.upperBg.classList.value = this.initiativeType;
             this.upperBg.classList.add('show');
             logoClasses.add('white');
-
-            // // Show correct shape
-            // document
-            //     .querySelector(`#initiative-bg .${this.initiativeType}`)
-            //     .classList.toggle('open');
         });
     }
 

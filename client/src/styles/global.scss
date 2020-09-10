@@ -209,8 +209,32 @@ hr {
     svg,
     img {
       @include transition(transform, 1s, ease-in-out);
-      transform: skew(0deg, random(40)+deg);
     }
+
+    &#engaged-journalism {
+
+      svg,
+      img {
+        transform: skew(0deg, 4deg);
+      }
+    }
+
+    &#civic-smart-cities {
+
+      svg,
+      img {
+        transform: skew(0deg, random(5)+deg);
+      }
+    }
+
+    &#health-advocacy {
+
+      svg,
+      img {
+        transform: skew(0deg, -6deg);
+      }
+    }
+
   }
 
   &.engaged-journalism {
