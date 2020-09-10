@@ -25,4 +25,8 @@ export class FooterComponent implements OnInit {
             duration: 700,
         });
     }
+
+    public openAttributions() {
+        document.getElementById('attributions').classList.add('open');
+    }
 }

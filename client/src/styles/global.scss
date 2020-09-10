@@ -54,6 +54,7 @@ body {
 a {
   color: black;
   text-decoration: none;
+  cursor: pointer;
 
   &.href {
     border-bottom: solid 2px black;
@@ -170,9 +171,9 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
 
-  svg {
+  svg,
+  img {
     display: none;
-    // max-width: 100%;
   }
 
   @include phones {

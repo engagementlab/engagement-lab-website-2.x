@@ -1,5 +1,8 @@
 <footer class="columns is-mobile is-multiline">
-    <div id="logos" class="column is-full-mobile is-5-tablet is-one-quarter-desktop">
+    <div
+        id="logos"
+        class="column is-full-mobile is-5-tablet is-one-quarter-desktop"
+    >
         <cdn-image
             id="el"
             cloudinaryId="logos/logo-sm"
@@ -18,25 +21,67 @@
 
     <div id="contact" class="column is-full-mobile">
         <div id="social" class="columns column is-full is-mobile">
-            <a href="https://www.facebook.com/EngagementLab" role="link" class="column">
-                <cdn-image cloudinaryId="logos/fb" width="12" svg="true" alt="Facebook link image"></cdn-image>
+            <a
+                href="https://www.facebook.com/EngagementLab"
+                role="link"
+                class="column"
+            >
+                <cdn-image
+                    cloudinaryId="logos/fb"
+                    width="12"
+                    svg="true"
+                    alt="Facebook link image"
+                ></cdn-image>
             </a>
             <a href="https://twitter.com/engagelab" role="link" class="column">
-                <cdn-image cloudinaryId="logos/tw" width="24" svg="true" alt="Twitter link image"></cdn-image>
+                <cdn-image
+                    cloudinaryId="logos/tw"
+                    width="24"
+                    svg="true"
+                    alt="Twitter link image"
+                ></cdn-image>
             </a>
-            <a href="https://www.instagram.com/engagelab" role="link" class="column">
-                <cdn-image cloudinaryId="logos/ig" width="24" svg="true" alt="Instagram link image"></cdn-image>
+            <a
+                href="https://www.instagram.com/engagelab"
+                role="link"
+                class="column"
+            >
+                <cdn-image
+                    cloudinaryId="logos/ig"
+                    width="24"
+                    svg="true"
+                    alt="Instagram link image"
+                ></cdn-image>
             </a>
-            <a href="https://medium.com/engagement-lab-emerson-college" role="link" class="column">
-                <cdn-image cloudinaryId="logos/med" width="24" svg="true" alt="Medium link image"></cdn-image>
+            <a
+                href="https://medium.com/engagement-lab-emerson-college"
+                role="link"
+                class="column"
+            >
+                <cdn-image
+                    cloudinaryId="logos/med"
+                    width="24"
+                    svg="true"
+                    alt="Medium link image"
+                ></cdn-image>
             </a>
-            <a href="https://github.com/engagementlab" role="link" class="column">
-                <cdn-image cloudinaryId="logos/gh" width="24" svg="true" alt="Github link image"></cdn-image>
+            <a
+                href="https://github.com/engagementlab"
+                role="link"
+                class="column"
+            >
+                <cdn-image
+                    cloudinaryId="logos/gh"
+                    width="24"
+                    svg="true"
+                    alt="Github link image"
+                ></cdn-image>
             </a>
         </div>
         <div id="address" class="is-full-mobile">
             <span id="email">engagementlab@emerson.edu</span><br />
-            120 Boylston St. Boston, MA <span class="hidden-desktop">02116</span>
+            120 Boylston St. Boston, MA
+            <span class="hidden-desktop">02116</span>
             <span class="hidden-mobile"><br />02116</span>
         </div>
     </div>
@@ -75,16 +120,35 @@
                     </div>
 
                     <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
+                        <div
+                            class="response"
+                            id="mce-error-response"
+                            style="display:none"
+                        ></div>
+                        <div
+                            class="response"
+                            id="mce-success-response"
+                            style="display:none"
+                        ></div>
                     </div>
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_8cb16e3042072f11cc0680d36_e9f56f4f4d" tabindex="-1" value="" />
+                    <div
+                        style="position: absolute; left: -5000px;"
+                        aria-hidden="true"
+                    >
+                        <input
+                            type="text"
+                            name="b_8cb16e3042072f11cc0680d36_e9f56f4f4d"
+                            tabindex="-1"
+                            value=""
+                        />
                     </div>
                 </div>
             </form>
         </div>
-        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script
+            type="text/javascript"
+            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+        ></script>
         <script type="text/javascript">
             (function($) {
                 window.fnames = new Array();
@@ -109,11 +173,21 @@
     </div>
 
     <div id="license" class="column is-full">
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-            <cdn-image cloudinaryId="logos/cc" width="130" svg="true" alt="Creative Commons License"></cdn-image>
+        <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+        >
+            <cdn-image
+                cloudinaryId="logos/cc"
+                width="130"
+                svg="true"
+                alt="Creative Commons License"
+            ></cdn-image>
         </a>
-        &nbsp;
+        &nbsp; &nbsp;
         <a routerLink="/privacy">Privacy Policy</a>
+        &nbsp; &nbsp;
+        <a (click)="openAttributions()">Attributions</a>
     </div>
 
     <div id="version">

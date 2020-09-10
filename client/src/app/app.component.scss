@@ -1,19 +1,18 @@
 @import '../styles/_variables';
 
 @include keyframes(border-anim) {
-
   0% {
     border-width: 0;
   }
 
   20% {
     border-width: 20px;
-    background-color: rgba($color: #000000, $alpha: .2);
+    background-color: rgba($color: #000000, $alpha: 0.2);
   }
 
   80% {
     border-width: 20px;
-    background-color: rgba($color: #000000, $alpha: .2);
+    background-color: rgba($color: #000000, $alpha: 0.2);
   }
 
   100% {
@@ -24,14 +23,12 @@
 }
 
 @include keyframes(banner) {
-
   0% {
     top: -96px;
   }
 
   20% {
     top: 20px;
-
   }
 
   80% {
@@ -44,7 +41,6 @@
 }
 
 @include keyframes(banner-tab) {
-
   0% {
     @include translate(0, -20px);
   }
@@ -52,7 +48,6 @@
   100% {
     @include translate(0, 0);
   }
-
 }
 
 .bg {
@@ -62,27 +57,25 @@
   width: 100%;
   opacity: 0;
 
-  @include transition(opacity, .4s, ease-in-out);
+  @include transition(opacity, 0.4s, ease-in-out);
 
   &.open {
     opacity: 1;
   }
-
 }
 
 #project-bg {
   height: 1110px;
 }
 
-// Test home BG 
+// Test home BG
 #home-bg {
   height: 500px;
 
   #slides {
-
     display: flex;
     width: 300%;
-    @include transition(transform, 2s, cubic-bezier(0.165, 0.840, 0.440, 1.000));
+    @include transition(transform, 2s, cubic-bezier(0.165, 0.84, 0.44, 1));
 
     p {
       display: block;
@@ -91,15 +84,33 @@
       margin: 0;
 
       &:first-child {
-        background-image: cdn-image('DSC00518-2', f_auto, c_fill, w_1900, h_500, q_100, g_center)
+        background-image: cdn-image('DSC00518-2',
+            f_auto,
+            c_fill,
+            w_1900,
+            h_500,
+            q_100,
+            g_center);
       }
 
       &:nth-child(2) {
-        background-image: cdn-image('IMG_4375', f_auto, c_fill, w_1900, h_500, q_100, g_center)
+        background-image: cdn-image('IMG_4375',
+            f_auto,
+            c_fill,
+            w_1900,
+            h_500,
+            q_100,
+            g_center);
       }
 
       &:nth-child(3) {
-        background-image: cdn-image('IMG_4346', f_auto, c_fill, w_1900, h_500, q_100, g_center)
+        background-image: cdn-image('IMG_4346',
+            f_auto,
+            c_fill,
+            w_1900,
+            h_500,
+            q_100,
+            g_center);
       }
     }
   }
@@ -115,9 +126,8 @@
   // background-color: aqua;
 }
 
-// Subnav for some sections 
+// Subnav for some sections
 .subnav {
-
   position: relative;
   z-index: 5;
 
@@ -145,7 +155,7 @@
     span {
       border-bottom: 0px solid black;
       transform-origin: top;
-      @include transition(border-width, .2s, linear);
+      @include transition(border-width, 0.2s, linear);
     }
 
     &:not(.foldout-btn) {
@@ -214,7 +224,7 @@
 
   .foldout-btn {
     svg {
-      @include transition(transform, .4s, cubic-bezier(1.000, 0.000, 0.000, 1.000));
+      @include transition(transform, 0.4s, cubic-bezier(1, 0, 0, 1));
       @include rotate(0);
 
       transform-origin: center center;
@@ -243,14 +253,14 @@
       flex-direction: column;
       max-height: 0;
       overflow: hidden;
-      @include transition(max-height, .4s, cubic-bezier(1.000, 0.000, 0.000, 1.000));
+      @include transition(max-height, 0.4s, cubic-bezier(1, 0, 0, 1));
 
       a {
         opacity: 0;
         visibility: visible;
         transform-origin: top;
         @include translate(0, -100%);
-        @include transition(all, .4s, ease);
+        @include transition(all, 0.4s, ease);
       }
 
       &.open {
@@ -265,7 +275,6 @@
     }
   }
 }
-
 
 #errors {
   position: fixed;
@@ -306,8 +315,7 @@
   z-index: 100;
 
   background-color: rgba($color: #000000, $alpha: 0);
-  animation: border-anim 4s cubic-bezier(1.000, 0.000, 0.000, 1.000) .6s 1 forwards;
-
+  animation: border-anim 4s cubic-bezier(1, 0, 0, 1) 0.6s 1 forwards;
 }
 
 #qa-build {
@@ -324,7 +332,7 @@
   font-size: large;
   z-index: 101;
   padding-bottom: 1%;
-  animation: banner 4s cubic-bezier(1.000, 0.000, 0.000, 1.000) .6s 1 forwards;
+  animation: banner 4s cubic-bezier(1, 0, 0, 1) 0.6s 1 forwards;
 
   #text {
     font-size: xx-large;
@@ -332,5 +340,74 @@
 
   span {
     vertical-align: top;
+  }
+}
+
+#attributions {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  background-color: rgba($color: #000, $alpha: 0.2);
+
+  &.open {
+    visibility: visible;
+    z-index: 10;
+    opacity: 1;
+
+    div {
+      @include scale(1);
+      opacity: 1;
+    }
+  }
+
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  div {
+    @include transition(all, 0.4s, cubic-bezier(0.215, 0.610, 0.355, 1.000));
+    @include scale(.7);
+
+    width: 30%;
+    height: 60%;
+    padding: 2%;
+    background-color: black;
+    color: white;
+    opacity: 0;
+
+    @include phones {
+      width: 100%;
+      height: 100%;
+    }
+
+    a {
+      color: $mango;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      list-style-type: square;
+    }
   }
 }

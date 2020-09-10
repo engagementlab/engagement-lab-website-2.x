@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
 
     @ViewChild('studiosEl') studiosEl: ElementRef;
     @ViewChild('studiosBtn') studiosBtn: ElementRef;
+    @ViewChild('attributes') attributions: ElementRef;
 
     constructor(
         private router: Router,
@@ -138,5 +139,9 @@ export class AppComponent implements OnInit {
     dismissErrors() {
         this.dataErrors = null;
         this.imageErrors = null;
+    }
+
+    closeAttributions() {
+        this.attributions.nativeElement.classList.remove('open');
     }
 }

@@ -2,11 +2,6 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
-import {
-    disableBodyScroll,
-    enableBodyScroll,
-    clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
 import { DataService } from '../utils/data.service';
 
 import { environment } from '../../environments/environment';
