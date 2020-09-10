@@ -128,17 +128,4 @@ export class HomeComponent implements OnInit {
     emailFocus() {
         this.emailFieldFocused = true;
     }
-
-    taglineAnim(position: number) {
-        if (!document.querySelector('#home-bg').classList.contains('open')) {
-            document.querySelector('#home-bg').classList.add('open');
-        }
-        (<HTMLElement>(
-            document.querySelector('#home-bg #slides')
-        )).style.transform = `translate(-${position * 1905}px)`;
-    }
-
-    taglineHide() {
-        document.querySelector('#home-bg').classList.remove('open');
-    }
 }

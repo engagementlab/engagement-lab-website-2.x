@@ -78,9 +78,8 @@
 >
     <!-- Photo (jpg,png) transforms -->
     <cl-transformation
-        crop="scale"
         dpr="auto"
-        crop="fill"
+        attr.crop="{{ crop }}"
         attr.effect="{{ effect }}"
     ></cl-transformation>
 </cl-image>
