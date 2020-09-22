@@ -82,8 +82,6 @@ Masters.add({
     },
     phases: {
         type: Types.TextArray,
-        required: true,
-        initial: true,
     },
     applicationLink: {
         type: Types.Url,
