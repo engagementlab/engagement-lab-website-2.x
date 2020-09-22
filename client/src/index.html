@@ -34,7 +34,6 @@
             content="//res.cloudinary.com/engagement-lab-home/image/upload/c_scale,q_100,w_1200/v1548872248/homepage-2.0/social.jpg"
         />
 
-        <link rel="stylesheet" href="//unpkg.com/aos@next/dist/aos.css" />
         <link
             rel="stylesheet"
             href="//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/tiny-slider.css"
@@ -277,29 +276,34 @@
             if (unsupported)
                 document.getElementById('unsupported').style.display = 'block';
             else {
-                window.cookieconsent.initialise({
-                    cookie: {
-                        name: 'elab-home-ga-allow',
-                    },
-                    hadTransition: true,
-                    palette: {
-                        popup: {
-                            background: '#000',
-                        },
-                        button: {
-                            background: '#fecf33',
-                        },
-                    },
-                    type: 'opt-out',
-                    content: {
-                        message:
-                            'We use cookies to track anonymous usage data on this website.',
-                        href: '/privacy',
-                    },
-                    onStatusChange: function(status) {
-                        if (this.hasConsented()) initGA();
-                    },
-                });
+                // setTimeout(() => {
+                //     const cc = window.cookieconsent.initialise({
+                //         cookie: {
+                //             name: 'elab-home-ga-allow',
+                //         },
+                //         hadTransition: true,
+                //         palette: {
+                //             popup: {
+                //                 background: '#000',
+                //             },
+                //             button: {
+                //                 background: '#fecf33',
+                //             },
+                //         },
+                //         type: 'opt-out',
+                //         content: {
+                //             message:
+                //                 'We use cookies to track anonymous usage data on this website.',
+                //             href: '/privacy',
+                //         },
+                //         onInitialise: function(status) {
+                //             console.log('cc', status);
+                //         },
+                //         onStatusChange: function(status) {
+                //             if (this.hasConsented()) initGA();
+                //         },
+                //     });
+                // }, 3000);
             }
 
             // Init analytics if allowed

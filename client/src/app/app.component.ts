@@ -12,6 +12,8 @@ import {
 import { environment } from '../environments/environment';
 import { DataService } from './utils/data.service';
 
+import CC from 'cookieconsent/';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -47,6 +49,34 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
+        // Cookie consent
+        const cc = new CC({
+            cookie: {
+                name: 'elab-home-ga-allow',
+            },
+            hadTransition: true,
+            palette: {
+                popup: {
+                    background: '#000',
+                },
+                button: {
+                    background: '#fecf33',
+                },
+            },
+            type: 'opt-out',
+            content: {
+                message:
+                    'We use cookies to track anonymous usage data on this website.',
+                href: '/privacy',
+            },
+            onInitialise: function(status) {
+                console.log('cc', status);
+            },
+            onStatusChange: function(status) {
+                // if (this.hasConsented()) initGA();
+            },
+        });
+
         this.router.events.subscribe(async evt => {
             // Close initiatives nav on all navigation
             if (this.initiativesEl)
