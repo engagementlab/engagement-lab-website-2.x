@@ -8,13 +8,23 @@ const queryData = async (queryName) => {
     return response.data.data;
 };
 
-const initiativeIdPlugin = async (route, config) => {
-    // Obtain all initiative keys via graphql query
-    const response = await queryData('allInitiativePages');
+const studioIdPlugin = async (route, config) => {
+    // Obtain all studio keys via graphql query
+    const response = await queryData('allStudios');
     const routes = [];
 
-    response.allInitiativePages.forEach((res) => {
-        routes.push({ route: `/initiative/${res.key}` });
+    response.allStudios.forEach((res) => {
+        routes.push({ route: `/studios/studio/${res.key}` });
+    });
+    return Promise.resolve(routes);
+};
+const mdprojectIdPlugin = async (route, config) => {
+    // Obtain all grad project keys via graphql query
+    const response = await queryData('allMDProjectPages');
+    const routes = [];
+
+    response.allMDProjectPages.forEach((res) => {
+        routes.push({ route: `/graduate/projects/${res.key}` });
     });
     return Promise.resolve(routes);
 };
@@ -25,6 +35,16 @@ const projectIdPlugin = async (route, config) => {
 
     response.allProjectPages.forEach((res) => {
         routes.push({ route: `/projects/${res.key}` });
+    });
+    return Promise.resolve(routes);
+};
+const initiativeIdPlugin = async (route, config) => {
+    // Obtain all initiative keys via graphql query
+    const response = await queryData('allInitiativePages');
+    const routes = [];
+
+    response.allInitiativePages.forEach((res) => {
+        routes.push({ route: `/initiative/${res.key}` });
     });
     return Promise.resolve(routes);
 };
@@ -48,9 +68,49 @@ const personIdPlugin = async (route, config) => {
     });
     return Promise.resolve(routes);
 };
+const facultyIdPlugin = async (route, config) => {
+    // Obtain all faculty people keys via graphql query
+    const body = `query {                         
+        allMastersPages {
+            faculty {
+                key
+            }
+        }
+    }`;
+    const response = await axios.post('http://localhost:3000/graphql', { query: body });
+    const routes = [];
+    response.data.data.allMastersPages.faculty.forEach((res) => {
+        routes.push({ route: `/graduate/faculty/${res.key}` });
+    });
+    return Promise.resolve(routes);
+};
+const gradIdPlugin = async (route, config) => {
+    // Obtain all grad student/alumni people keys via graphql query
+    const body = `query { 
+        allMastersPeople {
+            key
+        }
+        allAlumniPeople {
+            key
+        }
+    }`;
+    const response = await axios.post('http://localhost:3000/graphql', { query: body });
+    const routes = []; 
+    response.data.data.allMastersPeople.forEach((res) => {
+        routes.push({ route: `/graduate/students/${res.key}` });
+    });
+    response.data.data.allAlumniPeople.forEach((res) => {
+        routes.push({ route: `/graduate/students/${res.key}` });
+    });
+    return Promise.resolve(routes);
+};
 
 const validator = async (config) => [];
-registerPlugin('router', 'initiatives', initiativeIdPlugin, validator);
+registerPlugin('router', 'studios', studioIdPlugin, validator);
+registerPlugin('router', 'mdprojects', mdprojectIdPlugin, validator);
+registerPlugin('router', 'gradfaculty', facultyIdPlugin, validator);
+registerPlugin('router', 'gradstudents', gradIdPlugin, validator);
 registerPlugin('router', 'projects', projectIdPlugin, validator);
+registerPlugin('router', 'initiatives', initiativeIdPlugin, validator);
 registerPlugin('router', 'events', eventIdPlugin, validator);
 registerPlugin('router', 'people', personIdPlugin, validator);

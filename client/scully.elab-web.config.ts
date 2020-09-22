@@ -2,22 +2,38 @@ import './plugins/keys';
 
 exports.config = {
     // logFileSeverity: 0,
-    // inlineStateOnly: false,
+    inlineStateOnly: true,
     projectRoot: './src',
     projectName: 'elab-web',
     outDir: '../bin/app',
     routes: {
+        // All studios pages
+        '/studios/studio/:key': {
+            type: 'studios',
+        },
+        // All grad project pages
+        '/graduate/projects/:key': {
+            type: 'mdprojects',
+        },
+        // All grad faculty pages
+        '/graduate/faculty/:key': {
+            type: 'gradfaculty',
+        },
+        // All grad student/alumni pages
+        '/graduate/students/:key': {
+            type: 'gradstudents',
+        },
+        // All project pages
+        '/research/projects/:key': {
+            type: 'projects',
+        },
         // All initiative pages
-        '/initiatives/:key': {
+        '/research/initiatives/:key': {
             type: 'initiatives',
         },
         // All event pages
         '/events/:key': {
             type: 'events',
-        },
-        // All project pages
-        '/projects/:key': {
-            type: 'projects',
         },
         // All people
         '/people/:key': {
