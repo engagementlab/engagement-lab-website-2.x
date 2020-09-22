@@ -1,444 +1,435 @@
 @import '~src/styles/_variables';
 $jobs-delay: 0.75s;
 
-
 @include keyframes(bg-open) {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
 
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @include keyframes(bg-close) {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
 
-  0% {
-    visibility: visible;
-    opacity: 1;
-
-  }
-
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 nav {
-  position: relative;
+    position: relative;
 
-  padding-top: 3%;
-  margin-bottom: 3% !important;
-  z-index: 11;
+    padding-top: 3%;
+    margin-bottom: 3% !important;
+    z-index: 11;
 
-  @include phones {
-
-    // Ignore if nav is open
-    &:not(.open) {
-      #logo-img {
-
-        // Make logo white outline
-        &.white {
-          path {
-            stroke: white;
-            fill: white;
-          }
+    @include phones {
+        // Ignore if nav is open
+        &:not(.open) {
+            #logo-img {
+                // Make logo white outline
+                &.white {
+                    path {
+                        stroke: white;
+                        fill: white;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 #menu-bg {
+    visibility: hidden;
+    position: fixed;
+    z-index: -1;
 
-  visibility: hidden;
-  position: fixed;
-  z-index: -1;
+    background-color: rgba($color: #000, $alpha: 0.2);
+    top: 0;
+    right: 0;
+    bottom: 0;
 
-  background-color: rgba($color: #000, $alpha: .2);
-  top: 0;
-  right: 0;
-  bottom: 0;
+    width: 100%;
+    height: 100%;
+    animation: bg-close 0.7s forwards;
 
-  width: 100%;
-  height: 100%;
-  animation: bg-close .7s forwards;
-
-  &.open {
-    animation: bg-open .7s forwards;
-    z-index: 10;
-  }
+    &.open {
+        animation: bg-open 0.7s forwards;
+        z-index: 10;
+    }
 }
 
 #home {
-
-  // Hide when menu open on phones
-  @include phones {
-    @include transition(opacity, .3s, ease-in-out);
-
-    &.hide {
-      opacity: 0;
-    }
-  }
-
-  #logo-img {
-    max-width: 166px;
-  }
-
-  svg {
+    // Hide when menu open on phones
     @include phones {
-      max-width: 200px;
-    }
+        @include transition(opacity, 0.3s, ease-in-out);
 
-    #engagement {
-      fill: black !important;
-    }
-
-    #color-lab {
-      @include transition(opacity, 1s, ease-in-out);
-      opacity: 1;
-
-      path {
-        &:nth-child(1) {
-          fill: #f6a536 !important;
+        &.hide {
+            opacity: 0;
         }
-
-        &:nth-child(2) {
-          fill: #00ab9e !important;
-        }
-
-        &:nth-child(3) {
-          fill: #f72923 !important;
-        }
-      }
     }
 
-    #bw-lab {
-      @include transition(opacity, 1s, ease-in-out);
-      opacity: 0;
-      fill: black !important;
+    #logo-img {
+        max-width: 166px;
     }
 
-    path {
-      @include transition(stroke, 4s, ease-in-out);
-    }
-  }
-
-  &.sm {
     svg {
+        @include phones {
+            max-width: 200px;
+        }
 
-      #color-lab {
-        opacity: 0;
-      }
+        #engagement {
+            fill: black !important;
+        }
 
-      #bw-lab {
-        opacity: 1;
-      }
+        #color-lab {
+            @include transition(opacity, 1s, ease-in-out);
+            opacity: 1;
+
+            path {
+                &:nth-child(1) {
+                    fill: #f6a536 !important;
+                }
+
+                &:nth-child(2) {
+                    fill: #00ab9e !important;
+                }
+
+                &:nth-child(3) {
+                    fill: #f72923 !important;
+                }
+            }
+        }
+
+        #bw-lab {
+            @include transition(opacity, 1s, ease-in-out);
+            opacity: 0;
+            fill: black !important;
+        }
+
+        path {
+            @include transition(stroke, 4s, ease-in-out);
+        }
     }
-  }
+
+    &.sm {
+        svg {
+            #color-lab {
+                opacity: 0;
+            }
+
+            #bw-lab {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 #menu-btn {
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  justify-content: flex-end;
-
-  font-family: Overpass;
-  font-size: 1.6em;
-  font-weight: 600;
-  cursor: pointer;
-
-  color: black;
-
-  @include transition(color, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
-
-  @include phones {
-    font-size: 1.4em;
-  }
-
-  &.isOpen {
-    .open {
-      opacity: 0;
-    }
-  }
-
-  #label {
     display: flex;
+    position: relative;
+    align-items: flex-start;
     justify-content: flex-end;
 
-    .open {
-      position: absolute;
-      @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+    font-family: Overpass;
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: pointer;
+
+    color: black;
+
+    @include transition(color, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+
+    @include phones {
+        font-size: 1.4em;
     }
 
-    .close {
-      opacity: 0;
-      color: white;
-
-      // "Close"
-      span {
-        opacity: 0;
-        @include translate(0%, 50%);
-        @include transition(all,
-          .9s,
-          cubic-bezier(0.075, 0.82, 0.165, 1));
-      }
-
-      &.isOpen {
-        opacity: 1;
-
-        span {
-          @include translate(0%, 0%);
-          opacity: 1;
-          display: inline-block;
+    &.isOpen {
+        .open {
+            opacity: 0;
         }
-      }
     }
-  }
+
+    #label {
+        display: flex;
+        justify-content: flex-end;
+
+        .open {
+            position: absolute;
+            @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+        }
+
+        .close {
+            opacity: 0;
+            color: white;
+
+            // "Close"
+            span {
+                opacity: 0;
+                @include translate(0%, 50%);
+                @include transition(
+                    all,
+                    0.9s,
+                    cubic-bezier(0.075, 0.82, 0.165, 1)
+                );
+            }
+
+            &.isOpen {
+                opacity: 1;
+
+                span {
+                    @include translate(0%, 0%);
+                    opacity: 1;
+                    display: inline-block;
+                }
+            }
+        }
+    }
 }
 
 #menu {
-  position: fixed;
-  @include translate(100%);
+    position: fixed;
+    @include translate(100%);
 
-  background-color: black;
-  text-align: right;
+    background-color: black;
+    text-align: right;
 
-  z-index: 10;
-  top: 0;
-  right: 0;
-  bottom: 0;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
 
-  @include transition(transform, .7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+    @include transition(transform, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
 
-  @include not-phones {
-    min-width: 500px;
-  }
+    @include not-phones {
+        min-width: 500px;
+    }
 
-  // Full-bleed on phones
-  @include phones {
-    width: 100%;
-    height: 100%;
-  }
+    // Full-bleed on phones
+    @include phones {
+        width: 100%;
+        height: 100%;
+    }
 
-  &.isOpen {
-    @include translate(0);
+    &.isOpen {
+        @include translate(0);
+
+        h3 {
+            animation: show 0.7s ease-in-out 1 both;
+        }
+
+        hr {
+            margin-left: 18%;
+        }
+
+        #jobs {
+            animation: show-jobs 0.2s ease-in-out 1 both;
+            animation-delay: $jobs-delay;
+        }
+    }
 
     h3 {
-      animation: show 0.7s ease-in-out 1 both;
+        font-family: 'LunchtypeMedium';
+        font-size: 1.6em;
+        font-weight: 500;
+        line-height: 1.17;
+        letter-spacing: 1.5px;
+
+        margin: 5% 0 0 0;
+
+        &.disabled {
+            a {
+                text-decoration: line-through;
+            }
+        }
+
+        &.sub {
+            font-family: 'LunchtypeRegular';
+            font-size: 1.1em;
+            font-weight: 100;
+        }
+
+        @include phones {
+            margin-top: 3%;
+        }
+
+        @for $i from 6 through 1 {
+            &:nth-of-type(#{$i}) {
+                animation-delay: 0.05s * (6 - $i);
+            }
+        }
+
+        @include mq($until: mobileLg) {
+            font-size: 1.95em;
+        }
+
+        a {
+            color: white;
+            position: relative;
+            cursor: pointer;
+
+            svg {
+                padding-left: 3%;
+            }
+
+            &.active {
+                border-bottom: 1px solid white;
+            }
+
+            &:visited {
+                color: white;
+            }
+
+            &.visible {
+                &:before {
+                    visibility: visible !important;
+                }
+            }
+        }
+
+        // Animations
+        @keyframes show {
+            0% {
+                opacity: 0;
+                @include translate(0, 20%);
+            }
+
+            100% {
+                opacity: 1;
+                @include translate(0, 0%);
+            }
+        }
+
+        @keyframes show-jobs {
+            0% {
+                opacity: 0;
+                @include translate(0, 20%);
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes hide {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                @include translate(0, -40%);
+            }
+        }
+
+        @keyframes in {
+            0% {
+                width: 0;
+                left: 0;
+                right: auto;
+            }
+
+            100% {
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+        }
+
+        @keyframes out {
+            0% {
+                width: 100%;
+                left: auto;
+                right: 0;
+            }
+
+            100% {
+                width: 0;
+                left: auto;
+                right: 0;
+            }
+        }
     }
 
     hr {
-      margin-left: 18%;
+        display: block;
+        margin-left: 100%;
+        @include transition(margin, 1.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+    }
+
+    #links {
+        margin-top: 32%;
+        margin-right: 18%;
+
+        @include phones {
+            margin-top: 21%;
+            margin-right: 4%;
+        }
+
+        section {
+            a {
+                @include transition(opacity, 0.25s, ease-in-out);
+            }
+
+            /* clean-css ignore:start */
+            &:hover {
+                a {
+                    opacity: 0.5;
+
+                    &:hover {
+                        &:not(.active) {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            /* clean-css ignore:end */
+        }
     }
 
     #jobs {
-      animation: show-jobs 0.2s ease-in-out 1 both;
-      animation-delay: $jobs-delay;
-    }
-  }
-
-  h3 {
-    font-family: 'LunchtypeMedium';
-    font-size: 1.6em;
-    font-weight: 500;
-    line-height: 1.17;
-    letter-spacing: 1.5px;
-
-    margin: 5% 0 0 0;
-
-    &.disabled {
-      a {
-        text-decoration: line-through;
-      }
+        animation: hide 0.1s ease-in-out 1 both;
+        animation-delay: $jobs-delay;
     }
 
-    &.sub {
-      font-family: 'LunchtypeRegular';
-      font-size: 1.1em;
-      font-weight: 100;
-    }
-
-    @include phones {
-      margin-top: 3%;
-    }
-
-    @for $i from 6 through 1 {
-      &:nth-of-type(#{$i}) {
-        animation-delay: 0.05s * (6 - $i);
-      }
-    }
-
-    @include mq($until: mobileLg) {
-      font-size: 1.95em;
-    }
-
-    a {
-      color: white;
-      position: relative;
-      cursor: pointer;
-
-
-      svg {
-        padding-left: 3%;
-      }
-
-      &.active {
-        border-bottom: 1px solid white;
-      }
-
-      &:visited {
-        color: white;
-      }
-
-      &.visible {
-        &:before {
-          visibility: visible !important;
+    #search {
+        @include placeholder {
+            color: black;
+            opacity: 1;
         }
-      }
-    }
 
-    // Animations
-    @keyframes show {
-      0% {
-        opacity: 0;
-        @include translate(0, 20%);
-      }
+        font-size: 1.3em;
 
-      100% {
-        opacity: 1;
-        @include translate(0, 0%);
-      }
-    }
+        line-height: 2;
+        letter-spacing: 0.2px;
 
-    @keyframes show-jobs {
-      0% {
-        opacity: 0;
-        @include translate(0, 20%);
-      }
+        padding: 2%;
 
-      100% {
-        opacity: 1;
-      }
-    }
+        border: none;
+        border-bottom: solid 2px black;
 
-    @keyframes hide {
-      0% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0;
-        @include translate(0, -40%);
-      }
-    }
-
-    @keyframes in {
-      0% {
-        width: 0;
-        left: 0;
-        right: auto;
-      }
-
-      100% {
-        left: 0;
-        right: auto;
-        width: 100%;
-      }
-    }
-
-    @keyframes out {
-      0% {
-        width: 100%;
-        left: auto;
-        right: 0;
-      }
-
-      100% {
-        width: 0;
-        left: auto;
-        right: 0;
-      }
-    }
-  }
-
-  hr {
-    display: block;
-    margin-left: 100%;
-    @include transition(margin, 1.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
-  }
-
-  #links {
-    margin-top: 32%;
-    margin-right: 18%;
-
-    @include phones {
-      margin-top: 21%;
-      margin-right: 4%;
-    }
-
-    section {
-      a {
-        @include transition(opacity, .25s, ease-in-out);
-      }
-
-      &:hover {
-        a {
-          opacity: 50%;
-
-          &:hover {
-            &:not(.active) {
-              opacity: 100%;
-            }
-          }
+        &.focus {
+            border-bottom-width: 4px;
+            font-weight: 500;
         }
-      }
     }
 
-  }
-
-  #jobs {
-    animation: hide 0.1s ease-in-out 1 both;
-    animation-delay: $jobs-delay;
-  }
-
-  #search {
-    @include placeholder {
-      color: black;
-      opacity: 1;
+    #results {
+        margin-top: 5%;
     }
 
-    font-size: 1.3em;
-
-    line-height: 2;
-    letter-spacing: 0.2px;
-
-    padding: 2%;
-
-    border: none;
-    border-bottom: solid 2px black;
-
-    &.focus {
-      border-bottom-width: 4px;
-      font-weight: 500;
+    #jobs {
+        font-size: 2em;
+        line-height: 1.41;
+        letter-spacing: 0.5px;
     }
-  }
-
-  #results {
-    margin-top: 5%;
-  }
-
-  #jobs {
-    font-size: 2em;
-    line-height: 1.41;
-    letter-spacing: 0.5px;
-  }
 }

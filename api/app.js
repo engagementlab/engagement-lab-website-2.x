@@ -195,7 +195,6 @@ const start = productionMode => {
         ],
     });
     global.elasti = undefined;
-    global.logger.info(`The following env keys found: ${Object.keys(process.env)}`);
 
     app.use(express.json());
     app.use(express.urlencoded({ extended: false, }));
@@ -207,6 +206,8 @@ const start = productionMode => {
 
     if (process.env.SEARCH_ENABLED === 'true') searchBoot(app, productionMode);
     else boot(app, productionMode);
+
+    if (productionMode) { global.logger.info('Running in production mode'); }
 
     return app;
 };

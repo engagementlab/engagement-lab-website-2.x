@@ -86,7 +86,10 @@ export class NavComponent {
             .pipe(filter(e => e instanceof NavigationStart))
             .subscribe(e => {
                 // Close menu when nav starts
-                if (this.menuBtn.nativeElement.classList.contains('isOpen')) {
+                if (
+                    this.menuBtn &&
+                    this.menuBtn.nativeElement.classList.contains('isOpen')
+                ) {
                     this.openCloseNav();
                 }
             });

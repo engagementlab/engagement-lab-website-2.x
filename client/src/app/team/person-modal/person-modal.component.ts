@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { projects } from 'paper';
 
 @Component({
     selector: 'person-modal',

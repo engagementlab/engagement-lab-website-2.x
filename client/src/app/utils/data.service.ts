@@ -30,9 +30,7 @@ export class DataService {
         private transferState: TransferStateService,
         private _apollo: Apollo,
     ) {
-        this.baseUrl = environment.development
-            ? 'http://localhost:3000'
-            : 'https://' + window.location.host;
+        this.baseUrl = environment.api_url;
     }
 
     /**
@@ -95,6 +93,7 @@ export class DataService {
                             }
                             // Cache result in state
                             this.transferState.setState(stateKey, result);
+
                             this.isLoading.next(false);
 
                             resolve(result.data);
