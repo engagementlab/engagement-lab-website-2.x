@@ -1,18 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import {
-    trigger,
-    transition,
-    style,
-    query,
-    animate,
-} from '@angular/animations';
-
 import { environment } from '../environments/environment';
 import { DataService } from './utils/data.service';
 
-import CC from 'cookieconsent/';
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -30,6 +23,10 @@ export class AppComponent implements OnInit {
     public initiatives: any[];
     private currentUrl: string;
 
+    //keep refs to subscriptions to be able to unsubscribe later
+    private popupOpenSubscription: Subscription;
+    private popupCloseSubscription: Subscription;
+
     title = 'Engagement Lab @ Emerson College';
 
     @ViewChild('initiativesEl') initiativesEl: ElementRef;
@@ -43,39 +40,23 @@ export class AppComponent implements OnInit {
         private router: Router,
         private titleSvc: Title,
         private dataSvc: DataService,
+        private ccService: NgcCookieConsentService,
     ) {
         this.isQABuild = environment.qa;
         this.titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
     }
 
     ngOnInit() {
-        // Cookie consent
-        const cc = new CC({
-            cookie: {
-                name: 'elab-home-ga-allow',
-            },
-            hadTransition: true,
-            palette: {
-                popup: {
-                    background: '#000',
-                },
-                button: {
-                    background: '#fecf33',
-                },
-            },
-            type: 'opt-out',
-            content: {
-                message:
-                    'We use cookies to track anonymous usage data on this website.',
-                href: '/privacy',
-            },
-            onInitialise: function(status) {
-                console.log('cc', status);
-            },
-            onStatusChange: function(status) {
-                // if (this.hasConsented()) initGA();
-            },
+        // subscribe to cookieconsent observables to react to main events
+        this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(() => {
+            debugger;
         });
+
+        this.popupCloseSubscription = this.ccService.popupClose$.subscribe(
+            () => {
+                // you can use this.ccService.getConfig() to do stuff...
+            },
+        );
 
         this.router.events.subscribe(async evt => {
             // Close initiatives nav on all navigation

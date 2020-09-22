@@ -26,6 +26,12 @@ import { onError } from 'apollo-link-error';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
+import {
+    NgcCookieConsentModule,
+    NgcCookieConsentConfig,
+} from 'ngx-cookieconsent';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -82,6 +88,34 @@ export const cloudinary = {
     Cloudinary,
 };
 export const config: CloudinaryConfiguration = appConfig;
+
+// Cookie consent config
+
+const cookieConfig: NgcCookieConsentConfig = {
+    cookie: {
+        domain: 'elab.emerson.edu',
+    },
+    palette: {
+        popup: {
+            background: '#000',
+        },
+        button: {
+            background: '#fecf33',
+        },
+    },
+    type: 'opt-out',
+    content: {
+        message:
+            'We use cookies to track anonymous usage data on this website.',
+        href: '/privacy',
+    },
+    onInitialise: function(status) {
+        console.log('cc', status);
+    },
+    onStatusChange: function(status) {
+        // if (this.hasConsented()) initGA();
+    },
+};
 
 @NgModule({
     declarations: [
@@ -147,6 +181,7 @@ export const config: CloudinaryConfiguration = appConfig;
         HttpLinkModule,
         FormsModule,
         ReactiveFormsModule,
+        NgcCookieConsentModule.forRoot(cookieConfig),
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     providers: [
