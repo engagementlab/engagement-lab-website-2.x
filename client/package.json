@@ -54,6 +54,8 @@
     "graphql-tag": "^2.10.3",
     "ismobilejs": "^1.0.3",
     "jsdom": "^16.2.1",
+    "masonry-layout": "^4.2.2",
+    "ngx-cookieconsent": "^2.2.3",
     "node-pre-gyp": "^0.14.0",
     "path-to-regexp": "^6.1.0",
     "rxjs": "~6.5.4",
