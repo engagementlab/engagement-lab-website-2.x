@@ -106,7 +106,7 @@ export class HomeComponent implements OnInit {
             return;
         }
         this.dataSvc
-            .sendDataToUrl(`post/newsletter/${this.f['email'].value}`, null)
+            .sendDataToUrl(`api/post/newsletter/${this.f['email'].value}`, null)
             .subscribe(
                 (data: any) => {
                     console.log(data);

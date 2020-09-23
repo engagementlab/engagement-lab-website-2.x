@@ -60,7 +60,7 @@ export class PartnerComponent implements OnInit {
 
         let data = this.inquiryForm.value;
         this._dataSvc
-            .sendDataToUrl('post/contact', data)
+            .sendDataToUrl('api/post/contact', data)
             .subscribe((data: any) => {
                 this.received = true;
             });
