@@ -25,13 +25,7 @@
                         "aot": true,
                         "sourceMap": true,
                         "assets": ["src/favicon.ico", "src/assets"],
-                        "scripts": [
-                            "node_modules/cookieconsent/build/cookieconsent.min.js"
-                        ],
-                        "styles": [
-                            "src/styles/global.scss",
-                            "node_modules/cookieconsent/build/cookieconsent.min.css"
-                        ]
+                        "styles": ["src/styles/global.scss"]
                     },
                     "configurations": {
                         "production": {

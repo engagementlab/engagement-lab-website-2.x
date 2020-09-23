@@ -10,14 +10,6 @@ import { Title } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { DataService } from './utils/data.service';
 
-import {
-    NgcCookieConsentService,
-    NgcInitializeEvent,
-    NgcNoCookieLawEvent,
-    NgcStatusChangeEvent,
-} from 'ngx-cookieconsent';
-import { Subscription } from 'rxjs';
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
