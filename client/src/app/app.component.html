@@ -332,4 +332,52 @@
         </ul>
     </div>
 </section>
-<ngx-cookieconsent></ngx-cookieconsent>
+
+<section id="cc">
+    <div
+        #consent
+        id="consent"
+        class="show"
+        aria-live="dialog"
+        aria-live="polite"
+        aria-label="cookieconsent"
+        aria-describedby="cookieconsent:desc"
+    >
+        <!--googleoff: all--><span id="cookieconsent:desc" class="cc-message"
+            >We use cookies to track anonymous usage data on this website.
+            <a
+                aria-label="learn more about cookies"
+                role="button"
+                tabindex="0"
+                class="cc-link"
+                href="/privacy"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                >Learn more</a
+            ></span
+        >
+        <div id="buttons">
+            <a
+                id="decline"
+                aria-label="deny cookies"
+                role="button"
+                tabindex="0"
+                (click)="consentClick(false)"
+                >Decline</a
+            ><a
+                id="allow"
+                aria-label="allow cookies"
+                role="button"
+                tabindex="0"
+                (click)="consentClick(true)"
+                >Allow cookies</a
+            >
+        </div>
+        <!--googleon: all-->
+    </div>
+    <div (click)="consentShowClick()" #revoke id="revoke">
+        <a class="href">
+            Cookie Policy
+        </a>
+    </div>
+</section>

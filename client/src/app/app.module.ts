@@ -90,7 +90,6 @@ export const cloudinary = {
 export const config: CloudinaryConfiguration = appConfig;
 
 // Cookie consent config
-
 const cookieConfig: NgcCookieConsentConfig = {
     cookie: {
         domain: 'elab.emerson.edu',
@@ -108,12 +107,6 @@ const cookieConfig: NgcCookieConsentConfig = {
         message:
             'We use cookies to track anonymous usage data on this website.',
         href: '/privacy',
-    },
-    onInitialise: function(status) {
-        console.log('cc', status);
-    },
-    onStatusChange: function(status) {
-        // if (this.hasConsented()) initGA();
     },
 };
 

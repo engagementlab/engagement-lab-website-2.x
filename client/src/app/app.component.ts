@@ -1,10 +1,21 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {
+    Component,
+    OnInit,
+    ViewChild,
+    ElementRef,
+    AfterViewInit,
+} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { DataService } from './utils/data.service';
 
-import { NgcCookieConsentService } from 'ngx-cookieconsent';
+import {
+    NgcCookieConsentService,
+    NgcInitializeEvent,
+    NgcNoCookieLawEvent,
+    NgcStatusChangeEvent,
+} from 'ngx-cookieconsent';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,7 +23,7 @@ import { Subscription } from 'rxjs';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
     public isQABuild: boolean;
     public showStudiosNav: boolean;
     public showResearchNav: boolean;
@@ -23,10 +34,6 @@ export class AppComponent implements OnInit {
     public initiatives: any[];
     private currentUrl: string;
 
-    //keep refs to subscriptions to be able to unsubscribe later
-    private popupOpenSubscription: Subscription;
-    private popupCloseSubscription: Subscription;
-
     title = 'Engagement Lab @ Emerson College';
 
     @ViewChild('initiativesEl') initiativesEl: ElementRef;
@@ -35,29 +42,20 @@ export class AppComponent implements OnInit {
     @ViewChild('studiosEl') studiosEl: ElementRef;
     @ViewChild('studiosBtn') studiosBtn: ElementRef;
     @ViewChild('attributes') attributions: ElementRef;
+    @ViewChild('consent') consent: ElementRef;
+    @ViewChild('revoke') revoke: ElementRef;
 
     constructor(
         private router: Router,
         private titleSvc: Title,
         private dataSvc: DataService,
-        private ccService: NgcCookieConsentService,
     ) {
         this.isQABuild = environment.qa;
         this.titleSvc.setTitle((this.isQABuild ? '(QA) ' : '') + this.title);
     }
 
     ngOnInit() {
-        // subscribe to cookieconsent observables to react to main events
-        this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(() => {
-            debugger;
-        });
-
-        this.popupCloseSubscription = this.ccService.popupClose$.subscribe(
-            () => {
-                // you can use this.ccService.getConfig() to do stuff...
-            },
-        );
-
+        // Monitor router
         this.router.events.subscribe(async evt => {
             // Close initiatives nav on all navigation
             if (this.initiativesEl)
@@ -121,6 +119,17 @@ export class AppComponent implements OnInit {
         });
     }
 
+    ngAfterViewInit() {
+        // Cookie consent decided? Hide banner
+        if (document.cookie.indexOf('cookieconsent_status=') > -1) {
+            this.consent.nativeElement.classList.remove('show');
+            this.revoke.nativeElement.classList.add('show');
+            // start GA tracking if consented
+            if (document.cookie.indexOf('cookieconsent_status=allow') > -1)
+                window['ga']('create', 'UA-64617433-1', 'auto');
+        }
+    }
+
     // Is passed route active?
     subNavitemActive(route: string) {
         return this.currentUrl === route;
@@ -154,5 +163,26 @@ export class AppComponent implements OnInit {
 
     closeAttributions() {
         this.attributions.nativeElement.classList.remove('open');
+    }
+
+    consentClick(allow: boolean) {
+        // Set consent cookie
+        let d: Date = new Date();
+        d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+        let expires: string = `expires=${d.toUTCString()}`;
+        document.cookie = `cookieconsent_status=${
+            allow ? 'allow' : 'deny'
+        };expires=${expires} GMT;path=/`;
+
+        // Start GA tracking
+        if (allow) window['ga']('create', 'UA-64617433-1', 'auto');
+
+        this.consent.nativeElement.classList.remove('show');
+        this.revoke.nativeElement.classList.add('show');
+    }
+
+    consentShowClick() {
+        this.consent.nativeElement.classList.add('show');
+        this.revoke.nativeElement.classList.remove('show');
     }
 }
