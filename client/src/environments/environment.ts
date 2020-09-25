@@ -9,6 +9,7 @@ export const environment = {
     searchEnabled: true,
     universal: false,
     api_url: 'http://localhost:3000',
+    data_url: 'http://localhost:3000',
 };
 
 /*

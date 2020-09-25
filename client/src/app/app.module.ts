@@ -158,7 +158,7 @@ export const config: CloudinaryConfiguration = appConfig;
             useFactory: (httpLink: HttpLink) => {
                 // Apollo link w/ error handling
                 const link = httpLink.create({
-                    uri: `${environment.api_url}/graphql`,
+                    uri: `${environment.data_url}/graphql`,
                 });
                 // Watch for graphql errors
                 const errors = onError(({ graphQLErrors, networkError }) => {

@@ -30,7 +30,7 @@ export class DataService {
         private transferState: TransferStateService,
         private _apollo: Apollo,
     ) {
-        this.baseUrl = environment.api_url;
+        this.baseUrl = environment.data_url;
     }
 
     /**
@@ -132,8 +132,8 @@ export class DataService {
     public sendDataToUrl(urlParam: string, formData: any): Observable<any> {
         this.isLoading.next(true);
 
-        let url = this.baseUrl;
-        url += (environment.development ? '/' : '/api/') + urlParam;
+        let url = environment.api_url;
+        url += (environment.production ? '/' : '/api/') + urlParam;
 
         return this.http
             .post(url, formData)
