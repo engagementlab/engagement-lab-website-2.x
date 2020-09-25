@@ -67,7 +67,7 @@ StudiosIntro.add({
         folder: 'homepage-2.0/studios',
         autoCleanup: true,
     },
-    currentPartneredStudios: {
+    /* currentPartneredStudios: {
         type: Types.Relationship,
         ref: 'Studio',
         many: true,
@@ -76,7 +76,7 @@ StudiosIntro.add({
         type: Types.Relationship,
         ref: 'Studio',
         many: true,
-    },
+    }, */
 },
 'Graduate Thesis Studio', {
     gradSummary: {
@@ -103,8 +103,6 @@ StudiosIntro.add({
     },
     coCurricularPhases: {
         type: Types.TextArray,
-        required: true,
-        initial: true,
         label: 'Co-curricular Phases',
     },
     currentCoCurricularStudios: {

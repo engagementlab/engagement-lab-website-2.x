@@ -55,7 +55,7 @@ const Studios = {
       primaryImageDescription: String
     }
   `,
-    queries: ['allStudios: [Studio], getStudio(key: String): Studio, studiosIntro: StudioIntro'],
+    queries: ['allStudios: [Studio], getStudio(key: String): Studio, getStudios(past: Boolean): [Studio], studiosIntro: StudioIntro'],
     resolvers: {
         allStudios: async () => global.keystone.list('Studio').model.find({ enabled: true, }).exec(),
 
@@ -70,7 +70,16 @@ const Studios = {
                     select: 'name file url',
                 })
                 .exec();
-            // return GetAdjacent(project);
+            return res;
+        },
+        getStudios: async (parent, args) => {
+            const status = args.past ? 'Completed' : 'Ongoing';
+            const res = await global.keystone.list('Studio').model.find({ status, })
+                .populate({
+                    path: 'faculty',
+                    select: 'key name -_id',
+                })
+                .exec();
             return res;
         },
         studiosIntro: async () => global.keystone.list('StudiosIntro').model.findOne({})
