@@ -21,36 +21,38 @@ export class StudiosPartnerComponent implements OnInit {
                 {
                     public_id
                 }
-                currentPartneredStudios
-                {
-                    key
-                    name
-                    thumb { 
-                        public_id
-                    }
-                    department
-                    sponsor
-                    faculty {
-                        name {
-                            first
-                            last
-                        }
+            }
+
+            currentStudios: getStudios(past: false)
+            {
+                key
+                name
+                thumb { 
+                    public_id
+                }
+                department
+                sponsor
+                faculty {
+                    name {
+                        first
+                        last
                     }
                 }
-                previousPartneredStudios
-                {
-                    key
-                    name
-                    thumb { 
-                        public_id
-                    }
-                    department
-                    sponsor
-                    faculty {
-                        name {
-                            first
-                            last
-                        }
+            }
+
+            pastStudios: getStudios(past: true)
+            {
+                key
+                name
+                thumb { 
+                    public_id
+                }
+                department
+                sponsor
+                faculty {
+                    name {
+                        first
+                        last
                     }
                 }
             }
@@ -61,6 +63,6 @@ export class StudiosPartnerComponent implements OnInit {
             'partner',
             query,
         );
-        this.content = response['studiosIntro'];
+        this.content = response;
     }
 }

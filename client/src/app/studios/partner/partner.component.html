@@ -3,12 +3,14 @@
     <div id="intro" class="columns is-multilineis-mobile">
         <div class="column is-half-tablet is-11-mobile">
             <h2>Partnered Studio</h2>
-            <h3 class="blurb">{{ content.partneredSummary }}</h3>
+            <h3 class="blurb">{{ content.studiosIntro.partneredSummary }}</h3>
         </div>
         <div class="column">
             <cdn-image
                 cloudinaryPrefix="/"
-                cloudinaryId="{{ content.partneredSummaryImage.public_id }}"
+                cloudinaryId="{{
+                    content.studiosIntro.partneredSummaryImage.public_id
+                }}"
                 width="900"
                 [autoFormat]="true"
                 [responsive]="true"
@@ -20,7 +22,7 @@
         <div class="column is-full-tablet is-11-mobile">
             <h1 class="uppercase sm">Curriculum</h1>
             <h3 class="blurb">
-                {{ content.partneredCurriculum }}
+                {{ content.studiosIntro.partneredCurriculum }}
             </h3>
         </div>
     </div>
@@ -31,8 +33,7 @@
 
             <h4
                 *ngIf="
-                    !content.currentPartneredStudios ||
-                    content.currentPartneredStudios.length < 1
+                    !content.currentStudios || content.currentStudios.length < 1
                 "
             >
                 None, for now!
@@ -40,26 +41,21 @@
         </div>
         <div
             class="column is-half-tablet is-11-mobile studios"
-            *ngFor="let studio of content.currentPartneredStudios"
+            *ngFor="let studio of content.currentStudios"
         >
             <studio-thumb [studio]="studio"></studio-thumb>
         </div>
         <div class="column is-full-tablet is-11-mobile">
             <hr class="thick" />
             <h1 class="uppercase sm">Previous Partnered Studios</h1>
-            <h4
-                *ngIf="
-                    !content.previousPartneredStudios ||
-                    content.previousPartneredStudios.length < 1
-                "
-            >
+            <h4 *ngIf="!content.pastStudios || content.pastStudios.length < 1">
                 None, for now!
             </h4>
         </div>
 
         <div
             class="column is-half is-full-mobile studios"
-            *ngFor="let studio of content.previousPartneredStudios"
+            *ngFor="let studio of content.pastStudios"
         >
             <studio-thumb [studio]="studio"></studio-thumb>
         </div>

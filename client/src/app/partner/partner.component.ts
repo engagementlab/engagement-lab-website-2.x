@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../utils/data.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-partner',
@@ -60,7 +61,7 @@ export class PartnerComponent implements OnInit {
 
         let data = this.inquiryForm.value;
         this._dataSvc
-            .sendDataToUrl('api/post/contact', data)
+            .sendDataToUrl('post/contact', data)
             .subscribe((data: any) => {
                 this.received = true;
             });
