@@ -8,27 +8,59 @@
  *
  * ==========
  */
+
 const Search = {
 
     schema: `
-    type Search {
-      id: ID!
-      date: Date
-      tagline: String
-      missionStatement: String
-      summary1: String
-      summary2: String
-      images: [Image]
-      research: String!
-      workshops: String!
-      tools: String!
-      teaching: String!
-      design: String!
+    type SearchResult {
+      _index: String
+	  _type: String
+	  _score: Float
+	  _source: SearchContent
+	  highlight: SearchHighlight      
     }
   `,
-    queries: ['allSearchPages: Search'],
+    queries: ['searchQuery(term: String): [SearchResult]'],
     resolvers: {
-        allSearchPages: async () => global.keystone.list('Search').model.findOne({}).exec(),
+        searchQuery: async (parent, args) => {
+            const nameString = args.term;
+            const {
+                body,
+            } = await global.elasti.search({
+                index: 'listing',
+                body: {
+                    query: {
+                        multi_match: {
+                            query: `*${nameString}*`,
+                            fields: ['_type', 'name', 'key', 'content'],
+                        },
+                    },
+                    highlight: {
+                        require_field_match: true,
+                        fields: {
+                            name: {
+                                pre_tags: [
+                                    '<mark>'
+                                ],
+                                post_tags: [
+                                    '</mark>'
+                                ],
+                            },
+                            content: {
+                                pre_tags: [
+                                    '<mark>'
+                                ],
+                                post_tags: [
+                                    '</mark>'
+                                ],
+                            },
+                        },
+                    },
+                },
+            });
+            return body ? body.hits.hits : [];
+        },
+
     },
 
 };

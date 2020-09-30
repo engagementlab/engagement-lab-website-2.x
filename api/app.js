@@ -26,7 +26,7 @@ const bootstrap = require('@engagementlab/el-bootstrapper');
 const express = require('express');
 const winston = require('winston');
 const colors = require('colors');
-const elasticsearch = require('elasticsearch');
+const { Client, } = require('@elastic/elasticsearch');
 
 const apollo = app => {
     // eslint-disable-next-line global-require
@@ -83,6 +83,19 @@ const apollo = app => {
         fileType: String
         url: String
         summary: String
+    }
+    """Search result content definition"""
+    type SearchContent {
+        name: String
+        key: String
+        content: String
+        description: String
+    }
+    """Search result term highlight definition"""
+    type SearchHighlight {
+        name: [String]
+        content: [String]
+        description: [String]
     }
     ${schemas.join(' ')}
 	  type Query {
@@ -160,7 +173,7 @@ const boot = (app, productionMode) => {
 };
 
 const searchBoot = (app, productionMode) => {
-    global.elasti = new elasticsearch.Client({ node: process.env.ELASTISEARCH_NODE_URL, });
+    global.elasti = new Client({ node: process.env.ELASTISEARCH_NODE_URL, });
     global.elasti.ping(error => {
         if (error) {
             global.logger.error('Elasticsearch ERROR!', error);

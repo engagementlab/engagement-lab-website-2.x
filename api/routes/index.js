@@ -37,12 +37,6 @@ const Routes = () => {
 
     router.post('/api/post/contact', routes.get.contact.send);
     router.post('/api/post/newsletter/:email', routes.get.newsletter.signup);
-
-    // Error
-    router.get('*', (req, res) => {
-        res.status(500).send(`No route found for path ${req.url}.`);
-    });
-
     return router;
 };
 

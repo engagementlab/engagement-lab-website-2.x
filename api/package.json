@@ -7,6 +7,7 @@
         "clean": "kill -9 $(lsof -t -i:3000)"
     },
     "dependencies": {
+        "@elastic/elasticsearch": "^7.9.1",
         "@engagementlab/el-bootstrapper": "^0.1.4-b",
         "@mailchimp/mailchimp_marketing": "^3.0.15",
         "@slack/web-api": "^5.11.0",

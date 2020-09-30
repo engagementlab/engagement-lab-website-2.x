@@ -1,10 +1,3 @@
-<!-- <div class="blurb column is-four-fifths-desktop" *ngIf="redirecting">
-            Redirecting you to new URL:<br />
-            <a href="//elab.emerson.edu/research/projects/{{ projectKey }}"
-                >elab.emerson.edu/research/projects/{{ projectKey }}</a
-            >
-        </div> -->
-
 <section id="bg" *ngIf="content">
     <div class="columns is-multiline">
         <h2 class="column is-full" *ngIf="!redirecting">{{ content.name }}</h2>
@@ -30,7 +23,7 @@
                 >{{ partner.name }}<br
             /></span>
         </div>
-        <div class="column is-4" *ngIf="content.partners">
+        <div class="column is-4" *ngIf="content.projectLeads">
             <h1 class="uppercase sm">
                 Project Leads
             </h1>
