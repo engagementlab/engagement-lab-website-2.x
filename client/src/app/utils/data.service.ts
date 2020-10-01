@@ -123,6 +123,61 @@ export class DataService {
     }
 
     /**
+     * Make searchQuery query in GraphQL and respond with array of type SearchResult
+     * @function
+     * @returns Promise
+     * @param {string} term - Term for "searchQuery(term: String)" query for GraphQL
+     */
+    public async searchQuery(term: string): Promise<unknown> {
+        if (!term) {
+            this.errors.next([`No search term provided!`]);
+            return;
+        }
+
+        // Query apollo w/ provided search query
+        const content = new Promise<unknown>((resolve, reject) => {
+            this._apollo
+                .query({
+                    query: gql`
+                    {
+                        searchQuery(term:"${term}") {
+                            _type
+                            _score
+                            _source {
+                                key
+                                name
+                            }
+                            highlight {
+                                content
+                            }
+                        }
+                    }
+                    `,
+                    errorPolicy: 'all',
+                })
+                .subscribe(
+                    result => {
+                        if (result.errors) {
+                            this.errors.next(result.errors.map(err => err));
+                            this.isLoading.next(result.loading);
+                            reject(result.errors);
+
+                            return;
+                        }
+
+                        this.isLoading.next(false);
+
+                        resolve(result.data['searchQuery']);
+                    },
+                    err => {
+                        console.log('err', err);
+                    },
+                );
+        });
+        return content;
+    }
+
+    /**
      * Send data package to specified url
      * @function
      * @returns Observable

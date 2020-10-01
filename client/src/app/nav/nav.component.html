@@ -129,9 +129,7 @@
             </section>
         </div>
 
-        <!--  <div class="column columns is-full is-mobile is-multiline">
-           Search feature only on non-prod for now -->
-        <!-- <div class="column is-6" *ngIf="searchEnabled">
+        <div id="search-container" *ngIf="searchEnabled">
             <input
                 #searchField
                 id="search"
@@ -143,16 +141,15 @@
                 (keyup)="searchTyping(searchField.value)"
             />
         </div>
-            <div id="results" class="column is-full">
-                <search-result
-                    sourceName="{{ result._source.name }}"
-                    highlightedName="{{ result.highlight.name }}"
-                    content="{{ result.highlight.content }}"
-                    type="{{ result._type }}"
-                    key="{{ result._source.key }}"
-                    *ngFor="let result of searchResults"
-                ></search-result>
-            </div>
-        </div> -->
+        <div id="results" class="column is-full">
+            <search-result
+                sourceName="{{ result._source.name }}"
+                highlightedName="{{ result.highlight.name }}"
+                content="{{ result.highlight.content }}"
+                type="{{ result._type }}"
+                key="{{ result._source.key }}"
+                *ngFor="let result of searchResults"
+            ></search-result>
+        </div>
     </section>
 </div>

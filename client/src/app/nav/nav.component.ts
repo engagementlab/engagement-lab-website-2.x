@@ -129,8 +129,9 @@ export class NavComponent {
         if (this.currentUrl === '/') this.openCloseNav();
     }
 
-    searchFocus() {
+    async searchFocus() {
         this.searchField.nativeElement.className = 'focus';
+        this.searchResults = await this.dataSvc.searchQuery('civic');
     }
 
     searchBlur() {
@@ -140,6 +141,6 @@ export class NavComponent {
     async searchTyping(value: string) {
         if (value.length < 3) return;
 
-        this.searchResults = await this.dataSvc.getSet('search', value);
+        this.searchResults = await this.dataSvc.searchQuery(value);
     }
 }

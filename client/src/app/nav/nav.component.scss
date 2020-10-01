@@ -372,6 +372,7 @@ nav {
   }
 
   #links {
+    // display: none;
     margin-top: 32%;
     margin-right: 12%;
 
@@ -406,35 +407,41 @@ nav {
     }
   }
 
-  #jobs {
-    animation: hide 0.1s ease-in-out 1 both;
-    animation-delay: $jobs-delay;
-  }
+  #search-container {
+    display: none;
 
-  #search {
-    @include placeholder {
-      color: black;
-      opacity: 1;
+    @include phones {
+      margin-top: 21%;
+      margin-right: 11%;
     }
 
-    font-size: 1.3em;
+    // margin-top: 5%;
 
-    line-height: 2;
-    letter-spacing: 0.2px;
+    #search {
+      @include placeholder {
+        color: black;
+        opacity: 1;
+      }
 
-    padding: 2%;
+      font-size: 1.3em;
 
-    border: none;
-    border-bottom: solid 2px black;
+      line-height: 2;
+      letter-spacing: 0.2px;
 
-    &.focus {
-      border-bottom-width: 4px;
-      font-weight: 500;
+      padding: 2%;
+
+      border: none;
+      border-bottom: solid 2px black;
+
+      &.focus {
+        border-bottom-width: 4px;
+        font-weight: 500;
+      }
     }
-  }
 
-  #results {
-    margin-top: 5%;
+    #results {
+      margin-top: 5%;
+    }
   }
 
   #jobs {
