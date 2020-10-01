@@ -20,10 +20,22 @@
     color: $mango;
   }
 
-  hr {
-    border-bottom: solid 1px rgba($color: white, $alpha: 0.2);
-    margin: 1% 0;
-    width: 15%;
+  .name {
+    display: flex;
+    justify-content: space-between;
+
+    .type {
+      display: flex;
+      background-color: $tomato;
+      text-transform: uppercase;
+      font-size: 0.5em;
+      font-family: "LunchtypeRegular";
+      margin: 0;
+      border-radius: 10px;
+      padding: 0 1% 0 1%;
+      align-items: center;
+      max-height: 30px;
+    }
   }
 
   .content {
@@ -31,15 +43,16 @@
     font-family: 'LunchtypeRegular';
     margin: 0;
     letter-spacing: normal;
-  }
 
-  .type {
-    text-transform: capitalize;
-    font-size: .3em;
-    font-family: 'LunchtypeRegular';
-    margin: 0;
+    opacity: .65;
 
-    color: $tomato;
+    &::before {
+      content: '...';
+    }
+
+    &::after {
+      content: '...';
+    }
   }
 
 }

@@ -14,15 +14,18 @@ export class ResultComponent implements OnInit {
     @Input() key: string;
 
     public nameMarkup: SafeHtml;
-    public contentMarkup: SafeHtml;
 
     constructor(private _sanitizer: DomSanitizer) {}
 
     ngOnInit() {
         // If highlight empty, result found via record content and not name, so show source name
-        if (this.highlightedName.length < 1) this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(this.sourceName);
-        else this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(this.highlightedName);
-
-        this.contentMarkup = this._sanitizer.bypassSecurityTrustHtml(this.content);
+        if (this.highlightedName.length < 1)
+            this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(
+                this.sourceName,
+            );
+        else
+            this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(
+                this.highlightedName,
+            );
     }
 }

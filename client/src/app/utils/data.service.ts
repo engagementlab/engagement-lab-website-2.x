@@ -148,6 +148,7 @@ export class DataService {
                                 name
                             }
                             highlight {
+                                name
                                 content
                             }
                         }

@@ -140,16 +140,16 @@
                 (focus)="searchFocus()"
                 (keyup)="searchTyping(searchField.value)"
             />
-        </div>
-        <div id="results" class="column is-full">
-            <search-result
-                sourceName="{{ result._source.name }}"
-                highlightedName="{{ result.highlight.name }}"
-                content="{{ result.highlight.content }}"
-                type="{{ result._type }}"
-                key="{{ result._source.key }}"
-                *ngFor="let result of searchResults"
-            ></search-result>
+            <div id="results" class="column is-full">
+                <search-result
+                    sourceName="{{ result._source.name }}"
+                    highlightedName="{{ result.highlight.name }}"
+                    content="{{ result.highlight.content }}"
+                    type="{{ result._type }}"
+                    key="{{ result._source.key }}"
+                    *ngFor="let result of searchResults"
+                ></search-result>
+            </div>
         </div>
     </section>
 </div>
