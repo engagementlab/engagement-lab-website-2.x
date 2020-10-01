@@ -351,13 +351,11 @@
 
   z-index: -1;
 
-  width: 100%;
-  height: 100%;
-
-  right: 0;
-  left: 0;
   top: 0;
   bottom: 0;
+
+  width: 100%;
+  height: 100%;
 
   background-color: rgba($color: #000, $alpha: 0.2);
 
@@ -394,7 +392,8 @@
     opacity: 0;
 
     @include phones {
-      width: 100%;
+      padding: 8%;
+      width: 92%;
       height: 100%;
     }
 
@@ -413,6 +412,13 @@
 }
 
 #cc {
+  position: fixed;
+  bottom: 0;
+
+  div {
+    position: relative;
+    z-index: 100;
+  }
 
   a {
     color: white;
@@ -420,7 +426,6 @@
 
   #revoke {
     display: none;
-    position: fixed;
     color: white;
 
     cursor: pointer;
@@ -428,8 +433,6 @@
     flex-wrap: nowrap;
 
     background-color: black;
-    z-index: 100;
-    bottom: 0;
     left: 3em;
 
     padding: .4%;
@@ -441,7 +444,10 @@
     @include translate(0, 1.8em);
 
     &.show {
-      display: flex;
+      @include not-phones {
+        display: flex;
+      }
+
     }
 
     &:hover {
@@ -451,8 +457,6 @@
 
   #consent {
 
-    // display: none;
-    position: fixed;
     color: white;
 
     line-height: 1.5em;
@@ -460,8 +464,7 @@
     flex-wrap: nowrap;
 
     background-color: black;
-    z-index: 100;
-    bottom: 0;
+
     left: 0;
     right: 0;
     text-align: center;
