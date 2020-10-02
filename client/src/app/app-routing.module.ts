@@ -11,6 +11,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 import { TeamComponent } from './team/team.component';
+import { AttributionsComponent } from './attributions/attributions.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -83,6 +84,7 @@ const routes: Routes = [
     { path: 'getinvolved', component: ContactComponent },
 
     { path: 'privacy', component: PrivacyComponent },
+    { path: 'attributions', component: AttributionsComponent },
     { path: 'jobs', component: JobsComponent },
 
     { path: 'error', component: ErrorComponent },

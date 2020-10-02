@@ -372,7 +372,7 @@ nav {
   }
 
   #links {
-    display: none;
+    // display: none;
     margin-top: 32%;
     margin-right: 12%;
 
@@ -408,7 +408,7 @@ nav {
   }
 
   #search-container {
-    // display: none;
+    display: none;
 
     @include phones {
       margin-top: 21%;
