@@ -1,4 +1,5 @@
 @import '~src/styles/_variables';
+@import '~src/styles/_mixins';
 
 footer {
   width: 100%;
@@ -34,31 +35,29 @@ footer {
   }
 
   // MC Email form
-  #newsletter {
 
-    h3 {
-      font-size: 1em;
-    }
 
-    input[type=email] {
-      width: 100%;
-      font-family: 'LunchtypeRegular';
-      font-size: 1.5em;
-      color: black;
-      opacity: 1;
-      border: none;
-      border-bottom: solid 2px black;
+  // MC Email form
+  #newsletter-wrap {
+    #error {
+      display: none;
+      opacity: 0;
+      @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
 
-      padding-bottom: 5%;
-      padding-left: 4%;
-
-      @include placeholder {
-        font-family: 'LunchtypeRegular';
-        color: black;
+      &.open {
+        display: block;
         opacity: 1;
       }
     }
 
+    #newsletter {
+      display: flex;
+      @include newsletter-form;
+
+      h3 {
+        font-size: 1em;
+      }
+    }
   }
 
   @include phones {

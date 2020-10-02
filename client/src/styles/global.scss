@@ -12,7 +12,8 @@ $gap: 0px;
 @import "~bulma/sass/elements/container";
 
 // Site vars
-@import "./variables";
+@import "./_variables";
+@import "./_mixins";
 
 @keyframes open {
 

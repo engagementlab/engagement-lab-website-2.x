@@ -85,12 +85,13 @@
             <span class="hidden-mobile"><br />02116</span>
         </div>
     </div>
-
-    <div id="newsletter" class="column is-full-mobile">
+    <div id="newsletter-wrap" class="column is-full-mobile">
         <h1 class="uppercase">Newsletter</h1>
-
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup">
+        <div
+            id="newsletter"
+            #newsletter
+            [class.invalid]="emailFieldFocused && f.email.errors"
+        >
             <form
                 action="https://engagementgamelab.us6.list-manage.com/subscribe/post?u=8cb16e3042072f11cc0680d36&amp;id=e9f56f4f4d"
                 method="post"
@@ -99,73 +100,59 @@
                 class="validate"
                 target="_blank"
                 novalidate
+                [formGroup]="emailForm"
             >
-                <div id="mc_embed_signup_scroll">
-                    <div class="mc-field-group">
-                        <input
-                            type="email"
-                            placeholder="Your email"
-                            name="EMAIL"
-                            class="required email"
-                            id="mce-EMAIL"
-                        />
-                        <input
-                            type="submit"
-                            value="Subscribe to Newsletter"
-                            name="subscribe"
-                            id="mc-embedded-subscribe"
-                            class="button hidden"
-                            aria-hidden="true"
-                        />
-                    </div>
-
-                    <div id="mce-responses" class="clear">
-                        <div
-                            class="response"
-                            id="mce-error-response"
-                            style="display:none"
-                        ></div>
-                        <div
-                            class="response"
-                            id="mce-success-response"
-                            style="display:none"
-                        ></div>
-                    </div>
-                    <div
-                        style="position: absolute; left: -5000px;"
-                        aria-hidden="true"
-                    >
-                        <input
-                            type="text"
-                            name="b_8cb16e3042072f11cc0680d36_e9f56f4f4d"
-                            tabindex="-1"
-                            value=""
-                        />
-                    </div>
-                </div>
+                <input
+                    type="email"
+                    placeholder="Your email"
+                    name="EMAIL"
+                    class="required email"
+                    id="mce-EMAIL"
+                    formControlName="email"
+                    (focus)="emailFocus()"
+                    width="400"
+                />
+                <input
+                    type="submit"
+                    value="Subscribe to Newsletter"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    class="button hidden"
+                    aria-hidden="true"
+                    (click)="submitNewsletter()"
+                />
             </form>
+            <div id="subscribed" #newsletterSubscribed>
+                <svg
+                    viewBox="0 0.406 31.06 24.118"
+                    width="31.06"
+                    height="24.118"
+                >
+                    <path
+                        d="M 11.893 24.059 C 11.597 24.358 11.193 24.524 10.771 24.524 C 10.352 24.524 9.947 24.358 9.652 24.059 L 0.696 15.103 C -0.232 14.173 -0.232 12.667 0.696 11.739 L 1.818 10.619 C 2.748 9.689 4.252 9.689 5.18 10.619 L 10.771 16.21 L 25.879 1.102 C 26.809 0.174 28.315 0.174 29.244 1.102 L 30.363 2.224 C 31.293 3.154 31.293 4.662 30.363 5.588 Z M 11.893 24.059"
+                    ></path>
+                </svg>
+                <span>
+                    Thanks for joining!
+                </span>
+            </div>
+            <button
+                *ngIf="emailFieldFocused && !f.email.errors"
+                (click)="submitNewsletter()"
+            >
+                <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
+                    <path
+                        stroke="#000"
+                        stroke-width="2"
+                        d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                    ></path>
+                </svg>
+            </button>
         </div>
-        <script
-            type="text/javascript"
-            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-        ></script>
-        <script type="text/javascript">
-            (function($) {
-                window.fnames = new Array();
-                window.ftypes = new Array();
-                fnames[0] = 'EMAIL';
-                ftypes[0] = 'email';
-                fnames[1] = 'FNAME';
-                ftypes[1] = 'text';
-                fnames[2] = 'LNAME';
-                ftypes[2] = 'text';
-                fnames[3] = 'MMERGE3';
-                ftypes[3] = 'text';
-            })(jQuery);
-            var $mcj = jQuery.noConflict(true);
-        </script>
+        <div id="error" #newsletterError>
+            You are already subscribed! Nice going!
+        </div>
     </div>
-    <!--End mc_embed_signup-->
 
     <div id="top" (click)="scrollToTop()">
         <span>&nbsp;</span>

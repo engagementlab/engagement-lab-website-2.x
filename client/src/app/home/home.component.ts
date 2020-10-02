@@ -38,12 +38,6 @@ export class HomeComponent implements OnInit {
 
     @ViewChild('newsletter') newsletter: ElementRef;
 
-    @ViewChild('pattern1') pattern1: ElementRef;
-
-    @ViewChild('pattern2') pattern2: ElementRef;
-
-    @ViewChild('pattern3') pattern3: ElementRef;
-
     public emailForm: FormGroup;
 
     // eslint-disable-next-line no-useless-constructor
@@ -109,7 +103,6 @@ export class HomeComponent implements OnInit {
             .sendDataToUrl(`post/newsletter/${this.f['email'].value}`, null)
             .subscribe(
                 (data: any) => {
-                    console.log(data);
                     this.newsletterSubscribed.nativeElement.classList.add(
                         'open',
                     );

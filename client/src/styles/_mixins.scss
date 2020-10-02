@@ -1,7 +1,104 @@
-/**
- * Engagement Lab SCSS Mixin Library
- *
- * created by Johnny Richardson
- * 2017-19
- * ==========
- */
+@mixin newsletter-form {
+
+  @include keyframes(check) {
+
+    0% {
+      opacity: 0;
+      @include scale(0);
+    }
+
+    100% {
+      opacity: 1;
+      @include scale(1);
+    }
+  }
+
+  @include keyframes(subscribed) {
+
+    0% {
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  border-bottom: solid 2px black;
+
+  input[type=email] {
+    width: 100%;
+    font-family: 'LunchtypeRegular';
+    font-size: 1.5em;
+    color: black;
+    opacity: 1;
+    border: none;
+
+    padding-bottom: 2%;
+    padding-left: 4%;
+
+    @include placeholder {
+      font-family: 'LunchtypeRegular';
+      color: black;
+      opacity: 1;
+    }
+  }
+
+  button {
+    display: inline-block;
+    cursor: pointer;
+    @include transition(all, .3s, ease-in-out);
+
+    &:hover {
+      @include translate(15%, 0);
+    }
+  }
+
+  form {
+    width: 100%;
+    @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+  }
+
+
+  #subscribed {
+    display: none;
+
+    span {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    svg {
+      @include scale(0);
+      opacity: 0;
+    }
+
+    font-family: 'LunchtypeRegular';
+    font-size: 1.5em;
+  }
+
+  &.invalid {
+    border-bottom-color: $tomato;
+  }
+
+  &.done {
+
+    form,
+    button {
+      display: none;
+    }
+
+    #subscribed {
+      display: block;
+
+      span {
+        animation: subscribed 1s cubic-bezier(1.000, 0.000, 0.000, 1.000) .6s 1 forwards;
+      }
+
+      svg {
+        animation: check .6s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1 forwards;
+      }
+    }
+  }
+}
