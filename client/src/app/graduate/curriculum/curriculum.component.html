@@ -3,12 +3,12 @@
     [person]="currentPerson"
     (onClose)="closePerson()"
 ></person-modal>
-<section class="columns is-mobile is-multiline content" *ngIf="content">
+<section class="columns is-mobile is-multiline" *ngIf="content">
     <h2 class="column is-full">
         The Engagement Lab offers an MA in Media Design.
     </h2>
 
-    <h3 class="column is-half-tablet is-full-mobile blurb">
+    <h3 class="column is-5-tablet is-full-mobile blurb">
         {{ content.programDescription }}
     </h3>
 
@@ -18,19 +18,15 @@
         </h1>
         <h3 class="blurb">{{ content.learningObjectives }}</h3>
 
-        <h1 class="uppercase">
+        <h1 class="uppercase" style="margin-top: 5%;">
             Partnerships
         </h1>
         <h3 class="blurb">{{ content.partnerships }}</h3>
     </div>
 </section>
 
-<section
-    id="curricula"
-    class="columns is-mobile is-multiline content"
-    *ngIf="content"
->
-    <div id="timeline">
+<section id="curricula" class="columns is-mobile is-multiline" *ngIf="content">
+    <div id="timeline" *ngIf="content.phases && content.phases.length > 0">
         <div id="months" class="uppercase">
             <h3>sept</h3>
             <h3>oct</h3>
@@ -68,7 +64,7 @@
     </div>
 </section>
 
-<section id="faculty" class="content" *ngIf="content && content.faculty">
+<section id="faculty" *ngIf="content && content.faculty">
     <hr />
     <h1 class="uppercase">
         Faculty
@@ -79,7 +75,7 @@
     ></people-grid>
 </section>
 
-<section id="projects" class="content" *ngIf="content && content.projects">
+<section id="projects" *ngIf="content && content.projects">
     <hr />
     <h1 class="uppercase">
         Student Thesis Examples

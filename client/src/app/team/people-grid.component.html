@@ -79,7 +79,7 @@
                     {{ person.name.first }} {{ person.name.last }}
                 </div>
                 <!-- Alumni only -->
-                <div class="year" *ngIf="alumni">
+                <div class="year" *ngIf="alumni && person.cohortYear">
                     {{ person.cohortYear.label }}
                 </div>
                 <!-- Visible for non-grad students of now -->
