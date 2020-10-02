@@ -91,14 +91,12 @@
       }
 
       #thumbs {
-        display: flex;
 
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 15%;
 
         .project-thumb {
-          flex: 45%;
-          margin-left: 4%;
           cursor: pointer;
         }
       }
@@ -106,6 +104,35 @@
 
     #border {
       border-left: 1px solid white;
+    }
+  }
+
+  #preview {
+
+    min-height: 650px;
+
+    @include phones {
+      border-top: 1px solid white;
+    }
+
+    a {
+      border: none;
+    }
+
+    h3 {
+      margin-top: 2%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    svg {
+      @include transition(transform, .2s, ease-in-out);
+    }
+
+    &:hover {
+      svg {
+        @include translate(15%);
+      }
     }
   }
 }

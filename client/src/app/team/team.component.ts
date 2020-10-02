@@ -61,13 +61,6 @@ export class TeamComponent implements OnInit {
 
         const response = await this.dataSvc.getSet('team', query);
         this.people = response['allPeople'];
-
-        // We have to add dummy/empty people if non-x4 count to allow for correct flex layout
-        const mod = 4 - (this.people.length % 4);
-        if (mod !== 4) {
-            for (let i = 0; i < mod; i += 1)
-                this.people.push({ name: 'dummy' });
-        }
     }
 
     async getPerson(key) {

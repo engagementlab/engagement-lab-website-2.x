@@ -52,12 +52,13 @@
             <!-- Bio markup -->
             <div [innerHtml]="person.bio.html"></div>
         </div>
+
         <div
             id="projects"
-            class="column is-full-mobile is-one-third-tablet"
+            class="column is-11-mobile is-one-third-tablet"
             *ngIf="projects && projects.length > 0"
         >
-            <h3 class="uppercase no-margin">Selected Projects</h3>
+            <h3 class="uppercase">Selected Projects</h3>
             <div id="thumbs">
                 <div
                     class="project-thumb"
@@ -66,7 +67,7 @@
                 >
                     <cdn-image
                         cloudinaryPrefix="/"
-                        cloudinaryId="{{ project.image.public_id }}"
+                        cloudinaryId="{{ getProjectImg(project) }}"
                         width="146"
                         [autoFormat]="true"
                         alt="Thumbnail image for {{ project.name }}"
@@ -74,23 +75,52 @@
                 </div>
             </div>
         </div>
-        <div id="border" class="column is-1" *ngIf="selectedProject"></div>
+        <div
+            id="border"
+            class="column is-1 hidden-mobile"
+            *ngIf="selectedProject"
+        ></div>
         <div id="preview" class="column" *ngIf="selectedProject">
-            <a
-                [routerLink]="
-                    (selectedProject.__typename === 'Project'
-                        ? '/research/projects/'
-                        : '/graduate/studios/') + selectedProject.key
-                "
+            <ng-container
+                #projectList
+                *ngFor="let project of projects; let i = index"
             >
-                <img
-                    src="https://res.cloudinary.com/engagement-lab-home/image/upload/e_brightness:0,g_auto:none/c_scale,f_auto,w_800/v1/{{
-                        selectedProject.image.public_id
-                    }}"
-                    alt="Large preview image for {{ selectedProject.name }}"
-                />
-                <h3 class="uppercase no-margin">{{ selectedProject.name }}</h3>
-            </a>
+                <a
+                    [@projectSelectAnimation]
+                    *ngIf="selectedProject === project"
+                    [routerLink]="
+                        (selectedProject.__typename === 'Project'
+                            ? '/research/projects/'
+                            : '/graduate/studios/') + selectedProject.key
+                    "
+                >
+                    <img
+                        src="https://res.cloudinary.com/engagement-lab-home/image/upload/e_brightness:0,g_auto:none/c_scale,f_auto,w_800/v1/{{
+                            selectedProject.thumb
+                                ? selectedProject.thumb.public_id
+                                : selectedProject.image.public_id
+                        }}"
+                        alt="Large preview image for {{ selectedProject.name }}"
+                    />
+                    <h3 class="uppercase no-margin">
+                        <span>
+                            {{ selectedProject.name }}
+                        </span>
+                        <svg
+                            viewBox="0 0 32 23"
+                            width="32"
+                            height="23"
+                            fill="none"
+                        >
+                            <path
+                                stroke="#fff"
+                                stroke-width="2"
+                                d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                            ></path>
+                        </svg>
+                    </h3>
+                </a>
+            </ng-container>
         </div>
     </div>
 </section>
