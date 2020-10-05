@@ -36,42 +36,26 @@ h2 {
 
   @include mq($until: wide) {
     flex-direction: column;
-
-    #prefix {
-      width: 100%;
-      flex-grow: 1;
-      flex-shrink: 0;
-    }
-
-    font-size: 2em;
   }
 
-  #slider-cover {
-    display: inline-block;
-    clip-path: inset(0% 0 0% 0);
-    height: 40px;
-    width: 100%;
+  .slider {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    height: 44px;
+    overflow: hidden;
 
     @include not-phones {
       height: 63px;
       width: 460px;
       margin-left: 1%;
     }
-  }
-
-  .slider {
-    display: inline-flex;
-    position: absolute;
-    flex-direction: column;
-    animation: translate 15s $easing infinite forwards;
-
-    @include translate(0, 30%);
-    opacity: 0;
 
     span {
-
       &:first-child {
         color: $tomato;
+        @include translate(0, 100%);
       }
 
       &:nth-child(2) {
@@ -83,4 +67,5 @@ h2 {
       }
     }
   }
+
 }

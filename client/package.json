@@ -39,6 +39,7 @@
         "@scullyio/init": "^0.0.28",
         "@scullyio/ng-lib": "latest",
         "@scullyio/scully": "latest",
+        "animejs": "^3.2.0",
         "aos": "^2.3.4",
         "apollo-angular": "^1.9.1",
         "apollo-angular-link-http": "^1.10.0",

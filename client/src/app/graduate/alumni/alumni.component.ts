@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DataService } from 'src/app/utils/data.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
     templateUrl: './alumni.component.html',
@@ -68,6 +69,41 @@ export class GraduateAlumniComponent implements OnInit {
         );
         this.students = result['allMastersPeople'];
         this.alumni = result['allAlumniPeople'];
+        let tl = anime.timeline({
+            easing: 'easeOutCirc',
+            duration: 1250,
+            loop: true,
+        });
+
+        // Add children
+        tl.add({
+            targets: '.slider #scholars',
+            translateY: '0%',
+            duration: 1000,
+        });
+        tl.add({
+            targets: '.slider #scholars',
+            translateY: '-100%',
+            delay: 3000,
+        });
+        tl.add({
+            targets: '.slider #designers',
+            translateY: '-100%',
+        });
+        tl.add({
+            targets: '.slider #designers',
+            translateY: '-200%',
+            delay: 3000,
+        });
+        tl.add({
+            targets: '.slider #makers',
+            translateY: '-200%',
+        });
+        tl.add({
+            targets: '.slider #makers',
+            translateY: '-300%',
+            delay: 3000,
+        });
     }
 
     async getPerson(key: string): Promise<void> {
