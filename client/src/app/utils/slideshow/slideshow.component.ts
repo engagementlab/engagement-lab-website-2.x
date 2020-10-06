@@ -2,12 +2,9 @@ import {
     Component,
     OnInit,
     Input,
-    ViewChild,
-    ElementRef,
     AfterViewInit,
 } from '@angular/core';
 
-import isMobile from 'ismobilejs';
 import Masonry from 'masonry-layout';
 
 interface Image {

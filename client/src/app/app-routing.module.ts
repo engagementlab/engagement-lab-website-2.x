@@ -12,6 +12,7 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { RedirectService } from './utils/redirect.service';
 import { TeamComponent } from './team/team.component';
 import { AttributionsComponent } from './attributions/attributions.component';
+import { HygieneComponent } from './hygiene.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -72,6 +73,8 @@ const routes: Routes = [
 
     { path: 'masters', redirectTo: 'graduate' },
     { path: 'masters/alumni', redirectTo: 'graduate/alumni' },
+
+    { path: 'hygiene/:path?', component: HygieneComponent },
 
     // TODO: load lazily
     { path: 'people', component: TeamComponent },
