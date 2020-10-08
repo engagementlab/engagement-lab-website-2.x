@@ -34,7 +34,7 @@ const projectIdPlugin = async (route, config) => {
     const routes = [];
 
     response.allProjectPages.forEach((res) => {
-        routes.push({ route: `/projects/${res.key}` });
+        routes.push({ route: `/research/projects/${res.key}` });
     });
     return Promise.resolve(routes);
 };
