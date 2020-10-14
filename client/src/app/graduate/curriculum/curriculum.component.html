@@ -26,7 +26,11 @@
 </section>
 
 <section id="curricula" class="columns is-mobile is-multiline" *ngIf="content">
-    <div id="timeline" *ngIf="content.phases && content.phases.length > 0">
+    <div
+        id="timeline"
+        class="hidden-mobile"
+        *ngIf="content.phases && content.phases.length > 0"
+    >
         <div id="months" class="uppercase">
             <h3>sept</h3>
             <h3>oct</h3>

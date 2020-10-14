@@ -179,13 +179,18 @@
                 <div class="columns is-mobile">
                     <!-- Tablet+ -->
                     <div class="date column is-one-fifth hidden-mobile">
-                        {{ event.date | date: 'MMMM dd' }}
+                        {{ event.date | date: 'MMMM dd, yyyy' }}
                     </div>
                     <!-- Phone -->
                     <div class="date column is-one-fifth hidden-tablet-plus">
-                        {{ event.date | date: 'MMM dd' }}
+                        {{ event.date | date: 'MMM dd, yyyy' }}
                     </div>
-                    <h2 class="name column no-margin">{{ event.name }}</h2>
+                    <div class="name column no-margin no-pad">
+                        <h2>
+                            {{ event.name }}
+                        </h2>
+                        <p class="medium">{{ event.shortDescription }}</p>
+                    </div>
                 </div>
 
                 <hr />

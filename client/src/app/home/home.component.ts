@@ -62,9 +62,7 @@ export class HomeComponent implements OnInit {
                     name
                     key
                     date
-                    images {
-                        public_id
-                    }
+                    shortDescription
                 }
                 allNewsItems(featured: true) {
                     title

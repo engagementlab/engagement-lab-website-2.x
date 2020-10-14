@@ -26,6 +26,6 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
                 gutter: '.gutter-sizer',
                 percentPosition: true,
             });
-        }, 1000);
+        }, 2000);
     }
 }

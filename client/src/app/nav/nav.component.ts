@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
@@ -127,6 +127,11 @@ export class NavComponent {
     // If on home when logo clicked, just close menu
     logoClick() {
         if (this.currentUrl === '/') this.openCloseNav();
+    }
+
+    // @HostListener('window:scroll', ['$event'])
+    onMenuScroll(event) {
+        console.log(event.currentTarget.scrollTop);
     }
 
     async searchFocus() {
