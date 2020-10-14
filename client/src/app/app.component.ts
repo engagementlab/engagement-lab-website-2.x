@@ -71,7 +71,7 @@ export class AppComponent implements OnInit, AfterViewInit {
             this.showStudiosNav =
                 evt.url.includes('studios') && !evt.url.includes('graduate');
             // Show research nav?
-            this.showResearchNav = evt.url.includes('research');
+            this.showResearchNav = evt.url.indexOf('/research') === 0;
             // Show graduate nav?
             this.showGradNav = evt.url.includes('graduate');
 
