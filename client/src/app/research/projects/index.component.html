@@ -83,6 +83,7 @@
                         cloudinaryPrefix="/"
                         cloudinaryId="{{ project.image.public_id }}"
                         [responsive]="true"
+                        [loading]="'none'"
                         height="350"
                         alt="Thumbnail image for '{{ project.name }}' project"
                         *ngIf="project.image !== undefined"

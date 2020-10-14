@@ -1,9 +1,4 @@
-import {
-    Component,
-    OnInit,
-    Input,
-    AfterViewInit,
-} from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 
 import Masonry from 'masonry-layout';
 

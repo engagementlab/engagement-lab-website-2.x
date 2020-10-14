@@ -15,6 +15,7 @@ export class CdnImageComponent implements OnInit {
     @Input() effect: string = 'brightness:0';
     @Input() crop: string = 'scale';
     @Input() gravity: string = 'auto:none';
+    @Input() loading: string = 'lazy';
     @Input() height: number;
     @Input() width: string;
     @Input() quality: number;
