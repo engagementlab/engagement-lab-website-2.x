@@ -50,7 +50,7 @@ Masters.add({
         initial: true,
     },
     learningObjectives: {
-        type: Types.Textarea,
+        type: Types.Markdown,
         required: true,
         initial: true,
     },

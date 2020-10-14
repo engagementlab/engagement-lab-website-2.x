@@ -19,7 +19,7 @@ const Masters = {
       programDescription: String!
       partnerships: String!
       phases: [String]!
-      learningObjectives: String!
+      learningObjectives: Markdown!
       faculty: [Person]
       projects: [MDProject]
       studiosBlurb: String!
