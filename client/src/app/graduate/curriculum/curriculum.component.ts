@@ -35,7 +35,9 @@ export class GraduateCurriculumComponent implements OnInit {
               allMastersPages {
                   programDescription
                   partnerships
-                  learningObjectives
+                  learningObjectives {
+                      html
+                  }
                   cohortYear
                   phases
                   faculty {
