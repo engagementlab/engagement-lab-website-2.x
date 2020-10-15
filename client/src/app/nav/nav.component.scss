@@ -178,6 +178,7 @@ nav {
     .close {
       opacity: 0;
       color: white;
+      @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
 
       // "Close"
       span {
@@ -196,6 +197,10 @@ nav {
           opacity: 1;
           display: inline-block;
         }
+      }
+
+      &.hide {
+        opacity: 0;
       }
     }
   }

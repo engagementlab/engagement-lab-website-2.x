@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
@@ -52,6 +52,7 @@ export class NavComponent {
     public searchEnabled: boolean;
     public logoSm: boolean;
     private currentUrl: string;
+    private lastMenuScroll: number;
 
     @ViewChild('nav') nav: ElementRef;
 
@@ -129,9 +130,16 @@ export class NavComponent {
         if (this.currentUrl === '/') this.openCloseNav();
     }
 
-    // @HostListener('window:scroll', ['$event'])
     onMenuScroll(event) {
-        console.log(event.currentTarget.scrollTop);
+        const currentScroll = event.currentTarget.scrollTop;
+
+        // Hide close btn if scrolling past threshold where menu items cover it
+        if (this.lastMenuScroll < 80 && currentScroll > 80)
+            this.menuBtnClose.nativeElement.classList.add('hide');
+        else if (currentScroll < 80)
+            this.menuBtnClose.nativeElement.classList.remove('hide');
+
+        this.lastMenuScroll = currentScroll;
     }
 
     async searchFocus() {
