@@ -35,6 +35,9 @@ export class CdnImageComponent implements OnInit {
     ) {}
 
     ngOnInit() {
+        // Disable lazy loading on iOS 13 (this version never loads lazy images, inexplicably)
+        if (this.iosVersion() === 13) this.loading = '';
+
         this.show = isPlatformBrowser(this.platform);
 
         this.imgId =
@@ -45,5 +48,17 @@ export class CdnImageComponent implements OnInit {
             this.widthCss = this._sanitizer.bypassSecurityTrustStyle(
                 'width:' + this.width + 'px; max-width:' + this.width + 'px',
             );
+    }
+
+    iosVersion() {
+        var agent = window.navigator.userAgent,
+            start = agent.indexOf('OS ');
+        if (
+            (agent.indexOf('iPhone') > -1 || agent.indexOf('iPad') > -1) &&
+            start > -1
+        ) {
+            return window.Number(agent.substr(start + 3, 3).replace('_', '.'));
+        }
+        return 0;
     }
 }
