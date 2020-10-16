@@ -18,7 +18,6 @@ export class CdnImageComponent implements OnInit {
     @Input() loading: string = 'lazy';
     @Input() height: number;
     @Input() width: string;
-    @Input() quality: number;
 
     @Input() responsive: boolean = true;
     @Input() autoFormat: boolean = false;
