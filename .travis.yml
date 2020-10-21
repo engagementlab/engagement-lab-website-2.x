@@ -36,7 +36,7 @@ script:
     - cd api
     - npm install
     # Start API in background
-    - forever start ./bin/www.js
+    - forever start ./bin/www.js prod
     - echo "Pause for 1 min and output API log."
     - sleep 60
     - forever logs 0
