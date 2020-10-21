@@ -53,6 +53,7 @@ export class TeamComponent implements OnInit {
                     cohortYear {
                         label
                     }
+                    alumni
                     category
                     onLeave
                 }
@@ -88,6 +89,7 @@ export class TeamComponent implements OnInit {
                 cohortYear {
                     label
                 }
+                alumni
                 category
                 relatedLinks
                 contact

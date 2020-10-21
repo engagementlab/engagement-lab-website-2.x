@@ -78,13 +78,15 @@
                 <div class="name">
                     {{ person.name.first }} {{ person.name.last }}
                 </div>
-                <!-- Alumni only -->
-                <div class="year" *ngIf="person.cohortYear">
-                    <span *ngIf="!person.alumni">Masters Student, </span
-                    >{{ person.cohortYear.label }}
-                </div>
+
                 <!-- Visible for non-grad students of now -->
                 <div class="title" *ngIf="!cohort">{{ person.title }}</div>
+
+                <div class="year" *ngIf="person.cohortYear">
+                    <span *ngIf="!person.alumni">Masters Student, </span
+                    ><span *ngIf="person.alumni">Alumni, </span
+                    >{{ person.cohortYear.label }}
+                </div>
                 <em *ngIf="person.onLeave">On Leave</em>
             </a>
         </div>
