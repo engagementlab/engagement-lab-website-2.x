@@ -46,8 +46,10 @@ script:
     - npm run build
     - npx scully --sr
 
-# Deploy static build to Azure storage if succeeded
+# Deploy static build to Azure storage if succeeded and commit DB export and build
 after_success:
     - cd ../
     - chmod 777 ./scripts/upload.sh
+    - chmod 777 ./scripts/commit.sh
     - ./scripts/upload.sh
+    - ./scripts/commit.sh

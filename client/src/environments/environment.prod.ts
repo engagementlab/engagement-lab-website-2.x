@@ -4,6 +4,6 @@ export const environment = {
     development: false,
     searchEnabled: false,
     universal: true,
-    data_url: 'http://localhost:3000',
+    data_url: 'https://qa.elab.emerson.edu',
     api_url: 'https://api.elab.emerson.edu',
 };
