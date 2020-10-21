@@ -41,7 +41,7 @@ const Person = {
             const query = args.cohortYear ? { cohortYear: args.cohortYear, category: 'Masters', } : {};
             return model.find(query).populate('cohortYear')
                 .sort([
-                    ['sortOrder', 'ascending']
+                    ['name.first', 'ascending']
                 ]).exec();
         },
         allStaffPeople: async () => model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
