@@ -119,7 +119,5 @@ export class TeamComponent implements OnInit {
         this.currentPerson = undefined;
 
         this._router.navigateByUrl('people');
-
-        // window.scrollTo(0, 0);
     }
 }

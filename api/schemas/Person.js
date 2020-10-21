@@ -38,8 +38,21 @@ const Person = {
         'getPerson(key: String): Person'],
     resolvers: {
         allPeople: async (parent, args) => {
-            const query = args.cohortYear ? { cohortYear: args.cohortYear, category: 'Masters', } : {};
+            // If cohort year specified, get only those people
+            const query = args.cohortYear ?
+
+                { cohortYear: args.cohortYear, category: 'Masters', } :
+
+                // Otherwise, get only non-alums or alums who are also faculty/staff
+                {
+                    $or: [
+                        { alumni: { $ne: true, }, },
+                        { alumni: true, category: { $in: ['faculty fellows', 'staff'], }, }
+                    ],
+                };
+
             return model.find(query).populate('cohortYear')
+                // Sort by first name
                 .sort([
                     ['name.first', 'ascending']
                 ]).exec();
