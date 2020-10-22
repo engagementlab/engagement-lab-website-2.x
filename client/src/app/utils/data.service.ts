@@ -89,6 +89,13 @@ export class DataService {
                                 this.isLoading.next(result.loading);
                                 reject(result.errors);
 
+                                // DEBUGGING: CACHE ERRORS IN STATE
+
+                                this.transferState.setState(
+                                    stateKey,
+                                    result.errors,
+                                );
+
                                 return;
                             }
                             // Cache result in state
@@ -100,6 +107,8 @@ export class DataService {
                         },
                         err => {
                             console.log('err', err);
+
+                            this.transferState.setState(stateKey, err);
                         },
                     );
             });
