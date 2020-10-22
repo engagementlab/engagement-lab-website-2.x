@@ -164,7 +164,8 @@ const boot = (app, productionMode) => {
             name: 'Engagement Lab Home CMS',
         },
         () => {
-            apollo(app);
+            // We do not need Apollo in prod env
+            if (process.env.NODE_ENV !== 'production') { apollo(app); }
 
             global.logger.info(colors.bgCyan.bold.black(`Content API started (${productionMode ? 'Production' : 'Development'} Mode).`));
         },
