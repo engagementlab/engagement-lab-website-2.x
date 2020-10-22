@@ -11,7 +11,7 @@ a {
   &.view {
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 
     h1 {
       display: flex;
@@ -20,20 +20,6 @@ a {
       font-size: 1em;
       font-weight: 600;
       letter-spacing: normal;
-    }
-
-    svg {
-      @include transition(transform, .2s, ease-in-out);
-    }
-
-    &:hover {
-      svg {
-        @include translate(15%);
-      }
-    }
-
-    @include not-phones {
-      justify-content: flex-end;
     }
 
     @include phones {
@@ -172,6 +158,25 @@ a {
   padding: 2%;
   margin-top: 17%;
 
+  a {
+    svg {
+      @include translate(0, -7px);
+
+      #arrow {
+        @include transition(transform, .2s, ease-in-out);
+      }
+    }
+
+    &:hover {
+      svg {
+        #arrow {
+          // @include transition(transform, .2s, ease-in-out);
+          @include translate(15px, -15px);
+        }
+      }
+    }
+  }
+
   a,
   h1 {
     color: white;
@@ -221,6 +226,18 @@ a {
 
   @include phones {
     margin-top: 35%;
+  }
+
+  .view {
+    svg {
+      @include transition(transform, .2s, ease-in-out);
+    }
+
+    &:hover {
+      svg {
+        @include translate(15%);
+      }
+    }
   }
 
   h1 {
