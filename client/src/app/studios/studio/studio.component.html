@@ -34,7 +34,10 @@
                 {{ student }}<br />
             </span>
         </div>
-        <div class="column is-4">
+        <div
+            class="column is-4"
+            *ngIf="content.relatedLinks && content.relatedLinks.length > 0"
+        >
             <h1 class="uppercase sm">
                 Related Links
             </h1>
