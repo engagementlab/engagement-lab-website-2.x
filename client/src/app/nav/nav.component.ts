@@ -152,7 +152,7 @@ export class NavComponent {
     }
 
     async searchTyping(value: string) {
-        if (value.length < 3) return;
+        // if (value.length < 3) return;
 
         this.searchResults = await this.dataSvc.searchQuery(value);
     }

@@ -52,8 +52,13 @@
         </a>
     </nav>
 
-    <section #menu id="menu" (scroll)="onMenuScroll($event)">
-        <div #menuLinks id="links">
+    <section
+        #menu
+        id="menu"
+        (scroll)="onMenuScroll($event)"
+        [class.isOpen]="searchEnabled"
+    >
+        <div #menuLinks id="links" *ngIf="!searchEnabled">
             <section>
                 <h3
                     *ngFor="let link of navLinks"
