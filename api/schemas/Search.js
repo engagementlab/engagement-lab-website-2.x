@@ -24,36 +24,16 @@ const Search = {
     resolvers: {
         searchQuery: async (parent, args) => {
             const nameString = args.term;
+            console.log(nameString);
             const {
                 body,
             } = await global.elasti.search({
                 index: 'listing',
                 body: {
                     query: {
-                        multi_match: {
+                        query_string: {
                             query: `*${nameString}*`,
                             fields: ['_type', 'name', 'key', 'content'],
-                        },
-                    },
-                    highlight: {
-                        require_field_match: true,
-                        fields: {
-                            name: {
-                                pre_tags: [
-                                    '<mark>'
-                                ],
-                                post_tags: [
-                                    '</mark>'
-                                ],
-                            },
-                            content: {
-                                pre_tags: [
-                                    '<mark>'
-                                ],
-                                post_tags: [
-                                    '</mark>'
-                                ],
-                            },
                         },
                     },
                 },
