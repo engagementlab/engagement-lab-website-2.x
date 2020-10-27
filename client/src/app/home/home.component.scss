@@ -39,6 +39,12 @@ a {
     font-weight: 300;
     @include pxtoem(32, 48);
 
+    span {
+      display: block;
+      // transform: translateY(150%);
+      opacity: 0;
+    }
+
     a {
       border-bottom: 1px solid black;
     }
@@ -66,6 +72,8 @@ a {
     @include pxtoem(28, 36);
     line-height: 1.41;
     letter-spacing: 0.5px;
+    
+    @include transition(clip-path, .5s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
 
     ::ng-deep p {
       strong {

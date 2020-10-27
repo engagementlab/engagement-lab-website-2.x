@@ -6,7 +6,7 @@ export const environment = {
     production: false,
     qa: false,
     development: true,
-    searchEnabled: true,
+    searchEnabled: false,
     universal: false,
     api_url: 'http://localhost:3000',
     data_url: 'http://localhost:3000',

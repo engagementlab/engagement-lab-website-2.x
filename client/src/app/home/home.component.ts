@@ -6,10 +6,11 @@ import {
     ViewChild,
     ElementRef,
 } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
-import { DataService } from '../utils/data.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
     selector: 'app-home',
@@ -75,6 +76,16 @@ export class HomeComponent implements OnInit {
         `;
 
         this.content = await this.dataSvc.getSet('homepage', query);
+        setTimeout(() => {
+            console.log(document.querySelectorAll('h1 span'));
+            anime({
+                easing: 'easeOutCirc',
+                targets: document.querySelectorAll('h1 span'),
+                opacity: [0, 1],
+                translateY: ['50%', 0],
+                delay: anime.stagger(500),
+            });
+        }, 700);
     }
 
     openSignup() {
