@@ -17,14 +17,12 @@ const Search = {
 	  _type: String
 	  _score: Float
 	  _source: SearchContent
-	  highlight: SearchHighlight      
     }
   `,
     queries: ['searchQuery(term: String): [SearchResult]'],
     resolvers: {
         searchQuery: async (parent, args) => {
             const nameString = args.term;
-            console.log(nameString);
             const {
                 body,
             } = await global.elasti.search({
