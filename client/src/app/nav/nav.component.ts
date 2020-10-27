@@ -1,10 +1,18 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import {
+    Component,
+    ViewChild,
+    ElementRef,
+    QueryList,
+    ViewChildren,
+} from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
 import { DataService } from '../utils/data.service';
 
 import { environment } from '../../environments/environment';
+
+import Mark from 'mark.js';
 
 interface Link {
     url?: string;
@@ -50,6 +58,7 @@ export class NavComponent {
 
     public searchResults: any;
     public searchEnabled: boolean;
+    public searchQuery: string;
     public logoSm: boolean;
     private currentUrl: string;
     private lastMenuScroll: number;
@@ -71,6 +80,10 @@ export class NavComponent {
     @ViewChild('menuClose') menuBtnClose: ElementRef;
 
     @ViewChild('menuBg') menuBg: ElementRef;
+
+    @ViewChildren('searchResultsList') searchResultsList: QueryList<
+        HTMLDivElement
+    >;
 
     constructor(private _router: Router, private dataSvc: DataService) {
         // Get nav route when nav ends
@@ -96,6 +109,15 @@ export class NavComponent {
             });
 
         this.searchEnabled = environment.searchEnabled;
+    }
+
+    ngAfterViewInit() {
+        this.searchResultsList.changes.subscribe(t => {
+            const instance = new Mark(
+                document.querySelectorAll('#results .result'),
+            );
+            instance.mark(this.searchQuery);
+        });
     }
 
     openCloseNav(): void {
@@ -145,6 +167,7 @@ export class NavComponent {
     async searchFocus() {
         this.searchField.nativeElement.className = 'focus';
         this.searchResults = await this.dataSvc.searchQuery('civic');
+        this.searchQuery = 'civic';
     }
 
     searchBlur() {
@@ -152,8 +175,9 @@ export class NavComponent {
     }
 
     async searchTyping(value: string) {
-        // if (value.length < 3) return;
+        if (value.length < 2) return;
 
+        this.searchQuery = value;
         this.searchResults = await this.dataSvc.searchQuery(value);
     }
 }

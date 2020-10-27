@@ -3,11 +3,7 @@
         <div [innerHtml]="nameMarkup"></div>
         <span class="type">{{ type }}</span>
     </div>
-    <p
-        *ngIf="content && content.length > 0"
-        class="content"
-        [innerHtml]="content"
-    ></p>
+    <p *ngIf="content && content.length > 0" class="content">{{ content }}</p>
 
     <svg viewBox="8 47.532 80 1" width="80" height="1">
         <rect

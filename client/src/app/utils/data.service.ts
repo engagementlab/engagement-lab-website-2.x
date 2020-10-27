@@ -155,9 +155,6 @@ export class DataService {
                             _source {
                                 key
                                 name
-                            }
-                            highlight {
-                                name
                                 content
                             }
                         }

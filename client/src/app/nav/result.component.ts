@@ -7,7 +7,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     styleUrls: ['./result.component.scss'],
 })
 export class ResultComponent implements OnInit {
-    @Input() highlightedName: string;
+    // @Input() highlightedName: string;
     @Input() sourceName: string;
     @Input() content: string;
     @Input() type: string;
@@ -18,14 +18,14 @@ export class ResultComponent implements OnInit {
     constructor(private _sanitizer: DomSanitizer) {}
 
     ngOnInit() {
-        // If highlight empty, result found via record content and not name, so show source name
-        if (this.highlightedName.length < 1)
-            this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(
-                this.sourceName,
-            );
-        else
-            this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(
-                this.highlightedName,
-            );
+        // // If highlight empty, result found via record content and not name, so show source name
+        // if (this.highlightedName.length < 1)
+        this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(
+            this.sourceName,
+        );
+        // else
+        //     this.nameMarkup = this._sanitizer.bypassSecurityTrustHtml(
+        //         this.highlightedName,
+        //     );
     }
 }

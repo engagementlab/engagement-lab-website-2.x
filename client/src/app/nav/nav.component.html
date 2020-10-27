@@ -142,14 +142,17 @@
                 (keyup)="searchTyping(searchField.value)"
             />
             <div id="results" class="column is-full">
-                <search-result
-                    sourceName="{{ result._source.name }}"
-                    highlightedName="{{ result.highlight.name }}"
-                    content="{{ result.highlight.content }}"
-                    type="{{ result._type }}"
-                    key="{{ result._source.key }}"
+                <ng-container
+                    #searchResultsList
                     *ngFor="let result of searchResults"
-                ></search-result>
+                >
+                    <search-result
+                        sourceName="{{ result._source.name }}"
+                        content="{{ result._source.content }}"
+                        type="{{ result._type }}"
+                        key="{{ result._source.key }}"
+                    ></search-result>
+                </ng-container>
             </div>
         </div>
     </section>
