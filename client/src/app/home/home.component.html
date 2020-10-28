@@ -8,10 +8,29 @@
             >
         </h1>
         <div
+            #tagline
             id="tagline"
             class="column is-10-tablet is-half-desktop center"
-            [innerHTML]="content.allAboutPages.tagline.html"
-        ></div>
+        >
+            <div class="cover">
+                <div></div>
+                <div class="odd"></div>
+                <div></div>
+                <div class="odd"></div>
+                <div></div>
+                <div class="odd"></div>
+                <div></div>
+                <div class="odd"></div>
+                <div></div>
+                <div class="odd"></div>
+            </div>
+            <div
+                #taglineInner
+                id="inner"
+                class="no-margin"
+                [innerHTML]="content.allAboutPages.tagline.html"
+            ></div>
+        </div>
         <div id="newsletter-wrap" class="column is-full-tablet is-11-mobile">
             <div id="button" #newsletterBtn>
                 <app-button

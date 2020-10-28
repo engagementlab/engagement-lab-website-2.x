@@ -31,8 +31,8 @@ export class HomeComponent implements OnInit {
 
     @ViewChildren('initiativeList') initiativeList: QueryList<any>;
 
-    @ViewChild('canvasElement') canvasElement: ElementRef;
-
+    @ViewChild('tagline') taglineEl: ElementRef;
+    @ViewChild('taglineInner') taglineInnerEl: ElementRef;
     @ViewChild('newsletterBtn') newsletterBtn: ElementRef;
     @ViewChild('newsletterSubscribed') newsletterSubscribed: ElementRef;
     @ViewChild('newsletterError') newsletterError: ElementRef;
@@ -77,7 +77,6 @@ export class HomeComponent implements OnInit {
 
         this.content = await this.dataSvc.getSet('homepage', query);
         setTimeout(() => {
-            console.log(document.querySelectorAll('h1 span'));
             anime({
                 easing: 'easeOutCirc',
                 targets: document.querySelectorAll('h1 span'),
@@ -85,6 +84,37 @@ export class HomeComponent implements OnInit {
                 translateY: ['50%', 0],
                 delay: anime.stagger(500),
             });
+            const taglineCover = document.querySelector(
+                '.cover',
+            ) as HTMLElement;
+            taglineCover.style.width = `${this.taglineEl.nativeElement
+                .clientWidth * 2}px`;
+            taglineCover.style.height = `${this.taglineEl.nativeElement.clientHeight}px`;
+
+            setTimeout(() => {
+                // Tagline show
+                anime({
+                    easing: 'easeInOutCirc',
+                    targets: document.querySelectorAll('.cover div.odd'),
+                    translateX: '200%',
+                    // opacity: 0.25,
+                    duration: 5000,
+                    // duration: function() {
+                    //     return anime.random(800, 1200);
+                    // },
+                });
+                anime({
+                    easing: 'easeInOutCirc',
+                    targets: document.querySelectorAll('.cover div:not(.odd)'),
+                    translateX: '-100%',
+                    // translateX: '-100%',
+                    // opacity: 0.25,
+                    // delay: 2000,
+                    duration: function() {
+                        return anime.random(800, 1200);
+                    },
+                });
+            }, 1500);
         }, 700);
     }
 
