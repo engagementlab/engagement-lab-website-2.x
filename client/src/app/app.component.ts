@@ -37,6 +37,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     @ViewChild('consent') consent: ElementRef;
     @ViewChild('revoke') revoke: ElementRef;
 
+    @ViewChild('canvasElement') canvasElement: ElementRef;
+
     constructor(
         private router: Router,
         private titleSvc: Title,
@@ -47,6 +49,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+        (<HTMLElement>document.getElementById('canvas')).setAttribute(
+            'width',
+            document.body.clientWidth + '',
+        );
         // Monitor router
         this.router.events.subscribe(async evt => {
             // Close initiatives nav on all navigation

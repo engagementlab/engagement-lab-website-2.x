@@ -80,16 +80,19 @@ a {
       height: 100%;
       div {
           position: relative;
-          background-color: greenyellow;
           width: 100%;
-          height: 10%;
+          height: 6.6%;
           z-index: 10;
 
+          background-color: white;
+          
           &.odd {
-            left: -50%;
+            background-color: $mango;
+            left: 0%;
           }
           &:not(.odd) {
-            left: 0%;
+            background-color: $green-blue;
+            // left: 0%;
           }
       }
     }
@@ -98,7 +101,7 @@ a {
     
       strong {
         &:nth-child(1) {
-          color:darkgoldenrod
+          color:$tomato;
         }
 
         &:nth-child(2) {

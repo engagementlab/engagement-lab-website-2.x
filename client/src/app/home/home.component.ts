@@ -11,6 +11,7 @@ import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
 import anime from 'animejs/lib/anime.es.js';
+import * as paper from 'paper';
 
 @Component({
     selector: 'app-home',
@@ -75,6 +76,8 @@ export class HomeComponent implements OnInit {
             }
         `;
 
+        this.initializePath();
+
         this.content = await this.dataSvc.getSet('homepage', query);
         setTimeout(() => {
             anime({
@@ -87,31 +90,31 @@ export class HomeComponent implements OnInit {
             const taglineCover = document.querySelector(
                 '.cover',
             ) as HTMLElement;
-            taglineCover.style.width = `${this.taglineEl.nativeElement
-                .clientWidth * 2}px`;
-            taglineCover.style.height = `${this.taglineEl.nativeElement.clientHeight}px`;
+            // taglineCover.style.width = `${this.taglineEl.nativeElement.clientWidth}px`;
+            // taglineCover.style.height = `${this.taglineEl.nativeElement.clientHeight}px`;
 
             setTimeout(() => {
                 // Tagline show
                 anime({
                     easing: 'easeInOutCirc',
                     targets: document.querySelectorAll('.cover div.odd'),
-                    translateX: '200%',
-                    // opacity: 0.25,
-                    duration: 5000,
-                    // duration: function() {
-                    //     return anime.random(800, 1200);
-                    // },
+                    translateX: '100%',
+                    translateY: (el, i) => {
+                        return 50 + -50 * i;
+                    },
+                    duration: function() {
+                        return anime.random(2000, 3500);
+                    },
                 });
                 anime({
                     easing: 'easeInOutCirc',
                     targets: document.querySelectorAll('.cover div:not(.odd)'),
                     translateX: '-100%',
-                    // translateX: '-100%',
-                    // opacity: 0.25,
-                    // delay: 2000,
+                    translateY: (el, i) => {
+                        return 50 + -50 * i;
+                    },
                     duration: function() {
-                        return anime.random(800, 1200);
+                        return anime.random(2000, 3500);
                     },
                 });
             }, 1500);
@@ -160,4 +163,60 @@ export class HomeComponent implements OnInit {
     emailFocus() {
         this.emailFieldFocused = true;
     }
+
+    initializePath() {
+        var width, height, center;
+        var points = 10;
+        var smooth = true;
+
+        const _paper = new paper.PaperScope();
+        _paper.setup(<HTMLCanvasElement>document.getElementById('canvas'));
+        var path = new paper.Path();
+
+        const mouseTool = new paper.Tool();
+
+        let mousePos: paper.Point = new paper.Point(0, 0),
+            followMouse = false,
+            pathHeight = mousePos.y;
+        mouseTool.onMouseMove = (evt: paper.ToolEvent) => {
+            mousePos = evt.point;
+        };
+        path.strokeColor = new paper.Color('rgb(247, 41, 35)');
+        center = _paper.view.center;
+        width = _paper.view.size.width;
+        height = _paper.view.size.height / 2;
+        path.segments = [];
+        path.strokeWidth = 2;
+        path.add(_paper.view.bounds.leftCenter);
+        for (var i = 1; i < points; i++) {
+            var point = new paper.Point((width / points) * i, center.y);
+            path.add(point);
+        }
+        path.add(_paper.view.bounds.rightCenter);
+        path.fullySelected = false;
+
+        _paper.view.onFrame = event => {
+            pathHeight += (center.y - mousePos.y - pathHeight) / 50;
+            for (var i = 1; i < points; i++) {
+                var sinSeed = event.count + (i + (i % 10)) * 100;
+                var sinHeight = Math.sin(sinSeed / 1200) * pathHeight;
+                // Speed/freq of waves
+                var yPos = Math.sin(sinSeed / 100) * sinHeight + height;
+                path.segments[i].point.y = yPos;
+            }
+            if (smooth)
+                path.smooth({
+                    type: 'continuous',
+                });
+
+            // path.strokeColor.green += .01;
+            // path.strokeColor.blue += .001;
+            // path.strokeColor.red += 1;
+        };
+    }
+
+    // Reposition the path whenever the window is resized:
+    //   function onResize(event) {
+    //     initializePath();
+    //   }
 }
