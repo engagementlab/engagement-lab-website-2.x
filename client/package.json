@@ -58,11 +58,13 @@
     "masonry-layout": "^4.2.2",
     "node-pre-gyp": "^0.14.0",
     "paper": "^0.12.11",
+    "particles.js": "^2.0.0",
     "path-to-regexp": "^6.1.0",
     "rxjs": "~6.5.4",
     "rxjs-compat": "^6.5.4",
     "tiny-slider": "^2.9.2",
     "tslib": "^1.10.0",
+    "tsparticles": "^1.18.7",
     "underscore": "^1.9.2",
     "webpack": "^4.43.0",
     "zone.js": "~0.10.2"

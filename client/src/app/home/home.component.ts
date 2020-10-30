@@ -5,6 +5,7 @@ import {
     QueryList,
     ViewChild,
     ElementRef,
+    OnDestroy,
 } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../utils/data.service';
@@ -13,12 +14,14 @@ import * as _ from 'underscore';
 import anime from 'animejs/lib/anime.es.js';
 import * as paper from 'paper';
 
+import { tsParticles } from 'tsparticles';
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
     public errors: any;
 
     public content: any;
@@ -41,6 +44,8 @@ export class HomeComponent implements OnInit {
     @ViewChild('newsletter') newsletter: ElementRef;
 
     public emailForm: FormGroup;
+
+    paperScope: paper.PaperScope;
 
     // eslint-disable-next-line no-useless-constructor
     constructor(
@@ -76,49 +81,61 @@ export class HomeComponent implements OnInit {
             }
         `;
 
-        this.initializePath();
-
         this.content = await this.dataSvc.getSet('homepage', query);
         setTimeout(() => {
-            anime({
-                easing: 'easeOutCirc',
-                targets: document.querySelectorAll('h1 span'),
-                opacity: [0, 1],
-                translateY: ['50%', 0],
-                delay: anime.stagger(500),
-            });
-            const taglineCover = document.querySelector(
-                '.cover',
+            const taglineCover = document.getElementById(
+                'particles',
             ) as HTMLElement;
+            taglineCover.style.width = `${
+                document.getElementById('intro').clientWidth
+            }px`;
+            taglineCover.style.height = `${
+                document.getElementById('intro').clientHeight
+            }px`;
+            this.drawBg();
+            // const taglineCover = document.querySelector(
+            //     '.cover',
+            // ) as HTMLElement;
             // taglineCover.style.width = `${this.taglineEl.nativeElement.clientWidth}px`;
             // taglineCover.style.height = `${this.taglineEl.nativeElement.clientHeight}px`;
 
             setTimeout(() => {
+                anime({
+                    easing: 'easeOutCirc',
+                    targets: document.querySelectorAll('h1 span'),
+                    opacity: [0, 1],
+                    translateY: ['50%', 0],
+                    delay: anime.stagger(500),
+                });
                 // Tagline show
-                anime({
-                    easing: 'easeInOutCirc',
-                    targets: document.querySelectorAll('.cover div.odd'),
-                    translateX: '100%',
-                    translateY: (el, i) => {
-                        return 50 + -50 * i;
-                    },
-                    duration: function() {
-                        return anime.random(2000, 3500);
-                    },
-                });
-                anime({
-                    easing: 'easeInOutCirc',
-                    targets: document.querySelectorAll('.cover div:not(.odd)'),
-                    translateX: '-100%',
-                    translateY: (el, i) => {
-                        return 50 + -50 * i;
-                    },
-                    duration: function() {
-                        return anime.random(2000, 3500);
-                    },
-                });
-            }, 1500);
+                // anime({
+                //     easing: 'easeInOutCirc',
+                //     targets: document.querySelectorAll('.cover div.odd'),
+                //     translateX: '100%',
+                //     translateY: (el, i) => {
+                //         return 50 + -50 * i;
+                //     },
+                //     duration: function() {
+                //         return anime.random(2000, 3500);
+                //     },
+                // });
+                // anime({
+                //     easing: 'easeInOutCirc',
+                //     targets: document.querySelectorAll('.cover div:not(.odd)'),
+                //     translateX: '-100%',
+                //     translateY: (el, i) => {
+                //         return 50 + -50 * i;
+                //     },
+                //     duration: function() {
+                //         return anime.random(2000, 3500);
+                //     },
+                // });
+            }, 250);
         }, 700);
+    }
+
+    ngOnDestroy() {
+        tsParticles.domItem(0).destroy();
     }
 
     openSignup() {
@@ -164,38 +181,103 @@ export class HomeComponent implements OnInit {
         this.emailFieldFocused = true;
     }
 
-    initializePath() {
+    drawBg() {
+        tsParticles.load('particles', {
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'repulse' },
+                    resize: true,
+                },
+                modes: {
+                    repulse: { distance: 50, duration: 0.4 },
+                    remove: { particles_nb: 2 },
+                },
+            },
+            particles: {
+                number: {
+                    value: 200,
+                    density: { enable: true, value_area: 800 },
+                },
+                color: { value: '#5c5c5c' },
+                shape: {
+                    type: 'circle',
+                    stroke: { width: 0, color: '#000000' },
+                    polygon: { nb_sides: 5 },
+                    image: { src: 'img/github.svg', width: 100, height: 100 },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false,
+                    },
+                },
+                size: {
+                    value: 0,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false,
+                    },
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 35,
+                    color: '#313131',
+                    opacity: 0.6210305795457366,
+                    width: 2.1529060090918866,
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'bounce',
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 },
+                },
+            },
+        });
+    }
+
+    /* initializePath() {
         var width, height, center;
         var points = 10;
-        var smooth = true;
 
-        const _paper = new paper.PaperScope();
-        _paper.setup(<HTMLCanvasElement>document.getElementById('canvas'));
+        const paperScope = new paper.PaperScope();
+        paperScope.setup(<HTMLCanvasElement>document.getElementById('canvas'));
         var path = new paper.Path();
 
         const mouseTool = new paper.Tool();
 
         let mousePos: paper.Point = new paper.Point(0, 0),
-            followMouse = false,
             pathHeight = mousePos.y;
         mouseTool.onMouseMove = (evt: paper.ToolEvent) => {
             mousePos = evt.point;
         };
         path.strokeColor = new paper.Color('rgb(247, 41, 35)');
-        center = _paper.view.center;
-        width = _paper.view.size.width;
-        height = _paper.view.size.height / 2;
+        center = paperScope.view.center;
+        width = paperScope.view.size.width;
+        height = paperScope.view.size.height / 2;
         path.segments = [];
         path.strokeWidth = 2;
-        path.add(_paper.view.bounds.leftCenter);
+        path.add(paperScope.view.bounds.leftCenter);
         for (var i = 1; i < points; i++) {
             var point = new paper.Point((width / points) * i, center.y);
             path.add(point);
         }
-        path.add(_paper.view.bounds.rightCenter);
+        path.add(paperScope.view.bounds.rightCenter);
         path.fullySelected = false;
 
-        _paper.view.onFrame = event => {
+        paperScope.view.onFrame = event => {
             pathHeight += (center.y - mousePos.y - pathHeight) / 50;
             for (var i = 1; i < points; i++) {
                 var sinSeed = event.count + (i + (i % 10)) * 100;
@@ -204,19 +286,13 @@ export class HomeComponent implements OnInit {
                 var yPos = Math.sin(sinSeed / 100) * sinHeight + height;
                 path.segments[i].point.y = yPos;
             }
-            if (smooth)
-                path.smooth({
-                    type: 'continuous',
-                });
+            path.smooth({
+                type: 'continuous',
+            });
 
             // path.strokeColor.green += .01;
             // path.strokeColor.blue += .001;
             // path.strokeColor.red += 1;
         };
-    }
-
-    // Reposition the path whenever the window is resized:
-    //   function onResize(event) {
-    //     initializePath();
-    //   }
+    } */
 }

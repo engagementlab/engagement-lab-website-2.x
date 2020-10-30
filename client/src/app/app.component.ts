@@ -49,10 +49,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-        (<HTMLElement>document.getElementById('canvas')).setAttribute(
-            'width',
-            document.body.clientWidth + '',
-        );
         // Monitor router
         this.router.events.subscribe(async evt => {
             // Close initiatives nav on all navigation
