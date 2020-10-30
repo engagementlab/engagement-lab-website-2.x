@@ -23,7 +23,10 @@
                 >{{ partner.name }}<br
             /></span>
         </div>
-        <div class="column is-4" *ngIf="content.projectLeads">
+        <div
+            class="column is-4"
+            *ngIf="content.projectLeads && content.projectLeads.length > 0"
+        >
             <h1 class="uppercase sm">
                 Project Leads
             </h1>
