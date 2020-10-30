@@ -12,7 +12,6 @@ import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
 import anime from 'animejs/lib/anime.es.js';
-import * as paper from 'paper';
 
 import { tsParticles } from 'tsparticles';
 
@@ -35,17 +34,18 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     @ViewChildren('initiativeList') initiativeList: QueryList<any>;
 
+    @ViewChild('particles') particles: ElementRef;
     @ViewChild('tagline') taglineEl: ElementRef;
     @ViewChild('taglineInner') taglineInnerEl: ElementRef;
+
     @ViewChild('newsletterBtn') newsletterBtn: ElementRef;
     @ViewChild('newsletterSubscribed') newsletterSubscribed: ElementRef;
     @ViewChild('newsletterError') newsletterError: ElementRef;
-
     @ViewChild('newsletter') newsletter: ElementRef;
 
     public emailForm: FormGroup;
 
-    paperScope: paper.PaperScope;
+    particlesLineDistance: number = 55;
 
     // eslint-disable-next-line no-useless-constructor
     constructor(
@@ -82,59 +82,46 @@ export class HomeComponent implements OnInit, OnDestroy {
         `;
 
         this.content = await this.dataSvc.getSet('homepage', query);
+
+        // Load particles effect after content render
         setTimeout(() => {
-            const taglineCover = document.getElementById(
-                'particles',
-            ) as HTMLElement;
-            taglineCover.style.width = `${
+            const particlesEl = this.particles.nativeElement;
+            particlesEl.style.width = `${
                 document.getElementById('intro').clientWidth
             }px`;
-            taglineCover.style.height = `${
+            particlesEl.style.height = `${
                 document.getElementById('intro').clientHeight
             }px`;
-            this.drawBg();
-            // const taglineCover = document.querySelector(
-            //     '.cover',
-            // ) as HTMLElement;
-            // taglineCover.style.width = `${this.taglineEl.nativeElement.clientWidth}px`;
-            // taglineCover.style.height = `${this.taglineEl.nativeElement.clientHeight}px`;
 
-            setTimeout(() => {
-                anime({
-                    easing: 'easeOutCirc',
-                    targets: document.querySelectorAll('h1 span'),
-                    opacity: [0, 1],
-                    translateY: ['50%', 0],
-                    delay: anime.stagger(500),
-                });
-                // Tagline show
-                // anime({
-                //     easing: 'easeInOutCirc',
-                //     targets: document.querySelectorAll('.cover div.odd'),
-                //     translateX: '100%',
-                //     translateY: (el, i) => {
-                //         return 50 + -50 * i;
-                //     },
-                //     duration: function() {
-                //         return anime.random(2000, 3500);
-                //     },
-                // });
-                // anime({
-                //     easing: 'easeInOutCirc',
-                //     targets: document.querySelectorAll('.cover div:not(.odd)'),
-                //     translateX: '-100%',
-                //     translateY: (el, i) => {
-                //         return 50 + -50 * i;
-                //     },
-                //     duration: function() {
-                //         return anime.random(2000, 3500);
-                //     },
-                // });
-            }, 250);
-        }, 700);
+            this.drawParticles();
+
+            anime({
+                easing: 'easeOutCirc',
+                targets: document.querySelectorAll('h1 span'),
+                opacity: [0, 1],
+                translateY: ['50%', 0],
+                delay: anime.stagger(500),
+            });
+
+            let tagline = document.querySelector('#inner p') as HTMLElement;
+            const targetHeight =
+                tagline.clientHeight + tagline.clientHeight * 0.2;
+            this.taglineEl.nativeElement.style.height = targetHeight + 'px';
+            this.taglineInnerEl.nativeElement.style.height = '0';
+
+            anime({
+                easing: 'easeInOutCirc',
+                targets: this.taglineInnerEl.nativeElement,
+                height: [0, targetHeight],
+                opacity: 1,
+                duration: 4000,
+                delay: 400,
+            });
+        }, 1);
     }
 
     ngOnDestroy() {
+        // Get rid of particles
         tsParticles.domItem(0).destroy();
     }
 
@@ -181,7 +168,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.emailFieldFocused = true;
     }
 
-    drawBg() {
+    drawParticles() {
         tsParticles.load('particles', {
             interactivity: {
                 detect_on: 'canvas',
@@ -229,9 +216,9 @@ export class HomeComponent implements OnInit, OnDestroy {
                 },
                 line_linked: {
                     enable: true,
-                    distance: 35,
+                    distance: this.particlesLineDistance,
                     color: '#313131',
-                    opacity: 0.6210305795457366,
+                    opacity: 0.4,
                     width: 2.1529060090918866,
                 },
                 move: {
@@ -247,52 +234,4 @@ export class HomeComponent implements OnInit, OnDestroy {
             },
         });
     }
-
-    /* initializePath() {
-        var width, height, center;
-        var points = 10;
-
-        const paperScope = new paper.PaperScope();
-        paperScope.setup(<HTMLCanvasElement>document.getElementById('canvas'));
-        var path = new paper.Path();
-
-        const mouseTool = new paper.Tool();
-
-        let mousePos: paper.Point = new paper.Point(0, 0),
-            pathHeight = mousePos.y;
-        mouseTool.onMouseMove = (evt: paper.ToolEvent) => {
-            mousePos = evt.point;
-        };
-        path.strokeColor = new paper.Color('rgb(247, 41, 35)');
-        center = paperScope.view.center;
-        width = paperScope.view.size.width;
-        height = paperScope.view.size.height / 2;
-        path.segments = [];
-        path.strokeWidth = 2;
-        path.add(paperScope.view.bounds.leftCenter);
-        for (var i = 1; i < points; i++) {
-            var point = new paper.Point((width / points) * i, center.y);
-            path.add(point);
-        }
-        path.add(paperScope.view.bounds.rightCenter);
-        path.fullySelected = false;
-
-        paperScope.view.onFrame = event => {
-            pathHeight += (center.y - mousePos.y - pathHeight) / 50;
-            for (var i = 1; i < points; i++) {
-                var sinSeed = event.count + (i + (i % 10)) * 100;
-                var sinHeight = Math.sin(sinSeed / 1200) * pathHeight;
-                // Speed/freq of waves
-                var yPos = Math.sin(sinSeed / 100) * sinHeight + height;
-                path.segments[i].point.y = yPos;
-            }
-            path.smooth({
-                type: 'continuous',
-            });
-
-            // path.strokeColor.green += .01;
-            // path.strokeColor.blue += .001;
-            // path.strokeColor.red += 1;
-        };
-    } */
 }
