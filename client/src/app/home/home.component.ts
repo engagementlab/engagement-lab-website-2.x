@@ -116,7 +116,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                 targets: this.newsletterBtn.nativeElement,
                 opacity: 1,
                 duration: 1000,
-                delay: 3000,
+                delay: 2500,
             });
         }, 1);
     }
