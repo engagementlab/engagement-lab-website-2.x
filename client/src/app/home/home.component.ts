@@ -103,19 +103,20 @@ export class HomeComponent implements OnInit, OnDestroy {
                 delay: anime.stagger(500),
             });
 
-            let tagline = document.querySelector('#inner p') as HTMLElement;
-            const targetHeight =
-                tagline.clientHeight + tagline.clientHeight * 0.2;
-            this.taglineEl.nativeElement.style.height = targetHeight + 'px';
-            this.taglineInnerEl.nativeElement.style.height = '0';
+            anime({
+                easing: 'easeInOutQuint',
+                targets: this.taglineInnerEl.nativeElement,
+                translateY: ['-15%', 0],
+                opacity: 1,
+                duration: 2000,
+                delay: 1000,
+            });
 
             anime({
-                easing: 'easeInOutCirc',
-                targets: this.taglineInnerEl.nativeElement,
-                height: [0, targetHeight],
+                targets: this.newsletterBtn.nativeElement,
                 opacity: 1,
-                duration: 4000,
-                delay: 400,
+                duration: 1000,
+                delay: 3000,
             });
         }, 1);
     }

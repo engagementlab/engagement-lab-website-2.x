@@ -45,9 +45,12 @@ a {
     font-weight: 300;
     @include pxtoem(32, 48);
 
+    @include phones {
+      padding: 0;
+    }
+
     span {
-      display: block;
-      // transform: translateY(150%);
+      display: inline-block;
       opacity: 0;
     }
 
@@ -110,35 +113,18 @@ a {
           color: $mango;
         }
       }
-      // @include transition(all, .2s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
-
-      // background: linear-gradient(0deg, rgba(255,255,255,0) 98%, rgba(0,0,0,1) 100%); 
-      // background-clip: text;
-      // -webkit-text-fill-color: transparent;
-      // background-size: 0 100px;
-    
-  /* set the animation */
-    //  animation:moving 5s  cubic-bezier(0.860, 0.000, 0.070, 1.000) infinite;
     }
 
-
   }
-
-    /* create the animation */
-    @keyframes moving {
-      0% {
-        background-size: 100% 100%;
-      }
-      100% {
-        background-size: 100% 15000%;
-      }
-    }​
 
   #button {
     position: relative;
     display: inline-block;
     width: 460px;
     z-index: 2;
+
+    opacity: 0;
+
     @include transition(all, .2s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
     transform-origin: top center;
 
