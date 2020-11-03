@@ -59,10 +59,10 @@ const Person = {
         },
         allStaffPeople: async () => model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
         allMastersPeople: async () => model.find({ category: 'Masters', alumni: { $ne: true, }, }).sort([
-            ['sortOrder', '1']
+            ['name.first', 'ascending']
         ]).populate('cohortYear').exec(),
         allAlumniPeople: async () => model.find({ category: 'Masters', alumni: true, }).sort([
-            ['sortOrder', '1']
+            ['name.first', 'ascending']
         ]).populate('cohortYear').exec(),
         getPerson: async (parent, args) => {
             const person = await model.findOne({ key: args.key, }).populate('cohortYear').populate('projects').populate('mdProjects')
