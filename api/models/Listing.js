@@ -48,14 +48,10 @@ Listing.add({
     },
     byline: {
         type: String,
-        required: true,
-        initial: true,
         note: 'This displays under the project/event name on its page.',
     },
     description: {
         type: String,
-        required: true,
-        initial: true,
     },
     indexed: {
         type: Boolean,

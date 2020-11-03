@@ -59,10 +59,8 @@ export class ProjectComponent {
                 {
                     getProject(key: "${key}") {
                         project {
-                            byline 
                             challengeTxt 
-                            customUrl 
-                            description 
+                            customUrl
                             externalLinkUrl 
                             files {
                                 name
