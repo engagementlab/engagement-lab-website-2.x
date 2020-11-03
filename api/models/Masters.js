@@ -44,6 +44,12 @@ Masters.add({
         required: true,
         initial: true,
     },
+    programDescriptionImage: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/masters',
+        autoCleanup: true,
+    },
+
     partnerships: {
         type: Types.Textarea,
         required: true,

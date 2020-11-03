@@ -8,9 +8,21 @@
         The Engagement Lab offers an MA in Media Design.
     </h2>
 
-    <h3 class="column is-5-tablet is-full-mobile blurb">
+    <h3 class="column is-5-desktop is-full-tablet is-full-mobile blurb">
         {{ content.programDescription }}
     </h3>
+    <div class="column">
+        <cdn-image
+            cloudinaryPrefix="/"
+            cloudinaryId="{{
+                content.programDescriptionImage.public_id
+            }}"
+            width="900"
+            [autoFormat]="true"
+            [responsive]="true"
+            alt="Partnered Studio flavor image"
+        ></cdn-image>
+    </div>
 
     <div class="column is-full">
         <h1 class="uppercase">

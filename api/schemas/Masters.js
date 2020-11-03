@@ -10,13 +10,12 @@
  */
 const Masters = {
 
-    // TODO: modify cohortYear def & field? (see api/models/Masters.js line 71)
-
     schema: `
     type Masters {
       id: ID!
       name: String!
-      programDescription: String!
+      programDescription: String
+      programDescriptionImage: Image
       partnerships: String!
       phases: [String]!
       learningObjectives: Markdown!
