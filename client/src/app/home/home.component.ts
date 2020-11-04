@@ -86,15 +86,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         // Load particles effect after content render
         setTimeout(() => {
             const particlesEl = this.particles.nativeElement;
-            particlesEl.style.width = `${
-                document.getElementById('intro').clientWidth
-            }px`;
-            particlesEl.style.height = `${
-                document.getElementById('intro').clientHeight
-            }px`;
+            particlesEl.style.width = `${document.getElementById('intro').clientWidth
+                }px`;
+            particlesEl.style.height = `${document.getElementById('intro').clientHeight
+                }px`;
 
             this.drawParticles();
 
+            // Animate tagline and intro
             anime({
                 easing: 'easeOutCirc',
                 targets: document.querySelectorAll('h1 span'),

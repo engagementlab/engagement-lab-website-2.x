@@ -4,6 +4,8 @@ import {
     ElementRef,
     QueryList,
     ViewChildren,
+    OnInit,
+    AfterViewInit,
 } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
@@ -13,6 +15,7 @@ import { DataService } from '../utils/data.service';
 import { environment } from '../../environments/environment';
 
 import Mark from 'mark.js';
+import anime from 'animejs/lib/anime.es.js';
 
 interface Link {
     url?: string;
@@ -26,7 +29,7 @@ interface Link {
     templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent {
+export class NavComponent implements OnInit, AfterViewInit {
     public navLinks: Link[] = [
         { url: '', label: 'Home', enabled: true },
         { url: 'studios', label: 'Studios', enabled: true },
@@ -109,6 +112,19 @@ export class NavComponent {
             });
 
         this.searchEnabled = environment.searchEnabled;
+    }
+
+    ngOnInit() {
+
+        // Show logo on first load;
+        // if logo visible before full render, "ghost" SVG shows briefly
+        setTimeout(() => {
+            anime({
+                targets: this.homeLogo.nativeElement,
+                opacity: 1,
+                duration: 50,
+            });
+        }, 5)
     }
 
     ngAfterViewInit() {

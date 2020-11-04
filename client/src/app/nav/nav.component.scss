@@ -85,6 +85,8 @@ nav {
 
 #home {
 
+  opacity: 0;
+
   // Hide when menu open on phones
   @include phones {
     @include transition(opacity, 0.3s, ease-in-out);
