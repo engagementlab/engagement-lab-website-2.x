@@ -119,12 +119,15 @@ export class NavComponent implements OnInit, AfterViewInit {
         // Show logo on first load;
         // if logo visible before full render, "ghost" SVG shows briefly
         setTimeout(() => {
+            this.homeLogo.nativeElement.style.display = 'block';
             anime({
                 targets: this.homeLogo.nativeElement,
                 opacity: 1,
                 duration: 50,
+                begin: function (anim) {
+                },
             });
-        }, 5)
+        }, 500)
     }
 
     ngAfterViewInit() {
