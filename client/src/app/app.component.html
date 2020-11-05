@@ -78,6 +78,7 @@
         </div>
     </nav>
 </section>
+
 <!-- Show on all research pages -->
 <nav
     *ngIf="showResearchNav"
@@ -150,6 +151,7 @@
         </div>
     </div>
 </nav>
+
 <!-- Show on all grad pages -->
 <nav *ngIf="showGradNav" id="subnav" class="subnav container desktop">
     <div class="uppercase no-margin">
@@ -173,8 +175,8 @@
                 ><span>Students + Alumni</span></a
             >
         </div>
-        <div>
-            <a
+       <!-- <div>
+             <a
                 routerLink="/graduate/projects"
                 [class.active]="subNavitemActive('/graduate/projects')"
                 [attr.aria-label]="
@@ -182,7 +184,7 @@
                 "
                 ><span>Thesis Projects</span></a
             >
-        </div>
+        </div> -->
         <div>
             <a
                 routerLink="/graduate/apply"
