@@ -4,7 +4,6 @@ import {
     ElementRef,
     QueryList,
     ViewChildren,
-    OnInit,
     AfterViewInit,
 } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
@@ -15,7 +14,6 @@ import { DataService } from '../utils/data.service';
 import { environment } from '../../environments/environment';
 
 import Mark from 'mark.js';
-import anime from 'animejs/lib/anime.es.js';
 
 interface Link {
     url?: string;
@@ -29,7 +27,7 @@ interface Link {
     templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit, AfterViewInit {
+export class NavComponent implements AfterViewInit {
     public navLinks: Link[] = [
         { url: '', label: 'Home', enabled: true },
         { url: 'studios', label: 'Studios', enabled: true },
@@ -114,22 +112,6 @@ export class NavComponent implements OnInit, AfterViewInit {
         this.searchEnabled = environment.searchEnabled;
     }
 
-    ngOnInit() {
-
-        // Show logo on first load;
-        // if logo visible before full render, "ghost" SVG shows briefly
-        setTimeout(() => {
-            this.homeLogo.nativeElement.style.display = 'block';
-            anime({
-                targets: this.homeLogo.nativeElement,
-                opacity: 1,
-                duration: 50,
-                begin: function (anim) {
-                },
-            });
-        }, 500)
-    }
-
     ngAfterViewInit() {
         this.searchResultsList.changes.subscribe(t => {
             const instance = new Mark(
@@ -142,10 +124,12 @@ export class NavComponent implements OnInit, AfterViewInit {
     openCloseNav(): void {
         this.menuBtn.nativeElement.classList.toggle('isOpen');
         this.menu.nativeElement.classList.toggle('isOpen');
-        this.menu.nativeElement.classList.add('wasOpened');
         this.menuBg.nativeElement.classList.toggle('open');
         this.menuBtnClose.nativeElement.classList.toggle('isOpen');
         this.homeLogo.nativeElement.classList.toggle('hide');
+
+        this.menuBg.nativeElement.classList.add('wasOpened');
+        this.menu.nativeElement.classList.add('wasOpened');
 
         document.querySelector('body').classList.toggle('noscroll');
     }
