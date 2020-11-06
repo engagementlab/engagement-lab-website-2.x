@@ -1,3 +1,8 @@
 #left {
   padding-left: 7%;
 }
+
+h3 ::ng-deep a {
+  color: blue;
+  text-decoration: underline;
+}
