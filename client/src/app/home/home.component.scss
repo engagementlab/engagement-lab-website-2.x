@@ -76,11 +76,11 @@ a {
 
   @include keyframes(fade-tagline) {
     0% {
-      background-size: 100%;
+      background-size: 50%;
     }
 
     100% {
-      background-size: 10000%;
+      background-size: 30000%;
 
     }
   }
@@ -110,26 +110,29 @@ a {
 
       strong {
         background: black;
-        animation: fade-tagline .8s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s 1 forwards;
+        animation: fade-tagline 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s 1 forwards;
 
         &:nth-child(1) {
           background: linear-gradient(90deg, $tomato 1%, black 1%);
-          animation-delay: 1.8s;
+          background-size: 50%;
           background-clip: text;
+          animation-delay: 2.2s;
           -webkit-text-fill-color: transparent;
         }
 
         &:nth-child(2) {
           background: linear-gradient(90deg, $green-blue 1%, black 1%);
-          animation-delay: 2.3s;
+          background-size: 50%;
           background-clip: text;
+          animation-delay: 2.6s;
           -webkit-text-fill-color: transparent;
         }
 
         &:nth-child(3) {
           background: linear-gradient(90deg, $mango 1%, black 1%);
-          animation-delay: 2.9s;
+          background-size: 50%;
           background-clip: text;
+          animation-delay: 3.1s;
           -webkit-text-fill-color: transparent;
         }
       }
