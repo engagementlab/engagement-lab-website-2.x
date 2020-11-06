@@ -8,7 +8,7 @@
         The Engagement Lab offers an MA in Media Design.
     </h2>
 
-    <p class="column is-5-desktop is-full-tablet is-full-mobile blurb">
+    <p class="column is-5-desktop is-full-tablet is-11-mobile blurb">
         {{ content.programDescription }}
     </p>
     <div class="column">
@@ -24,7 +24,7 @@
         ></cdn-image>
     </div>
 
-    <div class="column is-full">
+    <div class="column is-full-tablet is-11-mobile">
         <h1 class="uppercase">
             Learning Objectives
         </h1>
@@ -66,13 +66,13 @@
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-full-mobile">
+    <div class="column is-half-tablet is-11-mobile">
         <div *ngFor="let index of [0, 1]">
             <h3 class="blurb">{{ curricula[index].name }}</h3>
             <p class="desc">{{ curricula[index].description }}</p>
         </div>
     </div>
-    <div class="column is-full-mobile">
+    <div class="column is-11-mobile">
         <div *ngFor="let index of [2, 3]">
             <h3 class="blurb">{{ curricula[index].name }}</h3>
             <p class="desc">{{ curricula[index].description }}</p>
