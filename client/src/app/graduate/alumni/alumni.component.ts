@@ -84,7 +84,7 @@ export class GraduateAlumniComponent implements OnInit {
         tl.add({
             targets: '.slider #scholars',
             translateY: '-100%',
-            delay: 3000,
+            delay: 2000,
         });
         tl.add({
             targets: '.slider #designers',
@@ -93,7 +93,7 @@ export class GraduateAlumniComponent implements OnInit {
         tl.add({
             targets: '.slider #designers',
             translateY: '-200%',
-            delay: 3000,
+            delay: 2000,
         });
         tl.add({
             targets: '.slider #makers',
@@ -102,7 +102,7 @@ export class GraduateAlumniComponent implements OnInit {
         tl.add({
             targets: '.slider #makers',
             translateY: '-300%',
-            delay: 3000,
+            delay: 2000,
         });
     }
 

@@ -9,13 +9,12 @@
 
 <section
     id="resources"
-    class="columns is-multiline is-mobile is-centered"
     *ngIf="content"
 >
     <div
         #resourceList
         *ngFor="let resource of content; let i = index"
-        class="resource column is-3-tablet is-11-mobile"
+        class="resource"
     >
         <a href="{{ resource.url || resource.file.url }}">
             <cdn-image
