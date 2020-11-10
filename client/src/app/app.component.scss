@@ -1,35 +1,448 @@
-
 @import '../styles/_variables';
 
-#menu-overlay {
-    position: fixed;
-    z-index: 2;
-    opacity: 0;
-    display: none;
-    background-color: white;
-    top: 0;
-    left: 0;
-    width: 100%;
+@include keyframes(border-anim) {
+  0% {
+    border-width: 0;
+  }
+
+  20% {
+    border-width: 20px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+
+  80% {
+    border-width: 20px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+
+  100% {
+    border-width: 0;
+    background-color: rgba($color: #000000, $alpha: 0);
+    z-index: -1;
+  }
+}
+
+@include keyframes(banner) {
+  0% {
+    top: -96px;
+  }
+
+  20% {
+    top: 20px;
+  }
+
+  80% {
+    top: 20px;
+  }
+
+  100% {
+    top: -96px;
+  }
+}
+
+@include keyframes(banner-tab) {
+  0% {
+    @include translate(0, -20px);
+  }
+
+  100% {
+    @include translate(0, 0);
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+
+  @include transition(opacity, 0.4s, ease-in-out);
+
+  &.open {
+    opacity: 1;
+  }
+}
+
+#project-bg {
+  height: 1110px;
+}
+
+// Test home BG
+#home-bg {
+  height: 500px;
+
+  #slides {
+    display: flex;
+    width: 300%;
+    @include transition(transform, 2s, cubic-bezier(0.165, 0.84, 0.44, 1));
+
+    p {
+      display: block;
+      width: 100%;
+      height: 500px;
+      margin: 0;
+
+      &:first-child {
+        background-image: cdn-image('DSC00518-2',
+            f_auto,
+            c_fill,
+            w_1900,
+            h_500,
+            q_100,
+            g_center);
+      }
+
+      &:nth-child(2) {
+        background-image: cdn-image('IMG_4375',
+            f_auto,
+            c_fill,
+            w_1900,
+            h_500,
+            q_100,
+            g_center);
+      }
+
+      &:nth-child(3) {
+        background-image: cdn-image('IMG_4346',
+            f_auto,
+            c_fill,
+            w_1900,
+            h_500,
+            q_100,
+            g_center);
+      }
+    }
+  }
+
+  @include phones {
+    height: 588px;
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+// Subnav for some sections
+.subnav {
+  position: relative;
+  z-index: 5;
+
+  @include pxtoem(16, 18);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  text-align: center;
+
+  .uppercase {
+    display: flex;
+    justify-content: space-between;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  a {
     height: 100%;
+
+    justify-content: center;
+    align-content: center;
+
+    span {
+      border-bottom: 0px solid black;
+      transform-origin: top;
+      @include transition(border-width, 0.2s, linear);
+    }
+
+    &:not(.foldout-btn) {
+
+      &:hover,
+      &.active {
+        span {
+          border-bottom-width: 2px;
+        }
+      }
+    }
+  }
+
+  &.white {
+    a {
+      color: white;
+
+      &:hover,
+      &.active {
+        span {
+          border-color: white;
+        }
+      }
+    }
+  }
+
+  .columns {
+    @include not-phones {
+      height: 44px;
+    }
+
+    .column {
+      height: 100%;
+
+      @include phones {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .border {
+    border-right: 1px solid #ccc;
+  }
+
+  &.flex {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include phones {
+      .foldout {
+        a {
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 50%;
+        }
+      }
+    }
+  }
+
+  &#subnav-research {
+    margin-bottom: 15%;
+  }
+
+  .foldout-btn {
+    svg {
+      @include transition(transform, 0.4s, cubic-bezier(1, 0, 0, 1));
+      @include rotate(0);
+
+      transform-origin: center center;
+
+      path.white {
+        fill: white;
+      }
+    }
+
+    &.open {
+      svg {
+        @include rotate(180);
+      }
+    }
+  }
+
+  .foldout {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+
+    @include mq($until: mobileLg) {
+      justify-content: space-evenly;
+      width: 91%;
+
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      @include transition(max-height, 0.4s, cubic-bezier(1, 0, 0, 1));
+
+      a {
+        opacity: 0;
+        visibility: visible;
+        transform-origin: top;
+        @include translate(0, -100%);
+        @include transition(all, 0.4s, ease);
+      }
+
+      &.open {
+        max-height: 500px;
+
+        a {
+          visibility: visible;
+          opacity: 1;
+          @include translate(0, 0);
+        }
+      }
+    }
+  }
+}
+
+#errors {
+  position: fixed;
+  display: block;
+  border: solid 0px $mango;
+
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  background-color: $yellow;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2%;
+
+  p {
+    font-size: xx-large;
+    color: red;
+  }
+
+  button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    text-decoration: underline;
+  }
+}
+
+#qa-border {
+  position: fixed;
+  display: block;
+  border: solid 0px $mango;
+
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  z-index: 100;
+
+  background-color: rgba($color: #000000, $alpha: 0);
+  animation: border-anim 3s cubic-bezier(1, 0, 0, 1) 0.6s 1 forwards;
 }
 
 #qa-build {
-	position: fixed;
-	bottom: 100%;
-	left: 0;
-	right: 0;
-	color: white;
-	background-color: $tomato;
-	text-align: center;
-	font-weight: bold;
-	font-size: large;
-	z-index: 100;
+  position: fixed;
 
-	#text {
-		font-size: xx-large;
-	}
-	span {
-		vertical-align: top;
-	}
-	
+  top: -96px;
+  left: 0;
+  right: 0;
+
+  color: white;
+  background-color: $mango;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  z-index: 101;
+  padding-bottom: 1%;
+  animation: banner 3s cubic-bezier(1, 0, 0, 1) 0.6s 1 forwards;
+
+  #text {
+    font-size: xx-large;
+  }
+
+  span {
+    vertical-align: top;
+  }
+}
+
+#cc {
+  div {
+    position: relative;
+    z-index: 100;
+  }
+
+  a {
+    color: white;
+  }
+
+  #consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+
+    color: white;
+
+    line-height: 1.5em;
+    display: flex;
+    flex-wrap: nowrap;
+
+    background-color: black;
+
+    text-align: center;
+    padding: 1%;
+    font-size: .9em;
+
+    @include transition(transform, .7s, cubic-bezier(0.190, 1.000, 0.220, 1.000));
+    @include translate(0, 100%);
+
+    &.show {
+      @include translate(0);
+    }
+
+    .cc-message {
+
+      display: block;
+      flex: 1 1 auto;
+      text-align: left;
+      max-width: 100%;
+      margin-right: 1em;
+    }
+
+    #buttons {
+      display: flex;
+      align-items: center;
+      align-content: space-between;
+
+      a {
+        display: block;
+        padding: .4em .8em;
+        font-size: .9em;
+        font-weight: 700;
+        border-width: 2px;
+      }
+
+      #decline {
+        border-style: none;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      #allow {
+        color: black;
+        border-color: transparent;
+        background-color: $mango;
+      }
+    }
+  }
+
+  #revoke {
+    display: none;
+    position: fixed;
+    color: white;
+
+    cursor: pointer;
+
+    flex-wrap: nowrap;
+
+    background-color: black;
+    left: 3em;
+    bottom: 0;
+
+    padding: .4%;
+
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+
+    @include transition(transform, .7s, cubic-bezier(0.190, 1.000, 0.220, 1.000));
+    @include translate(0, 1.4em);
+
+    &.show {
+      @include not-phones {
+        display: inline-block;
+      }
+    }
+
+    &:hover {
+      @include translate(0%);
+    }
+  }
 }

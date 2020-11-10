@@ -1,0 +1,116 @@
+<section id="bg" *ngIf="content">
+    <div class="columns is-multiline">
+        <h2 class="column is-full">{{ content.name }}</h2>
+        <div class="blurb column is-four-fifths-desktop">
+            {{ content.cohortYear.label }}
+        </div>
+        <div
+            class="column is-4"
+            *ngIf="content.team && content.team.length > 0"
+        >
+            <h1 class="uppercase sm">
+                Team
+            </h1>
+            <span *ngFor="let person of content.team">
+                <a routerLink="/people/{{ person.key }}"
+                    >{{ person.name.first }} {{ person.name.last }}<br /> </a
+            ></span>
+        </div>
+        <div class="column is-4">
+            <h1 class="uppercase sm">
+                Faculty Advisor
+            </h1>
+            <span
+                ><a routerLink="/people/{{ content.faculty.key }}"
+                    >{{ content.faculty.name.first }}
+                    {{ content.faculty.name.last }}<br /> </a
+            ></span>
+        </div>
+        <div
+            class="column"
+            *ngIf="content.partners && content.partners.length > 0"
+        >
+            <h1 class="uppercase sm">
+                Partner Organization<span *ngIf="content.partners.length > 1"
+                    >s</span
+                >
+            </h1>
+            <span *ngFor="let partner of content?.partners"
+                >{{ partner.name }}<br
+            /></span>
+        </div>
+        <div
+            class="column is-4"
+            *ngIf="content.resources && content.resources.length > 0"
+        >
+            <h1 class="uppercase sm">
+                Related Links
+            </h1>
+
+            <span *ngFor="let link of content.resources">
+                <a *ngIf="link.file" href="{{ link.file.url }}"
+                    >{{ link.name }}<br
+                /></a>
+                <a *ngIf="!link.file" href="{{ link.file.url }}"
+                    >{{ link.name }}<br
+                /></a>
+            </span>
+        </div>
+        <div class="column is-4">
+            <h1 class="uppercase sm">
+                Download
+            </h1>
+            <span
+                ><a href="{{ content.thesis.url }}" class="href"
+                    >Thesis Document</a
+                ></span
+            >
+        </div>
+        <div class="column">
+            <h1 class="uppercase sm">
+                Contact
+            </h1>
+            <span
+                ><a routerLink="/people/{{ content.pointOfContact.key }}"
+                    >{{ content.pointOfContact.name.first }}
+                    {{ content.pointOfContact.name.last }}<br /> </a
+            ></span>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-4"></div>
+        <div class="column is-9">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.primaryImage.public_id }}"
+                width="1044"
+                [autoFormat]="true"
+                [responsive]="true"
+                [alt]="'Primary image for ' + content.name + ' thesis page.'"
+                describedby="primary-caption"
+            ></cdn-image>
+            <p *ngIf="content.primaryImageDescription" id="primary-caption">
+                {{ content.primaryImageDescription }}
+            </p>
+        </div>
+    </div>
+
+    <div class="columns is-multiline">
+        <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
+            <h1 class="uppercase">Problem Space</h1>
+            <p>{{ content.problem }}</p>
+            <h1 class="uppercase">Proposed Intervention</h1>
+            <p>{{ content.intervention }}</p>
+            <h1 class="uppercase">Social Impact</h1>
+            <p>{{ content.impact }}</p>
+        </div>
+        <div class="column is-full">
+            <slideshow
+                [images]="content.projectImages"
+                [title]="content.name"
+                [captions]="content.imageDescriptions"
+            ></slideshow>
+        </div>
+    </div>
+</section>

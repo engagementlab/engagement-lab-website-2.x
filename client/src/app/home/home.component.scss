@@ -1,0 +1,345 @@
+@import '~src/styles/_variables';
+@import '~src/styles/_mixins';
+
+a {
+  color: black;
+
+  &:visited {
+    color: black;
+  }
+
+  &.view {
+
+    display: flex;
+    justify-content: flex-end;
+
+    h1 {
+      display: flex;
+
+      font-family: 'Overpass';
+      font-size: 1em;
+      font-weight: 600;
+      letter-spacing: normal;
+    }
+
+    @include phones {
+      svg {
+        max-width: 16px;
+      }
+    }
+
+  }
+}
+
+#particles {
+  position: absolute;
+}
+
+#intro {
+
+  padding-bottom: 12%;
+
+  h1 {
+    font-weight: 300;
+    @include pxtoem(32, 48);
+
+    @include phones {
+      padding: 0;
+    }
+
+    span {
+      display: inline-block;
+      opacity: 0;
+    }
+
+    a {
+      border-bottom: 1px solid black;
+    }
+
+    strong {
+      font-weight: 300;
+
+      &:nth-of-type(1) {
+        color: $mango;
+      }
+
+      &:nth-of-type(2) {
+        color: $tomato;
+      }
+
+      &:nth-of-type(3) {
+        color: $green-blue;
+      }
+    }
+  }
+
+
+  @include keyframes(fade-tagline) {
+    0% {
+      background-size: 50%;
+    }
+
+    100% {
+      background-size: 30000%;
+
+    }
+  }
+
+  #tagline {
+
+    font-family: 'LunchtypeMedium';
+    @include pxtoem(28, 36);
+    line-height: 1.41;
+    letter-spacing: 0.5px;
+
+    #inner {
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    @include transition(clip-path, .5s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+    .cover {
+      position: absolute;
+      height: 100%;
+
+      background: rgb(255, 255, 255);
+    }
+
+    ::ng-deep p {
+
+      strong {
+        background: black;
+        animation: fade-tagline 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s 1 forwards;
+
+        &:nth-child(1) {
+          background: linear-gradient(90deg, $tomato 1%, black 1%);
+          background-size: 50%;
+          background-clip: text;
+          animation-delay: 2.2s;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &:nth-child(2) {
+          background: linear-gradient(90deg, $green-blue 1%, black 1%);
+          background-size: 50%;
+          background-clip: text;
+          animation-delay: 2.6s;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &:nth-child(3) {
+          background: linear-gradient(90deg, $mango 1%, black 1%);
+          background-size: 50%;
+          background-clip: text;
+          animation-delay: 3.1s;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+  }
+
+  #button {
+    position: relative;
+    display: inline-block;
+    width: 460px;
+    z-index: 2;
+
+    opacity: 0;
+
+    @include transition(all, .2s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+    transform-origin: top center;
+
+    &.closed {
+      @include translate(0, -100%);
+      opacity: 0;
+    }
+
+    @include phones {
+      width: 100%;
+    }
+
+  }
+
+  // MC Email form
+  #newsletter-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    #error {
+      display: none;
+      opacity: 0;
+      @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+      &.open {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+
+  #newsletter {
+    @include translate(0, -100%);
+    justify-content: space-between;
+    width: 460px;
+    opacity: 0;
+
+    @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+    @include phones {
+      width: 100%;
+    }
+
+    &.open {
+      @include translate(0);
+      opacity: 1;
+    }
+
+    h3 {
+      font-size: 1em;
+    }
+
+    @include newsletter-form;
+
+  }
+
+}
+
+#news-wrap {
+
+  background-color: black;
+  color: white;
+
+  padding: 2%;
+  margin-top: 17%;
+
+  a {
+    svg {
+      @include translate(0, -7px);
+
+      #arrow {
+        @include transition(transform, .2s, ease-in-out);
+      }
+    }
+
+    &:hover {
+      svg {
+        #arrow {
+          // @include transition(transform, .2s, ease-in-out);
+          @include translate(15px, -15px);
+        }
+      }
+    }
+  }
+
+  a,
+  h1 {
+    color: white;
+  }
+
+  h1 {
+    font-size: 1.12em;
+  }
+
+  p {
+    &.name {
+      margin-bottom: 1%;
+      font-size: 1.5em;
+      font-weight: 500;
+      line-height: 1.17;
+      letter-spacing: 0.5px;
+    }
+
+    &.type {
+      line-height: 1.25;
+      letter-spacing: 1.3px;
+    }
+
+    &.byline {
+      font-size: 1em;
+      line-height: 1.25;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  #news {
+    padding-left: 2%;
+    padding-right: 6%;
+  }
+
+  .item {
+    @include phones {
+      padding: 0;
+    }
+  }
+
+}
+
+#events {
+
+  margin-top: 10%;
+
+  @include phones {
+    margin-top: 35%;
+  }
+
+  .view {
+    svg {
+      @include transition(transform, .2s, ease-in-out);
+    }
+
+    &:hover {
+      svg {
+        @include translate(15%);
+      }
+    }
+  }
+
+  h1 {
+    font-size: 1.12em;
+  }
+
+  h2 {
+    font-size: 2.7em;
+    font-weight: 400;
+    line-height: 1.07;
+    letter-spacing: 1.3px;
+
+    margin-top: 0;
+
+    @include mobile-only {
+      font-size: 1.5em;
+    }
+  }
+
+  .item {
+
+    // What a fustercluck of padding
+    &:not(.first) {
+      .columns {
+        margin-top: 5%;
+      }
+    }
+
+    &.first {
+      margin-top: 3%;
+    }
+
+    .columns {
+      margin-bottom: 1%;
+    }
+
+    .date {
+      font-size: 1.9em;
+      padding-top: 0;
+
+      @include mobile-only {
+        font-size: 1.55em;
+      }
+    }
+  }
+
+}

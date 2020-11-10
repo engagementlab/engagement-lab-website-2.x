@@ -1,0 +1,156 @@
+@import "~src/styles/_variables";
+
+@keyframes show-shape {
+
+  0% {
+    opacity: 0;
+    @include translate(-2%, 5%);
+  }
+
+  100% {
+    opacity: 1;
+    @include translate(0, 0);
+  }
+
+}
+
+h1.white {
+  color: white;
+}
+
+section {
+
+  svg {
+    .shape {
+      display: none;
+      animation: show-shape 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) .2s both;
+    }
+
+  }
+
+  // Initiative coloring
+  &.civic-smart-cities {
+    #header {
+      color: $mango;
+    }
+
+    .project {
+      &:hover {
+        color: $mango;
+        border-bottom-color: $mango !important;
+      }
+    }
+
+    #mango {
+      display: block;
+    }
+  }
+
+  &.engaged-journalism {
+    #header {
+      color: $tomato;
+    }
+
+    .project {
+      &:hover {
+        color: $tomato;
+        border-bottom-color: $tomato !important;
+      }
+    }
+
+    #red {
+      display: block;
+    }
+  }
+
+  &.health-advocacy {
+    #header {
+      color: $green-blue;
+    }
+
+    .project {
+      &:hover {
+        color: $green-blue;
+        border-bottom-color: $green-blue !important;
+      }
+    }
+
+    #greenblue {
+      display: block;
+    }
+  }
+}
+
+.bleed {
+  margin-left: -4%;
+  margin-right: -4%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#upper {
+
+  @include phones {
+    color: white;
+    background-color: black;
+
+    #header {
+      margin: 0;
+    }
+  }
+
+  #text {
+    height: 468px;
+    padding-top: 2%;
+
+    h2,
+    h3 {
+      color: white;
+    }
+  }
+}
+
+#description {
+  color: white;
+  background-color: black;
+}
+
+p,
+h3 {
+  &.blurb {
+    @include pxtoem(28, 36);
+  }
+}
+
+#featured {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+#projects {
+
+  margin-top: 15%;
+
+  .project {
+    padding: 0;
+
+    .bg {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      max-height: 330px;
+
+      overflow: hidden;
+    }
+  }
+
+  @include not-phones {
+    margin-top: 0;
+  }
+
+  h4 {
+    font-size: 1.7em;
+  }
+
+}

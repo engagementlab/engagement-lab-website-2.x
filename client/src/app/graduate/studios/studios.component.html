@@ -1,0 +1,64 @@
+<section
+    id="intro"
+    class="columns is-mobile is-multiline no-margin"
+    *ngIf="content"
+>
+    <h2 class="column is-full-tablet is-11-mobile">
+        Thesis Studios
+    </h2>
+
+    <h3 class="column is-3-tablet is-11-mobile blurb">
+        {{ content.studiosBlurb }}
+    </h3>
+
+    <div id="filters" class="uppercase column columns is-mobile is-full">
+        <span class="bold column is-1">Year:</span>
+        <span class="controls column"
+            ><a
+                aria-label="Button to filter thesis projects by all years"
+                [class.active]="!currentSelector"
+                (click)="applySelector(null)"
+                >All</a
+            >
+            <a
+                *ngFor="let cohort of cohorts"
+                [attr.aria-label]="
+                    'Button to filter projects by ' +
+                    cohort.name.replace('Cohort', '') +
+                    'year'
+                "
+                [class.active]="currentSelector === cohort.key"
+                (click)="applySelector(cohort.key)"
+            >
+                {{ cohort.name.replace('Cohort', '') }}
+            </a>
+        </span>
+    </div>
+</section>
+
+<section id="projects" class="columns is-multiline no-margin" *ngIf="projects">
+    <ng-container #projectList *ngFor="let project of projects">
+        <div
+            *ngIf="isSelected(project.cohortYear.key)"
+            class="project view-tooltip column is-3-tablet is-11-mobile"
+        >
+            <a
+                routerLink="/graduate/projects/{{ project.key }}"
+                *ngIf="project.key !== 'dummy'"
+            >
+                <div class="bg">
+                    <span role="tooltip">view</span>
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ project.thumb.public_id }}"
+                        autoFormat="true"
+                        [responsive]="true"
+                        height="350"
+                        alt="Thumbnail image for '{{ project.name }}' project"
+                    ></cdn-image>
+                </div>
+                <h4>{{ project.name }}</h4>
+            </a>
+        </div>
+    </ng-container>
+</section>

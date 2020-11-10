@@ -1,95 +1,104 @@
-/**
- * Engagement Lab SCSS Mixin Library
- * 
- * created by Johnny Richardson
- * 2017-19
- * ==========
- */
+@mixin newsletter-form {
 
-//  You must specify these vars before importing this package:
-$cloudinary-account: 'cloudinary' !default;
-$cdn-product: 'homepage' !default;
+  @include keyframes(check) {
 
-@import '_animation';
-@import '_breakpoint';
-@import '_placeholder';
-@import '_pxem';
-@import '_transforms';
-
-/**
-* Apply any type of filter to element.
-* @usage: 
-    filter(grayscale, 100%), etc:
-    sepia          -> filter: sepia(100%);
-    saturate       -> filter: saturate(0%);
-    hue-rotate     -> filter: hue-rotate(45deg);
-    invert         -> filter: invert(100%);
-    brightness     -> filter: brightness(15%);
-    contrast       -> filter: contrast(200%);
-    blur           -> filter: blur(2px);
-*/
-@mixin filter($filter-type, $filter-amount) {
-    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
-    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
-    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
-    -o-filter: $filter-type+unquote('(#{$filter-amount})');
-    filter: $filter-type+unquote('(#{$filter-amount})');
-}
-
-/**
-* Apply box shadow to element.
-* @usage: box-shadow(2px, 2px, 2px, 1px, rgba(0, 0, 0, 0.2))
-*/
-@mixin box-shadow($top, $left,  $blur, $color, $inset: false) {
-    @if $inset {
-        -webkit-box-shadow: inset $top $left $blur $color;
-        -moz-box-shadow: inset $top $left $blur $color;
-        box-shadow: inset $top $left $blur $color;
+    0% {
+      opacity: 0;
+      @include scale(0);
     }
 
-    @else {
-        -webkit-box-shadow: $top $left $blur $color;
-        -moz-box-shadow: $top $left $blur $color;
-        box-shadow: $top $left $blur $color;
+    100% {
+      opacity: 1;
+      @include scale(1);
     }
-}
+  }
 
-/**
-* Apply border radius to element.
-* @usage: border-radius(20)
-*/
-@mixin border-radius($radius) {
+  @include keyframes(subscribed) {
 
-    -webkit-border-radius: #{$radius + "px"};
-    -moz-border-radius: #{$radius + "px"};
-    border-radius: #{$radius + "px"};
-
-}
-
-/**
-* Apply border radius to element.
-* @usage: border-radius(20)
-*/
-@mixin circular-background($color) {
-
-    background: -moz-radial-gradient(center, ellipse cover, $color 1%, $color 70%, white 1%);
-    background: -webkit-radial-gradient(center, ellipse cover, $color 1%, $color 70%, white 1%);
-    background: radial-gradient(ellipse at center, $color 1%, $color 70%, white 1%);
-}
-
-/**
-* Create inline URL to Cloudinary-hosted image with any specified transforms.
-* @usage: cdn-image('bg/home-bg', f_auto, c_scale, w_1280);
-*/
-@function cdn-image($imgName, $options...) {
-
-    $imgParams: ();
-    $version: random(500000) + 10000000;
-    $strPrefix: "https://res.cloudinary.com/#{$cloudinary-account}/image/upload/";
-
-    @each $value in $options {
-        $strPrefix: $strPrefix + ","+ $value;
+    0% {
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
     }
 
-    @return url("#{$strPrefix}/v#{$version}/#{$cdn-product}/#{$imgName}");
+    100% {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  border-bottom: solid 2px black;
+
+  input[type=email] {
+    width: 100%;
+    font-family: 'LunchtypeRegular';
+    font-size: 1.5em;
+    color: black;
+    opacity: 1;
+    border: none;
+
+    padding-bottom: 2%;
+    padding-left: 4%;
+
+    @include placeholder {
+      font-family: 'LunchtypeRegular';
+      color: black;
+      opacity: 1;
+    }
+  }
+
+  button {
+    display: inline-block;
+    cursor: pointer;
+    @include transition(all, .3s, ease-in-out);
+
+    &:hover {
+      @include translate(15%, 0);
+    }
+  }
+
+  form {
+    width: 100%;
+    @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+  }
+
+
+  #subscribed {
+    display: none;
+
+    span {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    svg {
+      @include scale(0);
+      opacity: 0;
+    }
+
+    font-family: 'LunchtypeRegular';
+    font-size: 1.5em;
+  }
+
+  &.invalid {
+    border-bottom-color: $tomato;
+  }
+
+  &.done {
+
+    form,
+    button {
+      display: none;
+    }
+
+    #subscribed {
+      display: block;
+
+      span {
+        animation: subscribed 1s cubic-bezier(1.000, 0.000, 0.000, 1.000) .6s 1 forwards;
+      }
+
+      svg {
+        animation: check .6s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1 forwards;
+      }
+    }
+  }
 }

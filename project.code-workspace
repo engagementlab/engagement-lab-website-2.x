@@ -1,13 +1,38 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "/Users/Johnny/Documents/Projects/el-bootstrapper"
-		},
-		{
-			"path": "/Users/Johnny/Documents/Projects/el-scss"
-		}
-	]
+    "settings": {
+        "eslint.validate": [
+            "javascript",
+            {
+                "language": "typescript"
+            }
+        ],
+        "editor.formatOnSave": true,
+        "eslint.linkTask.enabled": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+        "[javascript]": {
+            "editor.formatOnSave": false
+        },
+        "[typescript]": {
+            "editor.formatOnSave": true
+        }
+    },
+    "folders": [{
+            "name": "./",
+            "path": "."
+        },
+        {
+            "path": "./api",
+            "name": "API"
+        },
+        {
+            "path": "./client",
+            "name": "Client"
+        },
+        {
+            "path": "./scripts",
+            "name": "Scripts"
+        }
+    ]
 }

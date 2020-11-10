@@ -1,0 +1,19 @@
+<a routerLink="/studios/studio/{{ studio.key }}">
+    <cdn-image
+        cloudinaryPrefix="/"
+        cloudinaryId="{{ studio.thumb.public_id }}"
+        width="301"
+        autoFormat="true"
+        [responsive]="true"
+        [alt]="'Thumbnail image for project' + studio.name"
+    ></cdn-image>
+    <h3 class="blurb">{{ studio.name }}</h3>
+    <h1 class="uppercase sm no-margin">Sponsor</h1>
+    <span>{{ studio.sponsor }}</span>
+    <h1 class="uppercase sm no-margin">Department</h1>
+    <span>{{ studio.department }}</span>
+    <h1 class="uppercase sm no-margin">Faculty</h1>
+    <span *ngFor="let person of studio.faculty"
+        >{{ person.name.first }} {{ person.name.last }}<br
+    /></span>
+</a>

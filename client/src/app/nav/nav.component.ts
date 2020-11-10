@@ -1,151 +1,186 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import {
+    Component,
+    ViewChild,
+    ElementRef,
+    QueryList,
+    ViewChildren,
+    AfterViewInit,
+} from '@angular/core';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
-import { DataService } from '../utils/data.service';
 import { filter } from 'rxjs/operators';
+import { DataService } from '../utils/data.service';
 
-import { TimelineLite, Circ, TweenLite } from "gsap";
 import { environment } from '../../environments/environment';
-import * as _ from 'underscore';
+
+import Mark from 'mark.js';
+
+interface Link {
+    url?: string;
+    href?: string;
+    label: string;
+    enabled?: boolean;
+}
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements AfterViewInit {
+    public navLinks: Link[] = [
+        { url: '', label: 'Home', enabled: true },
+        { url: 'studios', label: 'Studios', enabled: true },
+        { url: 'graduate', label: 'Graduate Program', enabled: true },
+        { url: 'research', label: 'Research', enabled: true },
+        { url: 'people', label: 'People', enabled: true },
+        { url: 'about', label: 'About', enabled: true },
+    ];
 
-  public navLinks: object[] = [
-      {url: 'about', label: 'About'},
-      {url: 'projects', label: 'Projects'},
-      {url: 'publications', label: 'Publications'},
-      {url: 'masters', label: 'Masters Program'},
-      {url: 'getinvolved', label: 'Get Involved'}
-  ];
-  public searchResults: any[];
-  public searchEnabled: boolean;
+    public navSubLinks: Link[] = [
+        { url: 'resources', label: 'Resources', enabled: true },
+        { url: 'events', label: 'Events Calendar', enabled: true },
+        {
+            href: 'https://medium.com/engagement-lab-emerson-college',
+            label: 'Lab Blog',
+            enabled: true,
+        },
+        { url: 'partner', label: 'Partner With Us', enabled: true },
+        { url: 'getinvolved', label: 'Get Involved', enabled: true },
+        // TODO: in CMS?
+        {
+            href:
+                'https://giving.emerson.edu/give-now?fid=h0ZJD8gm3R4%3d&fdesc=i%2bI0v73Km%2bQCb1p7mjPYeYE68k%2f8URMG',
+            label: 'Donate',
+            enabled: true,
+        },
+        { url: 'jobs', label: 'Jobs', enabled: true },
+    ];
 
-  private tl: TimelineLite; 
-  private btn: HTMLElement;
-  
-  private wasLoading: boolean = false;
-  private currentUrl: string;
+    public searchResults: any;
+    public searchEnabled: boolean;
+    public searchQuery: string;
+    public logoSm: boolean;
+    private currentUrl: string;
+    private lastMenuScroll: number;
 
-  @ViewChild('searchField') searchField: ElementRef;
-  @ViewChild('menuLinks') menuLinks: ElementRef;
+    @ViewChild('nav') nav: ElementRef;
 
-  constructor(private _router: Router, private _dataSvc: DataService) {
+    @ViewChild('searchField') searchField: ElementRef;
 
-    // Get nav route when nav ends
-    _router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(e => {
-      this.currentUrl = _router.url;
-    });
+    @ViewChild('menuLinks') menuLinks: ElementRef;
 
-		this._dataSvc.isLoading.subscribe( value => {
+    @ViewChild('home') homeLogo: ElementRef;
 
-        if(this.wasLoading && !value) {
-          if(document.getElementById('menu-btn').classList.contains('open')) 
-              this.tl.reverse();
-        }
-            
-        this.wasLoading = value;
+    @ViewChild('menu') menu: ElementRef;
 
-    });
-  
-    this.searchEnabled = environment.searchEnabled;
-  
-  }
+    @ViewChild('menuBtn') menuBtn: ElementRef;
 
-  ngAfterViewInit() {
+    @ViewChild('menuOpen') menuBtnOpen: ElementRef;
 
-  	let menu = document.getElementById('menu');
-    let show = document.querySelector('#menu-btn .close');
-    let hide = document.querySelector('#menu-btn .open');
+    @ViewChild('menuClose') menuBtnClose: ElementRef;
 
-    this.btn = document.getElementById('menu-btn');
-   	this.tl = new TimelineLite({paused:true, reversed:true, onReverseComplete:() => {
-      menu.querySelectorAll('h3 a').forEach((el: HTMLElement) => {
-        el.classList.remove('visible');
-      });
-    }});
-    
-  	let tl = this.tl;
+    @ViewChild('menuBg') menuBg: ElementRef;
 
-    tl.add('start');
-    tl.set([document.getElementById('nav'), this.btn], {className:'+=open'}, 'start');
-    
-    tl.fromTo(show, .7, {xPercent:100, autoAlpha:0}, { xPercent:0, autoAlpha:1, ease:Circ.easeOut});
-    tl.fromTo(hide, .7, {xPercent:0, autoAlpha:1}, { xPercent:100, autoAlpha:0, ease:Circ.easeOut}, '-=.7');
+    @ViewChildren('searchResultsList') searchResultsList: QueryList<
+        HTMLDivElement
+    >;
 
-    tl.fromTo(menu, .7, {autoAlpha:0}, {autoAlpha:1, display:'flex', ease:Circ.easeOut}, '-=.7');
-    tl.fromTo(document.getElementById('menu-overlay'), .5, {autoAlpha:0, display:'none'}, {autoAlpha:1, display:'block'}, '-=.7');
+    constructor(private _router: Router, private dataSvc: DataService) {
+        // Get nav route when nav ends
+        this._router.events
+            .pipe(filter(e => e instanceof NavigationEnd))
+            .subscribe(e => {
+                this.currentUrl = this._router.url;
 
-    tl.staggerFromTo(menu.querySelectorAll('h3'), .2, {autoAlpha:0, yPercent:-20}, {autoAlpha:1, yPercent:0}, .1, '-=.5', () => {
-      menu.querySelectorAll('h3 a').forEach((el: HTMLElement) => {
-        el.classList.add('visible');
-      });
-    });
+                // Adjust logo size based on page
+                this.logoSm = this.currentUrl !== '/';
+            });
 
-  }
+        _router.events
+            .pipe(filter(e => e instanceof NavigationStart))
+            .subscribe(e => {
+                // Close menu when nav starts
+                if (
+                    this.menuBtn &&
+                    this.menuBtn.nativeElement.classList.contains('isOpen')
+                ) {
+                    this.openCloseNav();
+                }
+            });
 
-  openCloseNav() {
-
-    if(!this.tl.reversed()) {
-      this.tl.reverse().timeScale(1.3);
-      
-      this.searchField.nativeElement.value = '';
-      this.searchResults = null;
+        this.searchEnabled = environment.searchEnabled;
     }
-    else
-      this.tl.play();
 
-  }
+    ngAfterViewInit() {
+        this.searchResultsList.changes.subscribe(t => {
+            const instance = new Mark(
+                document.querySelectorAll('#results .result'),
+            );
+            instance.mark(this.searchQuery);
+        });
+    }
 
-  // Is passed route active?
-  itemActive(route: string) {
+    openCloseNav(): void {
+        this.menuBtn.nativeElement.classList.toggle('isOpen');
+        this.menu.nativeElement.classList.toggle('isOpen');
+        this.menuBg.nativeElement.classList.toggle('open');
+        this.menuBtnClose.nativeElement.classList.toggle('isOpen');
+        this.homeLogo.nativeElement.classList.toggle('hide');
 
-    return '/'+route == this.currentUrl;
+        this.menuBg.nativeElement.classList.add('wasOpened');
+        this.menu.nativeElement.classList.add('wasOpened');
 
-  }
+        document.querySelector('body').classList.toggle('noscroll');
+    }
 
-  // If on home when logo clicked, just close menu
-  logoClick() {
+    // Is passed route active?
+    itemActive(route: string) {
+        if (!this.currentUrl) return;
 
-    if(this.currentUrl === '/')
-      this.openCloseNav();
+        let active = false;
+        // Base root
+        if (route === '') active = `/${route}` === this.currentUrl;
+        else active = this.currentUrl.indexOf(`/${route}`) > -1;
 
-  }
+        // Handle "partner" case
+        if (route === 'partner' && this.currentUrl === '/studios/partnered')
+            return false;
 
-  searchFocus() {
+        return active;
+    }
 
-    TweenLite.to(this.menuLinks.nativeElement, .4, {height:0, autoAlpha:0});
+    // If on home when logo clicked, just close menu
+    logoClick() {
+        if (this.currentUrl === '/') this.openCloseNav();
+    }
 
-    this.searchField.nativeElement.className = 'focus';
+    onMenuScroll(event) {
+        const currentScroll = event.currentTarget.scrollTop;
 
-  }
+        // Hide close btn if scrolling past threshold where menu items cover it
+        if (this.lastMenuScroll < 80 && currentScroll > 80)
+            this.menuBtnClose.nativeElement.classList.add('hide');
+        else if (currentScroll < 80)
+            this.menuBtnClose.nativeElement.classList.remove('hide');
 
-  searchBlur() {
+        this.lastMenuScroll = currentScroll;
+    }
 
-    TweenLite.to(this.menuLinks.nativeElement, .4, {height:'auto', autoAlpha:1});
+    async searchFocus() {
+        this.searchField.nativeElement.className = 'focus';
+        this.searchResults = await this.dataSvc.searchQuery('civic');
+        this.searchQuery = 'civic';
+    }
 
-    this.searchField.nativeElement.className = '';
-    
-  }
+    searchBlur() {
+        this.searchField.nativeElement.className = '';
+    }
 
+    async searchTyping(value: string) {
+        if (value.length < 2) return;
 
-  searchTyping(value: string) {
-
-    if(value.length < 1)
-      this.searchResults = null;
-
-    // if(value.length < 3) return;
-
-    this._dataSvc.getDataForUrl('search/all/'+value, true).subscribe(response => {
-      
-      this.searchResults = response;
-        
-    });
-
-  }
-
+        this.searchQuery = value;
+        this.searchResults = await this.dataSvc.searchQuery(value);
+    }
 }

@@ -1,0 +1,145 @@
+<!-- Research intro -->
+<section id="intro" class="column is-8 is-11-mobile">
+    <h2>Research</h2>
+    <h3 class="blurb">{{ researchBlurb }}</h3>
+
+    <div id="filters" class="uppercase">
+        <div id="initiatives" class="columns is-mobile is-multiline">
+            <span class="bold column is-full-mobile is-2-tablet"
+                >Initiatives:</span
+            >
+            <span class="controls column"
+                ><a
+                    aria-label="Button to filter projects by all initiatives"
+                    [class.active]="!currentSelectorKey"
+                    (click)="applySelector(null)"
+                    >All Research</a
+                >
+                <a
+                    *ngFor="let initiative of initiatives"
+                    [attr.aria-label]="
+                        'Button to filter projects by ' +
+                        initiative.name +
+                        ' initiative'
+                    "
+                    [class.active]="currentSelectorKey === initiative.key"
+                    (click)="applySelector(initiative.key)"
+                >
+                    {{ initiative.name }}
+                </a>
+            </span>
+        </div>
+        <div id="status" class="columns is-mobile is-multiline">
+            <span class="bold column is-full-mobile is-2-tablet">Status:</span>
+            <span class="controls column">
+                <a
+                    aria-label="Button to filter projects by any status"
+                    data-toggle="all"
+                    (click)="applyStatusSelector(null)"
+                    [class.active]="!currentStatusSelector"
+                    >Any</a
+                >
+                <a
+                    aria-label="Button to filter projects by ongoing status'"
+                    [class.active]="currentStatusSelector === 'ongoing'"
+                    (click)="applyStatusSelector('ongoing')"
+                    >Ongoing</a
+                >
+                <a
+                    aria-label="Button to filter projects by completed status'"
+                    [class.active]="currentStatusSelector === 'completed'"
+                    (click)="applyStatusSelector('completed')"
+                    >Completed</a
+                >
+            </span>
+        </div>
+    </div>
+</section>
+<section
+    id="projects"
+    class="columns is-multiline is-mobile no-margin"
+    *ngIf="projects"
+>
+    <ng-container #projectList *ngFor="let project of projects; let i = index">
+        <div
+            *ngIf="
+                project.key !== 'dummy' &&
+                isSelected(project.key) &&
+                isStatusSelected(project.status | lowercase)
+            "
+            [@inOutAnimation]
+            class="project view-tooltip column is-4-tablet is-11-mobile"
+            [class.dummy]="project.key === 'dummy'"
+        >
+            <!-- We have to map array of initiative keys for filtering -->
+            <a
+                routerLink="/projects/{{
+                    project.customUrl ? project.customUrl : project.key
+                }}"
+            >
+                <div class="bg">
+                    <span role="tooltip">view</span>
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ project.image.public_id }}"
+                        [responsive]="true"
+                        [loading]="'none'"
+                        height="350"
+                        alt="Thumbnail image for '{{ project.name }}' project"
+                        *ngIf="project.image !== undefined"
+                    ></cdn-image>
+                </div>
+                <h4>{{ project.name }}</h4>
+            </a>
+        </div>
+    </ng-container>
+</section>
+
+<!-- Archived Projects -->
+<!-- 
+<section id="archive" class="listing" *ngIf="projectsArchived">
+    <div
+        #archiveList
+        class="item column is-full"
+        *ngFor="let project of projectsArchived; let first = first"
+    >
+        <a
+            routerLink="/projects/{{ project.key }}"
+            class="theme-{{ project.sortOrder % 3 }}"
+        >
+            <hr *ngIf="!first" />
+
+            <div class="columns">
+                <h3 class="column is-3-tablet is-2-desktop type">
+                    {{ project.projectType }}
+                </h3>
+
+                <div class="name column no-margin">
+                    {{ project.name }}
+                </div>
+                <div class="column arrow">
+                    <svg
+                        width="102"
+                        height="72"
+                        fill="none"
+                        viewBox="0 0 102 72"
+                    >
+                        <path
+                            stroke="#000"
+                            stroke-width="2"
+                            d="M0 35.27h99.866M65.268.71l35.307 35.201-35.307 35.202"
+                        />
+                    </svg>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+<div id="archive-mobile" class="column is-full hidden-not-mobile">
+    <app-button
+        label="archived projects"
+        class="archive"
+        route="/projects/archive"
+        ariaLabel="Go to 'archived projects' page"
+    ></app-button>
+</div> -->

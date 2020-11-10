@@ -1,0 +1,15 @@
+{
+	"name": "Engagement Lab Home",
+	"directory": "elab",
+	"subdomain": "elab",
+	"database": "engagement-lab",
+	"admin_nav": {
+		"studios": ["Studio", "StudiosIntro"],
+		"Graduate Program": ["masters", "Curriculum", "mdprojects"],
+		"research": ["researches", "projects", "publications", "initiatives"],
+		"people": ["people"],
+		"files/resources": ["tools", "resources"],
+		"about": ["About", "Contact", "partners", "PartnerIntro", "jobs"],
+		"other": ["events", "NewsItem", "Filter"]
+	}
+}

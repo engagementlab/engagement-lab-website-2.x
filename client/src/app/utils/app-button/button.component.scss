@@ -2,22 +2,23 @@
 
 a.btn {
 
-	display: inline-block;
-	font-weight: 700;
+  display: inline-block;
+  font-weight: 400;
   font-size: 1em;
+  letter-spacing: 0.5px;
   color: black;
   text-decoration: none;
 
   border: solid 4px black;
 
-  padding-left: 16%;
-  padding-right: 16%;
-  padding-top: 7%;
-  padding-bottom: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
   @include phones {
     font-size: 1.1em;
-    
+
     padding-left: 21%;
     padding-right: 21%;
     padding-top: 14%;
@@ -28,13 +29,14 @@ a.btn {
   text-align: center;
   position: relative;
   overflow: hidden;
-  
+
   @include transition(all, 150ms, cubic-bezier(0.64, 0.57, 0.67, 1.53));
 
   &:hover {
     cursor: pointer;
     @include scale(1.05);
   }
+
   &:active {
     cursor: pointer;
     @include scale(.9);
@@ -65,6 +67,11 @@ a.btn {
       padding-bottom: 6%;
     }
 
+  }
+
+  &.medium {
+    font-family: 'LunchtypeMedium';
+    @include pxtoem(24, 36);
   }
 
 }

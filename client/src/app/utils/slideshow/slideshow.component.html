@@ -1,0 +1,27 @@
+<div id="slideshow">
+    <div class="gutter-sizer"></div>
+    <div class="img" *ngFor="let slide of images; let i = index">
+        <cdn-image
+            cloudinaryPrefix="/"
+            cloudinaryId="{{ slide.public_id }}"
+            [autoFormat]="true"
+            [responsive]="true"
+            loading="none"
+            width="500"
+            [alt]="'Image for ' + title + ' project slideshow'"
+            [describedby]="'description-' + i"
+        ></cdn-image>
+        <p
+            id="description-{{ i }}"
+            [class.hidden]="captions[i] === '#'"
+            class="desc medium"
+            *ngIf="captions && captions[i]"
+        >
+            {{
+                captions[i] !== '#'
+                    ? captions[i]
+                    : 'No description for this image'
+            }}
+        </p>
+    </div>
+</div>

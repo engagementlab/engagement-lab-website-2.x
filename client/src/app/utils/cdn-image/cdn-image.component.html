@@ -1,36 +1,98 @@
 <!-- For non-responsive png/jpg images -->
-<cl-image *ngIf="(cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===false && svg===false && autoFormat===false" 
-    public-id="{{imgId}}" 
+<cl-image
+    *ngIf="
+        cloudinaryId !== undefined &&
+        cloudinaryId.length > 0 &&
+        responsive === false &&
+        svg === false &&
+        autoFormat === false
+    "
+    public-id="{{ imgId }}"
     secure="true"
     fetch-format="auto"
-    crop="scale" attr.alt="{{alt}}" class="cdn-image">
-
-  <!-- Photo (jpg,png) transforms -->
-  <cl-transformation attr.width="{{width}}" attr.quality="{{quality}}" attr.effect="{{effect}}" attr.gravity="{{gravity}}" ></cl-transformation>
-  
+    crop="scale"
+    attr.alt="{{ alt }}"
+    attr.aria-describedby="{{ describedby }}"
+    attr.loading="{{ loading }}"
+    aria-role="img"
+    class="cdn-image"
+>
+    <!-- Photo (jpg,png) transforms -->
+    <cl-transformation
+        quality="100"
+        attr.width="{{ width }}"
+        attr.effect="{{ effect }}"
+        attr.gravity="{{ gravity }}"
+    ></cl-transformation>
 </cl-image>
 
-<cl-image *ngIf="cloudinaryId !== undefined && cloudinaryId.length > 0 && autoFormat && responsive===true && svg===false" 
+<cl-image
+    *ngIf="
+        cloudinaryId !== undefined &&
+        cloudinaryId.length > 0 &&
+        autoFormat &&
+        responsive === true &&
+        svg === false
+    "
     responsive
-    public-id="{{imgId}}" 
+    public-id="{{ imgId }}"
     secure="true"
     width="auto"
     fetch-format="auto"
-    crop="scale" attr.alt="{{alt}}" class="cdn-image">
-
-  <!-- Photo (jpg,png) transforms -->
-  <cl-transformation attr.width="{{widthCss}}" attr.quality="{{quality}}" attr.effect="{{effect}}" attr.gravity="{{gravity}}" ></cl-transformation>
-  
+    crop="scale"
+    attr.alt="{{ alt }}"
+    attr.aria-describedby="{{ describedby }}"
+    attr.loading="{{ loading }}"
+    aria-role="img"
+    class="cdn-image"
+>
+    <!-- Photo (jpg,png) transforms -->
+    <cl-transformation
+        quality="100"
+        attr.width="{{ widthCss }}"
+        attr.effect="{{ effect }}"
+        attr.gravity="{{ gravity }}"
+    ></cl-transformation>
 </cl-image>
 
 <!-- Automated image sizing based on client width -->
-<cl-image *ngIf="(cloudinaryId !== undefined && cloudinaryId.length > 0) && responsive===true && autoFormat===false && svg===false"
-        secure="true" public-id="{{imgId}}" attr.width="auto:breakpoints:{{width}}" 
-        sizes="100vw" client_hints="true" attr.alt="{{alt}}" [style]="widthCss" class="cdn-image">
-      
-  <cl-transformation crop="scale" dpr="auto" crop="fill"></cl-transformation>
+<cl-image
+    *ngIf="
+        cloudinaryId !== undefined &&
+        cloudinaryId.length > 0 &&
+        responsive === true &&
+        autoFormat === false &&
+        svg === false
+    "
+    secure="true"
+    public-id="{{ imgId }}"
+    sizes="100vw"
+    client_hints="true"
+    attr.alt="{{ alt }}"
+    attr.aria-describedby="{{ describedby }}"
+    attr.loading="{{ loading }}"
+    attr.width="auto:breakpoints:{{ width }}"
+    aria-role="img"
+    [style]="widthCss"
+    class="cdn-image"
+>
+    <!-- Photo (jpg,png) transforms -->
+    <cl-transformation
+        quality="100"
+        dpr="auto"
+        attr.crop="{{ crop }}"
+        attr.effect="{{ effect }}"
+    ></cl-transformation>
 </cl-image>
 
 <!-- Load svg w/ no changes -->
-<cl-image *ngIf="(cloudinaryId !== undefined && cloudinaryId.length > 0) && svg"
-        secure="true" public-id="{{imgId}}" attr.alt="{{alt}}" [style]="widthCss" class="cdn-image"></cl-image>
+<cl-image
+    *ngIf="cloudinaryId !== undefined && cloudinaryId.length > 0 && svg"
+    secure="true"
+    public-id="{{ imgId }}"
+    attr.alt="{{ alt }}"
+    attr.aria-describedby="{{ describedby }}"
+    [style]="widthCss"
+    aria-role="img"
+    class="cdn-image"
+></cl-image>

@@ -1,0 +1,7 @@
+@import "~src/styles/_variables";
+
+#intro {
+  @include ng-img {
+    margin-top: 15%;
+  }
+}

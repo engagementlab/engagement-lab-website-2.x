@@ -1,0 +1,68 @@
+<section id="intro" class="column is-8 is-11-mobile">
+    <h2>Resources & Tools</h2>
+    <h3 class="blurb">
+        Many of our research projects result in tools, games, workshops, or
+        processes that are free to use. Please browse our resources and use them
+        for your projects. We ask only that you provide appropriate credit.
+    </h3>
+</section>
+
+<section
+    id="resources"
+    *ngIf="content"
+>
+    <div
+        #resourceList
+        *ngFor="let resource of content; let i = index"
+        class="resource"
+    >
+        <a href="{{ resource.url || resource.file.url }}">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ resource.image.public_id }}"
+                [responsive]="true"
+                alt="Thumbnail image for '{{ resource.name }}' tool or resource"
+                *ngIf="resource.image !== undefined"
+            ></cdn-image>
+            <h4 class="name no-margin">
+                <span>{{ resource.name }}</span>
+                <!-- download icon -->
+                <svg
+                    viewBox="0 0 29 29"
+                    width="29"
+                    height="29"
+                    *ngIf="resource.file.url"
+                >
+                    <path
+                        class="dl-arrow"
+                        d="M 23.819 13.462 L 22.359 11.998 L 15.536 18.821 L 15.536 0 L 13.464 0 L 13.464 18.821 L 6.639 11.996 L 5.183 13.46 L 14.5 22.786 Z"
+                    ></path>
+                    <path d="M 0 26.929 L 29 26.929 L 29 29 L 0 29 Z"></path>
+                </svg>
+                <!-- url icon -->
+                <svg
+                    viewBox="0 0 26 26"
+                    width="26"
+                    height="26"
+                    *ngIf="resource.url && resource.url.length > 0"
+                >
+                    <g transform="matrix(0.091574, 0, 0, 0.091574, 0, 0)">
+                        <g>
+                            <path
+                                class="url-arrow"
+                                d="M266.422,0h-97.625c-9.65,0-17.5,7.851-17.5,17.5c0,9.649,7.85,17.5,17.5,17.5h55.377l-92.375,92.374   c-3.307,3.305-5.127,7.699-5.127,12.375c0,4.676,1.819,9.069,5.125,12.371c3.306,3.309,7.699,5.13,12.375,5.13   c4.674,0,9.069-1.82,12.376-5.127l92.374-92.375v55.377c0,9.649,7.851,17.5,17.5,17.5c9.649,0,17.5-7.851,17.5-17.5V17.5   C283.922,7.851,276.071,0,266.422,0z"
+                            ></path>
+                            <path
+                                d="M201.137,253.922H30V82.785h128.711l30-30H15c-8.284,0-15,6.716-15,15v201.137c0,8.284,6.716,15,15,15h201.137   c8.284,0,15-6.716,15-15V95.211l-30,30V253.922z"
+                            ></path>
+                        </g>
+                    </g>
+                </svg>
+            </h4>
+            <h4 class="uppercase no-margin">{{ resource.project }}</h4>
+            <p>{{ resource.summary }}</p>
+            <h4 class="uppercase" *ngIf="resource.date">Date Created</h4>
+            <p class="no-margin">{{ resource.date | date: 'mediumDate' }}</p>
+        </a>
+    </div>
+</section>

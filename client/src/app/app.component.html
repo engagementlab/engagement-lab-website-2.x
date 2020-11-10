@@ -1,14 +1,275 @@
-<app-nav></app-nav>
+<div id="project-bg" class="bg"></div>
+<!-- <canvas id="canvas" height="1000" style="position: absolute; left:0;top:0">
+</canvas> -->
 
-<div id="menu-overlay"></div>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
-
-<!-- QA Build Banner -->
-<div *ngIf="isQABuild === true" id="qa-build"> 
-
-    <img src="https://res.cloudinary.com/engagement-lab-home/image/upload/v1544209738/homepage-2.0/qa-build.svg" style="max-width:50px" alt="QA Build icon"/>
+<!-- QA Build Banner/Border -->
+<div *ngIf="isQABuild === true" id="qa-build">
+    <svg viewBox="0 14.759 50 47.117" width="50" height="47.117">
+        <path
+            d="M 48.961 50.813 L 31.299 18.344 C 28.461 13.567 21.543 13.561 18.702 18.344 L 1.04 50.813 C -1.861 55.695 1.651 61.876 7.337 61.876 L 42.663 61.876 C 48.344 61.876 51.862 55.7 48.961 50.813 Z M 25 56.017 C 23.385 56.017 22.07 54.702 22.07 53.087 C 22.07 51.472 23.385 50.158 25 50.158 C 26.615 50.158 27.93 51.472 27.93 53.087 C 27.93 54.702 26.615 56.017 25 56.017 Z M 27.93 44.298 C 27.93 45.913 26.615 47.228 25 47.228 C 23.385 47.228 22.07 45.913 22.07 44.298 L 22.07 29.65 C 22.07 28.035 23.385 26.72 25 26.72 C 26.615 26.72 27.93 28.035 27.93 29.65 L 27.93 44.298 Z"
+            style="fill: rgb(255, 255, 255);"
+        ></path>
+    </svg>
     <span id="text">QA BUILD</span>
     <div>Work in progress. Not intended for external use.</div>
-
 </div>
+
+<div *ngIf="isQABuild === true" id="qa-border"></div>
+<app-nav></app-nav>
+
+<!-- Show on all studios pages -->
+<section *ngIf="showStudiosNav" id="subnav" class="container desktop">
+    <nav id="subnav-studios" class="subnav">
+        <div class="uppercase no-margin">
+            <a
+                routerLink="/studios"
+                [class.active]="subNavitemActive('/studios')"
+                [attr.aria-label]="'Link to go to studios landing page'"
+                ><span>Studios</span></a
+            >
+            <a
+                #studiosBtn
+                id="studios-btn"
+                class="hidden-not-mobile foldout-btn"
+                [attr.aria-label]="'Button to fold out studio types menu'"
+                (click)="toggleStudios()"
+                ><span>
+                    Types
+                    <svg viewBox="0 117.325 10 5.218" width="10" height="5.218">
+                        <g
+                            transform="matrix(0.020381, 0, 0, 0.020381, -0.000001, 114.933815)"
+                        >
+                            <g>
+                                <path
+                                    d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0
+                              c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667
+                              C491.696,131.368,491.696,124.605,487.536,120.445z"
+                                    [class.white]="studiosActive()"
+                                ></path>
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+            <div #studiosEl id="studio-types" class="foldout">
+                <a
+                    routerLink="/studios/partnered"
+                    [class.active]="subNavitemActive('/studios/partnered')"
+                    [attr.aria-label]="'Link to go to Partnered Studio page'"
+                    ><span>Partnered Studio</span></a
+                >
+                <!-- <a
+                    routerLink="/studios/thesis"
+                    [class.active]="subNavitemActive('/studios/thesis')"
+                    [attr.aria-label]="
+                        'Link to go to Graduate Thesis Studio page'
+                    "
+                    ><span>Graduate Thesis Studio</span></a
+                > -->
+                <a
+                    routerLink="/studios/cocurricular"
+                    [class.active]="subNavitemActive('/studios/cocurricular')"
+                    [attr.aria-label]="
+                        'Link to go to Co-Curricular Studio page'
+                    "
+                    ><span>Co-Curricular Studio</span></a
+                >
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!-- Show on all research pages -->
+<nav
+    *ngIf="showResearchNav"
+    id="subnav-research"
+    class="subnav"
+    [class.white]="initiativeActive()"
+>
+    <div class="columns is-mobile is-multiline uppercase no-margin">
+        <a
+            class="column is-2-tablet is-11-mobile border"
+            routerLink="/research/projects"
+            [class.active]="subNavitemActive('/research/projects')"
+            [attr.aria-label]="'Link to go to projects page'"
+            ><span>
+                Projects
+            </span></a
+        >
+        <a
+            class="column is-2-tablet is-11-mobile border"
+            routerLink="/research/publications"
+            [class.active]="subNavitemActive('/research/publications')"
+            [attr.aria-label]="'Link to go to publications page'"
+            ><span>
+                Publications
+            </span>
+        </a>
+        <a
+            #initiativesBtn
+            id="initiatives-btn"
+            class="column is-11-mobile hidden-not-mobile foldout-btn"
+            [attr.aria-label]="'Button to fold out initiatives menu'"
+            (click)="toggleInitiatives()"
+            ><span>
+                Initiatives
+                <svg viewBox="0 117.325 10 5.218" width="10" height="5.218">
+                    <g
+                        transform="matrix(0.020381, 0, 0, 0.020381, -0.000001, 114.933815)"
+                    >
+                        <g>
+                            <path
+                                d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0
+                              c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667
+                              C491.696,131.368,491.696,124.605,487.536,120.445z"
+                                [class.white]="initiativeActive()"
+                            ></path>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+        </a>
+        <div
+            #initiativesEl
+            id="initiatives"
+            class="column is-11-mobile foldout"
+        >
+            <a
+                *ngFor="let initiative of initiatives"
+                [routerLink]="'/research/initiatives/' + initiative.key"
+                [class.active]="
+                    subNavitemActive('/research/initiatives/' + initiative.key)
+                "
+                [attr.aria-label]="
+                    'Link to go to ' + initiative.name + ' initiative'
+                "
+            >
+                <span>
+                    {{ initiative.name }}
+                </span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Show on all grad pages -->
+<nav *ngIf="showGradNav" id="subnav" class="subnav container desktop">
+    <div class="uppercase no-margin">
+        <div>
+            <a
+                routerLink="/graduate/curriculum"
+                [class.active]="subNavitemActive('/graduate/curriculum')"
+                [attr.aria-label]="
+                    'Link to go to graduate program curriculum page'
+                "
+                ><span>Curriculum + Faculty</span></a
+            >
+        </div>
+        <div>
+            <a
+                routerLink="/graduate/students"
+                [class.active]="subNavitemActive('/graduate/students')"
+                [attr.aria-label]="
+                    'Link to go to graduate program students and alumni page'
+                "
+                ><span>Students + Alumni</span></a
+            >
+        </div>
+       <!-- <div>
+             <a
+                routerLink="/graduate/projects"
+                [class.active]="subNavitemActive('/graduate/projects')"
+                [attr.aria-label]="
+                    'Link to go to graduate program thesis projects page'
+                "
+                ><span>Thesis Projects</span></a
+            >
+        </div> -->
+        <div>
+            <a
+                routerLink="/graduate/apply"
+                [class.active]="subNavitemActive('/graduate/apply')"
+                [attr.aria-label]="
+                    'Link to go to graduate program info and application page'
+                "
+                ><span>Apply</span></a
+            >
+        </div>
+    </div>
+</nav>
+
+<section class="container desktop">
+    <h3 id="errors" *ngIf="dataErrors">
+        <p>Content service errors:</p>
+        <div *ngIf="!imageErrors">
+            It looks like one or more required fields are missing on this page.
+            Details:
+            <span>
+                {{ dataErrors }}
+            </span>
+        </div>
+        <div *ngIf="imageErrors">
+            One or more required images are missing on this page, and so we
+            can't render it. The query causing this error is "{{
+                imageErrors
+            }}".
+        </div>
+        <br />
+        <br />
+        <button class="no-pad" (click)="dismissErrors()">Dismiss</button>
+    </h3>
+
+    <div id="menu-overlay"></div>
+    <div>
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</section>
+<section id="cc">
+    <div
+        #consent
+        id="consent"
+        class="show"
+        aria-live="dialog"
+        aria-live="polite"
+        aria-label="cookieconsent"
+        aria-describedby="cookieconsent:desc"
+    >
+        <!--googleoff: all--><span id="cookieconsent:desc" class="cc-message"
+            >We use cookies to track anonymous usage data on this website.
+            <a
+                aria-label="learn more about cookies"
+                role="button"
+                tabindex="0"
+                class="cc-link"
+                href="/privacy"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                >Learn more</a
+            ></span
+        >
+        <div id="buttons">
+            <a
+                id="decline"
+                aria-label="deny cookies"
+                role="button"
+                tabindex="0"
+                (click)="consentClick(false)"
+                >Decline</a
+            ><a
+                id="allow"
+                aria-label="allow cookies"
+                role="button"
+                tabindex="0"
+                (click)="consentClick(true)"
+                >Allow cookies</a
+            >
+        </div>
+        <!--googleon: all-->
+    </div>
+    <div (click)="consentShowClick()" #revoke id="revoke">
+        <a class="href">
+            Cookie Policy
+        </a>
+    </div>
+</section>

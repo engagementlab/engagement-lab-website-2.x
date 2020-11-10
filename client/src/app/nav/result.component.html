@@ -1,8 +1,17 @@
-<a class="result" routerLink="/{{type}}s/{{key}}">
-    <div [innerHtml]="nameMarkup">
+<a class="result" routerLink="/{{ type }}s/{{ key }}">
+    <div class="name">
+        <div [innerHtml]="nameMarkup"></div>
+        <span class="type">{{ type }}</span>
     </div>
-    <p class="content" [innerHtml]="contentMarkup"></p>
-    <p class="type">{{type}}</p>
+    <p *ngIf="content && content.length > 0" class="content">{{ content }}</p>
 
-    <hr />
+    <svg viewBox="8 47.532 80 1" width="80" height="1">
+        <rect
+            x="8"
+            y="47.532"
+            width="80"
+            height="1"
+            style="fill: rgb(255, 255, 255); fill-opacity: 0.5;"
+        ></rect>
+    </svg>
 </a>

@@ -1,69 +1,126 @@
-<section id="modal" (click)="closeModal()">
+<section id="modal">
+    <div id="content" class="columns is-mobile is-multiline no-margin">
+        <div id="close" class="column is-full" (click)="closeModal()">
+            <svg viewBox="0 -0.001 41 34" width="41" height="34">
+                <path
+                    d="M 21.439 16.996 L 40.806 0.936 C 41.064 0.721 41.064 0.374 40.806 0.16 C 40.548 -0.054 40.13 -0.054 39.871 0.16 L 20.504 16.221 L 1.137 0.16 C 0.874 -0.05 0.455 -0.044 0.202 0.174 C -0.046 0.386 -0.046 0.723 0.202 0.936 L 19.569 16.996 L 0.202 33.057 C -0.061 33.268 -0.068 33.615 0.185 33.832 C 0.439 34.05 0.858 34.056 1.12 33.846 C 1.126 33.841 1.131 33.837 1.137 33.832 L 20.504 17.772 L 39.871 33.832 C 40.134 34.043 40.553 34.037 40.806 33.819 C 41.054 33.606 41.054 33.27 40.806 33.057 L 21.439 16.996 Z"
+                    style="fill: rgb(255, 255, 255);"
+                ></path>
+            </svg>
+        </div>
 
-  <div id="header">
+        <div class="column is-full">
+            <h2 class="no-margin">
+                {{ person.name.first }} {{ person.name.last }}
+            </h2>
 
-      <cdn-image id="logo" cloudinaryId="logos/el-logo-team" width="141" alt="Engagement Lab logo" aria-role="image"></cdn-image>
+            <p>{{ person.title }}</p>
+            <p *ngIf="person.cohortYear">
+                Masters Student, {{ person.cohortYear.label }}
+            </p>
+            <p *ngIf="person.onLeave">
+                <em>On Leave</em>
+            </p>
+        </div>
+        <div class="column is-full-mobile is-one-third-tablet">
+            <cdn-image
+                id="portrait"
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ person.image.public_id }}"
+                width="397"
+                [autoFormat]="true"
+                alt="Portrait image of {{ person.name.first }} {{
+                    person.name.last
+                }}"
+            ></cdn-image>
+            <div *ngIf="person.contact && person.contact.length > 0">
+                <h3 class="uppercase no-margin">Contact</h3>
+                {{ person.contact }}
+            </div>
+            <div *ngIf="person.relatedLinks && person.relatedLinks.length > 0">
+                <h3 class="uppercase no-margin">Related Links</h3>
+                <span *ngFor="let link of person.relatedLinks"
+                    ><a href="{{ link }}" class="href">
+                        {{ link }}
+                    </a>
+                    <br />
+                </span>
+            </div>
+        </div>
 
-      <a id="menu-btn">
-          <span></span>
-          <span></span>
-      </a>
-  </div>
+        <div id="bio" class="column is-full-mobile is-7-tablet">
+            <!-- Bio markup -->
+            <div [innerHtml]="person.bio.html"></div>
+        </div>
 
-  <div id="content" class="columns">
-
-      <div id="top" class="column is-two-thirds-mobile is-one-third-tablet">
-          <h1 class="uppercase">
-              {{person.name.first}} {{person.name.last}}
-          </h1>
-
-          <p class="hidden-tablet-plus">{{person.title}}</p>
-
-          <cdn-image cloudinaryPrefix="/" cloudinaryId="{{person.image.public_id}}" autoFormat="true" effect="grayscale"
-              width="225" alt="Portrait image of {{person.name.first}} {{person.name.last}}"></cdn-image>
-      </div>
-
-      <div id="bio" class="column is-four-fifths-mobile is-half-tablet">
-
-          <!-- Bio markup -->
-          <p class="hidden-mobile" *ngIf="!person.cohortYear">{{person.title}}</p>
-          <p class="hidden-mobile" *ngIf="person.cohortYear">Masters Student, {{person.cohortYear.name}}</p>
-
-          <div class="www" [innerHtml]="person.bio.html">
-          </div>
-
-          <div class="columns is-multiline is-mobile">
-
-              <div class="www column is-full-mobile" *ngIf="person.websiteURL.length > 0">
-                  <a href="{{person.websiteURL}}">{{person.websiteURL | prettyUrl}}</a>
-              </div>
-
-              <div class="column is-one-third" *ngIf="person.email.length > 0">
-                  {{person.email}}
-              </div>
-
-              <!-- Social links -->
-              <div id="social" class="column is-full columns is-mobile">
-
-                  <a href="{{person.fbURL}}" role="link" class="column is-one-fifth" *ngIf="person.fbURL && person.fbURL.length > 0">
-                      <cdn-image cloudinaryId="logos/fb" width="12" alt="Facebook link image"></cdn-image>
-                  </a>
-                  <a href="{{person.twitterURL}}" role="link" class="column is-one-fifth" *ngIf="person.twitterURL && person.twitterURL.length > 0">
-                      <cdn-image cloudinaryId="logos/tw" width="24" alt="Twitter link image"></cdn-image>
-                  </a>
-                  <a href="{{person.igURL}}" role="link" class="column is-one-fifth" *ngIf="person.igURL && person.igURL.length > 0">
-                      <cdn-image cloudinaryId="logos/ig" width="24" alt="Instagram link image"></cdn-image>
-                  </a>
-                  <a href="{{person.linkedInURL}}" role="link" class="column is-one-fifth" *ngIf="person.linkedInURL && person.linkedInURL.length > 0">
-                      <cdn-image cloudinaryId="logos/li" width="24" alt="LinkedIn link image"></cdn-image>
-                  </a>
-                  <a href="{{person.githubURL}}" role="link" class="column is-one-fifth" *ngIf="person.githubURL && person.githubURL.length > 0">
-                      <cdn-image cloudinaryId="logos/gh" width="24" alt="Github link image"></cdn-image>
-                  </a>
-
-              </div>
-          </div>
-      </div>
-  </div>
-
+        <div
+            id="projects"
+            class="column is-11-mobile is-one-third-tablet"
+            *ngIf="projects && projects.length > 0"
+        >
+            <h3 class="uppercase">Selected Projects</h3>
+            <div id="thumbs">
+                <div
+                    class="project-thumb"
+                    *ngFor="let project of projects; let i = index"
+                    (click)="projectClick(i)"
+                >
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ getProjectImg(project) }}"
+                        width="146"
+                        [autoFormat]="true"
+                        alt="Thumbnail image for {{ project.name }}"
+                    ></cdn-image>
+                </div>
+            </div>
+        </div>
+        <div
+            id="border"
+            class="column is-1 hidden-mobile"
+            *ngIf="selectedProject"
+        ></div>
+        <div id="preview" class="column" *ngIf="selectedProject">
+            <ng-container
+                #projectList
+                *ngFor="let project of projects; let i = index"
+            >
+                <a
+                    [@projectSelectAnimation]
+                    *ngIf="selectedProject === project"
+                    [routerLink]="
+                        (selectedProject.__typename === 'Project'
+                            ? '/research/projects/'
+                            : '/graduate/studios/') + selectedProject.key
+                    "
+                >
+                    <img
+                        src="https://res.cloudinary.com/engagement-lab-home/image/upload/e_brightness:0,g_auto:none/c_scale,f_auto,w_800/v1/{{
+                            selectedProject.thumb
+                                ? selectedProject.thumb.public_id
+                                : selectedProject.image.public_id
+                        }}"
+                        alt="Large preview image for {{ selectedProject.name }}"
+                    />
+                    <h3 class="uppercase no-margin">
+                        <span>
+                            {{ selectedProject.name }}
+                        </span>
+                        <svg
+                            viewBox="0 0 32 23"
+                            width="32"
+                            height="23"
+                            fill="none"
+                        >
+                            <path
+                                stroke="#fff"
+                                stroke-width="2"
+                                d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                            ></path>
+                        </svg>
+                    </h3>
+                </a>
+            </ng-container>
+        </div>
+    </div>
 </section>

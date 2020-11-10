@@ -1,0 +1,58 @@
+@import "~src/styles/_variables";
+
+#resources {
+
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  @include phones {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include tablet-portrait {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resource {
+    margin: 20px;
+
+    @include ng-img {
+      max-height: 330px
+    }
+
+    .name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.7em;
+    }
+
+    .uppercase {
+      font-weight: 900;
+    }
+
+    .dl-arrow {
+      @include transition(transform, .2s, ease-in-out);
+    }
+
+    .url-arrow {
+      @include transition(transform, .2s, ease-in-out);
+      @include translate(-40%, 40%);
+    }
+
+    &:hover {
+
+      .dl-arrow {
+        @include translate(0, 13%);
+      }
+
+      .url-arrow {
+        @include translate(0%, 0%);
+      }
+    }
+
+  }
+}

@@ -1,0 +1,81 @@
+<section class="{{ content.key }}" *ngIf="content !== undefined">
+    <div id="upper" class="bleed">
+        <h1 id="header" class="uppercase">Research Initiative</h1>
+        <div id="text">
+            <h2>{{ content.name }}</h2>
+            <h3 class="blurb">{{ content.description }}</h3>
+        </div>
+    </div>
+
+    <div
+        id="description"
+        class="columns is-mobile is-multiline no-margin bleed"
+    >
+        <div class="column is-1"></div>
+        <h1 class="column is-11-mobile is-10-tablet uppercase white">
+            why we care
+        </h1>
+        <div class="column is-1-tablet is-2-desktop"></div>
+        <p class="column blurb is-11-mobile is-10-tablet is-8-desktop">
+            {{ content.longDescription }}
+        </p>
+    </div>
+
+    <div *ngIf="content.featuredProject">
+        <h1 class="uppercase">Featured Work</h1>
+        <div id="featured" class="columns">
+            <div class="column is-6-tablet is-8-desktop">
+                <h2>{{ content.featuredProject.name }}</h2>
+                <p class="blurb">{{ content.featuredProjectBlurb }}</p>
+
+                <app-button
+                    label="See Details"
+                    [route]="
+                        '/research/projects/' + content.featuredProject.key
+                    "
+                    [ariaLabel]="
+                        'Go to ' +
+                        content.featuredProject.name +
+                        ' project page'
+                    "
+                ></app-button>
+            </div>
+            <div class="column">
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ content.featuredProject.image.public_id }}"
+                    autoFormat="true"
+                    width="700"
+                    alt="Thumbnail image for '{{
+                        content.featuredProject.name
+                    }}' project"
+                    *ngIf="content.featuredProject.image !== undefined"
+                ></cdn-image>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 class="uppercase">Latest Work</h1>
+        <hr class="thick" />
+        <div id="projects" class="columns is-multiline no-margin">
+            <a
+                class="project view-tooltip column is-3-tablet"
+                routerLink="/research/projects/{{ project.key }}"
+                *ngFor="let project of content.projects"
+            >
+                <div class="bg">
+                    <span role="tooltip">view</span>
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ project.image.public_id }}"
+                        [responsive]="true"
+                        height="350"
+                        alt="Thumbnail image for '{{ project.name }}' project"
+                        *ngIf="project.image !== undefined"
+                    ></cdn-image>
+                </div>
+                <h4>{{ project.name }}</h4>
+            </a>
+        </div>
+    </div>
+</section>

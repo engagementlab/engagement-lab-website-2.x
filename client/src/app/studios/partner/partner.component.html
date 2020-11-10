@@ -1,0 +1,63 @@
+<!-- Partnered studios intro -->
+<section *ngIf="content">
+    <div id="intro" class="columns is-multilineis-mobile">
+        <div class="column is-half-tablet is-11-mobile">
+            <h2>Partnered Studio</h2>
+            <h3 class="blurb">{{ content.studiosIntro.partneredSummary }}</h3>
+        </div>
+        <div class="column">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{
+                    content.studiosIntro.partneredSummaryImage.public_id
+                }}"
+                width="900"
+                [autoFormat]="true"
+                [responsive]="true"
+                alt="Partnered Studio flavor image"
+            ></cdn-image>
+        </div>
+    </div>
+    <div class="columns is-mobile">
+        <div class="column is-full-tablet is-11-mobile">
+            <h1 class="uppercase sm">Curriculum</h1>
+            <h3 class="blurb">
+                {{ content.studiosIntro.partneredCurriculum }}
+            </h3>
+        </div>
+    </div>
+    <div class="columns is-mobile is-multiline">
+        <div class="column is-full-tablet is-11-mobile">
+            <hr class="thick" />
+            <h1 class="uppercase sm">Current Studios</h1>
+
+            <h4
+                *ngIf="
+                    !content.currentStudios || content.currentStudios.length < 1
+                "
+            >
+                None, for now!
+            </h4>
+        </div>
+        <div
+            class="column is-half-tablet is-11-mobile studios"
+            *ngFor="let studio of content.currentStudios"
+        >
+            <studio-thumb [studio]="studio"></studio-thumb>
+        </div>
+        <div class="column is-full-tablet is-11-mobile">
+            <hr class="thick" />
+            <h1 class="uppercase sm">Previous Partnered Studios</h1>
+            <h4 *ngIf="!content.pastStudios || content.pastStudios.length < 1">
+                None, for now!
+            </h4>
+        </div>
+
+        <div
+            class="column is-half is-full-mobile studios"
+            *ngFor="let studio of content.pastStudios"
+        >
+            <studio-thumb [studio]="studio"></studio-thumb>
+        </div>
+    </div>
+</section>

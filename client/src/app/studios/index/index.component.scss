@@ -1,0 +1,48 @@
+@import "~src/styles/_variables";
+
+h3 {
+  font-family: 'LunchtypeMedium';
+}
+
+#buttons {
+  display: inline-flex;
+  justify-content: space-around;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+#types {
+  @include phones {
+    margin: 0;
+  }
+}
+
+#partners {
+  @include phones {
+    @include ng-img {
+      width: 100% !important;
+    }
+  }
+}
+
+.type {
+
+  a {
+    display: block;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: .9em;
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+
+  h3 {
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+
+}

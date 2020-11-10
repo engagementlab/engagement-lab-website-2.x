@@ -1,128 +1,134 @@
-@import '../../styles/_variables';
+@import '~src/styles/_variables';
+@import '~src/styles/_mixins';
 
 footer {
-    width: 100%;
-    margin-top: 28%;
+  width: 100%;
+  margin-top: 28%;
+
+  @include phones {
+    margin-top: 40%;
+    margin-bottom: 25% !important;
+  }
+
+  #logos {
+    cdn-image {
+      &:nth-child(2) {
+        margin-left: 25px;
+      }
+    }
 
     @include phones {
-        margin-top: 40%;
+      margin-top: 10%;
+
+      #el {
+        ::ng-deep img {
+          max-width: 43px !important;
+        }
+      }
+
+      #emerson {
+        ::ng-deep img {
+          max-width: 62px !important;
+        }
+      }
+    }
+  }
+
+  // MC Email form
+
+
+  // MC Email form
+  #newsletter-wrap {
+    #error {
+      display: none;
+      opacity: 0;
+      @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+      &.open {
+        display: block;
+        opacity: 1;
+      }
     }
 
-    #logos {
-        cdn-image {
-            &:nth-child(2) {
-                margin-left: 25px;
-            }
-        }
-
-        @include phones {
-            margin-top: 10%;
-
-            #el {
-                ::ng-deep img {
-                    max-width: 43px !important;
-                }
-            }
-
-            #emerson {
-                ::ng-deep img {
-                    max-width: 62px !important;
-                }
-            }
-        }
-    }
-
-    // MC Email form
     #newsletter {
+      display: flex;
+      @include newsletter-form;
 
-        h3 {
-            font-size: 1em;
-        }
+      h3 {
+        font-size: 1em;
+      }
+    }
+  }
 
-        input[type=email] {
-            width: 100%;
-            font-family: 'LunchtypeRegular';
-            font-size: 1.5em;
-            color: black;
-            opacity: 1;
-            border: none;
-            border-bottom: solid 2px black;
+  @include phones {
+    #social {
+      padding: 0;
+    }
+  }
 
-            padding-bottom: 5%;
-            padding-left: 4%;
-
-            @include placeholder {
-                font-family: 'LunchtypeRegular';
-                color: black;
-                opacity: 1;
-            }
-        }
-
+  #address {
+    #email {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.3em;
     }
 
     @include phones {
-        #social {
-            padding: 0;
-        }
+      font-size: .87em;
+
+      #email {
+        margin-bottom: 0;
+        font-size: 1.15em;
+      }
+    }
+  }
+
+  #top {
+
+    position: absolute;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+
+    cursor: pointer;
+    right: 0;
+    margin-top: -6%;
+    margin-right: -5%;
+
+    transform-origin: center top;
+    @include transform(rotate(-90deg));
+
+    @include phones {
+      margin-top: -10%;
     }
 
-    #address {
-        #email {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        @include phones {
-            font-size: .87em;
-
-            #email {
-                margin-bottom: 0;
-                font-size: 1.15em;
-            }
-        }
+    @include until-tablet-wide {
+      margin-top: -15%;
     }
 
-    #top {
+    span {
+      display: inline-block;
+      background-color: black;
+      height: 2px;
+      width: 100px;
+      margin-right: 10px;
 
-        position: absolute;
-        display: flex;
-        font-size: 14px;
-        font-weight: bold;
-        align-items: center;
-
-        cursor: pointer;
-        right: 0;
-        margin-top: -6%;
-        margin-right: -5%;
-
-        transform-origin: center top;
-        @include transform(rotate(-90deg));
-
-        @include phones {
-            margin-top: -10%;
-        }
-        @include until-tablet-wide {
-            margin-top: -15%;
-        }
-
-        span {
-            display: inline-block;
-            background-color: black;
-            height: 2px;
-            width: 100px;
-            margin-right: 10px;
-
-            @include phones {
-                width: 50px;
-            }
-        }
+      @include phones {
+        width: 50px;
+      }
     }
+  }
 
-    #version {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-size: .7em;
-    }
+  #license {
+    display: flex;
+    align-items: center;
+  }
+
+  #version {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: .7em;
+  }
 }

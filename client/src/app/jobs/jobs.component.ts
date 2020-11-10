@@ -2,25 +2,31 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
 @Component({
-  selector: 'app-jobs',
-  templateUrl: './jobs.component.html',
-  styleUrls: ['./jobs.component.scss']
+    selector: 'app-jobs',
+    templateUrl: './jobs.component.html',
+    styleUrls: ['./jobs.component.scss'],
 })
 export class JobsComponent implements OnInit {
+    public jobs: any;
 
-  public jobs: any[];
+    // eslint-disable-next-line no-useless-constructor
+    constructor(private dataSvc: DataService) {}
 
-  constructor(private _dataSvc: DataService) { 
-  
-    this._dataSvc.getDataForUrl('jobs/get/').subscribe(response => {
-      
-      this.jobs = response;
-      
-    });
-  
-  }
+    async ngOnInit(): Promise<void> {
+        const query = `
+            {
+                allJobs {
+                    date
+                    title
+                    description {
+                        html
+                    }
+                    url
+                }
+            }
+        `;
 
-  ngOnInit() {
-  }
-
+        const result = await this.dataSvc.getSet('jobs', query);
+        this.jobs = result['allJobs'];
+    }
 }

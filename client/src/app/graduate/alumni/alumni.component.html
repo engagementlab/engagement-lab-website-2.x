@@ -1,0 +1,30 @@
+<person-modal
+    *ngIf="currentPerson !== undefined"
+    [person]="currentPerson"
+    (onClose)="closePerson()"
+></person-modal>
+<div class="columns is-multiline is-mobile is-centered no-margin">
+    <h2 class="column is-11-mobile is-full-tablet is-8-widescreen">
+        <span id="prefix">
+            Join a growing community of
+        </span>
+
+        <div id="slider-cover">
+            <div class="slider">
+                <span id="scholars">civic scholars.</span>
+                <span id="designers">civic designers.</span>
+                <span id="makers">civic mediamakers.</span>
+            </div>
+        </div>
+    </h2>
+</div>
+
+<h1 class="uppercase">
+    Students
+</h1>
+<people-grid [people]="students" [cohort]="true"></people-grid>
+
+<h1 class="uppercase">
+    Alumni
+</h1>
+<people-grid [people]="alumni" [alumni]="true"></people-grid>

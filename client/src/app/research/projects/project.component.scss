@@ -1,0 +1,59 @@
+@import "~src/styles/_variables";
+
+#bg {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3%;
+}
+
+h1.sm {
+  font-size: 1.05em;
+}
+
+h3 {
+  font-family: Overpass;
+}
+
+.blurb {
+
+  font-size: 2em;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
+
+  @include mobile-only {
+    font-size: 1.5em;
+    line-height: 1.17;
+    letter-spacing: 0.5px;
+  }
+
+}
+
+.description {
+
+  font-size: 1.5em;
+  line-height: 1.43;
+  letter-spacing: 0.3px;
+
+  margin-top: 15%;
+
+  @include mobile-only {
+    font-size: 1em;
+    line-height: 1.25;
+    margin-top: 33%;
+  }
+
+  h3 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    font-size: 1.1em;
+  }
+
+  .text {
+    font-size: .9em;
+  }
+
+}
+
+#primary {
+  padding-top: 6%;
+}

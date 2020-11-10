@@ -3,16 +3,12 @@ import { CanActivate, ActivatedRouteSnapshot, Router, RouterStateSnapshot } from
 
 @Injectable()
 export class RedirectService implements CanActivate {
+    constructor(_router: Router) {}
 
-  constructor(_router: Router) { }
-
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-
-    setTimeout(() => {
-      window.location.href = route.queryParams['u'];
-    }, 4200);
-    return true;
-
-  }
-
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+        setTimeout(() => {
+            // window.location.href = route.queryParams['u'];
+        }, 4200);
+        return true;
+    }
 }

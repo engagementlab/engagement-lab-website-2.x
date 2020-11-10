@@ -1,0 +1,78 @@
+<!-- Co-curricular Studio intro -->
+<section *ngIf="content">
+    <div id="intro" class="columns is-mobile is-multiline">
+        <div class="column is-half-tablet is-11-mobile">
+            <h2>Co-curricular Studio</h2>
+            <h3 class="blurb">{{ content.coCurricularSummary }}</h3>
+        </div>
+        <div class="column">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.coCurricularSummaryImage.public_id }}"
+                width="900"
+                [autoFormat]="true"
+                [responsive]="true"
+                alt="Co-curricular Studio flavor image"
+            ></cdn-image>
+        </div>
+    </div>
+
+    <div class="columns is-mobile">
+        <div
+            class="column is-full-tablet is-11-mobile"
+            *ngIf="
+                content.coCurricularPhases &&
+                content.coCurricularPhases.length > 0
+            "
+        >
+            <h1 class="uppercase sm">Curriculum</h1>
+            <div id="timeline">
+                <div id="months" class="uppercase">
+                    <h3>sept</h3>
+                    <h3>oct</h3>
+                    <h3>nov</h3>
+                    <h3>dec</h3>
+                    <h3>jan</h3>
+                    <h3>feb</h3>
+                    <h3>mar</h3>
+                    <h3>apr</h3>
+                    <h3>may</h3>
+                    <h3>jun</h3>
+                    <h3>jul</h3>
+                    <h3>aug</h3>
+                </div>
+                <hr />
+
+                <div id="phases">
+                    <div *ngFor="let phase of [1, 2, 3, 4]">
+                        <p class="counter">Phase</p>
+                        <p class="desc">
+                            {{ content.coCurricularPhases[phase - 1] }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns is-mobile is-multiline">
+        <div class="column is-full-tablet is-11-mobile">
+            <hr class="thick" />
+            <h1 class="uppercase sm">Current Studios</h1>
+
+            <h4
+                *ngIf="
+                    !content.currentCoCurricularStudios ||
+                    content.currentCoCurricularStudios.length < 1
+                "
+            >
+                Coming soon!
+            </h4>
+        </div>
+        <div
+            class="column is-half-tablet is-11-mobile studios"
+            *ngFor="let studio of content.currentCoCurricularStudios"
+        >
+            <studio-thumb [studio]="studio"></studio-thumb>
+        </div>
+    </div>
+</section>

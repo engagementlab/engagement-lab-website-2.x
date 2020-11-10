@@ -1,0 +1,21 @@
+<!-- Pubs intro -->
+<section id="intro">
+    <h2>Publications</h2>
+    <hr />
+</section>
+
+<div
+    #publicationsList
+    id="publications"
+    class="columns is-multiline"
+    *ngFor="let group of publicationsGrouped"
+>
+    <!-- Year -->
+    <h3 class="column is-1">{{ group._id }}</h3>
+    <div class="column right">
+        <publication
+            [pub]="pub"
+            *ngFor="let pub of group.publications"
+        ></publication>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+#intro {
+  font-family: 'Overpass';
+
+  a {
+    cursor: pointer;
+  }
+
+  .bold {
+    font-weight: 900;
+  }
+
+  .controls a {
+    margin-right: 2%;
+
+
+    &:hover,
+    &.active {
+      border-bottom: 1px solid black;
+    }
+  }
+}

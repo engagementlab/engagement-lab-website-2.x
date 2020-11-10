@@ -1,0 +1,97 @@
+<section id="bg" *ngIf="content">
+    <div class="columns is-multiline">
+        <h2 class="column is-full" *ngIf="!redirecting">{{ content.name }}</h2>
+        <div class="blurb column is-four-fifths-desktop" *ngIf="!redirecting">
+            {{ content.startYear }} -
+            <span *ngIf="!content.endYear">Present</span
+            ><span *ngIf="content.endYear">{{ content.endYear }}</span>
+            <br />
+            <a href="{{ content?.externalLinkUrl }}" role="link">{{
+                content?.externalLinkUrl | prettyUrl
+            }}</a>
+        </div>
+        <div
+            class="column is-4"
+            *ngIf="content.partners && content.partners.length > 0"
+        >
+            <h1 class="uppercase sm">
+                Partner Organization<span *ngIf="content.partners.length > 1"
+                    >s</span
+                >
+            </h1>
+            <span *ngFor="let partner of content?.partners"
+                >{{ partner.name }}<br
+            /></span>
+        </div>
+        <div
+            class="column is-4"
+            *ngIf="content.projectLeads && content.projectLeads.length > 0"
+        >
+            <h1 class="uppercase sm">
+                Project Leads
+            </h1>
+            <span *ngFor="let person of content?.projectLeads"
+                >{{ person }}<br
+            /></span>
+        </div>
+        <div class="column" *ngIf="content.files && content.files.length > 0">
+            <h1 class="uppercase sm">
+                Resources
+            </h1>
+            <span *ngFor="let resource of content.files"
+                ><a href="{{ resource.file.url }}">{{ resource.name }}</a
+                ><br
+            /></span>
+        </div>
+        <div
+            class="column is-4"
+            *ngIf="content.teamMembers && content.teamMembers.length > 0"
+        >
+            <h1 class="uppercase sm">
+                Team Members
+            </h1>
+            <span *ngFor="let person of content?.teamMembers"
+                >{{ person }}<br
+            /></span>
+        </div>
+        <div class="column is-11-mobile is-7-tablet" id="primary">
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ content.primaryImage.public_id }}"
+                autoFormat="true"
+                [responsive]="true"
+                width="1080"
+                alt="Primary Image for '{{ content.name }}' project"
+                *ngIf="content.primaryImage"
+            ></cdn-image>
+            <span *ngIf="content.primaryImageDescription">{{
+                content.primaryImageDescription
+            }}</span>
+
+            <h1 class="uppercase">Problem Space</h1>
+            <p>{{ content.challengeTxt }}</p>
+            <h1 class="uppercase">Proposed Intervention</h1>
+            <p>{{ content.strategyTxt }}</p>
+            <h1 class="uppercase">Social Impact</h1>
+            <p>{{ content.resultsTxt }}</p>
+        </div>
+        <div
+            class="column is-full"
+            *ngIf="content.publications && content.publications.length > 0"
+        >
+            <hr />
+            <h1 class="uppercase">
+                Related Publications
+            </h1>
+
+            <publication
+                [pub]="pub"
+                *ngFor="let pub of content.publications"
+            ></publication>
+        </div>
+
+        <div class="column is-full">
+            <slideshow [images]="content.projectImages"></slideshow>
+        </div>
+    </div>
+</section>

@@ -1,36 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../utils/data.service';
 
-import * as ismobile from 'ismobilejs';
-
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
+    public content: any;
+    public partners: any[];
 
-  public isPhone: boolean;
-  public isTablet: boolean;
-  public about: any;
-  public partners: any[];
-  public people: any[];
+    constructor(private _dataSvc: DataService) {}
 
-  constructor(private _dataSvc: DataService) { 
-    
-    this.isPhone = ismobile.phone;
-    this.isTablet = ismobile.tablet;
-
-   }
-
-  ngOnInit() {
-
-    this._dataSvc.getDataForUrl('about/get/').subscribe(response => {
-      this.about = response.about[0];    
-      this.partners = response.partners;    
-      this.people = response.people;    
-    });
-
-  }
-
+    async ngOnInit(): Promise<void> {
+        const query = `
+            {
+                allAboutPages {
+                    summary1
+                    summary2
+                    image
+                    {
+                        public_id 
+                    }
+                }
+                allPartners {
+                    name 
+                    image {
+                        public_id
+                    }
+                    url
+                }
+            }
+        `;
+        const response = await this._dataSvc.getSet('about', query);
+        this.content = response['allAboutPages'];
+        this.partners = response['allPartners'];
+    }
 }
