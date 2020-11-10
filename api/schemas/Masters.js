@@ -15,7 +15,6 @@ const Masters = {
       id: ID!
       name: String!
       programDescription: String
-      programDescriptionImage: Image
       partnerships: String!
       phases: [String]!
       learningObjectives: Markdown!
