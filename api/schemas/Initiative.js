@@ -31,6 +31,7 @@ const Initiative = {
         }).populate({
             path: 'projects',
             select: 'key -_id',
+            match: { enabled: true },
         })
             .exec(),
         getInitiative: async (parent, args) => {
@@ -40,6 +41,7 @@ const Initiative = {
             }).populate({
                 path: 'projects',
                 select: 'name key image startYear endYear -_id',
+                match: { enabled: true },
                 options: { sort: 'startYear', },
             }).exec();
             return res;
