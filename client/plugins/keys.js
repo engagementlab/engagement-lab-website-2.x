@@ -43,7 +43,7 @@ const initiativeIdPlugin = async (route, config) => {
     const response = await queryData('allInitiativePages');
     const routes = [];
     response.allInitiativePages.forEach((res) => {
-        routes.push({ route: `/research/initiative/${res.key}` });
+        routes.push({ route: `/research/initiatives/${res.key}` });
     });
     return Promise.resolve(routes);
 };
