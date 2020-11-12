@@ -42,9 +42,8 @@ const initiativeIdPlugin = async (route, config) => {
     // Obtain all initiative keys via graphql query
     const response = await queryData('allInitiativePages');
     const routes = [];
-
     response.allInitiativePages.forEach((res) => {
-        routes.push({ route: `/initiative/${res.key}` });
+        routes.push({ route: `/research/initiative/${res.key}` });
     });
     return Promise.resolve(routes);
 };
