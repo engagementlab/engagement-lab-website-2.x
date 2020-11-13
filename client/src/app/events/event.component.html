@@ -4,7 +4,7 @@
     </div>
 
     <div #backgroundEnd id="top" class="columns is-mobile is-multiline">
-        <div id="date" class="column is-full">
+        <div id="date" class="column is-full-tablet is-11-mobile">
             {{ content.date | date: 'MMMM dd, yyyy' }}
         </div>
 
@@ -31,11 +31,11 @@
         ></app-button>
     </div>
     <div #description class="description">
-        <div id="short" class="column is-full-mobile is-three-quarters-tablet">
+        <div id="short" class="column is-11-mobile is-three-quarters-tablet">
             {{ content.shortDescription }}
         </div>
         <div
-            class="column is-full-mobile is-three-quarters-tablet"
+            class="column is-11-mobile is-three-quarters-tablet"
             [innerHtml]="content?.description.html"
         ></div>
 
@@ -43,7 +43,7 @@
             class="columns is-mobile is-multiline is-centered"
             *ngIf="content?.images !== undefined && content?.images.length > 0"
         >
-            <div class="column is-full-mobile is-one-third-tablet">
+            <div class="column is-11-mobile is-one-third-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ (content?.images)[0].public_id }}"
@@ -52,7 +52,7 @@
                     *ngIf="(content?.images)[0] !== undefined"
                 ></cdn-image>
             </div>
-            <div class="column is-full-mobile is-one-third-tablet">
+            <div class="column is-11-mobile is-one-third-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ (content?.images)[1].public_id }}"
@@ -61,7 +61,7 @@
                     *ngIf="(content?.images)[1] !== undefined"
                 ></cdn-image>
             </div>
-            <div class="column is-full-mobile is-5-tablet">
+            <div class="column is-11-mobile is-5-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ (content?.images)[2].public_id }}"
@@ -70,7 +70,7 @@
                     *ngIf="(content?.images)[2] !== undefined"
                 ></cdn-image>
             </div>
-            <div class="column is-full-mobile is-7-tablet">
+            <div class="column is-11-mobile is-7-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ (content?.images)[3].public_id }}"
@@ -90,7 +90,7 @@
     <section id="nextprev" class="columns is-mobile is-multiline listing">
         <!-- Prev event can have an empty column on non-mobile -->
         <div
-            class="item column is-full-mobile is-half-tablet"
+            class="item column is-11-mobile is-half-tablet"
             *ngIf="!isPhone || (isPhone && previous)"
         >
             <a
@@ -116,7 +116,7 @@
                 </div>
             </a>
         </div>
-        <div class="item column  is-full-mobile is-half-tablet" *ngIf="next">
+        <div class="item column  is-11-mobile is-half-tablet" *ngIf="next">
             <a id="next" routerLink="/events/{{ next.key }}">
                 <hr class="hidden-mobile" />
 
