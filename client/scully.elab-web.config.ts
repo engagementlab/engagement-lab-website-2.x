@@ -1,4 +1,5 @@
 import './plugins/keys';
+import './plugins/routes';
 
 exports.config = {
     // logFileSeverity: 0,
