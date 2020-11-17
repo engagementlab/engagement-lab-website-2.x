@@ -4,12 +4,13 @@ $tablet: 768px;
 $widescreen: 1240px;
 $gap: 0px;
 
-@import "~bulma/sass/utilities/functions";
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/derived-variables";
-@import "~bulma/sass/utilities/mixins";
-@import "~bulma/sass/grid/columns";
-@import "~bulma/sass/elements/container";
+// @import "~bulma/sass/utilities/functions";
+// @import "~bulma/sass/utilities/initial-variables";
+// @import "~bulma/sass/utilities/derived-variables";
+// @import "~bulma/sass/utilities/mixins";
+// @import "~bulma/sass/grid/columns";
+// @import "~bulma/sass/elements/container";
+@import "~bootstrap/scss/bootstrap-grid";
 
 // Site vars
 @import "./_variables";
@@ -144,21 +145,9 @@ hr {
   }
 }
 
-// Project/event
-#verticle-line {
-
-  position: absolute;
-  display: block;
-  background-color: black;
-  width: 2px;
-  height: 40px;
-  margin-top: -20px;
-
-  @include not-phones {
-    width: 4px;
-    height: 100px;
-    margin-top: -50px;
-  }
+// Bootstrap
+.container-fluid {
+  max-width: 1800px;
 }
 
 // Initiative landing image

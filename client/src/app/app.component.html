@@ -18,7 +18,7 @@
 <app-nav></app-nav>
 
 <!-- Show on all studios pages -->
-<section *ngIf="showStudiosNav" id="subnav" class="container desktop">
+<section *ngIf="showStudiosNav" id="subnav" class="container-fluid">
     <nav id="subnav-studios" class="subnav">
         <div class="uppercase no-margin">
             <a
@@ -153,7 +153,7 @@
 </nav>
 
 <!-- Show on all grad pages -->
-<nav *ngIf="showGradNav" id="subnav" class="subnav container desktop">
+<nav *ngIf="showGradNav" id="subnav" class="subnav container-fluid">
     <div class="uppercase no-margin">
         <div>
             <a
@@ -198,7 +198,7 @@
     </div>
 </nav>
 
-<section class="container desktop">
+<section class="container-fluid">
     <h3 id="errors" *ngIf="dataErrors">
         <p>Content service errors:</p>
         <div *ngIf="!imageErrors">

@@ -1,7 +1,7 @@
 <div #particles id="particles"></div>
 <div *ngIf="content">
-    <section id="intro" class="column columns is-centered is-multiline is-full">
-        <h1 id="mouseover" class="column is-10-tablet is-7-desktop center">
+    <section id="intro" class="row justify-content-center">
+        <h1 id="mouseover" class="col-md-10 col-lg-7 center">
             <span>Our students, faculty, and staff do</span>
             <span
                 >&nbsp;participatory <strong>design</strong>,
@@ -11,9 +11,8 @@
         <div
             #tagline
             id="tagline"
-            class="column is-10-tablet is-half-desktop center"
+            class="col-md-10 col-lg-6 center"
         >
-            <!-- <div class="cover"></div> -->
             <div
                 #taglineInner
                 id="inner"
@@ -21,7 +20,7 @@
                 [innerHTML]="content.allAboutPages.tagline.html"
             ></div>
         </div>
-        <div id="newsletter-wrap" class="column is-full-tablet is-11-mobile">
+        <div id="newsletter-wrap" class="col-12">
             <div id="button" #newsletterBtn>
                 <app-button
                     label="Join our newsletter"
@@ -101,13 +100,13 @@
 
     <!-- news -->
     <section id="news-wrap">
-        <div class="columns is-mobile is-multiline">
-            <h1 class="column is-half uppercase">
+        <div class="row">
+            <h1 class="col-6 uppercase">
                 latest news
             </h1>
 
             <a
-                class="column view"
+                class="col-6 view"
                 href="https://medium.com/engagement-lab-emerson-college/"
             >
                 <h1 class="uppercase">
@@ -133,9 +132,9 @@
                 </h1>
             </a>
         </div>
-        <div class="columns is-mobile is-multiline no-margin">
+        <div class="row no-margin">
             <div
-                class="item column is-full-mobile"
+                class="item is-12-xs"
                 *ngFor="let newsItem of content.allNewsItems; let i = index"
             >
                 <a href="{{ newsItem.url }}">
@@ -156,11 +155,11 @@
     <!-- events -->
     <section id="events" class="listing">
         <hr class="thick" />
-        <div class="columns is-mobile">
-            <h1 class="column is-half-mobile is-half-tablet uppercase">
+        <div class="row">
+            <h1 class="col-6 uppercase">
                 Events
             </h1>
-            <a class="column view" routerLink="/events">
+            <a class="col-6 view" routerLink="/events">
                 <h1 class="uppercase">
                     view all&nbsp;
                     <svg viewBox="0 0 32 23" width="32" height="23" fill="none">
@@ -207,7 +206,7 @@
         </div>
     </section>
     <!--
-    <section id="projects" class="column columns is-full">
+    <section id="projects" class="row is-full">
         <h1 class="column is-full-mobile is-half uppercase">
             [Featured project here]
         </h1>
