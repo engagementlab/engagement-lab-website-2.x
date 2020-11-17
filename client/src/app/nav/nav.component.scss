@@ -420,14 +420,14 @@ nav {
         @include transition(opacity, 0.25s, ease-in-out);
 
         svg {
-          #arrow {
+          .arrow {
             @include transition(transform, .2s, ease-in-out);
           }
         }
 
         &:hover {
           svg {
-            #arrow {
+            .arrow {
               @include translate(25px, -25px);
             }
           }

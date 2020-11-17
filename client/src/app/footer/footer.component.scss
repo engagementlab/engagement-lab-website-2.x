@@ -34,12 +34,9 @@ footer {
     }
   }
 
-  // MC Email form
-
-
-  // MC Email form
-  #newsletter-wrap {
-    #error {
+  // Email form
+  #footer-newsletter-wrap {
+    .error {
       display: none;
       opacity: 0;
       @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
@@ -50,7 +47,7 @@ footer {
       }
     }
 
-    #newsletter {
+    #footer-newsletter {
       display: flex;
       @include newsletter-form;
 
