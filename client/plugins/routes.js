@@ -19,6 +19,9 @@ const createPa11yConfig = (routes) => {
   });
 
   let config = `{
+        "defaults": {
+          "hideElements": "#qa-build, #qa-border"
+        },
         "urls":  [${allRoutes}]
     }`;
 
