@@ -304,7 +304,7 @@
 #qa-border {
   position: fixed;
   display: block;
-  border: solid 0px $mango;
+  border: solid 0px #d38213;
 
   right: 0;
   left: 0;
@@ -325,7 +325,7 @@
   right: 0;
 
   color: white;
-  background-color: $mango;
+  background-color: #d38213;
   text-align: center;
   font-weight: bold;
   font-size: large;
@@ -333,7 +333,7 @@
   padding-bottom: 1%;
   animation: banner 3s cubic-bezier(1, 0, 0, 1) 0.6s 1 forwards;
 
-  #text {
+  #qa-text {
     font-size: xx-large;
   }
 
