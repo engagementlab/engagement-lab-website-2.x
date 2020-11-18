@@ -55,6 +55,7 @@
                         formControlName="email"
                         (focus)="emailFocus()"
                         width="400"
+                        aria-label="Enter your email"
                     />
                     <input
                         type="submit"
@@ -66,7 +67,7 @@
                         (click)="submitNewsletter()"
                     />
                 </form>
-                <div id="subscribed" #newsletterSubscribed>
+                <div class="subscribed" #newsletterSubscribed>
                     <svg
                         viewBox="0 0.406 31.06 24.118"
                         width="31.06"
@@ -93,7 +94,7 @@
                     </svg>
                 </button>
             </div>
-            <div id="error" #newsletterError>
+            <div class="error" #newsletterError>
                 You are already subscribed! Nice going!
             </div>
         </div>
@@ -116,7 +117,7 @@
                         <g transform="matrix(0.091574, 0, 0, 0.091574, 0, 0)">
                             <g>
                                 <path
-                                    id="arrow"
+                                    class="arrow"
                                     d="M266.422,0h-97.625c-9.65,0-17.5,7.851-17.5,17.5c0,9.649,7.85,17.5,17.5,17.5h55.377l-92.375,92.374   c-3.307,3.305-5.127,7.699-5.127,12.375c0,4.676,1.819,9.069,5.125,12.371c3.306,3.309,7.699,5.13,12.375,5.13   c4.674,0,9.069-1.82,12.376-5.127l92.374-92.375v55.377c0,9.649,7.851,17.5,17.5,17.5c9.649,0,17.5-7.851,17.5-17.5V17.5   C283.922,7.851,276.071,0,266.422,0z"
                                     style="fill: #fff;"
                                 ></path>

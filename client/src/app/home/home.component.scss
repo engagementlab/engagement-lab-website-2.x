@@ -170,7 +170,7 @@ a {
     align-items: center;
     text-align: center;
 
-    #error {
+    .error {
       display: none;
       opacity: 0;
       @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
@@ -221,15 +221,14 @@ a {
     svg {
       @include translate(0, -7px);
 
-      #arrow {
+      .arrow {
         @include transition(transform, .2s, ease-in-out);
       }
     }
 
     &:hover {
       svg {
-        #arrow {
-          // @include transition(transform, .2s, ease-in-out);
+        .arrow {
           @include translate(15px, -15px);
         }
       }
