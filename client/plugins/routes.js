@@ -13,9 +13,11 @@ const createPa11yConfig = (routes) => {
   let allRoutes = [];
   // Append QA url to each route
   routes.forEach(e => {
-    allRoutes.push(`"https://qa.elab.emerson.edu${
-        e.route === '' ? '/' : e.route
-    }"`);
+    // Ignore external redirects
+    if(e.route !== '/unlockinghealth')
+      allRoutes.push(`"https://qa.elab.emerson.edu${
+          e.route === '' ? '/' : e.route
+      }"`);
   });
 
   let config = `{

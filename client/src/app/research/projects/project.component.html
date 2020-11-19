@@ -6,8 +6,8 @@
             <span *ngIf="!content.endYear">Present</span
             ><span *ngIf="content.endYear">{{ content.endYear }}</span>
             <br />
-            <a href="{{ content?.externalLinkUrl }}" role="link">{{
-                content?.externalLinkUrl | prettyUrl
+            <a href="{{ content.externalLinkUrl }}" role="link" *ngIf="content.externalLinkUrl && content.externalLinkUrl.length > 0">{{
+                content.externalLinkUrl | prettyUrl
             }}</a>
         </div>
         <div
