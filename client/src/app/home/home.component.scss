@@ -49,7 +49,7 @@ a {
     }
 
     span {
-      display: inline-block;
+      display: none;
       opacity: 0;
     }
 
@@ -72,8 +72,13 @@ a {
         color: $green-blue;
       }
     }
-  }
 
+    &.show {
+      span {
+        display: inline-block;
+      }
+    }
+  }
 
   @include keyframes(fade-tagline) {
     0% {
@@ -94,11 +99,18 @@ a {
     letter-spacing: 0.5px;
 
     #inner {
+      display: none;
       overflow: hidden;
       opacity: 0;
     }
 
     @include transition(clip-path, .5s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+    &.show {
+      #inner {
+        display: block;
+      }
+    }
 
     .cover {
       position: absolute;
@@ -165,10 +177,14 @@ a {
 
   // MC Email form
   #newsletter-wrap {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    &.show {
+      display: flex;
+    }
 
     .error {
       display: none;
