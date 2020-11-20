@@ -49,7 +49,7 @@ a {
     }
 
     span {
-      display: inline-block;
+      display: none;
       opacity: 0;
     }
 
@@ -72,8 +72,13 @@ a {
         color: $green-blue;
       }
     }
-  }
 
+    &.show {
+      span {
+        display: inline-block;
+      }
+    }
+  }
 
   @include keyframes(fade-tagline) {
     0% {
@@ -165,10 +170,14 @@ a {
 
   // MC Email form
   #newsletter-wrap {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    &.show {
+      display: flex;
+    }
 
     .error {
       display: none;
