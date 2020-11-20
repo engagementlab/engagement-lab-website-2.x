@@ -46,6 +46,8 @@ script:
     # Build client
     - npm run build
     - npx scully --sr
+    # Start client dist build for a11y tests
+    - forever start `which http-server` .\dist\browser\ -p 1864
     # Run a11y checks via config in ./pa11yci config, w/ all routes discovered by Scully build
     - pa11y-ci
 

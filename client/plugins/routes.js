@@ -11,11 +11,11 @@ const {
 const createPa11yConfig = (routes) => {
 
   let allRoutes = [];
-  // Append QA url to each route
+  // Append url where local build runs in CI to each route
   routes.forEach(e => {
     // Ignore external redirects
     if(e.route !== '/unlockinghealth')
-      allRoutes.push(`"https://qa.elab.emerson.edu${
+      allRoutes.push(`"http://localhost:1864${
           e.route === '' ? '/' : e.route
       }"`);
   });
