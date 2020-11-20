@@ -99,18 +99,11 @@ a {
     letter-spacing: 0.5px;
 
     #inner {
-      display: none;
       overflow: hidden;
       opacity: 0;
     }
 
     @include transition(clip-path, .5s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
-
-    &.show {
-      #inner {
-        display: block;
-      }
-    }
 
     .cover {
       position: absolute;

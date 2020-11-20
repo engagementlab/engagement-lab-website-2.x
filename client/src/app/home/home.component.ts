@@ -101,9 +101,10 @@ export class HomeComponent implements OnInit, OnDestroy {
                 translateY: ['50%', 0],
                 delay: anime.stagger(500),
                 begin: () => {
-                    document.querySelector('h1').classList.add('show')
-                    document.getElementById('tagline').classList.add('show')
-                    document.getElementById('newsletter-wrap').classList.add('show')
+                    document.querySelector('h1').classList.add('show');
+                    document.querySelector('h1').style.visibility = 'visible';
+                    document.getElementById('inner').style.visibility = 'visible';
+                    document.getElementById('newsletter-wrap').classList.add('show');
                 },
             });
 
