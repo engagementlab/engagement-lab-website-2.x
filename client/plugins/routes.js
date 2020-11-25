@@ -20,7 +20,7 @@ const createPa11yConfig = (routes) => {
       }"`);
   });
 
-  let config = `{
+  const config = `{
         "defaults": {
           "hideElements": "#qa-build, #qa-border"
         },
