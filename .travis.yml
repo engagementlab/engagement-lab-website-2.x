@@ -48,7 +48,7 @@ script:
     - npm run build
     - npx scully --sr
     # Start client dist build for a11y tests via pm2 on port 1864
-    - pm2 serve ./dist/browser 1864
+    - pm2 serve ../bin/app 1864
     # Run a11y checks via config in ./pa11yci config, w/ all routes discovered by Scully build
     - pa11y-ci
 
