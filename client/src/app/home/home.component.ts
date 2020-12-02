@@ -11,6 +11,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../utils/data.service';
 
 import * as _ from 'underscore';
+import isMobile from 'ismobilejs';
 import anime from 'animejs/lib/anime.es.js';
 
 import { tsParticles } from 'tsparticles';
@@ -29,7 +30,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     public tagline: string;
 
-    public isPhone: boolean;
     public emailFieldFocused: boolean;
 
     @ViewChildren('initiativeList') initiativeList: QueryList<any>;
@@ -46,12 +46,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     public emailForm: FormGroup;
 
     particlesLineDistance: number = 55;
+    isPhone: boolean;
 
     // eslint-disable-next-line no-useless-constructor
     constructor(
         private dataSvc: DataService,
         private formBuilder: FormBuilder,
     ) {
+        // Determine if agent is phone; used to lessen particle effect
+        this.isPhone = isMobile(window.navigator.userAgent).phone;
+
+
         this.emailForm = this.formBuilder.group({
             email: ['', [Validators.required, Validators.email]],
         });
@@ -190,7 +195,7 @@ export class HomeComponent implements OnInit, OnDestroy {
             },
             particles: {
                 number: {
-                    value: 200,
+                    value: this.isPhone ? 100 : 200,
                     density: { enable: true, value_area: 800 },
                 },
                 color: { value: '#5c5c5c' },
