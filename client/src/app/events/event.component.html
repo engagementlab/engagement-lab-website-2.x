@@ -80,18 +80,11 @@
                 ></cdn-image>
             </div>
         </div>
-        <!-- 
-        <div id="bottom" class="column is-full" *ngIf="content !== undefined && content.projectImages[2] !== undefined">
-            <cdn-image cloudinaryPrefix="/" cloudinaryId="{{content.projectImages[2].public_id}}" autoFormat="true"
-            width="800" alt="Image for '{{content?.name}}' project"></cdn-image>
-        </div> -->
     </div>
 
-    <section id="nextprev" class="columns is-mobile is-multiline listing">
-        <!-- Prev event can have an empty column on non-mobile -->
+    <section id="nextprev" class="columns is-mobile is-multiline listing no-margin">
         <div
             class="item column is-11-mobile is-half-tablet"
-            *ngIf="!isPhone || (isPhone && previous)"
         >
             <a
                 id="prev"
