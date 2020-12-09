@@ -1,0 +1,50 @@
+name: test
+on: [push, pull_request]
+env:
+  CI: true
+jobs:
+  test:
+    name: "Test on Node.js ${{ matrix.node-version }}"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      
+      - name: setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install global packages
+        run : npm install -g forever pa11y-ci pm2
+      
+      - name: Install API
+        run: |
+          cd api
+          npm install
+      
+      - name: Start API in background
+        env:
+          AUTH0_CLIENT_ID: ${{ secrets.AUTH0_CLIENT_ID }}
+          AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}
+          AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
+          AUTH0_CALLBACK_URL: ${{ secrets.AUTH0_CALLBACK_URL }}
+          COOKIE_SECRET: ${{ secrets.COOKIE_SECRET }}
+          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+          DB_URI: ${{ secrets.DB_URI }}
+          NODE_ENV: staging
+        run: |
+          forever start ./bin/www.js prod
+          echo "Pause for 1 min and output API log."
+          sleep 60
+          forever logs 0
+    
+      - name: Build client
+        run: |
+          cd ../client
+          npm install
+          npm run build
+          npx scully --sr
