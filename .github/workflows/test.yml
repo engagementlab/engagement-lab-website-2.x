@@ -22,11 +22,11 @@ jobs:
         run : npm install -g forever pa11y-ci pm2
       
       - name: Install API
-        run: |
-          cd api
-          npm install
+        working-directory: ./api  
+        run: npm install
       
       - name: Start API in background
+        working-directory: ./api  
         env:
           AUTH0_CLIENT_ID: ${{ secrets.AUTH0_CLIENT_ID }}
           AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}
@@ -37,12 +37,13 @@ jobs:
           DB_URI: ${{ secrets.DB_URI }}
           NODE_ENV: staging
         run: |
-          forever start ./api/bin/www.js prod
+          forever start ./bin/www.js prod
           echo "Pause for 1 min and output API log."
           sleep 60
           forever logs 0
     
       - name: Build client
+        working-directory: ./client
         run: |
           cd ../client
           npm install
