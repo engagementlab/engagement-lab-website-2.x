@@ -37,7 +37,7 @@ jobs:
           DB_URI: ${{ secrets.DB_URI }}
           NODE_ENV: staging
         run: |
-          forever start ./bin/www.js prod
+          forever start ./api/bin/www.js prod
           echo "Pause for 1 min and output API log."
           sleep 60
           forever logs 0
