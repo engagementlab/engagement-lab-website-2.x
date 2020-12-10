@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install global packages
-        run : npm install -g forever pa11y-ci pm2
+        run : npm install -g forever pa11y-ci pm2 http-server
       
       - name: Install API
         working-directory: ./api  
