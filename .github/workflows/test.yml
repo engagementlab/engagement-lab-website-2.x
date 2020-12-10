@@ -1,7 +1,10 @@
-name: build-tests
-on: push
+name: build-tests-export
+on: [push, pull_request]
 env:
+  AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
   CI: true
+  DB_URI: ${{ secrets.DB_URI }}
+  NODE_ENV: staging
 jobs:
   test:
     name: "Export production build, run a11y tests"
@@ -32,12 +35,9 @@ jobs:
           AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}
           AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
           AUTH0_CALLBACK_URL: ${{ secrets.AUTH0_CALLBACK_URL }}
-          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
           AZURE_STORAGE_ACCESS_KEY: ${{ secrets.AZURE_STORAGE_ACCESS_KEY }}
           COOKIE_SECRET: ${{ secrets.COOKIE_SECRET }}
           CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
-          DB_URI: ${{ secrets.DB_URI }}
-          NODE_ENV: staging
         run: |
           forever start ./bin/www.js prod
           echo "Pause for 1 min and output API log."
@@ -58,3 +58,16 @@ jobs:
         run: |
           pm2 start `which http-server` ../bin/app -- -p 1864
           pa11y-ci
+
+      # Deploy static build to Azure storage if succeeded and commit DB export and build, if on prod PR
+      - name: Deploy static build
+        if: ${{ github.event_name == 'pull_request' && github.ref == 'refs/heads/production' }}
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GHA_RUNID: ${{ github.run_id }}
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+          chmod 777 ./scripts/db.sh && ./scripts/db.sh
+          chmod 777 ./scripts/upload.sh && ./scripts/upload.sh
+          chmod 777 ./scripts/commit.sh && ./scripts/commit.sh
