@@ -1,19 +1,19 @@
-name: test
-on: [push, pull_request]
+name: build-tests
+on: push
 env:
   CI: true
 jobs:
   test:
-    name: "Test on Node.js ${{ matrix.node-version }}"
+    name: "Export production build, run a11y tests"
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14]
     steps:
-      - name: checkout
+      - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: setup Node.js ${{ matrix.node-version }}
+      - name: Setup node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
@@ -44,10 +44,17 @@ jobs:
           sleep 60
           forever logs 0
     
-      - name: Build client
+      - name: Build and export static build of client
         working-directory: ./client
         run: |
           cd ../client
           npm install
           npm run build
           npx scully --sr
+  
+      # Run a11y checks via config in ./pa11yci config, w/ all routes discovered by Scully build
+      - name: Start client dist build server via pm2, run a11y tests
+        working-directory: ./client
+        run: |
+          pm2 start `which http-server` ../bin/app -- -p 1864
+          pa11y-ci
