@@ -32,6 +32,8 @@ jobs:
           AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}
           AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
           AUTH0_CALLBACK_URL: ${{ secrets.AUTH0_CALLBACK_URL }}
+          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+          AZURE_STORAGE_ACCESS_KEY: ${{ secrets.AZURE_STORAGE_ACCESS_KEY }}
           COOKIE_SECRET: ${{ secrets.COOKIE_SECRET }}
           CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
           DB_URI: ${{ secrets.DB_URI }}
