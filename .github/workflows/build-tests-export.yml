@@ -5,6 +5,7 @@ env:
   CI: true
   DB_URI: ${{ secrets.DB_URI }}
   NODE_ENV: staging
+  ACTIONS_RUNNER_DEBUG: true
 jobs:
   build-tests:
     name: "Make production build, run a11y tests"
@@ -13,6 +14,10 @@ jobs:
       matrix:
         node-version: [14]
     steps:
+      - name: Set DNS for later mongo cmd
+        run: |
+            sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+
       - name: Checkout code
         uses: actions/checkout@v2
       
