@@ -15,7 +15,7 @@
     "kill-node": "killall node",
     "dev": "npm-run-all -p serve:api start",
     "dev-qa": "npm-run-all -p serve:api qa",
-    "serve:http": "http-server dist/browser",
+    "serve:a11y": "pm2 start `which http-server` -- ../bin/app -p 1864",
     "serve:api": "cd ../api; nodemon;",
     "serve:api:prod": "cd ../api; nodemon prod;",
     "scully": "scully",

@@ -56,7 +56,7 @@ jobs:
       - name: Start client dist build server via pm2, run a11y tests
         working-directory: ./client
         run: |
-          pm2 start `which http-server` ../bin/app -- -p 1864
+          npm run serve:a11y
           pa11y-ci
 
       # Deploy static build to Azure storage if succeeded and commit DB export and build, if on prod PR
