@@ -20,8 +20,16 @@ jobs:
         run: |
             sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
-      - name: Checkout code
+      - name: Checkout code on HEAD
         uses: actions/checkout@v2
+        if: ${{ github.event_name != 'pull_request' }
+
+      # Do this only for PR to production, since we need to work on master during later commit, and PR's work off of merge ref
+      - name: Checkout code of PR HEAD
+        uses: actions/checkout@v2
+        if: ${{ github.event_name == 'pull_request' }}
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       
       - name: Setup node.js ${{ matrix.node-version }}
       
