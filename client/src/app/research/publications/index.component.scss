@@ -1,9 +1,10 @@
 @import "~src/styles/_variables";
+@import "~src/styles/_mixins";
 
 .controls {
 
   button {
-    font-family: 'LunchtypeRegular';
+    @include font-lunchtype;
     font-size: 1.4em;
 
     &.mixitup-control-active {

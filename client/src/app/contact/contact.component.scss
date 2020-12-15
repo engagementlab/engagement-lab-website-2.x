@@ -1,4 +1,5 @@
 @import "~src/styles/_variables";
+@import '~src/styles/_mixins';
 
 h2 {
 
@@ -12,7 +13,7 @@ h2 {
 
 h3 {
 
-    font-family: 'LunchtypeRegular';
+    @include font-lunchtype;
     font-size: 1.5em;
     font-weight: normal;
 
@@ -63,8 +64,9 @@ h4 {
     }
 
     .link {
+        @include font-overpass;
+
         margin-top: 3%;
-        font-family: 'Overpass', sans-serif;
         font-weight: bold;
 
         // For link w/ no href

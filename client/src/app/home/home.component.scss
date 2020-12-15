@@ -16,7 +16,7 @@ a {
     h1 {
       display: flex;
 
-      font-family: 'Overpass';
+      @include font-overpass;
       font-size: 1em;
       font-weight: 600;
       letter-spacing: normal;

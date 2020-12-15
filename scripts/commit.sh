@@ -7,6 +7,6 @@ git config --global user.email engagementlab@emerson.edu
 
 git remote set-url origin https://$GH_TOKEN@github.com/engagementlab/engagement-lab-website-2.x.git
 git add bin/*
-git commit --message "Automated database export and generated static app (GH action #$GHA_RUNID) [skip ci]"
+git commit --message "Automated database export and generated static app (GH action #$GHA_RUNNUM) [skip ci]"
 
 git push

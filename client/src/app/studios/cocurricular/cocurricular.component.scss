@@ -1,4 +1,5 @@
 @import "~src/styles/_variables";
+@import "~src/styles/_mixins";
 
 #timeline {
   margin-top: 10%;
@@ -9,7 +10,7 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 29px;
-    font-family: 'LunchtypeMedium';
+    @include font-lunchtype-med;
   }
 
   #months {

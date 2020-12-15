@@ -3,9 +3,9 @@
   <hr />
   <nav #nav class="columns is-mobile" id="nav">
     <div id="left" class="column is-6-mobile is-two-quarters-tablet is-four-fifths-desktop">
-      <a id="home" name="home" #home routerLink="/" (click)="logoClick()" [class.sm]="logoSm">
+      <a id="home" name="home" #home routerLink="/" (click)="logoClick()" [class.sm]="logoSm" aria-label="Go to home page" tabindex="0">
         <span class="hidden">go home</span>
-        <svg id="logo-img" viewBox="0 0 166 58.741" width="166" height="58.741">
+        <svg id="logo-img" viewBox="0 0 166 58.741" width="166" height="58.741" aria-label="Engagement Lab logo">
           <g id="logo-group" transform="matrix(0.390588, 0, 0, 0.390588, 0, 0)">
             <g id="color-lab">
               <path
@@ -27,7 +27,7 @@
       </a>
     </div>
 
-    <a #menuBtn id="menu-btn" class="column" (click)="openCloseNav()">
+    <a #menuBtn id="menu-btn" class="column" (click)="openCloseNav()" tabindex="0" role="link" aria-label="Main menu open/close">
       <div id="label">
         <div #menuOpen class="open">Menu</div>
         <div #menuClose class="close"><span>Close</span> Menu</div>
@@ -35,10 +35,10 @@
     </a>
   </nav>
 
-  <section #menu id="menu" (scroll)="onMenuScroll($event)" [class.isOpen]="searchEnabled">
+  <section #menu id="menu" (scroll)="onMenuScroll($event)" [class.isOpen]="searchEnabled" role="dialog">
     <div #menuLinks id="links" *ngIf="!searchEnabled">
       <section>
-        <h3 *ngFor="let link of navLinks" [class.disabled]="!link.enabled">
+        <h3 *ngFor="let link of navLinks" [class.disabled]="!link.enabled" role="link">
           <a *ngIf="itemActive(link.url)" class="active" (click)="openCloseNav()">{{ link.label }}</a>
           <a *ngIf="!itemActive(link.url) && link.enabled" routerLink="/{{ link.url }}">{{ link.label }}</a>
           <a *ngIf="!itemActive(link.url) && !link.enabled">{{
@@ -48,7 +48,7 @@
       </section>
       <hr />
       <section>
-        <h3 *ngFor="let link of navSubLinks" class="sub" [class.disabled]="!link.enabled">
+        <h3 *ngFor="let link of navSubLinks" class="sub" [class.disabled]="!link.enabled" role="link">
           <a *ngIf="link.href" href="{{ link.href }}">{{ link.label }}
             <!-- External link icon -->
             <svg viewBox="0 0 15 15" width="15" height="15">

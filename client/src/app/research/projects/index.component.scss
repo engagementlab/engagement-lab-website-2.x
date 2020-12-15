@@ -1,4 +1,5 @@
 @import "~src/styles/_variables";
+@import '~src/styles/_mixins';
 
 h1 {
   letter-spacing: 1.5px;
@@ -31,7 +32,7 @@ app-button {
 }
 
 #intro {
-  font-family: 'Overpass';
+  @include font-overpass;
 
   a {
     cursor: pointer;

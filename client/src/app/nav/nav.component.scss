@@ -1,5 +1,5 @@
 @import '~src/styles/_variables';
-$jobs-delay: 0.75s;
+@import "~src/styles/_mixins";
 
 @include keyframes(bg-open) {
   0% {
@@ -258,15 +258,10 @@ nav {
     hr {
       margin-left: 18%;
     }
-
-    #jobs {
-      animation: show-jobs 0.2s ease-in-out 1 both;
-      animation-delay: $jobs-delay;
-    }
   }
 
   h3 {
-    font-family: 'LunchtypeMedium';
+    @include font-lunchtype-med;
     font-size: 1.6em;
     font-weight: 500;
     line-height: 1.17;
@@ -281,7 +276,8 @@ nav {
     }
 
     &.sub {
-      font-family: 'LunchtypeRegular';
+      @include font-lunchtype;
+
       font-size: 1.1em;
       font-weight: 100;
     }
