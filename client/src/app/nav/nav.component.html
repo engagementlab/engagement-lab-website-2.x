@@ -35,7 +35,8 @@
     </a>
   </nav>
 
-  <section #menu id="menu" (scroll)="onMenuScroll($event)" [class.isOpen]="searchEnabled" role="dialog">
+  <section #menu id="menu" (scroll)="onMenuScroll($event)" [class.isOpen]="searchEnabled" role="dialog" aria-labelledby="aria-label-nav">
+    <span class="hidden" id="aria-label-nav">Site navigation</span>
     <div #menuLinks id="links" *ngIf="!searchEnabled">
       <section>
         <h3 *ngFor="let link of navLinks" [class.disabled]="!link.enabled" role="link">
