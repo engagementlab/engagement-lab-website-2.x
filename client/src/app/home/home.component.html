@@ -77,8 +77,8 @@
         <a href="{{ newsItem.url }}">
           <cdn-image cloudinaryPrefix="/" cloudinaryId="{{ newsItem.image.public_id }}" autoFormat="true"
             [responsive]="true" height="300" alt="Image for '{{ newsItem.title }}' news item"></cdn-image>
-        </a>
-        <h3>{{ newsItem.title }}</h3>
+            <p>{{ newsItem.title }}</p>
+          </a>
       </div>
     </div>
   </section>
