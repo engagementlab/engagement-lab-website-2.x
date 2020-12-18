@@ -1,5 +1,7 @@
+@import '~src/styles/_mixins';
+
 #intro {
-  font-family: 'Overpass';
+  @include font-overpass;
 
   a {
     cursor: pointer;

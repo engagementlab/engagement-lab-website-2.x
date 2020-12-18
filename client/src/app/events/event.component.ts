@@ -14,20 +14,7 @@ export class EventComponent {
     public content: any;
 
     public next: any;
-
     public previous: any;
-
-    public isPhone: boolean;
-
-    private bgEndPerc: number;
-
-    private bgAlpha = 0;
-
-    private alphaInterval: any;
-
-    private bgInterval: any;
-
-    private bgTimeout: any;
 
     private subscriber: Subscription;
 

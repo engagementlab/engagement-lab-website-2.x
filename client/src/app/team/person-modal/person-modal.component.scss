@@ -1,4 +1,5 @@
 @import "~src/styles/_variables";
+@import '~src/styles/_mixins';
 
 #modal {
   position: fixed;
@@ -75,7 +76,7 @@
 
     #bio {
       font-size: 1em;
-      font-family: 'Overpass';
+      @include font-overpass;
       line-height: 23px;
 
       @include not-phones {

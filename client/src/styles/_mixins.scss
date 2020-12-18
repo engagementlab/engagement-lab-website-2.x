@@ -29,9 +29,9 @@
   border-bottom: solid 2px black;
 
   input[type=email] {
-    width: 100%;
-    font-family: 'LunchtypeRegular';
+    @include font-lunchtype;
     font-size: 1.5em;
+    width: 100%;
     color: black;
     opacity: 1;
     border: none;
@@ -40,7 +40,7 @@
     padding-left: 4%;
 
     @include placeholder {
-      font-family: 'LunchtypeRegular';
+      @include font-lunchtype;
       color: black;
       opacity: 1;
     }
@@ -101,4 +101,15 @@
       }
     }
   }
+}
+
+// Fonts
+@mixin font-lunchtype {
+  font-family: 'LunchtypeRegular', sans-serif;
+}
+@mixin font-lunchtype-med {
+  font-family: 'LunchtypeMedium', sans-serif;
+}
+@mixin font-overpass {
+  font-family: 'Overpass', sans-serif;
 }

@@ -1,11 +1,11 @@
 {
   "name": "engagement-lab-website-2.x",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "qa": "ng serve --port 8000 --host 0.0.0.0 --disableHostCheck true",
-    "build": "ng build --configuration=production --progress",
+    "build": "ng build --configuration=production",
     "build:qa": "ng build --configuration=qa --progress",
     "build:static": "npm-run-all -p serve:api:prod scully:build",
     "test": "ng test",
@@ -15,7 +15,7 @@
     "kill-node": "killall node",
     "dev": "npm-run-all -p serve:api start",
     "dev-qa": "npm-run-all -p serve:api qa",
-    "serve:http": "http-server dist/browser",
+    "serve:a11y": "pm2 start `which http-server` -- ../bin/app -p 1864",
     "serve:api": "cd ../api; nodemon;",
     "serve:api:prod": "cd ../api; nodemon prod;",
     "scully": "scully",

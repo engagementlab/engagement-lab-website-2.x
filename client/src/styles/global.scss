@@ -30,8 +30,7 @@ $gap: 0px;
 }
 
 body {
-  font-family: 'LunchtypeRegular';
-  font-size: 18px;
+  @include font-lunchtype;
   color: black;
 
   background-size: 100% 101%;
@@ -48,6 +47,10 @@ body {
 
   &.noscroll {
     overflow-y: hidden;
+
+    #subscribe-form {
+      display: none;
+    }
   }
 }
 
@@ -315,7 +318,7 @@ hr {
 
   button {
     padding: 1%;
-    font-family: 'LunchtypeMedium';
+    @include font-lunchtype-med;
   }
 
   input,
@@ -326,7 +329,7 @@ hr {
   }
 
   .formerror {
-    font-family: 'Overpass';
+    @include font-overpass;
     font-weight: 900;
     font-size: .8em;
   }
@@ -402,7 +405,7 @@ hr {
 
 .medium {
   font-weight: 500;
-  font-family: 'LunchtypeMedium';
+  @include font-lunchtype-med;
 }
 
 .blurb {

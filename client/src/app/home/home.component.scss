@@ -16,7 +16,7 @@ a {
     h1 {
       display: flex;
 
-      font-family: 'Overpass';
+      @include font-overpass;
       font-size: 1em;
       font-weight: 600;
       letter-spacing: normal;
@@ -254,24 +254,11 @@ a {
   }
 
   p {
-    &.name {
-      margin-bottom: 1%;
-      font-size: 1.5em;
-      font-weight: 500;
-      line-height: 1.17;
-      letter-spacing: 0.5px;
-    }
-
-    &.type {
-      line-height: 1.25;
-      letter-spacing: 1.3px;
-    }
-
-    &.byline {
-      font-size: 1em;
-      line-height: 1.25;
-      letter-spacing: 0.3px;
-    }
+    @include font-overpass;
+    font-weight: 600;
+    font-size: 1.35em;
+    line-height: 1.38;
+    letter-spacing: 1.5px;
   }
 
   #news {
