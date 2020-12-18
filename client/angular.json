@@ -15,7 +15,7 @@
             "prefix": "app",
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:browser",
+                    "builder":"@angular-builders/custom-webpack:browser",
                     "options": {
                         "outputPath": "dist/browser",
                         "index": "src/index.html",
@@ -25,7 +25,10 @@
                         "aot": true,
                         "sourceMap": true,
                         "assets": ["src/favicon.ico", "src/assets"],
-                        "styles": ["src/styles/global.scss"]
+                        "styles": ["src/styles/global.scss"],
+                        "customWebpackConfig": {
+                            "path": "./custom-webpack.config.js"
+                        }
                     },
                     "configurations": {
                         "production": {
