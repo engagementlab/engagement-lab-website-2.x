@@ -61,7 +61,7 @@
             </h1>
             <span>{{ content.contact }}</span>
         </div>
-        <div class="column is-9">
+        <div class="column is-9" *ngIf="(content.galleryVideos === undefined || content.galleryVideos.length === 0) else showVideos">
             <cdn-image
                 cloudinaryPrefix="/"
                 cloudinaryId="{{ content.primaryImage.public_id }}"
@@ -73,6 +73,28 @@
             ></cdn-image>
             <p id="primary-caption">{{ content.primaryImageDescription }}</p>
         </div>
+        <ng-template #showVideos>
+            <div class="column columns is-multiline is-9">
+
+                <div class="video column is-full-mobile is-5-desktop" *ngFor="let video of content.galleryVideos; let i = index;">
+                    <a id="video-thumb-{{i}}" (click)="embedVideo(i)">
+                        <cdn-image cloudinaryPrefix="/"  cloudinaryId="{{content.galleryVideoThumbails[i].public_id}}" autoFormat="true"></cdn-image>
+                        <!-- <span class="icon">
+                            <cdn-image cloudinaryId="icons/video" width="80" phoneWidth="24" svg="true"></cdn-image>
+                        </span> -->
+                    </a>
+                    <div id="video-embed-{{i}}" class="embed">
+                        <iframe src="https://player.vimeo.com/video/420657931" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p>
+                        {{content.galleryVideoTitles[i]}}
+                    </p>
+                    <p>
+                        {{content.galleryVideoCaptions[i]}}
+                    </p>
+                </div>
+            </div>
+        </ng-template>
     </div>
 
     <div class="columns is-multiline">

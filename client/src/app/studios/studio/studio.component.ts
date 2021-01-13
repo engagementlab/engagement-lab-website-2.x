@@ -13,6 +13,8 @@ export class StudioComponent {
     public next: any;
     public previous: any;
 
+    public videoDisplayToggle: [boolean];
+
     private subscriber: Subscription;
 
     constructor(
@@ -74,7 +76,12 @@ export class StudioComponent {
                     public_id
                   }
                   primaryImageDescription
-                 
+                  galleryVideos
+                  galleryVideoTitles
+                  galleryVideoCaptions
+                  galleryVideoThumbails {
+                      public_id
+                  }
                 }
             }
         `;
@@ -98,8 +105,11 @@ export class StudioComponent {
 
     setContent(data: any): void {
         this.content = data;
-        // this.next = data.next;
-        // this.previous = data.prev;
+
+        // Populate array for toggling video embeds
+        this.content['galleryVideos'].forEach(vid => {
+            video
+        });
 
         // Show dynamic BG image, if any
         if (this.content.bgImage) {
@@ -107,5 +117,9 @@ export class StudioComponent {
             bodyBg.style.backgroundImage = `url(https://res.cloudinary.com/engagement-lab-home/image/upload/c_fill,f_auto,g_north,h_1110,w_2048/${this.content.bgImage.public_id})`;
             bodyBg.classList.add('open');
         }
+    }
+
+    embedVideo(index: number) {
+        document.getElementById(`video-embed-${index}`).style.display = 'block';
     }
 }
