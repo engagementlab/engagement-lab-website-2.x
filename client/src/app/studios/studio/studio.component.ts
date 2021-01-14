@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, SecurityContext } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/utils/data.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-studio',
@@ -13,16 +14,18 @@ export class StudioComponent {
     public next: any;
     public previous: any;
 
-    public videoDisplayToggle: [boolean];
+    public videoDisplayToggle: [boolean] = [false];
+    public videoUrls: [string];
 
     private subscriber: Subscription;
 
     constructor(
         private dataSvc: DataService,
         private route: ActivatedRoute,
-        private _router: Router,
+        private router: Router,
+        private sanitizer: DomSanitizer,
     ) {
-        this.subscriber = _router.events.subscribe(async e => {
+        this.subscriber = router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
             const { key } = this.route.snapshot.params;
@@ -106,9 +109,12 @@ export class StudioComponent {
     setContent(data: any): void {
         this.content = data;
 
-        // Populate array for toggling video embeds
-        this.content['galleryVideos'].forEach(vid => {
-            video
+        // Populate array for toggling video embeds and sanitize video IDs into iframe URLs
+        this.videoUrls = this.content['galleryVideos'].map(vid => {
+            this.videoDisplayToggle.push(false);
+            return this.sanitizer.bypassSecurityTrustResourceUrl(
+                `https://player.vimeo.com/video/${vid}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
+            );
         });
 
         // Show dynamic BG image, if any
@@ -120,6 +126,6 @@ export class StudioComponent {
     }
 
     embedVideo(index: number) {
-        document.getElementById(`video-embed-${index}`).style.display = 'block';
+        this.videoDisplayToggle[index] = true;
     }
 }

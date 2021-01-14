@@ -61,7 +61,14 @@
             </h1>
             <span>{{ content.contact }}</span>
         </div>
-        <div class="column is-9" *ngIf="(content.galleryVideos === undefined || content.galleryVideos.length === 0) else showVideos">
+        <div
+            class="column is-9"
+            *ngIf="
+                content.galleryVideos === undefined ||
+                    content.galleryVideos.length === 0;
+                else showVideos
+            "
+        >
             <cdn-image
                 cloudinaryPrefix="/"
                 cloudinaryId="{{ content.primaryImage.public_id }}"
@@ -74,23 +81,62 @@
             <p id="primary-caption">{{ content.primaryImageDescription }}</p>
         </div>
         <ng-template #showVideos>
-            <div class="column columns is-multiline is-9">
-
-                <div class="video column is-full-mobile is-5-desktop" *ngFor="let video of content.galleryVideos; let i = index;">
-                    <a id="video-thumb-{{i}}" (click)="embedVideo(i)">
-                        <cdn-image cloudinaryPrefix="/"  cloudinaryId="{{content.galleryVideoThumbails[i].public_id}}" autoFormat="true"></cdn-image>
-                        <!-- <span class="icon">
-                            <cdn-image cloudinaryId="icons/video" width="80" phoneWidth="24" svg="true"></cdn-image>
-                        </span> -->
+            <div class="column columns is-multiline is-9 videos">
+                <div
+                    class="video column is-11-mobile is-5-tablet"
+                    *ngFor="let video of content.galleryVideos; let i = index"
+                >
+                    <a
+                        id="video-thumb-{{ i }}"
+                        (click)="embedVideo(i)"
+                        *ngIf="!videoDisplayToggle[i]"
+                    >
+                        <cdn-image
+                            cloudinaryPrefix="/"
+                            cloudinaryId="{{
+                                content.galleryVideoThumbails[i].public_id
+                            }}"
+                            autoFormat="true"
+                            *ngIf="content.galleryVideoThumbails[i]"
+                        ></cdn-image>
+                        <img
+                            src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
+                            *ngIf="!content.galleryVideoThumbails[i]"
+                        />
+                        <span class="icon">
+                            <svg
+                                width="80"
+                                height="80"
+                                fill="none"
+                                viewBox="0 0 80 80"
+                            >
+                                <path
+                                    fill="#fff"
+                                    d="M40 0C17.92 0 0 17.92 0 40s17.92 40 40 40 40-17.92 40-40S62.08 0 40 0zM29.44 55.84V24.16L56.96 40 29.44 55.84z"
+                                />
+                            </svg>
+                        </span>
                     </a>
-                    <div id="video-embed-{{i}}" class="embed">
-                        <iframe src="https://player.vimeo.com/video/420657931" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div
+                        id="video-embed-{{ i }}"
+                        class="embed"
+                        *ngIf="videoDisplayToggle[i]"
+                    >
+                        <div class="frame">
+                            <iframe
+                                [src]="videoUrls[i]"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                     </div>
-                    <p>
-                        {{content.galleryVideoTitles[i]}}
+                    <p class="title uppercase">
+                        {{ content.galleryVideoTitles[i] }}
                     </p>
                     <p>
-                        {{content.galleryVideoCaptions[i]}}
+                        {{ content.galleryVideoCaptions[i] }}
                     </p>
                 </div>
             </div>
@@ -107,7 +153,8 @@
                 [images]="content.galleryImages"
                 [title]="content.name"
                 [captions]="content.galleryImageCaptions"
-            ></slideshow>
+            >
+            </slideshow>
         </div>
         <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
             <h1 class="uppercase">Social Impact</h1>
