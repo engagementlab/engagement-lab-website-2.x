@@ -88,6 +88,7 @@
                 >
                     <a
                         id="video-thumb-{{ i }}"
+                        [routerLink]=""
                         (click)="embedVideo(i)"
                         *ngIf="!videoDisplayToggle[i]"
                     >
@@ -97,10 +98,16 @@
                                 content.galleryVideoThumbails[i].public_id
                             }}"
                             autoFormat="true"
+                            [alt]="
+                                'Preview thumbnail image for ' +
+                                content.name +
+                                ' video.'
+                            "
                             *ngIf="content.galleryVideoThumbails[i]"
                         ></cdn-image>
                         <img
                             src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
+                            alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
                             *ngIf="!content.galleryVideoThumbails[i]"
                         />
                         <span class="icon">
