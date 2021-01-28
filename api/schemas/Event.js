@@ -60,6 +60,8 @@ const Event = {
       key: String!
       date: Date!
       images: [Image]
+      videoId: String
+      videoThumbnail: Image
       shortDescription: String!
       description: Markdown!
       eventUrl: String
@@ -80,6 +82,16 @@ const Event = {
         upcomingEvents: async () => model.find({ enabled: true, date: { $gt: new Date().getTime(), }, }).sort([['date', 'descending']]).limit(3).exec(),
         getEvent: async (parent, args) => {
             const event = await model.findOne({ key: args.key, }).exec();
+
+            /*
+             If no video thumb, return object with empty public ID
+             - This is not ideal but it eliminates client having to eval
+               if videoId non-null and then querying for thumbail
+            */
+            if (Object.keys(event._doc.videoThumbnail).length === 0) {
+                event._doc.videoThumbnail = { public_id: '', };
+            }
+
             return GetAdjacent(event);
         },
     },

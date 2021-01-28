@@ -125,6 +125,7 @@ export class StudioComponent {
         }
     }
 
+    // Toggle selected video to display embed
     embedVideo(index: number) {
         this.videoDisplayToggle[index] = true;
     }

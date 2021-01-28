@@ -3,7 +3,7 @@
         <h2 class="column is-full">{{ content.name }}</h2>
     </div>
 
-    <div #backgroundEnd class="top" class="columns is-mobile is-multiline">
+    <div class="top" class="columns is-mobile is-multiline">
         <div id="date" class="column is-full-tablet is-11-mobile">
             {{ content.date | date: 'MMMM dd, yyyy' }}
         </div>
@@ -29,63 +29,122 @@
             [ariaLabel]="'Go to ' + content?.name + ' website'"
             *ngIf="content?.showButton"
         ></app-button>
-    </div>
-    <div #description class="description">
-        <div id="short" class="column is-11-mobile is-three-quarters-tablet">
-            {{ content.shortDescription }}
-        </div>
-        <div
-            class="column is-11-mobile is-three-quarters-tablet"
-            [innerHtml]="content?.description.html"
-        ></div>
 
-        <div
-            class="columns is-mobile is-multiline is-centered"
-            *ngIf="content?.images !== undefined && content?.images.length > 0"
-        >
-            <div class="column is-11-mobile is-one-third-tablet">
+        <div class="column is-half">
+            {{ content.videoThumbail.public_id.length }}
+            <a
+                id="video-thumb"
+                [routerLink]=""
+                (click)="(embedVideo)"
+                *ngIf="!videoDisplayToggle"
+            >
                 <cdn-image
                     cloudinaryPrefix="/"
-                    cloudinaryId="{{ (content?.images)[0].public_id }}"
-                    height="450"
-                    alt="Image for '{{ content?.name }}' event"
-                    *ngIf="(content?.images)[0] !== undefined"
+                    cloudinaryId="{{ content.videoThumbail.public_id }}"
+                    autoFormat="true"
+                    [alt]="
+                        'Preview thumbnail image for ' +
+                        content.name +
+                        ' video.'
+                    "
+                    *ngIf="
+                        content.videoThumbail &&
+                        content.videoThumbail.public_id.length > 0
+                    "
                 ></cdn-image>
+                <img
+                    src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
+                    alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
+                    *ngIf="
+                        content.videoThumbail &&
+                        content.videoThumbail.public_id.length < 0
+                    "
+                />
+                <span class="icon">
+                    <svg width="80" height="80" fill="none" viewBox="0 0 80 80">
+                        <path
+                            fill="#fff"
+                            d="M40 0C17.92 0 0 17.92 0 40s17.92 40 40 40 40-17.92 40-40S62.08 0 40 0zM29.44 55.84V24.16L56.96 40 29.44 55.84z"
+                        />
+                    </svg>
+                </span>
+            </a>
+            <div id="video-embed" class="embed" *ngIf="videoDisplayToggle">
+                <div class="frame">
+                    <iframe
+                        [src]="videoUrl"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
-            <div class="column is-11-mobile is-one-third-tablet">
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{ (content?.images)[1].public_id }}"
-                    height="700"
-                    alt="Image for '{{ content?.name }}' event"
-                    *ngIf="(content?.images)[1] !== undefined"
-                ></cdn-image>
+        </div>
+
+        <div #description class="description column is-full">
+            <div
+                id="short"
+                class="column is-11-mobile is-three-quarters-tablet"
+            >
+                {{ content.shortDescription }}
             </div>
-            <div class="column is-11-mobile is-5-tablet">
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{ (content?.images)[2].public_id }}"
-                    height="725"
-                    alt="Image for '{{ content?.name }}' event"
-                    *ngIf="(content?.images)[2] !== undefined"
-                ></cdn-image>
-            </div>
-            <div class="column is-11-mobile is-7-tablet">
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{ (content?.images)[3].public_id }}"
-                    width="700"
-                    alt="Image for '{{ content?.name }}' event"
-                    *ngIf="(content?.images)[3] !== undefined"
-                ></cdn-image>
+            <div
+                class="column is-11-mobile is-three-quarters-tablet"
+                [innerHtml]="content?.description.html"
+            ></div>
+
+            <div
+                class="columns is-mobile is-multiline is-centered"
+                *ngIf="
+                    content?.images !== undefined && content?.images.length > 0
+                "
+            >
+                <div class="column is-11-mobile is-one-third-tablet">
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ (content?.images)[0].public_id }}"
+                        height="450"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="(content?.images)[0] !== undefined"
+                    ></cdn-image>
+                </div>
+                <div class="column is-11-mobile is-one-third-tablet">
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ (content?.images)[1].public_id }}"
+                        height="700"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="(content?.images)[1] !== undefined"
+                    ></cdn-image>
+                </div>
+                <div class="column is-11-mobile is-5-tablet">
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ (content?.images)[2].public_id }}"
+                        height="725"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="(content?.images)[2] !== undefined"
+                    ></cdn-image>
+                </div>
+                <div class="column is-11-mobile is-7-tablet">
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ (content?.images)[3].public_id }}"
+                        width="700"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="(content?.images)[3] !== undefined"
+                    ></cdn-image>
+                </div>
             </div>
         </div>
     </div>
 
-    <section id="nextprev" class="columns is-mobile is-multiline listing no-margin">
-        <div
-            class="item column is-11-mobile is-half-tablet"
-        >
+    <section
+        id="nextprev"
+        class="columns is-mobile is-multiline listing no-margin"
+    >
+        <div class="item column is-11-mobile is-half-tablet">
             <a
                 id="prev"
                 class="prev"
