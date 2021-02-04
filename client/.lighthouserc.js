@@ -1,7 +1,7 @@
 module.exports = {
     ci: {
       collect: {
-        url: ['http://localhost:8080'],
+        url: ['http://localhost:1864'],
         // headful: true
       },
 
