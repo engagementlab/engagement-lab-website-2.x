@@ -74,8 +74,8 @@ jobs:
         run: |
           npm run serve:a11y
           pa11y-ci
-          lhci autorun
-          lhci healthcheck --fatal --checks=githubToken
+        # lhci autorun
+        # lhci healthcheck --fatal --checks=githubToken
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
