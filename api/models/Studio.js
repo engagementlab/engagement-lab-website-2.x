@@ -133,7 +133,10 @@ Studio.add(
         '_Background Image_: Image shown as studio background. <br />' +
         '_Primary Image_: Image shown above intro. <br />' +
         '_Gallery Images_: Images below main studio info. To re-order, remove and upload again. <br />' +
-        '_Image Captions_: Please specify in order of images. If an image has no caption, enter **#** in text field.',
+        '_Image Captions_: Please specify in order of images. If an image has no caption, enter **#** in text field <br />' +
+        '_Gallery Videos_: Videos show directly under main studio info and **replace** primary image. <br />' +
+        '_Video Thumbnail Images_: Please specify in order of videos. Dimensions need to be 500x300px. <br />' +
+        '_Video Captions_: Please specify in order of videos. If a video has no caption, enter **#** in text field.',
         },
         thumb: {
             type: Types.CloudinaryImage,
@@ -163,6 +166,23 @@ Studio.add(
             autoCleanup: true,
         },
         galleryImageCaptions: {
+            type: Types.TextArray,
+        },
+        // Videos for studio gallery (replaces primary image)
+        galleryVideos: {
+            type: Types.TextArray,
+            label: 'Gallery Video IDs',
+            note: 'Must be video ID from a Vimeo URL (vimeo.com/**420657931** ← this is an ID)',
+        },
+        galleryVideoThumbails: {
+            type: Types.CloudinaryImages,
+            folder: 'homepage-2.0/studios',
+            autoCleanup: true,
+        },
+        galleryVideoTitles: {
+            type: Types.TextArray,
+        },
+        galleryVideoCaptions: {
             type: Types.TextArray,
         },
 

@@ -53,6 +53,10 @@ const Studios = {
       galleryImageCaptions: [String]
       primaryImage: Image
       primaryImageDescription: String
+      galleryVideos: [String]
+      galleryVideoTitles: [String]
+      galleryVideoCaptions: [String]
+      galleryVideoThumbails: [Image]
     }
   `,
     queries: ['allStudios: [Studio], getStudio(key: String): Studio, getStudios(past: Boolean): [Studio], studiosIntro: StudioIntro'],

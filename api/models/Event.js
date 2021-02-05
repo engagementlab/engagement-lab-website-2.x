@@ -56,6 +56,15 @@ Event.add({
         label: 'Event Images',
         folder: 'homepage-2.0/events',
     },
+    videoId: {
+        type: String,
+        label: 'Video ID',
+        note: 'Must be video ID from a Vimeo URL (vimeo.com/**420657931** ← this is an ID)',
+    },
+    videoThumbnail: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/events',
+    },
     shortDescription: {
         type: Types.Text,
         note: 'Shown on event index page. Limit 200 characters.',

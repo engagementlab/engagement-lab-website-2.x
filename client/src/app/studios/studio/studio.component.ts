@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, SecurityContext } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/utils/data.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-studio',
@@ -13,14 +14,18 @@ export class StudioComponent {
     public next: any;
     public previous: any;
 
+    public videoDisplayToggle: [boolean] = [false];
+    public videoUrls: [string];
+
     private subscriber: Subscription;
 
     constructor(
         private dataSvc: DataService,
         private route: ActivatedRoute,
-        private _router: Router,
+        private router: Router,
+        private sanitizer: DomSanitizer,
     ) {
-        this.subscriber = _router.events.subscribe(async e => {
+        this.subscriber = router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
             const { key } = this.route.snapshot.params;
@@ -74,7 +79,12 @@ export class StudioComponent {
                     public_id
                   }
                   primaryImageDescription
-                 
+                  galleryVideos
+                  galleryVideoTitles
+                  galleryVideoCaptions
+                  galleryVideoThumbails {
+                      public_id
+                  }
                 }
             }
         `;
@@ -98,8 +108,14 @@ export class StudioComponent {
 
     setContent(data: any): void {
         this.content = data;
-        // this.next = data.next;
-        // this.previous = data.prev;
+
+        // Populate array for toggling video embeds and sanitize video IDs into iframe URLs
+        this.videoUrls = this.content['galleryVideos'].map(vid => {
+            this.videoDisplayToggle.push(false);
+            return this.sanitizer.bypassSecurityTrustResourceUrl(
+                `https://player.vimeo.com/video/${vid}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
+            );
+        });
 
         // Show dynamic BG image, if any
         if (this.content.bgImage) {
@@ -107,5 +123,10 @@ export class StudioComponent {
             bodyBg.style.backgroundImage = `url(https://res.cloudinary.com/engagement-lab-home/image/upload/c_fill,f_auto,g_north,h_1110,w_2048/${this.content.bgImage.public_id})`;
             bodyBg.classList.add('open');
         }
+    }
+
+    // Toggle selected video to display embed
+    embedVideo(index: number) {
+        this.videoDisplayToggle[index] = true;
     }
 }

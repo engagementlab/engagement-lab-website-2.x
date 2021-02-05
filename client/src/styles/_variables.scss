@@ -2,10 +2,11 @@
 $cloudinary-account: 'engagement-lab-home';
 $cdn-product: 'homepage-2.0';
 
-@import url('https://fonts.googleapis.com/css?family=Overpass:400,600,900');
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,600,900&display=swap');
 
 @font-face {
   font-family: 'LunchtypeRegular';
+  font-display: swap;
   src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-regular-webfont.woff2') format('woff2'),
     /* Super modern browsers */
     url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-regular-webfont.woff') format('woff'),
@@ -16,6 +17,7 @@ $cdn-product: 'homepage-2.0';
 
 @font-face {
   font-family: 'LunchtypeMedium';
+  font-display: swap;
   src: url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff2') format('woff2'),
     /* Super modern browsers */
     url('https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-medium-webfont.woff') format('woff'),

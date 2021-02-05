@@ -1,7 +1,8 @@
 import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
-import { QueryRef } from 'apollo-angular';
+
 import { DataService } from '../utils/data.service';
 import { KEY_CODE } from '../research/projects/project.component';
 
@@ -16,16 +17,20 @@ export class EventComponent {
     public next: any;
     public previous: any;
 
+    public videoDisplayToggle: boolean;
+    public videoUrl: SafeResourceUrl;
+
     private subscriber: Subscription;
 
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
 
     constructor(
-        private _dataSvc: DataService,
+        private dataSvc: DataService,
         private route: ActivatedRoute,
-        private _router: Router,
+        private router: Router,
+        private sanitizer: DomSanitizer,
     ) {
-        this.subscriber = _router.events.subscribe(async e => {
+        this.subscriber = router.events.subscribe(async e => {
             if (!(e instanceof NavigationEnd)) return;
 
             const { key } = this.route.snapshot.params;
@@ -50,6 +55,10 @@ export class EventComponent {
                         images {
                             public_id
                         }
+                        videoId
+                        videoThumbnail {
+                            public_id
+                        }
                     }
                     prev {
                         name
@@ -63,7 +72,7 @@ export class EventComponent {
             }
         `;
 
-            const content = await this._dataSvc.getSetWithKey(
+            const content = await this.dataSvc.getSetWithKey(
                 'events',
                 key,
                 query,
@@ -82,13 +91,23 @@ export class EventComponent {
         this.content = data.event;
         this.next = data.next;
         this.previous = data.prev;
+
+        // Sanitize video ID into iframe URL
+        this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+            `https://player.vimeo.com/video/${this.content['videoId']}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
+        );
+    }
+
+    // Toggle event video to display embed
+    embedVideo() {
+        this.videoDisplayToggle = true;
     }
 
     @HostListener('window:keyup', ['$event'])
     keyEvent(event: KeyboardEvent): void {
         if (event.keyCode === KEY_CODE.RIGHT_ARROW)
-            this._router.navigateByUrl(`/events/${this.next.key}`);
+            this.router.navigateByUrl(`/events/${this.next.key}`);
         if (event.keyCode === KEY_CODE.LEFT_ARROW)
-            this._router.navigateByUrl(`/events/${this.previous.key}`);
+            this.router.navigateByUrl(`/events/${this.previous.key}`);
     }
 }
