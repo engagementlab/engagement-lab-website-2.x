@@ -59,3 +59,7 @@ h3 {
         }
     }
 }
+
+#body ::ng-deep h1 {
+    text-transform: uppercase;
+}

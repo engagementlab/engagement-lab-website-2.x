@@ -152,8 +152,7 @@
 
     <div class="columns is-multiline">
         <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
-            <h1 class="uppercase">Introduction</h1>
-            <p [innerHtml]="content.introduction.html"></p>
+            <p id="body" [innerHtml]="content.body.html"></p>
         </div>
         <div class="column is-full">
             <slideshow
@@ -162,12 +161,6 @@
                 [captions]="content.galleryImageCaptions"
             >
             </slideshow>
-        </div>
-        <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
-            <h1 class="uppercase">Social Impact</h1>
-            <p [innerHtml]="content.impact.html"></p>
-            <h1 class="uppercase">Role of Technology + Media</h1>
-            <p [innerHtml]="content.roles.html"></p>
         </div>
     </div>
 </section>
