@@ -103,12 +103,20 @@ Studio.add(
         contact: {
             type: String,
         },
+        body: {
+            type: Types.Markdown,
+            required: true,
+            initial: true,
+            toolbarOptions: { hiddenButtons: 'H2,H3,H4,H6,Code', },
+            note: 'Use _H1_ button to create header',
+        },
+        /*
         introduction: {
             type: Types.Markdown,
             required: true,
             initial: true,
         },
-        impact: {
+         impact: {
             type: Types.Markdown,
             required: true,
             initial: true,
@@ -119,7 +127,7 @@ Studio.add(
             required: true,
             initial: true,
             label: 'Role of Technology + Media',
-        },
+        }, */
 
     },
 

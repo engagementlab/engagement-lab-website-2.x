@@ -44,9 +44,10 @@ const Studios = {
       relatedLinks: [Resource]
       collaborators: [String]
       contact: String
-      introduction: Markdown!
-      impact: Markdown!
-      roles: Markdown!
+      body: Markdown!
+      introduction: Markdown
+      impact: Markdown
+      roles: Markdown
       thumb: Image
       bgImage: Image
       galleryImages: [Image]
