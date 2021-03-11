@@ -74,6 +74,7 @@ jobs:
         run: |
           npm run serve:a11y
           pa11y-ci
+          pm2 logs 0 --lines 250
         # lhci autorun
         # lhci healthcheck --fatal --checks=githubToken
         env:
