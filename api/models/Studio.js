@@ -108,7 +108,7 @@ Studio.add(
             required: true,
             initial: true,
             toolbarOptions: { hiddenButtons: 'H2,H3,H4,H6,Code', },
-            note: 'Use _H1_ button to create header',
+            // note: 'Use _H1_ button to create header',
         },
         /*
         introduction: {
