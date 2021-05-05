@@ -84,8 +84,16 @@ Studio.add(
             initial: true,
             note: 'e.g. _Visual and Media Arts_',
         },
+        departmentLabel: {
+            type: String,
+            note: 'Override default sponsor of label of _Department Sponsor_',
+        },
         sponsor: {
             type: String,
+        },
+        sponsorLabel: {
+            type: String,
+            note: 'Override default sponsor of label of _Class Sponsor_',
         },
         students: {
             type: Types.TextArray,
@@ -107,28 +115,8 @@ Studio.add(
             type: Types.Markdown,
             required: true,
             initial: true,
-            toolbarOptions: { hiddenButtons: 'H2,H3,H4,H6,Code', },
-            // note: 'Use _H1_ button to create header',
+            note: 'Use _H1_ button to create header',
         },
-        /*
-        introduction: {
-            type: Types.Markdown,
-            required: true,
-            initial: true,
-        },
-         impact: {
-            type: Types.Markdown,
-            required: true,
-            initial: true,
-            label: 'Social Impact',
-        },
-        roles: {
-            type: Types.Markdown,
-            required: true,
-            initial: true,
-            label: 'Role of Technology + Media',
-        }, */
-
     },
 
     'Studio Media', {
@@ -165,6 +153,9 @@ Studio.add(
             autoCleanup: true,
         },
         primaryImageDescription: {
+            type: String,
+        },
+        primaryImageCredit: {
             type: String,
         },
         // Images for studio gallery

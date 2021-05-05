@@ -39,7 +39,9 @@ const Studios = {
       semester: String
       faculty: [Person]
       department: String
+      departmentLabel: String
       sponsor: String
+      sponsorLabel: String
       students: [String]
       relatedLinks: [Resource]
       collaborators: [String]
@@ -54,6 +56,7 @@ const Studios = {
       galleryImageCaptions: [String]
       primaryImage: Image
       primaryImageDescription: String
+      primaryImageCredit: String
       galleryVideos: [String]
       galleryVideoTitles: [String]
       galleryVideoCaptions: [String]
