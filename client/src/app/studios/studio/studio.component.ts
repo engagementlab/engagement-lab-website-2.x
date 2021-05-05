@@ -48,7 +48,9 @@ export class StudioComponent {
                       key
                   }
                   department
+                  departmentLabel
                   sponsor
+                  sponsorLabel
                   students
                   relatedLinks {
                       url
@@ -82,6 +84,7 @@ export class StudioComponent {
                     public_id
                   }
                   primaryImageDescription
+                  primaryImageCredit
                   galleryVideos
                   galleryVideoTitles
                   galleryVideoCaptions
