@@ -22,7 +22,7 @@
       "user": "node",
       "host": "199.94.80.19",
       "repo": "git@github.com:engagementlab/engagement-lab-website-2.x.git",
-      "ref": "origin/master",
+      "ref": "origin/main",
       "path": "/srv/engagement-lab-website-2.0",
       "post-deploy": "bash ./scripts/deploy.sh qa",
       "env": {
