@@ -59,7 +59,9 @@ export class StudioComponent {
                           url
                       }
                   }
-                  collaborators
+                  collaborators {
+                      html
+                  }
                   contact
                   body {
                       html

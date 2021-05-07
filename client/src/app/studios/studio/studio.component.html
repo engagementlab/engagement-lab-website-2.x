@@ -74,9 +74,10 @@
             <h1 class="uppercase sm">
                 Collaborators
             </h1>
-            <span *ngFor="let collaborator of content.collaborators">
-                {{ collaborator }}<br
-            /></span>
+            <div
+                id="collaborators"
+                [innerHtml]="content.collaborators.html"
+            ></div>
             <h1 class="uppercase sm">
                 Contact
             </h1>
