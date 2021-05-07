@@ -106,7 +106,7 @@ Studio.add(
             many: true,
         },
         collaborators: {
-            type: Types.TextArray,
+            type: Types.Markdown,
         },
         contact: {
             type: String,

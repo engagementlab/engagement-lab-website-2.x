@@ -44,7 +44,7 @@ const Studios = {
       sponsorLabel: String
       students: [String]
       relatedLinks: [Resource]
-      collaborators: [String]
+      collaborators: Markdown
       contact: String
       body: Markdown!
       introduction: Markdown
