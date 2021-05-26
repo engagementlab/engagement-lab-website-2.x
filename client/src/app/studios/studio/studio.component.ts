@@ -66,6 +66,9 @@ export class StudioComponent {
                   body {
                       html
                   }
+                  studentProjects {
+                      html
+                  }
                   introduction {
                       html
                   }

@@ -71,12 +71,16 @@
 
     <div class="columns">
         <div class="column is-4">
-            <h1 class="uppercase sm">
+            <h1
+                class="uppercase sm"
+                *ngIf="content.collaborators && content.collaborators.html"
+            >
                 Collaborators
             </h1>
             <div
                 id="collaborators"
                 [innerHtml]="content.collaborators.html"
+                *ngIf="content.collaborators && content.collaborators.html"
             ></div>
             <h1 class="uppercase sm">
                 Contact
@@ -173,9 +177,22 @@
         </ng-template>
     </div>
 
+    <!-- Body, projects, gallery -->
     <div class="columns is-multiline">
         <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
             <p id="body" [innerHtml]="content.body.html"></p>
+        </div>
+        <div
+            id="projects"
+            class="column is-8-tablet is-11-mobile is-offset-4-tablet"
+            *ngIf="
+                content.studentProjects &&
+                content.studentProjects.html.length > 0
+            "
+        >
+            <hr />
+            <h1>Student Projects</h1>
+            <p id="projects" [innerHtml]="content.studentProjects.html"></p>
         </div>
         <div class="column is-full">
             <slideshow

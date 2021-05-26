@@ -63,6 +63,17 @@ h3 {
 #body ::ng-deep h1 {
     text-transform: uppercase;
 }
+#projects {
+    h1 {
+        text-transform: uppercase;
+    }
+    &::ng-deep em {
+        display: block;
+    }
+    &::ng-deep a {
+        color: rgb(0, 0, 238);
+    }
+}
 
 #primary-credit {
     opacity: 0.6;
