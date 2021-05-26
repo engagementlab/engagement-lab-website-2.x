@@ -117,6 +117,9 @@ Studio.add(
             initial: true,
             note: 'Use _H1_ button to create header',
         },
+        studentProjects: {
+            type: Types.Markdown,
+        },
     },
 
     'Studio Media', {

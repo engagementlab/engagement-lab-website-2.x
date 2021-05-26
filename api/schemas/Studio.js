@@ -47,6 +47,7 @@ const Studios = {
       collaborators: Markdown
       contact: String
       body: Markdown!
+      studentProjects: Markdown
       introduction: Markdown
       impact: Markdown
       roles: Markdown
