@@ -185,16 +185,15 @@
         <div
             id="projects"
             class="column is-8-tablet is-11-mobile is-offset-4-tablet"
-            *ngIf="
-                content.studentProjects &&
-                content.studentProjects.html.length > 0
-            "
+            *ngIf="content.studentProjects && content.studentProjects.html"
         >
             <hr />
             <h1>Student Projects</h1>
             <p id="projects" [innerHtml]="content.studentProjects.html"></p>
         </div>
         <div class="column is-full">
+            <hr />
+
             <slideshow
                 [images]="content.galleryImages"
                 [title]="content.name"
