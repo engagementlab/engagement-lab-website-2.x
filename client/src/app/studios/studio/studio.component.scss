@@ -60,8 +60,13 @@ h3 {
     }
 }
 
-#body ::ng-deep h1 {
-    text-transform: uppercase;
+#body {
+    &::ng-deep h1 {
+        text-transform: uppercase;
+    }
+    &::ng-deep a {
+        color: rgb(0, 0, 238);
+    }
 }
 #projects {
     h1 {
