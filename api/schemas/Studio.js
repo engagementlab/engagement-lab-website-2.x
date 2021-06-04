@@ -69,7 +69,7 @@ const Studios = {
         allStudios: async () => global.keystone.list('Studio').model.find({ enabled: true, }).exec(),
 
         getStudio: async (parent, args) => {
-            const res = await global.keystone.list('Studio').model.findOne({ $or: [{ key: args.key, }, { customUrl: args.key, }], })
+            const res = await global.keystone.list('Studio').model.findOne({ enabled: true, $or: [{ key: args.key, }, { customUrl: args.key, }], })
                 .populate({
                     path: 'faculty',
                     select: 'key name -_id',
@@ -83,7 +83,7 @@ const Studios = {
         },
         getStudios: async (parent, args) => {
             const status = args.past ? 'Completed' : 'Ongoing';
-            const res = await global.keystone.list('Studio').model.find({ status, })
+            const res = await global.keystone.list('Studio').model.find({ status, enabled: true, })
                 .populate({
                     path: 'faculty',
                     select: 'key name -_id',
