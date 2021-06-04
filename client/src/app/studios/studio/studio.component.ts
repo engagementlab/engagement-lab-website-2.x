@@ -105,7 +105,9 @@ export class StudioComponent {
                 key,
                 query,
             );
-            if (content) this.setContent(content['getStudio']);
+            if (content && content['getStudio'])
+                this.setContent(content['getStudio']);
+            else router.navigateByUrl('uh-oh');
         });
     }
 

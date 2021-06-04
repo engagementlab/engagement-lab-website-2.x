@@ -101,6 +101,7 @@ const routes: Routes = [
         canActivate: [RedirectService],
     },
 
+    { path: 'uh-oh', component: NotFoundComponent },
     { path: '**', component: NotFoundComponent },
 ];
 
