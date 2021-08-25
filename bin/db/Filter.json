@@ -53,3 +53,4 @@
 {"_id":{"$oid":"597b946593d1855392b87dd8"},"__v":0,"appears":"Publication","category":"Keyword","current":false,"key":"design","name":"Design","previous":false,"sortOrder":9}
 {"_id":{"$oid":"597b94c893d1855392b87de1"},"__v":0,"appears":"Publication","category":"Keyword","current":false,"key":"youth","name":"Youth","previous":false,"sortOrder":18}
 {"_id":{"$oid":"5f7790f61e0f154962dadb54"},"current":true,"name":"2020/2021 Cohort","category":"Cohort","sortOrder":53,"key":"2020-2021-cohort","__v":0,"label":"2020 - 2021"}
+{"_id":{"$oid":"61253493e82006281512e79e"},"current":true,"name":"2021/2022 Cohort","category":"Cohort","sortOrder":54,"key":"2021-2022-cohort","__v":0,"label":"2021 - 2022"}
