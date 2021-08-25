@@ -69,12 +69,13 @@ jobs:
           npx scully --sr
   
       # Run a11y and performance checks first w/ pa11y via config in ./pa11yci config then w/ headless Lighthouse, w/ all routes discovered by Scully build
-      - name: Start client dist build server via pm2, run a11y and performance tests
-        working-directory: ./client
-        run: |
-          npm run serve:a11y
-          pa11y-ci
-        # lhci autorun
+      # - name: Start client dist build server via pm2, run a11y and performance tests
+      #   working-directory: ./client
+      #   run: |
+      #     npm run serve:a11y
+      #     pa11y-ci
+      #     pm2 logs 0 --lines 250
+      #     lhci autorun
         # lhci healthcheck --fatal --checks=githubToken
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

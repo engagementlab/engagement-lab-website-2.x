@@ -1,6 +1,6 @@
 {
   "name": "engagement-lab-website-2.x",
-  "version": "2.5.2",
+  "version": "2.5.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

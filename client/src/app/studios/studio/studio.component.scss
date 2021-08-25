@@ -59,3 +59,45 @@ h3 {
         }
     }
 }
+
+#body {
+    &::ng-deep h1 {
+        text-transform: uppercase;
+    }
+    &::ng-deep a {
+        color: rgb(0, 0, 238);
+    }
+}
+#projects {
+    h1 {
+        text-transform: uppercase;
+    }
+    &::ng-deep em {
+        display: block;
+    }
+    &::ng-deep a {
+        color: rgb(0, 0, 238);
+    }
+}
+
+#primary-credit {
+    opacity: 0.6;
+    font-size: smaller;
+}
+
+#collaborators {
+    ::ng-deep h4 {
+        @include font-lunchtype;
+        font-weight: normal;
+        font-size: 1em;
+    }
+    ::ng-deep ul {
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ::ng-deep p {
+        margin: 0;
+    }
+}

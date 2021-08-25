@@ -72,7 +72,8 @@ const routes: Routes = [
     { path: 'publications', redirectTo: 'research/publications' },
 
     { path: 'masters', redirectTo: 'graduate' },
-    { path: 'masters/alumni', redirectTo: 'graduate/alumni' },
+    { path: 'masters/alumni', redirectTo: 'graduate/students' },
+    { path: 'masters/cohort/:key', redirectTo: 'graduate/students/:key' },
 
     // Redirect to other Azure static sites
     { path: 'hygiene/:path?', component: ExternalRedirectComponent },
@@ -82,7 +83,7 @@ const routes: Routes = [
     { path: 'people', component: TeamComponent },
     { path: 'people/:key', component: TeamComponent },
 
-    { path: 'cmap', redirectTo: 'masters' },
+    { path: 'cmap', redirectTo: 'graduate' },
 
     { path: 'contact', redirectTo: 'getinvolved' },
     { path: 'press', redirectTo: 'getinvolved' },
@@ -100,6 +101,7 @@ const routes: Routes = [
         canActivate: [RedirectService],
     },
 
+    { path: 'uh-oh', component: NotFoundComponent },
     { path: '**', component: NotFoundComponent },
 ];
 

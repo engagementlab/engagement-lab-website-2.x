@@ -48,7 +48,9 @@ export class StudioComponent {
                       key
                   }
                   department
+                  departmentLabel
                   sponsor
+                  sponsorLabel
                   students
                   relatedLinks {
                       url
@@ -57,8 +59,16 @@ export class StudioComponent {
                           url
                       }
                   }
-                  collaborators
+                  collaborators {
+                      html
+                  }
                   contact
+                  body {
+                      html
+                  }
+                  studentProjects {
+                      html
+                  }
                   introduction {
                       html
                   }
@@ -79,6 +89,7 @@ export class StudioComponent {
                     public_id
                   }
                   primaryImageDescription
+                  primaryImageCredit
                   galleryVideos
                   galleryVideoTitles
                   galleryVideoCaptions
@@ -94,7 +105,9 @@ export class StudioComponent {
                 key,
                 query,
             );
-            if (content) this.setContent(content['getStudio']);
+            if (content && content['getStudio'])
+                this.setContent(content['getStudio']);
+            else router.navigateByUrl('uh-oh');
         });
     }
 

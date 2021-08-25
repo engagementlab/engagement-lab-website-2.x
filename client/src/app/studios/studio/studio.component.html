@@ -15,13 +15,34 @@
         </div>
         <div class="column is-4">
             <h1 class="uppercase sm">
-                Department
+                <span
+                    *ngIf="
+                        content.departmentLabel &&
+                            content.departmentLabel.length > 0;
+                        else defaultDeptLabel
+                    "
+                >
+                    {{ content.departmentLabel }}
+                </span>
+                <ng-template #defaultDeptLabel>
+                    Department
+                </ng-template>
             </h1>
             {{ content.department }}
         </div>
         <div class="column">
             <h1 class="uppercase sm">
-                Class Sponsor
+                <span
+                    *ngIf="
+                        content.sponsorLabel && content.sponsorLabel.length > 0;
+                        else defaultLabel
+                    "
+                >
+                    {{ content.sponsorLabel }}
+                </span>
+                <ng-template #defaultLabel>
+                    Class Sponsor
+                </ng-template>
             </h1>
             {{ content.sponsor }}
         </div>
@@ -50,12 +71,17 @@
 
     <div class="columns">
         <div class="column is-4">
-            <h1 class="uppercase sm">
+            <h1
+                class="uppercase sm"
+                *ngIf="content.collaborators && content.collaborators.html"
+            >
                 Collaborators
             </h1>
-            <span *ngFor="let collaborator of content.collaborators">
-                {{ collaborator }}<br
-            /></span>
+            <div
+                id="collaborators"
+                [innerHtml]="content.collaborators.html"
+                *ngIf="content.collaborators && content.collaborators.html"
+            ></div>
             <h1 class="uppercase sm">
                 Contact
             </h1>
@@ -78,6 +104,7 @@
                 [alt]="'Primary image for ' + content.name + ' thesis page.'"
                 [describedby]="'primary-caption'"
             ></cdn-image>
+            <div id="primary-credit">{{ content.primaryImageCredit }}</div>
             <p id="primary-caption">{{ content.primaryImageDescription }}</p>
         </div>
         <ng-template #showVideos>
@@ -150,24 +177,29 @@
         </ng-template>
     </div>
 
+    <!-- Body, projects, gallery -->
     <div class="columns is-multiline">
         <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
-            <h1 class="uppercase">Introduction</h1>
-            <p [innerHtml]="content.introduction.html"></p>
+            <p id="body" [innerHtml]="content.body.html"></p>
+        </div>
+        <div
+            id="projects"
+            class="column is-8-tablet is-11-mobile is-offset-4-tablet"
+            *ngIf="content.studentProjects && content.studentProjects.html"
+        >
+            <hr />
+            <h1>Student Projects</h1>
+            <p id="projects" [innerHtml]="content.studentProjects.html"></p>
         </div>
         <div class="column is-full">
+            <hr />
+
             <slideshow
                 [images]="content.galleryImages"
                 [title]="content.name"
                 [captions]="content.galleryImageCaptions"
             >
             </slideshow>
-        </div>
-        <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
-            <h1 class="uppercase">Social Impact</h1>
-            <p [innerHtml]="content.impact.html"></p>
-            <h1 class="uppercase">Role of Technology + Media</h1>
-            <p [innerHtml]="content.roles.html"></p>
         </div>
     </div>
 </section>

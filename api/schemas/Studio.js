@@ -39,20 +39,25 @@ const Studios = {
       semester: String
       faculty: [Person]
       department: String
+      departmentLabel: String
       sponsor: String
+      sponsorLabel: String
       students: [String]
       relatedLinks: [Resource]
-      collaborators: [String]
+      collaborators: Markdown
       contact: String
-      introduction: Markdown!
-      impact: Markdown!
-      roles: Markdown!
+      body: Markdown!
+      studentProjects: Markdown
+      introduction: Markdown
+      impact: Markdown
+      roles: Markdown
       thumb: Image
       bgImage: Image
       galleryImages: [Image]
       galleryImageCaptions: [String]
       primaryImage: Image
       primaryImageDescription: String
+      primaryImageCredit: String
       galleryVideos: [String]
       galleryVideoTitles: [String]
       galleryVideoCaptions: [String]
@@ -64,7 +69,7 @@ const Studios = {
         allStudios: async () => global.keystone.list('Studio').model.find({ enabled: true, }).exec(),
 
         getStudio: async (parent, args) => {
-            const res = await global.keystone.list('Studio').model.findOne({ $or: [{ key: args.key, }, { customUrl: args.key, }], })
+            const res = await global.keystone.list('Studio').model.findOne({ enabled: true, $or: [{ key: args.key, }, { customUrl: args.key, }], })
                 .populate({
                     path: 'faculty',
                     select: 'key name -_id',
@@ -78,7 +83,7 @@ const Studios = {
         },
         getStudios: async (parent, args) => {
             const status = args.past ? 'Completed' : 'Ongoing';
-            const res = await global.keystone.list('Studio').model.find({ status, })
+            const res = await global.keystone.list('Studio').model.find({ status, enabled: true, })
                 .populate({
                     path: 'faculty',
                     select: 'key name -_id',

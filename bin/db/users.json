@@ -1,7 +1,7 @@
 {"_id":{"$oid":"5ec6b1327e2b4515cdf2001a"},"permissions":[],"email":"engagementlab@emerson.edu","name":"Dev User","__v":0}
 {"_id":{"$oid":"5efb80011affe4f0a86b2419"},"email":"john_richardson@emerson.edu","isAdmin":true,"name":{"last":"Richardson","first":"Johnny"},"__v":0}
 {"_id":{"$oid":"5c0e9c692599be09be9b58ed"},"email":"eric_gordon@emerson.edu","isAdmin":true,"name":{"last":"Gordon","first":"Eric"},"__v":0}
-{"_id":{"$oid":"5d8bb8e9b25e67050f01f09b"},"email":"kara_jackson@emerson.edu","isAdmin":true,"name":{"last":"Jackson","first":"Kara"},"__v":0}
 {"_id":{"$oid":"5dadeec2b25e67050f01f0b6"},"email":"sumali_dey@emerson.edu","isAdmin":true,"name":{"last":"Dey","first":"Sumali"},"__v":0}
-{"_id":{"$oid":"5dadef4bb25e67050f01f0b7"},"email":"alecgsciandra@gmail.com","isAdmin":true,"name":{"last":"Sciandra","first":"Alec"},"__v":0}
 {"_id":{"$oid":"5e20d79fe0349a512772367e"},"email":"tengmelis@gmail.com","isAdmin":true,"name":{"last":"Teng","first":"Melissa"},"__v":0}
+{"_id":{"$oid":"5d8bb8e9b25e67050f01f09b"},"email":"kara_jackson@emerson.edu","isAdmin":true,"name":{"last":"Jackson","first":"Kara"},"__v":0}
+{"_id":{"$oid":"5dadef4bb25e67050f01f0b7"},"email":"alecgsciandra@gmail.com","isAdmin":true,"name":{"last":"Sciandra","first":"Alec"},"__v":0}
