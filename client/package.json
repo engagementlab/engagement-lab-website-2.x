@@ -64,7 +64,7 @@
     "tiny-slider": "^2.9.2",
     "tslib": "^1.10.0",
     "tsparticles": "^1.18.7",
-    "underscore": "^1.9.2",
+    "underscore": "^1.12.1",
     "webpack": "^4.43.0",
     "zone.js": "~0.10.2"
   },

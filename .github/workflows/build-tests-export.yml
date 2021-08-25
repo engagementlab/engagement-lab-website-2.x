@@ -10,7 +10,7 @@ jobs:
   build-tests:
     name: "Make production build, run a11y tests"
     # Do not run on automated commits (interpretation of TravisCI feature)
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    if: "!contains(github.event.head_commit.message, 'skip ci') &&  github.actor != 'dependabot[bot]'"
     runs-on: ubuntu-latest
     strategy:
       matrix:
