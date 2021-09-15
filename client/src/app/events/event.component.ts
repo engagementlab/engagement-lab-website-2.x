@@ -90,7 +90,7 @@ export class EventComponent {
     setContent(data: any): void {
         this.content = data.event;
         this.next = data.next;
-        this.previous = data.prev;
+        this.previous = data.prev[0];
 
         // Sanitize video ID into iframe URL
         this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
