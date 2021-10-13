@@ -22,10 +22,9 @@ const GetAdjacent = async results => {
                 },
             },
             fields
-        )
-        .limit(1);
+        );
     const prevEvent = list
-        .findOne(
+        .find(
             {
                 enabled: true,
                 date: {
@@ -34,7 +33,7 @@ const GetAdjacent = async results => {
             },
             fields
         )
-        .sort({ sortOrder: -1, })
+        .sort([['date', 'descending']])
         .limit(1);
 
     const nextPrevResults = {
@@ -56,8 +55,8 @@ const Event = {
     type Event {
       id: ID!
       enabled: Boolean
-      name: String!
-      key: String!
+      name: String
+      key: String
       date: Date!
       images: [Image]
       videoId: String
@@ -71,7 +70,7 @@ const Event = {
     }
     type EventResult {
       event: Event
-      prev: Event
+      prev: [Event]
       next: Event
     }
   `,
@@ -88,7 +87,9 @@ const Event = {
              - This is not ideal but it eliminates client having to eval
                if videoId non-null and then querying for thumbail
             */
+            // eslint-disable-next-line no-underscore-dangle
             if (Object.keys(event._doc.videoThumbnail).length === 0) {
+                // eslint-disable-next-line no-underscore-dangle
                 event._doc.videoThumbnail = { public_id: '', };
             }
 
