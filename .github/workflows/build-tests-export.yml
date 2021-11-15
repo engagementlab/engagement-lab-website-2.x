@@ -85,6 +85,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         env:
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          AZURE_SUBSCRIPTION: ${{ secrets.AZURE_SUBSCRIPTION }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GHA_RUNNUM: ${{ github.run_number }}
         # Install azure-cli, run Bash scripts
