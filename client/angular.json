@@ -181,7 +181,9 @@
                         "outputPath": "dist/server",
                         "main": "server.ts",
                         "tsConfig": "tsconfig.server.json",
-                        "externalDependencies": []
+                        "externalDependencies": [],
+                        "sourceMap": true,
+                        "optimization": false
                     },
                     "configurations": {
                         "development": {
@@ -192,8 +194,6 @@
                                     "with": "src/environments/environment.prod.ts"
                                 }
                             ],
-                            "sourceMap": true,
-                            "optimization": false
                         },
                         "production": {
                             "outputHashing": "media",
@@ -206,7 +206,8 @@
                             "sourceMap": false,
                             "optimization": true
                         }
-                    }
+                    },
+                    "defaultConfiguration": ""
                 },
                 "serve-ssr": {
                     "builder": "@nguniversal/builders:ssr-dev-server",
