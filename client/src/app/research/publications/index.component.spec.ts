@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PublicationIndexComponent } from './index.component';
 
@@ -6,7 +6,7 @@ describe('PublicationIndexComponent', () => {
     let component: PublicationIndexComponent;
     let fixture: ComponentFixture<PublicationIndexComponent>;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
             declarations: [PublicationIndexComponent],
         }).compileComponents();
