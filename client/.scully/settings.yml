@@ -1,2 +1,11 @@
 identifier: k3faee5av8lecefb
 allowErrorCollect: true
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: elab-web
+homeFolder: /Users/john_richardson/Documents/Projects/engagement-lab-website-2.x/client
+distFolder: ./dist/browser
+outDir: /Users/john_richardson/Documents/Projects/engagement-lab-website-2.x/bin/app
+handle404: ''

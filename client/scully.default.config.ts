@@ -7,6 +7,7 @@ exports.config = {
     projectRoot: './src',
     projectName: 'elab-web',
     outDir: '../bin/app',
+    distFolder: './dist/browser',
     routes: {
         // All studios pages
         '/studios/studio/:key': {
