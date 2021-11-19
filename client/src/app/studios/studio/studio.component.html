@@ -1,4 +1,4 @@
-<section id="bg" *ngIf="content">
+<section id="bg" *ngIf="content !== undefined">
     <div class="columns is-multiline">
         <h2 class="column is-full">{{ content.name }}</h2>
         <div class="blurb column is-four-fifths-desktop">
@@ -185,19 +185,22 @@
         <div
             id="projects"
             class="column is-8-tablet is-11-mobile is-offset-4-tablet"
-            *ngIf="content.studentProjects && content.studentProjects.html"
+            *ngIf="
+                content.studentProjects !== undefined &&
+                content.studentProjects.html
+            "
         >
             <hr />
             <h1>Student Projects</h1>
-            <p id="projects" [innerHtml]="content.studentProjects.html"></p>
+            <p id="projects" innerHtml="content?.studentProjects.html"></p>
         </div>
         <div class="column is-full">
             <hr />
 
             <slideshow
-                [images]="content.galleryImages"
-                [title]="content.name"
-                [captions]="content.galleryImageCaptions"
+                images="content?.galleryImages"
+                title="content?.name"
+                captions="content?.galleryImageCaptions"
             >
             </slideshow>
         </div>
