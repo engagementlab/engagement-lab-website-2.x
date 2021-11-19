@@ -19,7 +19,7 @@
     "serve:api": "cd ../api; nodemon;",
     "serve:api:prod": "cd ../api; nodemon prod;",
     "scully": "scully",
-    "scully:build": "scully --sr --RSD --sge",
+    "scully:build": "scully --sr --RSD --sge --pluginsError=false --logSeverity=normal",
     "scully:serve": "scully serve",
     "postinstall": "ngcc"
   },

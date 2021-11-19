@@ -1,272 +1,159 @@
-<!DOCTYPE html><html><head><meta name="generator" content="Scully 2.0.1">
-    <title>Unlocking Health</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- Bootstrap -->
-    <link href="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460133221/unlockinghealth/css/bootstrap.css" media="screen" rel="stylesheet">
-    <link href="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1586280640/unlockinghealth/css/maincss.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,300,700" rel="stylesheet" type="text/css">
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Scully 2.0.2">
+        <meta charset="utf-8">
 
-    <!-- Include the basic styles -->
-    <link type="text/css" rel="Stylesheet" href="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460133221/unlockinghealth/css/bjqs.css">
+        <title>Engagement Lab @ Emerson College</title>
+        <base href="/">
 
-    <!-- Include the jQuery library (local or CDN) -->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
+        <meta name="google-site-verification" content="sAAr29dYQ5MN6redmViv9IVMsUV1FHZJpo5ncRf3-Tw">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+        <meta name="description" content="Studying and designing media and technology that is reshaping civic life.">
 
-    <script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+        <link rel="preconnect" href="//res.cloudinary.com" crossorigin="">
+        <link rel="dns-prefetch" href="//res.cloudinary.com">
 
-    <script src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460133221/unlockinghealth/js/bootstrap.min.js"></script>
-    <script src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460133221/unlockinghealth/js/webgl.min.js"></script>
+        <!-- OG -->
+        <meta property="og:title" content="Engagement Lab @ Emerson College">
+        <meta property="og:url" content="https://elab.emerson.edu">
+        <meta property="og:description" content="Studying and designing media and technology that is reshaping civic life.">
+        <meta property="og:image" content="//res.cloudinary.com/engagement-lab-home/image/upload/c_scale,q_100,w_1200/v1604957425/homepage-2.0/socialv2.5.jpg">
 
-    <!-- Include the plugin *after* the jQuery library -->
-    <script src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460133221/unlockinghealth/js/bjqs.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/tiny-slider.css">
+        
+        <!-- This favicon stuff is really just getting out of control -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/favicon-128.png" sizes="128x128">
 
-    <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/engagement-lab-home/image/upload/v1586280964/unlockinghealth/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/engagement-lab-home/image/upload/v1586280964/unlockinghealth/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/engagement-lab-home/image/upload/v1586280964/unlockinghealth/icons/favicon-16x16.png">
-    <link rel="manifest" href="https://res.cloudinary.com/engagement-lab-home/image/upload/v1586280964/unlockinghealth/icons/site.webmanifest">
-    <link rel="mask-icon" href="https://res.cloudinary.com/engagement-lab-home/image/upload/v1586280964/unlockinghealth/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="https://res.cloudinary.com/engagement-lab-home/image/upload/v1586280964/unlockinghealth/icons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="https://res.cloudinary.com/engagement-lab-home/image/upload/v1586280964/unlockinghealth/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <style>
-        .row {
-            margin: 0;
-        }
-        #logos {
-            padding: 1%;
-        }
-    </style>
+        <!-- MS favicons/metadata -->
+        <meta name="application-name" content="Engagement Lab @ Emerson College">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="//res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/mstile-144x144.png">
+        <meta name="msapplication-square70x70logo" content="//res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/mstile-70x70.png">
+        <meta name="msapplication-square150x150logo" content="//res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/mstile-150x150.png">
+        <meta name="msapplication-wide310x150logo" content="//res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/mstile-310x150.png">
+        <meta name="msapplication-square310x310logo" content="//res.cloudinary.com/engagement-lab-home/image/upload/homepage-2.0/favicons/mstile-310x310.png">
 
-<script>window['ScullyIO']='generated';window['ScullyIO-injected']={"inlineStateOnly":true};</script></head>
+        <!-- Preload webfonts -->
+        <link rel="preload" href="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1543943334/homepage-2.0/fonts/lunchtype22-regular-webfont.woff2" as="font" type="font/woff2" crossorigin=""> 
+	
+        <style type="text/css">
+            #unsupported {
+                display: none;
+                position: fixed;
 
-<body class="template" scully-version="2.0.1">
-    <!--NAVBAR-->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle
-                navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" data-id="play">Play</a>
-                    </li>
-                    <li>
-                        <a href="#" data-id="about">About</a>
-                    </li>
-                    <li>
-                        <a href="#" data-id="tips">Tips for Playing</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <!--need to get rid of padding after the navbar-->
-    <div class="jumbotron" id="backgroundImg">
-        <!--Unlocking Health Photo Here-->
-        <div class="banner">
-            <div class="bannerImg">
-                <br>
-                <div id="UHbanner"></div>
-                <p id="bannertext">An exploration and strategy game for teaching the
-                    <br>principles of Results Based Financing</p>
-
-            </div>
-        </div>
-
-    </div>
-
-    <a id="play"></a>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 download" id="mac">
-                <br>
-                <div class="iconhere" id="macicon"></div>
-                <br>
-                <h3>download for mac</h3>
-                <p class="maintext">Approx. 26 minutes to download file over standard DSL connection (1.5mbps)</p>
-                <br>
-                <a href="https://elabhome.blob.core.windows.net/downloads/UnlockingHealth_Mac.zip">
-                    <button class="btn btn-default center-block" type="button">download</button>
-                </a>
-                <br>
-                <p class="greytext">Screen Resolution 800x600
-                    <br> CPU SSE2 instruction set support
-                    <br> Graphics card DX9 (shader model 2.0) capabilities
-                    <br> Mac OS X 10.7 or greater
-                    <br> 2GB of RAM</p>
-                <br>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 download" id="windows">
-                <br>
-                <div class="iconhere" id="windicon"></div>
-                <br>
-                <h3>download for windows</h3>
-                <p class="maintext">Approx. 26 minutes to download file over standard DSL connection (1.5mbps)</p>
-                <br>
-                <a href="https://elabhome.blob.core.windows.net/downloads/UnlockingHealth_PC.zip">
-                    <button class="btn btn-default center-block" type="button">download</button>
-                </a>
-                <br>
-                <p class="greytext">Screen Resolution 800x600
-                    <br> CPU SSE2 instruction set support
-                    <br> Graphics card DX9 (shader model 2.0) capabilities
-                    <br> 2GB of RAM</p>
-                <br>
-            </div>
-        </div>
-        <!-- Temporary remove web version -->
-        <!-- <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 download" id="online">
-                <br>
-                <div class="iconhere" id="onlineicon"></div>
-                <br>
-                <p class="greytext">have a high speed internet connection?</p>
-                <h3>play online</h3>
-                <br>
-
-                <div id="browsers">
-                    <p>Your browser is not compatible with this version, but you can install Chrome or Firefox:
-                        <br />
-                        <a href="https://www.google.com/chrome/browser/desktop/" target="_blank" class="hvr-grow"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/images/chrome.png" />
-                        </a>
-                        <a href="https://www.mozilla.org/firefox/new/" target="_blank" class="hvr-grow"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/images/firefox.png" />
-                        </a>
-                    </p>
-                    <p>Or download the game for PC or Mac!</p>
-                </div>
-
-                <div id="playnow">
-                    <button class="btn btn-default center-block" type="button">play online
-                    </button>
-                    <br>
-                    <p class="greytext">A fast connection (at least 10mbps) is recommended. Please be patient as the game may take 1-5 minutes to download inside browser. You can test your connection speed <a href="http://testmy.net/SmarTest/down">here</a>.</p>
-                    <br>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12" id="webgl" style="display: none">
-                <iframe id="game_embed" width="100%" height="760" frameBorder="0" sandbox="allow-scripts allow-same-origin allow-modals" allowfullscreen="true">
-                    <p>
-                        <a href="https://developer.mozilla.org/en-US/docs/Glossary">
-                  Fallback link for browsers that, unlikely, don't support frames
-                </a>
-                    </p>
-                </iframe>
-            </div>
-        </div> -->
-
-        <a id="about"></a>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 footer">
-                <div>
-                    <h1>Welcome to Zariba!</h1>
-                    <p>You are an international consultant charged with creating a program proposal fo the people of Zariba that will improve health care and raise key indicators specified by the Ministry of Health.</p>
-                    <p>Find your way around the country and talk to local people to get a nuanced picture of the situation from a wide array of perspectives. Set health priorities with government ministry officials, then help implement, monitor, and adapt the plan in context as operational obstacles inevitably arise.</p>
-                    <p id="p3">Strive to meet target health indicator goals over the course of three years in the game and unlock health for the people of Zariba!</p>
-                    <hr style="width: 50%">    
-                    <p>Unlocking Health was commissioned by the <a href="https://olc.worldbank.org">Open Learning Campus</a> with financial support from the Government of Korea.</p>
-                    <p>This game was developed in collaboration with the Health, Nutrition and Population Global Practice of the World Bank</p>
-                    <p>and was designed and created by the Engagement Lab at Emerson College. Originally released in 2016.</p>
-                </div>
-
-                <a id="tips"></a>
-                <div id="tips-slideshow" style="height: 518.571px; max-width: 980px; position: relative;">
-                    <ul class="bjqs" style="height: 518.571px; width: 100%; display: block;">
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%; display: none;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/0.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%; display: none;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/1.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%; display: none;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/2.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%; display: list-item;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/3.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/4.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/5.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/6.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/7.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/8.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/9.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/10.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/11.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/12.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/13.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/14.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                        <li class="bjqs-slide" style="height: 518.571px; width: 100%;"><img src="https://res.cloudinary.com/engagement-lab-home/raw/upload/v1460063581/unlockinghealth/15.jpg" style="height: 518.571px; width: 100%;">
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row" id="logos">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-            <a href="https://elab.emerson.edu"><img src="https://res.cloudinary.com/engagement-lab-home/image/upload/v1543874087/logos/logo-sm.png" alt="Engagement Lab logo"></a>
-            <a href="https://olc.worldbank.org/" style="margin-left: 2%;"><img src="https://res.cloudinary.com/engagement-lab-home/image/upload/c_scale,h_75/v1586277158/unlockinghealth/images/worldbank.png" alt="World Bank logo"></a>
-        </div>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-
-        $(document).ready(function($) {
-            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                $('#online').remove();
+                background-color: #fdbd39;
+                z-index: 100;
+                top: 0;
+                left: 0;
+                text-align: center;
+                width: 100%;
+                padding: 1% 5% 1% 5%;
             }
+            #unsupported .left {
+                float: left;
+                width: 70%;
+            }
+            #unsupported .right {
+                font-size: 2em;
+            }
+            #unsupported p {
+                font-size: 0.8em;
+            }
+            #unsupported a {
+                font-size: 0.8em;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    <link rel="stylesheet" href="styles.00a93ebd02a258a12240.css"><script>window['ScullyIO']='generated';window['ScullyIO-injected']={"inlineStateOnly":true};</script></head>
 
-            $('#playnow button').on('click', function() {
-                $('#webgl').slideDown();
-                $.scrollTo($('#webgl'), {
-                    axis: 'y',
-                    duration: 800
-                });
-                embedWebGL();
-            });
+    <body scully-version="2.0.2">
+        <div id="unsupported">
+            <div class="left">
+                Your browser is not currently supported by this app and may not
+                look or work as intended. Please consider using a
+                <a href="https://browsehappy.com/">modern browser</a>.
+                <p>
+                    (The Engagement Lab supports the following: Chrome 57+ (70+
+                    on mobile), Firefox 53+, Safari 10+, Edge 16+, iOS 10.3+.)
+                </p>
+            </div>
+            <div class="right">
+                <a href="#" onclick="document.getElementById('unsupported').remove()">Continue anyway</a>
+            </div>
+        </div>
+        <div id="initiative-bg">
+            <div id="engaged-journalism" class="shapes">
+                <img src="https://res.cloudinary.com/engagement-lab-home/image/upload/v1598396645/homepage-2.0/initiatives/trust-news-shape.svg" alt="Background shape image for trust and the news initiative page">&gt;
+                <svg width="1440px" height="981px" viewBox="0 0 1440 981">
+                    <g id="All" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(0.000000, -40.000000)" fill="#000000">
+                            <path d="M477.336668,822.500869 C477.336668,1067.62381 394.724735,1210.29047 229.500869,1250.50087 L1210.50087,1250.50087 L1207.50087,-189.500869 L1035.50087,-189.500869 C1064.59836,-24.291819 976.500869,100.378419 783.500869,227.601294 C581.99278,360.432581 477.336668,457.459643 477.336668,822.500869 Z" transform="translate(720.000869, 530.500000) rotate(-270.000000) translate(-720.000869, -530.500000) "></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div id="civic-smart-cities" class="shapes">
+                <img src="https://res.cloudinary.com/engagement-lab-home/image/upload/v1598396645/homepage-2.0/initiatives/smartcities-shape.svg" alt="Background shape image for civic smart cities initiative page">
+                <svg width="1440px" height="947px" viewBox="0 0 1440 947">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(0.000000, -74.000000)" fill="#000000">
+                            <path d="M330.046068,1032.95255 C349.748535,1178.398 320.643915,1255.65789 242.732209,1264.73221 L1196.2792,1264.73221 L1196.2792,-176.279201 C1046.8284,-160.741021 943.8284,-132.031765 887.279201,-90.1514326 C759.537269,4.45423207 776.705109,247.076691 735.279201,444.02093 C693.853293,640.965169 266.348642,562.732209 330.046068,1032.95255 Z" id="Oval-Copy" transform="translate(719.505705, 544.226504) rotate(-270.000000) translate(-719.505705, -544.226504) "></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div id="health-advocacy" class="shapes">
+                <img src="https://res.cloudinary.com/engagement-lab-home/image/upload/v1598396645/homepage-2.0/initiatives/health-shape.svg" alt="Background shape image for health advocacy initiative page"><svg width="1440px" height="939px" viewBox="0 0 1440 939">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(0.000000, -82.000000)" fill="#000000">
+                            <path d="M312.189483,1008.28368 C285.207377,1049.46717 264.905441,1137.46717 251.283676,1272.28368 L1189.71632,1272.28368 L1186.71632,-167.716324 L1126.21632,-168.716324 C1126.19332,-154.911462 1098.93162,-121.244795 1044.43124,-67.7163238 C962.486604,12.7669827 856.716324,12.7669827 791.716324,134.002354 C699.198422,306.563004 712.942828,415.346198 679.216324,602.283676 C645.48982,789.221155 466.403621,772.902628 312.189483,1008.28368 Z" id="Oval-Copy2" transform="translate(720.500000, 551.783676) rotate(-270.000000) translate(-720.500000, -551.783676) "></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <app-root></app-root>
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+            // Detect old agents and show warning
+            var unsupported = !navigator.userAgent.match(
+                /((CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS)[ +]+(12[_\.]2|12[_\.]([3-9]|\d{2,})|12[_\.]4|12[_\.]([5-9]|\d{2,})|(1[3-9]|[2-9]\d|\d{3,})[_\.]\d+|13[_\.]0|13[_\.]([1-9]|\d{2,})|(1[4-9]|[2-9]\d|\d{3,})[_\.]\d+)(?:[_\.]\d+)?)|(OperaMini(?:\/att)?\/?(\d+)?(?:\.\d+)?(?:\.\d+)?)|(Opera\/.+Opera Mobi.+Version\/(46\.0|46\.([1-9]|\d{2,})|(4[7-9]|[5-9]\d|\d{3,})\.\d+))|(Opera\/(46\.0|46\.([1-9]|\d{2,})|(4[7-9]|[5-9]\d|\d{3,})\.\d+).+Opera Mobi)|(Opera Mobi.+Opera(?:\/|\s+)(46\.0|46\.([1-9]|\d{2,})|(4[7-9]|[5-9]\d|\d{3,})\.\d+))|(SamsungBrowser\/(9\.2|9\.([3-9]|\d{2,})|([1-9]\d|\d{3,})\.\d+|10\.1|10\.([2-9]|\d{2,})|(1[1-9]|[2-9]\d|\d{3,})\.\d+))|(Edge\/(17(?:\.0)?|17(?:\.([1-9]|\d{2,}))?|(1[8-9]|[2-9]\d|\d{3,})(?:\.\d+)?))|(HeadlessChrome((?:\/49\.0\.\d+)?|(?:\/49\.([1-9]|\d{2,})\.\d+)?|(?:\/([5-9]\d|\d{3,})\.\d+\.\d+)?|(?:\/77\.0\.\d+)?|(?:\/77\.([1-9]|\d{2,})\.\d+)?|(?:\/(7[8-9]|[8-9]\d|\d{3,})\.\d+\.\d+)?))|((Chromium|Chrome)\/(49\.0|49\.([1-9]|\d{2,})|([5-9]\d|\d{3,})\.\d+|77\.0|77\.([1-9]|\d{2,})|(7[8-9]|[8-9]\d|\d{3,})\.\d+)(?:\.\d+)?([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$)))|(IEMobile[ /](11\.0|11\.([1-9]|\d{2,})|(1[2-9]|[2-9]\d|\d{3,})\.\d+))|(Version\/(5\.1|5\.([2-9]|\d{2,})|([6-9]|\d{2,})\.\d+|11\.0|11\.([1-9]|\d{2,})|(1[2-9]|[2-9]\d|\d{3,})\.\d+|12\.0|12\.([1-9]|\d{2,})|(1[3-9]|[2-9]\d|\d{3,})\.\d+|13\.0|13\.([1-9]|\d{2,})|(1[4-9]|[2-9]\d|\d{3,})\.\d+)(?:\.\d+)?.*Safari\/)|(Firefox\/(68\.0|68\.([1-9]|\d{2,})|(69|[7-9]\d|\d{3,})\.\d+|70\.0|70\.([1-9]|\d{2,})|(7[1-9]|[8-9]\d|\d{3,})\.\d+)\.\d+)|(Firefox\/(68\.0|68\.([1-9]|\d{2,})|(69|[7-9]\d|\d{3,})\.\d+|70\.0|70\.([1-9]|\d{2,})|(7[1-9]|[8-9]\d|\d{3,})\.\d+)(pre|[ab]\d+[a-z]*)?)/,
+            );
 
-            $('ul.nav a').on('click', function(evt) {
-                console.log(evt)
-                $.scrollTo($('#' + $(evt.currentTarget).data('id')), {
-                    axis: 'y',
-                    duration: 800
-                });
-            });
+            if (unsupported)
+                document.getElementById('unsupported').style.display = 'block';
 
-            $('#tips-slideshow').bjqs({
-                width: 980,
-                height: 660,
-                animtype: 'fade', // accepts 'fade' or 'slide'
-                animduration: 450, // how fast the animation are
-                animspeed: 7500, // the delay between each slide
-                automatic: true, // automatic
-                showcontrols: false,
-                showmarkers: false,
-                responsive: true
-            });
-        });
-    </script>
-
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                (i[r] =
+                    i[r] ||
+                    function() {
+                        (i[r].q = i[r].q || []).push(arguments);
+                    }),
+                    (i[r].l = 1 * new Date());
+                (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(
+                window,
+                document,
+                'script',
+                'https://www.google-analytics.com/analytics.js',
+                'ga',
+            );
+        </script>
+    <script src="runtime-es2015.9d27b455e46376b08834.js" type="module"></script><script src="runtime-es5.9d27b455e46376b08834.js" nomodule="" defer=""></script><script src="polyfills-es5.0dbc4f4b2c5ef50827a3.js" nomodule="" defer=""></script><script src="polyfills-es2015.94685cb08c4960939ccd.js" type="module"></script><script src="vendor-es2015.0573e1b47ec127f4268e.js" type="module"></script><script src="vendor-es5.0573e1b47ec127f4268e.js" nomodule="" defer=""></script><script src="main-es2015.502fb4b11bd2275b7ad0.js" type="module"></script><script src="main-es5.502fb4b11bd2275b7ad0.js" nomodule="" defer=""></script>
 
 </body></html>
