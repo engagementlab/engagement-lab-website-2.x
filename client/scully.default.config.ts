@@ -3,6 +3,11 @@ import './plugins/routes';
 
 exports.config = {
     // logFileSeverity: 0,
+    puppeteerLaunchOptions: {
+        headless: false,
+        devTools: true,
+        slowMo: 500,
+    },
     inlineStateOnly: true,
     projectRoot: './src',
     projectName: 'elab-web',
