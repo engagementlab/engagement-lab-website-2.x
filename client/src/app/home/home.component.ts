@@ -56,7 +56,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         // Determine if agent is phone; used to lessen particle effect
         this.isPhone = isMobile(window.navigator.userAgent).phone;
 
-
         this.emailForm = this.formBuilder.group({
             email: ['', [Validators.required, Validators.email]],
         });
@@ -91,11 +90,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         // Load particles effect after content render
         setTimeout(() => {
             const particlesEl = this.particles.nativeElement;
-            particlesEl.style.width = `${document.getElementById('intro').clientWidth
-                }px`;
-            particlesEl.style.height = `${document.getElementById('intro').clientHeight
-                }px`;
+            particlesEl.style.width = `${
+                document.getElementById('intro').clientWidth
+            }px`;
+            particlesEl.style.height = `${
+                document.getElementById('intro').clientHeight
+            }px`;
 
+            console.log(particlesEl);
             this.drawParticles();
 
             // Animate tagline and intro
@@ -108,8 +110,11 @@ export class HomeComponent implements OnInit, OnDestroy {
                 begin: () => {
                     document.querySelector('h1').classList.add('show');
                     document.querySelector('h1').style.visibility = 'visible';
-                    document.getElementById('inner').style.visibility = 'visible';
-                    document.getElementById('newsletter-wrap').classList.add('show');
+                    document.getElementById('inner').style.visibility =
+                        'visible';
+                    document
+                        .getElementById('newsletter-wrap')
+                        .classList.add('show');
                 },
             });
 
@@ -181,6 +186,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     drawParticles() {
         tsParticles.load('particles', {
+            fullScreen: false,
             interactivity: {
                 detect_on: 'canvas',
                 events: {
