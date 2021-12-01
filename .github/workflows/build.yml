@@ -1,5 +1,5 @@
-name: build-tests-export
-on: [push, pull_request]
+name: build
+on: [push, pull_request, workflow_dispatch]
 env:
   AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
   CI: true
@@ -27,7 +27,7 @@ jobs:
       # Do this only for PR to production, since we need to work on master during later commit, and PR's work off of merge ref
       - name: Checkout code of PR HEAD
         uses: actions/checkout@v2
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' }}
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       
@@ -82,7 +82,7 @@ jobs:
 
       # Deploy static build to Azure storage if succeeded and commit DB export and build, if on prod PR
       - name: Deploy static build, backup QA database
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' }}
         env:
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           AZURE_SUBSCRIPTION: ${{ secrets.AZURE_SUBSCRIPTION }}
