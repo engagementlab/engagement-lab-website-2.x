@@ -1,5 +1,11 @@
 name: build
-on: [push, pull_request, workflow_dispatch]
+on: 
+  repository_dispatch:
+    types: deploy-prod
+  push:
+    branches: [main]
+  pull_request:
+    branches: [production]
 env:
   AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
   CI: true
