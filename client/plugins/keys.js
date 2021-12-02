@@ -10,6 +10,8 @@ const queryData = async (queryName,
         } 
     }`;
     const response = await axios.post('http://localhost:3000/graphql', { query: body });
+    // console.log(response)
+
     return response.data.data;
 };
 
@@ -29,6 +31,8 @@ const mdprojectIdPlugin = async (route, config) => {
     const routes = [];
 
     response.allMDProjectPages.forEach((res) => {
+
+
         routes.push({ route: `/graduate/projects/${res.customUrl || res.key}` });
     });
     return Promise.resolve(routes);
@@ -39,7 +43,6 @@ const projectIdPlugin = async (route, config) => {
     const routes = [];
 
     response.allProjectPages.forEach((res) => {
-        console.log(res)
         routes.push({ route: `/research/projects/${res.customUrl || res.key}` });
     });
     return Promise.resolve(routes);
