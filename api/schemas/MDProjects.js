@@ -80,6 +80,7 @@ const MDProjects = {
       primaryImageDescription: String
       partners: [Partner]
       bgImage: Image
+      customUrl: String
     }
     type MDProjectResult {
         project: MDProject

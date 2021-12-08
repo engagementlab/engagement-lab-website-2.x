@@ -20,6 +20,8 @@ export class EventComponent {
     public videoDisplayToggle: boolean;
     public videoUrl: SafeResourceUrl;
 
+    public thirdImgId: string;
+
     private subscriber: Subscription;
 
     @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
@@ -96,6 +98,9 @@ export class EventComponent {
         this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
             `https://player.vimeo.com/video/${this.content['videoId']}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
         );
+
+        if (this.content.images && this.content.images.length >= 4)
+            this.thirdImgId = this.content.images[3].public_id;
     }
 
     // Toggle event video to display embed

@@ -1,65 +1,65 @@
 <div *ngIf="content">
     <div id="name" class="columns is-multiline">
-        <h2 class="column is-full">{{ content.name }}</h2>
+        <h2 class="column is-full">{{ content?.name }}</h2>
     </div>
 
     <div class="top" class="columns is-mobile is-multiline">
         <div id="date" class="column is-full-tablet is-11-mobile">
-            {{ content.date | date: 'MMMM dd, yyyy' }}
+            {{ content?.date | date: 'MMMM dd, yyyy' }}
         </div>
 
         <div
             class="column"
             *ngIf="
-                content.eventUrl &&
-                content.eventUrl.length > 0 &&
-                !content.showButton
+                content?.eventUrl &&
+                content?.eventUrl.length > 0 &&
+                !content?.showButton
             "
         >
             <h4>Website</h4>
-            <a href="{{ content.eventUrl }}" role="link">{{
-                content.eventUrl | prettyUrl
+            <a href="{{ content?.eventUrl }}" role="link">{{
+                content?.eventUrl | prettyUrl
             }}</a>
         </div>
 
         <app-button
             class="column is-4-tablet"
-            label="{{ content.buttonTxt }}"
-            href="{{ content.eventUrl }}"
-            [ariaLabel]="'Go to ' + content.name + ' website'"
-            *ngIf="content.showButton"
+            label="{{ content?.buttonTxt }}"
+            href="{{ content?.eventUrl }}"
+            [ariaLabel]="'Go to ' + content?.name + ' website'"
+            *ngIf="content?.showButton"
         ></app-button>
 
         <!-- Columns break if video -->
-        <div class="column is-full" *ngIf="content.videoId"></div>
+        <div class="column is-full" *ngIf="content?.videoId"></div>
         <!-- Video -->
         <div
             id="video"
             class="column is-full-mobile is-full-tablet is-half-desktop"
-            *ngIf="content.videoId"
+            *ngIf="content?.videoId"
         >
             <a
                 id="video-thumb"
                 [routerLink]=""
                 (click)="embedVideo()"
-                *ngIf="!videoDisplayToggle && content.videoThumbnail"
+                *ngIf="!videoDisplayToggle && content?.videoThumbnail"
             >
                 <cdn-image
                     cloudinaryPrefix="/"
-                    cloudinaryId="{{ content.videoThumbnail.public_id }}"
+                    cloudinaryId="{{ content?.videoThumbnail.public_id }}"
                     autoFormat="true"
                     [alt]="
                         'Preview thumbnail image for ' +
-                        content.name +
+                        content?.name +
                         ' video.'
                     "
-                    *ngIf="content.videoThumbnail.public_id.length > 0"
+                    *ngIf="content?.videoThumbnail.public_id.length > 0"
                 ></cdn-image>
                 <!-- No thumb -->
                 <img
                     src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
                     alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
-                    *ngIf="content.videoThumbnail.public_id.length === 0"
+                    *ngIf="content?.videoThumbnail.public_id.length === 0"
                 />
                 <span class="icon">
                     <svg width="80" height="80" fill="none" viewBox="0 0 80 80">
@@ -70,7 +70,11 @@
                     </svg>
                 </span>
             </a>
-            <div id="video-embed" class="embed" *ngIf="videoDisplayToggle">
+            <div
+                id="video-embed"
+                class="embed"
+                *ngIf="videoDisplayToggle === true"
+            >
                 <div class="frame">
                     <iframe
                         [src]="videoUrl"
@@ -86,62 +90,68 @@
         <div
             #description
             class="description column"
-            [class.is-full]="!content.videoId"
+            [class.is-full]="!content?.videoId"
         >
             <div
                 id="short"
                 class="column is-11-mobile is-three-quarters-tablet"
             >
-                {{ content.shortDescription }}
+                {{ content?.shortDescription }}
             </div>
             <div
                 class="column is-11-mobile is-three-quarters-tablet"
-                [innerHtml]="content.description.html"
+                [innerHtml]="content?.description.html"
             ></div>
 
             <!-- If no video -->
             <div
                 class="columns is-mobile is-multiline is-centered"
                 *ngIf="
-                    !content.videoId &&
-                    content.images !== undefined &&
-                    content.images.length > 0
+                    !content?.videoId &&
+                    content?.images !== undefined &&
+                    content?.images.length > 0
                 "
             >
                 <div class="column is-11-mobile is-one-third-tablet">
                     <cdn-image
                         cloudinaryPrefix="/"
-                        cloudinaryId="{{ content.images[0].public_id }}"
+                        cloudinaryId="{{ (content?.images)[0].public_id }}"
                         height="450"
-                        alt="Image for '{{ content.name }}' event"
-                        *ngIf="content.images[0] !== undefined"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="(content?.images)[0] !== undefined"
                     ></cdn-image>
                 </div>
                 <div class="column is-11-mobile is-one-third-tablet">
                     <cdn-image
                         cloudinaryPrefix="/"
-                        cloudinaryId="{{ content.images[1].public_id }}"
+                        cloudinaryId="{{ (content?.images)[1].public_id }}"
                         height="700"
-                        alt="Image for '{{ content.name }}' event"
-                        *ngIf="content.images[1] !== undefined"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="(content?.images)[1] !== undefined"
                     ></cdn-image>
                 </div>
                 <div class="column is-11-mobile is-5-tablet">
                     <cdn-image
                         cloudinaryPrefix="/"
-                        cloudinaryId="{{ content.images[2].public_id }}"
+                        cloudinaryId="{{
+                            content?.images !== undefined &&
+                                (content?.images)[2].public_id
+                        }}"
                         height="725"
-                        alt="Image for '{{ content.name }}' event"
-                        *ngIf="content.images[2] !== undefined"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="
+                            content?.images !== undefined &&
+                            (content?.images)[2] !== undefined
+                        "
                     ></cdn-image>
                 </div>
                 <div class="column is-11-mobile is-7-tablet">
                     <cdn-image
                         cloudinaryPrefix="/"
-                        cloudinaryId="{{ content.images[3].public_id }}"
+                        cloudinaryId="{{ thirdImgId }}"
                         width="700"
-                        alt="Image for '{{ content.name }}' event"
-                        *ngIf="content.images[3] !== undefined"
+                        alt="Image for '{{ content?.name }}' event"
+                        *ngIf="thirdImgId"
                     ></cdn-image>
                 </div>
             </div>
@@ -151,45 +161,61 @@
         <div
             class="columns is-mobile is-multiline is-centered"
             *ngIf="
-                content.videoId &&
-                content.images !== undefined &&
-                content.images.length > 0
+                content?.videoId &&
+                content?.images !== undefined &&
+                content?.images.length > 0
             "
         >
             <div class="column is-11-mobile is-one-third-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
-                    cloudinaryId="{{ content.images[0].public_id }}"
+                    cloudinaryId="{{ (content?.images)[0].public_id }}"
                     height="450"
-                    alt="Image for '{{ content.name }}' event"
-                    *ngIf="content.images[0] !== undefined"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="(content?.images)[0] !== undefined"
                 ></cdn-image>
             </div>
             <div class="column is-11-mobile is-one-third-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
-                    cloudinaryId="{{ content.images[1].public_id }}"
+                    cloudinaryId="{{ (content?.images)[1].public_id }}"
                     height="700"
-                    alt="Image for '{{ content.name }}' event"
-                    *ngIf="content.images[1] !== undefined"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="
+                        content?.images.length > 0 &&
+                        content?.images !== undefined &&
+                        (content?.images)[1] !== undefined
+                    "
                 ></cdn-image>
             </div>
             <div class="column is-11-mobile is-5-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
-                    cloudinaryId="{{ content.images[2].public_id }}"
+                    cloudinaryId="{{
+                        content?.images !== undefined &&
+                            (content?.images)[2].public_id
+                    }}"
                     height="725"
-                    alt="Image for '{{ content.name }}' event"
-                    *ngIf="content.images[2] !== undefined"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="
+                        content?.images !== undefined &&
+                        (content?.images)[2] !== undefined
+                    "
                 ></cdn-image>
             </div>
             <div class="column is-11-mobile is-7-tablet">
                 <cdn-image
                     cloudinaryPrefix="/"
-                    cloudinaryId="{{ content.images[3].public_id }}"
+                    cloudinaryId="{{
+                        content?.images !== undefined &&
+                            (content?.images)[3].public_id
+                    }}"
                     width="700"
-                    alt="Image for '{{ content.name }}' event"
-                    *ngIf="content.images[3] !== undefined"
+                    alt="Image for '{{ content?.name }}' event"
+                    *ngIf="
+                        content?.images !== undefined &&
+                        (content?.images)[3] !== undefined
+                    "
                 ></cdn-image>
             </div>
         </div>

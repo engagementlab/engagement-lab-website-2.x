@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 
-import { version } from '../../../package.json';
+import packageInfo from '../../../package.json';
 import { DataService } from '../utils/data.service';
 
 @Component({
@@ -29,7 +29,7 @@ export class FooterComponent implements OnInit {
         this.emailForm = this.formBuilder.group({
             email: ['', [Validators.required, Validators.email]],
         });
-        this.appVersion = `v${version}`;
+        this.appVersion = `v${packageInfo.version}`;
     }
 
     ngOnInit() {}

@@ -41,7 +41,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "extractLicenses": true,
                             "vendorChunk": true,
@@ -152,17 +151,6 @@
                         "scripts": []
                     }
                 },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "tsconfig.app.json",
-                            "tsconfig.spec.json",
-                            "e2e/tsconfig.json"
-                        ],
-                        "exclude": ["**/node_modules/**"]
-                    }
-                },
                 "e2e": {
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
@@ -181,7 +169,9 @@
                         "outputPath": "dist/server",
                         "main": "server.ts",
                         "tsConfig": "tsconfig.server.json",
-                        "externalDependencies": []
+                        "externalDependencies": [],
+                        "sourceMap": true,
+                        "optimization": false
                     },
                     "configurations": {
                         "development": {
@@ -191,9 +181,7 @@
                                     "replace": "src/environments/environment.ts",
                                     "with": "src/environments/environment.prod.ts"
                                 }
-                            ],
-                            "sourceMap": true,
-                            "optimization": false
+                            ]
                         },
                         "production": {
                             "outputHashing": "media",
@@ -206,7 +194,8 @@
                             "sourceMap": false,
                             "optimization": true
                         }
-                    }
+                    },
+                    "defaultConfiguration": ""
                 },
                 "serve-ssr": {
                     "builder": "@nguniversal/builders:ssr-dev-server",

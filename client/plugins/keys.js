@@ -1,40 +1,49 @@
 const axios = require('axios');
 const { registerPlugin } = require('@scullyio/scully');
 
-const queryData = async (queryName) => {
-    const body = `query { ${queryName} { key } }`;
+const queryData = async (queryName, 
+    customUrl) => {
+    const body = `query { 
+        ${queryName} { 
+            key 
+            ${customUrl ? 'customUrl' : ''} 
+        } 
+    }`;
     const response = await axios.post('http://localhost:3000/graphql', { query: body });
+    // console.log(response)
 
     return response.data.data;
 };
 
 const studioIdPlugin = async (route, config) => {
     // Obtain all studio keys via graphql query
-    const response = await queryData('allStudios');
+    const response = await queryData('allStudios', true);
     const routes = [];
 
     response.allStudios.forEach((res) => {
-        routes.push({ route: `/studios/studio/${res.key}` });
+        routes.push({ route: `/studios/studio/${res.customUrl || res.key}` });
     });
     return Promise.resolve(routes);
 };
 const mdprojectIdPlugin = async (route, config) => {
     // Obtain all grad project keys via graphql query
-    const response = await queryData('allMDProjectPages');
+    const response = await queryData('allMDProjectPages', true);
     const routes = [];
 
     response.allMDProjectPages.forEach((res) => {
-        routes.push({ route: `/graduate/projects/${res.key}` });
+
+
+        routes.push({ route: `/graduate/projects/${res.customUrl || res.key}` });
     });
     return Promise.resolve(routes);
 };
 const projectIdPlugin = async (route, config) => {
     // Obtain all project keys via graphql query
-    const response = await queryData('allProjectPages');
+    const response = await queryData('allProjectPages', true);
     const routes = [];
 
     response.allProjectPages.forEach((res) => {
-        routes.push({ route: `/research/projects/${res.key}` });
+        routes.push({ route: `/research/projects/${res.customUrl || res.key}` });
     });
     return Promise.resolve(routes);
 };
