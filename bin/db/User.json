@@ -3,3 +3,4 @@
 {"_id":{"$oid":"6154cebf25477e640a0f0106"},"name":{"first":"Aaron","last":"Stier-Cohen"},"isAdmin":true,"email":"aaron_stiercohen@emerson.edu","__v":0}
 {"_id":{"$oid":"6154cf0225477e640a0f0107"},"name":{"first":"Sharry","last":"Li"},"isAdmin":true,"email":"sharry_li@emerson.edu","__v":0}
 {"_id":{"$oid":"6192752825477e640a0f0128"},"name":{"first":"Mikaela","last":"Joyce"},"isAdmin":true,"email":"mikaela_joyce@emerson.edu","__v":0}
+{"_id":{"$oid":"61a7e20225477e640a0f0129"},"name":{"first":"Fatima","last":"Yesuf"},"isAdmin":true,"email":"fatimah_yesuf@emerson.edu","__v":0}
