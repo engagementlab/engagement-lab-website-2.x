@@ -13,4 +13,4 @@ az account set -s $AZURE_SUBSCRIPTION
 az storage blob upload-batch -d '$web' -s ./bin/app
 
 # Clear CDN cache
-az cache purge
+az cdn endpoint purge -g web -n engagementlab --content-paths '/*' --profile-name web-apps
