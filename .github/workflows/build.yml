@@ -11,6 +11,7 @@ env:
   DB_URI: ${{ secrets.DB_URI }}
   NODE_ENV: staging
   ACTIONS_RUNNER_DEBUG: true
+  AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
 jobs:
   build-tests:
     name: "Make production build, run a11y tests"
