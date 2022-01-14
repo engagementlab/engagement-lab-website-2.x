@@ -84,7 +84,10 @@
     class="subnav"
     [class.white]="initiativeActive()"
 >
-    <div class="columns is-mobile is-multiline uppercase no-margin">
+    <div
+        id="research"
+        class="columns is-mobile is-multiline uppercase no-margin"
+    >
         <a
             class="column is-2-tablet is-11-mobile border"
             routerLink="/research/projects"
@@ -95,7 +98,7 @@
             </span></a
         >
         <a
-            class="column is-2-tablet is-11-mobile border"
+            class="column is-2-tablet is-11-mobile"
             routerLink="/research/publications"
             [class.active]="subNavitemActive('/research/publications')"
             [attr.aria-label]="'Link to go to publications page'"
@@ -103,50 +106,6 @@
                 Publications
             </span>
         </a>
-        <a
-            #initiativesBtn
-            id="initiatives-btn"
-            class="column is-11-mobile hidden-not-mobile foldout-btn"
-            [attr.aria-label]="'Button to fold out initiatives menu'"
-            (click)="toggleInitiatives()"
-            ><span>
-                Initiatives
-                <svg viewBox="0 117.325 10 5.218" width="10" height="5.218">
-                    <g
-                        transform="matrix(0.020381, 0, 0, 0.020381, -0.000001, 114.933815)"
-                    >
-                        <g>
-                            <path
-                                d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0
-                              c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667
-                              C491.696,131.368,491.696,124.605,487.536,120.445z"
-                                [class.white]="initiativeActive()"
-                            ></path>
-                        </g>
-                    </g>
-                </svg>
-            </span>
-        </a>
-        <div
-            #initiativesEl
-            id="initiatives-nav"
-            class="column is-11-mobile foldout"
-        >
-            <a
-                *ngFor="let initiative of initiatives"
-                [routerLink]="'/research/initiatives/' + initiative.key"
-                [class.active]="
-                    subNavitemActive('/research/initiatives/' + initiative.key)
-                "
-                [attr.aria-label]="
-                    'Link to go to ' + initiative.name + ' initiative'
-                "
-            >
-                <span>
-                    {{ initiative.name }}
-                </span>
-            </a>
-        </div>
     </div>
 </nav>
 
@@ -173,7 +132,7 @@
                 ><span>Students + Alumni</span></a
             >
         </div>
-       <!-- <div>
+        <!-- <div>
              <a
                 routerLink="/graduate/projects"
                 [class.active]="subNavitemActive('/graduate/projects')"

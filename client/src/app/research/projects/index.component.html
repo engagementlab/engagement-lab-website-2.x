@@ -4,31 +4,6 @@
     <h3 class="blurb">{{ researchBlurb }}</h3>
 
     <div id="filters" class="uppercase">
-        <div id="initiatives" class="columns is-mobile is-multiline">
-            <span class="bold column is-11-mobile is-2-tablet"
-                >Initiatives:</span
-            >
-            <span class="controls column"
-                ><a
-                    aria-label="Button to filter projects by all initiatives"
-                    [class.active]="!currentSelectorKey"
-                    (click)="applySelector(null)"
-                    >All Research</a
-                >
-                <a
-                    *ngFor="let initiative of initiatives"
-                    [attr.aria-label]="
-                        'Button to filter projects by ' +
-                        initiative.name +
-                        ' initiative'
-                    "
-                    [class.active]="currentSelectorKey === initiative.key"
-                    (click)="applySelector(initiative.key)"
-                >
-                    {{ initiative.name }}
-                </a>
-            </span>
-        </div>
         <div id="status" class="columns is-mobile is-multiline">
             <span class="bold column is-full-mobile is-2-tablet">Status:</span>
             <span class="controls column">
@@ -90,6 +65,10 @@
                     ></cdn-image>
                 </div>
                 <h4>{{ project.name }}</h4>
+                <span *ngIf="!project.endYear">{{ project.startYear }}</span>
+                <span *ngIf="project.endYear"
+                    >{{ project.startYear }} - {{ project.endYear }}</span
+                >
             </a>
         </div>
     </ng-container>
