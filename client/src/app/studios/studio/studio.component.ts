@@ -63,6 +63,9 @@ export class StudioComponent {
                       html
                   }
                   contact
+                  intro {
+                      html
+                  }
                   body {
                       html
                   }
@@ -112,9 +115,6 @@ export class StudioComponent {
     }
 
     ngOnDestroy(): void {
-        // Reset BG
-        document.getElementById('project-bg').classList.remove('open');
-
         // Cancel router subscribe
         this.subscriber.unsubscribe();
     }
@@ -129,13 +129,6 @@ export class StudioComponent {
                 `https://player.vimeo.com/video/${vid}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
             );
         });
-
-        // Show dynamic BG image, if any
-        if (this.content.bgImage) {
-            let bodyBg = document.getElementById('project-bg');
-            bodyBg.style.backgroundImage = `url(https://res.cloudinary.com/engagement-lab-home/image/upload/c_fill,f_auto,g_north,h_1110,w_2048/${this.content.bgImage.public_id})`;
-            bodyBg.classList.add('open');
-        }
     }
 
     // Toggle selected video to display embed

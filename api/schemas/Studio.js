@@ -46,6 +46,7 @@ const Studios = {
       relatedLinks: [Resource]
       collaborators: Markdown
       contact: String
+      intro: Markdown!
       body: Markdown!
       studentProjects: Markdown
       introduction: Markdown

@@ -4,7 +4,10 @@
         <div class="blurb column is-four-fifths-desktop">
             {{ content.semester }}
         </div>
-        <div class="column is-4">
+        <div class="column is-half ">
+            <p [innerHtml]="content.intro.html"></p>
+        </div>
+        <div class="column is-full">
             <h1 class="uppercase sm">
                 Faculty
             </h1>
@@ -13,7 +16,7 @@
                     >{{ person.name.first }} {{ person.name.last }}<br /> </a
             ></span>
         </div>
-        <div class="column is-4">
+        <div class="column is-full">
             <h1 class="uppercase sm">
                 <span
                     *ngIf="
@@ -30,7 +33,7 @@
             </h1>
             {{ content.department }}
         </div>
-        <div class="column">
+        <div class="column is-full">
             <h1 class="uppercase sm">
                 <span
                     *ngIf="
@@ -87,6 +90,26 @@
             </h1>
             <span>{{ content.contact }}</span>
         </div>
+    </div>
+
+    <hr />
+    <!-- Body, projects, gallery -->
+    <div class="columns is-multiline">
+        <div class="column is-8-tablet is-11-mobile">
+            <p id="body" [innerHtml]="content.body.html"></p>
+        </div>
+        <div
+            id="projects"
+            class="column is-8-tablet is-11-mobile is-offset-4-tablet"
+            *ngIf="
+                content.studentProjects !== undefined &&
+                content.studentProjects.html
+            "
+        >
+            <hr />
+            <h1>Student Projects</h1>
+            <p id="projects" innerHtml="content?.studentProjects.html"></p>
+        </div>
         <div
             class="column is-9"
             *ngIf="
@@ -108,7 +131,7 @@
             <p id="primary-caption">{{ content.primaryImageDescription }}</p>
         </div>
         <ng-template #showVideos>
-            <div class="column columns is-multiline is-9 videos">
+            <div class="column columns is-multiline is-full videos">
                 <div
                     class="video column is-11-mobile is-5-tablet"
                     *ngFor="let video of content.galleryVideos; let i = index"
@@ -175,26 +198,10 @@
                 </div>
             </div>
         </ng-template>
-    </div>
-
-    <!-- Body, projects, gallery -->
-    <div class="columns is-multiline">
-        <div class="column is-8-tablet is-11-mobile is-offset-4-tablet">
-            <p id="body" [innerHtml]="content.body.html"></p>
-        </div>
         <div
-            id="projects"
-            class="column is-8-tablet is-11-mobile is-offset-4-tablet"
-            *ngIf="
-                content.studentProjects !== undefined &&
-                content.studentProjects.html
-            "
+            class="column is-full"
+            *ngIf="content?.galleryImages && content?.galleryImages.length > 0"
         >
-            <hr />
-            <h1>Student Projects</h1>
-            <p id="projects" innerHtml="content?.studentProjects.html"></p>
-        </div>
-        <div class="column is-full">
             <hr />
 
             <slideshow

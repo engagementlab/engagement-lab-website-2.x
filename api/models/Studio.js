@@ -111,6 +111,11 @@ Studio.add(
         contact: {
             type: String,
         },
+        intro: {
+            type: Types.Markdown,
+            required: true,
+            initial: true,
+        },
         body: {
             type: Types.Markdown,
             required: true,
@@ -129,7 +134,6 @@ Studio.add(
             noedit: true,
             note: '**All images below need to be very high quality.** <br />' +
         '_Thumbnail Image_: Image shown as thumb in listings. <br />' +
-        '_Background Image_: Image shown as studio background. <br />' +
         '_Primary Image_: Image shown above intro. <br />' +
         '_Gallery Images_: Images below main studio info. To re-order, remove and upload again. <br />' +
         '_Image Captions_: Please specify in order of images. If an image has no caption, enter **#** in text field <br />' +
@@ -140,13 +144,6 @@ Studio.add(
         thumb: {
             type: Types.CloudinaryImage,
             label: 'Thumbnail Image',
-            folder: 'homepage-2.0/studios',
-            autoCleanup: true,
-        },
-        // Image for studio BG
-        bgImage: {
-            type: Types.CloudinaryImage,
-            label: 'Background Image',
             folder: 'homepage-2.0/studios',
             autoCleanup: true,
         },
