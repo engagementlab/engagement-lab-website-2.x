@@ -19,6 +19,7 @@ const { Types, } = keystone.Field;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Studio = new keystone.List('Studio', {
+    sortable: true,
     autokey: {
         path: 'key',
         from: 'name',

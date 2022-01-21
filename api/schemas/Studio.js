@@ -67,7 +67,7 @@ const Studios = {
   `,
     queries: ['allStudios: [Studio], getStudio(key: String): Studio, getStudios(past: Boolean): [Studio], studiosIntro: StudioIntro'],
     resolvers: {
-        allStudios: async () => global.keystone.list('Studio').model.find({ enabled: true, }).exec(),
+        allStudios: async () => global.keystone.list('Studio').model.find({ enabled: true, }).sort({ sortOrder: 1, }).exec(),
 
         getStudio: async (parent, args) => {
             const res = await global.keystone.list('Studio').model.findOne({ enabled: true, $or: [{ key: args.key, }, { customUrl: args.key, }], })
