@@ -2,7 +2,7 @@
 <section id="intro" class="columns is-mobile" *ngIf="content">
     <div class="column is-half-tablet is-10-mobile">
         <h2>Studios</h2>
-        <h3 class="blurb">{{ content.summary }}</h3>
+        <h3 class="blurb">{{ content.studiosIntro.summary }}</h3>
     </div>
 </section>
 
@@ -13,9 +13,80 @@
 >
     <div class="column is-full">
         <h1 class="uppercase">
-            Studio Types
+            Studios
         </h1>
     </div>
+
+    <div id="status" class="columns column is-full is-mobile">
+        <span class="bold">Filter:</span>
+        <span class="controls column flex">
+            <a
+                aria-label="Button to filter projects by any status"
+                data-toggle="all"
+                (click)="applySelector(null)"
+                [class.active]="!currentStudio"
+            >
+                <h4>
+                    All
+                </h4>
+
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{
+                        content.studiosIntro.graduateThesisThumbnail.public_id
+                    }}"
+                    width="250"
+                    autoFormat="true"
+                    [responsive]="true"
+                    alt="Thumbnail image for filtering by all studios"
+                ></cdn-image>
+            </a>
+            <a
+                *ngFor="let initiative of content.allStudioInitiatives"
+                [attr.aria-label]="
+                    'Button to filter studios belonging to ' +
+                    initiative.name +
+                    ' initiative'
+                "
+                [class.active]="
+                    currentStudio && currentStudio.key === initiative.key
+                "
+                (click)="applySelector(initiative.key)"
+            >
+                <h4>
+                    {{ initiative.name }}
+                </h4>
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ initiative.thumb.public_id }}"
+                    width="250"
+                    [alt]="'Thumbnail image for initiative ' + initiative.name"
+                ></cdn-image
+            ></a>
+        </span>
+    </div>
+
+    <div
+        class="column is-full-mobile type"
+        *ngFor="let studio of content.allStudios"
+    >
+        <a
+            routerLink="/studios/studio/{{ studio.key }}"
+            *ngIf="isSelected(studio.key)"
+            [@inOutAnimation]
+        >
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ studio.thumb.public_id }}"
+                width="301"
+                autoFormat="true"
+                [responsive]="true"
+                [alt]="'Thumbnail image for studio ' + studio.name"
+            ></cdn-image>
+            <h1 class="uppercase sm no-margin">{{ studio.name }}</h1>
+        </a>
+    </div>
+    <!--    
     <div class="column is-full-mobile type">
         <a routerLink="/studios/partnered">
             <cdn-image
@@ -30,7 +101,7 @@
             <h1 class="uppercase sm no-margin">Duration</h1>
             <span>1 Semester</span>
         </a>
-    </div>
+    </div> 
     <div class="column is-full-mobile type">
         <a routerLink="/studios/thesis">
             <cdn-image
@@ -61,38 +132,5 @@
             <span>1 Year</span>
         </a>
     </div>
+     -->
 </section>
-<!-- 
-<section id="partners" class="columns is-multiline is-mobile">
-    <div class="column is-11-mobile is-full-tablet">
-        <hr class="thick" />
-        <h1 class="uppercase">
-            Organizations we work with
-        </h1>
-    </div>
-    <div
-        class="column is-1-tablet is-2-mobile"
-        *ngFor="let partner of partners"
-    >
-        <cdn-image
-            cloudinaryPrefix="/"
-            cloudinaryId="{{ partner.image.public_id }}"
-            width="130"
-            alt="Icon for {{ partner.name }} partner "
-        ></cdn-image>
-    </div>
-    <div id="buttons" class="column is-full-tablet is-11-mobile">
-        <app-button
-            route="/partner"
-            label="Information For Partners"
-            ariaLabel="Button to go to Information For Partners"
-            class="medium"
-        ></app-button>
-        <app-button
-            route="/graduate"
-            label="Information For Students"
-            ariaLabel="Button to go to Information For Students"
-            class="medium"
-        ></app-button>
-    </div>
-</section> -->

@@ -1,49 +1,61 @@
-@import "~src/styles/_variables";
-@import "~src/styles/_mixins";
+@import '~src/styles/_variables';
+@import '~src/styles/_mixins';
 
 h3 {
-  @include font-lunchtype-med;
+    @include font-lunchtype-med;
 }
 
 #buttons {
-  display: inline-flex;
-  justify-content: space-around;
+    display: inline-flex;
+    justify-content: space-around;
 
-  @include phones {
-    flex-direction: column;
-  }
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 #types {
-  @include phones {
-    margin: 0;
-  }
+    @include phones {
+        margin: 0;
+    }
 }
 
 #partners {
-  @include phones {
-    @include ng-img {
-      width: 100% !important;
+    @include phones {
+        @include ng-img {
+            width: 100% !important;
+        }
     }
-  }
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    a {
+        min-width: 250px;
+        margin-left: 3%;
+        &.active {
+            opacity: 0.6;
+            filter: grayscale(0.2);
+            cursor: default;
+        }
+    }
 }
 
 .type {
+    a {
+        display: block;
+        width: 100%;
+    }
 
-  a {
-    display: block;
-    width: 100%;
-  }
+    h1 {
+        font-size: 0.9em;
+        margin-bottom: 1%;
+        margin-top: 1%;
+    }
 
-  h1 {
-    font-size: .9em;
-    margin-bottom: 1%;
-    margin-top: 1%;
-  }
-
-  h3 {
-    margin-bottom: 2%;
-    margin-top: 2%;
-  }
-
+    h3 {
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
 }
