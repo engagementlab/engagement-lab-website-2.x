@@ -65,6 +65,7 @@ export class StudiosIndexComponent implements OnInit {
             allStudioInitiatives {
               key
               name
+              description
               studios {
                 key
               }

@@ -8,17 +8,17 @@
 
 <section
     id="types"
-    class="columns is-mobile is-multiline is-centered no-margin"
+    class="columns is-mobile is-multiline no-margin"
     *ngIf="content"
 >
     <div class="column is-full">
         <h1 class="uppercase">
-            Studios
+            Initiatives
         </h1>
     </div>
 
     <div id="status" class="columns column is-full is-mobile">
-        <span class="bold">Filter:</span>
+        <!-- <span class="bold">Filter:</span> -->
         <span class="controls column flex">
             <a
                 aria-label="Button to filter projects by any status"
@@ -60,14 +60,20 @@
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ initiative.thumb.public_id }}"
                     width="250"
+                    autoFormat="true"
+                    [responsive]="true"
                     [alt]="'Thumbnail image for initiative ' + initiative.name"
                 ></cdn-image
             ></a>
         </span>
     </div>
 
+    <div class="column is-full">
+        <p *ngIf="currentStudio">{{ currentStudio.description }}</p>
+        <hr />
+    </div>
     <div
-        class="column is-full-mobile type"
+        class="column is-3 is-full-mobile type"
         *ngFor="let studio of content.allStudios"
     >
         <a
@@ -83,7 +89,7 @@
                 [responsive]="true"
                 [alt]="'Thumbnail image for studio ' + studio.name"
             ></cdn-image>
-            <h1 class="uppercase sm no-margin">{{ studio.name }}</h1>
+            <h4>{{ studio.name }}</h4>
         </a>
     </div>
     <!--    
