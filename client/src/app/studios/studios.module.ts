@@ -6,6 +6,7 @@ import { StudiosPartnerComponent } from './partner/partner.component';
 import { StudiosGraduateComponent } from './graduate/graduate.component';
 import { StudiosCocurricularComponent } from './cocurricular/cocurricular.component';
 import { StudioComponent } from './studio/studio.component';
+import { StudioInitiativeComponent } from './initiative/initiative.component';
 
 const routes: Routes = [
     {
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
         path: 'studio/:key',
         component: StudioComponent,
+    },
+    {
+        path: 'initiatives/:key',
+        component: StudioInitiativeComponent,
     },
 ];
 
