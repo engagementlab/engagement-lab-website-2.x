@@ -50,18 +50,20 @@
 
     <div class="column is-11-mobile is-6-tablet is-4-desktop" *ngIf="content">
         <div *ngFor="let initiative of content.allStudioInitiatives">
-            <h3>
-                {{ initiative.name }}
-            </h3>
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ initiative.thumb.public_id }}"
-                width="250"
-                autoFormat="true"
-                [responsive]="true"
-                [alt]="'Thumbnail image for initiative ' + initiative.name"
-            ></cdn-image>
-            <p>{{ initiative.description }}</p>
+            <a routerLink="/studios/initiatives/{{ initiative.key }}">
+                <h3>
+                    {{ initiative.name }}
+                </h3>
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ initiative.thumb.public_id }}"
+                    width="250"
+                    autoFormat="true"
+                    [responsive]="true"
+                    [alt]="'Thumbnail image for initiative ' + initiative.name"
+                ></cdn-image>
+                <p>{{ initiative.description }}</p>
+            </a>
         </div>
     </div>
 </section>
