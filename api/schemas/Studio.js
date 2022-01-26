@@ -13,6 +13,7 @@ const Studios = {
     schema: `
     type StudioIntro {
         summary: String
+        initiativesSummary: String
         partneredStudiosThumbnail: Image
         graduateThesisThumbnail: Image
         cocurricularThumbnail: Image

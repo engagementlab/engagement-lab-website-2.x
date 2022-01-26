@@ -36,7 +36,10 @@ StudiosIntro.add({
         type: String, default: 'Studios Intro Page', hidden: true, required: true, initial: true,
     },
     summary: {
-        type: Types.Textarea, label: 'Summary Paragraph', required: true, initial: true,
+        type: Types.Textarea, label: 'Studios Summary Paragraph', required: true, initial: true,
+    },
+    initiativesSummary: {
+        type: Types.Textarea, label: 'Initiatives Summary Paragraph', required: true, initial: true,
     },
     partneredStudiosThumbnail: {
         type: Types.CloudinaryImage,
@@ -67,16 +70,6 @@ StudiosIntro.add({
         folder: 'homepage-2.0/studios',
         autoCleanup: true,
     },
-    /* currentPartneredStudios: {
-        type: Types.Relationship,
-        ref: 'Studio',
-        many: true,
-    },
-    previousPartneredStudios: {
-        type: Types.Relationship,
-        ref: 'Studio',
-        many: true,
-    }, */
 },
 'Graduate Thesis Studio', {
     gradSummary: {
