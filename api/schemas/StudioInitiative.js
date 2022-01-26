@@ -11,13 +11,20 @@
 const StudioInitiative = {
     schema: `
         type StudioInitiative {
-        id: ID!
-        key: String!
-        name: String!
-        description: String!
-        longDescription: String!
-        thumb: Image,
-        studios: [Project]
+            id: ID!
+            key: String!
+            name: String!
+            description: String!
+            longDescription: String!
+            thumb: Image
+            problemSpace: String!
+            problemSpaceLabel: String
+            url: String
+            studios: [Project]
+            galleryVideos: [String]
+            galleryVideoTitles: [String]
+            galleryVideoCaptions: [String]
+            galleryVideoThumbails: [Image]
         }
   `,
     queries: ['allStudioInitiatives: [StudioInitiative]',

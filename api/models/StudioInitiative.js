@@ -13,6 +13,7 @@
 
 const { keystone, } = global;
 const { Types, } = keystone.Field;
+const urlValidator = require('../utils').url;
 
 /**
  * @module initiative
@@ -34,16 +35,28 @@ StudioInitiative.add({
         type: String, label: 'Studio Initiative Name', required: true, initial: true, index: true,
     },
     description: {
-        type: String, required: true, initial: true, note: 'This displays next to/near the initiative name',
+        type: String, required: true, initial: true, note: 'This displays next to/near the initiative name an',
     },
     longDescription: {
         type: Types.Textarea, required: true, initial: true, note: 'This displays on the initiative landing',
     },
-    thumb: {
-        type: Types.CloudinaryImage,
-        label: 'Thumbnail Image',
-        folder: 'homepage-2.0/studios',
-        autoCleanup: true,
+    problemSpace: {
+        type: Types.Textarea,
+        required: true,
+        initial: true,
+        note: 'e.g. _Visual and Media Arts_',
+    },
+    problemSpaceLabel: {
+        type: String,
+        note: 'Override default label of _Problem Space_',
+    },
+    url: {
+        type: Types.Url,
+        label: 'Website URL',
+        validate: urlValidator,
+        note: 'Must be in format "http://www.something.org".',
+        required: true,
+        initial: true,
     },
     studios: {
         type: Types.Relationship,
@@ -53,6 +66,38 @@ StudioInitiative.add({
         required: true,
         many: true,
         initial: true,
+    },
+    instructions: {
+        type: String,
+        label: 'Please read!',
+        noedit: true,
+        note: '**All images below need to be very high quality.** <br />' +
+        '_Thumbnail Image_: Image shown as thumb in listings. <br />' +
+        '_Gallery Videos_: Videos show directly under main studio info. <br />' +
+        '_Video Thumbnail Images_: Please specify in order of videos. Dimensions need to be 500x300px. <br />' +
+        '_Video Captions_: Please specify in order of videos. If a video has no caption, enter **#** in text field.',
+    },
+    thumb: {
+        type: Types.CloudinaryImage,
+        label: 'Thumbnail Image',
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+    },
+    galleryVideos: {
+        type: Types.TextArray,
+        label: 'Gallery Video IDs',
+        note: 'Must be video ID from a Vimeo URL (vimeo.com/**420657931** ← this is an ID)',
+    },
+    galleryVideoThumbails: {
+        type: Types.CloudinaryImages,
+        folder: 'homepage-2.0/studios',
+        autoCleanup: true,
+    },
+    galleryVideoTitles: {
+        type: Types.TextArray,
+    },
+    galleryVideoCaptions: {
+        type: Types.TextArray,
     },
 });
 
