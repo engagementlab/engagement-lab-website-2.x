@@ -15,32 +15,12 @@
         <h1 class="uppercase">
             Initiatives
         </h1>
+
+        <p>{{ content.studiosIntro.initiativesSummary }}</p>
     </div>
 
-    <div id="status" class="columns column is-full is-mobile">
-        <!-- <span class="bold">Filter:</span> -->
-        <span class="controls column flex">
-            <a
-                aria-label="Button to filter projects by any status"
-                data-toggle="all"
-                (click)="applySelector(null)"
-                [class.active]="!currentStudio"
-            >
-                <h4>
-                    All
-                </h4>
-
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{
-                        content.studiosIntro.graduateThesisThumbnail.public_id
-                    }}"
-                    width="250"
-                    autoFormat="true"
-                    [responsive]="true"
-                    alt="Thumbnail image for filtering by all studios"
-                ></cdn-image>
-            </a>
+    <!-- <div id="status" class="columns column is-full is-mobile">
+        <span class="column flex">
             <a
                 *ngFor="let initiative of content.allStudioInitiatives"
                 [attr.aria-label]="
@@ -53,9 +33,9 @@
                 "
                 (click)="applySelector(initiative.key)"
             >
-                <h4>
+                <h3>
                     {{ initiative.name }}
-                </h4>
+                </h3>
                 <cdn-image
                     cloudinaryPrefix="/"
                     cloudinaryId="{{ initiative.thumb.public_id }}"
@@ -66,77 +46,86 @@
                 ></cdn-image
             ></a>
         </span>
-    </div>
+    </div> -->
 
+    <div class="column is-11-mobile is-6-tablet is-4-desktop" *ngIf="content">
+        <div *ngFor="let initiative of content.allStudioInitiatives">
+            <h3>
+                {{ initiative.name }}
+            </h3>
+            <cdn-image
+                cloudinaryPrefix="/"
+                cloudinaryId="{{ initiative.thumb.public_id }}"
+                width="250"
+                autoFormat="true"
+                [responsive]="true"
+                [alt]="'Thumbnail image for initiative ' + initiative.name"
+            ></cdn-image>
+            <p>{{ initiative.description }}</p>
+        </div>
+    </div>
+</section>
+
+<section
+    id="studios"
+    class="columns is-multiline is-mobile no-margin"
+    *ngIf="content"
+>
     <div class="column is-full">
-        <p *ngIf="currentStudio">{{ currentStudio.description }}</p>
         <hr />
     </div>
-    <div
-        class="column is-3 is-full-mobile type"
-        *ngFor="let studio of content.allStudios"
-    >
-        <a
-            routerLink="/studios/studio/{{ studio.key }}"
-            *ngIf="isSelected(studio.key)"
-            [@inOutAnimation]
+    <div id="filters" class="uppercase">
+        <div id="status" class="columns is-mobile is-multiline">
+            <span class="bold column is-full-mobile is-2-tablet"
+                >Initiatives:</span
+            >
+
+            <span class="controls column is-full-mobile is-8-desktop">
+                <a
+                    aria-label="Button to filter projects by any initiatives"
+                    data-toggle="all"
+                    (click)="applySelector(null)"
+                    [class.active]="!currentStudio"
+                >
+                    All
+                </a>
+                <a
+                    *ngFor="let initiative of content.allStudioInitiatives"
+                    [attr.aria-label]="
+                        'Button to filter studios belonging to ' +
+                        initiative.name +
+                        ' initiative'
+                    "
+                    [class.active]="
+                        currentStudio && currentStudio.key === initiative.key
+                    "
+                    (click)="applySelector(initiative.key)"
+                >
+                    {{ initiative.name }}
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="columns column is-multiline is-mobile is-full no-margin">
+        <div
+            class="column is-4-tablet is-11-mobile type"
+            *ngFor="let studio of content.allStudios"
         >
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ studio.thumb.public_id }}"
-                width="301"
-                autoFormat="true"
-                [responsive]="true"
-                [alt]="'Thumbnail image for studio ' + studio.name"
-            ></cdn-image>
-            <h4>{{ studio.name }}</h4>
-        </a>
+            <a
+                routerLink="/studios/studio/{{ studio.key }}"
+                *ngIf="isSelected(studio.key)"
+                [@inOutAnimation]
+            >
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ studio.thumb.public_id }}"
+                    width="301"
+                    autoFormat="true"
+                    [responsive]="true"
+                    [alt]="'Thumbnail image for studio ' + studio.name"
+                ></cdn-image>
+                <h4>{{ studio.name }}</h4>
+            </a>
+        </div>
     </div>
-    <!--    
-    <div class="column is-full-mobile type">
-        <a routerLink="/studios/partnered">
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ content.partneredStudiosThumbnail.public_id }}"
-                width="400"
-                autoFormat="true"
-                [responsive]="true"
-                alt="Thumbnail image for partnered studios link"
-            ></cdn-image>
-            <h3 class="blurb">Partnered Studio</h3>
-            <h1 class="uppercase sm no-margin">Duration</h1>
-            <span>1 Semester</span>
-        </a>
-    </div> 
-    <div class="column is-full-mobile type">
-        <a routerLink="/studios/thesis">
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ content.graduateThesisThumbnail.public_id }}"
-                width="400"
-                autoFormat="true"
-                [responsive]="true"
-                alt="Thumbnail image for graduate thesis studios link"
-            ></cdn-image>
-            <h3 class="blurb">Graduate Thesis Studio</h3>
-            <h1 class="uppercase sm no-margin">Duration</h1>
-            <span>1 Year</span>
-        </a>
-    </div>
-    <div class="column is-full-mobile type">
-        <a routerLink="/studios/cocurricular">
-            <cdn-image
-                cloudinaryPrefix="/"
-                cloudinaryId="{{ content.cocurricularThumbnail.public_id }}"
-                width="400"
-                autoFormat="true"
-                [responsive]="true"
-                alt="Thumbnail image for cocurricular studios link"
-            ></cdn-image>
-            <h3 class="blurb">Co-curricular Studio</h3>
-            <h1 class="uppercase sm no-margin">Duration</h1>
-            <span>1 Year</span>
-        </a>
-    </div>
-     -->
 </section>

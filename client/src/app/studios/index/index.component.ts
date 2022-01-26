@@ -43,6 +43,7 @@ export class StudiosIndexComponent implements OnInit {
           {
             studiosIntro {
                   summary
+                  initiativesSummary
                   partneredStudiosThumbnail {
                     public_id
                   }

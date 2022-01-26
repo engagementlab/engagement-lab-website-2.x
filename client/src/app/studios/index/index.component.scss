@@ -28,30 +28,49 @@ h3 {
     }
 }
 
-.controls {
-    display: flex;
-    flex-direction: row;
+#filters {
+    @include font-overpass;
+    width: 100%;
+
     a {
-        min-width: 250px;
-        &:not(:first-child) {
-            margin-left: 3%;
-        }
-        &:hover {
+        cursor: pointer;
+
+        // Current filter
+        &.mixitup-control-active {
             text-decoration: underline;
         }
-        &.active {
-            opacity: 0.6;
-            filter: grayscale(0.2);
-            cursor: default;
-            text-decoration: underline;
+    }
+
+    .bold {
+        font-weight: 900;
+    }
+
+    .controls {
+        @include phones {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            margin-right: 2%;
+
+            &:hover,
+            &.active {
+                border-bottom: 1px solid black;
+            }
         }
     }
 }
 
 .type {
+    padding: 0;
     a {
         display: block;
-        width: 100%;
+        width: 90%;
+
+        ::ng-deep img {
+            padding: 1%;
+        }
     }
 
     h4 {
