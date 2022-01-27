@@ -43,7 +43,6 @@ const Studios = {
       departmentLabel: String
       sponsor: String
       sponsorLabel: String
-      students: [String]
       relatedLinks: [Resource]
       collaborators: Markdown
       contact: String

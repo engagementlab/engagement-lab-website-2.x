@@ -96,11 +96,6 @@ Studio.add(
             type: String,
             note: 'Override default sponsor of label of _Class Sponsor_',
         },
-        students: {
-            type: Types.TextArray,
-            required: true,
-            initial: true,
-        },
         relatedLinks: {
             type: Types.Relationship,
             ref: 'Resource',
