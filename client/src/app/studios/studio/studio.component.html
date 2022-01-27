@@ -49,15 +49,6 @@
             </h1>
             {{ content.sponsor }}
         </div>
-        <div class="column is-4">
-            <h1 class="uppercase sm">
-                Students
-            </h1>
-
-            <span *ngFor="let student of content.students">
-                {{ student }}<br />
-            </span>
-        </div>
         <div
             class="column is-4"
             *ngIf="content.relatedLinks && content.relatedLinks.length > 0"

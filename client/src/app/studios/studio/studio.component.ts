@@ -51,7 +51,6 @@ export class StudioComponent {
                   departmentLabel
                   sponsor
                   sponsorLabel
-                  students
                   relatedLinks {
                       url
                       name
