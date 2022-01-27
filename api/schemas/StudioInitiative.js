@@ -17,10 +17,9 @@ const StudioInitiative = {
             description: String!
             longDescription: String!
             thumb: Image
-            problemSpace: String!
-            problemSpaceLabel: String
+            body: Markdown
             url: String
-            studios: [Project]
+            studios: [Studio]
             galleryVideos: [String]
             galleryVideoTitles: [String]
             galleryVideoCaptions: [String]
@@ -45,7 +44,7 @@ const StudioInitiative = {
                 key: args.key,
             }).populate({
                 path: 'studios',
-                select: 'name key image startYear endYear -_id',
+                select: 'name key thumb -_id',
                 match: {
                     enabled: true,
                 },

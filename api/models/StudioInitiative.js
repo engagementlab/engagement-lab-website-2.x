@@ -40,15 +40,10 @@ StudioInitiative.add({
     longDescription: {
         type: Types.Textarea, required: true, initial: true, note: 'This displays on the initiative landing',
     },
-    problemSpace: {
-        type: Types.Textarea,
+    body: {
+        type: Types.Markdown,
         required: true,
         initial: true,
-        note: 'e.g. _Visual and Media Arts_',
-    },
-    problemSpaceLabel: {
-        type: String,
-        note: 'Override default label of _Problem Space_',
     },
     url: {
         type: Types.Url,
