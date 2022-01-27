@@ -164,13 +164,6 @@ Project.add({
          '_Project Images_: Images below main project info. To re-order, remove and upload again.',
 
     },
-    // Image for project BG
-    bgImage: {
-        type: Types.CloudinaryImage,
-        label: 'Background Image',
-        folder: 'homepage-2.0/projects',
-        autoCleanup: true,
-    },
     primaryImage: {
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/projects',

@@ -59,7 +59,6 @@ const Project = {
     schema: `
         type Project {
             archived: Boolean
-            bgImage: Image
             byline: String
             challengeTxt: String
             customUrl: String
