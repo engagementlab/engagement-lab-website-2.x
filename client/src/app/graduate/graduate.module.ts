@@ -43,15 +43,15 @@ const routes: Routes = [
                 component: GraduateInfoComponent,
                 pathMatch: 'full',
             },
-            {
-                path: 'projects',
-                component: GraduateStudiosComponent,
-                pathMatch: 'full',
-            },
-            {
-                path: 'projects/:key',
-                component: GraduateProjectComponent,
-            },
+            // {
+            //     path: 'projects',
+            //     component: GraduateStudiosComponent,
+            //     pathMatch: 'full',
+            // },
+            // {
+            //     path: 'projects/:key',
+            //     component: GraduateProjectComponent,
+            // },
         ],
     },
 ];

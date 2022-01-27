@@ -74,9 +74,6 @@ export class ProjectComponent {
                             }
                             key
                             name
-                            bgImage {
-                                public_id
-                            } 
                             projectImages {
                                 public_id
                             } 
@@ -129,9 +126,6 @@ export class ProjectComponent {
     }
 
     ngOnDestroy(): void {
-        // Reset BG
-        document.getElementById('project-bg').classList.remove('open');
-
         // Cancel router subscribe
         this.subscriber.unsubscribe();
     }
@@ -140,13 +134,6 @@ export class ProjectComponent {
         this.content = data.project;
         this.next = data.next;
         this.previous = data.prev;
-
-        // Show dynamic BG image, if any
-        if (this.content.bgImage) {
-            let bodyBg = document.getElementById('project-bg');
-            bodyBg.style.backgroundImage = `url(https://res.cloudinary.com/engagement-lab-home/image/upload/c_fill,f_auto,g_north,h_1110,w_2048/${this.content.bgImage.public_id})`;
-            bodyBg.classList.add('open');
-        }
     }
 
     @HostListener('window:keyup', ['$event'])
