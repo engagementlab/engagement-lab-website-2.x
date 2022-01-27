@@ -1,4 +1,4 @@
-import { Component, SecurityContext } from '@angular/core';
+import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/utils/data.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';

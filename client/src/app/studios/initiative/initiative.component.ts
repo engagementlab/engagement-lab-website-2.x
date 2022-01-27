@@ -11,8 +11,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class StudioInitiativeComponent {
     public content: any;
-    public next: any;
-    public previous: any;
 
     public videoDisplayToggle: [boolean] = [false];
     public videoUrls: [string];
@@ -37,15 +35,24 @@ export class StudioInitiativeComponent {
             {
                 getStudioInitiative(key: "${key}") {
                   key
-                  name
-                  problemSpace
-                  problemSpaceLabel
+                  name 
+                  longDescription
+                  body {
+                      html
+                  }
                   url
                   galleryVideos
                   galleryVideoTitles
                   galleryVideoCaptions
                   galleryVideoThumbails {
                       public_id
+                  }
+                  studios {
+                    name
+                    key
+                    thumb {
+                        public_id
+                    }
                   }
                 }
             }
@@ -56,6 +63,7 @@ export class StudioInitiativeComponent {
                 key,
                 query,
             );
+
             if (content && content['getStudioInitiative'])
                 this.setContent(content['getStudioInitiative']);
             else router.navigateByUrl('uh-oh');
@@ -69,7 +77,6 @@ export class StudioInitiativeComponent {
 
     setContent(data: any): void {
         this.content = data;
-
         // Populate array for toggling video embeds and sanitize video IDs into iframe URLs
         this.videoUrls = this.content['galleryVideos'].map(vid => {
             this.videoDisplayToggle.push(false);

@@ -97,7 +97,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                 document.getElementById('intro').clientHeight
             }px`;
 
-            console.log(particlesEl);
             this.drawParticles();
 
             // Animate tagline and intro
