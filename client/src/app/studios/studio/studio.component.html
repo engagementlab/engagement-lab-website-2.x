@@ -8,13 +8,33 @@
             <p [innerHtml]="content.intro.html"></p>
         </div>
         <div class="column is-full">
-            <h1 class="uppercase sm">
-                Faculty
+            <h1
+                class="uppercase sm"
+                *ngIf="content.collaborators && content.collaborators.html"
+            >
+                Collaborators
             </h1>
-            <span *ngFor="let person of content.faculty">
-                <a routerLink="/people/{{ person.key }}"
-                    >{{ person.name.first }} {{ person.name.last }}<br /> </a
-            ></span>
+            <div
+                id="collaborators"
+                [innerHtml]="content.collaborators.html"
+                *ngIf="content.collaborators && content.collaborators.html"
+            ></div>
+        </div>
+        <div class="column is-full">
+            <h1 class="uppercase sm">
+                <span
+                    *ngIf="
+                        content.sponsorLabel && content.sponsorLabel.length > 0;
+                        else defaultLabel
+                    "
+                >
+                    {{ content.sponsorLabel }}
+                </span>
+                <ng-template #defaultLabel>
+                    Class Sponsor
+                </ng-template>
+            </h1>
+            {{ content.sponsor }}
         </div>
         <div class="column is-full">
             <h1 class="uppercase sm">
@@ -35,19 +55,9 @@
         </div>
         <div class="column is-full">
             <h1 class="uppercase sm">
-                <span
-                    *ngIf="
-                        content.sponsorLabel && content.sponsorLabel.length > 0;
-                        else defaultLabel
-                    "
-                >
-                    {{ content.sponsorLabel }}
-                </span>
-                <ng-template #defaultLabel>
-                    Class Sponsor
-                </ng-template>
+                Contact
             </h1>
-            {{ content.sponsor }}
+            <span>{{ content.contact }}</span>
         </div>
         <div
             class="column is-4"
@@ -60,26 +70,6 @@
             <span *ngFor="let link of content.relatedLinks">
                 <a href="{{ link.file.url }}">{{ link.name }}<br /></a>
             </span>
-        </div>
-    </div>
-
-    <div class="columns">
-        <div class="column is-4">
-            <h1
-                class="uppercase sm"
-                *ngIf="content.collaborators && content.collaborators.html"
-            >
-                Collaborators
-            </h1>
-            <div
-                id="collaborators"
-                [innerHtml]="content.collaborators.html"
-                *ngIf="content.collaborators && content.collaborators.html"
-            ></div>
-            <h1 class="uppercase sm">
-                Contact
-            </h1>
-            <span>{{ content.contact }}</span>
         </div>
     </div>
 

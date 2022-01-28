@@ -40,13 +40,6 @@ export class StudioComponent {
                   name
                   status
                   semester
-                  faculty {
-                      name {
-                          first
-                          last
-                      }
-                      key
-                  }
                   department
                   departmentLabel
                   sponsor
