@@ -38,7 +38,6 @@ const Studios = {
       enabled: Boolean
       status: String
       semester: String
-      faculty: [Person]
       department: String
       departmentLabel: String
       sponsor: String
@@ -72,10 +71,6 @@ const Studios = {
         getStudio: async (parent, args) => {
             const res = await global.keystone.list('Studio').model.findOne({ enabled: true, $or: [{ key: args.key, }, { customUrl: args.key, }], })
                 .populate({
-                    path: 'faculty',
-                    select: 'key name -_id',
-                })
-                .populate({
                     path: 'relatedLinks',
                     select: 'name file url',
                 })
@@ -85,34 +80,10 @@ const Studios = {
         getStudios: async (parent, args) => {
             const status = args.past ? 'Completed' : 'Ongoing';
             const res = await global.keystone.list('Studio').model.find({ status, enabled: true, })
-                .populate({
-                    path: 'faculty',
-                    select: 'key name -_id',
-                })
                 .exec();
             return res;
         },
         studiosIntro: async () => global.keystone.list('StudiosIntro').model.findOne({})
-            .populate({
-                path: 'currentPartneredStudios',
-                populate: {
-                    path: 'faculty',
-                    model: 'Person',
-                },
-            })
-            .populate({
-                path: 'currentCoCurricularStudios',
-                populate: {
-                    path: 'faculty',
-                    model: 'Person',
-                },
-            }).populate({
-                path: 'previousPartneredStudios',
-                populate: {
-                    path: 'faculty',
-                    model: 'Person',
-                },
-            })
             .exec(),
     },
 

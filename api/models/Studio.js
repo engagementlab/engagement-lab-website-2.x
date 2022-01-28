@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Engagement Lab Website v2.x
  *
@@ -67,17 +68,6 @@ Studio.add(
             required: true,
             initial: true,
             note: 'e.g. _Spring 2020_',
-        },
-
-        faculty: {
-            type: Types.Relationship,
-            required: true,
-            initial: true,
-            ref: 'Person',
-            filters: {
-                type: ['faculty leadership', 'faculty fellows'],
-            },
-            many: true,
         },
         department: {
             type: String,
@@ -219,6 +209,7 @@ Studio.schema.statics.removeResourceRef = (resourceId, callback) => {
     (err, result) => {
         callback(err, result);
 
+        // eslint-disable-next-line no-console
         if (err) console.error(err);
     });
 };
@@ -246,6 +237,7 @@ Studio.schema.post('save', (doc, next) => {
         global.elasti.index({
             index: 'listing',
             type: 'studio',
+            // eslint-disable-next-line no-underscore-dangle
             id: doc._id.toString(),
             body: {
                 name: doc.name,
