@@ -18,6 +18,9 @@ h3 {
     &::ng-deep h1 {
         text-transform: uppercase;
     }
+    &::ng-deep code {
+        font-family: inherit;
+    }
     &::ng-deep a {
         color: rgb(0, 0, 238);
     }

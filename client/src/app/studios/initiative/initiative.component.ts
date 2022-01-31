@@ -64,9 +64,9 @@ export class StudioInitiativeComponent {
                 query,
             );
 
-            if (content && content['getStudioInitiative'])
+            if (content && content['getStudioInitiative']) {
                 this.setContent(content['getStudioInitiative']);
-            else router.navigateByUrl('uh-oh');
+            } else router.navigateByUrl('uh-oh');
         });
     }
 
@@ -76,7 +76,12 @@ export class StudioInitiativeComponent {
     }
 
     setContent(data: any): void {
+        // Hacky-ish workaround for superscript
+        data['body']['html'] = data['body']['html']
+            .replaceAll('<code>', '<sup>')
+            .replaceAll('</code>', '</sup>');
         this.content = data;
+
         // Populate array for toggling video embeds and sanitize video IDs into iframe URLs
         this.videoUrls = this.content['galleryVideos'].map(vid => {
             this.videoDisplayToggle.push(false);
