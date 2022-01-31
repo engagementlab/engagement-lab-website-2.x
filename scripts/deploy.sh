@@ -30,4 +30,5 @@ pm2 start 'elab-web-client';
 cd ../api;
 nvm use;
 npm i;
+npm i -g pm2;
 pm2 restart 'elab-web-api';
