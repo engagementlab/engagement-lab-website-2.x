@@ -25,6 +25,16 @@ const studioIdPlugin = async (route, config) => {
     });
     return Promise.resolve(routes);
 };
+const studioInitIdPlugin = async (route, config) => {
+    // Obtain all studio keys via graphql query
+    const response = await queryData('allStudioInitiatives', true);
+    const routes = [];
+
+    response.allStudios.forEach((res) => {
+        routes.push({ route: `/studios/initiatives/${res.customUrl || res.key}` });
+    });
+    return Promise.resolve(routes);
+};
 const mdprojectIdPlugin = async (route, config) => {
     // Obtain all grad project keys via graphql query
     const response = await queryData('allMDProjectPages', true);
@@ -115,6 +125,7 @@ const gradIdPlugin = async (route, config) => {
 
 const validator = async (config) => [];
 registerPlugin('router', 'studios', studioIdPlugin, validator);
+registerPlugin('router', 'studioinitiatives', studioInitIdPlugin, validator);
 registerPlugin('router', 'mdprojects', mdprojectIdPlugin, validator);
 registerPlugin('router', 'gradfaculty', facultyIdPlugin, validator);
 registerPlugin('router', 'gradstudents', gradIdPlugin, validator);
