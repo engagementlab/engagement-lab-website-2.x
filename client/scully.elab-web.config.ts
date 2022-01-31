@@ -13,6 +13,10 @@ exports.config = {
         '/studios/studio/:key': {
             type: 'studios',
         },
+        // All studio initiatives pages
+        '/studios/initiatives/:key': {
+            type: 'studioinitiatives',
+        },
         // All grad project pages
         '/graduate/projects/:key': {
             type: 'mdprojects',

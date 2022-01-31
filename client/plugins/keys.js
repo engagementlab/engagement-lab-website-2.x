@@ -27,10 +27,10 @@ const studioIdPlugin = async (route, config) => {
 };
 const studioInitIdPlugin = async (route, config) => {
     // Obtain all studio keys via graphql query
-    const response = await queryData('allStudioInitiatives', true);
+    const response = await queryData('allStudioInitiatives');
     const routes = [];
 
-    response.allStudios.forEach((res) => {
+    response.allStudioInitiatives.forEach((res) => {
         routes.push({ route: `/studios/initiatives/${res.customUrl || res.key}` });
     });
     return Promise.resolve(routes);
