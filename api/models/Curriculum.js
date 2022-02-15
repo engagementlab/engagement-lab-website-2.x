@@ -41,11 +41,6 @@ Curriculum.add({
         initial: true,
         index: true,
     },
-    description: {
-        type: Types.Textarea,
-        required: true,
-        initial: true,
-    },
     type: {
         type: Types.Select,
         label: 'Type',
