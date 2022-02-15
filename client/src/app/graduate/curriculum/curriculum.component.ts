@@ -71,7 +71,6 @@ export class GraduateCurriculumComponent implements OnInit {
               allCurriculumPages {
                 name
                 type
-                description
               }
           }
       `;
