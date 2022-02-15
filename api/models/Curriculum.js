@@ -46,11 +46,19 @@ Curriculum.add({
         required: true,
         initial: true,
     },
+    type: {
+        type: Types.Select,
+        label: 'Type',
+        // note: 'Where will this filter apply?',
+        options: 'Core, Elective',
+        required: true,
+        initial: true,
+    },
 });
 
 /**
  * Model Registration
  */
 Curriculum.defaultSort = '-createdAt';
-Curriculum.defaultColumns = 'name, enabled, updatedAt';
+Curriculum.defaultColumns = 'name, type, enabled, updatedAt';
 Curriculum.register();
