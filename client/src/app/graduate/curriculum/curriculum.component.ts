@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/utils/data.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import * as _ from 'underscore';
 
 @Component({
     templateUrl: './curriculum.component.html',
@@ -69,6 +70,7 @@ export class GraduateCurriculumComponent implements OnInit {
               }
               allCurriculumPages {
                 name
+                type
                 description
               }
           }
@@ -80,7 +82,10 @@ export class GraduateCurriculumComponent implements OnInit {
         );
 
         this.content = mastersResponse['allMastersPages'];
-        this.curricula = mastersResponse['allCurriculumPages'];
+        this.curricula = _.groupBy(
+            mastersResponse['allCurriculumPages'],
+            'type',
+        );
 
         const cohortQuery = `   
           {
