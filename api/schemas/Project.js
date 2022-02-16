@@ -102,7 +102,7 @@ const Project = {
         'allFeaturedProjectPages: [Project]',
         'getProject(key: String): ProjectResult'],
     resolvers: {
-        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, }).sort({ status: -1, sortOrder: 1, }).exec(),
+        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, }).sort({ sortOrder: 1, }).exec(),
 
         allArchivedProjectPages: async () => model.find({ enabled: true, archived: true, }).exec(),
 
