@@ -37,22 +37,19 @@ Masters.add({
         hidden: true,
         required: true,
     },
-
     programDescription: {
-        type: Types.Textarea,
-        label: 'Blurb',
+        type: Types.Markdown,
+        // label: 'Blurb',
         required: true,
         initial: true,
     },
     partnerships: {
-        type: Types.Textarea,
-        required: true,
-        initial: true,
-    },
-    learningObjectives: {
         type: Types.Markdown,
         required: true,
         initial: true,
+    },
+    coursesInfo: {
+        type: Types.Markdown,
     },
     faculty: {
         type: Types.Relationship,
