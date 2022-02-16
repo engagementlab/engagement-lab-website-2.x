@@ -34,9 +34,13 @@ export class GraduateCurriculumComponent implements OnInit {
         const mastersQuery = `
           {
               allMastersPages {
-                  programDescription
-                  partnerships
-                  learningObjectives {
+                  programDescription {
+                      html
+                  }
+                  partnerships {
+                      html
+                  }
+                  coursesInfo {
                       html
                   }
                   cohortYear

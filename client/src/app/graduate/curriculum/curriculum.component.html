@@ -8,9 +8,10 @@
         The Engagement Lab offers an MA in Media Design.
     </h2>
 
-    <p class="column is-5-desktop is-full-tablet is-11-mobile blurb">
-        {{ content.programDescription }}
-    </p>
+    <p
+        class="column is-5-desktop is-full-tablet is-11-mobile blurb"
+        [innerHtml]="content.programDescription.html"
+    ></p>
     <div id="logo" class="column is-11-mobile">
         <svg viewBox="0 0 1040 452" width="1040" height="452" fill="none">
             <path
@@ -42,15 +43,10 @@
     </div>
 
     <div class="column is-full-tablet is-11-mobile">
-        <h1 class="uppercase">
-            Learning Objectives
-        </h1>
-        <p class="blurb" [innerHTML]="content.learningObjectives.html"></p>
-
         <h1 class="uppercase" style="margin-top: 5%;">
             Partnerships
         </h1>
-        <p class="blurb">{{ content.partnerships }}</p>
+        <p class="blurb" [innerHtml]="content.partnerships.html"></p>
     </div>
 </section>
 
@@ -100,6 +96,9 @@
         <div *ngFor="let electiveCourse of curricula.Elective">
             <h3 class="blurb">{{ electiveCourse.name }}</h3>
         </div>
+    </div>
+    <div class="column is-full">
+        <p class="blurb" [innerHtml]="content.coursesInfo.html"></p>
     </div>
 </section>
 
