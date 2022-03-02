@@ -6,9 +6,15 @@
             <span *ngIf="!content.endYear">Present</span
             ><span *ngIf="content.endYear">{{ content.endYear }}</span>
             <br />
-            <a href="{{ content.externalLinkUrl }}" role="link" *ngIf="content.externalLinkUrl && content.externalLinkUrl.length > 0">{{
-                content.externalLinkUrl | prettyUrl
-            }}</a>
+            <a
+                href="{{ content.externalLinkUrl }}"
+                role="link"
+                *ngIf="
+                    content.externalLinkUrl &&
+                    content.externalLinkUrl.length > 0
+                "
+                >{{ content.externalLinkUrl | prettyUrl }}</a
+            >
         </div>
         <div
             class="column is-4"
@@ -52,6 +58,17 @@
             </h1>
             <span *ngFor="let person of content?.teamMembers"
                 >{{ person }}<br
+            /></span>
+        </div>
+        <div
+            class="column is-4"
+            *ngIf="content.partnersTxt && content.partnersTxt.length > 0"
+        >
+            <h1 class="uppercase sm">
+                Partners
+            </h1>
+            <span *ngFor="let partner of content?.partnersTxt"
+                >{{ partner }}<br
             /></span>
         </div>
         <div class="column is-11-mobile is-7-tablet" id="primary">

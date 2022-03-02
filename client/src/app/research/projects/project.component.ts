@@ -60,6 +60,7 @@ export class ProjectComponent {
                     getProject(key: "${key}") {
                         project {
                             challengeTxt 
+                            partnersTxt
                             customUrl
                             externalLinkUrl 
                             files {
