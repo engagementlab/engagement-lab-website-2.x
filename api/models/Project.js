@@ -105,6 +105,10 @@ Project.add({
     teamMembers: {
         type: Types.TextArray,
     },
+    partnersTxt: {
+        type: Types.TextArray,
+        label: 'Partners',
+    },
     challengeTxt: {
         type: Types.Textarea,
         label: 'Problem Space',
@@ -150,20 +154,46 @@ Project.add({
         label: 'Related Publications',
         many: true,
     },
-    // Resource model reference for videos
-    video: {
-        type: Types.Relationship,
-        ref: 'Resource',
-        label: 'Project Videos',
-        filters: {
-            type: 'video',
-        },
-        note: '**All images below need to be very high quality.** <br />' +
-         '_Project BG_: Image shown as project background. <br />' +
-         '_Primary Image_: Image shown above `Problem Space`. <br />' +
-         '_Project Images_: Images below main project info. To re-order, remove and upload again.',
 
+    instructions: {
+        type: String,
+        label: 'Please read!',
+        noedit: true,
+        note: '**All images below need to be very high quality.** <br />' +
+            '_Video Thumbnail Images_: Please specify in order of videos. Dimensions need to be 500x300px. <br />' +
+            '_Primary Image_: Image shown above `Problem Space`. <br />' +
+            '_Project Images_: Images below main project info. To re-order, remove and upload again.',
     },
+    // Videos for studio gallery (replaces primary image)
+    galleryVideos: {
+        type: Types.TextArray,
+        label: 'Gallery Video IDs',
+        note: 'Must be video ID from a Vimeo URL (vimeo.com/**420657931** ← this is an ID)',
+    },
+    galleryVideoThumbails: {
+        type: Types.CloudinaryImages,
+        folder: 'homepage-2.0/projects',
+        autoCleanup: true,
+    },
+    galleryVideoTitles: {
+        type: Types.TextArray,
+    },
+    galleryVideoCaptions: {
+        type: Types.TextArray,
+    },
+    // Resource model reference for videos
+    // video: {
+    //     type: Types.Relationship,
+    //     ref: 'Resource',
+    //     label: 'Project Videos',
+    //     filters: {
+    //         type: 'video',
+    //     },
+    //     note: '**All images below need to be very high quality.** <br />' +
+    //      '_Primary Image_: Image shown above `Problem Space`. <br />' +
+    //      '_Project Images_: Images below main project info. To re-order, remove and upload again.',
+
+    // },
     primaryImage: {
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/projects',

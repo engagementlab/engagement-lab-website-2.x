@@ -61,6 +61,7 @@ const Project = {
             archived: Boolean
             byline: String
             challengeTxt: String
+            partnersTxt: [String]
             customUrl: String
             date: Date
             description: String
@@ -90,6 +91,10 @@ const Project = {
             status: String
             strategyTxt: String!
             teamMembers: [String]
+            galleryVideos: [String]
+            galleryVideoTitles: [String]
+            galleryVideoCaptions: [String]
+            galleryVideoThumbails: [Image]
         }
         type ProjectResult {
             project: Project
