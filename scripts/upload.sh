@@ -10,7 +10,7 @@ export AZURE_SUBSCRIPTION=$AZURE_SUBSCRIPTION
 az account set -s $AZURE_SUBSCRIPTION
 
 # Upload app build to Azure
-az storage blob upload-batch -d '$web' -s ./bin/app
+az storage blob upload-batch --overwrite true -d '$web' -s ./bin/app
 
 # Clear CDN cache
 az cdn endpoint purge -g web -n engagementlab --content-paths '/*' --profile-name web-apps
