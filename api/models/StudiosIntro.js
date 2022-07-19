@@ -21,8 +21,8 @@ const { Types, } = keystone.Field;
  */
 const StudiosIntro = new keystone.List('StudiosIntro',
     {
-        label: 'Studios Intro Page',
-        singular: 'Studios Intro Page',
+        label: 'Initiatives Intro Page',
+        singular: 'Initiatives Intro Page',
         nodelete: true,
         nocreate: true,
     });
@@ -33,15 +33,15 @@ const StudiosIntro = new keystone.List('StudiosIntro',
  */
 StudiosIntro.add({
     name: {
-        type: String, default: 'Studios Intro Page', hidden: true, required: true, initial: true,
+        type: String, default: 'Initiatives Intro Page', hidden: true, required: true, initial: true,
     },
     summary: {
-        type: Types.Textarea, label: 'Studios Summary Paragraph', required: true, initial: true,
+        type: Types.Textarea, label: 'Initiatives Summary Paragraph', required: true, initial: true,
     },
     initiativesSummary: {
         type: Types.Textarea, label: 'Initiatives Summary Paragraph', required: true, initial: true,
     },
-    partneredStudiosThumbnail: {
+    /* partneredStudiosThumbnail: {
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/studios',
         autoCleanup: true,
@@ -55,10 +55,10 @@ StudiosIntro.add({
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/studios',
         autoCleanup: true,
-    },
-},
+    }, */
+});
 
-'Partnered Studios', {
+/* 'Partnered Studios', {
     partneredSummary: {
         type: Types.Textarea, label: 'Summary Paragraph', required: true, initial: true,
     },
@@ -104,7 +104,7 @@ StudiosIntro.add({
         ref: 'Studio',
         many: true,
     },
-});
+} */
 
 /**
  * Model Registration

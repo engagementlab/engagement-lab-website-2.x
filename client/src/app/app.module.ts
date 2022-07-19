@@ -70,15 +70,15 @@ import { PersonModalComponent } from './team/person-modal/person-modal.component
 import { PluckPipe } from './utils/pluck.pipe';
 import { SlideshowComponent } from './utils/slideshow/slideshow.component';
 import { TeamComponent } from './team/team.component';
-import { StudiosIndexComponent } from './studios/index/index.component';
-import { StudioComponent } from './studios/studio/studio.component';
-import { StudiosGraduateComponent } from './studios/graduate/graduate.component';
-import { StudiosCocurricularComponent } from './studios/cocurricular/cocurricular.component';
-import { StudiosPartnerComponent } from './studios/partner/partner.component';
-import { StudioThumbComponent } from './studios/studio/thumb/thumb.component';
+import { StudiosIndexComponent } from './initiatives/index/index.component';
+import { StudioComponent } from './initiatives/studio/studio.component';
+import { StudiosGraduateComponent } from './initiatives/graduate/graduate.component';
+import { StudiosCocurricularComponent } from './initiatives/cocurricular/cocurricular.component';
+import { StudiosPartnerComponent } from './initiatives/partner/partner.component';
+import { StudioThumbComponent } from './initiatives/studio/thumb/thumb.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { PartnerComponent } from './partner/partner.component';
-import { StudioInitiativeComponent } from './studios/initiative/initiative.component';
+import { StudioInitiativeComponent } from './initiatives/initiative/initiative.component';
 
 export const cloudinary = {
     Cloudinary,

@@ -20,6 +20,11 @@ interface Link {
     href?: string;
     label: string;
     enabled?: boolean;
+    subLinks?: {
+        url?: string;
+        href?: string;
+        label: string;
+    }[];
 }
 
 @Component({
@@ -30,8 +35,25 @@ interface Link {
 export class NavComponent implements AfterViewInit {
     public navLinks: Link[] = [
         { url: '', label: 'Home', enabled: true },
-        { url: 'studios', label: 'Studios', enabled: true },
-        { url: 'graduate', label: 'Graduate Program', enabled: true },
+        {
+            url: 'initiatives',
+            label: 'Social Impact Initiatives',
+            enabled: true,
+        },
+        {
+            // url: 'curriculum',
+            label: 'Curriculum',
+            subLinks: [
+                {
+                    url: 'curriculum/undergraduate',
+                    label: 'Undergraduate',
+                },
+                {
+                    url: 'curriculum/graduate',
+                    label: 'Graduate',
+                },
+            ],
+        },
         { url: 'research', label: 'Research', enabled: true },
         { url: 'people', label: 'People', enabled: true },
         { url: 'about', label: 'About', enabled: true },
@@ -119,6 +141,7 @@ export class NavComponent implements AfterViewInit {
             );
             instance.mark(this.searchQuery);
         });
+        console.log(this.navLinks);
     }
 
     openCloseNav(): void {

@@ -30,7 +30,7 @@ const routes: Routes = [
         component: StudioComponent,
     },
     {
-        path: 'initiatives/:key',
+        path: ':key',
         component: StudioInitiativeComponent,
     },
 ];

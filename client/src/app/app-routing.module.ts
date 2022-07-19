@@ -29,9 +29,11 @@ const routes: Routes = [
     },
 
     {
-        path: 'studios',
+        path: 'initiatives',
         loadChildren: () =>
-            import('./studios/studios.module').then(m => m.StudiosModule),
+            import('./initiatives/initiatives.module').then(
+                m => m.StudiosModule,
+            ),
     },
 
     {
@@ -59,17 +61,19 @@ const routes: Routes = [
     // Preserve old paths (pre-v2.5)
     {
         path: 'initiatives/smart-cities',
-        redirectTo: 'research/initiatives/civic-smart-cities',
+        redirectTo: 'initiatives',
     },
     {
         path: 'initiatives/trust-and-the-news',
-        redirectTo: 'research/initiatives/engaged-journalism',
+        redirectTo: 'initiatives',
     },
-    { path: 'initiatives/:key', redirectTo: 'research/initiatives/:key' },
+    // { path: 'researchinitiatives/:key', redirectTo: 'research/initiatives/:key' },
 
     { path: 'projects', redirectTo: 'research/projects' },
     { path: 'projects/:key', redirectTo: 'research/projects/:key' },
     { path: 'publications', redirectTo: 'research/publications' },
+
+    { path: 'studios/studio/:key', redirectTo: 'initiatives/studio/:key' },
 
     { path: 'masters', redirectTo: 'graduate' },
     { path: 'masters/alumni', redirectTo: 'graduate/students' },
@@ -106,7 +110,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+    imports: [
+        RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
+    ],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}

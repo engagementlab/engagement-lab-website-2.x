@@ -1,8 +1,8 @@
-<!-- Studios intro -->
+<!-- intro -->
 <section id="intro" class="columns is-mobile" *ngIf="content">
     <div class="column is-half-tablet is-10-mobile">
-        <h2>Studios</h2>
-        <h3 class="blurb">{{ content.studiosIntro.summary }}</h3>
+        <h2>Social Impact Initiatives</h2>
+        <h3 class="blurb">{{ content.studiosIntro.initiativesSummary }}</h3>
     </div>
 </section>
 
@@ -11,14 +11,6 @@
     class="columns is-mobile is-multiline no-margin"
     *ngIf="content"
 >
-    <div class="column is-full">
-        <h1 class="uppercase">
-            Initiatives
-        </h1>
-
-        <p>{{ content.studiosIntro.initiativesSummary }}</p>
-    </div>
-
     <!-- <div id="status" class="columns column is-full is-mobile">
         <span class="column flex">
             <a
@@ -50,7 +42,7 @@
 
     <div class="column is-11-mobile is-6-tablet is-4-desktop" *ngIf="content">
         <div *ngFor="let initiative of content.allStudioInitiatives">
-            <a routerLink="/studios/initiatives/{{ initiative.key }}">
+            <a routerLink="/initiatives/{{ initiative.key }}">
                 <h3>
                     {{ initiative.name }}
                 </h3>

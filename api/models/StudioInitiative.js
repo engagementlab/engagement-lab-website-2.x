@@ -22,6 +22,7 @@ const urlValidator = require('../utils').url;
  */
 const StudioInitiative = new keystone.List('StudioInitiative',
     {
+        name: 'Initiative',
         autokey: { path: 'key', from: 'name', unique: true, },
         sortable: true,
     });
@@ -32,7 +33,7 @@ const StudioInitiative = new keystone.List('StudioInitiative',
  */
 StudioInitiative.add({
     name: {
-        type: String, label: 'Studio Initiative Name', required: true, initial: true, index: true,
+        type: String, label: 'Initiative Name', required: true, initial: true, index: true,
     },
     description: {
         type: String, required: true, initial: true, note: 'This displays next to/near the initiative name an',
