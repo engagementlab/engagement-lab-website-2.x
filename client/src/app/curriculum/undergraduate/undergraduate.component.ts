@@ -8,69 +8,23 @@ import { DataService } from 'src/app/utils/data.service';
 })
 export class UndergraduateComponent implements OnInit {
     public content: any;
-    public curricula: any;
-    public people: any;
-
-    public currentPerson: any;
-    private gettingPerson: boolean;
 
     constructor(private dataSvc: DataService) {}
 
     async ngOnInit(): Promise<any> {
-        const mastersQuery = `
+        const query = `
         {
-            allMastersPages {
-                programDescription {
+          allUndergraduatePages {
+                description {
                     html
                 }
-                partnerships {
-                    html
-                }
-                coursesInfo {
-                    html
-                }
-                cohortYear
-                phases
-                faculty {
-                    key
-                    name {
-                        first
-                        last
-                    }
-                    image {
-                        public_id
-                    }
-                }
-                projects {
-                    key
-                    name
-                    cohortYear {
-                        label
-                    }
-                    faculty {
-                        name {
-                            first 
-                            last
-                        }
-                    }
-                    thumb {
-                        public_id
-                    }
-                }
-            }
-            allCurriculumPages {
-              name
-              type
-            }
+          }
         }
-    `;
+      `;
 
-        const mastersResponse = await this.dataSvc.getSet(
-            'graduate',
-            mastersQuery,
-        );
+        const response = await this.dataSvc.getSet('undergraduate', query);
 
-        // this.content = mastersResponse['allMastersPages'];
+        this.content = response['allUndergraduatePages'];
         // this.curricula = _.groupBy(
         //     mastersResponse['allCurriculumPages'],
         //     'type',

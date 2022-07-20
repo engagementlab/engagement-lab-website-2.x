@@ -100,7 +100,10 @@
                         routerLink="/{{ link.url }}"
                         >{{ link.label }}</a
                     >
-                    <details *ngIf="link.subLinks && link.subLinks.length > 0">
+                    <details
+                        *ngIf="link.subLinks && link.subLinks.length > 0"
+                        class="sublink-label"
+                    >
                         <summary
                             ><a>{{ link.label }}</a></summary
                         ></details
@@ -108,7 +111,7 @@
                     <div
                         *ngIf="link.subLinks && link.subLinks.length > 0"
                         id="sublinks-{{ link.label }}"
-                        class="sublinks content"
+                        class="sublinks"
                     >
                         <h4
                             *ngFor="let link of link.subLinks"

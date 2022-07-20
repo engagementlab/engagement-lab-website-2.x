@@ -54,5 +54,5 @@ Curriculum.add({
  * Model Registration
  */
 Curriculum.defaultSort = '-createdAt';
-Curriculum.defaultColumns = 'name, type, enabled, updatedAt';
+Curriculum.defaultColumns = 'name, updatedAt';
 Curriculum.register();

@@ -165,6 +165,17 @@ export class NavComponent implements AfterViewInit {
         this.menu.nativeElement.classList.add('wasOpened');
 
         document.querySelector('body').classList.toggle('noscroll');
+
+        const closed = !this.menuBtn.nativeElement.classList.contains('isOpen');
+        if (!closed) return;
+
+        // Fetch all the details (labels) for sublinks
+        const details = document.querySelectorAll('.sublink-label');
+        // Add the onclick listeners.
+        details.forEach(targetDetail => {
+            console.log(targetDetail);
+            targetDetail.removeAttribute('open');
+        });
     }
 
     // Is passed route active?
