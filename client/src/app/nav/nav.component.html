@@ -122,20 +122,8 @@
                                 >{{ link.label }}</a
                             >
                             <a
-                                *ngIf="
-                                    !itemActive(link.url) &&
-                                    !link.href &&
-                                    link.enabled
-                                "
+                                *ngIf="!itemActive(link.url)"
                                 routerLink="/{{ link.url }}"
-                                >{{ link.label }}</a
-                            >
-                            <a
-                                *ngIf="
-                                    !itemActive(link.url) &&
-                                    !link.href &&
-                                    !link.enabled
-                                "
                                 >{{ link.label }}</a
                             >
                         </h4>

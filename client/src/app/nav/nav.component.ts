@@ -41,7 +41,6 @@ export class NavComponent implements AfterViewInit {
             enabled: true,
         },
         {
-            // url: 'curriculum',
             label: 'Curriculum',
             subLinks: [
                 {
@@ -54,7 +53,19 @@ export class NavComponent implements AfterViewInit {
                 },
             ],
         },
-        { url: 'research', label: 'Research', enabled: true },
+        {
+            label: 'Research',
+            subLinks: [
+                {
+                    url: 'research/projects',
+                    label: 'Projects',
+                },
+                {
+                    url: 'research/publications',
+                    label: 'Publications',
+                },
+            ],
+        },
         { url: 'people', label: 'People', enabled: true },
         { url: 'about', label: 'About', enabled: true },
     ];
@@ -141,7 +152,6 @@ export class NavComponent implements AfterViewInit {
             );
             instance.mark(this.searchQuery);
         });
-        console.log(this.navLinks);
     }
 
     openCloseNav(): void {

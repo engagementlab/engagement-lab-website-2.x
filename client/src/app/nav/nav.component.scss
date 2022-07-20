@@ -267,6 +267,8 @@ nav {
 
         margin: 5% 0 0 0;
 
+        overflow: hidden;
+
         &.disabled {
             a {
                 text-decoration: line-through;
@@ -380,14 +382,19 @@ nav {
                 right: 0;
             }
         }
+        // When sublinks present, open them when details element is selected
+        details[open] {
+            & + .sublinks {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
     }
 
     .sublinks {
         @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
-        // position: relative;
-        // margin-top: -20%;
-        // opacity: 0;
-        // z-index: 0;
+        margin-top: -20%;
+        opacity: 0;
         h4 {
             @include font-lunchtype;
 
