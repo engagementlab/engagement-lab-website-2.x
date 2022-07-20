@@ -1,0 +1,11 @@
+<section class="columns is-mobile is-multiline" *ngIf="content">
+    <h2 class="column is-full-tablet is-11-mobile">
+        The Engagement Lab offers a minor blah blah blah blah blah blah blah
+        blah blah blah blah blah blah blah blah blah blah.
+    </h2>
+
+    <p
+        class="column is-5-desktop is-full-tablet is-11-mobile blurb"
+        [innerHtml]="content.programDescription.html"
+    ></p>
+</section>

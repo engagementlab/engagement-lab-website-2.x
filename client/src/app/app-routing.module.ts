@@ -43,9 +43,11 @@ const routes: Routes = [
     },
 
     {
-        path: 'graduate',
+        path: 'curriculum',
         loadChildren: () =>
-            import('./graduate/graduate.module').then(m => m.GraduateModule),
+            import('./curriculum/curriculum.module').then(
+                m => m.CurriculumModule,
+            ),
     },
     {
         path: 'partner',

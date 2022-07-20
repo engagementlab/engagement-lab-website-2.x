@@ -17,8 +17,6 @@ import { DataService } from './utils/data.service';
 })
 export class AppComponent implements OnInit, AfterViewInit {
     public isQABuild: boolean;
-    public showResearchNav: boolean;
-    public showGradNav: boolean;
 
     public dataErrors: string;
     public imageErrors: string;
@@ -55,30 +53,6 @@ export class AppComponent implements OnInit, AfterViewInit {
             if (!evt.url.includes('initiatives')) {
                 document.getElementById('initiative-bg').classList.value = '';
             }
-
-            // Show research nav?
-            this.showResearchNav = evt.url.indexOf('/research') === 0;
-            // Show graduate nav?
-            this.showGradNav = evt.url.includes('graduate');
-
-            // Get all current initiatives if on a research page
-            if (this.showResearchNav) {
-                const query = `
-                {
-                    allInitiativePages {
-                    name
-                        key
-                    }
-                }
-            `;
-
-                const content = await this.dataSvc.getSet(
-                    'app-initiatives',
-                    query,
-                );
-                this.initiatives = content['allInitiativePages'];
-            }
-
             if (evt.url.indexOf('/#') === 0) return;
 
             // Always go to top of page

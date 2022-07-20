@@ -4,8 +4,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import * as _ from 'underscore';
 
 @Component({
-    templateUrl: './curriculum.component.html',
-    styleUrls: ['./curriculum.component.scss'],
+    templateUrl: './graduate.component.html',
+    styleUrls: ['./graduate.component.scss'],
 })
 export class GraduateCurriculumComponent implements OnInit {
     public content: any;
