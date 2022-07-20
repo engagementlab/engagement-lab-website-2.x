@@ -20,9 +20,8 @@ const { Types, } = keystone.Field;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Curriculum = new keystone.List('Curriculum', {
-    label: 'Curricula',
-    singular: 'Curriculum',
-    plural: 'Curricula',
+    label: 'Courses',
+    singular: 'Course',
 });
 
 /**

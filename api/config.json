@@ -4,12 +4,12 @@
 	"subdomain": "elab",
 	"database": "engagement-lab",
 	"admin_nav": {
-		"studios": ["Studio", "StudiosIntro", "StudioInitiative"],
-		"Graduate Program": ["masters", "Curriculum", "mdprojects"],
-		"research": ["researches", "projects", "publications", "initiatives"],
+		"initiatives": ["Studio", "StudiosIntro"],
+		"Curriculum": ["masters", "Undergraduate", "Curriculum"],
+		"research": ["projects", "publications"],
 		"people": ["people"],
-		"files/resources": ["tools", "resources"],
+		"files/resources": ["tools"],
 		"about": ["About", "Contact", "partners", "PartnerIntro", "jobs"],
-		"other": ["events", "NewsItem", "Filter"]
+		"miscellaneous": ["events", "NewsItem", "Filter"]
 	}
 }

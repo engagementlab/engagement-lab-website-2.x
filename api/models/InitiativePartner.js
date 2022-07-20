@@ -23,7 +23,7 @@ const urlValidator = require('../utils').url;
 const InitiativePartner = new keystone.List('InitiativePartner',
     {
         sortable: true,
-        hidden: false,
+        hidden: true,
     });
 
 /**

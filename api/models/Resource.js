@@ -28,6 +28,7 @@ const Resource = new keystone.List('Resource', {
     },
     label: 'Resources (Legacy)',
     plural: 'Resources (Legacy)',
+    hidden: true,
 });
 
 // Storage adapter for Azure

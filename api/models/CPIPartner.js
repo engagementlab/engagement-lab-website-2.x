@@ -10,8 +10,8 @@
  * ==========
  */
 
-const { keystone } = global;
-const { Types } = keystone.Field;
+const { keystone, } = global;
+const { Types, } = keystone.Field;
 const Listing = require('./Listing');
 const urlValidator = require('../utils').url;
 
@@ -21,24 +21,24 @@ const urlValidator = require('../utils').url;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const CPIPartner = new keystone.List('CPIPartner',
-  {
-    label: 'Community PlanIt Partners',
-    sortable: true,
-    hidden: true,
-    inherits: Listing,
-  });
+    {
+        label: 'Community PlanIt Partners',
+        sortable: true,
+        hidden: true,
+        inherits: Listing,
+    });
 
 /**
  * Model Fields
  * @main Project
  */
 CPIPartner.add({
-  url: {
-    type: Types.Url,
-    label: 'Project Website URL',
-    validate: urlValidator,
-    note: 'Must be in format "http://www.something.org"',
-  },
+    url: {
+        type: Types.Url,
+        label: 'Project Website URL',
+        validate: urlValidator,
+        note: 'Must be in format "http://www.something.org"',
+    },
 });
 
 /**

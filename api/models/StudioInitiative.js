@@ -25,6 +25,7 @@ const StudioInitiative = new keystone.List('StudioInitiative',
         name: 'Initiative',
         autokey: { path: 'key', from: 'name', unique: true, },
         sortable: true,
+        hidden: true,
     });
 
 /**

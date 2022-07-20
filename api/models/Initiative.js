@@ -21,7 +21,8 @@ const { Types, } = keystone.Field;
  */
 const Initiative = new keystone.List('Initiative',
     {
-        hidden: false,
+
+        hidden: true,
         autokey: { path: 'key', from: 'name', unique: true, },
         sortable: true,
         nodelete: true,
