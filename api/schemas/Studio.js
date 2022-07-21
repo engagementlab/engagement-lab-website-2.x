@@ -14,21 +14,7 @@ const Studios = {
     type StudioIntro {
         summary: String
         initiativesSummary: String
-        partneredStudiosThumbnail: Image
-        graduateThesisThumbnail: Image
-        cocurricularThumbnail: Image
-        partneredSummary: String
-        partneredCurriculum: String
-        partneredSummaryImage: Image
-        currentPartneredStudios: [Studio]
-        previousPartneredStudios: [Studio]
-        gradSummary: String
-        gradCurriculum: String
-        gradSummaryImage: Image
-        coCurricularSummary: String
-        coCurricularSummaryImage: Image
-        coCurricularPhases: [String]
-        currentCoCurricularStudios: [Studio]
+        video: String
     }
     type Studio {
       id: ID!
