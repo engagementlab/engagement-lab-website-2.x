@@ -60,7 +60,24 @@ const routes: Routes = [
             import('./resources/resources.module').then(m => m.ResourcesModule),
     },
 
-    // Preserve old paths (pre-v2.5)
+    // Preserve old paths
+    {
+        path: 'graduate',
+        redirectTo: '/curriculum',
+        pathMatch: 'prefix',
+    },
+    {
+        path: 'studios',
+        redirectTo: 'initiatives',
+    },
+    {
+        path: 'studios/initiatives/:key',
+        redirectTo: 'initiatives/initiative/:key',
+    },
+    {
+        path: 'studios/studio/:key',
+        redirectTo: 'initiatives/studio/:key',
+    },
     {
         path: 'initiatives/smart-cities',
         redirectTo: 'initiatives',
@@ -69,7 +86,6 @@ const routes: Routes = [
         path: 'initiatives/trust-and-the-news',
         redirectTo: 'initiatives',
     },
-    // { path: 'researchinitiatives/:key', redirectTo: 'research/initiatives/:key' },
 
     { path: 'projects', redirectTo: 'research/projects' },
     { path: 'projects/:key', redirectTo: 'research/projects/:key' },

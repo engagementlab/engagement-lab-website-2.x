@@ -3,6 +3,19 @@
     <div class="column is-half-tablet is-10-mobile">
         <h2>Social Impact Initiatives</h2>
         <h3 class="blurb">{{ content.studiosIntro.initiativesSummary }}</h3>
+
+        <h4>Intro Video</h4>
+        <div id="video-embed" class="embed">
+            <div class="frame">
+                <iframe
+                    [src]="videoUrl"
+                    frameborder="0"
+                    allow="fullscreen; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
     </div>
 </section>
 
@@ -60,7 +73,7 @@
     </div>
 </section>
 
-<section
+<!-- <section
     id="studios"
     class="columns is-multiline is-mobile no-margin"
     *ngIf="content"
@@ -122,4 +135,4 @@
             </a>
         </div>
     </div>
-</section>
+</section> -->

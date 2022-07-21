@@ -33,8 +33,12 @@ const routes: Routes = [
         path: ':key',
         component: StudioInitiativeComponent,
     },
+    {
+        path: 'initiative/:key',
+        component: StudioInitiativeComponent,
+    },
 ];
-
+//
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],

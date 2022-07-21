@@ -4,6 +4,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
 import { DataService } from 'src/app/utils/data.service';
 
 import * as _ from 'underscore';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-studios-index',
@@ -31,12 +32,12 @@ import * as _ from 'underscore';
 })
 export class StudiosIndexComponent implements OnInit {
     public content: any;
-    public partners: any[];
+    public videoUrl: string;
 
-    public currentStudio: any;
-    public currentSelectorKey: string;
-
-    constructor(private dataSvc: DataService) {}
+    constructor(
+        private dataSvc: DataService,
+        private sanitizer: DomSanitizer,
+    ) {}
 
     async ngOnInit(): Promise<void> {
         const query = `
@@ -44,23 +45,7 @@ export class StudiosIndexComponent implements OnInit {
             studiosIntro {
                   summary
                   initiativesSummary
-                  partneredStudiosThumbnail {
-                    public_id
-                  }
-                  graduateThesisThumbnail {
-                    public_id
-                  }
-                  cocurricularThumbnail {
-                    public_id
-                  }
-            }
-
-            allStudios {
-              key
-              name
-              thumb { 
-                  public_id
-              }
+                  video
             }
 
             allStudioInitiatives {
@@ -82,24 +67,8 @@ export class StudiosIndexComponent implements OnInit {
             query,
         );
         this.content = response;
-    }
-
-    public applySelector(selector: string) {
-        this.currentSelectorKey = null;
-        if (!selector) {
-            this.currentStudio = null;
-            return;
-        }
-
-        this.currentStudio = _.findWhere(this.content.allStudioInitiatives, {
-            key: selector,
-        });
-    }
-
-    public isSelected(selector: string) {
-        return (
-            !this.currentStudio ||
-            _.pluck(this.currentStudio.studios, 'key').indexOf(selector) > -1
-        );
+        this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+            `https://player.vimeo.com/video/${this.content.studiosIntro.video}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
+        ) as string;
     }
 }
