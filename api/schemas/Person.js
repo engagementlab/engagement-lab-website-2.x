@@ -61,12 +61,19 @@ const Person = {
         allStaffPeople: async () => model.find({ category: 'staff', }).sort([
             ['name.first', 'ascending']
         ]).exec(),
-        allFacultyPeople: async () => model.find({ category: 'faculty leadership', }).sort([
+        allFacultyPeople: async () => model.find({ category: ['faculty leadership', 'faculty fellows'], }).sort([
             ['name.first', 'ascending']
         ]).exec(),
-        allMastersPeople: async () => model.find({ category: 'Masters', alumni: { $ne: true, }, }).sort([
-            ['name.first', 'ascending']
-        ]).populate('cohortYear').exec(),
+        allMastersPeople: async () => {
+            const cohort = await global.keystone.list('Filter').model.findOne({
+                category: 'Cohort',
+                current: true,
+            }).exec();
+            const people = await model.find({ category: 'Masters', cohortYear: cohort, }).sort([
+                ['name.first', 'ascending']
+            ]).exec();
+            return people;
+        },
         allAlumniPeople: async () => model.find({ category: 'Masters', alumni: true, }).sort([
             ['name.first', 'ascending']
         ]).populate('cohortYear').exec(),

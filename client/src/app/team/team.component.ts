@@ -72,14 +72,24 @@ export class TeamComponent implements OnInit {
                         first
                         last
                     }
-                    key
-                    title
+                    cohortYear {
+                        key
+                        label
+                    }
                     image {
                         public_id
                     }
+                }
+                allAlumniPeople {
+                    name {
+                        first
+                        last
+                    }
                     cohortYear {
+                        key
                         label
                     }
+                    relatedLinks
                 }
                 allCohorts {
                   key
@@ -92,7 +102,14 @@ export class TeamComponent implements OnInit {
         this.faculty = response['allFacultyPeople'];
         this.staff = response['allStaffPeople'];
         this.students = response['allMastersPeople'];
+        this.alumni = response['allAlumniPeople'];
         this.cohorts = response['allCohorts'];
+    }
+
+    getCohortAlumni(cohortKey: string) {
+        return this.alumni.filter(
+            student => student.cohortYear.key === cohortKey,
+        );
     }
 
     async getPerson(key) {
