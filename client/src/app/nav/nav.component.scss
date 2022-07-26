@@ -267,6 +267,8 @@ nav {
 
         margin: 5% 0 0 0;
 
+        min-height: 36.5px;
+
         overflow: hidden;
 
         &.disabled {
@@ -333,17 +335,6 @@ nav {
             }
         }
 
-        @keyframes show-jobs {
-            0% {
-                opacity: 0;
-                @include translate(0, 20%);
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
         @keyframes hide {
             0% {
                 opacity: 1;
@@ -385,16 +376,47 @@ nav {
         // When sublinks present, open them when details element is selected
         details[open] {
             & + .sublinks {
-                margin-top: 0;
-                opacity: 1;
+                // margin-top: 0;
+                // opacity: 1;
+                visibility: visible;
+                animation: show-sublinks 0.4s
+                    cubic-bezier(0.075, 0.82, 0.165, 1) both;
             }
         }
     }
 
     .sublinks {
-        @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
-        margin-top: -20%;
+        // @include transition(all, 0.7s, cubic-bezier(0.075, 0.82, 0.165, 1));
+        // transition-delay: 0.7s;
+        animation: hide-sublinks 4s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+        margin-top: -100%;
         opacity: 0;
+        // visibility: hidden;
+
+        @keyframes hide-sublinks {
+            0% {
+                margin-top: 0;
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                margin-top: -100%;
+            }
+        }
+
+        @keyframes show-sublinks {
+            0% {
+                opacity: 0;
+                margin-top: -100%;
+            }
+
+            100% {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+
         h4 {
             @include font-lunchtype;
 
