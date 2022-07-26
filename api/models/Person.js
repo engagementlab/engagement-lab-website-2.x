@@ -43,11 +43,6 @@ Person.add({
         initial: true,
         index: true,
     },
-    alumni: {
-        type: Boolean,
-        label:
-        'Is Alumni/Former Staff',
-    },
     category: {
         type: Types.Select,
         options: 'faculty leadership, staff, faculty fellows, Masters, lab assistants',
@@ -55,6 +50,16 @@ Person.add({
         required: true,
         initial: true,
         note: 'This determines the section in which the person displays',
+    },
+    enabled: {
+        type: Types.Boolean,
+        label: 'Enabled',
+        note: 'Determines if this person appears on the live site.',
+    },
+    alumni: {
+        type: Boolean,
+        label:
+        'Is Alumni',
     },
     onLeave: {
         type: Boolean,

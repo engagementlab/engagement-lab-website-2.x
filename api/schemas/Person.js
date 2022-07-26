@@ -18,6 +18,7 @@ const Person = {
             key: String!
             date: Date
             name: Name!
+            enabled: Boolean!
             category: String!
             title: String
             cohortYear: Filter
@@ -58,10 +59,10 @@ const Person = {
                     ['name.first', 'ascending']
                 ]).exec();
         },
-        allStaffPeople: async () => model.find({ category: 'staff', }).sort([
+        allStaffPeople: async () => model.find({ enabled: true, category: 'staff', }).sort([
             ['name.first', 'ascending']
         ]).exec(),
-        allFacultyPeople: async () => model.find({ category: ['faculty leadership', 'faculty fellows'], }).sort([
+        allFacultyPeople: async () => model.find({ enabled: true, category: ['faculty leadership', 'faculty fellows'], }).sort([
             ['name.first', 'ascending']
         ]).exec(),
         allMastersPeople: async () => {
@@ -69,12 +70,12 @@ const Person = {
                 category: 'Cohort',
                 current: true,
             }).exec();
-            const people = await model.find({ category: 'Masters', cohortYear: cohort, }).sort([
+            const people = await model.find({ enabled: true, category: 'Masters', cohortYear: cohort, }).sort([
                 ['name.first', 'ascending']
             ]).exec();
             return people;
         },
-        allAlumniPeople: async () => model.find({ category: 'Masters', alumni: true, }).sort([
+        allAlumniPeople: async () => model.find({ enabled: true, category: 'Masters', alumni: true, }).sort([
             ['name.first', 'ascending']
         ]).populate('cohortYear').exec(),
         getPerson: async (parent, args) => {

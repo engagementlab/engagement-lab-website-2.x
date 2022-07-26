@@ -15,6 +15,7 @@ const Filter = {
       id: ID!
       date: Date
       name: String!
+      current: Boolean!
       category: String!
       appears: String!
       key: String
@@ -26,7 +27,7 @@ const Filter = {
         allFilters: async () => global.keystone.list('Filter').model.findOne({}).exec(),
         allCohorts: async () => global.keystone.list('Filter').model.find({
             category: 'Cohort',
-        }, 'key label name _id')
+        }, 'key label name current _id')
             .sort([
                 ['key', 'ascending']
             ]).exec(),
