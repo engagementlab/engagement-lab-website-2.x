@@ -13,7 +13,11 @@ import { DataService } from '../utils/data.service';
 export class TeamComponent implements OnInit {
     public currentPerson: any;
 
-    public people: any[];
+    public faculty: any[];
+    public staff: any[];
+    public students: any[];
+    public cohorts: any[];
+    public alumni: any[];
 
     private gettingPerson: boolean;
 
@@ -40,7 +44,30 @@ export class TeamComponent implements OnInit {
 
         const query = `   
             {
-                allPeople {
+                allFacultyPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    title
+                    image {
+                        public_id
+                    }
+                    onLeave
+                }
+                allStaffPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    title
+                    image {
+                        public_id
+                    }
+                }
+                allMastersPeople {
                     name {
                         first
                         last
@@ -53,15 +80,19 @@ export class TeamComponent implements OnInit {
                     cohortYear {
                         label
                     }
-                    alumni
-                    category
-                    onLeave
+                }
+                allCohorts {
+                  key
+                  label
                 }
             }
         `;
 
         const response = await this.dataSvc.getSet('team', query);
-        this.people = response['allPeople'];
+        this.faculty = response['allFacultyPeople'];
+        this.staff = response['allStaffPeople'];
+        this.students = response['allMastersPeople'];
+        this.cohorts = response['allCohorts'];
     }
 
     async getPerson(key) {

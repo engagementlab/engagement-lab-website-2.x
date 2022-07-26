@@ -35,6 +35,7 @@ const Person = {
         'allMastersPeople: [Person]',
         'allAlumniPeople: [Person]',
         'allStaffPeople: [Person]',
+        'allFacultyPeople: [Person]',
         'getPerson(key: String): Person'],
     resolvers: {
         allPeople: async (parent, args) => {
@@ -57,7 +58,12 @@ const Person = {
                     ['name.first', 'ascending']
                 ]).exec();
         },
-        allStaffPeople: async () => model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
+        allStaffPeople: async () => model.find({ category: 'staff', }).sort([
+            ['name.first', 'ascending']
+        ]).exec(),
+        allFacultyPeople: async () => model.find({ category: 'faculty leadership', }).sort([
+            ['name.first', 'ascending']
+        ]).exec(),
         allMastersPeople: async () => model.find({ category: 'Masters', alumni: { $ne: true, }, }).sort([
             ['name.first', 'ascending']
         ]).populate('cohortYear').exec(),

@@ -4,4 +4,12 @@
     (onClose)="closePerson()"
 ></person-modal>
 
-<people-grid [people]="people"></people-grid>
+<people-grid [people]="faculty"></people-grid>
+<people-grid [people]="staff"></people-grid>
+<people-grid [people]="students"></people-grid>
+
+<h2>Alumni</h2>
+
+<h3 *ngFor="let cohort of cohorts">
+    {{ cohort.label }}
+</h3>
