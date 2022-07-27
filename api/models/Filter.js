@@ -85,24 +85,6 @@ Filters.add({
     },
 });
 
-Filters.schema.pre('remove', next => {
-    // Remove resource from all that referenced it
-    keystone.list('Project').model.removeFilterRef(this._id, (err, removedCount) => {
-        if (err) console.error(err);
-
-        if (removedCount > 0) console.log(`Removed ${removedCount} references to '${this._id}'`);
-
-        // Remove resource from all that referenced it
-        keystone.list('Publication').model.removeFilterRef(this._id, (err, removedCount) => {
-            if (err) console.error(err);
-
-            if (removedCount > 0) console.log(`Removed ${removedCount} references to '${this._id}'`);
-
-            next();
-        });
-    });
-});
-
 Filters.schema.statics.findFilter = (resourceId, callback) => {
     Filters.model.findById(resourceId, (err, result) => {
         if (err) console.error(err);

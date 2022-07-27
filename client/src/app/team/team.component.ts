@@ -72,6 +72,7 @@ export class TeamComponent implements OnInit {
                         first
                         last
                     }
+                    key
                     image {
                         public_id
                     }
