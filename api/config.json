@@ -5,7 +5,7 @@
 	"database": "engagement-lab",
 	"admin_nav": {
 		"initiatives": ["Studio", "StudiosIntro"],
-		"Curriculum": ["masters", "Undergraduate", "Curriculum"],
+		"Curriculum": ["masters", "Curriculum", "Undergraduate", "UndergraduateStudio"],
 		"research": ["projects", "publications"],
 		"people": ["people"],
 		"files/resources": ["tools"],

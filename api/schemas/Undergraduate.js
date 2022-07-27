@@ -15,7 +15,8 @@ const Undergraduate = {
       id: ID!
       name: String!
       description: Markdown
-      coursesInfo: Markdown
+      currentStudiosYear: String
+      currentStudios: [UndergraduateStudio]
     }
   `,
     queries: ['allUndergraduatePages: Undergraduate'],

@@ -1,7 +1,7 @@
 /**
  * Engagement Lab Website v2.x
  *
- * CMAP page Model
+ * Undergrad studio Model
  * @module undergraduate
  * @class undergraduate
  *
@@ -18,44 +18,40 @@ const { Types, } = keystone.Field;
  * @constructor
  * See: http://keystonejs.com/docs/database/#lists-options
  */
-const Undergraduate = new keystone.List('Undergraduate', {
-    label: 'Undergraduate',
-    singular: 'Undergraduate',
-    nodelete: true,
-    // nocreate: true,
+const UndergraduateStudio = new keystone.List('UndergraduateStudio', {
+    // label: 'Undergraduate Studio',
+    // singular: 'Undergraduate Studio',
 });
 
 /**
  * Model Fields
  * @main undergraduate
  */
-Undergraduate.add({
+UndergraduateStudio.add({
     name: {
         type: String,
-        default: 'Undergraduate Page',
         hidden: true,
         required: true,
     },
+    current: { type: Boolean, },
     description: {
         type: Types.Markdown,
         required: true,
         initial: true,
     },
-    currentStudiosYear: {
-        type: String,
-        required: true,
-        initial: true,
-    },
-    currentStudios: {
+    faculty: {
         type: Types.Relationship,
         required: true,
         initial: true,
         many: true,
-        ref: 'UndergraduateStudio',
+        ref: 'Person',
+        filters: {
+            type: ['faculty leadership', 'faculty fellows'],
+        },
     },
 });
 
 /**
  * Model Registration
  */
-Undergraduate.register();
+UndergraduateStudio.register();
