@@ -1,11 +1,39 @@
 <section class="columns is-mobile is-multiline" *ngIf="content">
     <h2 class="column is-full-tablet is-11-mobile">
-        The Engagement Lab offers a minor blah blah blah blah blah blah blah
-        blah blah blah blah blah blah blah blah blah blah.
+        Social Impact Design Minor
     </h2>
 
     <p
         class="column is-5-desktop is-full-tablet is-11-mobile blurb"
         [innerHtml]="content.description.html"
     ></p>
+    <h3 class="column is-full-tablet is-11-mobile">
+        Curriculum
+    </h3>
+    <p
+        class="column is-5-desktop is-full-tablet is-11-mobile blurb"
+        [innerHtml]="content.studiosDescription.html"
+    ></p>
+    <div id="studios" class="columns is-multiline">
+        <div
+            *ngFor="let studio of studios"
+            class="column is-4-tablet is-11-mobile"
+        >
+            <h4>{{ studio.name }}</h4>
+            <p>
+                <em
+                    >Instructor<span *ngIf="studio.faculty.length > 1">s</span
+                    >:</em
+                >&nbsp;&nbsp;
+                <span *ngFor="let person of studio.faculty; let i = index">
+                    <a class="href" routerLink="/people/{{ person.key }}"
+                        >{{ person.name.first }} {{ person.name.last }}</a
+                    ><span *ngIf="i < studio.faculty.length - 1"
+                        >,&nbsp;</span
+                    ></span
+                >
+            </p>
+            <p [innerHtml]="studio.description.html"></p>
+        </div>
+    </div>
 </section>

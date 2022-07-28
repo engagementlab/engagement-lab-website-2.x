@@ -8,6 +8,7 @@ import { DataService } from 'src/app/utils/data.service';
 })
 export class UndergraduateComponent implements OnInit {
     public content: any;
+    public studios: any;
 
     constructor(private dataSvc: DataService) {}
 
@@ -15,9 +16,29 @@ export class UndergraduateComponent implements OnInit {
         const query = `
         {
           allUndergraduatePages {
-                description {
-                    html
+            description {
+                html
+            }
+            studiosDescription {
+                html
+            }
+            currentStudiosYear
+          }
+          currentUndergraduateStudios {
+            name
+            description {
+              html
+            }
+            faculty {
+                key
+                name {
+                    first
+                    last
                 }
+                image {
+                    public_id
+                }
+            }
           }
         }
       `;
@@ -25,9 +46,6 @@ export class UndergraduateComponent implements OnInit {
         const response = await this.dataSvc.getSet('undergraduate', query);
 
         this.content = response['allUndergraduatePages'];
-        // this.curricula = _.groupBy(
-        //     mastersResponse['allCurriculumPages'],
-        //     'type',
-        // );
+        this.studios = response['currentUndergraduateStudios'];
     }
 }

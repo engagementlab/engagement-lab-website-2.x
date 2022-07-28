@@ -322,6 +322,14 @@ nav {
             }
         }
 
+        details {
+            z-index: 1;
+            position: relative;
+            summary {
+                background-color: black;
+            }
+        }
+
         // Animations
         @keyframes show {
             0% {
