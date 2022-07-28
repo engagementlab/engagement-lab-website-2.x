@@ -22,7 +22,7 @@ const Undergraduate = new keystone.List('Undergraduate', {
     label: 'Undergraduate',
     singular: 'Undergraduate',
     nodelete: true,
-    // nocreate: true,
+    nocreate: true,
 });
 
 /**
@@ -41,18 +41,23 @@ Undergraduate.add({
         required: true,
         initial: true,
     },
+    studiosDescription: {
+        type: Types.Markdown,
+        required: true,
+        initial: true,
+    },
     currentStudiosYear: {
         type: String,
         required: true,
         initial: true,
     },
-    currentStudios: {
+/*     currentStudios: {
         type: Types.Relationship,
         required: true,
         initial: true,
         many: true,
         ref: 'UndergraduateStudio',
-    },
+    }, */
 });
 
 /**

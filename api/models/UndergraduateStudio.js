@@ -33,7 +33,7 @@ UndergraduateStudio.add({
         hidden: true,
         required: true,
     },
-    current: { type: Boolean, },
+    current: { type: Boolean, initial: true, },
     description: {
         type: Types.Markdown,
         required: true,
@@ -45,9 +45,6 @@ UndergraduateStudio.add({
         initial: true,
         many: true,
         ref: 'Person',
-        filters: {
-            type: ['faculty leadership', 'faculty fellows'],
-        },
     },
 });
 

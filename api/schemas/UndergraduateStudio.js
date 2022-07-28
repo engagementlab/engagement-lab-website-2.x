@@ -16,11 +16,13 @@ const UndergraduateStudio = {
       name: String!
       current: Boolean
       description: Markdown
+      faculty: [Person]
     }
   `,
-    queries: ['currentUndergraduateStudios: UndergraduateStudio'],
+    queries: ['currentUndergraduateStudios: [UndergraduateStudio]'],
     resolvers: {
-        currentUndergraduateStudios: async () => global.keystone.list('UndergraduateStudio').model.find({ current: true, }).exec(),
+        currentUndergraduateStudios: async () => global.keystone.list('UndergraduateStudio').model.find({ current: true, })
+            .populate('faculty').exec(),
     },
 
 };

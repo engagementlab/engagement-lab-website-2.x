@@ -57,9 +57,6 @@ Masters.add({
         initial: true,
         many: true,
         ref: 'Person',
-        filters: {
-            type: ['faculty leadership', 'faculty fellows'],
-        },
     },
     projects: {
         type: Types.Relationship,
