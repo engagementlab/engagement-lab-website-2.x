@@ -1,0 +1,66 @@
+---
+url: https://medium.com/engagement-lab-emerson-college/student-spotlight-chitra-anwar-on-identity-forming-nurturing-creativity-and-navigating-our-new-fa961d3113fa
+canonical_url: https://medium.com/engagement-lab-emerson-college/student-spotlight-chitra-anwar-on-identity-forming-nurturing-creativity-and-navigating-our-new-fa961d3113fa
+title: 'Student Spotlight: Chitra Anwar on Identity Forming, Nurturing Creativity,
+    and Navigating Our New…'
+subtitle: Chitra Anwar is a member of the 2019 cohort of the Media Design (MA) Program.
+    She is a first generation Indonesian-American whose…
+slug: student-spotlight-chitra-anwar-on-identity-forming-nurturing-creativity-and-navigating-our-new
+description: ''
+tags:
+    - civictech
+    - graduate-school
+    - nonprofit
+    - civic-innovation
+    - creativity
+author: EL_News
+username: el-news
+---
+
+# Student Spotlight: Chitra Anwar on Identity Forming, Nurturing Creativity, and Navigating Our New Virtual World
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DVmmfFOIX-j6IWHuSLUBog.jpeg)
+
+_Chitra Anwar is a member of the 2019 cohort of the [Media Design (MA) Program.](https://www.emerson.edu/programs/media-design-ma)\*\*\*\* She is a first generation Indonesian-American whose experiences as a person and professional spans several states and two countries. We (virtually) sat down with Chitra to learn more about her journey and following her call to pursue creativity here in Boston._
+
+“I knew I wanted to get into a career where I could flex more of my creative side,” says Chitra Anwar. “My previous working experiences made me realize that I am an innately creative person who wants to marry creative practices with social impact. I sought out the Media Design program because of its emphasis on using creative problem solving to create positive change for communities.”
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-DI8w7Iw8wb0cYc2l2ZpmQ.jpeg)
+
+Chitra was born in Arlington, Virginia. When she was six, her family moved back to Indonesia to start a business in hopes of providing a better life for her and her brother. After facing some difficulties during a financial crisis that hit the country in the mid-90s, Chitra’s family moved back to America and relocated to a suburb in Los Angeles. “And that’s primarily where I’ve been. That’s where I did a chunk of my growing up.”
+
+After graduating from San Diego State in 2012 with a Bachelor of Arts degree in Psychology, Chitra’s pursuit for creativity led her back across the Pacific to Jakarta, Indonesia, where she took on a job as a lifestyle journalist for _Prestige_, a high society lifestyle magazine. When asked about what motivated her move, Chitra described a sentiment that many post-graduates can probably relate to. “It was literally a classic, young person, ‘I’m just gonna make a move and go bold’ move.”
+
+“But the main inspiration for my move was to reconnect with my family, since everyone lives in Indonesia, I just wanted to get to know them and get to know my culture a little more because I grew up in a neighborhood that was predominantly white,” explains Chitra. “I felt like I was not in touch with my roots at all.”
+
+During her initial move to Indonesia as a child, Chitra didn’t have many opportunities to build her relationship with her extended family. “I did not know them at all,” she told us. Spending time with her family as an adult allowed Chitra to discover the similarities they all carry and how it connects them. “With every single person in my family, there’s some part of them that I could see in me. I was like, oh, this is what family is. It was a really eye-opening and identity building moment for me.”
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_HLFEdOwwRFPF1f9z.jpeg)
+
+Chitra was able to immerse herself further into Indonesian culture during her time at [_Prestige_](https://www.prestigeonline.com/id/), where she profiled local and international public figures and reported on brand events she was invited to attend. A defining moment for her was when she had the opportunity to interview American fashion designer Michael Kors a year into the position. “I really, really liked what I did. But after a year and a half of working there, even something that I really enjoyed started to feel kind of routine,” says Chitra. “That’s when I knew that I wanted to pursue something with a little bit more meaning.”
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_SWPr5LlL--h1U0jD.png)
+
+This led Chitra back to California to work in nonprofit administration at the [Child Care Alliance of Los Angeles](https://www.ccala.net/), where she helped manage the operations of LA county’s quality rating improvement system for early care and education programs. While she carried out daily operational tasks, Chitra also helped to form different programs, resources, and social media messaging for the agency.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Ir2tp3881sTjDVHO.jpeg)
+
+“I had a really great manager who encouraged us to explore different, creative things so long as it was related to the general area of early education,” she told us. One of her most notable projects focused on early brain development. “I had the opportunity to do research on a topic that I’m really interested in, given my background in psychology. And then I created flyers and messaging that could be displayed at various preschool or daycare centers, as well as handouts that parents could take home.”
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_wRSYS6yh_-1h_90V.jpeg)
+
+Chitra recognized that the non-profit space doesn’t always have the flexibility to encourage more innovative, community-driven work. “It can be difficult to work with limited funding and resources. Top-down decisions don’t always translate the way that you’d like them to, which is a reason why I was attracted to the Media Design program. It incorporates a community-focused way of designing solutions.”
+
+For Chitra, coming into the Media Design program after working as a professional came with a few transitions. “I’ve been out of school for a while now, so I had to get back into the rhythm of being a student again and having to get homework done instead of operating on a 9 to 5 schedule.” Despite some initial adjustments, Chitra began to feel at home in her new program and city. “It’s a very personal program with a lot of compassion built into it.” She appreciates the intimacy of having a small cohort, the ability to work so closely with professors and faculty members, and the amount of support and resources that are provided by the Lab and Emerson as a whole. “There are so many resources and so many support systems.” Chitra took on several leadership roles since entering the program, namely as the President of the Media Design Graduate Student Association and a co-organizer for the [Social Media & Justice Symposium](http://www.sjmsymposium.com/), held earlier this year.
+
+The COVID-19 pandemic demanded more adjustments from Chitra and the Media Design cohort when in-person classes at Emerson College were suspended and moved online to abide by national social distancing guidelines. Before the pandemic, Chitra and three other cohort members were embarking on a group thesis project in partnership with the [City of Boston’s Mayor’s Office of Recovery Services](https://www.boston.gov/departments/recovery-services) to address the fundamental concern of low-income youth of color lacking access to substance misuse prevention and prosocial spaces for support, expression and dialog. Their project and prototype takes a holistic approach to prevention that focuses on social determinants rather than targeting specific substances.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Tfs5XrxOalDa4JX2.jpeg)
+
+Chitra provided some insight on what it’s been like to conduct a participatory design project in the virtual space, where access to her thesis partners and stakeholders happens over Zoom calls and surveys vs. in-person meetings and workshops. “Remote learning has its ups and downs. Working on group assignments is a lot harder because we are separate and can’t physically be together to just doodle out an idea or glance at each other’s screens. But on the flip side, I feel like it’s nice because it also gives you a bit more free time and does save you the time that you’d spend traveling to meet each other.”
+
+Creating a participatory prototype hasn’t come without its difficulties, however. “Before COVID, we held one workshop with our stakeholders. This pandemic surged when the majority of our prototype design had to be done, and so we weren’t able to get the same engagement and opportunities for co-creation that we would have been able to in-person.” To Chitra and her thesis group, the design process has felt “kind of backwards, where [they] created a prototype based more on research than user input,” and are now looking to incorporate youth voice and feedback through virtual interviews and focus groups.
+
+As of right now, the group has designed a virtual platform that connects youth to resources in their community through a series of goal-setting prompts. “Our design is driven by insight from our literature review, which showed that having positive expectations for the future is a protective factor in itself. As of now, there are two components to our prototype: a digital version housing the main prompts, along with a physical journal for youth to elaborate on the prompts and their ideas about their futures. We’re still very much in the iteration process, and we’re planning on holding focus groups with youth to figure out how to fine-tune our prototype so that it’s useful and meaningful for them.”
+
+Ultimately, Chitra is working to stay optimistic throughout the new challenges she and her group are navigating. “We’re just continuing to roll with the punches and explore what works. All of us, including our professors, are working to figure it all out as we go, which I guess is the design process!”

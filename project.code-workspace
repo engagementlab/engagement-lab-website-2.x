@@ -18,21 +18,22 @@
             "editor.formatOnSave": true
         }
     },
-    "folders": [{
+    "folders": [
+        {
             "name": "./",
             "path": "."
         },
         {
-            "path": "./api",
-            "name": "API"
+            "name": "API",
+            "path": "api"
         },
         {
-            "path": "./client",
-            "name": "Client"
+            "name": "Client",
+            "path": "client"
         },
         {
-            "path": "./scripts",
-            "name": "Scripts"
+            "name": "Scripts",
+            "path": "scripts"
         }
     ]
 }

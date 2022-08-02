@@ -1,0 +1,32 @@
+---
+url: https://medium.com/engagement-lab-emerson-college/opportunity-awaits-introducing-port-land-of-opportunity-our-newest-game-370ad6bf4e6c
+canonical_url: https://medium.com/engagement-lab-emerson-college/opportunity-awaits-introducing-port-land-of-opportunity-our-newest-game-370ad6bf4e6c
+title: 'Opportunity Awaits: Introducing (Port)Land of Opportunity, Our Newest Game'
+subtitle: The Engagement Lab is pleased to announce the release of our newest game,
+    “(Port)Land of Opportunity.” In collaboration with the City of…
+slug: opportunity-awaits-introducing-port-land-of-opportunity-our-newest-game
+description: ''
+tags:
+    - urban-planning
+    - civic-media
+    - engagement
+    - civictech
+author: EL_News
+username: el-news
+---
+
+# Opportunity Awaits: Introducing (Port)Land of Opportunity, Our Newest Game
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_etFjoj0nPry2O4fh-i8w0g.png)
+
+The Engagement Lab is pleased to announce the release of our newest game, “(Port)Land of Opportunity.” In collaboration with the City of Portland, Maine’s Office of Economic Opportunity, our team at the Engagement Lab has spent the last seven months co-designing a tool to inform and engage immigrants and refugees in the city regarding available services. The [Office of Economic Opportunity](https://www.portlandmaine.gov/2108/Office-of-Economic-Opportunity) wanted to try stepping away from more conventional approaches of seeking community feedback (such as interviews and focus groups, as they have used in the past) and instead create an educational game in hopes of making the process more engaging and meaningful to participants. The game is playable on desktop or mobile devices and is currently being rolled out across the city.
+
+In the game, the player takes on the role of an immigrant or refugee who has just arrived in Portland and now must discover and navigate the city’s services in order to reach their goals. All of the locations and services within the game are real and offer a variety of opportunities to players — if they have the right skills and resources. Points are earned by gaining a mix of skills (English proficiency, job training, and community engagement) as well as two distinct ‘power-ups’ (learning public transportation and getting a job). Players begin with a limited amount of two key resources, time and money, which they must spend strategically in order to progress.
+
+After playing, players are invited to take a survey about their thoughts on Portland’s current service landscape, how inclusive they feel the city is overall, and what could be done differently or improved upon. The game is designed to reflect Portland’s existing services and opportunities, so that players may critically evaluate Portland’s services in the survey and through facilitated discussions by organizations that use the game. The game is intended to motivate players to discover available resources in the city and to understand better where resources may be lacking. Ultimately, the game is an opportunity for players to learn and provide valuable feedback to the City as it sets priorities in the upcoming budget year.
+
+The game is intentionally modular in its content. All of the locations and opportunities presented to players can be easily modified with minor changes to the game’s code, allowing for the potential for other cities and regions to adapt the game for their own use. Preliminary plans for expansion to other communities is in process, but it’s too early to know what the future may hold for the project.
+
+The game designer was Justin Warren, project manager was Mary Beth Dawson, developer was Johnny Richardson, visual designer was Courtney Lord, and the faculty lead was Eric Gordon.
+
+Interested in trying “(Port)Land of Opportunity” yourself? The game is now playable at [https://portland.opportunitygame.org/](https://portland.opportunitygame.org/) and we encourage everyone to give it a try.

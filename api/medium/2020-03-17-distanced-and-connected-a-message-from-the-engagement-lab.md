@@ -1,0 +1,34 @@
+---
+url: https://medium.com/engagement-lab-emerson-college/distanced-and-connected-a-message-from-the-engagement-lab-284ead7c0bdd
+canonical_url: https://medium.com/engagement-lab-emerson-college/distanced-and-connected-a-message-from-the-engagement-lab-284ead7c0bdd
+title: 'Distanced and Connected: a Message from the Engagement Lab'
+subtitle: The Engagement Lab is devoted to the design and understanding of values-forward
+    public participation with media and technology. Much of…
+slug: distanced-and-connected-a-message-from-the-engagement-lab
+description: ''
+tags:
+    - civic-media
+    - public-health
+    - civic-technology
+    - community
+author: EL_News
+username: el-news
+---
+
+# **Distanced and Connected: a Message from the Engagement Lab**
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ih2CfmRUSA76ZBuFnMUKYQ.png)
+
+The Engagement Lab is devoted to the design and understanding of values-forward public participation with media and technology. Much of the work of our faculty, staff, and students over the last decade has focused on connecting geography and place to mediated communication. We have developed [in-person games for public participation](https://elab.emerson.edu/projects/atstake), [VR for prison reentry](https://elab.emerson.edu/projects/covr-collaborative-virtual-reality-for-reentry), we have created [media literacy curricula for classrooms](https://elab.emerson.edu/projects/emerging-citizens), [mechanisms for citizen-centered smart city planning](http://civicsmart.city/), and [play-based hygiene programs for children](http://elab.emerson.edu/hygiene). What has connected our projects are two things: 1) the participatory methods through which they are designed, and 2) the resulting playful media tools and processes that generate social connectivity. You see, we’ve been designing for a world that has been too quick to distinguish between what happens online and what happens off. The often efficient online solutions for planning, participation and learning, that we see in smart cities and many digital learning tools, too often lack human touch, or qualities of what Gabriel Mugar and I call [\*meaningful inefficiencies.](https://global.oup.com/academic/product/meaningful-inefficiencies-9780190870133?lang=en&cc=us#)\* These are the deliberately designed spaces for relation and connection that need to be built into otherwise efficient digital processes. Very often, designing these requires some consideration of place and co-presence.
+
+**As we are now living through a global pandemic that is necessitating social distancing for the foreseeable future, we need to reimagine what this looks like absent of place and co-presence.** **What does it mean to be socially distant and connected?** As classes, meetings, and social gatherings are moving to Zoom and Slack, how do we assure that people feel present _and_ each others’ presence? I am struck by what an amazing opportunity the Internet presents. In 1918, when people around the world isolated for months because of the Spanish Flu pandemic, there was no means of virtual connection. It was complete isolation. We have an extraordinary opportunity in this current crisis to be distant _and_ connected.
+
+But it takes some trust in the Internet. In the 1990s, early internet boosters celebrated the possibility of a digital democracy. The internet was going to flatten political life, open access to knowledge, and democratize participation. By the 2010s, all of that hopefulness was erased, as it was clear that the Internet would concentrate political power, open the floodgates of misinformation, and fail to connect everyone. Now, in the age of Covid-19, we have no choice but to embrace the Internet that is, and make the Internet we need.
+
+The Engagement Lab is committed to contributing to this in whatever way we can. We are committed to building processes with people that connect them to public life by cultivating social connection and good information, through creativity and play. We are committed to creatively reimaging readily accessible digital tools that serve everyone, especially those most marginalized, to participate, create, and connect in this new reality.
+
+As neighbors in Sienna, Italy burst into [spontaneous song](https://jonathanturley.org/2020/03/14/the-italians-show-the-meaning-of-strength-and-spirit-in-a-spontaneous-song-in-sienna/) amid the lockdown, and as local WhatsApp groups get created in local communities around the world, this forced isolation cannot quell the insatiable desire for human connection. All of us at the Engagement Lab, our faculty, our staff, and our Media Design students, are inspired by these acts of resilience, and we are doubly committed to our mission of designing new opportunities to participate in public life within this dramatic new lens.
+
+— Eric Gordon
+
+Professor and Director, Engagement Lab at Emerson College

@@ -1,0 +1,52 @@
+---
+url: https://medium.com/engagement-lab-emerson-college/mgh-gun-violence-prevention-series-an-interview-with-ougie-pak-78d9294b50d1
+canonical_url: https://medium.com/engagement-lab-emerson-college/mgh-gun-violence-prevention-series-an-interview-with-ougie-pak-78d9294b50d1
+title: 'MGH Gun Violence Prevention Series: An Interview with Ougie Pak'
+subtitle: Every year, Americans are impacted by gun violence in a variety of ways.
+    Whether it be interpersonal violence, mass shootings, or in other…
+slug: mgh-gun-violence-prevention-series-an-interview-with-ougie-pak
+description: ''
+tags:
+    - gun-violence-prevention
+    - civic-media
+    - civic-engagement
+    - gun-violence
+author: EL_News
+username: el-news
+---
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_G-o_qj0VtANTTlQFpoCCDA.png)
+
+# MGH Gun Violence Prevention Series: An Interview with Ougie Pak
+
+Every year, Americans are impacted by gun violence in a variety of ways. Whether it be interpersonal violence, mass shootings, or in other forms, gun violence continues to appear in our communities and our news cycles. According to [Everytown for Gun Safety](https://everytownresearch.org/report/gun-violence-in-america/), more than 230 Americans are shot and wounded daily, with 100 of those shootings resulting in death. Furthermore, these impacts are magnified, rippling through communities and causing life-long effects on millions of Americans who may witness gun violence, know someone who was shot, or live in fear of the next shooting.
+
+In January 2020, the Mass General Hospital Center for Gun Violence Prevention sought to tell the stories behind these statistics, highlighting the myriad ways gun violence has lasting effects on the lives of individuals, families, and communities. In partnership with the Emerson Engagement Lab and the MGH Center for Gun Violence Prevention, Emerson College Assistant Professor in Visual Media Arts, Jong Ougie Pak, created a series of short documentaries in which survivors of gun violence speak about their experiences and advocacy. What follows is a Q&A interview with Professor Pak on his creative process and the impact of these stories.
+
+**Can you give some insight into the initial conceptualization of the project? How did Covid19 change the original concept and approach?**
+
+In spring 2020, I heard about the class at a department meeting and thought it seemed interesting. I’m not a documentarian, but I’ve shot and edited a lot of docs for work. I was drawn to the topic of gun violence, especially since my family has been affected firsthand by gun violence, which is something I hadn’t really thought about until this class. I reached out to the department chair and started teaching the class in person, essentially as a small production company.
+
+I really wanted the students to be the filmmakers, and I was more of an executive producer. They would come in, pursue leads, pitch ideas. They broke into groups of two or three and had lots of different ideas. Producing a documentary in a semester can be difficult, usually, it’s about a year-long process for a ten-minute doc, because often you’re trying to make your connections, gain trust, and conduct research.
+
+The project was moving forward, then Covid happened. And since a lot of the people we were reaching out to were medical professionals and had much bigger things to worry about, I thought we could either quit or say “hey we’re filmmakers, and even during a pandemic, we’re going to do what we can.” Students were trying their best, but I could tell their leads were dropping. Since I had some of the leads, I began shooting distanced, outside interviews with gun violence survivors, just me, one or two cameras, and wireless mics. I then disseminated that footage out to the students so they could have a hand in editing, and they produced rough cuts or more experimental projects. Whenever you try to make a film, there are constant obstructions, whether it’s money or time or something else. The films became what they were because of the obstructions.
+
+**How is this different from a more traditional film class a student might encounter at Emerson? How does the form, the community, and the topic influence the pedagogy and process, particularly when it comes to building trust with communities?**
+
+The biggest thing with documentaries is access and trust. You can’t make a documentary about someone who doesn’t want the documentary made. So the first thing I did was find people who were already speaking about gun violence because they have stories they want to tell. Then the documentarian comes in almost as a medium to put their story on film, whatever that may mean. It’s impossible to force someone to be in a movie. It can be a very uncomfortable thing for people, so having an open, ready, and willing subject is the first step. After that, then the filmmaker has to be an open, honest and responsible person who the subject can trust to tell their story.
+
+**What was the process of finding subjects like? Are there any additional challenges you encountered? How did the subjects influence the project?**
+
+To start with we had a lot of contacts, through MGH, through community organizations in Jamaica Plain and Roxbury, and I really pushed students to pursue their own leads and interests. Finding leads wasn’t hard because there were already a lot of organizations doing work on gun violence, which have made video media with a similar mission. We then had to ask the question: What did we want to make that hadn’t been made before? There have already been so many PSAs made, and there was a consensus to not make something that’s already been done. The main element that was of interest to all of us was the human element. We all know the facts and figures on gun violence, but the one thing film can do is show the intimate, human stories behind the facts and figures. What does it mean to one person? To one family?
+
+**How did you get down to the four final subjects? Is there any kind of connecting thread between them?**
+
+There were various factors I considered, like how long ago their experience was, how directly they were impacted. The stories that we honed in on ended up being two subjects that were shot themselves and survived.I thought that was crazy, what is it like to almost die and then survive? The two other subjects were mothers who had lost their sons to gun violence. If we’re going to talk about gun violence in America, particularly in low-income communities and communities of color, we have to tell that story, even though it’s been done many times in many different places. I couldn’t imagine making a series on survivors and not touching on that aspect. That process also happened organically based on who I was able to get in touch with through various organizations.
+
+**These are incredibly personal and emotional stories, how did you continue to build trust with your subjects?**
+
+I really like Errol Morris as a documentarian. He has so many wonderful films, like this series called First Person where it’s just people telling their own stories. I thought about doing something like that, especially since they were distanced interviews due to Covid. If I could just be a medium and put the story they are telling on film effectively, then that’s it. I wanted to keep it really simple, focus on making them comfortable, and allowing them to tell their own stories.
+
+I’m very interested in people and their stories, and I’m also pretty open to talking about my own experiences, so we really just had conversations. Each one of the subjects had very different socioeconomic backgrounds, different class, race. I grew up around a lot of different people and am comfortable talking to lots of different people. It was crazy to me that they all experienced the same thing even though their lives are so different. That’s how it is in America, it doesn’t matter who you are, you could get shot and killed. I keep in touch with all of the subjects and found their stories fascinating. I’m glad they’ve all liked the videos, and I hope it does their story justice.
+
+When we were first approached by MGH, the doctors kept asking what the faces behind gun violence really looked like. What was the experience of actual gun violence survivors? And I feel like we effectively showed the stories of a few real survivors of gun violence. That’s as simple as it gets.

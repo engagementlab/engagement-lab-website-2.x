@@ -1,0 +1,70 @@
+---
+url: https://medium.com/engagement-lab-emerson-college/thinking-about-the-media-design-ma-program-two-students-give-you-the-inside-scoop-53edfacff7d1
+canonical_url: https://medium.com/engagement-lab-emerson-college/thinking-about-the-media-design-ma-program-two-students-give-you-the-inside-scoop-53edfacff7d1
+title: Thinking about the Media Design MA Program? Two Students Give You the Inside
+    Scoop!
+subtitle: If you’re currently in the process of considering whether or not the MA
+    in Media Design at Emerson College is the right graduate program…
+slug: thinking-about-the-media-design-ma-program-two-students-give-you-the-inside-scoop
+description: ''
+tags:
+    - media-design
+    - emerson-college
+    - civic-engagement
+    - civic-innovation
+    - graduate-school
+author: EL_News
+username: el-news
+---
+
+# Thinking about the Media Design MA Program? Two Students Give You the Inside Scoop!
+
+![Greetings from the 2019–2020 Cohort!]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zGEnvslTO85DV0SSqeQ4SQ.png)
+
+If you’re currently in the process of considering whether or not the [MA in Media Design at Emerson College](https://www.emerson.edu/programs/media-design-ma) is the right graduate program for you, look no further. Two current students share what drew them to the program, what they’ve gained thus far, and why it could be the perfect fit for you.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_a1TwhOGSTk8zgl_a.png)
+
+**Testimonial 1: Chitra Anwar**
+
+_Chitra Anwar hails from Los Angeles, California, which is where she primarily grew up. She graduated with a Bachelor of Arts degree in Psychology from San Diego State University in 2012. After graduating, she moved back to Indonesia, where she worked as a writer for Prestige, a high society lifestyle magazine, profiling local and international public figures. Most recently, she worked in non-profit administration at the Child Care Alliance of Los Angeles, where she helped manage the operations of LA county’s quality rating improvement system for early care and education programs._
+
+1. **What drew you to the Media Design program?**
+
+Before coming to the program, I was working at an early education non-profit. I was drawn to the Media Design program because I wanted to learn how to use and design interactive, engaging, and approachable media about the critical period of brain development during ages 0–3, especially for communities who may not have the time or resources to access this information.”
+
+2. **What, specifically, is your favorite part of Media Design, and why?**
+
+So far, my favorite part of the program has been the studio class. I came to this program without any formal art instruction, so it’s been really fun and useful to flex my creative muscles while learning about photoshop, video editing, and graphic design, among other skills.
+
+3. **What are you hoping to get out of Media Design professionally?**
+
+Through this program, I’ve learned that during the design process, it’s really important to gain input and insight from the communities you’re designing a product or solution for, especially if the communities are historically underserved or overlooked. I’m hoping to gain the skills to meaningfully engage and empower those communities during the design process, not just as stakeholders, but as fellow designers.
+
+4. **When recommending Media Design, what would you say?**
+
+Given the level of transparency and accountability that the internet and social media affords us, it’s unrealistic for companies and organizations to operate behind closed doors and ignore the voice of the people. This program teaches you the theoretical knowledge and applied skills to engage communities that will be necessary moving forward in the digital age.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dbnTjMNZT67kufJUhfFGAg.png)
+
+**Testimonial 2: Hassan Hassan**
+
+_Hassan Hassan is a former freelance broadcast reporter and humanitarian worker who hails from Nairobi, Kenya. He graduated with a BA in broadcast journalism from Daystar University in Kenya. Hassan worked in partnership with Facebook on a project that sought to document the social lives of urban refugees in Nairobi. He also worked with the Médecin Sans Frontièrs Nairobi Displacement Unit to pilot a project in Ethiopia on how to offer continued psychosocial care over the phone to returning migrants from Saudi Arabia._
+
+1. **What drew you to the Media Design program?**
+
+I chose the Media Design program was because the curriculum focuses largely on the intersection of media and technology as well as its implications. My personal goal is to be able to design media interventions in the future, and I feel that the Media Design program truly prepares you for that.
+
+2. **What, specifically, is your favorite part of Media Design, and why?**
+
+I really enjoy the prototyping and ideation part of the program. It provides me with the opportunity to test my ideas and see if it works for the communities I am partnering with. This is an integral step to designing interventions, and I enjoy the fact that failure is both necessary and welcomed in order to keep learning.
+
+3. **What are you hoping to get out of Media Design professionally?**
+
+I am hoping to one day become a media practitioner with design capabilities. Ideally, I’d like to go back home to Kenya and create my own startup for media literacy programs.
+
+4. **When recommending Media Design, what would you say?**
+
+Thinking about an MA? Want to do something that allows you to independently create your own projects while collaborating with a diverse group of thinkers and designers? Are you big on designing and building things? Then the Media Design program is for you!
+
+We’re hoping these two riveting testimonials were able to grab your attention and convince you to [start an application to the Media Design program](https://www.emerson.edu/admissions-aid/graduate-admission/apply-masters-programs/apply-media-design). If you’re still thinking, that’s ok, too. Feel free to reach out to our Gradute Program Director, Paul Mihailidis, at [paul_mihailidis@emerson.edu](mailto:paul_mihailidis@emerson.edu).

@@ -1,0 +1,47 @@
+---
+url: https://medium.com/civic-media-project/galas-mobilizing-and-managing-volunteer-humanitarian-efforts-online-during-euromaidan-protests-in-35c284b37e3f
+canonical_url: https://medium.com/civic-media-project/galas-mobilizing-and-managing-volunteer-humanitarian-efforts-online-during-euromaidan-protests-in-35c284b37e3f
+title: 'Galas: Mobilizing and Managing Volunteer Humanitarian Efforts Online During
+  Euromaidan Protests in…'
+subtitle: Tetyana Lokot (Merrill College of Journalism, University of Maryland)
+slug: galas-mobilizing-and-managing-volunteer-humanitarian-efforts-online-during-euromaidan-protests-in
+description: ""
+tags:
+- geolocation
+- community-organization
+- community-and-action
+author: EL_News
+username: el-news
+---
+
+# Galas: Mobilizing and Managing Volunteer Humanitarian Efforts Online During Euromaidan Protests in Ukraine
+
+### Tetyana Lokot (Merrill College of Journalism, University of Maryland)
+
+The focus of this case study is Galas (Ukrainian for “clamor” or “ruckus”), a crowdsourcing online initiative that sprang up during the Euromaidan protests in Ukraine (fall 2013–winter 2014). Founded by a group of enthusiasts seeking to help coordinate human, material and other resources for protesters’ needs, Galas grew into a major hub of the civic protest effort. The study, based on interviews with Galas activists and an analysis of the Galas website, provides a compelling case for how impromptu civic projects organized by skilled activists and augmented by digital technology can mobilize volunteers, route information and resources in a protest, and become a flexible, but lasting foundation for grassroots organizing.
+
+The Internet augments civil resistance in many ways, including changes to its mobilization mechanisms. The networked nature of social media platforms means protest movements today rely less on pre-existing organizational or membership structures, and are often able to mobilize volunteers among people with little or no connection to the cause. When the blend of politics and online culture is right, appeals for participation and engagement often go viral and extend far beyond the traditional membership reach. Chadwick (2006), discussing what he calls “the Internet differences” for social movements, underscores greater organizational flexibility, reduced collective action problems and the emergence of new, fluid types of participation which allow “groups to mobilize individuals as actors in key online information networks” (ibid., p. 143). While not always robust and long lasting, these mobilized networks serve the short-term purpose of resource accumulation and information management and can act as “first responders” when cataclysmic events occur in a protest. Castells (2013) calls such networks “instant insurgent communities,” showing how mobile and wireless communication can lead to mass engagement.
+
+Online support for protest initiatives during Euromaidan in Ukraine formed spontaneously around particular needs; and in some cases, just a few individuals were able to take projects off the ground due to the affordances of existing free, open-source platforms that enable volunteer signup, project management, and resource mobilization online. Galas was one such project: one of its founders (known as DL, in this case study) observed that while there were lots of people on social media willing to help the Euromaidan protesters in Kyiv and elsewhere, the management and distribution of resources (funds, transportation, lodging, medications) was chaotic and inefficient. DL, who works as an IT manager at a software company, discussed this with friends (developers, programmers, a designer) and wondered if the protest crowdsourcing efforts would benefit from an online coordination tool. They then recalled that a real-time alert platform had already been tested during the heavy snowfalls in Kyiv the previous winter, and asked the platform creator if they could use it as a base for the new initiative. This is how Galas found a [home](http://www.galas.org.ua/).
+
+>> Based around an Ushahidi crowdmap, Galas relied on a key group of skilled individuals for initial operations setup, website design and recruitment of unskilled volunteer administrators, who then monitored resource needs from various protest communities on social media, and managed messages submitted directly to the website or sent through email, Twitter, text, and the Galas iOS/Android apps.
+
+All verified messages were then aggregated on the crowdmap, and the needs communicated via phone or email to a list of relevant suppliers/charities, compiled by Galas.
+
+According to DL, high volunteer turnover was one of the main issues for Galas during Euromaidan protests, but the relative ease of training new volunteers helped keep the momentum going. Most new recruits found out about Galas through social media, and saw it as a low-maintenance commitment that nonetheless allowed them to join the protest effort in a meaningful way. The flexibility of the resource management and volunteer operations structure also meant that Galas, as a project, was able to adapt quickly to the changing needs of Euromaidan, going from collecting camping gear, tea, and phone chargers at the start to crowdsourcing medical equipment and bulletproof vests when the protests turned violent. Another testament to the flexibility of the format is that Galas has continued operating beyond Euromaidan, although on a smaller scale, managing resources during the conflict in Eastern Ukraine, including refugee assistance and collecting donations for the Ukrainian army and volunteer brigades.
+
+Bennett and Segerberg (2012) suggest that the use of digital networked media by activists leads to a shift from collective to connective action, and a new organizational pattern of digitally enabled action networks, where digital platforms and applications supplant established political organizations and institutions. The networked nature of these ad-hoc protest support projects can mobilize a wider range of individuals, allowing to reach even those not closely bound to the protest via ideological or community ties. However, it also means that the engagement might be less durable and the networks less stable, with a high turnover rate. There exist other movements that have faced similar issues: the Occupy movement worked with a leaderless, but place-based structure in the Occupy phase, and became more decentralized and networked to remain sustainable; the Arab Spring protest networks in Tunisia and Egypt were able to replicate the loose ties networks across national boundaries and sustain them under pressure. With only a few skilled individuals at the nucleus of the project, the use of platforms like Galas affords maximum flexibility to adjust and accommodate a fluid, diffuse user-base, as the operations management framework adapts to the changing needs of the protest movement. Understanding the nature of these grassroots projects, which, while in a state of constant flux, are able to distribute resources and deliver meaningful results, is crucial to further theorizing about the new, augmented reality of civil society and protest movements.
+
+# REFERENCES
+
+Bennett, W. Lance, and Alexandra Segerberg. 2012. “The logic of connective action: Digital media and the personalization of contentious politics.” *Information, Communication & Society* 15 (5): 739–768.
+
+Castells, Manuel. 2013. *Communication power*. Oxford University Press.
+
+Chadwick, Andrew. 2006. *Internet politics: States, citizens, and new communication technologies*. Oxford University Press.
+
+*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+
+[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
+
+

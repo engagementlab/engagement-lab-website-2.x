@@ -1,0 +1,62 @@
+---
+url: https://medium.com/civic-media-project/m%C3%ADdianinja-and-the-rise-of-citizen-journalism-in-brazil-c4d59247b317
+canonical_url: https://medium.com/civic-media-project/m%C3%ADdianinja-and-the-rise-of-citizen-journalism-in-brazil-c4d59247b317
+title: MídiaNINJA and the Rise of Citizen Journalism in Brazil
+subtitle: Stuart Davis (University of Texas-Austin)
+slug: mídianinja-and-the-rise-of-citizen-journalism-in-brazil
+description: ''
+tags:
+    - citizen-journalism
+    - social-network
+    - community-and-action
+author: EL_News
+username: el-news
+---
+
+# MídiaNINJA and the Rise of Citizen Journalism in Brazil
+
+### Stuart Davis (University of Texas-Austin)
+
+Beginning in June 2013, Brazil was struck by a series of explosive, chaotic, and oft-violent protests. Rallying around the slogan “A Gigante Accordou” [“The Giant Has Awakened”], these protests were the largest displays of citizens taking the street since the end of the military dictatorship in the 1980s (Venicio 2013, 65–69). Though the demonstrators raised multiple grievances including reckless public spending on mega-events like the Olympics and the World Cup, entrenched governmental corruption, and the arbitrary raising of public transportation fares, one of the most common claims was an intense dissatisfaction with the way the nation’s news media were failing to represent the views of the Brazilian citizenry. When observing this situation, international commentators from media outlets from The Wall Street Journal to The Guardian observed that the protests were throwing into clear relief a dissatisfaction over oligopoly control of mainstream media and its impact on information access and news production. In turn, the protests offered what many international journalists called the “beginning of an alternative media sphere in Brazil”(Loretta 2013).
+
+> > At the center of the shifting media landscape was a social-media based citizen journalism project calling itself “MídiaNINJA.”
+
+Launched in late 2012, NINJA (a Portuguese acronym for “Independent Narratives, Journalism, and Action) has received copious attention for using footage recorded on mobile phones and aired via social media to record police violence and unsanctioned arrests during the 2013 protests. Publicly besmirching mainstream news conglomerates like the Globo Network, NINJA claims that it is opening up a new space for Brazilian citizens to make media. (Bainbridge 2014)
+
+While it officially “launched” in 2012, NINJA grew directly out of and was incubated by Fora do Eixo (FDE), a much larger arts and culture organization. While FDE initially focused more on organizing music festivals and public art installations than promoting citizen journalism, its explicit focus on opening chapters and sponsoring events outside of preexisting cultural hubs like Rio, São Paulo, and Recife laid a foundation that NINJA would use to establish many of its regional centers. On the technological level, NINJA draws heavily on both the recording functions of smart phones and the distributional capabilities of social networking sites including TwitCasting, Twitter, Facebook, and Instagram. The process begins when the group’s reporters (or “NINJAs” as they call them) record street-level footage of demonstrations or public events. This material is then uploaded directly onto the group’s TwitCasting site. (The TwitCasting service was developed by the Japanese Moi Corporation in early 2013 as a way for using Twitter feeds to stream content from smart phones directly onto a “channel” developed and maintained by individual users). From here it is re-screened in chunks on the group’s websites, called “Pos-TV” (or “Post-TV”). Videos from the group’s sites are then re-posted on NINJA’s Facebook page and Twitter account. By developing a multi-faceted approach to distribution it is able to capitalize on the unique capabilities of a variety of social networking sites.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2v4Z22RXqlSTJz1rPx7USg.jpeg)
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_XL7oYlCdQdwHe88rg66KGg.png)
+
+# Potential Innovations and Limitations of MídiaNINJA
+
+Though it launched less than two years ago, NINJA has caused major ripples both within the field of independent media production and in public security. Building off of Fora do Eixo’s attempt to support cultural production nationwide, NINJA is consistently trying to find new locations to start chapters. Since the protests began in June 2013, the group has established projects in cities including Boa Vista, Cuiaba, Fortaleza, João Pessoa, Londrina, Manaus, and Uberlândia. While some of these cities have vibrant histories of alternative and community-based journalism, many of them have been historically serviced primarily by mainstream newspapers and television networks.
+
+Beyond its attempt to popularize citizen journalism, NINJA has also played an enormous role in the protection of civil rights during mobilizations. Starting with the first events of the Brazilian Spring, NINJA reporters were on the front lines of every major protest from the June 17, 2013 gathering in Rio to 2014 World Cup protests going on. By recording simultaneously with the protests and quickly disseminating footage through social media, NINJA has been able to spread material that has bolstered accusations of police violence and exonerated protestors unduly arrested or detained.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mApz3ere5hcyzwCzZxiYFA.png)
+
+Though NINJA offers novel tactics, it also raises questions about how loosely networked and geographically dispersed citizen journalism groups maintain both the financial and human resources needed to survive. More specifically, NINJA has faced problems related to fundraising and to its ability to maintain a nationwide network while competing with other twit-casting news sites developed for specific regions or political factions. From a financial perspective, NINJA faces a difficult and potentially paradoxical situation. While the group largely consists of unpaid volunteers, NINJA does have a board of directors consisting exclusively of FDE members. This board is responsible for maintaining equipment, covering traveling costs for trainings, paying for data storage, and providing legal fees accrued by arrested NINJAs. Though critics don’t dispute the idea that a project like NINJA with expansive aspirations needs a sizable operational budget, they have expressed concern about both the source of the group’s financial resources and how finances are distributed (Yúdice 2012). In 2012 FDE founder Pablo Capilé faced a wave of public scrutiny when it became public that the group had received a substantial amount of money from Coca Cola to sponsor its annual “Marcha da Liberdade”(“Liberty March”) (Forresteri 2013). FDE’s fundraising strategies became subject to even more intense scrutiny when numerous rumors began to circulate claiming that the group received large financial contributions from political parties on the right and left. NINJA’s financial situation became even more contested when opponents started to accuse group leadership of being highly secretive about NINJA’s budget. Along with these financial considerations, NINJA’s commitment to non-partisan, nationwide coverage has in some cases led to a drop in membership as collaborators have stopped contributing in order to start their own TwitCasting channels including MídiaCAPOEIRA in Salvador, MídiaGEISHA in São Paulo, and Colletivo Carranca in Rio. Former collaborators have also left to work with groups that are more directly aligned with political or social movements such as the increasingly popular Black Bloc anarchist movement. According to NINJA co-coordinator Felipe Altenfelder, the rise of these new groups has pushed NINJA to a point where it has to re-consider it’s role as an autonomous media producer (Belém 2014).
+
+As a case, NINJA offers novel strategies for encouraging participation in media production and using citizen journalism to protect the right to openly gather and protest in public spaces. However, it also highlights fundamental obstacles citizen journalism projects face related to fundraising and preserving volunteer interest. These pitfalls, as community media theorist Clemencia Rodriguez and co-authors have recently argued, are two of the major problems that can damage and ultimately destroy citizen journalism initiatives (Rodriguez 2014).
+
+# References
+
+Bainbridge, Luke. 2014. “How social media gives new voice to Brazil’s protests.” _The Guardian,_ April 27. Accessed May 01, 2014. [http://www.theguardian.com/world/2014/apr/27/social-media-gives-new-voice-to-brazil-protests.](http://www.theguardian.com/world/2014/apr/27/social-media-gives-new-voice-to-brazil-protests.)
+
+Belém, Euler de França. 2014. “NINJA lança portal interativo pra competir com mídia dominante.” _Jornal Opção,_ June 20. Accessed June 26, 2014. [http://www.jornalopcao.com.br/colunas-e-blogs/imprensa/midia-ninja-lanca-portal-interativo-pra-competir-com-midia-dominante-7648.](http://www.jornalopcao.com.br/colunas-e-blogs/imprensa/midia-ninja-lanca-portal-interativo-pra-competir-com-midia-dominante-7648.)
+
+Chao, Loretta. 2013. “Brazil protests prompts shift in media landscape.” _The Wall Street Journal_, June, 29, 2013. Accessed May 01, 2014. [http://online.wsj.com/news/articles/SB10001424127887323873904578570244226440374.](http://online.wsj.com/news/articles/SB10001424127887323873904578570244226440374.)
+
+Forresteri, Andrea. 2013. “Uma entrevista com Pablo Capilé de Fora do Eixo.” _Noticias R7,_ August 16. Accessed June 26, 2014. [http://noticias.r7.com/blogs/andre-forastieri/2013/08/16/uma-entrevista-com-pablo-capile-do-fora-do-eixo-parte-3/](http://noticias.r7.com/blogs/andre-forastieri/2013/08/16/uma-entrevista-com-pablo-capile-do-fora-do-eixo-parte-3/)
+
+Lima, Venicio A. 2013. “Mídia, rebeldia urbana, e crise de representação”. In _Cidades Rebeldes: Passe livre e as manifestações que tomaram as ruas do Brasil_, edited by Racquel Rolnik, 65–72. São Paulo: Editora Buotempo.
+
+Rodriguez, Clemencia, Benjamin Ferron, and Kristin Shamas. 2014. “Four challenges in the field of alternative, radical, and citizen’s media research.” _Media, Culture, & Society_ 36 (2): 150–166.
+
+Yúdice, George. 2012. “New social and business models in Latin American musics.” In _Consumer Culture in Latin America_, edited by John Sinclair and Ana Cristiana Pereira, 17–41. New York: Palgrave and MacMillan.
+
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
+
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

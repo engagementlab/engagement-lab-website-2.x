@@ -1,0 +1,100 @@
+---
+url: https://medium.com/civic-media-project/terra-incognita-serendipity-and-discovery-in-the-age-of-personalization-b37fefd1c199
+canonical_url: https://medium.com/civic-media-project/terra-incognita-serendipity-and-discovery-in-the-age-of-personalization-b37fefd1c199
+title: 'Terra Incognita: Serendipity and Discovery in the Age of Personalization'
+subtitle: Catherine D’Ignazio (Emerson College)
+slug: terra-incognita-serendipity-and-discovery-in-the-age-of-personalization
+description: ''
+tags:
+    - multilingualism
+    - education-technology
+    - play-and-creativity
+author: EL_News
+username: el-news
+---
+
+# Terra Incognita: Serendipity and Discovery in the Age of Personalization
+
+### *Catherine D’Ignazio (*Emerson College)
+
+![This case study describes “Terra Incognita: 1000 Cities of the World”, a serendipitous global news recommendation system designed to help people out of their personalized media filter bubbles.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_lqYmaslkadMuoAze.jpg)
+
+As Herbert Simon argued in his prescient 1966 essay, “A wealth of information creates a scarcity of attention” (Simon, 1996). In a world of hundreds of cable channels, free news dailies, personalized websites, algorithmically-curated feeds and interactive apps, how do people — with limited attention — fulfill their information needs? And what are the public repercussions for personal media decisions, particularly in relationship to our notions of “the informed citizen” in a representative democracy?
+
+Numerous critics have articulated concerns about the shifting media landscape and its potential impact on informed decision-making. Algorithms may suppress content that corporations have decided an individual will not like (Pariser, 2012). Individuals may self-select only information that is agreeable to them and end up in informational gated communities, (Sunstein, 2002) a phenomenon known as “selective exposure”. Our tendency towards homophily- seeking out people like us- is as true in cyberspace as it is in face-to-face interactions (Zuckerman, 2013). The scholarship investigating these concerns is not conclusive. While there is some support for the idea that we tweet and blog in echo chambers, (Schkade, 2007) (Noveck, 2000) (Galston, 2003) particularly in relationship to partisan politics, (Adamic, 2004) (Bimber, 2003) other studies show that our online interactions are actually more diverse than our offline interactions (Gentzkow, 2010) (Hamton, 2009). What is true is that the work of gate-keeping and agenda-setting in a “high-choice” media environment increasingly rests on the individual and her social networks (Prior, 2007). While we may imagine ourselves to be cosmopolitan, our news increasingly comes from what we directly seek through search, curate through feeds and find through friends (The Pew Center, 2014).
+
+# Isn’t there an app for that?
+
+At the end of his book _Rewire_, Ethan Zuckerman introduces the provocative idea of _engineering serendipity_ as a possible way to encounter information that we otherwise wouldn’t. Unintended information encountering happens regularly in online environments (Erdelez, 2004). But can we intentionally design information systems to introduce us to new information outside what we know we want or what our social networks offer up?
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Jsz0lIl7looAzy4w.jpg)
+
+_Terra Incognita: 1000 Cities of the World_ is a speculative design intervention that took up this challenge in relation to the geographic diversity of information an individual reads. The central conceit is the term “Terra Incognita” which was used on maps in the Age of Discovery to denote unexplored territories. It’s a perspectival term. Because, of course, there were people like the Tupinambá actually living in those seemingly unexplored lands on Martin Waldseemüller’s map (above). The places the Tupinambá knew intimately — where they fished or hunted or celebrated or slept — were not _Terra Incognita_ to them. But to the Europeans embarking on their voyages each new cove or settlement was a curve or mark to be made on a map, a way of demarcating the limits of their people’s understanding. And, in a way, the main goal of *Terra Incognita: 1000 Cities of the World*is the same: to introduce the user to the vastness of the world that is unknown to them through making news recommendations about the top one thousand most populous global cities.
+
+The main user experience of Terra Incognita is an intervention into your Internet browsing experience. Technically, it is an extension for the Chrome browser which you can download from the Chrome Web Store.
+
+Once installed, Terra Incognita becomes the default screen for every new browser window you open. Each time you open a new Tab, Terra Incognita shows you a city that you have not yet read about and gives you options for reading about it. Chelyabinsk (Russia), Hiroshima (Japan), Belo Horizonte (Brazil) and Abidjan (Ivory Coast) are a few of the places where you might end up.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_KOZnh9gjbMQAdVcf.jpg)
+
+You can click to read a news recommendation or take your chances with the big red button which will take you to a news story drawn by chance. In the interface you can also see which of the 1000 cities you have read about and navigate to other cities through the bar on the bottom. There are some lightweight social features, including a call-out for which user in the system has read the most about that city and a count for how many cities the user has read about.
+
+Terra Incognita presents news recommendations for each city from a variety of sources, including stories other users in the system have read, stories trending online for that place, stories specifically retrieved from the Global Voices community, stories we crowdsourced through an open call, and stories sourced from Instapaper1 saves. Even with these multiple sources of recommendations there were many blank spots in the recommendation system that we had to address. For example, China accounts for about 20% or 200 cities in Terra Incognita, but there was very little information in English about many medium-sized Chinese cities available through our recommendation channels. In this case, we worked with Chunhua Zhang, a media scholar from China, to manually compile a list of English-language news sources by city.
+
+# Findings
+
+From May 2014 to July 2014 we ran a user study with 170 users that examined their global news browsing patterns prior to using Terra Incognita and after using Terra Incognita. We surveyed users about their transnational ties and attitudes towards global news, collected both qualitative and quantitative data and found some interesting results:
+
+> > While Terra Incognita did not shift the aggregate diversity of users’ reading it was a positive micro-learning and reflection experience for the majority of users.
+
+Though the app may not have shifted user behavior in aggregate, the vast majority of users (87.5%) say that they learned about a new place from Terra Incognita. Most users clicked at least 5 recommendations and 43% shared a recommendation that they found through Terra Incognita. Most of them (63%) think that Terra Incognita prompted them to reflect on the geography of their news reading. It broadened users’ horizons, piqued their curiosity and helped some feel “more connected” to unknown places. “It was a constant reminder that there’s a larger world than my screen.” (User 3)
+
+**Users with more transnational ties read more diverse geographic information.** We surveyed users with the Transnationality Index developed by Mau, Mewes and Zimmerman which assesses people’s transnational social ties and personal experiences and found that for every 10% increase in an individual’s score on the index, the user showed a 2% increase in geographic diversity of reading (Mau, 2008). This is a finding that confirms an intuitive assumption (people with global experiences will read globally). This could be leveraged in future designs that combine online and offline transnational encounters as we discuss below.
+
+# Conclusion
+
+We offer several takeaways extrapolated from these findings that may inform the design of information diversity technologies. While the user study was originally conceived to examine behavior shift in reading patterns, Terra Incognita did not magically shift all users into reading more about Chelyabinsk, Hiroshima, Belo Horizonte and Abidjan. Moreover, it was unrealistic to have behavior change expectations for such a modest insertion into users’ daily information routine. What it did do is provide small, repeated opportunities for people to engage with unknown places. For many users, the value of the experience was in enlarging their sense of what they don’t know. “I found myself wondering about parts of the world (China!!) that I don’t usually think of in much depth” (User 47).
+
+So rather than starting with narrow, quantitatively-based metrics for success, it may be useful to see encounters with the unknown as a process that stretches from awareness to curiosity to engagement to aggregate behavior shift. Design goals and metrics may be devised for one or more of these stages and scaled appropriately to the scale of the intervention. In the case of Terra Incognita, by design a small and easily ignorable disruption, the tool was most effective at raising awareness of unknown places and at piquing the curiosity of users. There is more work to be done to explore exactly how best to achieve design goals at each of these stages and when is the opportune moment for introducing new information. Here we may look to the fields of Persuasive Technology and Public Relations for deep and possibly creepy sources of insight into media messages, technology and human behavior.
+
+Additionally, we see design implications for the finding that correlates an individual’s transnationality index with more diverse reading habits. This finding supports the common sense idea that people who have traveled abroad, lived abroad and/or have friends and family in far-flung locations read about more places. Given that an individual’s life experience and the spatial configuration of their loved ones matters so much to the geography of the media they consume (accounting for 16% of the variation in the geographic diversity of their reading), it seems wise to consider how to architect offline encounters as well as informational experiences. Face-to-face social encounters with geographic difference need not entail traveling to a foreign country. For example, [Conflict Kitchen](http://conflictkitchen.org/) invites hungry people in Pittsburgh, PA, to eat takeout food from places the US is in conflict with. Food wrappers are printed with first-person stories and interviews. WATCH CDC, a community development corporation in my hometown of Waltham, MA, hosts an annual event called “[The Immigrant Experience](http://watchcdc.org/images/pdfs/breaking_barrier_flyer.pdf)” that introduces the local community to new members through storytelling and potluck dinner. Combining information delivery with face-to-face social encounters that produce reasons to care and be curious about the world seems like a particularly fruitful next avenue of inquiry.
+
+# Try it out
+
+Download [Terra Incognita: 1000 Cities of the World](https://chrome.google.com/webstore/detail/terra-incognita-1000-citi/hpiijgedgifmfegahhaaoamckbliijih?hl=en) from the Chrome Web Store. Currently only available for the Chrome browser. Terra Incognita was designed and implemented by Catherine D’Ignazio with contributions from Ethan Zuckerman and Matt Stempeck.
+
+# References
+
+Lada A. Adamic and Natalie Glance, “The Political Blogosphere and the 2004 U.S. Election: Divided They Blog,” in Proceedings of the 3rd International Workshop on Link Discovery, LinkKDD ’05 (New York, NY, USA: ACM, 2005), 36–43, doi:10.1145/1134271.1134277.
+
+Bruce Allen Bimber and Richard Davis, Campaigning Online: The Internet in US Elections (Oxford University Press, 2003).
+
+Sanda Erdelez, “Investigation of Information Encountering in the Controlled Research Environment,” Information Processing & Management 40, no. 6 (November 2004): 1013–25, doi:10.1016/j.ipm.2004.02.002.
+
+William A Galston, “If Political Fragmentation Is the Problem, Is the Internet the Solution,” The Civic Web: Online Politics and Democratic Values, 2003, 35–44.
+
+Gentzkow, M., & Shapiro, J. M. (2010). Ideological Segregation Online and Offline (Working Paper No. 15916). National Bureau of Economic Research. Retrieved from [http://www.nber.org/papers/w15916](http://www.nber.org/papers/w15916)
+
+Hampton, K. (2009, November 4). Social Isolation and New Technology. Retrieved from[http://www.pewinternet.org/2009/11/04/social-isolation-and-new-technology/](http://www.pewinternet.org/2009/11/04/social-isolation-and-new-technology/)
+
+Steffen Mau, Jan Mewes, and Ann Zimmermann, “Cosmopolitan Attitudes through Transnational Social Practices?,” Global Networks 8, no. 1 (January 1, 2008): 1–24, doi:10.1111/j.1471–0374.2008.00183.x.
+
+Herbert A. Simon, “Designing Organizations for an Information-Rich World,” in _The Economics of Communication and Information_, ed. Donald M. Lamberton (Elgar Reference Collection. International Library of Critical Writings in Economics, vol. 70., 1996), 187–202.
+
+Beth Simone Noveck, “Paradoxical Partners: Electronic Communication and Electronic Democracy,” Democratization 7, no. 1 (2000): 18–35, doi:10.1080/13510340008403643.
+
+Pariser, E. (2012). The Filter Bubble: How the New Personalized Web Is Changing What We Read and How We Think (Reprint edition.). New York, N.Y.: Penguin Books.
+
+Understanding the Participatory News Consumer | Pew Research Center’s Internet & American Life Project. (n.d.). Retrieved July 15, 2014, from
+
+Prior, M. (2007). Post-broadcast democracy : how media choice increases inequality in political involvement and polarizes elections / Markus Prior. New York : Cambridge University Press, 2007.
+
+Schkade, D., Sunstein, C. R., & Hastie, R. (2007). What Happened on Deliberation Day? California Law Review, 95(3), pp. 915–940.
+
+Sunstein, C. R. (2002). Republic.com. Princeton, N.J.: Princeton University Press.
+
+Zuckerman, E. (2013). Rewire: Digital Cosmopolitans in the Age of Connection (1 edition.). New York: W.W. Norton & Company.
+
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
+
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

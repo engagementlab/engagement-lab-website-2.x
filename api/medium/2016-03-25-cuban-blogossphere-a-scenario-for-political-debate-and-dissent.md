@@ -1,0 +1,60 @@
+---
+url: https://medium.com/civic-media-project/cuban-blogossphere-a-scenario-for-political-debate-and-dissent-8543ab10f6a4
+canonical_url: https://medium.com/civic-media-project/cuban-blogossphere-a-scenario-for-political-debate-and-dissent-8543ab10f6a4
+title: 'Cuban Blogossphere: A Scenario for Political Debate and Dissent'
+subtitle: Lazaro Bacallao-Pino (ICEI-University of Chile)
+slug: cuban-blogossphere-a-scenario-for-political-debate-and-dissent
+description: ''
+tags:
+    - storytelling
+    - cuba
+    - systems-and-design
+author: EL_News
+username: el-news
+---
+
+# Cuban Blogossphere: A Scenario for Political Debate and Dissent
+
+### *Lazaro Bacallao-Pino (*ICEI-University of Chile)
+
+Cuba has one of the lowest Internet access rates in the Western Hemisphere. Despite this, the number of blogs on and from Cuba have raised over the past years. On November, 2007 there were 156 blogs on Cuba; six years later, this reached the number of 1239 blogs. Blogs are considered an effective way for political participation that has altered political communication (Woodly 2014). In a context where all the media are state-owned, this role has some particularities: blogs could open a significant opportunity for citizens to have a space of expression, qualified as “[doors open to controversy and debate](http://quovadiscuba.wordpress.com/),” by an official Cuban journalist and blogger.
+
+There are three trends in the Cuban blogosphere:
+
+1. blogs openly opposing the political regime
+
+2. blogs that criticize the system, but from a position of commitment with socialism
+
+3. blogs that defend the regime openly and uncritically
+
+GeneraciónY (GenerationY) — launched by Yoani Sánchez in 2007 — is the most widely know example of the first trend. Translated into more than seventeen languages, it has about 14 million monthly visitors (all languages) and each post usually receives hundreds of comments. Committed with helping “to build a plural, inclusive Cuba,” she declares she created the blog as “a medium that would allow me to tell all those stories that I saw every day and answer the questions that arose when looking at my reality.” Since the blog has been blocked from Cuba, she has had to practice a “blind blogging,” with no access to feedback from readers. She emailed her texts to friends abroad to post it for her, creating an offline network of people who guarantee its continuity. From May, 2014, Generación Y has become part of a major project: 14ymedio.com (English: 14andahalf), an independent digital newspaper, described as the “development of a personal adventure that has become a collective project.”
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_gPon-H-fpLXHdjGf.jpg)
+
+La Polémica Digital (The Digital Controversy) — launched in 2008 by Elaine Díaz, a Cuban journalist, as a “space to discuss on Cuba” — is an example of the second above-mentioned trend. Each entry in the blog has a number of comments ranging from ten to 50, and there are more than 900 persons who like it in Facebook. Topics on the blog range from issues on digital journalism to criticisms on aspects and situations of everyday life in Cuba (corruption, censorship in the press). Due to her commitment to the systems, she acknowledges that there are taboo subjects, like education or health care, and even confesses her fear of posting something that could be misunderstood and then be punished. The blog has certain “rules of the game”: five points about the assumptions on which comments will be removed, for achieving a “peaceful coexistence” among readers. After a year online, comments began to be moderated, arguing the blog was not a chat or discussion forum.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bsQqzTb9XvnQLuev.jpg)
+
+Meanwhile, El Blog de Yohandry (Yohandry’s Blog) shows the third trend. Created in 2008 too, its author was a frequent participant in Generación Y by commenting on it but, arguing that he had been blocked, he created his own blog. Firstly, the blogger — who remains incognito — created a blog hosted by _El País_ and open to comments but, after some time, he denounced his blog had been blocked and then moved towards Wordpress. Currently, the blog has its own domain and comments are controlled, since the blogger decided not to give space to “subversive messages.”However, the number of comments has decreased to the point that most posts have no comments. One of its main topic has been the “denouncement” of Yoani Sánchez and there is even a section dedicated to her.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_RbYZRMvMhM2fLP8O.jpg)
+
+This diversity shows the political divide in the Cuban blogosphere, even in the blogger’s communities, divided into Bloggers Cuba (community of revolutionary bloggers) and Cuban Voices (community of dissident bloggers).
+
+> > There is a deep polarization among Cuban bloggers, following the three trends identified and its corresponding inflexible political views, mainly in first and third cases.
+
+This mediates the conditions of possibility for the Cuban blogosphere to become a space for a dialogue between dissents and, consequently, a scenario of collective political participation. However, its importance is generally acknowledged, and even a U.S. diplomatic attended a pro-governmental bloggers’ meeting in Havana.
+
+The scenario is complex. On the one hand, the Union of Journalists of Cuba, the official professional organization, encourages its members to create blogs, even providing them a specific platform. Within and outside it, Cuban journalists create blogs, many of them as an explicitly declared space for debate, beyond mainstream media where they work. On the other hand, individuals opposed to the regime also create blogs for debate, even reaching to become independent media. This summarizes the complexity of the blogosphere’s appropriation by Cubans for sociopolitical participation.
+
+In general, there is a limited impact of blogging in state-owned Cuba’s media system. Official media websites only include links to blogs from their own journalists, and references to other blogs are limited to news on meetings held by communities of revolutionary bloggers, or prizes awarded to blogs on specific issues, such as sexuality education. Although some bloggers have considered that, in some cases, the presence of some issues on Cuban blogs have forced media system to include it on their agendas, one almost can not find explicit examples of news in official media quoting as source a blogger or a post on Cuban blogosphere. This divide among media system and an alternative blogosphere, blocks the emergence of an enriched and open public sphere as a result of the impact of blogging in providing a debate/dissent scenario for sociopolitical participation.
+
+# References
+
+Woodly, Deva. 2008. “New competencies in democratic communication? Blogs, Agenda Setting and Political Participation.” _Public Choice_ 1(2): 109–123, accessed June 14, 2014, doi: 10.1007/s11127–007–9204–7.
+
+Mayra García, Quo vadis Cuba, [http://quovadiscuba.wordpress.com/.](http://quovadiscuba.wordpress.com/.)
+
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
+
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

@@ -1,0 +1,34 @@
+---
+url: https://medium.com/engagement-lab-emerson-college/fall-2021-school-of-arts-assembly-46ca743cf931
+canonical_url: https://medium.com/engagement-lab-emerson-college/fall-2021-school-of-arts-assembly-46ca743cf931
+title: School of Arts Fall 2021 Assembly
+subtitle: This year, Emerson College’s School of the Arts Fall Assembly featured the
+  work we’ve been doing with our faculty partners to change the…
+slug: fall-2021-school-of-arts-assembly
+description: ""
+tags:
+- codesign
+- partnered-studios
+- participatory-design
+- participatory-democracy
+author: EL_News
+username: el-news
+---
+
+# School of Arts Fall 2021 Assembly
+
+This year, Emerson College’s School of the Arts Fall Assembly featured the work we’ve been doing with our faculty partners to change the way we think about higher education. [Thomas Vogel](https://www.emerson.edu/faculty-staff-directory/thomas-vogel), [Rashin Fahandej](http://www.rashinfahandej.com/about), and [Ioana Jucan](https://ioanajucan.com/) all shared their experiences teaching the Fall 2021 Partnered Studios courses, modeling how university education can align student learning objectives with community needs to bring institutions of higher learning into better conversation and allyship with their neighbors.
+
+This year, we are very excited to introduce a three-year initiative that will guide the Spring 2022 Partnered Studios and beyond, Transforming Narratives Of Gun Violence. In partnership with the [Louis D. Brown Peace Institute](https://www.ldbpeaceinstitute.org/) and Mass General Hospital, new partnered studios will have the opportunity to work with Boston communities to address the problem of gun violence from multiple perspectives.
+
+Professor Vogel’s course “To Be Heard” MK371 and VM 331 partnered with [Be Heard World](http://beheard.world/) to help identify unmet needs and opportunities as well as an analysis of Be Heard World’s portfolio. The result of this co-design process was an arts advocacy workshop that students designed in collaboration with Be Heard World. The three-hour workshop on race and injustice is built around Be Heard World’s film [6 Feet Apart](http://beheard.world/event/lenox-street-and-together-6-feet-apart/) and includes a lesson plan, facilitator guide, community action, and other tools for affecting community change. Students also developed a marketing campaign to promote the workshop and identify potential audiences. To Be Heard is an extremely interdisciplinary course drawing in students from publishing, production, marketing, and performance backgrounds to get real-life collaborative experiences that benefit the greater Boston community.
+
+Professor Fahandej has been teaching “Beyond Mass Incarceration: Collaborative XR Documentary Production” (VM 331, JR 330, IN 374) for three semesters and will be teaching a fourth semester in Spring 2022. In partnership with formerly incarcerated fathers now on probation and Nurturing Fathers Program under the US Federal Probations Office, students in this course learn how to use virtual and augmented reality tools and the process of co-design to produce media [telling the fathers’ stories](https://www.youtube.com/watch?v=Tsx80sohybE), and that of the wider system of mass incarceration and systemic violence. This course too is interdisciplinary, drawing on diverse student skill sets to learn and produce work that directly affects real change. The final 360 showcase, a culmination of last semester’s work, included in the presentation’s audience two federal judges and people working in and affected by many levels of the carceral system, from Boston to Washington DC.
+
+Professor Jucan’s “Live Art and Digital Cultures” course (IN 374 and BC 320) partnered with CultureHub, the Marlboro Institute, and the Liberal Arts and Interdisciplinary Studies Business of Creative Enterprises. This cross-disciplinary, international studio engaged students in ways of communicating across language and culture. Students collaborated with Culture Hub on “[Local Reports](https://www.culturehub.org/re-fest-2021-events/local-report-2021),” a media-making and literacy initiative to empower and connect communities across the world.
+
+Keep an eye out for this semester’s Partnered Studios and the new [Codesign Institute](https://codesign.elab.emerson.edu/), a two-week Summer and Winter course in co-design meant to better prepare students for collaborative community projects.
+
+To view the School of Arts Fall 2021 Assembly in its entirety, click [here](https://drive.google.com/file/d/1pXFpx0RRrYtHV7SAosv9lGfLiHhLPQto/view?usp=sharing).
+
+

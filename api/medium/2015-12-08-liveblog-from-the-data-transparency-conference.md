@@ -1,0 +1,105 @@
+---
+url: https://medium.com/engagement-lab-emerson-college/liveblog-from-the-data-transparency-conference-3254e920d9ba
+canonical_url: https://medium.com/engagement-lab-emerson-college/liveblog-from-the-data-transparency-conference-3254e920d9ba
+title: Liveblog from the Data Transparency Conference
+subtitle: By Catherine D’Ignazio
+slug: liveblog-from-the-data-transparency-conference
+description: ''
+tags:
+    - advertising
+    - ad-blocking
+author: EL_News
+username: el-news
+---
+
+# Liveblog from the Data Transparency Conference
+
+### By Catherine D’Ignazio
+
+11/17/2015
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_MPpjhqkNf7zbAet4.jpg)
+
+This is a liveblog from the [Data Transparency Lab](http://dtlconferences.org/) conference at the [MIT Media Lab](http://media.mit.edu/) which is about transparency in user data collected from networked digital devices such as computers, mobile phones and other networked objects. Things that are needed for making a difference in user data online. Jose Luis Agundez (AT&T), the moderator, introduces the panel by saying that we need to connect research, policy, end users and data more clearly. We have an opportunity to shed light on the status of tools and data. He notes that we need a reality check. We can choose to not care and we can also choose to take specific steps in the right direction in terms of privacy of user data. What is the force of the users and the people? What is the potential way forward? He notes that transparency of government data is different from transparency of personal data and we should not conflate the two. This session is focused on data transparency in relation to personal, user data.
+
+**Scott Meyer (CEO, Ghostery)**
+
+He polls the audience to see how many work in marketing & advertising. About 3 people. He says this is a problem in terms of having this conversation. Shows a terrifying graphic of the marketing tech landscape. Marketing technology is creating a cluttered and expensive collection of point solutions. It’s growing tremendously. It presents new problems. Ghostery is neutral — provide tools to have better digital experience. All the marketing tech makes the digital experience slow and sucky for end users.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_U6YC7Ncv0kuI0NqY.jpg)
+
+Just in the past 6 months and given the growth of mobile — consumers are now mad because they have a slow web experience. It’s draining their batteries and their data plans. He has been in the marketing tech space for a long time. Why is this so complex? Emotion is greater than “Ration” (huh?) This applies to consumers and businesses. The NYTimes calculated how much of the cost comes from the ads on mobile websites.
+
+The industry knows this is a problem. Ghostery provides better transparency so businesses and users can make better decisions. You can install on your browser for free. Ghostery is a business and they make money by consumers opting into anonymous data — retail, banks, travel, etc. The company that owns the webpage doesn’t understand the tracking ecosystem either. How do you make money? You appeal to marketers’ greed and fear. The problems right now in this landscape are performance, governance , security and privacy. Customers leave because of all of these reasons right now.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_D66T4-3RyYKYt0Jt.jpg)
+
+Shows example of Crate & Barrel. There are at least 50 third parties collecting data on their homepage. It’s messy and complicated. Crate and Barrel probably doesn’t know who they are. But it can start working against them, slowing the site down, and compromising user privacy. Ghostery tries to work with regulators to provide better privacy tools. He shows an example of their work with Reuters.
+
+Mobile — you can install their app called [AdChoices](http://www.youradchoices.com/). They have mapped companies at the device level and you can choose to have them not track you. Apps will increasingly allow you to opt out of certain companies’ tracking both at app and device-level. He says this will happen soon at the network level as well.
+
+**Alessandro de Zanche (Head of Audience and Advertising Systems, News UK)**
+
+His company’s main publications are The Times, The Sunday Times & the Sun. Today he is speaking as himself. He is here because he believes in transparency and privacy. Digital Advertising industry has a huge lack of credibility and trust. They have a problem with Ad Fraud (robots clicking things) and Ad Blocking (apps that block them). He calls this a User-Media Owner crisis. Now the advertiser is also intervening in this relationship. At some point Ad Tech has been growing and has somehow broken this relationship, necessitating the user of ad blockers.
+
+The perceived benefits of ad block are better user experience, faster page loading, improved privacy. How do you fix this? We need to re-establish the dialogue with the user. His paper is behind a paywall. The users believe in quality content and that’s why they visit the paper’s site. 12 years ago they were talking about best practices like having sound off by default and other conveniences for user. They have forgotten all of this. He says advertising needs to also rediscover their creativity. They have moved their energy from creativity in communicating with the user and towards quantifying. They also need to improve media owners’ knowledge of this landscape. A huge problem with the growth of ad tech is that so many companies have sprung up. They come to us and promise to increase revenue by just placing their tags on your web pages. The knowledge of the publisher is not keeping up to speed with the industry and they are adding a lot of “rubbish” to their pages. Web without advertising would be a subscription based web. We need to work to improve knowledge in the industry to create user-centric solutions but also remember that ads are what allow for content to be “free”.
+
+**Mat Travizano (GranData)**
+
+Company specializes in social analytics and social good.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_t3kzaI632ol8Wzz4.jpg)
+
+His company does cross-industry data monetization. What they do is take data from one industry and giving value to another industry. Social good is a powerful trojan horse to push companies to share data and to engage with end users to make them aware of how valuable their data and to loop them into the solution. They integrate data from, say telco and banks and social media in order to provide value to their customers.
+
+They say they have privacy by design. Their data is anonymized. They comply with all local regulations. They are doing a lot of things for social good within their for profit company but aspire to do more. How should they do this? Open source their tool? How to best leverage their technology for social good such as Bill & Melinda Gates? Or for research studies?
+
+**Paolo Ciuccarelli (Density Design y Politecnico de Milano)**
+
+Works on behalf of the end user and tries to understand the user experience.
+
+Paolo is a designer. He founded a research lab to make data more useful and accessible. Design is a human-centric discipline. So this means that the user’s experience should be at the center of our thinking. My thinking about awareness is that it’s both understanding AND empathy, not just rational knowledge. He calls this _empathy through usability_.
+
+He shows the tool RAW, a web-based tool for creating customized charts from spreadsheets with D3 at the base. People loved it immediately not just because of what it does but because of how it does what it does. It won a FastCompany award for Data Visualization in 2015. FloodWatch is another tool with this approach.
+
+![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LG-iQ6Oo4KJun3b_.jpg)
+
+What if we transform relationship with data into a game? In-person game about personal data that his studio designed. He also shows a design-approach to using metaphors to explain web trackers (above image). They also try to make personal data more public. They scraped car sharing data and then used aesthetics to convey the data.
+
+There is a dark side we have to fight with these experiences. This is the image of privacy and anonymity. They explored the visual representation of anonymity and created an image and a project called Blackphone. Are there ways using design to nudge people with pleasurable and joyful things related to privacy and anonymity rather than scaring them and pissing them off?
+
+**Jer Thorp (Office For Creative Research)**
+
+Data artist and activist
+
+One of their central questions is “what is the human experience of data?”. He uses the metaphor of air travel. You are touched inappropriately, you give up some control. You are part of a system that is extremely complex. At any given time there are more than 1 million people in the air. Shows “People in the Air” visualization. How can we make it easier for people to live within these data systems?
+
+They built a visualization called Behind the Banner about mobile data visualization. He teaches at ITP. One of his students, Julia Irwin, came up with idea of reverse engineering people’s profiles from reading only their web ads. He loved this idea and collected his online ads for a month and then paid mechanical turk workers to write profiles. Everyone thought John lived alone, was in his thirties and single, and spent all his time playing video games.
+
+He shows their tool [floodwatch](https://floodwatch.o-c-r.org/). The idea here is about producing collective action. There are two problems with our conversation — it’s all people like us. Not people who are most affected by these things. Discrimination affects the unempowered and underprivileged. How do we bring more people to the table? Building Floodwatch they can try to empower these groups. They can donate their data to groups working on advertising malpractice. There is a dialogue around surveillance that is built around the idea that it works. It doesn’t. How can we be more critical about how basically wrong these algorithmic techniques are?
+
+**Question from audience:** When you went to Crate & Barrel — are there whitelisted sites by default? Do you take money from those?
+
+**Scott:** No, we do not take money from those. There’s another company that DOES do that. The whitelisting function is for any individual user. Privacy is subjective and situational.
+
+**Question:** About ads. Is it really a tradeoff between free content and ads?
+
+**Alessandro:** We need to go back to best practices in ads but also think about more user-centric perspective on ads. Advertisers are using third party data — good at aggregate level but not at individual level. There are studies that show that it’s better to actually just show random ads than do targeting. 90% of industry will use third party data that tells you user’s income to target them. They are profiling users for luxury travel, golf, yachts. Inferring things. If this is done with knowledge of user and respect to the user then good digital advertising. But we are talking about data as if there was one type of it. My passport info is different from whether I’ve read an article about homemade ice cream.
+
+**Jose:** What was the fear factor and scariness factor for users? Most people comfortable with seeing ads for TVs when shopping for TVs.
+
+**Alessandro:** Quality content and apps and websites cost money. Do we want to pay for subscription based Internet or make digital advertising better?
+
+**Question:** Mention that 22 million people subscribing to adblocker. There’s a space here for someone like Amazon to contract out a browser that is 100% private for Prime customers. 100% privacy. No ads. Marriage made in heaven.
+
+**Scott:** There was a service that existed like that — called AOL in the 90s. The challenge is that closed systems almost always fail unless they can maintain a lock on the experience. The only successful one is Apple. Amazon super private browser is super smart. But how do you quantify who gets paid on publisher side?
+
+**Question:** A lot of misperceptions. 22 million number is not clear what fraction of people are actually using it. The sites that care — most sites know they are being blocked.
+
+**Jer:** The whole buzzword of user-centric design needs to move into the ad tech industry. Insurance, for example, is devising similar tactics as ad tech to determine whether to insure or not. These are much more critical decisions and this is terrifying.
+
+**Question:** Some discrimination is good. There is abuse of that. He is not concerned about how ads are tracking him but is concerned about how people are being discriminated against with data.
+
+**Paolo:** I’m an optimist in technological side. I think people here could solve some tech problems outlined here. But relationships with people is what needs to be developed. You are close to the data and the technology. Lay people do not necessarily understand graphs and spatialization of algorithms. We are far away from developing those relationships with the users. These are emotional relationships.
+
+**Mat:** The future challenges are being played out here. Data + Algorithms = Control and Control is Bad. We need a new way to protect our freedom. The social good use cases are a good case there.
