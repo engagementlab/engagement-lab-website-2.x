@@ -79,6 +79,8 @@ import { StudioThumbComponent } from './initiatives/studio/thumb/thumb.component
 import { ResourcesComponent } from './resources/resources.component';
 import { PartnerComponent } from './partner/partner.component';
 import { StudioInitiativeComponent } from './initiatives/initiative/initiative.component';
+import { NewsComponent } from './news/news.component';
+import { NewsIndexComponent } from './news/index.component';
 
 export const cloudinary = {
     Cloudinary,
@@ -105,6 +107,8 @@ export const config: CloudinaryConfiguration = appConfig;
         JobsComponent,
         InitiativeComponent,
         NavComponent,
+        NewsComponent,
+        NewsIndexComponent,
         NotFoundComponent,
         PartnerComponent,
         PrivacyComponent,

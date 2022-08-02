@@ -1,0 +1,41 @@
+<h2 class="column is-half no-pad">News</h2>
+
+<section id="news" class="listing">
+    <div class="newsItem column is-full" *ngFor="let newsItem of news">
+        <a routerLink="/news/{{ newsItem.key }}">
+            <hr />
+
+            <div class="columns is-mobile">
+                <h1 class="date column is-one-fifth hidden-mobile">
+                    {{ newsItem.datePosted | date: 'MMMM dd' }}
+                    <div class="year">
+                        {{ newsItem.datePosted | date: 'yyyy' }}
+                    </div>
+                </h1>
+                <h1 class="date column is-one-fifth hidden-tablet-plus">
+                    {{ newsItem.datePosted | date: 'MMM dd' }}
+                    <div class="year">
+                        {{ newsItem.datePosted | date: 'yy' }}
+                    </div>
+                </h1>
+
+                <div class="name column no-margin">
+                    <h2>
+                        {{ newsItem.title }}&nbsp;
+                        <svg
+                            width="32"
+                            height="23"
+                            fill="none"
+                            viewBox="0 0 32 23"
+                        >
+                            <path
+                                stroke="#000"
+                                d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                            />
+                        </svg>
+                    </h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>

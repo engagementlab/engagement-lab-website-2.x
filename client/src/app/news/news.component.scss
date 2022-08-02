@@ -1,0 +1,43 @@
+@import '~src/styles/_variables';
+@import '~src/styles/_mixins';
+
+#title {
+    h2 {
+        @include phones {
+            margin-top: 40%;
+            margin-bottom: 13%;
+        }
+    }
+}
+
+#date {
+    @include font-overpass;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: 0.8px;
+}
+
+#body {
+    ::ng-deep img {
+        width: auto !important;
+    }
+}
+
+#prev {
+    svg {
+        @include rotate(-180);
+    }
+
+    &:hover {
+        svg {
+            @include transform(rotate(-180deg) translate(15%, 0));
+        }
+    }
+}
+
+#next {
+    @include not-phones {
+        text-align: end;
+    }
+}
