@@ -1,9 +1,9 @@
 /**
  * Engagement Lab Website v2.x
  *
- * News page Model
+ * Blog page Model
  * @module models
- * @class News
+ * @class Blog
  * @author Johnny Richardson
  *
  * For field docs: http://keystonejs.com/docs/database/
@@ -13,7 +13,7 @@
 const { keystone, } = global;
 const { Types, } = keystone.Field;
 
-const News = new keystone.List('NewsItem', {
+const Blog = new keystone.List('Blog', {
     autokey: {
         path: 'key',
         from: 'title',
@@ -26,9 +26,9 @@ const News = new keystone.List('NewsItem', {
 
 /**
  * Model Fields
- * @main News
+ * @main Blog
  */
-News.add({
+Blog.add({
 
     title: {
         type: String,
@@ -38,6 +38,7 @@ News.add({
     },
     enabled: {
         type: Types.Boolean,
+        label: 'Published',
         note: 'Will never appear on site if not enabled',
     },
     datePosted: {
@@ -46,14 +47,6 @@ News.add({
         required: true,
         initial: true,
     },
-    // url: {
-    //     type: Types.Url,
-    //     required: true,
-    //     initial: true,
-    //     label: 'Link to Medium Post',
-    //     validate: urlValidator,
-    //     note: 'Must be in format "https://medium.com/engagement-lab-emerson-college/post-title". <br /><br /> **Please ensure image height is 300px, or it will render oddly.**',
-    // },
     image: {
         label: 'Thumbnail',
         type: Types.CloudinaryImage,
@@ -67,7 +60,7 @@ News.add({
     },
 });
 
-News.schema.pre('save', next => {
+Blog.schema.pre('save', next => {
     // Save state for post hook
     this.wasNew = this.isNew;
     // this.wasModified = this.isModified();
@@ -78,6 +71,6 @@ News.schema.pre('save', next => {
 /**
  * Model Registration
  */
-News.defaultSort = '-createdAt';
-News.defaultColumns = 'title, datePosted, enabled';
-News.register();
+Blog.defaultSort = '-createdAt';
+Blog.defaultColumns = 'title, datePosted, enabled';
+Blog.register();
