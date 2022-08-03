@@ -1,4 +1,4 @@
-<h2 class="column is-half no-pad">News</h2>
+<h2 class="column is-half no-pad">News (archive....for now)</h2>
 
 <section id="news" class="listing">
     <div class="newsItem column is-full" *ngFor="let newsItem of news">
@@ -34,6 +34,12 @@
                             />
                         </svg>
                     </h2>
+
+                    <!-- <div
+                        id="body"
+                        class="column is-11-mobile is-three-quarters-tablet"
+                        [innerHtml]="newsItem.bodyHTML | safeHtml"
+                    ></div> -->
                 </div>
             </div>
         </a>

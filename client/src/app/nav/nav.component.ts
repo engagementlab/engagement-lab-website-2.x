@@ -74,8 +74,8 @@ export class NavComponent implements AfterViewInit {
         { url: 'resources', label: 'Resources', enabled: true },
         { url: 'events', label: 'Events Calendar', enabled: true },
         {
-            href: 'https://medium.com/engagement-lab-emerson-college',
-            label: 'Lab Blog',
+            url: 'news',
+            label: 'News',
             enabled: true,
         },
         { url: 'partner', label: 'Partner With Us', enabled: true },

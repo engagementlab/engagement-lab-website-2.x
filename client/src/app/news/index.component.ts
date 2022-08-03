@@ -21,14 +21,21 @@ export class NewsIndexComponent implements OnInit {
                     datePosted
                     title
                     key
-                    image {
-                        public_id
-                    }
                 }
             }
         `;
+        // const response = await this._dataSvc.getSet('news', query);
+        // this._dataSvc.getNewsArchive().subscribe(
+        //     (data: any) => {
+        //         this.news = data;
+        //     },
+        //     (error: any) => {
+        //         console.log(error);
+        //     },
+        // );
         const response = await this._dataSvc.getSet('news', query);
         this.news = response['allBlogItems'];
+
         console.log(this.news);
     }
 }

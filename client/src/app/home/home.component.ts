@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                     date
                     shortDescription
                 }
-                allNewsItems(featured: true) {
+                allNewsItems {
                     title
                     url
                     image {

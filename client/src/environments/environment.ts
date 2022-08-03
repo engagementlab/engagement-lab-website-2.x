@@ -8,8 +8,9 @@ export const environment = {
     development: true,
     searchEnabled: false,
     universal: false,
-    api_url: 'http://localhost:3000',
-    data_url: 'http://localhost:3000',
+    api_url: 'http://localhost:3001',
+    data_url: 'http://localhost:3001',
+    new_api_url: 'http://localhost:3000',
 };
 
 /*

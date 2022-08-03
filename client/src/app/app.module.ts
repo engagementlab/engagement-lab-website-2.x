@@ -81,6 +81,7 @@ import { PartnerComponent } from './partner/partner.component';
 import { StudioInitiativeComponent } from './initiatives/initiative/initiative.component';
 import { NewsComponent } from './news/news.component';
 import { NewsIndexComponent } from './news/index.component';
+import { SafeHtml } from './utils/safe-html.pipe';
 
 export const cloudinary = {
     Cloudinary,
@@ -138,6 +139,7 @@ export const config: CloudinaryConfiguration = appConfig;
         JoinPipe,
         PrettyUrlPipe,
         PluckPipe,
+        SafeHtml,
         SlideshowComponent,
     ],
     imports: [
