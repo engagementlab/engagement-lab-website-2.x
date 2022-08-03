@@ -1,20 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/pcgn-project-showcase-2ca27d30f0e8
-canonical_url: https://medium.com/engagement-lab-emerson-college/pcgn-project-showcase-2ca27d30f0e8
-title: PCGN Project Showcase
-subtitle: Last week we had the privilege of seeing our partners over at the People’s
-    Collaborative Governance Network (PCGN,) present a year of…
-slug: pcgn-project-showcase
-description: ''
-tags:
-    - media
-    - civic-media
-    - codesign
-    - media-design
-author: EL_News
-username: el-news
----
-
 # **PCGN Project Showcase**
 
 Last week we had the privilege of seeing our partners over at the People’s Collaborative Governance Network (PCGN,) present a year of research into reimagining how local government can partner with communities to transform policy and services in Boston.
@@ -23,7 +6,7 @@ The hour and a half showcase highlighted three exemplars of the codesign process
 
 The question of documentation and impact looms large over everything we do here at the Engagement Lab. The PCGN showcase was a model, not only for codesign and reimagining governance in Boston, but for how we in academia can share that process in ways that are themselves collaborative and generative.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_3mLUkMI4zaKmE6Ei.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_3mLUkMI4zaKmE6Ei.jpeg)
 
 Kicked of in November of 2020 by a grant from the Robert Wood Johnson Foundation the projects presented at the showcase were designed to cultivate lasting [networks](https://collabgov.mit.edu/Our-Teams) of residents, community organizers, academics, and government officials that solve problems collaboratively in ways that center the experiences and voices of Boston’s most marginalized.
 

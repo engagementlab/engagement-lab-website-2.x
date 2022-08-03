@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/exploring-net-neutrality-with-mozilla-webmaker-61ba213d114b
-canonical_url: https://medium.com/civic-media-project/exploring-net-neutrality-with-mozilla-webmaker-61ba213d114b
-title: Exploring Net Neutrality with Mozilla Webmaker
-subtitle: Karen Louise Smith (University of Toronto) and Doug Belshaw (Mozilla Foundation)
-slug: exploring-net-neutrality-with-mozilla-webmaker
-description: ''
-tags:
-    - systems-and-design
-    - open-data
-    - community-organization
-author: EL_News
-username: el-news
----
-
 # Exploring Net Neutrality with Mozilla Webmaker
 
 ### Karen Louise Smith (University of Toronto) and Doug Belshaw (Mozilla Foundation)
@@ -21,7 +6,7 @@ Mozilla was founded in 1998 to ensure everyone “can be informed contributors a
 
 This case study briefly introduces Mozilla’s approach to web literacy and the Webmaker tools to examine how it functions as a platform for civic media. Next, it explores how Webmaker is promoted globally, and in particular, how it was leveraged in the summer of 2014 to encourage learning and web content production about net neutrality. This issue was pressing in 2014 because in January, the Federal Communications Commission’s (FCC) Open Internet Order was struck down in a US court of appeals. Mozilla ran a traditional campaign to collect signatures to petition Congress to protect net neutrality (Mozilla, 2014). Simultaneously, there were significant opportunities to produce civic media on net neutrality with Webmaker through global remixes and localizations.
 
-![Figure 1.1 Mozilla Web Maker Site]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bocRc-ocHqIJZrLinCMGaw.png)
+![Figure 1.1 Mozilla Web Maker Site](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bocRc-ocHqIJZrLinCMGaw.png)
 
 # Web literacy and Webmaker
 
@@ -29,7 +14,7 @@ Mozilla understands web literacy as the skills and competencies required to “r
 
 Zittrain describes that net neutrality involves “rout[ing] packets without regard to what they contain or where they are from” (p. 178). However, understanding how the open internet works in terms of the pipes and packets, may not necessarily be engaging or interesting for the average internet user. Using Webmaker tools, production-based projects, such as poster and video remixes were designed for learners to explore the inner workings of net neutrality more creatively.
 
-![Figure 1.2 Mozilla Web Literacy Map]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rLWeIL8v4-CK0neV8-MBNA.png)
+![Figure 1.2 Mozilla Web Literacy Map](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rLWeIL8v4-CK0neV8-MBNA.png)
 
 Webmaker houses four browser-based tools to explicitly encourage users to produce and remix the web. For example, “X-Ray Goggles” allows a user to view a website and alter a small snippet of code to remix a page. “Popcorn” affords for the easy mashup of video and other audiovisual web assets. Since the Webmaker tools do not stand alone to raise awareness about net neutrality, a Webmaker online training course was launched on August 4th with content explaining net neutrality, as well as discussion threads for online participation. The training provided links to the Net Neutrality Teaching Kit produced by Mozilla, housed on the Webmaker site. In addition to the training and the teaching kit, the Maker Party campaign encouraged the use of Webmaker in tandem with exploring net neutrality.
 

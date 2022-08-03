@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/the-tilburg-public-library-knowledgecloud-119bd65af989
-canonical_url: https://medium.com/civic-media-project/the-tilburg-public-library-knowledgecloud-119bd65af989
-title: The Tilburg Public Library KnowledgeCloud
-subtitle: Aldo de Moor (Owner, CommunitySense, Tilburg, the Netherlands) and Pieternel
-    Thijssen (Public Library of Midden-Brabant)
-slug: the-tilburg-public-library-knowledgecloud
-description: ''
-tags:
-    - open-data
-    - cloud-computing
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # The Tilburg Public Library KnowledgeCloud
 
 ### *Aldo de Moor (*Owner, CommunitySense, Tilburg, the Netherlands) *and Pieternel Thijssen (*Public Library of Midden-Brabant)
@@ -26,7 +10,7 @@ In a society suffering from civic fragmentation and information overload, no lon
 
 Still, to refocus their existing social capital, skills, and resources, libraries need to go through a significant transition. One state-of-the-art innovation, for example, are Library-Hack-Maker Spaces where public libraries become “community libraries”, capable of attracting, capturing, curating, and sharing local knowledge and know-how for mutual benefit, using typical hacker and maker spaces skills. Such spaces focus on catalyzing the production process of combining creative contributions of local users with a community lending and publishing platform (Naylor 2014). Another angle is the KnowledgeCloud concept being developed by the Dutch Tilburg public library. Its focus is to strengthen the fabric of knowledge interactions between stakeholders that make up regional society, providing context for and developing linkages between its constituting communities.
 
-![Fig.1: The KnowledgeCloud Architecture. Click here to see the full figure.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_DVr6QNA2QhZ6E1f_.jpg)
+![Fig.1: The KnowledgeCloud Architecture. Click here to see the full figure.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_DVr6QNA2QhZ6E1f_.jpg)
 
 # The KnowledgeCloud Architecture
 
@@ -36,7 +20,7 @@ The KnowledgeCloud combines an online platform with a set of online and physical
 
 Via the KnowledgeCloud online platform, users can find relevant regional participants, action, content, and locations. (Fig. 2)
 
-![Fig.2: Home Page of KnowledgeCloud Online Platform Prototype]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ZKS9Q2gKLatK9qqa.jpg)
+![Fig.2: Home Page of KnowledgeCloud Online Platform Prototype](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ZKS9Q2gKLatK9qqa.jpg)
 
 Functionalities to do so include:
 
@@ -66,7 +50,7 @@ The online platform is a necessary, but not a sufficient condition for meeting t
 
 The platform and services are only a means, not an end. We have just begun to explore the numerous potential applications of the KnowledgeCloud. One successful initial case is on elderly care innovation. (Fig. 3)
 
-![Fig.3 KnowledgeCloud Think Tank Service Session on Elderly Care Innovation]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LmiZ0wFaz9RzLLhC.JPG)
+![Fig.3 KnowledgeCloud Think Tank Service Session on Elderly Care Innovation](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LmiZ0wFaz9RzLLhC.JPG)
 
 A major transformation of the national Dutch (health)care system is underway. A Tilburg elderly care home director posed a question of how to ensure minimal care levels after the transition. The library organized a Think Tank Service session to address this issue, inviting a selected group of external professionals to brainstorm with care home staff and residents. Some promising ideas were elicited and are further being shared and developed in the online Elderly Care Innovation knowledge group. A related project in the Tilburg region was mentioned there. The online discussion continues on how to align and expand the two projects. A follow-up physical KnowledgeWorkspace session will be organized where the projects will be presented, using the online discussion results to set the agenda.
 

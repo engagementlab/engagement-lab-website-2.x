@@ -1,17 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/improving-public-engagement-5-cities-get-to-work-f9b0f60c1f79
-canonical_url: https://medium.com/engagement-lab-emerson-college/improving-public-engagement-5-cities-get-to-work-f9b0f60c1f79
-title: 'Improving Public Engagement: 5 Cities Get to Work'
-subtitle: By Eric Gordon
-slug: improving-public-engagement-5-cities-get-to-work
-description: ''
-tags:
-    - civictech
-    - urban-planning
-author: EL_News
-username: el-news
----
-
 # Improving Public Engagement: 5 Cities Get to Work
 
 ### By Eric Gordon
@@ -26,27 +12,27 @@ _This post is part of a series about our work with the 2nd cohort of the [City A
 
 The best intentions of local government to enact policy and programs that positively impact low income people are often compromised by a lack of communication, effective listening, and relationship building. How local government meaningfully engages its constituents, especially more vulnerable and hard to reach populations, is (or should be) a central concern of every department — from the mayor’s office, to public works and planning. The second cohort of the [City Accelerator](http://www.governing.com/cityaccelerator), which is an eighteen-month program composed of five cities throughout the United States, is focused on just this concern. Over the course of the program, participating cities will experiment with new and promising approaches to better engage their low-income residents, and also work to embed better engagement practices into their ongoing operations. Included in the cohort are Albuquerque, Atlanta, Baltimore, New Orleans and Seattle, each of which has identified a policy or process problem around which public engagement can be improved.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0__VYFqXkuh_E8CF8Y.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0__VYFqXkuh_E8CF8Y.png)
 
 **Albuquerque is focused on engaging immigrant entrepreneurs.** With a population that is majority minority, and an increasing amount of immigrants eager to enter the workforce, Albuquerque represents the conditions of every American city in the near future. In an effort to assure full participation in the economy, the mayor’s office has been eager to hear from small business owners through what they have called “small business deep dives.” These intimate conversations with the mayor and his staff have been fruitful in uncovering issues and adding complexity and texture to known issues. Through the[ City Accelerator](http://www.governing.com/cityaccelerator) program, the city will continue its deep dive practice, but with a renewed focus specifically on immigrant entrepreneurs. Understanding the needs and pain points of this population will inform the design of tools and practices that can better support people new to the business community or struggling to get a foothold within it.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ZJTEHJ7t416ea8MM.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ZJTEHJ7t416ea8MM.png)
 
 **Atlanta seeks to bring new, underrepresented voices, into the process of distributing community benefits.** Confronted with the development of the $1.4 billion Falcons stadium, Atlanta’s Westside is undergoing rapid growth and gentrification. The Westside has historical significance as one of Atlanta’s and the country’s oldest black neighborhoods with a direct connection to the civil rights movement. It is currently experiencing extreme poverty and blight, where development is likely to have disruptive, not transformative impacts on the lives of its current occupants. The goal of the [City Accelerator](http://www.governing.com/cityaccelerator) project is to bring the voices of these underrepresented populations into the conversation about how community benefits sparked by development will be distributed to the local communities. Atlanta will focus on building the context for mutual storytelling, where people can share the personal experiences that drive them and trust that there are influencers and decision-makers listening to those stories. Working with a consortium of local groups organized by [Chris LeDantec](http://ledantec.net/) at Georgia Tech with the goal of amplifying, connecting, and harnessing stories and explore their connections to policy making, the city seeks to design specific platforms and tools to foster ongoing dialogue and storytelling.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_hiVdh8lOBpg50Y0y.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_hiVdh8lOBpg50Y0y.png)
 
 **Baltimore seeks to form better connections between the city and individuals reentering society from prison.** A significant percentage of many of Baltimore’s poorest neighborhoods are composed of people recently released from prison. In some cases, there are insufficient services to meet the needs of this population, and in other cases, there is insufficient communication about available services. This project focuses on the communication gap between government and non-governmental supports and people who can directly benefit from them. The moment people leave prison, there is need to communicate options for positive social alternatives and basic supports in such a way that enables independent decision-making and appropriate structure. The [City Accelerator](http://www.governing.com/cityaccelerator) project will focus on understanding what communication channels exist, how they currently function, and how they can function better. The City will organize a series of focus groups with those who have reentered Baltimore’s neighborhoods in the last 90 days, and seek to understand current gaps and potential solutions.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_vtwjtg_61W_NQn6p.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_vtwjtg_61W_NQn6p.png)
 
 **New Orleans seeks to bring city residents more effectively into the design and delivery of public services.** Over thirty thousand New Orleans residents qualify and have registered for the state sponsored medicaid waiver program called [GNOCHC](http://dhh.louisiana.gov/index.cfm/page/679) (pronounced knee-oh-kee), but they have never used it.[GNOCHC](http://dhh.louisiana.gov/index.cfm/page/679) would provide access to primary care physicians and other health care services. The [City Accelerator](http://www.governing.com/cityaccelerator) project is focused on understanding barriers to use, and how best to engage people in providing services. The project, called Stand Up and Get Care, will recruit New Orleanians to problem solve around this issue, some through co-design sessions and others through focus groups. Through this experiment, the City seeks to understand what methods are most effective for partnering with communities in co-designing solutions for policy problems. The results of this experiment will lead to real actionable solutions and recommendations for effective engagement methodologies for future use.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_dM2cuznXecuk_IY1.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_dM2cuznXecuk_IY1.png)
 
 **Seattle seeks to better coordinate and share learnings from existing engagement efforts.** Every day in Seattle there are conversations led by city departments about the future of the city. The problem is there is little correspondence between city departments, and neighborhood groups are solicited with little or no continuity between conversations, resulting in lack of trust and diminished perception of the fairness of process. The city is interested in creating an internal system that would enable communication across government departments, so that the office of neighborhoods is not reproducing the conversation led by the planning commission. With a working title of “team-based engagement,” the simple idea is to build a checklist that can be filled out and shared after every engagement, so that departments can better report back to communities about what they’ve heard, what they’re doing with it, and what issues remain to be discussed. Team-based engagement would develop a back end solution for government to track its engagements by theme, channel, and outcomes, so there are digital records of correspondence.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_1LjMEcx_wRls4cJV.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_1LjMEcx_wRls4cJV.png)
 
 The goal of the [City Accelerator](http://www.governing.com/cityaccelerator) is to understand, and help cities adopt, approaches that lead to more effective engagement between local government and city residents. Through their work, each of the five cities will experiment with and contribute to a more nuanced body of practice that cities around the country can integrate into the everyday work of government.
 

@@ -1,20 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/a-reflection-on-todd-chandlers-bulletproof-f52355f8475
-canonical_url: https://medium.com/engagement-lab-emerson-college/a-reflection-on-todd-chandlers-bulletproof-f52355f8475
-title: A Reflection on Todd Chandler’s Bulletproof
-subtitle: Written by Destiny Murray
-slug: a-reflection-on-todd-chandlers-bulletproof
-description: ''
-tags: []
-author: EL_News
-username: el-news
----
-
 # **A Reflection on Todd Chandler’s Bulletproof**
 
 Written by Destiny Murray
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-Co1feG3zTzymixealKtHg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-Co1feG3zTzymixealKtHg.png)
 
 In a time where schools have stepped up efforts to protect against mass shootings, [Bulletproof](https://grasshopperfilm.com/film/bulletproof/), a film directed by Todd Chandler, provides a window into the complexity of security and safety measures within school systems in the U.S. Bulletproof was screened at the Paramount Theater in Boston on February 17th, as part of the BrightLights film series and co-sponsored by the Engagement Lab. The screening was immediately followed by a panel discussion with the film’s director and Dr. Chana Sacks, co-director of the Center for Gun Violence Prevention at Mass General Hospital.
 

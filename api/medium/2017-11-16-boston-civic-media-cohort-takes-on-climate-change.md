@@ -1,26 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/boston-civic-media-cohort-takes-on-climate-change-9f8a30f5499
-canonical_url: https://medium.com/engagement-lab-emerson-college/boston-civic-media-cohort-takes-on-climate-change-9f8a30f5499
-title: Boston Civic Media cohort takes on climate change
-subtitle: For the 2017–2018 school year, the Boston Civic Media consortium cohort
-    is exploring the intersection between the “wicked problem” of…
-slug: boston-civic-media-cohort-takes-on-climate-change
-description: ''
-tags:
-    - climate-change
-    - emerson
-    - civic-media
-    - wicked-problem
-    - twitter
-author: EL_News
-username: el-news
----
-
 # Boston Civic Media cohort takes on climate change
 
 For the 2017–2018 school year, the Boston Civic Media consortium cohort is exploring the intersection between the “wicked problem” of climate change and the civic media approaches that can be developed to confront it. A “wicked problem” is one that doesn’t have a clear solution and requires interdisciplinary strategies and systems thinking.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mI8-15FbzCgTnd2McjZHBw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mI8-15FbzCgTnd2McjZHBw.jpeg)
 
 The BCM consortium of Boston institutions work together to enhance undergraduate education by facilitating curriculum design, improving research and partnership practices, and strengthening connections within the local civic media ecosystem. This semester, BCM faculty from five area colleges and universities are teaching courses that acclimate students to civic media concepts and research methods by working with local nonprofit organizations who directly deal with climate change:
 
@@ -40,7 +22,7 @@ The BCM consortium of Boston institutions work together to enhance undergraduate
 
 At the end-of-semester culminating event on December 7th — titled _Climate Change and Design in Boston_ — students and faculty from the six courses will gather at the Bill Bordy Theater at Emerson to showcase student projects from the semester, hear from a panel on design and climate change, and engage in small group discussions about the future of climate action. An RSVP is required, so save your spot here: [https://climateanddesign.splashthat.com/](https://climateanddesign.splashthat.com/).
 
-![Panelists will participate in a moderated discussion on design approaches to climate change.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3Etc_qTAM2zw0Bfb0De4ZQ.png)
+![Panelists will participate in a moderated discussion on design approaches to climate change.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3Etc_qTAM2zw0Bfb0De4ZQ.png)
 
 The previous week, on December 1st from 12–1 p.m., Boston Civic Media is hosting a Twitter chat, “Cities Our Front on Climate Action and Adaptation,” which will explore how cities like Boston can respond to the declining role of federal government in addressing climate change by taking action on a local level. In the Twitter chat, we’ll bring together designers, researchers, and activists to explore this question and share ideas, resources and tools for marching forward together on climate action. Featured participants include:
 

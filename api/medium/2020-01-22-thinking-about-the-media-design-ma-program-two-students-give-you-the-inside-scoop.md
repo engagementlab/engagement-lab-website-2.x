@@ -1,29 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/thinking-about-the-media-design-ma-program-two-students-give-you-the-inside-scoop-53edfacff7d1
-canonical_url: https://medium.com/engagement-lab-emerson-college/thinking-about-the-media-design-ma-program-two-students-give-you-the-inside-scoop-53edfacff7d1
-title: Thinking about the Media Design MA Program? Two Students Give You the Inside
-    Scoop!
-subtitle: If you’re currently in the process of considering whether or not the MA
-    in Media Design at Emerson College is the right graduate program…
-slug: thinking-about-the-media-design-ma-program-two-students-give-you-the-inside-scoop
-description: ''
-tags:
-    - media-design
-    - emerson-college
-    - civic-engagement
-    - civic-innovation
-    - graduate-school
-author: EL_News
-username: el-news
----
-
 # Thinking about the Media Design MA Program? Two Students Give You the Inside Scoop!
 
-![Greetings from the 2019–2020 Cohort!]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zGEnvslTO85DV0SSqeQ4SQ.png)
+![Greetings from the 2019–2020 Cohort!](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zGEnvslTO85DV0SSqeQ4SQ.png)
 
 If you’re currently in the process of considering whether or not the [MA in Media Design at Emerson College](https://www.emerson.edu/programs/media-design-ma) is the right graduate program for you, look no further. Two current students share what drew them to the program, what they’ve gained thus far, and why it could be the perfect fit for you.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_a1TwhOGSTk8zgl_a.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_a1TwhOGSTk8zgl_a.png)
 
 **Testimonial 1: Chitra Anwar**
 
@@ -45,7 +26,7 @@ Through this program, I’ve learned that during the design process, it’s real
 
 Given the level of transparency and accountability that the internet and social media affords us, it’s unrealistic for companies and organizations to operate behind closed doors and ignore the voice of the people. This program teaches you the theoretical knowledge and applied skills to engage communities that will be necessary moving forward in the digital age.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dbnTjMNZT67kufJUhfFGAg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dbnTjMNZT67kufJUhfFGAg.png)
 
 **Testimonial 2: Hassan Hassan**
 

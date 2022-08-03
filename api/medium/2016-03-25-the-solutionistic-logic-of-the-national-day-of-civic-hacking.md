@@ -1,23 +1,8 @@
----
-url: https://medium.com/civic-media-project/the-solutionistic-logic-of-the-national-day-of-civic-hacking-a4dcb7cd27f6
-canonical_url: https://medium.com/civic-media-project/the-solutionistic-logic-of-the-national-day-of-civic-hacking-a4dcb7cd27f6
-title: The ‘Solutionistic’ Logic of the National Day of Civic Hacking
-subtitle: Ingrid Erickson (Rutgers University)
-slug: the-solutionistic-logic-of-the-national-day-of-civic-hacking
-description: ''
-tags:
-    - hackathons
-    - big-data
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # The ‘Solutionistic’ Logic of the National Day of Civic Hacking
 
 ### *Ingrid Erickson (*Rutgers University)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_9uPYiykmdOPVFFn0.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_9uPYiykmdOPVFFn0.png)
 
 On January 22, 2013, the White House Office of Science and Technology Policy released a blog post cum press release titled “Roll Up Your Sleeves, Get Involved, and Get Civic-Hacking,” written by Brian Forde, Senior Advisor to the U.S. CTO for Mobile and Data Innovation, and Nicholas Skytland, Program Manager of NASA’s Open Innovation Program (Forde & Skytland, 2013). In it, they encouraged “citizens across the Nation” to “join together to improve their communities and governments as part of the National Day of Civic Hacking.” Beyond the mandate embedded in the title, the authors describe the first NDoCH as “ . . . an opportunity for software developers, technologists, and entrepreneurs to unleash their can-do American spirit by collaboratively harnessing publicly-released data and code to create innovative solutions for problems that affect Americans.” By March of that year, Intel had joined as the event sponsor. According to Brandon Barnett, Director of Business Innovation at Intel Labs, Intel saw the event in similarly patriotic terms as a way “to invent to applications and services that combine people’s digital information with open, public data for the common good” (Barnett, 2014).
 
@@ -30,13 +15,13 @@ Morozov (2013) defines such an emphasis on improvement and problem-solving as �
 
 Despite overt rhetoric otherwise, what soon happened was an interesting social sorting. Once they had told their stories, the ‘community members’ slowly drifted away, unable to participate in the overarching logic of the day, “Less yack, more hack.” Gradually the coders in the room organized themselves into separate projects and got to work. There was little discussion or negotiation beyond the initial sharing period; rather, what quickly came to dominate the room was the competitive feeling of a charrette as the minutes began to tick away. The end of the day resulted in a presentation of six projects (in various states of completion). What was most apparent to this onlooker were not the products of the day’s labor, but the fact that, even in this catholic group, success was measured in rather stark terms: technical functionality trumped all other values.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ceZr9Q1fViGNfP1E.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ceZr9Q1fViGNfP1E.png)
 
 The case of civic hacking is worth contemplating with regards to civic engagement in several ways. In the most positive sense, the allegiance between citizens and governments from local to the national level represents a means of direct engagement that is paired only by citizens’ ability to vote. Governments are opening their resources such as databases (albeit in highly curated instances) without apparent direction or circumspection — a form of apparent DIY civic engagement. However, this move simultaneously appears to be a sign that governments feel the need to outsource their lack of technical skill or innovative insight to the ready pool of willing citizens willing to work (and provide value) for little to no cost. Yet this is possibly the least of the consequential issues in play here.
 
 More significantly, the practices of civic hacking appear to be reifying a new type of super-citizen who, along with a small set of similarly proficient individuals, is beginning to secure the means to decide what is or isn’t civic. Hackers’ instantiation of projects, delivered according to a logic of rational efficiency, sets in motion a prioritization of civic values that equates importance with the ability to be built. Thornier matters that require messy deliberation or longer gestation periods risk not only being overlooked but also undervalued. Thus, as much as there is cause to celebrate the increasing porosity of these new models of civic engagement, we also need to be sure to keep on yacking while carrying on hacking. Anything less is merely software engineering.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_AtHJWHl-Mn5jhJl3.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_AtHJWHl-Mn5jhJl3.png)
 
 # References
 

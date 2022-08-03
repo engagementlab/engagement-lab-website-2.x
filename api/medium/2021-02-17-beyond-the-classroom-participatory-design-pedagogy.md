@@ -1,22 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/beyond-the-classroom-participatory-design-pedagogy-36f6166ec71e
-canonical_url: https://medium.com/engagement-lab-emerson-college/beyond-the-classroom-participatory-design-pedagogy-36f6166ec71e
-title: 'Beyond the Classroom: Participatory Design Pedagogy'
-subtitle: Merriam-Webster defines pedagogy as the art, science, or profession of teaching.
-    When considering the act of teaching, many may not think…
-slug: beyond-the-classroom-participatory-design-pedagogy
-description: ''
-tags:
-    - pedagogy
-    - participatory-design
-    - civic-media
-author: EL_News
-username: el-news
----
-
 # Beyond the Classroom: Participatory Design Pedagogy
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_TGKZuZeXa2a2n-s-bJ_54Q.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_TGKZuZeXa2a2n-s-bJ_54Q.png)
 
 Merriam-Webster defines pedagogy as the art, science, or profession of teaching. When considering the act of teaching, many may not think of it as an art or science, but the Emerson College Engagement Lab would like to play a part in changing this perception. The Lab wants Emerson students to use their skills in a real-world sense through partnered studios, courses that involve collaboration with external organizations, where they can explore their creativity and critical thinking abilities.
 

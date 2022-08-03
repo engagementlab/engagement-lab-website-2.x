@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/room-to-tell-designing-affectively-engaging-civic-opportunities-with-new-media-for-adolescents-dff156569976
-canonical_url: https://medium.com/civic-media-project/room-to-tell-designing-affectively-engaging-civic-opportunities-with-new-media-for-adolescents-dff156569976
-title: 'Room to Tell: Designing Affectively Engaging Civic Opportunities with New
-    Media for Adolescents…'
-subtitle: Christian Ehret (Vanderbilt University)
-slug: room-to-tell-designing-affectively-engaging-civic-opportunities-with-new-media-for-adolescents
-description: ''
-tags:
-    - learning-and-engagement
-    - storytelling
-    - youth-media
-author: EL_News
-username: el-news
----
-
 # Room to Tell: Designing Affectively Engaging Civic Opportunities with New Media for Adolescents Hospitalized with Cystic Fibrosis
 
 ### Christian Ehret (Vanderbilt University)
@@ -32,7 +16,7 @@ At sixteen, Austin has undergone routine hospitalizations for most of his life. 
 
 Alternatively, Austin showed researchers YouTube videos teens had uploaded in which they described what it was like to live with CF (Figure 1). Not having much, or any, physical contact with other teens living with the same condition, Austin found this teen-perspective especially impactful. One YouTuber, hollyrosanna, moved him especially. He compared how her skin color, which evinced a bluishness connected to oxygen depletion, revealed the progression of her CF in a way that he thought adult-driven websites elided. On those sites, he said, teens living with CF were not visibly ill. Austin continued playing videos in which hollyrosanna described in detail how she managed CF, her social life, and her first year at university. He ruminated on her appearance, connected to his own, and pondered what it might be like to go to college and manage life on his own.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2M8bd-x5zhSAcZT4EnuPRQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2M8bd-x5zhSAcZT4EnuPRQ.png)
 
 A few days after exploring these videos together, the RtoT team collaborated with him to make a YouTube video. They started a private YouTube channel on which they imagined other patients could share experiences important to them, or, as Austin put it, experiences that “only other CFers would understand” (Figure 2). In Austin’s first video he focused on how to develop trust in friendships, when to tell friends about CF, and how to manage just ‘hanging out’ with other kids, e.g., when peers’ smoking puts his fragile respiratory system at risk.
 
@@ -40,7 +24,7 @@ A few days after exploring these videos together, the RtoT team collaborated wit
 
 The RtoT team initially felt that guiding him in telling these stories was emotionally risky. Austin wanted to disclose intense personal experiences on YouTube — for example, of a classmate standing up to inform his class that he had a terminal illness. As a teacher-researchers, the RtoT team fought fears that — had we succumb to them — might have dampened Austin’s affective storytelling, and generated again the sort of adult-driven website his desires moved against.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_vgYqGulhHXBgm-GaCaOQ_A.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_vgYqGulhHXBgm-GaCaOQ_A.png)
 
 # **Discussion: On Affective Engagement in Teaching and Learning with Civic Media**
 

@@ -1,20 +1,3 @@
----
-url: https://medium.com/civic-media-project/aufschrei-the-role-of-twitter-for-feminist-activism-and-as-platform-for-alternative-publics-4dbd87c6aba6
-canonical_url: https://medium.com/civic-media-project/aufschrei-the-role-of-twitter-for-feminist-activism-and-as-platform-for-alternative-publics-4dbd87c6aba6
-title: '#Aufschrei — The role of twitter for feminist activism and as platform for
-  alternative publics'
-subtitle: Ricarda Drüeke (University of Salzburg, Austria) and Elke Zobl (Contemporary
-  Arts & Cultural Production, Austria)
-slug: aufschrei-the-role-of-twitter-for-feminist-activism-and-as-platform-for-alternative-publics
-description: ""
-tags:
-- hashtag-activism
-- germany
-- community-and-action
-author: EL_News
-username: el-news
----
-
 # #Aufschrei — The role of twitter for feminist activism and as platform for alternative publics
 
 ### Ricarda Drüeke (University of Salzburg, Austria) and Elke Zobl (Contemporary Arts & Cultural Production, Austria)
@@ -35,7 +18,7 @@ Our study comprises a quantitative and qualitative content analysis of the tweet
 
 In the quantitative analysis it turned out that most tweets described personal experiences of everyday sexism.
 
->> It is obvious that sexism is prevalent in the day-to-day life of many women, and that it affects various areas of life and work.
+> > It is obvious that sexism is prevalent in the day-to-day life of many women, and that it affects various areas of life and work.
 
 However, there were almost no references to multiple forms of discrimination, for example, based on categories of race or sexuality. From the second week, there was a steady presence of anti-feminist tweets that contained a lot of name-calling and sexist words. The qualitative analysis of the tweets yielded that the tweets reporting on sexist experiences can be organized in terms of participating actors, situations (time and location), and types of assault. Such incidents are thereby part of social structures, as especially hierarchies are exploited in the practice of forms of sexism. At the same time, however, physical incidents — and not only verbal forms of sexism — shape many people’s experiences of this form of prejudice. Nonetheless, #aufschrei is also used as a plat-form for sexist and anti-feminist statements. In these statements, for the most part, clichés and stereotypes are reproduced and the structural dimensions of sexism trivialized. Anti-feminist and masculinity positions are not new phenomena; however, through the Internet they have found new forms for agitation, distribution, and networking (cf. Klaus 2008).
 
@@ -51,16 +34,14 @@ Fraser, Nancy. “Transnationalizing the Public Sphere.” Accessed May 20, 2014
 
 Gsenger, Marlene/Thiele, Martina. 2014. “Wird der #aufschrei erhört? Eine kritische Diskursanalyse der Sexismusdebatte in Deutschland. kommunikation.medien (3).” Accessed May 20, 2014. [http://journal.kommunikation-medien.at/2014/02/wird-aufschrei-erhort-kritische-diskursanalyse-sexismus-debatte-in-deutschland/](http://journal.kommunikation-medien.at/2014/02/wird-aufschrei-erhort-kritische-diskursanalyse-sexismus-debatte-in-deutschland/).
 
-Klaus, Elisabeth. 2006.”Öffentlichkeit als Selbstverständigungsprozess. Das Beispiel Brent Spar.” In *PR-Kampagnen. Über die Inszenierung von Öffentlichkeit*, edited by Ulrike Röttger, 51–74. Wiesbaden: VS Verlag.
+Klaus, Elisabeth. 2006.”Öffentlichkeit als Selbstverständigungsprozess. Das Beispiel Brent Spar.” In _PR-Kampagnen. Über die Inszenierung von Öffentlichkeit_, edited by Ulrike Röttger, 51–74. Wiesbaden: VS Verlag.
 
-Klaus, Elisabeth. 2008. *Antifeminismus und Elitefeminismus. Eine Intervention. Feministische Studien* 26 (2): 176–186.
+Klaus, Elisabeth. 2008. _Antifeminismus und Elitefeminismus. Eine Intervention. Feministische Studien_ 26 (2): 176–186.
 
-Maireder, Axel/Schlögl, Stefan. 2014. “24 Hours of an #outcry: The Networked Publics of a Socio-Political Debate.”*European Journal of Communication* (in print).
+Maireder, Axel/Schlögl, Stefan. 2014. “24 Hours of an #outcry: The Networked Publics of a Socio-Political Debate.”_European Journal of Communication_ (in print).
 
-Wischermann, Ulla. 2003. *Frauenbewegungen und Öffentlichkeiten um 1900*. Netzwerke, Gegenöffentlichkeiten, Protestinszenierungen. Königstein/Taunus: Ulrike Helmer Ver-lag.
+Wischermann, Ulla. 2003. _Frauenbewegungen und Öffentlichkeiten um 1900_. Netzwerke, Gegenöffentlichkeiten, Protestinszenierungen. Königstein/Taunus: Ulrike Helmer Ver-lag.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

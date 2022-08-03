@@ -1,25 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/transformative-media-pedagogies-book-launch-cad52becfe34
-canonical_url: https://medium.com/engagement-lab-emerson-college/transformative-media-pedagogies-book-launch-cad52becfe34
-title: Transformative Media Pedagogies Book Launch
-subtitle: by Aaron Stier-Cohen
-slug: transformative-media-pedagogies-book-launch
-description: ''
-tags:
-    - civic-media
-    - media
-    - media-literacy
-    - media-studies
-    - pedagogie
-author: EL_News
-username: el-news
----
-
 # **Transformative Media Pedagogies Book Launch**
 
 by Aaron Stier-Cohen
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_B-oMA099H_dhwYH5lEpOsw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_B-oMA099H_dhwYH5lEpOsw.png)
 
 Introducing [Transformative Media Pedagogies](https://www.routledge.com/Transformative-Media-Pedagogies/Mihailidis-Shresthova-Fromm/p/book/9780367467982), essays, and reflections from the [Salzburg Academy on Media and Global Change](https://www.salzburgglobal.org/multi-year-series/media-academy/pageId/6853). Edited by Paul Mihailidis, Sangita Shresthova, and Megan Fromm, each essay features valuable insights and practical strategies from past Salzburg participants for building human connection, care, imagination, and agency, around students as storytellers focused on positive social change.
 

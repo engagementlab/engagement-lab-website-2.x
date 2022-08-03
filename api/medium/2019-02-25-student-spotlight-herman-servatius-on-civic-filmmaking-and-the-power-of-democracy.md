@@ -1,26 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/student-spotlight-herman-servatius-on-civic-filmmaking-and-the-power-of-democracy-98c930990734
-canonical_url: https://medium.com/engagement-lab-emerson-college/student-spotlight-herman-servatius-on-civic-filmmaking-and-the-power-of-democracy-98c930990734
-title: 'Student Spotlight: Herman Servatius on Civic Filmmaking and the Power of Democracy'
-subtitle: Herman Servatius is a member of the 2018 cohort of the Civic Media, Art
-    and Practice (CMAP) Program at Emerson College. He has been making…
-slug: student-spotlight-herman-servatius-on-civic-filmmaking-and-the-power-of-democracy
-description: ''
-tags:
-    - filmmaking
-    - civic-engagement
-    - graduate-school
-author: EL_News
-username: el-news
----
-
 # Student Spotlight: Herman Servatius on Civic Filmmaking and the Power of Democracy
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_UAFa2cbdPQcl9AW8ZxGB0Q.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_UAFa2cbdPQcl9AW8ZxGB0Q.png)
 
 _Herman Servatius is a member of the 2018 cohort of the Civic Media, Art and Practice (CMAP) Program at Emerson College. He has been making movies ever since he was a kid_,_ but it’s just recently that he’s begun to officially embrace “filmmaker” as part of his identity. We talked with Herman about what attracted him to movie-making, and what makes film such a rich medium for igniting change._
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zkQADk8t0JjrIwKrJCuMLw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zkQADk8t0JjrIwKrJCuMLw.jpeg)
 
 “I’ve always seen myself as the kind of person who’s never been able to say I’m anything specific,” Servatius says, “but recently, ever since coming to Emerson, I have been telling people that I’m a filmmaker.” Servatius admits that his professional identity is still evolving, but when he describes his vision of activating positive change in our communities, it is through the lens of film: “film can tell stories that other people might not see, and also show people viewpoints or angles on life or story that they may have never considered before; [film is] a very powerful tool for that.”
 
@@ -48,7 +32,7 @@ The nature of those stories, not just their multiplicity, resonated with him: �
 
 Servatius believes deeply in the power of democracy. Moreover, Servatius believes firmly that film and video can support democratic ideals, by giving people access to information in a concise, accessible way. “In video, you can condense a lot of information into a small amount of time, and you can also tell people what they need to know without them having to read a 20-page research paper,” he says. Servatius uses the example of ballot questions in the voting booth to make this point; he contends that an unbiased video with facts from a trusted source can give people the information that they need to make an informed decision about an issue, even if they may not have the time to devote to extensive research.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EdeV3VmOcN-0FLV4-aqStg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EdeV3VmOcN-0FLV4-aqStg.jpeg)
 
 Servatius is excited to put his skills and aspirations to work as he embarks on his thesis project in partnership with [iCivics](https://www.icivics.org/), an online educational platform that aims to engage young people in meaningful civic learning. “I chose [iCivics] because I really like their mission statement. I like the idea that they want to create an active voice about these subjects outside of an academic setting, which I think is really important for people, especially young people.”
 

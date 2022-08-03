@@ -1,19 +1,3 @@
----
-url: https://medium.com/@el-news/missing-intentionality-the-limitations-of-social-media-analysis-for-participatory-urban-design-c296cdd0fbf8
-canonical_url: https://medium.com/@el-news/missing-intentionality-the-limitations-of-social-media-analysis-for-participatory-urban-design-c296cdd0fbf8
-title: 'Missing Intentionality: the Limitations of Social Media Analysis for Participatory
-    Urban Design'
-subtitle: Luca Simeone (metaLAB at Harvard and Malmö University)
-slug: missing-intentionality-the-limitations-of-social-media-analysis-for-participatory-urban-design
-description: ''
-tags:
-    - systems-and-design
-    - urban-planning
-    - data-visualization
-author: EL_News
-username: el-news
----
-
 # Missing Intentionality: the Limitations of Social Media Analysis for Participatory Urban Design
 
 ### Luca Simeone (metaLAB at Harvard and Malmö University)
@@ -36,15 +20,15 @@ Urban Sensing built upon several existing projects, either conducted by research
 
 -   Visualizes the results, plotting them on a web-based map, like in the Figure 1, which represents the position of geo-located tweets in the city of Milan (Italy) in a two-week period (January 2012). Colors denote the eight most adopted languages while writing the tweets (yellow = Italian, green = English, bright green = Indonesian; pink = Spanish, light pink = French; blue = Dutch; light blue = Portuguese; and red = Japanese).
 
-![Figure 1 Screenshot produced during Urban Sensing and showing geo-located tweets in the city of Milan in January 2012 (Lupi et al. 2012)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yUIV3TkrhDOBcMRVKPdcvA.png)
+![Figure 1 Screenshot produced during Urban Sensing and showing geo-located tweets in the city of Milan in January 2012 (Lupi et al. 2012)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yUIV3TkrhDOBcMRVKPdcvA.png)
 
 Urban Sensing and its visualizations can be used by city designers, planners and administrators or accessed by a broader audience interested in urban dynamics. Imagine, for example, that some urban planners were working on a new master plan for the area of Bovisa, a district in Milan where the quite large Polytechnic University is located; they could use the Urban Sensing platform and identify the most crowded areas of this district by tracking the number of photos and contributions originated from or related to specific geographic locations (Flickr, Twitter, Facebook) or the number of check-ins in Foursquare for each venue in a predefined time-lapse. In Figure 2, Urban Sensing platform plots the geographic locations associated to Twitter contributions (blue dots) on a geographic map of Milan, also displaying the time trends (i.e., the number of contributions per day in the time span).
 
-![Figure 2 Urban Sensing, visual representation of the area of Bovisa, in Milan (August-September 2013)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sB9sRnVGOcLJyCagko8XSw.png)
+![Figure 2 Urban Sensing, visual representation of the area of Bovisa, in Milan (August-September 2013)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sB9sRnVGOcLJyCagko8XSw.png)
 
 Figure 2 shows how, during weekdays, the Bovisa university campus presents spikes of social media activity during lesson hours (9 a.m. to 6 p.m.), whilst the nearby UCI movie theatre and the shopping center are the stage for a high concentration of social media activity from 9 p.m. until midnight. This data can be further analyzed by tracking contributions from single users and — consequently — investigating how the users move across the city. In Figure 3, the blue dots represent the initial position of the users, whilst the green and red dots show the positions of the same users immediately before and after. By connecting the dots, we can clearly trace users’ movements over time and have an idea not only of the most crowded areas of Bovisa, but also of the locations where specific students come from before getting to the Polytechnic campus, and where they go after. In this sense, the analyses elaborated with Urban Sensing highlight some of the students’ patterns of use for this specific area of Milan.
 
-![Figure 3 Urban Sensing: Map of the Bovisa area, Milan (August-September 2013)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OwdXoKDI6OTQtSBP2uwmbA.png)
+![Figure 3 Urban Sensing: Map of the Bovisa area, Milan (August-September 2013)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OwdXoKDI6OTQtSBP2uwmbA.png)
 
 Urban Sensing aimed at investigating the potential of this and other more complex types of social media analyses and visualizations to support participatory urban design processes. The basic tenet was that through this kind of technological platforms some of the needs and desires of the city inhabitants and visitors could emerge and be heard by urban administrators, designers and planners. In the specific example above mentioned, the findings helped both Milan city administrators and real estate companies in identifying suitable areas to build student housing.
 

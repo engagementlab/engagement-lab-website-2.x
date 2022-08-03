@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/ipads-in-education-lessons-in-civic-discourse-and-disengagement-76159e91fdb
-canonical_url: https://medium.com/civic-media-project/ipads-in-education-lessons-in-civic-discourse-and-disengagement-76159e91fdb
-title: 'iPads in Education: Lessons in Civic Discourse and Disengagement'
-subtitle: Belinha De Abreu
-slug: ipads-in-education-lessons-in-civic-discourse-and-disengagement
-description: ""
-tags:
-- learning-and-engagement
-- youth-media
-- education-technology
-author: EL_News
-username: el-news
----
-
 # iPads in Education: Lessons in Civic Discourse and Disengagement
 
 ### Belinha De Abreu
@@ -23,7 +8,7 @@ Working with the implementation of an iPad program in middle school for the last
 
 Teachers were minimally trained with what apps would function best for them within their curricular areas before September rolled around, and students in the 8th grade were provided with the tool. The roll out of the program in the first year involved approximately 100 students. The decision was made that there would be few restrictions on the iPad itself. After all, as citizens of the digital world, the expectation was that they would be able to handle the tool and use it according to the prescribed rules that were set and signed off by both parent and student.
 
->> Middle schoolers are a breed of their own and while it was presumed that all students would use the tool appropriately, the fact remained that many did not.
+> > Middle schoolers are a breed of their own and while it was presumed that all students would use the tool appropriately, the fact remained that many did not.
 
 Moreover, engagement in the iPad was being used for academic purposes, but for students the iPad was a source of entertainment whereby students could connect with their friends through their social networks, where they could download and play games, and where they could also watch YouTube videos and other sources of videos for fun. The distraction of the toy became problematic with students using the Photo Booth function to create funny faces, and pictures and videos taken for the purpose of capturing friends and sometimes the opposite — making enemies.
 
@@ -35,25 +20,25 @@ Year two of the program did not prove to be easier. In fact, the dissatisfaction
 
 These technology issues and freedom of access issues came up in the end-of-year discussions with students at the close of year two.
 
->> Students were asked to relay their experiences and to tell what they liked about using the iPad and what they did not like about using the iPad.
+> > Students were asked to relay their experiences and to tell what they liked about using the iPad and what they did not like about using the iPad.
 
 Their responses were indicative of who they are generationally, but also how they felt about the limited access and their inability to contribute their ideas to the use of the iPad thereby demonstrating the lack of their participatory engagement and discourse. Yet, there were still positive comments for why they liked the iPad:
 
->> *“I didn’t have to lug around a thousand notebooks and folders.”*
+> > _“I didn’t have to lug around a thousand notebooks and folders.”_
 
->> *“That you didn’t have to worry about losing papers or anything because everything was stored into your iPad on notability and other apps.”*
+> > _“That you didn’t have to worry about losing papers or anything because everything was stored into your iPad on notability and other apps.”_
 
->> *“In a way it made doing some work easier. I would be able to fix certain items even if it is already typed on notability and the touch screen was easy to maneuver since I am use to using “I” technology. Also that it was fast and almost handy when I needed it most.”*
+> > _“In a way it made doing some work easier. I would be able to fix certain items even if it is already typed on notability and the touch screen was easy to maneuver since I am use to using “I” technology. Also that it was fast and almost handy when I needed it most.”_
 
 These comments were the most detailed and encouraging, but many students noted that there was ‘nothing’ that they liked most about using the iPad in school. The reasons for why they did not like the iPad:
 
->> *“Sometimes the apps would act very annoying, like closing out, freezing, or the internet not working even when I was in school.”*
+> > _“Sometimes the apps would act very annoying, like closing out, freezing, or the internet not working even when I was in school.”_
 
->> *“There were a lot of problems with it functioning. The first time we updated all my work and most of my apps were deleted including Notability. I think it is much quicker to write on paper. I also think it gives kids an automatic homework excuse if they, say it wasn’t working. It’s hard to complete homework on it. The online textbooks would better be used on a computer because they don’t function with the IPad well. Many kids also never have them charged which gives them another excuse and also sets them back due to being ill prepared. And a notebook can never “die”. It is also quicker to access things and get prepared for class by just pulling out a notebook.”*
+> > _“There were a lot of problems with it functioning. The first time we updated all my work and most of my apps were deleted including Notability. I think it is much quicker to write on paper. I also think it gives kids an automatic homework excuse if they, say it wasn’t working. It’s hard to complete homework on it. The online textbooks would better be used on a computer because they don’t function with the IPad well. Many kids also never have them charged which gives them another excuse and also sets them back due to being ill prepared. And a notebook can never “die”. It is also quicker to access things and get prepared for class by just pulling out a notebook.”_
 
->> *“I really didn’t like the technical difficulties we had to deal with when we were using it, especially during testing. There were also some difficulties handing in assignments, downloading and upgrading apps, and using apps.”*
+> > _“I really didn’t like the technical difficulties we had to deal with when we were using it, especially during testing. There were also some difficulties handing in assignments, downloading and upgrading apps, and using apps.”_
 
->> *“I didn’t like how we didn’t get to download our own apps. I also didn’t like how there were no games on the iPads. Also the iPads were very slow and there were many glitches. I also didn’t like testing on the iPads.”*
+> > _“I didn’t like how we didn’t get to download our own apps. I also didn’t like how there were no games on the iPads. Also the iPads were very slow and there were many glitches. I also didn’t like testing on the iPads.”_
 
 Ultimately, the most common comment from students was, “We have no freedom.” This also led to student discussion on what they would want to have happen for future students using the tool. Comments ranged from “more trust,” to “a bit more freedom to be able to download apps that we want” to “less restrictions.” One student even went on to mention that they would have appreciated it if the teachers were using the iPads as much as they were requiring the students to do so.
 
@@ -63,10 +48,8 @@ Students concerns and ideas have not been addressed as of yet. The third year of
 
 # REFERENCES
 
-Blume, Howard. 2014. “LAUSD Shifts Gears on Technology for Students,” *The Los Angeles Times*, June 29, accessed June 29, 2014,[http://www.latimes.com/local/education/la-me-lausd-laptops-20140630-story.html](http://www.latimes.com/local/education/la-me-lausd-laptops-20140630-story.html).
+Blume, Howard. 2014. “LAUSD Shifts Gears on Technology for Students,” _The Los Angeles Times_, June 29, accessed June 29, 2014,[http://www.latimes.com/local/education/la-me-lausd-laptops-20140630-story.html](http://www.latimes.com/local/education/la-me-lausd-laptops-20140630-story.html).
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

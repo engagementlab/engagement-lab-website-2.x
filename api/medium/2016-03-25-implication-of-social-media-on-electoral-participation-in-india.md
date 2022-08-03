@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/implication-of-social-media-on-electoral-participation-in-india-d00ef196d0aa
-canonical_url: https://medium.com/civic-media-project/implication-of-social-media-on-electoral-participation-in-india-d00ef196d0aa
-title: Implication of Social Media on Electoral Participation in India
-subtitle: Pallavi Guha (University of Maryland)
-slug: implication-of-social-media-on-electoral-participation-in-india
-description: ''
-tags:
-    - india
-    - social-network
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Implication of Social Media on Electoral Participation in India
 
 ### *Pallavi Guha (*University of Maryland)
@@ -57,9 +42,9 @@ Tolbert, Caroline, and Ramona McNeal. “Does the Internet Increase Voter Partic
 
 Wolfinger, Raymond. “Voter turnout.” Society 28, no. 5 (July/August 1991): 23–26.
 
-![Appendix 1 Source: Website of Election Commission of India]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_gCF4-SPVhjZW4B-H.png)
+![Appendix 1 Source: Website of Election Commission of India](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_gCF4-SPVhjZW4B-H.png)
 
-![Apendix 2]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_PyUOQ-zfNXwF6eAd.png)
+![Apendix 2](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_PyUOQ-zfNXwF6eAd.png)
 
 _If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 

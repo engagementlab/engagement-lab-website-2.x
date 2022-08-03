@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/buytwitter-and-the-intersection-of-civic-media-and-platform-cooperativism-4e835d0c6cd3
-canonical_url: https://medium.com/engagement-lab-emerson-college/buytwitter-and-the-intersection-of-civic-media-and-platform-cooperativism-4e835d0c6cd3
-title: '#BuyTwitter and the Intersection of Civic Media and Platform Cooperativism'
-subtitle: By Gabriel Mugar, Danny Spitzberg , and Eric Gordon
-slug: buytwitter-and-the-intersection-of-civic-media-and-platform-cooperativism
-description: ''
-tags:
-    - civic-media
-    - platform-cooperativism
-    - public-sphere
-    - democracy
-    - twitter
-author: EL_News
-username: el-news
----
-
 # **#BuyTwitter and the Intersection of Civic Media and Platform Cooperativism**
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ndfgAjjn-jc-EyBd.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ndfgAjjn-jc-EyBd.png)
 
 _By [Gabriel Mugar](), [Danny Spitzberg]()_ _, and Eric Gordon_
 
@@ -31,7 +14,7 @@ Recognizing Twitter’s value to the dissemination of news and social movements,
 
 These questions come out of the platform cooperativism movement, which seeks to bring greater responsibility and equity to digitally mediated businesses models. Rooted in the principles and models of cooperatives, the platform cooperativism movement\*\*\*\* seeks to reimagine the relationships that define modes of production in “platformized” business, where high profits rely on exploitative labor practices. In the setting of the #Buytwitter movement, one of the more prominent motivations is a need to redefine what governance looks like such that users have a greater say in ensuring the platform is a more inclusive and less hostile environment.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_2EXHxhvOJQovA0fN.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_2EXHxhvOJQovA0fN.png)
 
 ### _Platform Cooperativism and Civic Media_
 
@@ -43,7 +26,7 @@ For example, this care ethic in the context of media making can be seen in the w
 
 Like City Bureau, the #BuyTwitter activists seeks to redefine the relationship between an infrastructure of media distribution and production and its constituents. The shift in this relationship is one that would allow for the public to take greater care of an infrastructure that has value to democratic processes. Bringing people into the core of governing a media resource is where we see the goals and visions of platform cooperativism and civic media align. We also see a shared problem space, one that is concerned with scale.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_8qZeZNQB2KZSvH8s.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_8qZeZNQB2KZSvH8s.png)
 
 ### _Cooperatives and Civic Media at Scale_
 

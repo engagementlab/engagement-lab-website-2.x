@@ -1,25 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/join-us-for-the-first-civicmediachat-on-play-and-creativity-monday-the-27th-at-4pm-est-4c2a43f70c16
-canonical_url: https://medium.com/engagement-lab-emerson-college/join-us-for-the-first-civicmediachat-on-play-and-creativity-monday-the-27th-at-4pm-est-4c2a43f70c16
-title: 'Join us for the first #CivicMediaChat on Play and Creativity, Monday the 27th
-    at 4pm EST!'
-subtitle: By Becky Michelson
-slug: join-us-for-the-first-civicmediachat-on-play-and-creativity-monday-the-27th-at-4pm-est
-description: ''
-tags:
-    - education
-    - technology
-author: EL_News
-username: el-news
----
-
 # Join us for the first #CivicMediaChat on Play and Creativity, Monday the 27th at 4pm EST!
 
 ### By Becky Michelson
 
 04/24/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_dKHyd7xz9b7FDRHH.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_dKHyd7xz9b7FDRHH.png)
 
 The first [Civic Media Project](http://civicmediaproject.org/works/civic-media-project/index) Twitter chat will feature several case study authors from the [Play and Creativity](http://civicmediaproject.org/works/civic-media-project/playandcreativity) section. During the chat, we will be discussing themes such as the role for youth in civic engagement, implementation challenges of creative civic engagement projects, the inherent tensions between work and play, and more. Examples will be drawn from the authors’ informed experiences with the case studies: “[Terra Incognita: Serendipity and Discovery in the Age of Personalization](http://civicmediaproject.org/works/civic-media-project/terra-incognita-serendipity-and-discovery-in-the-age-of-personalization)” by Catherine D’Ignazio and “[Race to the White](http://civicmediaproject.org/works/civic-media-project/racetothewhitehouse)” by Antero Garcia and Ellen Middaugh.
 

@@ -1,19 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/2020-media-design-cohort-partners-cf3eafd4357d
-canonical_url: https://medium.com/engagement-lab-emerson-college/2020-media-design-cohort-partners-cf3eafd4357d
-title: 2020 Media Design Cohort Partners
-subtitle: Each year, Media Design graduate students at Emerson college come together
-    and partner with groups in the city of Boston to create and…
-slug: 2020-media-design-cohort-partners
-description: ''
-tags: []
-author: EL_News
-username: el-news
----
-
 # 2020 Media Design Cohort Partners
 
-![Dunamis(above), Brain Arts Org(left), & The Message(right)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_52REmOcbRiJNERiJtB5jmA.png)
+![Dunamis(above), Brain Arts Org(left), & The Message(right)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_52REmOcbRiJNERiJtB5jmA.png)
 
 Each year, Media Design graduate students at Emerson college come together and partner with groups in the city of Boston to create and design technologies that benefit the community. This year, however, it’s a little different. The pandemic has changed how the program is operating on a day to day basis, but it certainly hasn’t stopped it. In a sense, it’s simply provided another “design challenge” for the cohort to work around. This 2020 partners for this year are as follows; Brain Arts Org, Dunamis, and The Message. We reached out with a few questions to find out more about them and also discussed life under COVID-19.
 

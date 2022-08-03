@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/social-media-use-and-political-activism-in-turkey-140journos-the-post-of-others-and-vote-and-e5bfe82fad06
-canonical_url: https://medium.com/civic-media-project/social-media-use-and-political-activism-in-turkey-140journos-the-post-of-others-and-vote-and-e5bfe82fad06
-title: 'Social Media Use and Political Activism in Turkey: 140journos, the Post of
-    Others, and Vote and…'
-subtitle: Bilge Yesil (College of Staten Island, City University of New York)
-slug: social-media-use-and-political-activism-in-turkey-140journos-the-post-of-others-and-vote-and
-description: ''
-tags:
-    - hashtag-activism
-    - turkey
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # Social Media Use and Political Activism in Turkey: 140journos, the Post of Others, and Vote and Beyond
 
 ### Bilge Yesil (College of Staten Island, City University of New York)
@@ -26,15 +10,15 @@ The Internet first became commercially available in Turkey in the late 1990s, an
 
 Yet the protests were either ignored by mainstream media from fear of upsetting the government or characterized by partisan outlets as the work of a Western conspiracy. In response, protestors (mostly young and urban) leaned on social media, especially Twitter to fill the information void left by mass media, to counter government propaganda and to compile evidence of police brutality.
 
-![Tweet with video of police gassing the protestors on the day of the sit-in]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Tr2s6NuOXIQqwy-8_7j46w.png)
+![Tweet with video of police gassing the protestors on the day of the sit-in](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Tr2s6NuOXIQqwy-8_7j46w.png)
 
 Twitter served as the most prominent tool for protestors and information-seekers alike. In the first two days of the protests, at least 2 million tweets mentioning hashtags #direngeziparkı, #resistgezi, #geziparki, #occupygezi were sent out, in coordination with postings on several Facebook pages possessing similar names ([“SMaPP Data Report: A Breakout Role for Twitter? The Role of Social Media in the Turkish Protests” 2013](http://themonkeycage.org/2013/06/01/a-breakout-role-for-twitter-extensive-use-of-social-media-in-the-absence-of-traditional-media-by-turks-in-turkish-in-taksim-square-protests/)). Not only did the number of tweets increase; the number of users did as well — from 1.8 million on May 29 to more than 9.5 million on June 10 [(“Gezi Parki eylemlerinin sosyal medya karnesi” 2013)](http://www.radikal.com.tr/yazarlar/m_serdar_kuzuloglu/gezi_parki_eylemlerinin_sosyal_medya_karnesi-1138146).
 
 One particular Twitter account, @140journos stood out as the go-to citizen journalism platform. Named after Twitter’s character limit for messages, 140journos was launched earlier in January 2012 in response to the media blackout concerning the killing of 34 Kurdish villagers by the Turkish air force ([“Turkey’s PM pledges” 2011](http://www.reuters.com/article/2011/12/30/us-turkey-iraq-airstrike-idUSTRE7BT0TP20111230)).
 
-![“140journos, people’s news agency”]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_cga-WdyUuhyKjW6VE6_I_Q.png)
+![“140journos, people’s news agency”](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_cga-WdyUuhyKjW6VE6_I_Q.png)
 
-![“Taksim Square under tear gas. Police reportedly attacking the human chain.”]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sRwWGIf1VEf6cxy__F8Kfw.png)
+![“Taksim Square under tear gas. Police reportedly attacking the human chain.”](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sRwWGIf1VEf6cxy__F8Kfw.png)
 
 Until the Gezi protests, 140journos’ core team, consisting of seven individuals, primarily tweeted from protest rallies and court hearings to inform the public about political events that remained invisible in mass media ([“We are All Journalists Now” 2013](http://www.cjr.org/behind_the_news/turkey_counter_media.php?page=all)). When the Gezi protests erupted, 140journos began re-tweeting messages sent in by protestors nationwide.
 
@@ -44,25 +28,25 @@ In the aftermath of Gezi protests, 140journos’ founders developed a mobile app
 
 Another platform that rose to prominence during the Gezi protests was Otekilerin Postasi (“the Post of Others”). The OP was originally launched in late 2012 as a Facebook page under a different name to express solidarity with Kurdish political prisoners. At one point it was shut down by the Facebook administration for having allegedly published pornographic content. The page later re-opened under its current name and now serves as a hub for user-generated content on sensitive social and political issues. During and in the aftermath of Gezi protests, the OP’s Facebook page was closed twice, and had to re-open under a different name on each occasion ([Guler 2013](http://www.hurriyetdailynews.com/facebook-facing-accusations-of-censoring-citizen-journalism.aspx?pageID=238&nID=51996&NewsCatID=374)). Responding to accusations of censorship, the Director of Facebook Policy in Europe claimed the pages shut down not because of their pro-Kurdish opinion but because they posted content praising the PKK (Kurdistan Workers’ Party), which is considered a terrorist organization by Turkey, the U.S and the E.U. ([Basaran 2013](http://www.radikal.com.tr/yazarlar/ezgi_basaran/pkkya_ait_her_sey_kapatma_nedenidir-1148259)).
 
-![Facebook page of Otekilerin Postasi]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nTb9F2ZQn91uPnZR3f537Q.png)
+![Facebook page of Otekilerin Postasi](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nTb9F2ZQn91uPnZR3f537Q.png)
 
 After the Gezi protests waned, the affordances of social media were evident once again during the local elections of March 2014. In the period leading up to the elections, a number of civic initiatives emerged to increase voter turnout, monitor polling stations and prevent electoral fraud. They were mainly driven by the AKP’s increasing authoritarianism in the post-Gezi period and by widespread rumors about the party’s attempts to rig the elections. Among these initiatives 140journos and Oy ve Otesi (“Vote and Beyond”) particularly stood out. Oy ve Otesi was launched by eight volunteers to recruit, train and organize election monitors in Istanbul. Reaching out to the public via Twitter and Facebook, the initiative managed to enlist close to 30,000 volunteers who monitored 95% of polling stations in Istanbul on Election Day.
 
-![Facebook page of Oy ve Otesi announcing preparations for the presidential election]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_qvPBwrMeA4XVvh9R5XMS-g.png)
+![Facebook page of Oy ve Otesi announcing preparations for the presidential election](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_qvPBwrMeA4XVvh9R5XMS-g.png)
 
 > > The other prominent actor in the coordination of monitoring and verification of ballot box tabulations was 140journos.
 
 On Election Day, 140journos urged citizens to send photographs of ballot box tabulations under the hashtag #tutanak. The team of volunteers aggregated nearly 6,000 received photos and compared them to official results published by the Election Board, and reported 250 irregularities ([Baykurt 2014](https://www.newschallenge.org/challenge/2014/feedback-review/journos-mobile-platform-verifies-social-media-content-filters-citizen-reporting-and-extends-the-coverage-of-civic-news)).
 
-![Using hashtags #tutanakNO and #tutanak, citizens announced which ballot box tabulations had been missing]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sJ_lnAGTsX5HsQyGz4TfQQ.png)
+![Using hashtags #tutanakNO and #tutanak, citizens announced which ballot box tabulations had been missing](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sJ_lnAGTsX5HsQyGz4TfQQ.png)
 
 140journos also developed a new web-based application to detect and report tabulation irregularities. Named Saydirac (“The Counter”), the application aims to enable citizens to enter data into the system which will then be compared to official results. 140journos launched Saydirac on June 1, 2014 when repeat elections were held in three provinces. One of 140journos’ co-founders, Cem Aydogdu notes that they hope Saydirac will facilitate active participation of citizens: “This is a tool designed to prevent a handful of individuals from shouldering the burden, a tool to prevent citizens from remaining on the sidelines and instead take responsibility for their own votes.”
 
 140journos used Saydirac again on August 10, 2014 — the day of the presidential election. It was joined by other initiatives that also organized volunteers and used social media to monitor and verify the votes. Among them were @Oy ve Otesi (Vote and Beyond), @SandikBasindayiz (We are at the Polls) and @TRnin Oylari (Turkey’s Votes) and its local branches in six major cities. Before the election, these groups organized close to 10,000 volunteers to work as “ballot box monitors,” posted YouTube training videos for them, and even set up 1–800 numbers in case they needed assistance. The presidential election was not as heated as the local elections back in March due to several reasons, most prominently because of low voter turnout. Accordingly, social media activity levels remained low compared to March elections.
 
-![@TRnin Oylari (Turkey’s Votes) had prepared this guideline for volunteers on how to report voting, tallying and other irregularities]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_IANpgH132oF17zXstxrJpQ.png)
+![@TRnin Oylari (Turkey’s Votes) had prepared this guideline for volunteers on how to report voting, tallying and other irregularities](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_IANpgH132oF17zXstxrJpQ.png)
 
-![The core of group of volunteers of Ankaranin Oylari (Ankara’s Votes) on the day of the Presidential election]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PG6bkqODE51ZPUR-UzCSxg.png)
+![The core of group of volunteers of Ankaranin Oylari (Ankara’s Votes) on the day of the Presidential election](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PG6bkqODE51ZPUR-UzCSxg.png)
 
 # Discussion
 

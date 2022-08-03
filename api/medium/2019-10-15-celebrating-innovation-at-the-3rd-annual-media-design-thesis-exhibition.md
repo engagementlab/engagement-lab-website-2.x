@@ -1,26 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/celebrating-innovation-at-the-3rd-annual-media-design-thesis-exhibition-60a2cba9de1d
-canonical_url: https://medium.com/engagement-lab-emerson-college/celebrating-innovation-at-the-3rd-annual-media-design-thesis-exhibition-60a2cba9de1d
-title: Celebrating Innovation at the 3rd Annual Media Design Thesis Exhibition
-subtitle: On September 5, 2020, Emerson College’s Urban Arts Gallery hosted the 3rd
-    Media Design public exhibition and reception. This event…
-slug: celebrating-innovation-at-the-3rd-annual-media-design-thesis-exhibition
-description: ''
-tags:
-    - journalism
-    - civic-media
-    - media-design
-    - emerson-college
-    - innovation
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_E7eg5Z8cJaFG20-1i6Zf8w.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_E7eg5Z8cJaFG20-1i6Zf8w.jpeg)
 
 # Celebrating Innovation at the 3rd Annual Media Design Thesis Exhibition
 
-![Current Media Design students, Engagement Lab faculty, and citizens throughout the greater Boston area mingle and interact with the final civic media projects.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JV9ppaTsltnk-KN9iSTTSw.jpeg)
+![Current Media Design students, Engagement Lab faculty, and citizens throughout the greater Boston area mingle and interact with the final civic media projects.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JV9ppaTsltnk-KN9iSTTSw.jpeg)
 
 On September 5, 2019, Emerson College’s Urban Arts Gallery hosted the 3rd Media Design public exhibition and reception. This event featured five interventions with Boston-based organizations looking to use media to improve their impact in their communities.
 
@@ -30,7 +12,7 @@ Working closely with faculty advisors, student teams develop a deep knowledge ba
 
 This year’s cohort put together innovative, thought-provoking prototypes with dynamic partners.
 
-![A guest interacting with iCivics Explorer.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZdQhZ3l_1PM144GbmGw4ag.png)
+![A guest interacting with iCivics Explorer.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZdQhZ3l_1PM144GbmGw4ag.png)
 
 **Project Title:** iCivics Explorer: A Media Literacy Approach to Empowering Student Voices Through Civic Media Creation
 
@@ -52,7 +34,7 @@ Emily and Lea created _Ujima: A Community Solidarity Game_, a collaborative role
 
 This game is intended to be played during Ujima’s City-Wide Assemblies in order to empower members to have deliberative and collaborative conversations about the businesses in their communities.
 
-![Guests discuss Elisa’s Media Design project, outlined on the wall behind them.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZPhRGaUBzMmBJnooPL1jnw.jpeg)
+![Guests discuss Elisa’s Media Design project, outlined on the wall behind them.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZPhRGaUBzMmBJnooPL1jnw.jpeg)
 
 **Project Title:** Illuminating Mental Health
 
@@ -74,7 +56,7 @@ Vassiliki collaborated with Citizen TALES\* Chorus, the Engagement Lab, and Miss
 
 Citizen TALES\* Commons is a transformative, holistic, multimodal platform of open communication, both spatial and virtual, facilitated by a website and disseminated through podcasting. More details about the project can be found at [https://citizentales.squarespace.com/](https://citizentales.squarespace.com/).
 
-![Media Design graduates Renée Hopkins, Giles Bullen, and Isaiah Frisbie!]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OJeV5cvXfitC7liwCF-JgA.png)
+![Media Design graduates Renée Hopkins, Giles Bullen, and Isaiah Frisbie!](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OJeV5cvXfitC7liwCF-JgA.png)
 
 **Project Title:** Path of Participatory Resistance: A Gallery Guide for Radical Reflection & Collaborative Curation
 

@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/crowdfunding-civic-action-pimp-my-carro%C3%A7a-c6707464e21c
-canonical_url: https://medium.com/civic-media-project/crowdfunding-civic-action-pimp-my-carro%C3%A7a-c6707464e21c
-title: 'Crowdfunding Civic Aaction: Pimp My Carroça'
-subtitle: Rodrigo Davies (Center for Civic Media, MIT)
-slug: crowdfunding-civic-action-pimp-my-carroça
-description: ''
-tags:
-    - crowdfunding
-    - play-and-creativity
-    - brazil
-author: EL_News
-username: el-news
----
-
 # Crowdfunding Civic Aaction: Pimp My Carroça
 
 ### *Rodrigo Davies (*Center for Civic Media, MIT)
@@ -25,13 +10,13 @@ Sao Paulo, a city of more than 11 million people, recycles less than 1% of its 1
 
 But his one-man mission needed greater scale in order to have a larger impact, so in early 2012 Mundano created a crowdfunding campaign on the Sao Paulo-based platform Catarse in order to grow the movement. Mundano and the three other local graffiti artists with whom he runs Parede Viva (Living Wall), a graffiti collective and education program, named the campaign Pimp My Carroça (Pimp My Wagon, or PMC), echoing the MTV series “Pimp My Ride,” in which contestants’ cars are refitted and redecorated by professionals. The group’s goal was to raise BRL 38,200 ($17,260) to fund supplies to paint 20 waste pickers’ carts at a public event. The catadores would also be given free medical consultations from local doctors. They also planned to make a documentary film about the movement and the public art event (Mundano 2012a). They offered backers credits in the documentary, vinyl stickers, t-shirts, recycled bottles and artwork.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_S4fIBt9jq2Els-HNkvvLiQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_S4fIBt9jq2Els-HNkvvLiQ.jpeg)
 
 # Contagious Success
 
 The PMC campaign opened on March 27, 2012, and during its first five days rose almost a quarter (22%) of its target. By the end of April the campaign had raised just over half of the total, and the median donation was between BRL 20 and 30 throughout this period. On May 3 the campaign received by far its biggest donation up to that point, of BRL 3,000, from a backer in Rio de Janeiro. It was the third-largest pledge the project received overall. A week later, two days before the deadline of May 11, the campaign met its target after the 704th backer pledged BRL 100. The success of the campaign was contagious. In the three days after hitting the funding target, PMC raised BRL 25,669, more than it had risen in March and April combined (One backer was recorded on May 14 due to a delay in payment processing). While the three largest backers, two of which participated in the final three days of the campaign, accounted for almost a third of the overall raise, most donations were clustered around BRL 30.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_qn6LLgTwKffwWMQoUHxE1Q.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_qn6LLgTwKffwWMQoUHxE1Q.jpeg)
 
 The large volume of relatively small donations suggests that the PMC outreach strategy, which focused on email, in-person communication and social media accounts of the members of Parede Vida (PV), was very successful. Mundano tweeted 93 times about the campaign on his Twitter handle mundano_sp, receiving mentions and retweets from Brazilian celebrities with large Twitter followings, such as Sergio Marone (399,000) and film director and television host Marcelo Tas (5,000,000) (Social media analystics service Topsy). The campaign’s reach was also highly localized: four out of five backers (631) listed their address as being in Sao Paulo. Nevertheless, the project did receive nationwide attention and attracted backers from 17 of Brazil’s 27 states. The PMC campaign was a great success in terms of surpassing its goal and achieving broad-based, small-dollar support for a civic issue. It’s notable that close to half of the campaign’s 792 backers, 346 were first-time users of the Catarse platform (The data used to analyze pledging amounts and behavior was anonymized).
 
@@ -41,7 +26,7 @@ On June 5th, over 1,000 supporters of the campaign gathered in Sao Paulo for the
 
 In September 2013 PV opened a second PMC crowdfunding campaign on Catarse, for catadores in Curitiba. It raised BRL 44,888, 117% of its target, from 502 donors. Backers for the campaign were split between Curitiba’s state, Parana, and Sao Paulo, which contributed two-fifths of the backers. The Curitiba “pit stop” event attracted 29 catadores and their families, 150 volunteers and doctors.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bR2Q_FHcOxfaQozHD5jcKA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bR2Q_FHcOxfaQozHD5jcKA.jpeg)
 
 PMC Sao Paulo and its Curitiba spinoff are effective examples of tactical civic, urban interventions that can attract broad-based support from crowdfunders. PV has been able to grow and retain its digital community since the first campaign, and has 10,000 followers on Facebook, even though the group had not used the platform before the end of the Sao Paulo campaign. Although the campaign did not elicit a public response from policymakers, this was not the campaign’s primary intended output. Mundano and PV are happy to make rhetorical challenges to the political establishment, but their theory of change is rooted in public engagement and education, changing the discourse around waste pickers. In this respect the campaign was successful in using crowdfunding to support the building of a movement around sustainability issues. PV continues to use the PMC Sao Paulo Catarse page as a place to engage supporters and has posted eight updates to January 2014, including news from Sao Paulo and Curitiba. Their latest update suggests that they are considering crowdfunding events for catadores in other Brazilian cities in the coming years.
 

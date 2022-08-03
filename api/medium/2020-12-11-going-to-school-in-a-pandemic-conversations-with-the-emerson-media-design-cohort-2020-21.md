@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/going-to-school-in-a-pandemic-conversations-with-the-emerson-media-design-cohort-2020-21-9a06a28af140
-canonical_url: https://medium.com/engagement-lab-emerson-college/going-to-school-in-a-pandemic-conversations-with-the-emerson-media-design-cohort-2020-21-9a06a28af140
-title: 'Going to school in a pandemic: Conversations with the Emerson Media Design
-    Cohort(2020–21)'
-subtitle: As this semester comes to a close, it’s interesting to look back and reflect
-    on how different it’s been for students across the country…
-slug: going-to-school-in-a-pandemic-conversations-with-the-emerson-media-design-cohort-2020-21
-description: ''
-tags:
-    - civic-media
-    - emerson-college
-    - pandemic
-author: EL_News
-username: el-news
----
-
 # Going to school in a pandemic: Conversations with the Emerson Media Design Cohort(2020–21)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VreNChaHfxjxEWxr0C-SEQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VreNChaHfxjxEWxr0C-SEQ.png)
 
 As this semester comes to a close, it’s interesting to look back and reflect on how different it’s been for students across the country. Almost everything has moved to a virtual learning environment with the help of services like Zoom or Google Hangouts. For those in the Media Design program at Emerson College, the whole program has been revamped in order to respond to the challenge of “virtual school”. To learn more, we interviewed a few students in the current cohort to hear about their experience in the program thus far.
 

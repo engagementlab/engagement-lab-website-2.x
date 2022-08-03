@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/the-polyxpress-mobile-ethnographic-storytelling-system-df700d6cb502
-canonical_url: https://medium.com/civic-media-project/the-polyxpress-mobile-ethnographic-storytelling-system-df700d6cb502
-title: The PolyXpress Mobile Ethnographic Storytelling System
-subtitle: Dr. Michael Haungs, Dr. Grace Yeh, and Dr. David Gillette (California Polytechnic
-    State University)
-slug: the-polyxpress-mobile-ethnographic-storytelling-system
-description: ''
-tags:
-    - storytelling
-    - mobile
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # The PolyXpress Mobile Ethnographic Storytelling System
 
 ### _Dr. Michael Haungs, Dr. Grace Yeh, and Dr. David Gillette_ (California Polytechnic State University)
@@ -28,11 +12,11 @@ To study the connection between place, story, and narrative mobility, an interdi
 
 -   Build an international, academic and community-focused network of development partners to collaboratively expand, refine, and strengthen the PolyXpress system.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EriT28VP8aDK6bQgvNqmbQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EriT28VP8aDK6bQgvNqmbQ.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_r8fc8ue3vxXqX77YBn1TXw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_r8fc8ue3vxXqX77YBn1TXw.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rxxkSGuN0gVTM0bi92K4wg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rxxkSGuN0gVTM0bi92K4wg.png)
 
 # Project Foundation
 

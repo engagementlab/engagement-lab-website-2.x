@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/it-gets-better-project-c7c47e8173f5
-canonical_url: https://medium.com/civic-media-project/it-gets-better-project-c7c47e8173f5
-title: It Gets Better Project
-subtitle: Laurie Phillips Honda (University of Oregon, School of Journalism and Communication)
-slug: it-gets-better-project
-description: ''
-tags:
-    - lgbtq
-    - community-and-action
-    - social-media
-author: EL_News
-username: el-news
----
-
 # It Gets Better Project
 
 ### *Laurie Phillips Honda (*University of Oregon, School of Journalism and Communication)
@@ -23,11 +8,11 @@ Examples of twenty-first century social media-based activism are plentiful, but 
 
 _IT GETS BETTER: Elder Rev. Kevin E. Taylor (Black, Gay, Christian and Proud!) / YouTube- taken on March 10th, 2015._
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rl6lYyXzpwWv_nZtnA4UoQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rl6lYyXzpwWv_nZtnA4UoQ.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_FPEJdMAnqXhf01jQrPFnOQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_FPEJdMAnqXhf01jQrPFnOQ.png)
 
-![Images taken from http://bit.ly/1zuYLfz, http://bit.ly/10ss1oa, and http://bit.ly/1GmU4WX on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ffcmmAgQHBmi83IM0qdBKQ.png)
+![Images taken from http://bit.ly/1zuYLfz, http://bit.ly/10ss1oa, and http://bit.ly/1GmU4WX on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ffcmmAgQHBmi83IM0qdBKQ.png)
 
 Blending global citizen engagement and digital technologies, the IGBP phenomenon is an effective form of modern civic participation.
 
@@ -35,13 +20,13 @@ Blending global citizen engagement and digital technologies, the IGBP phenomenon
 
 Prompted by a blog reader’s desire to prevent LGBTQ adolescents’ suicide, [Dan Savage](http://www.thestranger.com/authors/259/dan-savage) and Terry Miller filmed a video about the harassment and bullying they were subjected to as adolescents and their adult familial and economic successes (“[It Gets Better: Dan and Terry.](http://bit.ly/1rGvdFY)”)
 
-![Image taken from http://bit.ly/1rGvdFY on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_STnX6HdShezj8vPNlfg2ig.png)
+![Image taken from http://bit.ly/1rGvdFY on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_STnX6HdShezj8vPNlfg2ig.png)
 
-![Image taken from http://bit.ly/1aYT0cY on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Cy-Bo4k24RAQQuz41f7Z5A.png)
+![Image taken from http://bit.ly/1aYT0cY on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Cy-Bo4k24RAQQuz41f7Z5A.png)
 
-![Image taken from http://bit.ly/1xaYE4s on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__cPyc_8ND3OVNSp1ZhiRHQ.png)
+![Image taken from http://bit.ly/1xaYE4s on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__cPyc_8ND3OVNSp1ZhiRHQ.png)
 
-![Image taken from http://bit.ly/1txCR6v on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VtDGs_exVjwviW5K79wClA.png)
+![Image taken from http://bit.ly/1txCR6v on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VtDGs_exVjwviW5K79wClA.png)
 
 Savage and Miller uploaded the video to YouTube and invited LGBTQ adults to contribute similar user-generated messages of hope (Savage 2010). Setting an initial goal of 100, they received more than 1,000 videos in one week’s time, exceeding the channel’s limits and prompting YouTube engineer Carol Chen to hack into the mainframe and allot them more space (Phillips Honda 2014). Logistical constraints necessitated the launch of itgetsbetter.org on October 6, 2010 to accommodate the flood of submissions (“A New Website and a New Partnership for It Gets Better” 2010), and soon after the IGBP registered as a 501(c)3 nonprofit organization.
 
@@ -49,9 +34,9 @@ Since inception, “celebrities, organizations, activists, politicians, media pe
 
 Additionally, the IGBP has spawned other LGBTQ-centric social change projects, including the “Make it Better Project” and “Not All Like That” (“About the NALT Christians Project” 2014).
 
-![Image taken from http://on.fb.me/1usaytK on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PtMp1jGJLwFBm4B8CmefVw.png)
+![Image taken from http://on.fb.me/1usaytK on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PtMp1jGJLwFBm4B8CmefVw.png)
 
-![Image taken from http://bit.ly/1Ae7uEg on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_HH1Ach48lh5-X_SM-Nk15Q.png)
+![Image taken from http://bit.ly/1Ae7uEg on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_HH1Ach48lh5-X_SM-Nk15Q.png)
 
 # The IGBP as Contemporary Civic Engagement
 
@@ -63,13 +48,13 @@ LGBTQ harassment and bullying remain pervasive problems in the U.S.: Among 13–
 
 Media coverage is intimately tied to U.S. cultural shifts pertaining to LGBTQ individuals, including public figures’ highly publicized coming out stories, same-sex marriage legislation, and the repeal of “Don’t Ask, Don’t Tell.” All topics received extensive media attention within the last decade, and according to Gallup, U.S. citizens’ “moral acceptability” of lesbian and gay individuals has never been higher (Riffkin 2014).
 
-![Image taken from http://bit.ly/1hjsQHC on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_KqKYK9HIaFtTmaD7sMsC-A.png)
+![Image taken from http://bit.ly/1hjsQHC on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_KqKYK9HIaFtTmaD7sMsC-A.png)
 
 In addition to garnering international media coverage of LGBTQ harassment, bullying, and suicide, the IGBP was bolstered by corporate support from YouTube’s parent company. Google officially sanctioned the IGBP one month after its launch; made a $50,000 contribution to IGBP benefactor The Trevor Project (Smith, Block 2010); and partnered with ad agency Bartle Bogle Hegarty (BBH) to develop and nationally broadcast a commercial spotlighting the IGBP (Miller 2011).
 
-![Image taken from http://bit.ly/1t9ENOP on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_9i1Yz046YH-c8YLxXUyZ-w.png)
+![Image taken from http://bit.ly/1t9ENOP on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_9i1Yz046YH-c8YLxXUyZ-w.png)
 
-![Image taken from http://nyti.ms/1s0Zf4n on November 1, 2014.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OoW3UKXRa7_8eq_D2kUvdw.png)
+![Image taken from http://nyti.ms/1s0Zf4n on November 1, 2014.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OoW3UKXRa7_8eq_D2kUvdw.png)
 
 Undoubtedly, civic awareness of and citizen engagement with the IGBP were strengthened by mainstream media coverage and corporate buy-ins. Additionally, the nonprofit organization has strategically planned for its future through the marriage of numerous online and offline ventures, and Savage intends to make the IGBP a long-term resource for adolescents (Savage 2012). Amid early criticisms of his video and the project overall, Savage stated that his overarching goal was for the IGBP to be a vehicle for nationwide LGBTQ policy change within the ongoing battles for equal rights (Savage 2010).
 

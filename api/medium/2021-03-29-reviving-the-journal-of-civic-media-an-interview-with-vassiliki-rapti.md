@@ -1,20 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/reviving-the-journal-of-civic-media-an-interview-with-vassiliki-rapti-364469960e42
-canonical_url: https://medium.com/engagement-lab-emerson-college/reviving-the-journal-of-civic-media-an-interview-with-vassiliki-rapti-364469960e42
-title: 'Reviving the Journal of Civic Media: An Interview with Vassiliki Rapti'
-subtitle: From the earliest days of Emerson College’s Engagement Lab, we have focused
-    on the cross-pollination of ideas and the cultivation of…
-slug: reviving-the-journal-of-civic-media-an-interview-with-vassiliki-rapti
-description: ''
-tags:
-    - civic-media
-    - civic-art
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mC7JYlxAIZs9mRU4WAKUCg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mC7JYlxAIZs9mRU4WAKUCg.png)
 
 # Reviving the Journal of Civic Media: An Interview with Vassiliki Rapti
 

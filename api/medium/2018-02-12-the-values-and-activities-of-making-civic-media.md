@@ -1,20 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/the-values-and-activities-of-making-civic-media-6273c5724bc2
-canonical_url: https://medium.com/engagement-lab-emerson-college/the-values-and-activities-of-making-civic-media-6273c5724bc2
-title: The Values and Activities of Making Civic Media
-subtitle: 'by: Gabriel Mugar'
-slug: the-values-and-activities-of-making-civic-media
-description: ''
-tags:
-    - democracy
-    - communication
-    - civictech
-    - civic-media
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
 # **The Values and Activities of Making Civic Media**
 
 by: [Gabriel Mugar]()
@@ -23,7 +6,7 @@ Government agencies, news outlets, and community-based organizations (CBOs) play
 
 In this climate of distrust, we conducted a study to learn how activists and civic institutions are leveraging media and digital technology to rebuild and reimagine new approaches to civic discourse and action.Through our conversations with over 40 civic media practitioners in Boston, Chicago, and Oakland, we provide a way of identifying and evaluating media and technology designed to facilitate democratic process.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_NHD4eKNP0s7O2DirZjuUXg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_NHD4eKNP0s7O2DirZjuUXg.png)
 
 In this post we highlight some of the [key findings from the full report, which you can find here.](https://elab.emerson.edu/projects/civic-media-practice)
 
@@ -43,7 +26,7 @@ As such, civic media always takes place over time. In this graph, we provide a m
 
 [Social infrastructure](https://www.wired.com/2016/10/klinenberg-transforming-communities-to-survive-climate-change/) is defined as the “people, places, and institutions that foster cohesion and support.” If a group has strong existing relationships with a community, they will be on the right side of the plot. If they are brand new to a community, they will be on the left.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_9ekA4lPfHxeMUtEU.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_9ekA4lPfHxeMUtEU.png)
 
 The second dimension of civic media practice is the objective — how practitioners think about the impact of their work (i.e. impact in the short-term or long-term). Some projects are designed with novelty in mind (i.e. a social media campaign designed to garner quick attention), and some with longevity in mind (i.e. a publicly designed mural on a community center).
 

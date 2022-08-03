@@ -1,25 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/announcing-beatgermswithbheem-a-week-of-online-and-offline-hygiene-education-and-advocacy-69e486f6fc71
-canonical_url: https://medium.com/engagement-lab-emerson-college/announcing-beatgermswithbheem-a-week-of-online-and-offline-hygiene-education-and-advocacy-69e486f6fc71
-title: 'Announcing #BeatGermsWithBheem, A Week of Online and Offline Hygiene Education
-    and Advocacy'
-subtitle: Germs can’t beat the Bheem Team! Today, the Engagement Lab at Emerson College,
-    in collaboration with our on-ground partners the Mary Anne…
-slug: announcing-beatgermswithbheem-a-week-of-online-and-offline-hygiene-education-and-advocacy
-description: ''
-tags:
-    - hygiene
-    - health
-    - education
-    - participatory-design
-    - codesign
-author: EL_News
-username: el-news
----
-
 # Announcing #BeatGermsWithBheem, A Week of Online and Offline Hygiene Education and Advocacy
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xCR5Ak8wMMd4vm8pciUCYA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xCR5Ak8wMMd4vm8pciUCYA.png)
 
 Germs can’t beat the Bheem Team! Today, the [Engagement Lab at Emerson College](https://elab.emerson.edu/), in collaboration with our on-ground partners the [Mary Anne Charity Trust (MACT)](http://www.mactindia.org/), are excited to announce #BeatGermsWithBheem.
 
@@ -29,7 +10,7 @@ From numerous additional trainings and community-facilitated workshops happening
 
 # What is Hygiene with Chhota Bheem?
 
-![The Hygiene with Chhota Bheem logo.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AfxphGZ6aKTFhldeCv6cMQ.png)
+![The Hygiene with Chhota Bheem logo.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AfxphGZ6aKTFhldeCv6cMQ.png)
 
 [_Hygiene with Chhota Bheem_](https://elab.emerson.edu/hygiene/) is a play-based learning program that features one of India’s most beloved children’s characters to teach students about the importance of handwashing and toilet use.
 
@@ -49,7 +30,7 @@ On the ground, we’ve put together a robust week of hygiene education and advoc
 
 Firstly, we’re holding **refresher training sessions** for schools in the Tiruvallur district that already received training in 2018. The aim of the refresher training is to review, reinforce and upgrade the existing knowledge and skills of teachers, who can then take the curriculum to new student and community groups who were not part of the 2018 pilot study.
 
-![Students gather around a teacher to wash their hands with a soapy bottle.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VNf2txBBEo3ckScrvJf2cw.png)
+![Students gather around a teacher to wash their hands with a soapy bottle.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VNf2txBBEo3ckScrvJf2cw.png)
 
 Additionally, we’re helping teach schools and students to make their own **soapy bottles**, a low-cost alternative to bar soaps. Students have fun making soapy bottles in their schools and use them as a replacement for soap. Learning the art of making soapy bottles will increase the habit of handwashing in a sustainable way.
 
@@ -61,7 +42,7 @@ Community workers play an essential role in advocating for the importance of han
 
 But our week of celebration doesn’t stop there! Online and on social media, we’ll be sharing a ton of exciting new stories and resources that further underscore the impact this project has for communities in India.
 
-![The splash page for the brand new Hygiene with Chhota Bheem website, available to access now.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2ir6Ciug1z54H-sd_E89Sw.png)
+![The splash page for the brand new Hygiene with Chhota Bheem website, available to access now.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2ir6Ciug1z54H-sd_E89Sw.png)
 
 Firstly, we’re excited to share that our[ brand new Hygiene with Chhota Bheem website](https://elab.emerson.edu/hygiene) is available to access, starting right now.
 

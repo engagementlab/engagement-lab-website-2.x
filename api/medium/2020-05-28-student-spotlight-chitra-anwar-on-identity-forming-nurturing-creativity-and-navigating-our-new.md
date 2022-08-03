@@ -1,31 +1,12 @@
----
-url: https://medium.com/engagement-lab-emerson-college/student-spotlight-chitra-anwar-on-identity-forming-nurturing-creativity-and-navigating-our-new-fa961d3113fa
-canonical_url: https://medium.com/engagement-lab-emerson-college/student-spotlight-chitra-anwar-on-identity-forming-nurturing-creativity-and-navigating-our-new-fa961d3113fa
-title: 'Student Spotlight: Chitra Anwar on Identity Forming, Nurturing Creativity,
-    and Navigating Our New…'
-subtitle: Chitra Anwar is a member of the 2019 cohort of the Media Design (MA) Program.
-    She is a first generation Indonesian-American whose…
-slug: student-spotlight-chitra-anwar-on-identity-forming-nurturing-creativity-and-navigating-our-new
-description: ''
-tags:
-    - civictech
-    - graduate-school
-    - nonprofit
-    - civic-innovation
-    - creativity
-author: EL_News
-username: el-news
----
-
 # Student Spotlight: Chitra Anwar on Identity Forming, Nurturing Creativity, and Navigating Our New Virtual World
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DVmmfFOIX-j6IWHuSLUBog.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DVmmfFOIX-j6IWHuSLUBog.jpeg)
 
 _Chitra Anwar is a member of the 2019 cohort of the [Media Design (MA) Program.](https://www.emerson.edu/programs/media-design-ma)\*\*\*\* She is a first generation Indonesian-American whose experiences as a person and professional spans several states and two countries. We (virtually) sat down with Chitra to learn more about her journey and following her call to pursue creativity here in Boston._
 
 “I knew I wanted to get into a career where I could flex more of my creative side,” says Chitra Anwar. “My previous working experiences made me realize that I am an innately creative person who wants to marry creative practices with social impact. I sought out the Media Design program because of its emphasis on using creative problem solving to create positive change for communities.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-DI8w7Iw8wb0cYc2l2ZpmQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-DI8w7Iw8wb0cYc2l2ZpmQ.jpeg)
 
 Chitra was born in Arlington, Virginia. When she was six, her family moved back to Indonesia to start a business in hopes of providing a better life for her and her brother. After facing some difficulties during a financial crisis that hit the country in the mid-90s, Chitra’s family moved back to America and relocated to a suburb in Los Angeles. “And that’s primarily where I’ve been. That’s where I did a chunk of my growing up.”
 
@@ -35,19 +16,19 @@ After graduating from San Diego State in 2012 with a Bachelor of Arts degree in 
 
 During her initial move to Indonesia as a child, Chitra didn’t have many opportunities to build her relationship with her extended family. “I did not know them at all,” she told us. Spending time with her family as an adult allowed Chitra to discover the similarities they all carry and how it connects them. “With every single person in my family, there’s some part of them that I could see in me. I was like, oh, this is what family is. It was a really eye-opening and identity building moment for me.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_HLFEdOwwRFPF1f9z.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_HLFEdOwwRFPF1f9z.jpeg)
 
 Chitra was able to immerse herself further into Indonesian culture during her time at [_Prestige_](https://www.prestigeonline.com/id/), where she profiled local and international public figures and reported on brand events she was invited to attend. A defining moment for her was when she had the opportunity to interview American fashion designer Michael Kors a year into the position. “I really, really liked what I did. But after a year and a half of working there, even something that I really enjoyed started to feel kind of routine,” says Chitra. “That’s when I knew that I wanted to pursue something with a little bit more meaning.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_SWPr5LlL--h1U0jD.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_SWPr5LlL--h1U0jD.png)
 
 This led Chitra back to California to work in nonprofit administration at the [Child Care Alliance of Los Angeles](https://www.ccala.net/), where she helped manage the operations of LA county’s quality rating improvement system for early care and education programs. While she carried out daily operational tasks, Chitra also helped to form different programs, resources, and social media messaging for the agency.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Ir2tp3881sTjDVHO.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Ir2tp3881sTjDVHO.jpeg)
 
 “I had a really great manager who encouraged us to explore different, creative things so long as it was related to the general area of early education,” she told us. One of her most notable projects focused on early brain development. “I had the opportunity to do research on a topic that I’m really interested in, given my background in psychology. And then I created flyers and messaging that could be displayed at various preschool or daycare centers, as well as handouts that parents could take home.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_wRSYS6yh_-1h_90V.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_wRSYS6yh_-1h_90V.jpeg)
 
 Chitra recognized that the non-profit space doesn’t always have the flexibility to encourage more innovative, community-driven work. “It can be difficult to work with limited funding and resources. Top-down decisions don’t always translate the way that you’d like them to, which is a reason why I was attracted to the Media Design program. It incorporates a community-focused way of designing solutions.”
 
@@ -55,7 +36,7 @@ For Chitra, coming into the Media Design program after working as a professional
 
 The COVID-19 pandemic demanded more adjustments from Chitra and the Media Design cohort when in-person classes at Emerson College were suspended and moved online to abide by national social distancing guidelines. Before the pandemic, Chitra and three other cohort members were embarking on a group thesis project in partnership with the [City of Boston’s Mayor’s Office of Recovery Services](https://www.boston.gov/departments/recovery-services) to address the fundamental concern of low-income youth of color lacking access to substance misuse prevention and prosocial spaces for support, expression and dialog. Their project and prototype takes a holistic approach to prevention that focuses on social determinants rather than targeting specific substances.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Tfs5XrxOalDa4JX2.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Tfs5XrxOalDa4JX2.jpeg)
 
 Chitra provided some insight on what it’s been like to conduct a participatory design project in the virtual space, where access to her thesis partners and stakeholders happens over Zoom calls and surveys vs. in-person meetings and workshops. “Remote learning has its ups and downs. Working on group assignments is a lot harder because we are separate and can’t physically be together to just doodle out an idea or glance at each other’s screens. But on the flip side, I feel like it’s nice because it also gives you a bit more free time and does save you the time that you’d spend traveling to meet each other.”
 

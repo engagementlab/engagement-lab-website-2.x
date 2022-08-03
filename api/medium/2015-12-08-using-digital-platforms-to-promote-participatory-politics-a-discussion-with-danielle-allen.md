@@ -1,18 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/using-digital-platforms-to-promote-participatory-politics-a-discussion-with-danielle-allen-e3a323179455
-canonical_url: https://medium.com/engagement-lab-emerson-college/using-digital-platforms-to-promote-participatory-politics-a-discussion-with-danielle-allen-e3a323179455
-title: 'Using Digital Platforms to Promote Participatory Politics: A Discussion with
-    Danielle Allen'
-subtitle: By Engagement Lab (Roma Dash)
-slug: using-digital-platforms-to-promote-participatory-politics-a-discussion-with-danielle-allen
-description: ''
-tags:
-    - politics
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
 # Using Digital Platforms to Promote Participatory Politics: A Discussion with Danielle Allen
 
 ### By Engagement Lab (Roma Dash)
@@ -43,7 +28,7 @@ Top Ten Questions for Change-makers Using Digital Platforms to Promote Participa
 
 Tisch College recently held a brown-bag lunch discussion led by Danielle Allen, this year’s recipient of the 2015 Tisch Research Prize winner. Allen, a co-editor of the book _From Voice to Influence: Understanding Citizenship in a Digital Age_, is also a member of the Youth Participatory Politics Research Network.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Or8aq7S8POhV3iJYkL2xkg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Or8aq7S8POhV3iJYkL2xkg.jpeg)
 
 Those in attendance included **Diane O’Donoghue**: Senior Fellow for the Humanities at Tisch College; **Dale Bryan**, Peace and Justice Studies assistant director; **Jennifer McAndrew**, the Communications Manager at Tisch; **Alberto Medina**, Communications Specialist at Tisch; **Steve Cohen**, from the education department at Tufts; **Sherri Sklarwitz**, Associate Director of Student Programs;**Jessica Byrnes,** Special Projects Administrator at Tisch; and **Peter Levine**, Associate Dean for Research; Director of CIRCLE; Lincoln Filene Professor of Citizenship & Public Affairs at Tufts. Together, working around a table, they responded to the ten questions listed above and came up with suggestions for how to integrate them into different communities.
 

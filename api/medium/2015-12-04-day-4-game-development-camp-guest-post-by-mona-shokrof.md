@@ -1,28 +1,14 @@
----
-url: https://medium.com/engagement-lab-emerson-college/day-4-game-development-camp-guest-post-by-mona-shokrof-eeaee01b57e7
-canonical_url: https://medium.com/engagement-lab-emerson-college/day-4-game-development-camp-guest-post-by-mona-shokrof-eeaee01b57e7
-title: 'Day 4: Game Development Camp, Guest Post by Mona Shokrof'
-subtitle: By Engagement Lab
-slug: day-4-game-development-camp-guest-post-by-mona-shokrof
-description: ""
-tags:
-- media
-- science
-author: EL_News
-username: el-news
----
-
 # Day 4: Game Development Camp, Guest Post by Mona Shokrof
 
 ### By Engagement Lab
 
 03/14/2015
 
-*Over the past year, the Engagement Lab and the Egyptian United Nations Development Program (UNDP) have partnered on a new initiative focused on using games and play to tackle global issues, ranging from environmental sustainability to cultural and political empowerment.*
+_Over the past year, the Engagement Lab and the Egyptian United Nations Development Program (UNDP) have partnered on a new initiative focused on using games and play to tackle global issues, ranging from environmental sustainability to cultural and political empowerment._
 
-*This week, the lab is hosting UN staff and designers and entrepreneurs from Egypt for a week-long, intensive game development camp.*
+_This week, the lab is hosting UN staff and designers and entrepreneurs from Egypt for a week-long, intensive game development camp._
 
-*Every day this week, we will share a new blog post written by one of the game makers. Today, Mona Shokrof shares her experiences during the fourth day of the development camp.*
+_Every day this week, we will share a new blog post written by one of the game makers. Today, Mona Shokrof shares her experiences during the fourth day of the development camp._
 
 # Day 4: Game Development Camp
 
@@ -45,5 +31,3 @@ After the discussion, they started presenting some projects. For example, one pr
 We then presented some of our work to the audience and had some good discussions about new opportunities between the UNDP and the Media Lab.
 
 At night, we had a showcase for our games for the Emerson community. We had so much fun playing our games and getting to know more people at Emerson College. It was the perfect end of the day.
-
-

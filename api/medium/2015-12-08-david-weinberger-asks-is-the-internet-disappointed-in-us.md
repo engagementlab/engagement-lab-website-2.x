@@ -1,17 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/david-weinberger-asks-is-the-internet-disappointed-in-us-5bfbcefcb4e7
-canonical_url: https://medium.com/engagement-lab-emerson-college/david-weinberger-asks-is-the-internet-disappointed-in-us-5bfbcefcb4e7
-title: 'David Weinberger Asks: Is The Internet Disappointed In Us?'
-subtitle: By Engagement Lab (Roma Dash)
-slug: david-weinberger-asks-is-the-internet-disappointed-in-us
-description: ''
-tags:
-    - paris
-    - social-media
-author: EL_News
-username: el-news
----
-
 # David Weinberger Asks: Is The Internet Disappointed In Us?
 
 ### By Engagement Lab (**Roma Dash)**
@@ -24,7 +10,7 @@ Last Monday, as part of an Engagement Lab sponsored event, a packed theater of E
 
 His point was that the map provides the reader with a restricted amount of information. People can’t interact with the paper, can’t ask for shortcuts, can’t search for traffic density. Unlike smartphones or tablets; unlike the beauty of Internet.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_OhqI1U39g9ksVGq2.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_OhqI1U39g9ksVGq2.jpg)
 
 He spoke for about 2 hours, followed by a Q&A session. The talk explained how his generation perfected ice cream and how the current one must perfect the Internet — must fight for its survival, its continuous improvement, and to ensure that it remains free and not hijacked by corporate pricing policies.
 

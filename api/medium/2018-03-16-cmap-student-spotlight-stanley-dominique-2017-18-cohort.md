@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-stanley-dominique-2017-18-cohort-656422b2cf5b
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-stanley-dominique-2017-18-cohort-656422b2cf5b
-title: 'CMAP Student Spotlight: Stanley Dominique, 2017–18 Cohort'
-subtitle: Stanley Dominique has been a long time organizer, artist, and community
-    advocate in the city of Boston. A graduate of the University of…
-slug: cmap-student-spotlight-stanley-dominique-2017-18-cohort
-description: ''
-tags:
-    - civic-media
-    - social-media
-    - engagement
-    - emerson-cmap-spotlight
-    - students
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Stanley Dominique, 2017–18 Cohort
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_vjVWZWlVfVa4r5ZNIxjSEg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_vjVWZWlVfVa4r5ZNIxjSEg.jpeg)
 
 **\*Stanley Dominique** has been a long time organizer, artist, and community advocate in the city of Boston. A graduate of the University of Massachusetts Dartmouth with a B.A degree in Graphic Design, he has dedicated a career in the nonprofit sector working with a number of organizations on a variety of issues. Topics that he has worked on range from substance abuse, violence prevention, trauma response, HIV education, public safety, and youth development. He has joined CMAP to further explore the role of art and media technology and how it can be used as a tool to empower and engage communities. Through that lens, he hopes to bring back tools to provide a platform for the public to engage and inspire discussions with actions that help create social change that transfers into policy.\*
 
@@ -28,7 +10,7 @@ username: el-news
 **What does civic media mean to you?
 **Civic media is a very layered and complicated term. It is still such a young field to have such a singular definition. For me, civic media has been about the analysis of the societal culture and norms to help identify an issue, topic, or problem that may need assistance, disruption, or to be highlighted. Through the lens of media, technology, and design, civic media can provide the community a level of accessibility that creates engagement. It helps to tackle an issue through tangible tools and actions that the community can then utilize for self-determination.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_SdqKbvqoiPg98-DeZpsj5w.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_SdqKbvqoiPg98-DeZpsj5w.jpeg)
 
 > > Civic media has been about the analysis of the societal culture and norms to help identify an issue, topic, or problem that may need assistance, disruption, or to be highlighted.
 
@@ -41,7 +23,7 @@ username: el-news
 **Are there any specific projects that you’ve done in the past that intersect with your studies now?
 **Media literacy has always played a large role in the work that I did when I worked with young people. We always took time to discuss their consumption of media and technology. Media is constantly shifting and at every opportunity we wanted to engage them in deep conversation around what they were watching. What was the message being told? Who is the messenger? Is that reflective of the environment you live in, and if not what are you doing to counter that narrative? Much of this type of work is the foundation that led me to the CMAP program.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_D-rtXDOcietgKMTamgNcjw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_D-rtXDOcietgKMTamgNcjw.jpeg)
 
 **How do you define engagement? What does being engaged mean to you?**Engagement is a participatory process. It means being invested on both sides of the aisle. If I’m dealing with somebody, I’m not just directing them on where to go, I am making a direct connection to a service. If I’m working with you and you need assistance, I’m would not say ‘go to this building over there’ or ‘go talk to so and so and they’ll handle it’. That would be a cold handoff, and most of the time those interactions are not successful. My actions would be, okay, let’s sit down and have a conversation. What are you looking for? Let me introduce you to the person you’re going to be working with. Make sure you two have a rapport, make sure that you understand what is happening, what you need to do, and what they need to do. Then I would follow up with that person to make sure they got what they were looking for. That is what is called a warm hand off. Engagement to me is really about being involved from the beginning to the end of that process.
 

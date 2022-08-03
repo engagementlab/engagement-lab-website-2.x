@@ -1,30 +1,12 @@
----
-url: https://medium.com/engagement-lab-emerson-college/student-spotlight-lauren-stott-on-civic-media-and-public-engagement-that-makes-a-difference-cb1d41b3d2ea
-canonical_url: https://medium.com/engagement-lab-emerson-college/student-spotlight-lauren-stott-on-civic-media-and-public-engagement-that-makes-a-difference-cb1d41b3d2ea
-title: 'Student Spotlight: Lauren Stott on Civic Media and Public Engagement That
-    Makes a Difference'
-subtitle: Lauren Stott is a member of the 2017 cohort of the Civic Media, Art and
-    Practice (CMAP) Program at Emerson College. We sat down with…
-slug: student-spotlight-lauren-stott-on-civic-media-and-public-engagement-that-makes-a-difference
-description: ''
-tags:
-    - civic-engagement
-    - civictech
-    - public-engagement
-    - graduate-school
-author: EL_News
-username: el-news
----
-
 # Student Spotlight: Lauren Stott on How Civic Media and Public Engagement Make a Difference
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_SuX6M6DnwApFQ9if3UGV8A.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_SuX6M6DnwApFQ9if3UGV8A.png)
 
 _Lauren Stott is a member of the 2017 cohort of the [Civic Media, Art and Practice (CMAP) Program at Emerson College](https://www.emerson.edu/academics/media-design-ma). We sat down with Lauren to talk about her experience in the program, how it’s shaped her path, and what she’s up to now._
 
 What makes a city whole? How can a city be a place where every community member can get the things that they want and need? Coming from a background in government, Lauren Stott found that efficiency was a common measuring tool. “I kind of came from that background of ‘efficiency is critical.’ You hear that in government all the time: ‘how can we be more efficient?’”
 
-![Stott presents her final Thesis project to the CMAP Leadership Team.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_O8y77F-o5Dou_xNORXkO1Q.jpeg)
+![Stott presents her final Thesis project to the CMAP Leadership Team.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_O8y77F-o5Dou_xNORXkO1Q.jpeg)
 
 But what Stott discovered through the CMAP program is that to create a truly whole city, you need more than just efficiency — you need the people in your city to feel connected and valued.
 
@@ -38,7 +20,7 @@ Stott cites the CMAP program’s emphasis on community partnerships and working 
 
 Through her experiences in CMAP, Stott gained a greater understanding of community needs. “Learning about the idea of ‘meaningful inefficiencies’ and why play is important, and why maybe an interaction you have with a customer service person might take longer, but if it’s more joyful then it’s probably going to be a better engagement than it would be if it was ‘here’s your money, now you can go.’” Those concepts transformed Stott’s thinking around serving communities. “Civic media is important because it gives people that outlet to say ‘I can influence my community,” says Stott. In her view, a whole city is about everyone getting what they want and need from their community, whether that’s an efficient transaction, or a more joyful experience; cities need to be able to offer the right balance to suit everyone’s needs. “I know that’s hard, resources are limited, but in order for a city to be robust and for people to feel like they’re a part of it, they have to be able to shape it in some way. If you live in a city but you don’t feel like it’s yours, then you’re not going feel invested in it, or you’re not going to feel like ‘I care what happens in my neighborhood.’”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DDppwyFTCJp2huLciYRxvA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DDppwyFTCJp2huLciYRxvA.png)
 
 Another project that Stott worked on while in CMAP was the [Journal of Civic Media](https://www.journalofcivicmedia.org/), where she served as the editor. In considering what shape the Journal might take, the team looked to the styles of other journals, and decided what would best fit topics of civic media. “There’s super academic journal format that’s really rigid, and then on the other end there’s the journal with more broad, more frequent posts, with less of an academic focus. We kind of landed right in the middle,” says Stott. “It’s an academic journal, it’s peer reviewed, but because civic media has that spirit of more creativity and flexibility, we wanted it to be a little more relaxed, and with content that was accessible to right now; things that people are working on immediately.” The Journal just launched its first issue this month and is available for free at [journalofcivicmedia.org](http://www.journalofcivicmedia.org).
 

@@ -1,22 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/city-accelerator-cohort-ii-fall-2015-convening-recap-860cedd859f3
-canonical_url: https://medium.com/engagement-lab-emerson-college/city-accelerator-cohort-ii-fall-2015-convening-recap-860cedd859f3
-title: 'City Accelerator Cohort II: Fall 2015 Convening Recap'
-subtitle: 'By: Becky Michelson'
-slug: city-accelerator-cohort-ii-fall-2015-convening-recap
-description: ''
-tags:
-    - civic-engagement
-    - community-engagement
-author: EL_News
-username: el-news
----
-
 # City Accelerator Cohort II: Fall 2015 Convening Recap
 
 _By: Becky Michelson_
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_fsjpw188pgI-gcpqC3ooxA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_fsjpw188pgI-gcpqC3ooxA.png)
 
 In Late October, the 5 cities of the [City Accelerator’s 2nd cohort](http://www.governing.com/cityaccelerator) gathered to share updates, synthesize their learnings, and strategize for the second phase of their community engagement innovation projects. Despite different topic areas within the city projects, the cohort is utilizing similar approaches such as: upgrading existing engagement structures, assuring inclusivity, and refining storytelling methods to address improving engagement. Today’s commonplace engagement practices, such as traditional town hall meetings often face similar challenges of reaching a diversity of stakeholders, engaging different age groups, and maintaining short feedback loops of communication. The rapidly evolving technology of the private sector and it’s priorities of customer satisfaction, agile development that constantly produces new updates, and integrating services into already utilized ones creates new pressures and expectations for the public sector. According to a 2014 Gallup poll, trust in government is historically low. While newer programs like Code for America and the digital consultancies such as [18F](https://18f.gsa.gov/) and the [U.S. Digital Services](https://www.whitehouse.gov/digital/united-states-digital-service) primarily work toward improving the technological back-end of government, there are institutions that have refined the best practices of engagement.
 
@@ -28,13 +14,13 @@ Programs like the City Accelerator, create space to unpack the barriers to engag
 
 The crisp Autumn day began with rapid-fire presentations from the cities about Phase I of their projects. The teams in Albuquerque and Seattle are working with similar themes of consolidating available resources and improving feedback loops. The Albuquerque team is working on integrating systems that help immigrant entrepreneurs navigate the business development ecosystem. Frank Mirabal, the project city lead from Albuquerque reminded us of the power of communicating existing resources with the sobering lesson that, “To see is to be seen”. Seattle faces similar concerns of consolidating useful information and strengthening the related communication loops. In lieu of improving how Seattle conducts community engagement, they are identifying overlapping outreach efforts and centralizing communication to avoid fatiguing communities for input. Kathy Nyland, Director of the Department of Neighborhoods, reminded us that “Just because an issue is new to us, doesn’t mean it’s new to a resident.” Thus the Seattle team is exploring ways to better archive previous community conversations prior to revisiting certain conversations such as housing developments in a specific neighborhood that may have already discussed this topic before.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_MfIc5q1Wz6WoP3KD.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_MfIc5q1Wz6WoP3KD.png)
 
 _Seattle’s Engagement Process imagined in Visio_
 
 Meanwhile, the teams from New Orleans and Atlanta shared the outcomes of their efforts to employ public design and co-design approaches. The team in New Orleans has worked on moving beyond generic focus groups by engaging group participants and relevant stakeholders in a culminating design workshop to source solutions to design for increasing primary health care use. The participatory framework is meant to encourage creativity, collaboration, and buy-in among people who are not seeking primary care. Similarly, Atlanta’s project is based on a public design framework which gathers feedback for a storytelling project and allows participants to define the ways they want to be communicated with. The public design approach uses design-thinking when co-creating the story collection and sharing campaign to establish relationships in neighborhoods. This process of mutual story-sharing aims to build trust between underrepresented voices that are soon to receive community benefit distributions and the influencers and decision-makers leading the projects.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_sG5lySHEn2BOTEL2.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_sG5lySHEn2BOTEL2.png)
 
 _Atlanta’s public design project relies on design-thinking_
 
@@ -46,7 +32,7 @@ Next, convening participants playtested a game called about balancing the needs 
 
 After a delicious lunch break and an introduction to phase II project planning, there were in-depth conversations and mini panels on three central themes that have emerged from the cohort thus far. The conversations delved into intersections between community engagement and design-thinking, internal municipal communications infrastructure, and trust-building. Gleaned insights included nuances such as the difference between outreach and information: where one is about conveying information while engagement is more of a conversation. Improving the back-end coordination is helping cities like Seattle set forth higher expectations about having constructive conversations between cities and citizens. Similarly, the New Orleans team is finding that a more interactive approach through co-design is helping facilitate conversations with people, rather a merely one-way communications.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_VQUP0Ije2cCoADYq.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_VQUP0Ije2cCoADYq.jpg)
 
 _Inside the Public Servant’s Studio: In-depth conversations of emerging themes within the City Accelerator Cohort_
 

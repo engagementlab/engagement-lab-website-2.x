@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/liveblog-from-the-data-transparency-conference-3254e920d9ba
-canonical_url: https://medium.com/engagement-lab-emerson-college/liveblog-from-the-data-transparency-conference-3254e920d9ba
-title: Liveblog from the Data Transparency Conference
-subtitle: By Catherine D’Ignazio
-slug: liveblog-from-the-data-transparency-conference
-description: ''
-tags:
-    - advertising
-    - ad-blocking
-author: EL_News
-username: el-news
----
-
 # Liveblog from the Data Transparency Conference
 
 ### By Catherine D’Ignazio
 
 11/17/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_MPpjhqkNf7zbAet4.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_MPpjhqkNf7zbAet4.jpg)
 
 This is a liveblog from the [Data Transparency Lab](http://dtlconferences.org/) conference at the [MIT Media Lab](http://media.mit.edu/) which is about transparency in user data collected from networked digital devices such as computers, mobile phones and other networked objects. Things that are needed for making a difference in user data online. Jose Luis Agundez (AT&T), the moderator, introduces the panel by saying that we need to connect research, policy, end users and data more clearly. We have an opportunity to shed light on the status of tools and data. He notes that we need a reality check. We can choose to not care and we can also choose to take specific steps in the right direction in terms of privacy of user data. What is the force of the users and the people? What is the potential way forward? He notes that transparency of government data is different from transparency of personal data and we should not conflate the two. This session is focused on data transparency in relation to personal, user data.
 
@@ -26,13 +12,13 @@ This is a liveblog from the [Data Transparency Lab](http://dtlconferences.org/) 
 
 He polls the audience to see how many work in marketing & advertising. About 3 people. He says this is a problem in terms of having this conversation. Shows a terrifying graphic of the marketing tech landscape. Marketing technology is creating a cluttered and expensive collection of point solutions. It’s growing tremendously. It presents new problems. Ghostery is neutral — provide tools to have better digital experience. All the marketing tech makes the digital experience slow and sucky for end users.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_U6YC7Ncv0kuI0NqY.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_U6YC7Ncv0kuI0NqY.jpg)
 
 Just in the past 6 months and given the growth of mobile — consumers are now mad because they have a slow web experience. It’s draining their batteries and their data plans. He has been in the marketing tech space for a long time. Why is this so complex? Emotion is greater than “Ration” (huh?) This applies to consumers and businesses. The NYTimes calculated how much of the cost comes from the ads on mobile websites.
 
 The industry knows this is a problem. Ghostery provides better transparency so businesses and users can make better decisions. You can install on your browser for free. Ghostery is a business and they make money by consumers opting into anonymous data — retail, banks, travel, etc. The company that owns the webpage doesn’t understand the tracking ecosystem either. How do you make money? You appeal to marketers’ greed and fear. The problems right now in this landscape are performance, governance , security and privacy. Customers leave because of all of these reasons right now.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_D66T4-3RyYKYt0Jt.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_D66T4-3RyYKYt0Jt.jpg)
 
 Shows example of Crate & Barrel. There are at least 50 third parties collecting data on their homepage. It’s messy and complicated. Crate and Barrel probably doesn’t know who they are. But it can start working against them, slowing the site down, and compromising user privacy. Ghostery tries to work with regulators to provide better privacy tools. He shows an example of their work with Reuters.
 
@@ -48,7 +34,7 @@ The perceived benefits of ad block are better user experience, faster page loadi
 
 Company specializes in social analytics and social good.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_t3kzaI632ol8Wzz4.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_t3kzaI632ol8Wzz4.jpg)
 
 His company does cross-industry data monetization. What they do is take data from one industry and giving value to another industry. Social good is a powerful trojan horse to push companies to share data and to engage with end users to make them aware of how valuable their data and to loop them into the solution. They integrate data from, say telco and banks and social media in order to provide value to their customers.
 
@@ -62,7 +48,7 @@ Paolo is a designer. He founded a research lab to make data more useful and acce
 
 He shows the tool RAW, a web-based tool for creating customized charts from spreadsheets with D3 at the base. People loved it immediately not just because of what it does but because of how it does what it does. It won a FastCompany award for Data Visualization in 2015. FloodWatch is another tool with this approach.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LG-iQ6Oo4KJun3b_.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LG-iQ6Oo4KJun3b_.jpg)
 
 What if we transform relationship with data into a game? In-person game about personal data that his studio designed. He also shows a design-approach to using metaphors to explain web trackers (above image). They also try to make personal data more public. They scraped car sharing data and then used aesthetics to convey the data.
 

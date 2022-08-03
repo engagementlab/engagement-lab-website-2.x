@@ -1,17 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/engagement-lab-seeks-full-time-researcher-project-manager-f12929825f00
-canonical_url: https://medium.com/engagement-lab-emerson-college/engagement-lab-seeks-full-time-researcher-project-manager-f12929825f00
-title: Engagement Lab Seeks Full-Time Researcher/Project Manager
-subtitle: Full-Time Researcher/Project Manager
-slug: engagement-lab-seeks-full-time-researcher-project-manager
-description: ""
-tags:
-- india
-- design-thinking
-author: EL_News
-username: el-news
----
-
 # Engagement Lab Seeks Full-Time Researcher/Project Manager
 
 # Full-Time Researcher/Project Manager
@@ -28,37 +14,37 @@ The researcher/project manager will be responsible for overseeing every element 
 
 # Required skills, knowledge and educational background
 
-* 2–3 years experience doing mixed-methods evaluation research
+-   2–3 years experience doing mixed-methods evaluation research
 
-* Familiarity with qualitative research software (i.e. Dedoose, NVIVO), including conducting and coding interviews
+-   Familiarity with qualitative research software (i.e. Dedoose, NVIVO), including conducting and coding interviews
 
-* Familiarity with quantitative research software (i.e. R, SAS), including survey creation
+-   Familiarity with quantitative research software (i.e. R, SAS), including survey creation
 
-* Excellent writing skills
+-   Excellent writing skills
 
-* Project management experience, especially coordinating international efforts
+-   Project management experience, especially coordinating international efforts
 
-* Excellent organization skills with attention to detail
+-   Excellent organization skills with attention to detail
 
-* Ability to experiment, iterate and adapt while keeping long term goals in mind
+-   Ability to experiment, iterate and adapt while keeping long term goals in mind
 
-* Strong leadership skills and acumen
+-   Strong leadership skills and acumen
 
-* A clear and professional standard of written and verbal communication in English
+-   A clear and professional standard of written and verbal communication in English
 
-* An advanced degree in the social sciences, public health, or relevant field
+-   An advanced degree in the social sciences, public health, or relevant field
 
 # Preferred skills and background
 
-* Familiarity with game design and the field of serious games
+-   Familiarity with game design and the field of serious games
 
-* Familiarity with or past experience working in Tamil Nadu, India and/or Ghana
+-   Familiarity with or past experience working in Tamil Nadu, India and/or Ghana
 
-* Familiarity with environmental sensors for gathering data
+-   Familiarity with environmental sensors for gathering data
 
-* Familiarity with structure and organization of International NGOs
+-   Familiarity with structure and organization of International NGOs
 
-* Familiarity with the topic of handwashing with soap (HWWS)
+-   Familiarity with the topic of handwashing with soap (HWWS)
 
 # Travel Requirements
 
@@ -71,5 +57,3 @@ Please submit a cover letter, resume or portfolio, and three names of references
 # About the Engagement Lab
 
 The Engagement Lab is an applied research and design lab dedicated to reimagining civic engagement for a digital culture. We find new ways for communities to bring their voice forward, and new ways for institutions to respond. We work with partners to co-design solutions to the most pressing problems in democracy and governance, including participation gaps, gender or racial discrimination, lack of basic media literacies, youth exclusion, and gaps in public health practices. Our research and practice are influenced by the fields of media studies, communications, human centered design, and cultural studies. Our research ranges from basic research about play and learning to specific program evaluations. Learn more at [www.elab.emerson.edu.](http://www.elab.emerson.edu.)
-
-

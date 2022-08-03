@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/social-auditing-transparency-gas-cylinder-distribution-in-india-923679acb463
-canonical_url: https://medium.com/civic-media-project/social-auditing-transparency-gas-cylinder-distribution-in-india-923679acb463
-title: 'Social Auditing & Transparency: Gas Cylinder Distribution in India'
-subtitle: Abhishek Narain Singh (Institute of Management Technology Nagpur) and P.
-    Vigneswara Ilavarasan (Indian Institute of Technology Delhi)
-slug: social-auditing-transparency-gas-cylinder-distribution-in-india
-description: ''
-tags:
-    - india
-    - transparency
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Social Auditing & Transparency: Gas Cylinder Distribution in India
 
 ### [\*Abhishek Narain Singh](http://scalar.usc.edu/works/civic-media-project/contributors-page#abhisheksingh) (*Institute of Management Technology Nagpur) *and [P. Vigneswara Ilavarasan](http://scalar.usc.edu/works/civic-media-project/contributors-page#vigneswarailavarasan) (\*Indian Institute of Technology Delhi)
@@ -29,7 +13,7 @@ In June 2012, the Ministry of Petroleum and Natural Gas [launched a portal](http
 **vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/505133533_640.jpg)](https://player.vimeo.com/video/118166397)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_GU1EHha3HoNLZFjI.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_GU1EHha3HoNLZFjI.png)
 
 The number of visitors in OMCs websites were around 5,000 per day prior to June, 2012. After the transparency portal, the number of visitors in the OMC’s websites increased rampantly to around 18.4 million as of June, 2013, averaging to 47,000 hits per day for seeking various services on the portal. The bulk of the increased site visits can only be accounted for by the newly available transparency portal and connected services.
 
@@ -37,7 +21,7 @@ The portal offered real time information on the basis of a beneficiary database,
 
 In the portal, the delivery efficiency of each distributor was published through a star-rating program (please see Figure 2 for a sample). Poor service delivery by a distributor would result in license cancellation. Consumers were also allowed to surrender connections online consumption was tracked by the OMCs. Initially, there was resistance from distributors partly due to the vested interests.
 
-![Figure 2]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ka-X3DnzwjEbQemw.png)
+![Figure 2](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ka-X3DnzwjEbQemw.png)
 
 Due to the uncoupling of consumers and social auditing through the transparency portal, there was a significant drop in the growth of domestic LPG from 7.5% in 2011–2012 to 2.4% in 2012–2013. A total of 6.7 million connections have been blocked so far, leading recurring savings in subsidies of $267 million USD per annum (at a rate of $6 USD of a subsidy per cylinder and an average consumption of 5.3 cylinders per connection).
 

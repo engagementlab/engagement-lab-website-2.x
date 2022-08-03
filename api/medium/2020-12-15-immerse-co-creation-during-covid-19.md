@@ -1,22 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/immerse-co-creation-during-covid-19-7ca5e84f7a67
-canonical_url: https://medium.com/engagement-lab-emerson-college/immerse-co-creation-during-covid-19-7ca5e84f7a67
-title: 'IMMERSE: Co-Creation During COVID-19'
-subtitle: It is safe to say that 2020 has been a year filled with lessons. Lessons
-    on our vulnerability as human beings as well as on our hidden…
-slug: immerse-co-creation-during-covid-19
-description: ''
-tags:
-    - civic-design
-    - mass-incarceration
-    - participatory-design
-    - vr
-    - ar
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yL79oNH71RVmNPIZvJUAXA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yL79oNH71RVmNPIZvJUAXA.png)
 
 # IMMERSE: Co-Creation During COVID-19
 

@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/citizenship-and-digital-mobilization-in-brazil-2249b8b1b0c6
-canonical_url: https://medium.com/civic-media-project/citizenship-and-digital-mobilization-in-brazil-2249b8b1b0c6
-title: Citizenship and Digital Mobilization in Brazil
-subtitle: Alice Baroni (Pontifical Catholic University of Rio de Janeiro, Brazil)
-slug: citizenship-and-digital-mobilization-in-brazil
-description: ''
-tags:
-    - brazil
-    - philanthropy
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Citizenship and Digital Mobilization in Brazil
 
 ### *Alice Baroni (*Pontifical Catholic University of Rio de Janeiro, Brazil)
@@ -31,7 +16,7 @@ These programs have resulted in the creation of short movies, photographs, podca
 
 In 2013, Viva Favela launched a novel version of the Training Program for Multimedia Community Correspondents by conducting workshops in the favelas. It mainly focuses on media literacy and human rights education. Within a year, over 170 students aged between 15 and 29 graduated from the program. All of the students were favela residents from approximately 25 different favelas (Viva Favela 2014).
 
-![Viva Favela’s workshop in Penha by Adrielly Costa]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_hj1KJoPiu1XsuVmI.jpg)
+![Viva Favela’s workshop in Penha by Adrielly Costa](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_hj1KJoPiu1XsuVmI.jpg)
 
 Jucá, who was the coordinator of the project between 2008 and 2012, argued that Viva Favela has had a political impact at two different levels — personal and governmental. In the personal dimension, she stated that the project has encouraged its community correspondents to see themselves in a different manner — as people who are capable of generating information by using communication tools to spread their own world views. This process has allowed them to engage in conversations beyond social, educational, and geographical borders of the favelas. In the governmental dimension, the display of community correspondents’ work in the portal (which became source of information for the mainstream media) results in a bigger impact, since it influences communities, generates job opportunities, and/or leads to governmental actions at the local level. The main aim of Viva Favela is rather the consciousness-raising of favela dwellers that begin looking at themselves and their neighborhoods critically. This process is followed by the realization that they can have a voice by publishing their own stories on the website and other social networks (Juca 2011).
 
@@ -39,9 +24,9 @@ Viva Favela, though presents its own approach of empowerment and a certain indep
 
 Beyond the realm of Viva Favela, the wave of massive protests that sparked in the largest Brazilian cities in June 2013 shows that Brazilians have started taking advantage of ICTs to digital mobilization. Latin America is the most digitally connected region in the developing world (Muggah and Diniz 2013). Within favelas, there has also been an exponential increase in the availability of affordable, easy-to-use technologies for communication (e.g. free or inexpensive digital cameras, mobile phones with inbuilt cameras), and for editing and sharing content (e.g. the emergence of ‘Lan Houses,’ a form of cybercafe that provides cheap access to computers and the Internet), enabling favela residents to produce media, circulate their stories, and express wider political and social grievances. If Brazilians continue to take advantage of ICTs to digital mobilization in the years to come, and if it is harnessed towards giving voice to marginalized groups, this may equalize influence laying the basis for a path towards citizenship in Brazil.
 
-![Viva Favela’s workshop in Morro da Fé by Vitor Madeira]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LLLksAX7npH3Hd6p.jpg)
+![Viva Favela’s workshop in Morro da Fé by Vitor Madeira](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LLLksAX7npH3Hd6p.jpg)
 
-![Viva Favela]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_tiA25cj4LZcA85sl.jpg)
+![Viva Favela](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_tiA25cj4LZcA85sl.jpg)
 
 # References
 

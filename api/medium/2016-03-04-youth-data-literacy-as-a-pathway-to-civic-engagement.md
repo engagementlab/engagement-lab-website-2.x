@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/youth-data-literacy-as-a-pathway-to-civic-engagement-7fbc4a7e8d31
-canonical_url: https://medium.com/civic-media-project/youth-data-literacy-as-a-pathway-to-civic-engagement-7fbc4a7e8d31
-title: Youth Data Literacy as a Pathway to Civic Engagement
-subtitle: Erica Deahl (Civic Data Design Lab, MIT)
-slug: youth-data-literacy-as-a-pathway-to-civic-engagement
-description: ''
-tags:
-    - education
-    - learning-and-engagement
-    - education-technology
-author: EL_News
-username: el-news
----
-
 # Youth Data Literacy as a Pathway to Civic Engagement
 
 ### *Erica Deahl (*Civic Data Design Lab, MIT)
@@ -33,9 +18,9 @@ The curriculum was piloted twice in 2013 with 100 high school juniors and senior
 
 The curriculum was divided into three units, each of which was supported by the web application. First, students divided into small teams to collect local qualitative data about their community’s opinions on the lottery by conducting interviews with pedestrians and lottery ticket retailers in their neighborhood, using the web application on tablets (Fig. 1). Students wanted to find out why and how often people played the lottery and see how local businesses thought the lottery was impacting the neighborhood. Using the tablet allowed students to easily navigate, collect data in the field, and instantly publish geo-located results. Students discovered many stories from people for whom the lottery is a central part of their lives. For instance, one man said he spends $50 on the lottery every week because is unemployed and wants to support his family (Fig. 2).
 
-![Fig. 1. One group of students conducts an interview with lottery players]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wLdIh7hBydYZ5s5JGTJRAg.png)
+![Fig. 1. One group of students conducts an interview with lottery players](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wLdIh7hBydYZ5s5JGTJRAg.png)
 
-![Fig. 2. This man said he spends $50 on the lottery every week, because he cannot find a job and wants to provide for his family.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_CYzrvC_orRUrCrC4w8zdyA.png)
+![Fig. 2. This man said he spends $50 on the lottery every week, because he cannot find a job and wants to provide for his family.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_CYzrvC_orRUrCrC4w8zdyA.png)
 
 In the second unit, students used an interactive map to explore and understand the impact of the lottery on communities. The map showed lottery spending and winning data at a citywide level and at a highly localized level, visualizing data from stores that sell lottery tickets. The map also shows lottery spending as a percentage of each neighborhood’s median household income. The geographic representation enabled students to identify patterns and analyze the large-scale effects of the lottery as a system, by building on geographic knowledge they already had about their city. For example, students quickly picked up on one of the most striking trends, that lottery players in low-income neighborhoods spend a significantly higher proportion of their income on lottery tickets than players in higher-income neighborhoods.
 

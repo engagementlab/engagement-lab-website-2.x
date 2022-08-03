@@ -1,21 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/engaging-incarcerated-populations-during-covid-19-5a1852e5dc01
-canonical_url: https://medium.com/engagement-lab-emerson-college/engaging-incarcerated-populations-during-covid-19-5a1852e5dc01
-title: Engaging Incarcerated Populations During Covid-19
-subtitle: Confined living conditions and a constant flow of people in and out make
-    prisons amplifiers for infectious diseases such as Covid-19…
-slug: engaging-incarcerated-populations-during-covid-19
-description: ''
-tags:
-    - prison-education
-    - mass-incarceration
-    - reentry
-    - ar
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_o9_oznCpZR9Z-iF2kaUTTw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_o9_oznCpZR9Z-iF2kaUTTw.png)
 
 # Engaging Incarcerated Populations During Covid-19
 
@@ -31,9 +14,9 @@ While the Emerson Prison Initiative is working to support people on the inside, 
 
 Fahandej taught a partnered studio in the spring semester that connected Emerson students, federal probation officers, and formerly incarcerated fathers to explore questions of fatherhood and masculinity. The class began work on a virtual reality (VR) project, but when the campus was shut down, it quickly pivoted to an augmented reality (AR) project. Each student focused on creating a postcard with a QR code that would activate videos, photos, and audio messages provided by the fathers and probation officers.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rfNsm4b0PwZMYgJnRVjohA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rfNsm4b0PwZMYgJnRVjohA.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lZUgJN9ukveIsYa6mEhT2Q.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lZUgJN9ukveIsYa6mEhT2Q.jpeg)
 
 Many participants expressed the ability to share stories they would not have otherwise been comfortable sharing if not for the work of the students. While presenting these stories to their families in the physical space of a VR experience may have been challenging for some, the distance provided by the AR postcards allowed for greater honesty for some fathers.
 

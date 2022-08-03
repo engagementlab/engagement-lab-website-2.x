@@ -1,17 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/boston-civic-media-metrics-methods-conference-session-1-foundations-4cef546a9d81
-canonical_url: https://medium.com/engagement-lab-emerson-college/boston-civic-media-metrics-methods-conference-session-1-foundations-4cef546a9d81
-title: 'Boston Civic Media: Metrics & Methods conference | Session 1: Foundations'
-subtitle: By Engagement Lab
-slug: boston-civic-media-metrics-methods-conference-session-1-foundations
-description: ''
-tags:
-    - civictech
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
 # Boston Civic Media: Metrics & Methods conference | Session 1: Foundations
 
 ### By Engagement Lab
@@ -22,7 +8,7 @@ username: el-news
 
 > > What are the unanswered questions that drive your work?
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LLIrszGAVGZckDTn.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LLIrszGAVGZckDTn.jpg)
 
 **Christine Gaspar**
 
@@ -46,7 +32,7 @@ username: el-news
 
 -   In a lot of civic tech space, there’s a pathological view of government as something that’s seen as broken. Like, tech is going to bring efficiency to these processes. But it’s about engagement, not efficiency. It’s about democracy, which frankly can be super inefficient, especially when it’s being inclusive. We’re never going to solve for inclusiveness and engagement if we’re always focused on solving for efficiency.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_10SyR5Kbb0kBec_s.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_10SyR5Kbb0kBec_s.jpg)
 
 **Ethan Zuckerman**
 
@@ -66,7 +52,7 @@ username: el-news
 
 -   What does effective civics look like at a moment of high institutional mistrust?
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_UlhMRQx3NzP4YXwg.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_UlhMRQx3NzP4YXwg.jpg)
 
 **Peter Levine**
 
@@ -76,7 +62,7 @@ username: el-news
 
 -   We need to recruit people for non-civic reasons at scale with a business model or some other way of operating at scale that can bring a lot of people in whether they want to be civic or not, and that can bring people into civic life. If we don’t have lots of little NGOs and tools, we’re going to continue to see a pattern where only the most advanced or interested are participating.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_70qH1zETJlsX3f3b.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_70qH1zETJlsX3f3b.jpg)
 
 **Doris Sommer**
 

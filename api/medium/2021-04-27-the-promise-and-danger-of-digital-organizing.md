@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/the-promise-and-danger-of-digital-organizing-44f8356e790c
-canonical_url: https://medium.com/engagement-lab-emerson-college/the-promise-and-danger-of-digital-organizing-44f8356e790c
-title: The Promise and Danger of Digital Organizing
-subtitle: With the advent of Web 2.0 and now exacerbated by Covid19, digital organizing
-    has become increasingly central to federal, state and local…
-slug: the-promise-and-danger-of-digital-organizing
-description: ''
-tags:
-    - digital-organizing
-    - organizing
-    - civic-media
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
 # The Promise and Danger of Digital Organizing
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_vvsBJmxUKAkLxj-eljMFHA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_vvsBJmxUKAkLxj-eljMFHA.png)
 
 With the advent of Web 2.0 and now exacerbated by Covid19, digital organizing has become increasingly central to federal, state and local campaigns. However, it is digital organizing’s global beginnings and reach that makes it so effective. From the Arab Spring in 2011, the Occupy movement that same year, the #MeToo movement in 2017, digital organizing has ushered in a new era of political movements, translating online action into in-person resistance.
 

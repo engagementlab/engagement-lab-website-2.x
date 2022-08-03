@@ -1,25 +1,10 @@
----
-url: https://medium.com/civic-media-project/the-2013-gezi-park-protest-and-resistgezi-c98026c52591
-canonical_url: https://medium.com/civic-media-project/the-2013-gezi-park-protest-and-resistgezi-c98026c52591
-title: 'The 2013 Gezi Park Protest and #resistgezi'
-subtitle: Dr. Ulas Basar Gezgin (Associate Professor, Turkey)
-slug: the-2013-gezi-park-protest-and-resistgezi
-description: ""
-tags:
-- social-network
-- turkey
-- community-and-action
-author: EL_News
-username: el-news
----
-
 # The 2013 Gezi Park Protest and #resistgezi
 
 Dr. Ulas Basar Gezgin (Associate Professor, Turkey)
 
 The Gezi Park Protest in Istanbul was the most massive of its kind in the modern Turkish history. Although it was hailed as a ‘social media revolution’ by techno-centric researchers and techno-optimists, the roots of resistance can be traced to pre-social-media era whereby people still had reasons to go out and protest.
 
->> Nevertheless, social media, especially Twitter served an informational function where TV channels were suppressed, as evidenced by the recent Twitter ban.
+> > Nevertheless, social media, especially Twitter served an informational function where TV channels were suppressed, as evidenced by the recent Twitter ban.
 
 The major hashtags were #direngezi, which acted as a citizen journalism tool, and its English version #resistgezi, which targeted international audiences. The hashtag #resistgezi worths study for its sporadic, unpredictable character. While it was a translation of the Turkish #direngezi, it did not merely serve the audience as the translation of tweets in Turkish per se. This work analyzes the tweets with the hashtag #resistgezi.
 
@@ -35,26 +20,24 @@ This presentation shows that #resistgezi tweets, mainly, did not serve the funct
 
 For More Media:
 
-__vimeo__:
+**vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/505146559_640.jpg)](https://player.vimeo.com/video/118174428)
 
-__vimeo__:
+**vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/505142611_640.jpg)](https://player.vimeo.com/video/118172382)
 
-__vimeo__:
+**vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/505150543_640.jpg)](https://player.vimeo.com/video/118174422)
 
-__vimeo__:
+**vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/505150150_640.jpg)](https://player.vimeo.com/video/118174424)
 
-__vimeo__:
+**vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/505146980_640.jpg)](https://player.vimeo.com/video/118174426)
 
-__vimeo__:
+**vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/505146546_640.jpg)](https://player.vimeo.com/video/118174427)
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

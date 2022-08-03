@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/better-reykjavik-open-municipal-policymaking-8e3440f72f25
-canonical_url: https://medium.com/civic-media-project/better-reykjavik-open-municipal-policymaking-8e3440f72f25
-title: 'Better Reykjavik: Open Municipal Policymaking'
-subtitle: Derek Lackaff (Elon University)
-slug: better-reykjavik-open-municipal-policymaking
-description: ''
-tags:
-    - systems-and-design
-    - iceland
-    - philanthropy
-author: EL_News
-username: el-news
----
-
 # Better Reykjavik: Open Municipal Policymaking
 
 ### *Derek Lackaff (*Elon University)
@@ -23,7 +8,7 @@ Better Reykjavik ([_Betri Reykjavík_](https://betrireykjavik.is/)) is one such 
 
 Launched in 2009 by grassroots activists as a platform for a frustrated citizenry to express their views about how to move forward, the project was subsequently endorsed by a new political party that went on to win the Reykjavik municipal government election. The platform was later formally adopted as an official channel for citizen petitions of the government. In its four years of operation, over 70,000 people have used the platform to propose and discuss over 1,800 policy proposals and ideas, of which nearly 450 have received formal consideration from the municipal government and over 350 have been implemented or are in the process of implementation. The nonprofit [Citizens Foundation](http://www.citizens.is/) maintains the codebase as an [open-source project](https://github.com/rbjarnason/your-priorities) and has assisted in the launching of similar projects in locations ranging from the [United Kingdom](https://nhs-citizen.yrpri.org/) to the [Balkans](https://balkan-startup.yrpri.org/) to rural [North Carolina](http://www.betteralamance.org/).
 
-![One of the 2,000+ policy proposals submitted on the Better Reykavik site for deliberation and endorsement by the public.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Yr7ky0KgZW9RoKdWfgCHGg.png)
+![One of the 2,000+ policy proposals submitted on the Better Reykavik site for deliberation and endorsement by the public.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Yr7ky0KgZW9RoKdWfgCHGg.png)
 
 Better Reykjavik has several qualities that distinguish it from similar projects: it (1) is developed and maintained by a grassroots nonprofit organization, and not by a government, (2) rapidly achieved significant buy-in from citizens, policy-makers, and public administrators, and (3) has been normalized as an ongoing channel for citizen-government interaction. The citizen engagement and policy development process it facilitates more closely resembles crowdsourcing and aggregation platforms like Reddit than established e-petition sites such as the Obama administration’s [We The People](https://petitions.whitehouse.gov/) site or the [German Bundestag](https://epetitionen.bundestag.de/)’s e-petitions site.
 

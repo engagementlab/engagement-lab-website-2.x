@@ -1,20 +1,3 @@
----
-url: https://medium.com/civic-media-project/from-destroythejoint-to-far-reaching-digital-activism-feminist-revitalisation-stemming-from-81bb2bb8b61a
-canonical_url: https://medium.com/civic-media-project/from-destroythejoint-to-far-reaching-digital-activism-feminist-revitalisation-stemming-from-81bb2bb8b61a
-title: 'From #destroythejoint to far reaching digital activism: Feminist Revitalisation
-    stemming from…'
-subtitle: Jessica McLean (Macquarie University, Australia) and Sophia Maalsen (University
-    of New South Wales)
-slug: from-destroythejoint-to-far-reaching-digital-activism-feminist-revitalisation-stemming-from
-description: ''
-tags:
-    - community-and-action
-    - hashtag-activism
-    - social-justice
-author: EL_News
-username: el-news
----
-
 # From #destroythejoint to far reaching digital activism: Feminist Revitalisation stemming from social media and reaching beyond
 
 ### Jessica McLean (Macquarie University, Australia) and Sophia Maalsen (University of New South Wales)
@@ -31,11 +14,11 @@ The #destroythejoint movement began after a conservative Australian radio host, 
 
 Jill Tomlinson, a surgeon and writer, ignited the campaign in conversation with education activist and writer Jane Caro, with the following tweet exchange:
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_pRlEJm4RAAMdtOMo2Wf6-w.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_pRlEJm4RAAMdtOMo2Wf6-w.png)
 
 Tomlinson responded with an invitation for others to contribute and originated the new hashtag:
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_4-gGXPWZHCeuU2Kd5o6LHw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_4-gGXPWZHCeuU2Kd5o6LHw.png)
 
 Within one day, thousands had tweeted their own versions of acts and intentions to quash sexism and misogyny and a new digital activism moment and movement had begun (McLean and Maalsen, 2013).
 
@@ -55,13 +38,13 @@ Multiple, micro-campaigns characterize the ongoing productive space that is Dest
 
 Some of the micro-campaigns DTJ organized are shown in Table 1:
 
-![Table 1]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_4lS7xRV7-lKqYn314S4Kxw.png)
+![Table 1](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_4lS7xRV7-lKqYn314S4Kxw.png)
 
 # Digital activism in DTJ: connections to global campaigns
 
 Currently, feminist moments and movements are proliferating around the world, many emerging in digital spaces, such as #everydaysexism and #yesallwomen and often spring-boarding from these to other activist modes, including book publications, anti-corporate interventions, walks and gatherings. For the Facebook supporters of DTJ, a prominent campaign to stop violence against women presently focuses DTJ activity (see Figure 3).
 
-![Figure 3: Current Facebook home page for Destroy the Joint (March 2015)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jn8Tszziqs4JJPPdPHSXvg.png)
+![Figure 3: Current Facebook home page for Destroy the Joint (March 2015)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jn8Tszziqs4JJPPdPHSXvg.png)
 
 # Revitalizing feminism?
 

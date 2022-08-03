@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/bury-until-they-change-their-ways-the-digg-patriots-as-user-generated-censorship-74dddf381a12
-canonical_url: https://medium.com/civic-media-project/bury-until-they-change-their-ways-the-digg-patriots-as-user-generated-censorship-74dddf381a12
-title: '“Bury Until They Change Their Ways”: The Digg Patriots As User-Generated Censorship'
-subtitle: Chris Peterson (MIT)
-slug: bury-until-they-change-their-ways-the-digg-patriots-as-user-generated-censorship
-description: ''
-tags:
-    - social-media
-    - censorship
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # “Bury Until They Change Their Ways”: The Digg Patriots As User-Generated Censorship
 
 ### Chris Peterson (MIT)
@@ -21,7 +6,7 @@ username: el-news
 
 In May 2009, an ad hoc coalition of politically-conservative members of the social news site Digg collectively founded a Yahoo!Group community and mailing list,called the Digg Patriots. The Patriots were united by a shared self-identification with movement conservatism, a belief that liberal users of Digg were profoundly wrongheaded, and a desire to terraform the political landscape of Digg to be more consonant with their conservatism to project.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__SlSf4n8Ns_338y-yPshiQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__SlSf4n8Ns_338y-yPshiQ.png)
 
 **SUBJ: Re: DiggPatriots- Whining again**
 
@@ -39,13 +24,13 @@ Digg was one of the most popular websites in the world during the Patriots’ ca
 
 Other users would then vote to ‘digg’ or ‘bury’ the links, which, along with other factors including recency and comment activity, would algorithmically cause those links to rise or fall in an ordinal ranking and becoming more or less visible to Digg’s ~30 million monthly visitors. The Digg Patriots developed a set of crude-but-effective-and-a-even-a-bit-ingenious techniques which let them leverage these algorithmic inputs to alter the political composition of Digg.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_yqbWBo2_eWu7y6WA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_yqbWBo2_eWu7y6WA.png)
 
 # Coordinated Digging and Burying
 
 The Patriots’ primary method was to coordinate votes through the Yahoo!Group. When a Patriot identified a newly submitted link as liberal they would quickly forward the link to the entire group with a synopsis and an urgent call for burying. The Patriots also coordinated ‘up’ votes for conservative links as well, particularly posts made by fellow Patriots. Although almost 7,000 targeted links are included in the corpus, this drastically under-represents the total activity of the Patriots: from April 2009 to August 2010 a single Patriot dugg an astounding 76,000 links and submitted over 1,600 articles, 20% of which made the front page with assistance from her allies ([Lizbett 2013](http://socialblade.com/digg/topgraveyard.html)).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_g11Pl8kuYr6wNZQ9.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_g11Pl8kuYr6wNZQ9.png)
 
 # Strategic Comment Activity
 

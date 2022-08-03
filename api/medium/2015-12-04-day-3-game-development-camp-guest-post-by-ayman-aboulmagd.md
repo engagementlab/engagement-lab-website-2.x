@@ -1,28 +1,14 @@
----
-url: https://medium.com/engagement-lab-emerson-college/day-3-game-development-camp-guest-post-by-ayman-aboulmagd-fb028d0173fd
-canonical_url: https://medium.com/engagement-lab-emerson-college/day-3-game-development-camp-guest-post-by-ayman-aboulmagd-fb028d0173fd
-title: 'Day 3: Game Development Camp, Guest Post by Ayman Aboulmagd'
-subtitle: By Engagement Lab
-slug: day-3-game-development-camp-guest-post-by-ayman-aboulmagd
-description: ""
-tags:
-- climate-change
-- environment
-author: EL_News
-username: el-news
----
-
 # Day 3: Game Development Camp, Guest Post by Ayman Aboulmagd
 
 ### By Engagement Lab
 
 03/13/2015
 
-*Over the past year, the Engagement Lab and the Egyptian United Nations Development Program (UNDP) have partnered on a new initiative focused on using games and play to tackle global issues, ranging from environmental sustainability to cultural and political empowerment.*
+_Over the past year, the Engagement Lab and the Egyptian United Nations Development Program (UNDP) have partnered on a new initiative focused on using games and play to tackle global issues, ranging from environmental sustainability to cultural and political empowerment._
 
-*This week, the lab is hosting UN staff and designers and entrepreneurs from Egypt for a week-long, intensive game development camp.*
+_This week, the lab is hosting UN staff and designers and entrepreneurs from Egypt for a week-long, intensive game development camp._
 
-*Every day this week, we will share a new blog post written by one of the game makers. Today, Ayman Aboulmagd shares his experiences during the third day of the development camp.*
+_Every day this week, we will share a new blog post written by one of the game makers. Today, Ayman Aboulmagd shares his experiences during the third day of the development camp._
 
 # Day 3: Game Development Camp
 
@@ -39,5 +25,3 @@ Afterwards, we attended a presentation about games with social impact given by J
 We had an interesting discussion with a game designer named Luigi Guatieri and we took his feedback about our games. It prompted a great discussion because it involved specific and detailed numbers that we needed to hear about like number of copies, duration of design, and costs.
 
 This day was very rich and intense with lots of inspiration.
-
-

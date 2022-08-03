@@ -1,19 +1,3 @@
----
-url: https://medium.com/@el-news/newsactivist-using-globally-networked-writing-to-facilitate-cross-campus-dialogue-and-engagement-6ddb06944853
-canonical_url: https://medium.com/@el-news/newsactivist-using-globally-networked-writing-to-facilitate-cross-campus-dialogue-and-engagement-6ddb06944853
-title: 'NewsActivist: Using globally networked writing to facilitate cross-campus
-  dialogue and engagement'
-subtitle: Nicole Fournier-Sylvester (Concordia University)
-slug: newsactivist-using-globally-networked-writing-to-facilitate-cross-campus-dialogue-and-engagement
-description: ""
-tags:
-- learning-and-engagement
-- education-technology
-- youth-media
-author: EL_News
-username: el-news
----
-
 # NewsActivist: Using globally networked writing to facilitate cross-campus dialogue and engagement
 
 ### Nicole Fournier-Sylvester (Concordia University)
@@ -46,48 +30,46 @@ Although the case of integrating on-line discussions in the civics classroom is 
 
 # REFERENCES
 
-Bennett, Lance W. 2008. “Changing Citizenship in the Digital Age.” In *Civic life Online: Learning how Digital Media can Engage Youth*, edited by Lance W. Bennett, 1–14. Cambridge, MA: MIT Press.
+Bennett, Lance W. 2008. “Changing Citizenship in the Digital Age.” In _Civic life Online: Learning how Digital Media can Engage Youth_, edited by Lance W. Bennett, 1–14. Cambridge, MA: MIT Press.
 
-Bennett, Lance W., Chris Wells and Allison Rank. 2009. “Young Citizens and Civic Learning: Two Paradigms of Citizenship in the Digital Age.” *Citizenship Studies* 13, no. 2 (2000): 105–120.
+Bennett, Lance W., Chris Wells and Allison Rank. 2009. “Young Citizens and Civic Learning: Two Paradigms of Citizenship in the Digital Age.” _Citizenship Studies_ 13, no. 2 (2000): 105–120.
 
-Blades, David W. and George H. Richardson. 2006. “Introduction: Troubling the Canon of Citizenship Education.” In *Troubling the Canon of Citizenship Education*, edited by George H. Richardson and David W. Blades, 1–9. New York: Peter Lang.
+Blades, David W. and George H. Richardson. 2006. “Introduction: Troubling the Canon of Citizenship Education.” In _Troubling the Canon of Citizenship Education_, edited by George H. Richardson and David W. Blades, 1–9. New York: Peter Lang.
 
-Delli Carpini, Michael X. 2000. “Gen.com: Youth, Civic Engagement and the New Information Environment.”*Political Communication* 17 :341–349.
+Delli Carpini, Michael X. 2000. “Gen.com: Youth, Civic Engagement and the New Information Environment.”_Political Communication_ 17 :341–349.
 
-Dutt-Doner, Karen M. and Susan M. Powers. 2000. “The Use of Electronic Communication to Develop Alternative Avenues for Classroom Discussion.” *Journal of Technology and Teacher Education* 8 (2): 153–172.
+Dutt-Doner, Karen M. and Susan M. Powers. 2000. “The Use of Electronic Communication to Develop Alternative Avenues for Classroom Discussion.” _Journal of Technology and Teacher Education_ 8 (2): 153–172.
 
 Ghodarti, Nazanin and Paul Gruba. “The Role of Asynchronous Discussion Forums in the Development of
 
 Collaborative Critical Thinking.” In: Proceedings of ASCILITE 2011 Changing Demands, Changing Directions, 2011, 437–451. Australia.
 
-Gould, Jonathan. (ed). 2012. *The Guardian of Democracy: The Civic Mission of Schools*. New York: The Center for Information and Research on Civic Learning and Engagement.
+Gould, Jonathan. (ed). 2012. _The Guardian of Democracy: The Civic Mission of Schools_. New York: The Center for Information and Research on Civic Learning and Engagement.
 
-Hess, Diana E. 2002. “Discussing Controversial Public Issues in Secondary Social Studies Classrooms: Learning from Skilled Teachers.” *Theory & Research in Social Education* 30 (1):10–41.
+Hess, Diana E. 2002. “Discussing Controversial Public Issues in Secondary Social Studies Classrooms: Learning from Skilled Teachers.” _Theory & Research in Social Education_ 30 (1):10–41.
 
 Hess, Diana E. 2001. Teaching Students to Discuss Controversial Public Issues. Bloomington, IN: ERIC Clearinghouse for Social Studies/Social Science Education.
 
-Johnson, Christopher M. 2001. “A Survey of Current Research on Online Communities of Practice.” *Internet and Higher Education* 4 : 45–60.
+Johnson, Christopher M. 2001. “A Survey of Current Research on Online Communities of Practice.” _Internet and Higher Education_ 4 : 45–60.
 
-Kaylor, Mary and Karen Weller. 2007. “Pedagogy, Self-Assessment, and Online Discussion Groups.” *Journal of Educational Technology & Society* 10 (1): 136–137.
+Kaylor, Mary and Karen Weller. 2007. “Pedagogy, Self-Assessment, and Online Discussion Groups.” _Journal of Educational Technology & Society_ 10 (1): 136–137.
 
-Lusk, Amy. B. and Adam S. Weinberg.1994. “Discussing Controversial Issues in the Classroom: Creating a Context for Learning.” *Teaching Sociology* 22 : 301–308.
+Lusk, Amy. B. and Adam S. Weinberg.1994. “Discussing Controversial Issues in the Classroom: Creating a Context for Learning.” _Teaching Sociology_ 22 : 301–308.
 
-McDevitt, Michael and Spiro Kiousis. 2007. “Deliberative Learning: An Evaluative Approach to Interactive Civic Education.” *Communication Education* 55 (3): 247–264.
+McDevitt, Michael and Spiro Kiousis. 2007. “Deliberative Learning: An Evaluative Approach to Interactive Civic Education.” _Communication Education_ 55 (3): 247–264.
 
 Merryfield, Merry, Lo, Joe, Po, Sum and Masataka Kasai. 2008. “Worldmindedness: Taking Off the Blinders.” J*ournal of Curriculum and Instruction* 2 (1): 6–20.
 
-Meyer, Katrina A. 2003. Face-to-face Versus Threaded Discussions: The role of Time and Higher-Order Thinking. *Journal of Asynchronous Learning Networks* 7 (3): 55–65.
+Meyer, Katrina A. 2003. Face-to-face Versus Threaded Discussions: The role of Time and Higher-Order Thinking. _Journal of Asynchronous Learning Networks_ 7 (3): 55–65.
 
-Middaugh, Ellen and Joseph Kahne. 2009. “Online Localities: Implications for Democracy and Education.”*Yearbook of the National Society for the Study of Education* 108 (1): 192–218.
+Middaugh, Ellen and Joseph Kahne. 2009. “Online Localities: Implications for Democracy and Education.”_Yearbook of the National Society for the Study of Education_ 108 (1): 192–218.
 
-Oulton, Christopher, Vanessa Day, Justin Dillon and Marcus M. Grace. 2004. “Controversial Issues: Teachers’ Attitudes and Practices in the Context of Citizenship Education.” *Oxford Review of Education* 30:489–507.
+Oulton, Christopher, Vanessa Day, Justin Dillon and Marcus M. Grace. 2004. “Controversial Issues: Teachers’ Attitudes and Practices in the Context of Citizenship Education.” _Oxford Review of Education_ 30:489–507.
 
 Rheingold, Howard. 2008. “Using Participatory Media and Public Voice to Encourage Civic Engagement.” In*Civic life Online: Learning how Digital Media can Engage Youth*, edited by Lance W. Bennett, 97–118. Cambridge, MA: MIT Press.
 
 Torney-Purta, Judith, Rainer H. Lehmann, Hans Oswald and Wolfram Schulz. 2001. Citizenship and Education in Twenty-Eight Countries: Civic Knowledge and Engagement at Aged Fourteen. Amsterdam: International Association for the Evaluation of Educational Achievement.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

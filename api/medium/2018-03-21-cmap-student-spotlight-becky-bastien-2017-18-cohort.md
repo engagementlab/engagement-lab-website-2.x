@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-becky-bastien-2017-18-cohort-f385653309b2
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-becky-bastien-2017-18-cohort-f385653309b2
-title: 'CMAP Student Spotlight: Becky Bastien, 2017–18 cohort'
-subtitle: Becky Bastien hopes to combine her videography, photography, and graphic
-    design skills with the power of the online community to evoke both…
-slug: cmap-student-spotlight-becky-bastien-2017-18-cohort
-description: ''
-tags:
-    - civic-media
-    - social-media
-    - engagement
-    - emerson-cmap-spotlight
-    - students
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Becky Bastien, 2017–18 cohort
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1BGmQYeq3BBFa8rx7uovLw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1BGmQYeq3BBFa8rx7uovLw.jpeg)
 
 **_Becky Bastien_** _hopes to combine her videography, photography, and graphic design skills with the power of the online community to evoke both positive individual growth and global change. She received her Bachelor of Arts in Film and Video Studies from George Mason University, with minors in Multimedia and Arts Management. Becky has helped build and enhance social media platforms for multiple groups, ranging from elementary schools to documentary filmmakers. Being a photographer/videographer allows her to work with a variety of different people and organizations, which she loves because she’s always learning something new. In her free time, she loves to go on road trips, photograph abandoned places, and take naps with her cat. Becky is very excited to be pursuing her Master’s in CMAP and looks forward to spending more time in the Engagement Lab!_
 
@@ -31,7 +13,7 @@ username: el-news
 **What is one change you would like to see in the world?**
 I’d like to see people care about other people.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bY4eGLXvl1L8_l2OaFq8ag.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bY4eGLXvl1L8_l2OaFq8ag.jpeg)
 
 **What would you want the civic media community to know about you?
 **I love working with many different forms of media (film, photography, graphic design), and am passionate about using these media to tell the stories of others.

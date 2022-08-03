@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-cathy-edwards-2017-18-cohort-87c831090b37
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-cathy-edwards-2017-18-cohort-87c831090b37
-title: 'CMAP Student Spotlight: Cathy Edwards, 2017–18 Cohort'
-subtitle: Cathy Edwards has served as Executive Director of the Canadian Association
-    of Community Television Users and Stations (CACTUS), a…
-slug: cmap-student-spotlight-cathy-edwards-2017-18-cohort
-description: ''
-tags:
-    - civic-media
-    - social-media
-    - engagement
-    - emerson-cmap-spotlight
-    - students
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Cathy Edwards, 2017–18 Cohort
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_UbVJkOJDBnoDuQQbUqJG7A.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_UbVJkOJDBnoDuQQbUqJG7A.jpeg)
 
 **\*Cathy Edwards** has served as Executive Director of the Canadian Association of Community Television Users and Stations (CACTUS), a not-for-profit association she founded that advocates for digital media literacy and access, for the last 8 years. She is also owner and President of TimeScape Productions, a media content production company that focuses on increasing Canadians’ awareness of their history and culture. Her work has been exhibited on four continents; she has conducted workshops in community media around the world, and has won awards in drama, documentary, and news magazine programming in Canada and the US. She specializes in ways to engage audiences in storytelling to provoke social change. Cathy’s thesis project is to develop a transitional strategy for public-access TV stations that want to integrate new technologies including video games, AR and VR as tools of community expression and social change.\*
 
@@ -28,7 +10,7 @@ I have worked as a community media practitioner for many years, most recently as
 **What does civic media mean to you?
 **Media that has been adapted for civic purposes, to facilitate dialog and a deeper understanding of challenges and issues that face us as citizens living in communities; with the potential to forge solutions.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dvJrAl3s1QRka5dyQwieqA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dvJrAl3s1QRka5dyQwieqA.jpeg)
 
 > > [Engagement is being] connected to what’s going on in the world around me; feeling agency in affecting outcomes in the world.
 
@@ -41,7 +23,7 @@ I have worked as a community media practitioner for many years, most recently as
 **Are there any specific projects that you’ve done in the past that intersect with your studies now?
 **As above; community media has a lot of overlap with civic media.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8Na0fdmCkiCv3FhfshY7Dg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8Na0fdmCkiCv3FhfshY7Dg.jpeg)
 
 **How do you define engagement? What does being engaged mean to you?**Connected to what’s going on in the world around me; feeling agency in affecting outcomes in the world.
 

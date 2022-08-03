@@ -1,21 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/new-databasic-tool-lets-you-connect-the-dots-in-data-f0dcff5e6a17
-canonical_url: https://medium.com/engagement-lab-emerson-college/new-databasic-tool-lets-you-connect-the-dots-in-data-f0dcff5e6a17
-title: New DataBasic Tool Lets You “Connect the Dots” in Data
-subtitle: We’re thrilled to announce Catherine D’Ignazio and Rahul Bhargava have launched
-    a new DataBasic tool and activity, Connect the Dots, aimed…
-slug: new-databasic-tool-lets-you-connect-the-dots-in-data
-description: ''
-tags:
-    - journalism
-    - media
-    - data-visualization
-    - data
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wmTnMU4HA9jGJ5hgZDfjzw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wmTnMU4HA9jGJ5hgZDfjzw.png)
 
 # **New DataBasic Tool Lets You “Connect the Dots” in Data**
 
@@ -23,7 +6,7 @@ We’re thrilled to announce **Catherine D’Ignazio** and **Rahul Bhargava** ha
 
 By showing the relationships between things, networks are useful for finding answers that aren’t readily apparent through spreadsheet data alone. To that end, D’Ignazio, an Engagement Lab Fellow and Assistant Professor in the Journalism Department at Emerson College, and Bhargava, a research scientist at the MIT Media Lab’s Center for Civic Media, have built Connect the Dots to help teach how analyzing the connections between the “dots” in data is a fundamentally different approach to understanding it.
 
-![Example of Network Diagram]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wuSE8FaLP5Y1mItU6UdVzg.png)
+![Example of Network Diagram](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wuSE8FaLP5Y1mItU6UdVzg.png)
 
 The new tool gives users a network diagram to reveal links as well as a high level report about what the network looks like. Using network analysis helped Google revolutionize search technology and was used by journalists who investigated the connections between people and banks during the Panama Papers Leak.
 

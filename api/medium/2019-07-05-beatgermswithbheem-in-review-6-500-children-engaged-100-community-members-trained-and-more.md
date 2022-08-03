@@ -1,28 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/beatgermswithbheem-in-review-6-500-children-engaged-100-community-members-trained-and-more-a05371711f02
-canonical_url: https://medium.com/engagement-lab-emerson-college/beatgermswithbheem-in-review-6-500-children-engaged-100-community-members-trained-and-more-a05371711f02
-title: '#BeatGermsWithBheem in Review: 6,500+ Children Engaged, 100+ Community Members
-    Trained, and More'
-subtitle: The Bheem Team is getting bigger and better than ever! Today, we’re excited
-    to report some of the amazing results from our recent…
-slug: beatgermswithbheem-in-review-6-500-children-engaged-100-community-members-trained-and-more
-description: ''
-tags:
-    - hygiene
-    - education
-    - sanitation
-    - codesign
-author: EL_News
-username: el-news
----
-
 # #BeatGermsWithBheem in Review: 6,500+ Children Engaged, 100+ Community Members Trained, and More
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_z-3j1uqwtBFtLAic56PmXw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_z-3j1uqwtBFtLAic56PmXw.png)
 
 The Bheem Team is getting bigger and better than ever! Today, we’re excited to report some of the amazing results from our recent #BeatGermsWithBheem campaign.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_shZQYum2VKSUie4pDndJ1A.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_shZQYum2VKSUie4pDndJ1A.jpeg)
 
 The latest effort in our ongoing [_Hygiene with Chhota Bheem_](https://elab.emerson.edu/hygiene) hygiene and sanitation education project, [#BeatGermsWithBheem](https://medium.com/engagement-lab-emerson-college/announcing-beatgermswithbheem-a-week-of-online-and-offline-hygiene-education-and-advocacy-69e486f6fc71) combined community hygiene training sessions, activities for students, stories from the field on social media, and more for a whirlwind week of advocacy.
 
@@ -36,7 +18,7 @@ We made a splash across our media channels as well! Our week of social media con
 
 And radio advertisements broadcast across Tamil Nadu reached more than 30,000 listeners, as well.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xbxgIo5Wo4wDmtJZl02DLw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xbxgIo5Wo4wDmtJZl02DLw.jpeg)
 
 The stories we’ve heard from volunteers, community members, and children impacted by the program have been amazing.
 
@@ -46,7 +28,7 @@ The results, [which we shared to wrap up our social media coverage of the campai
 
 Everyone — no matter who they are or where they live — deserves access to the resources and information that will help them live long, healthy lives.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-qxRn9GjxP_ggqWQlopOxQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-qxRn9GjxP_ggqWQlopOxQ.png)
 
 We’d like to thank everyone who helped us spread the word about #BeatGermsWithBheem across social media throughout the campaign!
 

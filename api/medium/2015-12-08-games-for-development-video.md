@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/games-for-development-video-6bdb9cab6b48
-canonical_url: https://medium.com/engagement-lab-emerson-college/games-for-development-video-6bdb9cab6b48
-title: Games for Development [VIDEO]
-subtitle: By Engagement Lab
-slug: games-for-development-video
-description: ''
-tags:
-    - games
-    - gaming
-author: EL_News
-username: el-news
----
-
 # Games for Development [VIDEO]
 
 ### By Engagement Lab
 
 08/13/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WYmVlgs3q3uGhgcrg-7Cig.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WYmVlgs3q3uGhgcrg-7Cig.png)
 
 Often times the notion of human development gets lost in a swirling vortex of tedious administrative processes that people have to wade through. Although humans are invested in changing and improving their communities, the methods used to reel them in lack a certain element. *Games for Development*aims to fill in that gap.
 

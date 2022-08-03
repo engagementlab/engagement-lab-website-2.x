@@ -1,23 +1,8 @@
----
-url: https://medium.com/civic-media-project/terra-incognita-serendipity-and-discovery-in-the-age-of-personalization-b37fefd1c199
-canonical_url: https://medium.com/civic-media-project/terra-incognita-serendipity-and-discovery-in-the-age-of-personalization-b37fefd1c199
-title: 'Terra Incognita: Serendipity and Discovery in the Age of Personalization'
-subtitle: Catherine D’Ignazio (Emerson College)
-slug: terra-incognita-serendipity-and-discovery-in-the-age-of-personalization
-description: ''
-tags:
-    - multilingualism
-    - education-technology
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # Terra Incognita: Serendipity and Discovery in the Age of Personalization
 
 ### *Catherine D’Ignazio (*Emerson College)
 
-![This case study describes “Terra Incognita: 1000 Cities of the World”, a serendipitous global news recommendation system designed to help people out of their personalized media filter bubbles.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_lqYmaslkadMuoAze.jpg)
+![This case study describes “Terra Incognita: 1000 Cities of the World”, a serendipitous global news recommendation system designed to help people out of their personalized media filter bubbles.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_lqYmaslkadMuoAze.jpg)
 
 As Herbert Simon argued in his prescient 1966 essay, “A wealth of information creates a scarcity of attention” (Simon, 1996). In a world of hundreds of cable channels, free news dailies, personalized websites, algorithmically-curated feeds and interactive apps, how do people — with limited attention — fulfill their information needs? And what are the public repercussions for personal media decisions, particularly in relationship to our notions of “the informed citizen” in a representative democracy?
 
@@ -27,7 +12,7 @@ Numerous critics have articulated concerns about the shifting media landscape an
 
 At the end of his book _Rewire_, Ethan Zuckerman introduces the provocative idea of _engineering serendipity_ as a possible way to encounter information that we otherwise wouldn’t. Unintended information encountering happens regularly in online environments (Erdelez, 2004). But can we intentionally design information systems to introduce us to new information outside what we know we want or what our social networks offer up?
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Jsz0lIl7looAzy4w.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Jsz0lIl7looAzy4w.jpg)
 
 _Terra Incognita: 1000 Cities of the World_ is a speculative design intervention that took up this challenge in relation to the geographic diversity of information an individual reads. The central conceit is the term “Terra Incognita” which was used on maps in the Age of Discovery to denote unexplored territories. It’s a perspectival term. Because, of course, there were people like the Tupinambá actually living in those seemingly unexplored lands on Martin Waldseemüller’s map (above). The places the Tupinambá knew intimately — where they fished or hunted or celebrated or slept — were not _Terra Incognita_ to them. But to the Europeans embarking on their voyages each new cove or settlement was a curve or mark to be made on a map, a way of demarcating the limits of their people’s understanding. And, in a way, the main goal of *Terra Incognita: 1000 Cities of the World*is the same: to introduce the user to the vastness of the world that is unknown to them through making news recommendations about the top one thousand most populous global cities.
 
@@ -35,7 +20,7 @@ The main user experience of Terra Incognita is an intervention into your Interne
 
 Once installed, Terra Incognita becomes the default screen for every new browser window you open. Each time you open a new Tab, Terra Incognita shows you a city that you have not yet read about and gives you options for reading about it. Chelyabinsk (Russia), Hiroshima (Japan), Belo Horizonte (Brazil) and Abidjan (Ivory Coast) are a few of the places where you might end up.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_KOZnh9gjbMQAdVcf.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_KOZnh9gjbMQAdVcf.jpg)
 
 You can click to read a news recommendation or take your chances with the big red button which will take you to a news story drawn by chance. In the interface you can also see which of the 1000 cities you have read about and navigate to other cities through the bar on the bottom. There are some lightweight social features, including a call-out for which user in the system has read the most about that city and a count for how many cities the user has read about.
 

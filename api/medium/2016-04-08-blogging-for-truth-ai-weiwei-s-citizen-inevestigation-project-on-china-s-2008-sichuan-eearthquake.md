@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/blogging-for-truth-ai-weiwei-s-citizen-inevestigation-project-on-china-s-2008-sichuan-eearthquake-68ec10c2b643
-canonical_url: https://medium.com/civic-media-project/blogging-for-truth-ai-weiwei-s-citizen-inevestigation-project-on-china-s-2008-sichuan-eearthquake-68ec10c2b643
-title: 'Blogging for Truth: Ai Weiwei’s Citizen Inevestigation Project on China’s
-    2008 Sichuan Eearthquake'
-subtitle: Jian Xu (China Research Centre, University of Technology, Sydney)
-slug: blogging-for-truth-ai-weiwei-s-citizen-inevestigation-project-on-china-s-2008-sichuan-eearthquake
-description: ''
-tags:
-    - social-justice
-    - transparency
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # Blogging for Truth: Ai Weiwei’s Citizen Inevestigation Project on China’s 2008 Sichuan Eearthquake
 
 ### *Jian Xu (*China Research Centre, University of Technology, Sydney)
@@ -22,7 +6,7 @@ On the afternoon of May 12, 2008, a 7.9 magnitude earthquake hit Sichuan provinc
 
 The earthquake demolished over 7,000 classrooms, and killed thousands of students. The large death toll led to wide discussion about the quality of the school buildings. This, in turn, led to allegations of corruption against government officials and construction contractors, who were complicit in constructing sub-standard school buildings while pocketing the remaining surplus. The scandal soon became a focal point of reporting. Despite initial openness to media’s crisis reporting, the Chinese government issued notice to media outlets ordering them to downplay the issue, and forced China’s most famous liberal press, Southern Metropolis Daily and foreign media to withdraw from the earthquake zone in case they further investigated the scandal (Weaver 2008). When media’s investigative reporting of the scandal was suppressed, some social activists, public intellectuals, and activist bloggers initiated independent investigation projects to further look into the issue. Amongst them, Ai Weiwei’s citizen investigation project was one of the most well-known and influential projects.
 
-![An informal gathering of parents whose children were crushed to death in shoddy schoolhouses commemorated their children at Juyuan Middile School in Dujiangyan, one of the most destroyed areas in the Sichuan earthquake, on May 27, 2008 (Jacobs 2008).]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_nAmzVmNRggn6kwwS.png)
+![An informal gathering of parents whose children were crushed to death in shoddy schoolhouses commemorated their children at Juyuan Middile School in Dujiangyan, one of the most destroyed areas in the Sichuan earthquake, on May 27, 2008 (Jacobs 2008).](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_nAmzVmNRggn6kwwS.png)
 
 As a contemporary artist and intellectual activist with international reputation, Ai Weiwei was unsatisfied with the government’s refusal to release the death toll of the students. He intended to compile a name list of schoolchildren killed in the school buildings by doing independent investigation. In an interview about his investigation, Ai Weiwei argued “all citizens should have the rights to supervise the government, as well as the responsibility to investigate the truth when the government keeps silent” (Wu 2009). The main purpose of the project was to “show respect to every individual victim’s life and refuse to forget the tragedy” (Wu 2009).
 
@@ -38,13 +22,13 @@ Losing the blogging platforms in domestic cyberspace, he moved his blog overseas
 
 By the end of July 2009, the investigation was largely completed. A total number of 5, 194 students were confirmed missing or dead; the number quite close to the official figure. Moreover, a name list of 4,851 students was compiled and released on his blog. As an artist, Ai Weiwei also used artistic forms to present the findings of his citizen investigation project and to memorize the perished students. In late 2009, [he released two audio-visual works](https://www.youtube.com/watch?v=qssniSdhQO8): 4851 and Hua Lian Ba Er. 4851 is a long name list of student casualties with background music only. [Hua Lian Ba Er is a documentary film](https://www.youtube.com/watch?v=LhAKAi7Qm1Y#t=2695), which documents the CIG’s investigation of the schoolhouse scandal.The links of the audio-visual works were widely circulated online, allowing more people to know his investigation in a more visual and direct way.
 
-![Names of the student victims scroll down alphabetically by last name (screenshot from 4851)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_38-Mhojd2xMRO2cf.png)
+![Names of the student victims scroll down alphabetically by last name (screenshot from 4851)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_38-Mhojd2xMRO2cf.png)
 
-![The CIG is interviewing the mother of a student victim named Yang Meiying (screenshot from Remembrance).]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_kv206f6_pw-7BVEn.png)
+![The CIG is interviewing the mother of a student victim named Yang Meiying (screenshot from Remembrance).](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_kv206f6_pw-7BVEn.png)
 
 Ai Weiwei’s citizen investigation project, blogs were the central platforms to release investigation report, interact with audience both online and offline, mobilize public opinion, and build national and transnational advocacy networks. In China, where mainstream media are still tightly controlled, and collective protests offline are very likely to be cracked down in disasters and crises, blogging and microblogging have shown both “symbolic” and “material”(Lievrouw 2011) functions albeit under censorship (Lee 2013). They represent the suppressed agenda as alternative journalistic practice, and also enable the right defense actions of the marginalized groups enacted in a relatively safer mode of interaction and engagement centered on the Internet. In addition, a group of what Kellner calls “new critical intellectuals” (Kellner 1998) is emerging in China’s new media age, such as Ai Weiwei. They could “intervene in the new public spheres produced by broadcasting and computing technologies” and use new technologies to “attack domination and to promote education, democracy and political struggle” (Kellner 1998). The interplays between China’s new critical intellectuals and new media users centered on the new media platforms have fostered new characteristics of China’s civic activism and engagement in the Web 2.0 era.
 
-![Ai Weiwei with his list of names of schoolchildren who died in the 2008 Sichuan earthquake, posted on the wall in his studio in Beijing.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_1mlbf0l_LJVV7NrE.png)
+![Ai Weiwei with his list of names of schoolchildren who died in the 2008 Sichuan earthquake, posted on the wall in his studio in Beijing.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_1mlbf0l_LJVV7NrE.png)
 
 # References
 

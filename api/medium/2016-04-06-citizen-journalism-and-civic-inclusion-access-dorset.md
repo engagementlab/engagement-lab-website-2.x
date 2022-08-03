@@ -1,25 +1,10 @@
----
-url: https://medium.com/civic-media-project/citizen-journalism-and-civic-inclusion-access-dorset-90ecc5dc59f
-canonical_url: https://medium.com/civic-media-project/citizen-journalism-and-civic-inclusion-access-dorset-90ecc5dc59f
-title: 'Citizen journalism and Civic Inclusion: Access Dorset'
-subtitle: Einar Thorsen (Bournemouth University), Daniel Jackson, and Ann Luce
-slug: citizen-journalism-and-civic-inclusion-access-dorset
-description: ""
-tags:
-- citizen-journalism
-- community-organization
-- community-and-action
-author: EL_News
-username: el-news
----
-
 # Citizen journalism and Civic Inclusion: Access Dorset
 
 ### Einar Thorsen (Bournemouth University), Daniel Jackson, and Ann Luce
 
 The prospect of disabled and older people making films speaks to the great potential of civic media to shape individual representations, develop a public voice and connect with a community, especially in light of disempowering mainstream media representations typically faced by disabled and elderly populations. Central to this potential is citizen empowerment through participation, which can enable mobilizing to challenge established forms of power and representations through creative use of civic media.
 
->> Access Dorset TV (ADTV) is a pioneering community media partnership based in Dorset, UK, aiming to provide a voice to over 4,000 disabled people, older people and their caretakers through citizen journalism.
+> > Access Dorset TV (ADTV) is a pioneering community media partnership based in Dorset, UK, aiming to provide a voice to over 4,000 disabled people, older people and their caretakers through citizen journalism.
 
 Produced by and for its user-groups, [ADTV](http://www.accessdorsetcentre.org/) provides web-based peer support, information and lifestyle videos about disabled and elderly experiences, events, social action projects, and independent living. The citizen journalism initiative is influenced by how the participants conceive their roles, relate to power, and represent their imagined audience.
 
@@ -41,7 +26,7 @@ From November 2013 to January 2014, Bournemouth University delivered a five-week
 
 Including disabled and older people in the production of online video empowers people who are otherwise marginalized from both production of news and representation of issues that concern them. Participants in the ADTV project were given responsibilities and opportunities many of them thought they would never have experienced. For them, it was not only about gaining access to the modes of production, but also making a difference through a creative project about their disabilities. Participants in ADTV are actively self-identifying as citizen journalists. Referring to professional journalists, one person observed how “their motivations are completely different.” (Participant A, interview) She expressed that they valued their own “freedom,” reporting on “issues that are directly affecting you on a local level, on a personal level and from the perspective of a person living everyday life rather than from the perspective of media trying to sell it.” (Participant A, interview) Another Bournemouth resident and Access Dorset citizen journalist, made a similar distinction, based in part on the participants’ experiences of mainstream reporters:
 
->> “But when you’re on your own, a reporter comes into your life and then he fucks off. And then he can leave devastation if the job’s not done. And that’s not what I want. I’m not going to be ruthless against and make somebody really uncomfortable.” (Participant B, interview)
+> > “But when you’re on your own, a reporter comes into your life and then he fucks off. And then he can leave devastation if the job’s not done. And that’s not what I want. I’m not going to be ruthless against and make somebody really uncomfortable.” (Participant B, interview)
 
 # Holding power to account and accelerating impact
 
@@ -55,18 +40,16 @@ The Access Dorset project is one model of citizen journalism, with some early su
 
 # REFERENCES
 
-Allan, S. and E. Thorsen. 2009. *Citizen Journalism: Global Perspectives, Volume One.* New York, Peter Lang.
+Allan, S. and E. Thorsen. 2009. _Citizen Journalism: Global Perspectives, Volume One._ New York, Peter Lang.
 
-Briant, E., N. Watson, and G. Philo. 2011. *Bad News for Disabled People: How the Newspapers are Reporting Disability*. Glasgow, UK, Strathclyde Centre for Disability Research and Glasgow Media Unit, University of Glasgow.
+Briant, E., N. Watson, and G. Philo. 2011. _Bad News for Disabled People: How the Newspapers are Reporting Disability_. Glasgow, UK, Strathclyde Centre for Disability Research and Glasgow Media Unit, University of Glasgow.
 
-Metzgar, E., D. Kurpius, D., and K. Rowley. 2011. “Defining hyperlocal media: Proposing a framework for discussion.” *New Media & Society* 13 (5).
+Metzgar, E., D. Kurpius, D., and K. Rowley. 2011. “Defining hyperlocal media: Proposing a framework for discussion.” _New Media & Society_ 13 (5).
 
-Thorsen, E. and S. Allan. 2014. *Citizen Journalism: Global Perspectives, Volume Two.* New York, Peter Lang.
+Thorsen, E. and S. Allan. 2014. _Citizen Journalism: Global Perspectives, Volume Two._ New York, Peter Lang.
 
-Wilde, A.. 2010. “Spectacle, Performance and the Re-Presentation of Disability and Impairment.” *The Review of Disability Studies* 6 (3).
+Wilde, A.. 2010. “Spectacle, Performance and the Re-Presentation of Disability and Impairment.” _The Review of Disability Studies_ 6 (3).
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

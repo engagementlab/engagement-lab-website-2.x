@@ -1,24 +1,8 @@
----
-url: https://medium.com/civic-media-project/idle-no-more-e96c34ab8922
-canonical_url: https://medium.com/civic-media-project/idle-no-more-e96c34ab8922
-title: Idle No More
-subtitle: Candis Callison (University of British Columbia) and Alfred Hermida (University
-    of British Columbia)
-slug: idle-no-more
-description: ''
-tags:
-    - hashtag-activism
-    - canada
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # Idle No More
 
 ### *Candis Callison (*University of British Columbia) *and Alfred Hermida (*University of British Columbia)
 
-![Photo credit: Ryan Raz]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yJTAFnSAIlG95BAbXIcZSA.png)
+![Photo credit: Ryan Raz](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yJTAFnSAIlG95BAbXIcZSA.png)
 
 Idle No More (INM) is an indigenous-led multi-vocal movement that used social media to mobilize and engage Canadian and global audiences. Social media facilitated the emergence of a crowd sourced elite composed of a significant number of indigenous and alternative voices, and collective articulations and negotiations of the movement’s concerns.
 
@@ -38,7 +22,7 @@ Mainstream media struggled to accurately represent INM — both in terms of its 
 
 Twitter became an important space not only for collaboratively generated news streams that reported events and protests, but for a process we term resonance. Resonance describes the process where a crowdsourced elite articulates in open and evolving terms the meaning, history and substance of what it means to be a part of INM as ally and participant.
 
-![Graph Credit: Alfred Hermida]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EWZtEKD6KmLFJxDNWegIHw.png)
+![Graph Credit: Alfred Hermida](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EWZtEKD6KmLFJxDNWegIHw.png)
 
 In our in-depth analysis of the Twitter stream during the height of the movement in December 2012 and January 2013, the INM crowdsourced elite evident was composed of a significant proportion of indigenous individuals who are usually absent from mainstream media representations. Their elite status grew not from the usual markers of “influence” such as institutional authority and power but rather by the degree to which they were retweeted. Multi-vocality through diverse spokespeople, is thus a substantive and defining quality. It allows for broad enrollment, consensus, alliance, as well as criticism and opposition. INM serves as an example of connective action where the lack of ideological coherence is no longer a barrier to collective action. At the same time, multi-vocality is the very element held up for harsh critique that, like Occupy and the Arab Spring before it, this movement doesn’t know what it wants or doesn’t have specific demands.
 

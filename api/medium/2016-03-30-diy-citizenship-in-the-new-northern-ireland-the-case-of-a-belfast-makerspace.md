@@ -1,24 +1,9 @@
----
-url: https://medium.com/civic-media-project/diy-citizenship-in-the-new-northern-ireland-the-case-of-a-belfast-makerspace-3be86279fb43
-canonical_url: https://medium.com/civic-media-project/diy-citizenship-in-the-new-northern-ireland-the-case-of-a-belfast-makerspace-3be86279fb43
-title: 'DIY Citizenship in the New Northern Ireland: The Case of a Belfast Makerspace'
-subtitle: Dr. Pip Shea (Ulster University)
-slug: diy-citizenship-in-the-new-northern-ireland-the-case-of-a-belfast-makerspace
-description: ''
-tags:
-    - community-and-action
-    - diy
-    - community-organization
-author: EL_News
-username: el-news
----
-
 # DIY Citizenship in the New Northern Ireland: The Case of a Belfast Makerspace
 
 ### Dr. Pip Shea (Ulster University)
 
 ![Figure 1: Farset Labs, Belfast 
-(Photo: David Kane)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_eSSwt2iZ7xCbx9BOZ4CDgA.png)
+(Photo: David Kane)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_eSSwt2iZ7xCbx9BOZ4CDgA.png)
 
 # Introduction
 
@@ -29,7 +14,7 @@ Northern Ireland is emerging from a violent sectarian conflict colloquially know
 Recognized as a non-profit with charitable status and affectionately known as a “geek gym,” Farset Labs relies on monthly membership fees to operate. Situated near Belfast’s City Centre, Farset offers members and the local community a space to make and modify hardware and software. The organization’s online and offline operations are mutually inclusive. Its geographical position and digital networks work in tandem to influence its member base and outreach activities. Farset’s landlord is a key patron, offering the organization flexible rental terms and the freedom to “hack the space” to make it more appropriate for their operations. The lab also offers resources and activities traditionally associated with community centers such as informal education programs and free social events. Tinkering and experimentation activities situate the organization, however Farset Labs’ director Andrew Bolster — one of four (Ben Bland, David Kane and Dylan Wylie)— admits the venture “has only got a little bit to do with technology,” citing the facilitation of social connection as its most important function ([“Nesta in Belfast” 2014](https://www.youtube.com/watch?v=2SGxpwkexWY)). The byproduct of this is strong ties between Belfast’s technologist and maker communities that lead to new modes of civic participation.
 
 ![Figure 2: Farset Labs’ CoderDojo event 
-(Photo: David Kane)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WSqF59LKM5ent5Ci6ui1-Q.png)
+(Photo: David Kane)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WSqF59LKM5ent5Ci6ui1-Q.png)
 
 # Presentation of findings
 
@@ -44,7 +29,7 @@ _CoderDojos_ offer free coding clubs for young people [figure 2]: Farset Lab mem
 Underpinning this civic participation are critical making activities, where the modification of things inherently challenges existing systems of authority (Ratto and Boler 2014, 5). Farset’s encouragement of the reuse of technology “waste” is one such example. At a recent hackathon, the winning team was singled out because they used toilet cisterns to make a Twitter-powered drinks dispenser [figure 3]. Critical making is also apparent in the organization’s use of an Extendible Hardware Donation License ([“Extendable Hardware” 2014](http://www.farsetlabs.org.uk/about/hardware_donation_license.html#extendible-hardware-donation-license-v10)), a sharing paradigm that gives equipment owners of the flexibility to donate their hardware under conditional arrangements.
 
 ![Figure 3: Hackathon participants 
-(Photo: Ben Bland)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-LT-MYT8xRDSqEev1q-3zQ.png)
+(Photo: Ben Bland)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-LT-MYT8xRDSqEev1q-3zQ.png)
 
 # Conclusion
 
@@ -54,7 +39,7 @@ Although different demographics use Farset Labs as a platform for DIY citizenshi
 Farset Labs are a node in a system that has been described in humanities research as connected learning, the foci of which are social learning and the making (Ito et al, 75) of things that happen across different sites and locations, online and offline. The activities facilitated by Farset Labs extends the social learning of making by encouraging alternative thinking and responsible action, which challenges normative understandings of democratic systems and civic participation.
 
 ![Figure 4: Participants engaged in a games development event at Farset Labs 
-(Photo: Ben Bland)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mXMLMCWVBhv-EaFS405V3g.png)
+(Photo: Ben Bland)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mXMLMCWVBhv-EaFS405V3g.png)
 
 # References
 

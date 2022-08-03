@@ -1,20 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/civic-media-interventions-to-engage-the-public-sector-6b1affbc9742
-canonical_url: https://medium.com/engagement-lab-emerson-college/civic-media-interventions-to-engage-the-public-sector-6b1affbc9742
-title: 'Civic Media: Interventions to Engage the Public Sector'
-subtitle: by Lauren Stott
-slug: civic-media-interventions-to-engage-the-public-sector
-description: ''
-tags:
-    - civictech
-    - emerson-cmap
-    - students
-    - engagement
-    - public-sector
-author: EL_News
-username: el-news
----
-
 # Civic Media: Interventions to Engage the Public Sector
 
 **_by Lauren Stott_**
@@ -25,7 +8,7 @@ But what about civic media in the hands of the so-called gatekeepers of the publ
 
 I spent a rewarding and educational five years in local government before joining the Emerson College Civic Media: Art and Practice (CMAP) master’s program, and I’m optimistic about the ways civic media can enhance strong communities. There are two forms this can take: citizens can employ civic media practices as active community members, and public servants can utilize civic media practices in their facilitation of democracy.
 
-![Lauren in the CMAP study lounge. Photo credit: Anna Ladd.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7Aq-rTLbWu_wPj8wL4Z9Xg.jpeg)
+![Lauren in the CMAP study lounge. Photo credit: Anna Ladd.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7Aq-rTLbWu_wPj8wL4Z9Xg.jpeg)
 
 I’ve been fortunate to be involved in many public sector initiatives and projects that require a passionately engaged public, and one of the most pervasive challenges I’ve experienced is the engagement component.
 

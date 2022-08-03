@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/aliens-on-campus-an-alternate-reality-approach-to-student-inclusion-acbb1287db71
-canonical_url: https://medium.com/civic-media-project/aliens-on-campus-an-alternate-reality-approach-to-student-inclusion-acbb1287db71
-title: 'Aliens on Campus: an Alternate Reality APPROACH TO STUDENT INCLUSION'
-subtitle: Wouter Grove (University of the Western Cape, South Africa), Johan Breytenbach,
-    Leona Craffert
-slug: aliens-on-campus-an-alternate-reality-approach-to-student-inclusion
-description: ''
-tags:
-    - games
-    - south-africa
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # Aliens on Campus: an Alternate Reality APPROACH TO STUDENT INCLUSION
 
 ### *Wouter Grove (*University of the Western Cape, South Africa)_, Johan Breytenbach, Leona Craffert_
@@ -38,13 +22,13 @@ Memes, as “units of cultural transmission,” were first conceptualized by Daw
 
 The common usage of a “meme” was criticized by Jenkins et al. (2013), who questions the concept of deterministic “self-replicating” culture and the negating of the agency role of greater public control over content that spreads through culture (Jenkins 2014). This study asks the question whether deliberate meme creation may offer value in HE.
 
-![Aliens on Campus]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7gIMQyllbH3pd9rE-Mh1Jg.png)
+![Aliens on Campus](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7gIMQyllbH3pd9rE-Mh1Jg.png)
 
 # The Game [Design and approach]
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ng13gE3MDxKjHw87OeiXXg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ng13gE3MDxKjHw87OeiXXg.png)
 
-![Aliens on Campus Logo]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ng13gE3MDxKjHw87OeiXXg.png)
+![Aliens on Campus Logo](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ng13gE3MDxKjHw87OeiXXg.png)
 
 A [multi-channel communication strategy](https://plus.google.com/+Uwcsightings/videos) was designed with our target group’s diversity in mind and utilized text messaging, Unstructured Supplementary Service Data (USSD), mass e-mail, as well as social media channels (Facebook; Twitter; Google Plus and YouTube).
 

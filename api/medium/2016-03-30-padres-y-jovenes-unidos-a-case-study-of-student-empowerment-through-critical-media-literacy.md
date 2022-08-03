@@ -1,44 +1,28 @@
----
-url: https://medium.com/@el-news/padres-y-jovenes-unidos-a-case-study-of-student-empowerment-through-critical-media-literacy-e1d7d222216c
-canonical_url: https://medium.com/@el-news/padres-y-jovenes-unidos-a-case-study-of-student-empowerment-through-critical-media-literacy-e1d7d222216c
-title: 'Padres y Jovenes Unidos: A Case Study of Student Empowerment through Critical
-    Media Literacy'
-subtitle: Lynn Schofield Clark (University of Denver)
-slug: padres-y-jovenes-unidos-a-case-study-of-student-empowerment-through-critical-media-literacy
-description: ''
-tags:
-    - learning-and-engagement
-    - youth-media
-    - media-literacy
-author: EL_News
-username: el-news
----
-
 # Padres y Jovenes Unidos: A Case Study of Student Empowerment through Critical Media Literacy
 
 ### Lynn Schofield Clark (University of Denver)
 
 Digital Media Club is an extracurricular digital media literacy effort that I started in 2011 with a staff person at one of Denver’s most ethnically and economically diverse urban high schools. The club brings university students and high school students together on a weekly basis in an effort to support the high school students as they seek to “use media to make a difference in their communities.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_64yuvJyPF1mnrBRWYSHt8Q.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_64yuvJyPF1mnrBRWYSHt8Q.png)
 
 The club’s focus is rooted in ideas of critical digital media literacy as students both critically evaluate and create media (see, e..g., Hobbs, 2010; Kellner & Share, 2005; Livingstone, 2004; Thevenin, 2012; Turner, 2011). Throughout the school year, students are encouraged to think about what community they would like to change, what difference they would like to see, and how they might utilize media to bring about this change. The program’s design therefore draws upon concepts of political and civic education in that we recognize the need for relevant and deep knowledge about the roots of social problems, and encourage the students to think about “what is” and “what ought to be (see, e.g., Gordon, 2013; Levin, 2011).”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_TFOjOs-Wi02MBjkVq8SUqw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_TFOjOs-Wi02MBjkVq8SUqw.png)
 
 In our desire to foreground using media to create change, we’ve also had to address the “audience problem” of youth media in creative ways, because as Peter Levine (2008) has pointed out, youth media programs tend to focus on the production of student voice rather than on its reception (see also Soep, 2006, 2011). . This case study discusses how we helped students to experience empowerment as they thought not only about the audience for their particular media product, but also about how their media efforts fit with the larger efforts of a local grassroots organization; an organization that had long been working for better educational outcomes in economically challenged communities like theirs. By playing a role in that organization’s expansive reach, the students were contributing to expanding the audience for the organization’s efforts; thereby channeling their energies toward broader efforts that were already making a difference in the bigger community. In this way, this case study is an example of an alliance-oriented digital media literacy project — an exploration of what happens when digital media literacy is positioned at the core of civic education in an effort to push further the agenda that’s become known as “participatory politics,” or the effort to link student interests and digital media enthusiasm with political initiatives (Mihailidis, 2009; Mihaidilis & Thevenin, 2013). This experience has convinced me that partnering such programs with longstanding community activist groups is a way in which students can experience a more sustained approach to political engagement, and it’s therefore a model I’d like to see tested and developed further.
 
 Our school/community partnership began when two of the students in Digital Media Club, Ezana and Karim, introduced the group to the work of Padres Y Jovenes Unidos (Parents & Youth United, or PJU), a group that started in Denver and that was engaged in a campaign that PJU called “End the School to Jail Track.” Their target was zero tolerance approaches to discipline that disproportionately affect students of color in schools across the United States. As part of the campaign, PJU produced a report demonstrating that police involvement in high school discipline had resulted in an increase in school suspensions; showed that there was a link between increased suspensions and higher high school dropout rates, which in turn related to higher rates of incarceration. PJU wanted to turn this around by limiting police presence in schools and by offering support for more effective in-school disciplinary policies so that vulnerable populations would stay in school and out of jail. With funding to implement pilot projects they developed alternatives to the “zero tolerance” approach. They established several restorative justice programs in urban high schools that encouraged students to assume responsibility for repairing the damages that they caused. PJU regularly held rallies to increase support for their efforts statewide.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_roWak62A_f0xf3WqSeo_nw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_roWak62A_f0xf3WqSeo_nw.png)
 
 When Ezana learned that students in another high school had developed a skit to illustrate the differences between punitive and restorative approaches to discipline, he and his peers sought to create a similar skit for their own school, working with Digital Media Club to help film it. The student leaders cast fellow students in the roles of fighting students, stern security officers, a traditional principal who embraces first a punitive and then a restorative justice approach, and a restorative justice counselor who works with the students to discuss what each can do to address and be accountable for the consequences of their actions.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Ur2CCuHSfIEhKfulY2cXhg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Ur2CCuHSfIEhKfulY2cXhg.png)
 
 The students took great joy in writing and filming the skit. While filming the fight scene, lots of laughter ensued as the school’s security guards actually showed up to see what all the noise was about. And once the filming and editing were complete, the students circulated the video wide across their social media networks. They also shared it with teachers and with the school’s principal, who — much to the students’ delight — used it in a teacher/training event to demonstrate the value of embracing a restorative justice approach in their school. This was only possible because their work was linked to the wider efforts of PJU that had already gained a place on the school’s agenda.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_hO6lLrUKHZeUuLP3hPOcuQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_hO6lLrUKHZeUuLP3hPOcuQ.png)
 
 While the students were planning and filming the skit, the larger PJU organization continued to work with the Denver Public Schools to craft a new discipline policy that limited the police presence in schools and that outlined protections for students and their families. They also worked with the state senate to craft what came to be known as the “smart discipline” bill that aimed to expand the policy into a statewide law. As the bill moved through the state senate, the students involved in the Digital Media Club followed the news and kept their friends updated. When the state senate passed the bill at the end of the school year, the students were overjoyed. They knew that they had expanded PJU’s work in their own school, and so they experienced themselves as participants in the larger political action and felt a great deal of ownership in the bill’s success.
 

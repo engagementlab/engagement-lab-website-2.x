@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/procurement-disclosure-in-the-slovak-republic-27a6a88a6f5d
-canonical_url: https://medium.com/civic-media-project/procurement-disclosure-in-the-slovak-republic-27a6a88a6f5d
-title: Procurement Disclosure in the Slovak Republic
-subtitle: Alexander Furnas (University of Michigan)
-slug: procurement-disclosure-in-the-slovak-republic
-description: ''
-tags:
-    - open-data
-    - transparency
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Procurement Disclosure in the Slovak Republic
 
 ### *Alexander Furnas (*University of Michigan)
@@ -31,7 +16,7 @@ TI-Slovakia now maintains an online very usable portal called “Open Public Pro
 
 According to Adam Valček, “Previously, only a few people have read the contract, because contracts were unavailable.” Now “there are more tips, because people [are] reading contracts on the web” (Folentova, Valček 2013).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_JD9tuS1adeyhtqMW.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_JD9tuS1adeyhtqMW.jpg)
 
 Veronika Folentova offered an example tip that was representative of these new sources. Teachers, she said, sent in information about Ministry of Education procurements for flowers in the amount of 9,900 Euros, and a contract for 36 bottles of alcohol for 132 Euros each (Folentova, Valček 2013). These small examples paint a picture of a type of contextualized, public and participatory oversight that would have been impossible without online publication. Lower barriers to using public information make this type of engagement possible.
 
@@ -45,7 +30,7 @@ TI-Slovakia was able to conduct research that showed an increase in competition 
 
 Numbers of this kind were unavailable before the reforms. Citing a problematic, and “amateurish” lack of analytic capacity within the government, Sipos said “basically nobody had [these numbers], even the office of public procurement in Slovakia[…] Nobody noticed what was happening” (Sipos 2013).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_oMjFflESiS8nit9_.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_oMjFflESiS8nit9_.png)
 
 The electronic availability of procurement information has greatly increased capacity across the civil sector:
 

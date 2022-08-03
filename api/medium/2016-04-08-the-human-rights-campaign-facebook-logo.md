@@ -1,25 +1,10 @@
----
-url: https://medium.com/civic-media-project/the-human-rights-campaign-facebook-logo-a461fda5a44e
-canonical_url: https://medium.com/civic-media-project/the-human-rights-campaign-facebook-logo-a461fda5a44e
-title: The Human Rights Campaign Facebook Logo
-subtitle: Stephanie Vie (University of Central Florida)
-slug: the-human-rights-campaign-facebook-logo
-description: ''
-tags:
-    - marriage-equality
-    - slacktivism
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # The Human Rights Campaign Facebook Logo
 
 ### *Stephanie Vie (*University of Central Florida)
 
 The blue square with a yellow equal sign has been a memorable symbol of gay rights since 1995, when the Human Rights Campaign (HRC) adopted the logo to represent the LGBT community (see Figure 1.1).
 
-![Figure 1.1]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Usk6BWTcMF7NvMr3.jpg)
+![Figure 1.1](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Usk6BWTcMF7NvMr3.jpg)
 
 In conjunction with Stone Yamashita, a “strategy, branding, design, and culture change consultancy” that focuses on companies’ “heart” and “visceral experiences,” then-Executive Director of the HRC Elizabeth Birch aimed for a logo that showed that the campaign was “so much more than a fund” (Heath and Chang 2004; “About Our Logo” 2011). The blue-and-yellow logo offered a bold design that was cheap to produce and immediately recognizable.
 
@@ -29,19 +14,19 @@ The HRC regularly sends free bumper stickers in the mail to support “an Americ
 
 In March 2013, to bring attention to the United States Supreme Court cases on Proposition 8 and the Defense of Marriage Act, the HRC modified its logo by changing its colors to red and pink — colors frequently associated with romance and love (see Figure 1.2).
 
-![Figure 1.2]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_xxp2CW-9g3cSb4-b.jpg)
+![Figure 1.2](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_xxp2CW-9g3cSb4-b.jpg)
 
 The day before the Supreme Court was scheduled to start deliberations on Proposition 8, the HRC posted on Facebook encouraging users to adopt the modified logo as their profile picture. “Share this image and ask your friends and family to join you!” stated one update on March 25, 2013. Another asked, “Who’s wearing red tomorrow? Show your support for marriage equality — make your profile image red for tomorrow and check out [www.hrc.org/StandForMarriage](http://www.hrc.org/StandForMarriage) for more ways to get involved!” (See Figure 1.3)
 
-![Figure 1.3]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_teF3dE47HqrmNkg2.jpg)
+![Figure 1.3](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_teF3dE47HqrmNkg2.jpg)
 
 Those two Facebook posts have been liked over 27,000 times and shared nearly 125,000 times as of August 2014, showing the massive viral impact of the HRC’s modified logo campaign. The logo spread and modified through the network. Many modifications included LGBT couples, real and imagined, like the Statue of Liberty kissing Justice (see figure 1.4)
 
-![Figure 1.4]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_5jyBRjuwhvX3ADZp.jpg)
+![Figure 1.4](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_5jyBRjuwhvX3ADZp.jpg)
 
 or Sesame Street characters Bert and Ernie (see figure 1.5).
 
-![Figure 1.5]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_38VG9WHoPUfEghjw.jpg)
+![Figure 1.5](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_38VG9WHoPUfEghjw.jpg)
 
 Because the variants relied on collective symbols “immediately understood by members of the same speech community,” they thrived (Wodak and Reisigl 2001, 381). Their success depended upon viewers’ collective responses to recognizable figures such as the State of Liberty and to iconic, culturally embedded figures. Similarly, variants were frequently championed by “influencers” with desirable attributes like high levels of credibility, expertise, enthusiasm, or connectivity (Bakshy et al. 2011, 65–74). Notable influencers in this campaign included Martha Stewart, George Takei, and Beyoncé, who helped spread the logo to their millions of followers. (However, influencers are not always celebrities, but simply individuals with powerful significance within a network.)
 
@@ -51,7 +36,7 @@ How far did the logo and variants spread? Significantly more users (approximatel
 
 It drove new traffic to the website with over 700,000 unique visitors in a 24-hour period around March 26; almost 90% were new to the site (“Marriage at the U.S. Supreme Court” n.d.). They signed and shared the HRC’s “Majority Opinion” petition, recruiting more than 67,000 new supporters (“Marriage at the U.S. Supreme Court” n.d.). The HRC released a video from Hillary Clinton proclaiming her support for marriage equality. Finally, five U.S. Senators noted their support for Proposition 8’s dismissal during this time and the HRC shared their support through Facebook blog posts and images (see figure 1.6) (“Marriage at the U.S. Supreme Court” n.d.).
 
-![Figure 1.6]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_8e3_5L0bvrod7hDF.jpg)
+![Figure 1.6](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_8e3_5L0bvrod7hDF.jpg)
 
 These elements worked together to create “a widespread descriptive norm implying that it is socially acceptable to advocate for same-sex marriage,” leading to real-world impacts (Tannenbaum 2013). The power of norms can be more influential than the power of law and order; change often occurs through specific platforms where online sociality bleeds over into offline life (van Dijck 2013, 19).
 

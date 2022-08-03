@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/singapore-memory-project-producing-public-memory-through-social-media-948ec8e58753
-canonical_url: https://medium.com/civic-media-project/singapore-memory-project-producing-public-memory-through-social-media-948ec8e58753
-title: 'Singapore Memory Project: Producing Public Memory Through Social Media'
-subtitle: Natalia Grincheva (Concordia University)
-slug: singapore-memory-project-producing-public-memory-through-social-media
-description: ''
-tags:
-    - storytelling
-    - art
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # Singapore Memory Project: Producing Public Memory Through Social Media
 
 ### *Natalia Grincheva (*Concordia University)
@@ -23,13 +8,13 @@ The [Singapore Memory Project](http://www.singaporememory.sg/) (SMP) is a nation
 
 The Singapore Memory Portal allows online audiences to login using their online identities and upload text, photographs or videos to the platform. The portal has also an iPhone application that empowers users to dynamically capture and instantly upload memories (Elaine Ng 2011). Furthermore, the platform is designed to disseminate content through various social media channels — the ones most popular among Singaporeans. Since the project started in August 2011, more than 300,000 memories have been collected to preserve and provide access to the national culture, telling a true “Singapore Story” to the world (“About us,” Singapore Memory Project, 2014).These include “recollections of historical events, documentation of recent events of significance, as well as personal memories of people, places and activities that resonate with the Singapore psyche” (Elaine Ng 2011).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nQYyY7LWAJalSCtcBgELhQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nQYyY7LWAJalSCtcBgELhQ.jpeg)
 
 The Singapore Memory Project is a timely online initiative that serves several political, economic, and cultural objectives of the country. Singapore is one of the best examples of national cultural rejuvenation, based on the principles of cultural diversity, actively utilized by the government for global promotion and nation branding. Building on the remarkable cultural diversity of Singaporeans who comprise the country’s three main ethnic groups — Chinese, Malays, and Indians — the Singapore strategy is to embrace new technology, creative economy and the heritage of tradition “to mix the East and the West…as a way of harnessing the region’s unique distinctiveness and promoting its renewed vitality”(Yue 2006). In this regard, in recent decades the Singapore government placed an increasing strategic emphasis on creating a sense of a new cultural identity and nationhood among Singaporeans, permanent residents and to some extent, foreigners in Singapore. The national cultural politics, dealing with an increasing level of multiculturalism within the national community, aims to utilize all available social communication tools, including social media, to construct a positive national cultural representation in the international arena and help people to acquire a feeling of belonging (Chong 2005, 560).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_U2cCLrFfzergFjn2aZavwA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_U2cCLrFfzergFjn2aZavwA.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_McT3FeLUKydiEiANvSHtmQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_McT3FeLUKydiEiANvSHtmQ.jpeg)
 
 The image of the country communicated across borders as one that values minority cultures and builds new economy on the principles of cultural inclusion, helps the government to promote the country as a culturally and economically progressive society and expand economic opportunities by attracting external investments and developing tourism. “Singapore’s maturity as a city-state in the global context has also given rise to a critical need and urgency in ensuring that the Singapore story is collected and discovered to prevent the permanent loss of the nation’s heritage, national roots and nation development” (Foo, Tang, Judy Ng 2013). In this regard, the Singapore Memory Project online portal is an important activity on behalf of the Singaporean government in the framework of national and international strategic communication. However, because it engages and heavily relies on the effort from the civil society and general population, the project has strong political and cultural implications on the level of public participation and involvement.
 

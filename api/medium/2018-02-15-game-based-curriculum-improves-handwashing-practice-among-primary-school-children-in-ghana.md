@@ -1,30 +1,14 @@
----
-url: https://medium.com/engagement-lab-emerson-college/game-based-curriculum-improves-handwashing-practice-among-primary-school-children-in-ghana-de09af62f5de
-canonical_url: https://medium.com/engagement-lab-emerson-college/game-based-curriculum-improves-handwashing-practice-among-primary-school-children-in-ghana-de09af62f5de
-title: Game-based curriculum improves handwashing practice among primary school children
-    in Ghana
-subtitle: By Mary Beth Dawson
-slug: game-based-curriculum-improves-handwashing-practice-among-primary-school-children-in-ghana
-description: ''
-tags:
-    - game-based-learning
-    - public-health
-    - ghana
-author: EL_News
-username: el-news
----
-
 # **Game-based curriculum improves handwashing practice among primary school children in Ghana**
 
 By Mary Beth Dawson
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_i67DiV4xHmGDzWho.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_i67DiV4xHmGDzWho.png)
 
 Diarrheal diseases and acute respiratory infections are the top two causes of death in children-under-five worldwide. In 2015, about 10,000 children-under-five died in Ghana from these causes.[1] Handwashing with soap and water can reduce the risk of acute respiratory infections by 6 to 44% and diarrheal diseases by about 30%, yet according to a 2014 National Demographic and Health Survey, only 39% of households in Ghana had water and soap. [2–4]
 
 [_Handwashing with Ananse_](https://elab.emerson.edu/projects/handwashing-with-ananse) is a game-based curriculum that teaches primary school children in Ghana how, when, and why to wash their hands with soap and water. The curriculum has children listen to three stories of a traditional character from Ghanaian folklore, Ananse the Spider, who has hidden all the handwashing knowledge in the world in his pockets. Children play hygiene games based on the stories, practice handwashing with soap, and teach others what they’ve learned to “break” Ananse’s pockets and release the handwashing knowledge back into the world. The [**Engagement Lab**](http://elab.emerson.edu) partnered with the **Ghanaian Red Cross Society**, **Right to Play Ghana**, **Red Cross Red Crescent Climate Centre**, **Ghana Educational Service**, and several children in Ghana to design _Handwashing with Ananse_ in 2015.
 
-![Ananse is a trickster character from traditional Ghanaian folklore. In Handwashing with Ananse, Ananse has hidden all of the handwashing knowledge in the world in his pockets.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_szthq7tqXtD-q-qN.png)
+![Ananse is a trickster character from traditional Ghanaian folklore. In Handwashing with Ananse, Ananse has hidden all of the handwashing knowledge in the world in his pockets.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_szthq7tqXtD-q-qN.png)
 
 Based on initial excitement around _Handwashing with Ananse_, UNICEF Ghana funded an evaluation to determine whether the curriculum was effective in improving knowledge of how, when, and why to wash hands with soap; generating favorable attitudes toward handwashing with soap; and increase handwashing behavior among children who participated. Researchers evaluated the curriculum with 20 primary schools (10 urban, 10 rural schools) from two districts in Central Ghana and one district in Eastern Ghana. All schools received soap and Tippy Tap handwashing stations over the study period. Ten schools participated in _Handwashing with Ananse_ and 10 comparison schools did not receive the curriculum. Children’s knowledge, attitudes, and behaviors were measured at baseline, two weeks after the curriculum ended, and 15 weeks after the curriculum ended in several ways:
 
@@ -40,7 +24,7 @@ Based on initial excitement around _Handwashing with Ananse_, UNICEF Ghana funde
 
 -   Focus groups in schools that participated in _Handwashing with Ananse_
 
-![Children participate in Handwashing with Ananse games during a training with facilitators in March 2016.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_GjwPyOp8x5mHkW0u.jpeg)
+![Children participate in Handwashing with Ananse games during a training with facilitators in March 2016.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_GjwPyOp8x5mHkW0u.jpeg)
 
 > > The study showed a significantly higher increase in knowledge of how to wash hands with soap among children who participated in _Handwashing with Ananse_.
 

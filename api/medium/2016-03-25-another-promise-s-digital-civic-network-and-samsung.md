@@ -1,23 +1,8 @@
----
-url: https://medium.com/civic-media-project/another-promise-s-digital-civic-network-and-samsung-ffe96be5d476
-canonical_url: https://medium.com/civic-media-project/another-promise-s-digital-civic-network-and-samsung-ffe96be5d476
-title: Another Promise’s Digital Civic Network and Samsung
-subtitle: Chaebong Nam (Cornell Law School) and Hyun-Chol Cho (Seoul National University)
-slug: another-promise-s-digital-civic-network-and-samsung
-description: ''
-tags:
-    - storytelling
-    - social-justice
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # Another Promise’s Digital Civic Network and Samsung
 
 ### *Chaebong Nam (*Cornell Law School) *and Hyun-Chol Cho (*Seoul National University)
 
-![Ethan Zuckerman’s Thin and Thick Engagement Framework]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_hb9uh04_-ZFPlbGJ.png)
+![Ethan Zuckerman’s Thin and Thick Engagement Framework](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_hb9uh04_-ZFPlbGJ.png)
 
 _Another Promise_ is a South Korean film that was released in 2014. It describes how a father seeks justice in the courts after his daughter died of leukemia contracted at a Samsung semiconductor plant where unprotected workers were exposed to toxic chemicals. This film is the first one in Korean cinema history funded entirely by crowdfunding and individual investments. Its success was largely attributed to the key role of digital media in forming digital civic networks among ordinary citizens to gain support through funding, marketing, and distribution.
 

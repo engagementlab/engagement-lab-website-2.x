@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-neil-perry-2017-18-cohort-11dab3f33f97
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-neil-perry-2017-18-cohort-11dab3f33f97
-title: 'CMAP Student Spotlight: Neil Perry, 2017–18 Cohort'
-subtitle: Neil Perry is a native New Yorker with a thirty-year career in media production.
-    A three-time Grammy nominee, he spent ten years as a…
-slug: cmap-student-spotlight-neil-perry-2017-18-cohort
-description: ''
-tags:
-    - civic-media
-    - social-media
-    - engagement
-    - emerson-cmap-spotlight
-    - students
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Neil Perry, 2017–18 Cohort
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0cJai4NaF_d2B6_4ZyzvpQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0cJai4NaF_d2B6_4ZyzvpQ.jpeg)
 
 **\*Neil Perry** is a native New Yorker with a thirty-year career in media production. A three-time Grammy nominee, he spent ten years as a recording engineer, mixer and producer for some of the best known artists in the music industry. Since a 2003 move into visual media, he has lead the audio production/post production team at Scripps Networks Interactive in New York, creating sound design, music compositions and audio branding for Food Network, Cooking Channel and Travel Channel. At Scripps, he earned three Daytime Emmy nominations and has helped launch some of the most recognizable franchises on the network including the “Iron Chef” series, “Chopped,” and “Guy’s Big Bite”. In addition, he has also done extensive film work including co-writing the score for “Southern Belles” with Anna Faris and producing the soundtrack for Edward Burns’ “Purple Violets” with Selma Blair and Patrick Wilson. He was also Associate Producer of “We’re Not Blood,” winner of the Best Dramatic Feature Award at the 2015 Atlanta Docufest and “Home,” winner of a Jury Prize at the 2005 AFI/SilverDocs Festival. In the CMAP program, Neil is focused on creating filmed media interventions aimed squarely at social and political impact.\*
 
@@ -28,7 +10,7 @@ username: el-news
 **What does civic media mean to you?
 **The way we understand the contours of our world is largely defined by the media we choose to consume. I like to believe that civic media is about creating engaging ways to inform or bring attention to issues in order to encourage positive change. I think that, when done well, civic media in all its forms can help us see the world in new ways and motivate us to shift the status quo.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AShPpj4Rjp2645aBcWYjiQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AShPpj4Rjp2645aBcWYjiQ.jpeg)
 
 > > I think that, when done well, civic media in all its forms can help us see the world in new ways and motivate us to shift the status quo.
 
@@ -41,7 +23,7 @@ username: el-news
 **Are there any specific projects that you’ve done in the past that intersect with your studies now?
 **I worked as a media consultant/producer on two campaigns in Massachusetts: a Lt. Governor’s campaign and another for State Senate. In those roles I was able to leverage all of the professional media production experience I have and to add all of my policy interests to the mix. That was the recipe for me coming to Emerson and is the main motivating factor in deciding to redirect my career toward civic media.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3mtQR8pPKFmKCEtU7W-UBA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3mtQR8pPKFmKCEtU7W-UBA.jpeg)
 
 **How do you define engagement? What does being engaged mean to you?
 **To be “engaged” means more than simple interest or passive observation. One can be engaged in work without being intellectually attentive to it but that won’t fly in a civic media context. To engage an audience is to present a story or an issue such that the audience commits to a wider understanding of the topic, can consider it from all of its sides and is moved to action. Engaging means encouraging deep participation and pursuing real solutions.

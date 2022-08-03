@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/350-org-a-case-of-online-to-offline-activism-f0b80f1e8dcb
-canonical_url: https://medium.com/civic-media-project/350-org-a-case-of-online-to-offline-activism-f0b80f1e8dcb
-title: '350.org: A Case of ONLINE-TO-OFFLINE ACTIVISM'
-subtitle: Luis E. Hestres (University of Texas at San Antonio)
-slug: 350-org-a-case-of-online-to-offline-activism
-description: ''
-tags:
-    - community-and-action
-    - social-media
-    - diy
-author: EL_News
-username: el-news
----
-
 # 350.org: A Case of ONLINE-TO-OFFLINE ACTIVISM
 
 ### *Luis E. Hestres (*University of Texas at San Antonio)
@@ -31,13 +16,13 @@ Here are some examples of how 350.org has successfully deployed civic media tool
 
 Most U.S. organizations active in climate advocacy rely on a “armchair” or “checkbook” activism model, fundraising from supporters to pay for professional political operations and policy or scientific expertise (Skocpol 2003). By contrast, 350.org has emphasized offline grassroots actions and used online tools to facilitate them. The group has deployed multiple variations of event management tools, usually tied to national or global days of action that make it easy for activists to join local events, or organize their own. Figure 1 shows an event management tool deployed for a protest in Washington, DC. Combined with mass email appeals, 350.org uses these tools to empower its supporters to join or organize actions that feel commensurate to the scale of the problem (Hestres 2014).
 
-![Hestres Keystone]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-Cks5hQYFvKf3Qg9GniixQ.png)
+![Hestres Keystone](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-Cks5hQYFvKf3Qg9GniixQ.png)
 
 # Movement Power Displays Though Social Media
 
 Social movements often try to generate what are called “WUNC (Worthiness, Unity, Numbers, and Commitment) displays” to showcase their power (Tilly and Wood 2009). 350.org consistently uses social media to generate such displays. Its mass email appeals for event participation usually include requests for images from events, which they collect and disseminate via email and social media. Students in Maracaibo, Venezuela, produced figure 2 during the 2009 International Day of Climate Action. For this global event, 350.org asked supporters to take pictures depicting the number ‘350’ and post them on Flickr. Many more images from this and other events are available at 350.org’s Flickr account.
 
-![Hestres 350-venezuela-2009]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OBBtcamIOJa1fWqy2EZjdQ.jpeg)
+![Hestres 350-venezuela-2009](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OBBtcamIOJa1fWqy2EZjdQ.jpeg)
 
 # Legacy and New Media Synergy
 

@@ -1,25 +1,10 @@
----
-url: https://medium.com/civic-media-project/ukranian-crowdmapping-of-the-12-elections-b9443dd4907
-canonical_url: https://medium.com/civic-media-project/ukranian-crowdmapping-of-the-12-elections-b9443dd4907
-title: Ukranian CrowdMapping of the ’12 Elections
-subtitle: Tetyana Lokot (Merrill College of Journalism, University of Maryland)
-slug: ukranian-crowdmapping-of-the-12-elections
-description: ""
-tags:
-- data-visualization
-- elections
-- systems-and-design
-author: EL_News
-username: el-news
----
-
 # Ukranian CrowdMapping of the ’12 Elections
 
 ### *Tetyana Lokot (*Merrill College of Journalism, University of Maryland)
 
 This case study centers on the use of crowdmapping by Ukrainian civic activists during 2012 parliamentary elections. An overview of three projects considers the similarities and differences between them and the mechanisms used in each one. Key findings from project websites and reports show how these civic engagement efforts contributed to transparent and accountable coverage of the Ukrainian elections.
 
->> The internet has augmented the way people perform citizenship and engage in politics, but the reasons for these transformations remain uncertain. The debate revolves around the nature of the Internet itself and how it is interpreted by citizens, governments, corporations and academics.
+> > The internet has augmented the way people perform citizenship and engage in politics, but the reasons for these transformations remain uncertain. The debate revolves around the nature of the Internet itself and how it is interpreted by citizens, governments, corporations and academics.
 
 In many post-Soviet countries the internet is perceived as a liberator of sorts, an alternative platform to traditional media co-opted by the elites (Fossato et al. 2008; Oates 2010). Goldstein (2007) notes that during the Orange Revolution in Ukraine in 2004 the internet, unlike major traditional media, was an independent, uncensored medium, where dissenting opinions could be disseminated freely along with information to help citizens enforce their rights as voters and to protest rigged elections.
 
@@ -51,8 +36,6 @@ Oates, Sarah. 2010. “From Parent to Protestor on the Post-Soviet Internet: Loc
 
 Sidorenko, Alexey. 2011. “Russia: Unexpected Results of Radiation Mapping.” Global Voices Online, March 25, 2011. Available at [http://globalvoicesonline.org/2011/03/25/russia-unexpected-results-of-radiation-mapping/](http://globalvoicesonline.org/2011/03/25/russia-unexpected-results-of-radiation-mapping/).
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

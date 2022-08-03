@@ -1,24 +1,8 @@
----
-url: https://medium.com/civic-media-project/united-colors-of-dissent-4922843ceb87
-canonical_url: https://medium.com/civic-media-project/united-colors-of-dissent-4922843ceb87
-title: United Colors Of Dissent
-subtitle: Orkan Telhan (University of Pennsylvania) and Mahir M. Yavuz (University
-    of Art and Design Linz)
-slug: united-colors-of-dissent
-description: ''
-tags:
-    - mobile
-    - data-visualization
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # United Colors Of Dissent
 
 ### *Orkan Telhan (*University of Pennsylvania) *and Mahir M. Yavuz (*University of Art and Design Linz)
 
-![UCoD Performance, Istanbul, November 2014 (Photo: Engin Gercek)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_dOyquI3GWrTh_MTT.png)
+![UCoD Performance, Istanbul, November 2014 (Photo: Engin Gercek)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_dOyquI3GWrTh_MTT.png)
 
 “United Colors of Dissent” ([UCoD](http://ucod.org/)) is a platform that facilitates real-time data-driven performances in public places using mobile devices and public displays. Participants collectively respond to a series of questions in their preferred language using a web-based voting interface running on their phones or tablets At every question, UCoD builds real-time graphics based on the answers, and features them both on the phones and the displays. The performances, which range from thirty minutes to one-hour surveys, intend to capture the linguistic and socio-cultural profile of different communities in urban environments through visualizations and map the prejudices, assumptions, and biases present.
 
@@ -28,7 +12,7 @@ UCoD is designed as a data-sharing and visualization framework that supports rea
 
 As the performances intend to emphasize the linguistic diversity in public spaces, the questions are prepared in most languages spoken in these cities. While participants remain entirely anonymous both during and after the performances, they can pick their desired language and follow each other’s responses in the visualization through color-coded representations that correspond to available languages. And as identification with any language is voluntary, speakers of the same language across different countries can still identify with each other and form a public that can transcend the physical boundaries of public spaces.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_gcr2njP4QxtW6lzTBsf4gA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_gcr2njP4QxtW6lzTBsf4gA.png)
 
 # Public Space — Public Display — Mobile Interface
 
@@ -38,9 +22,9 @@ This hybrid public domain extends William Whyte’s notion of “triangulation,�
 
 Regarding cultural prejudices and biases, UCoD is concerned with forming immediate opinions by asking participants questions that are designed to address both personal and communal matters. Based on a selection of topics such as the rise of right-wing politics in Europe, healthcare, social well being, education, immigration and environmental policies and so on, it prepares a list of inquiries that can solicit opinions from different groups of people. However, unlike traditional surveys, in which data is collected, represented, and mediated through different stages of interpretation and post-processing, real-time opinion forming relies on immediate interaction among the participants. Opinions are formed as people make selections, cast votes, and see each other’s answers. From personal matters to issues concerning kinship, religion, racial and cultural affiliation, participants witness how much difference every social group contains as they come together in an ad hoc manner while traversing public spaces.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jQAC8L8JtvQGFKPaSPxpGg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jQAC8L8JtvQGFKPaSPxpGg.png)
 
-![UCoD visualization on eTOPIA media facade, Zaragoza, Spain 2014. (Photo: Orkan Telhan) UCoD technical schematic.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_gmhT9gr19NvXIE9Pc9HLGQ.png)
+![UCoD visualization on eTOPIA media facade, Zaragoza, Spain 2014. (Photo: Orkan Telhan) UCoD technical schematic.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_gmhT9gr19NvXIE9Pc9HLGQ.png)
 
 # Real-time Visualization
 
@@ -66,7 +50,7 @@ As UCoD’s visualization maps on the basis of agreement and disagreement, it tr
 
 Similarly, UCoD favors an agonistic model of decision-making with respect to the complexity of socio-cultural issues pertaining to contemporary urban culture (Mouffe 2000). Instead of promoting integrative policies that privilege specific social groups’ rights over others, it solicits interest towards a plurality; building a forum that can aggregate opinions. When the public is solicited to express their interests — for example to approve new interventions to the public space or to express opinions towards changes in policies and reforms — UCoD intends to function as a mediator, trying to re-introduce different publics to one another.
 
-![UCoD mobile interface (Photo: Engin Gercek)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_P0zSjOZGt-1r1uzNO3BwdQ.png)
+![UCoD mobile interface (Photo: Engin Gercek)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_P0zSjOZGt-1r1uzNO3BwdQ.png)
 
 # References
 

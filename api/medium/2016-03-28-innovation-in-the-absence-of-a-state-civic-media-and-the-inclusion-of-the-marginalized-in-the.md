@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/innovation-in-the-absence-of-a-state-civic-media-and-the-inclusion-of-the-marginalized-in-the-1520cbcbc31
-canonical_url: https://medium.com/civic-media-project/innovation-in-the-absence-of-a-state-civic-media-and-the-inclusion-of-the-marginalized-in-the-1520cbcbc31
-title: 'Innovation in the Absence of a State: Civic Media and the Inclusion of the
-  Marginalized in the…'
-subtitle: Nicole Stremlau (Programme in Comparative Media Law and Policy)
-slug: innovation-in-the-absence-of-a-state-civic-media-and-the-inclusion-of-the-marginalized-in-the
-description: ""
-tags:
-- systems-and-design
-- government-innovation
-- somaliland
-author: EL_News
-username: el-news
----
-
 # Innovation in the Absence of a State: Civic Media and the Inclusion of the Marginalized in the Somali Territories
 
 ### Nicole Stremlau (Programme in Comparative Media Law and Policy)
@@ -36,14 +20,12 @@ The growth of mobile money has been completely reliant on local dispute resoluti
 
 The CIA World Factbook, ‘Somalia country page,’ the Central Intelligence Agency, [https://www.cia.gov/library/publications/the-world-factbook/geos/so.html](https://www.cia.gov/library/publications/the-world-factbook/geos/so.html)
 
-Iazzolino, Gianluca. 2014. “Somaliland has embraced mobile money — but at what price?” *The Guardian Online*, May 19. [http://www.theguardian.com/global-development/2014/may/19/somaliland-mobile-money-zaad-inflation-economy-banking-remittance.](http://www.theguardian.com/global-development/2014/may/19/somaliland-mobile-money-zaad-inflation-economy-banking-remittance.)
+Iazzolino, Gianluca. 2014. “Somaliland has embraced mobile money — but at what price?” _The Guardian Online_, May 19. [http://www.theguardian.com/global-development/2014/may/19/somaliland-mobile-money-zaad-inflation-economy-banking-remittance.](http://www.theguardian.com/global-development/2014/may/19/somaliland-mobile-money-zaad-inflation-economy-banking-remittance.)
 
-Penicaud, Claire and Fionan McGrath. 2013. “Innovative inclusion: How Telesom ZAAD brought mobile money to Somaliland.” *Mobile money for the unbanked*.
+Penicaud, Claire and Fionan McGrath. 2013. “Innovative inclusion: How Telesom ZAAD brought mobile money to Somaliland.” _Mobile money for the unbanked_.
 
-Stremlau, Nicole. 2013. “Somalia media law in the absence of a state.” *Journal of Media and Cultural Politics* 8(2): 159–174.
+Stremlau, Nicole. 2013. “Somalia media law in the absence of a state.” _Journal of Media and Cultural Politics_ 8(2): 159–174.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

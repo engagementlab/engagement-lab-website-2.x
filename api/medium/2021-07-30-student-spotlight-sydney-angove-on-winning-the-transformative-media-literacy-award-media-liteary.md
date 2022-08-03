@@ -1,25 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/student-spotlight-sydney-angove-on-winning-the-transformative-media-literacy-award-media-liteary-d78e3c6feba7
-canonical_url: https://medium.com/engagement-lab-emerson-college/student-spotlight-sydney-angove-on-winning-the-transformative-media-literacy-award-media-liteary-d78e3c6feba7
-title: 'Student Spotlight: Sydney Angove on winning the Transformative Media Literacy
-    Award, Media…'
-subtitle: The Transformative Media Literacy award is given to a current student for
-    exceptional work at the intersection of social justice and…
-slug: student-spotlight-sydney-angove-on-winning-the-transformative-media-literacy-award-media-liteary
-description: ''
-tags:
-    - media-literacy
-    - media-design
-    - social-justice
-author: EL_News
-username: el-news
----
-
 # Student Spotlight: Sydney Angove on winning the Transformative Media Literacy Award, Media Literacy, & Community Impact
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PYBvjCCYfACQwMI1kqyjxA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PYBvjCCYfACQwMI1kqyjxA.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ez5NEXURmUbgm0oMZKyY0w.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ez5NEXURmUbgm0oMZKyY0w.png)
 
 The Transformative Media Literacy award is given to a current student for exceptional work at the intersection of social justice and equity. The award was conceptualized to honor the memory of the late Moses Shumow who worked tirelessly to make media more impactful and accessible to disadvantaged communities. We sat down with this year’s award winner Sydney Angove to discuss what it meant to her as a Media Design cohort member both personally and professionally.
 

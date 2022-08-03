@@ -1,20 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/promoting-peace-through-the-power-of-the-people-1889a4ecc59a
-canonical_url: https://medium.com/engagement-lab-emerson-college/promoting-peace-through-the-power-of-the-people-1889a4ecc59a
-title: “Promoting Peace through the Power of the People”
-subtitle: Written by John Yang
-slug: promoting-peace-through-the-power-of-the-people
-description: ''
-tags: []
-author: EL_News
-username: el-news
----
-
 # “Promoting Peace through the Power of the People”
 
 Written by John Yang
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Acu4h2XXOdZonnZ2t8whUw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Acu4h2XXOdZonnZ2t8whUw.png)
 
 [Senseless smoke](https://teenempowerment.org/senseless-smoke/) is a movie created to uplift unheard voices of those affected by gun violence in places that have become silent in how their stories are told. This is a film written, created, and starred by staff and youth from the Center for Teen Empowerment in Roxbury. The youth, having been exposed themselves to the effects of violence within their communities, bring authenticity to the characters and voices, both raising awareness of the systemic conditions that allow gun violence to take root, and also demonstrating the power within the community to transform itself and bring peace. The film exposes and critiques the systems that perpetuate conditions of mass incarceration, the school-to-prison pipeline, and gangs that continue to challenge black and brown communities’ ability to thrive, while also calling the same communities to collective action. These young actors and actresses displayed incredible courage, strength, and talent as they immersed themselves in the complex characters and conditions of the film, much to the benefit of viewers.
 

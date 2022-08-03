@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/m%C3%ADdianinja-and-the-rise-of-citizen-journalism-in-brazil-c4d59247b317
-canonical_url: https://medium.com/civic-media-project/m%C3%ADdianinja-and-the-rise-of-citizen-journalism-in-brazil-c4d59247b317
-title: MídiaNINJA and the Rise of Citizen Journalism in Brazil
-subtitle: Stuart Davis (University of Texas-Austin)
-slug: mídianinja-and-the-rise-of-citizen-journalism-in-brazil
-description: ''
-tags:
-    - citizen-journalism
-    - social-network
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # MídiaNINJA and the Rise of Citizen Journalism in Brazil
 
 ### Stuart Davis (University of Texas-Austin)
@@ -25,9 +10,9 @@ Launched in late 2012, NINJA (a Portuguese acronym for “Independent Narratives
 
 While it officially “launched” in 2012, NINJA grew directly out of and was incubated by Fora do Eixo (FDE), a much larger arts and culture organization. While FDE initially focused more on organizing music festivals and public art installations than promoting citizen journalism, its explicit focus on opening chapters and sponsoring events outside of preexisting cultural hubs like Rio, São Paulo, and Recife laid a foundation that NINJA would use to establish many of its regional centers. On the technological level, NINJA draws heavily on both the recording functions of smart phones and the distributional capabilities of social networking sites including TwitCasting, Twitter, Facebook, and Instagram. The process begins when the group’s reporters (or “NINJAs” as they call them) record street-level footage of demonstrations or public events. This material is then uploaded directly onto the group’s TwitCasting site. (The TwitCasting service was developed by the Japanese Moi Corporation in early 2013 as a way for using Twitter feeds to stream content from smart phones directly onto a “channel” developed and maintained by individual users). From here it is re-screened in chunks on the group’s websites, called “Pos-TV” (or “Post-TV”). Videos from the group’s sites are then re-posted on NINJA’s Facebook page and Twitter account. By developing a multi-faceted approach to distribution it is able to capitalize on the unique capabilities of a variety of social networking sites.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2v4Z22RXqlSTJz1rPx7USg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2v4Z22RXqlSTJz1rPx7USg.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_XL7oYlCdQdwHe88rg66KGg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_XL7oYlCdQdwHe88rg66KGg.png)
 
 # Potential Innovations and Limitations of MídiaNINJA
 
@@ -35,7 +20,7 @@ Though it launched less than two years ago, NINJA has caused major ripples both 
 
 Beyond its attempt to popularize citizen journalism, NINJA has also played an enormous role in the protection of civil rights during mobilizations. Starting with the first events of the Brazilian Spring, NINJA reporters were on the front lines of every major protest from the June 17, 2013 gathering in Rio to 2014 World Cup protests going on. By recording simultaneously with the protests and quickly disseminating footage through social media, NINJA has been able to spread material that has bolstered accusations of police violence and exonerated protestors unduly arrested or detained.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mApz3ere5hcyzwCzZxiYFA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mApz3ere5hcyzwCzZxiYFA.png)
 
 Though NINJA offers novel tactics, it also raises questions about how loosely networked and geographically dispersed citizen journalism groups maintain both the financial and human resources needed to survive. More specifically, NINJA has faced problems related to fundraising and to its ability to maintain a nationwide network while competing with other twit-casting news sites developed for specific regions or political factions. From a financial perspective, NINJA faces a difficult and potentially paradoxical situation. While the group largely consists of unpaid volunteers, NINJA does have a board of directors consisting exclusively of FDE members. This board is responsible for maintaining equipment, covering traveling costs for trainings, paying for data storage, and providing legal fees accrued by arrested NINJAs. Though critics don’t dispute the idea that a project like NINJA with expansive aspirations needs a sizable operational budget, they have expressed concern about both the source of the group’s financial resources and how finances are distributed (Yúdice 2012). In 2012 FDE founder Pablo Capilé faced a wave of public scrutiny when it became public that the group had received a substantial amount of money from Coca Cola to sponsor its annual “Marcha da Liberdade”(“Liberty March”) (Forresteri 2013). FDE’s fundraising strategies became subject to even more intense scrutiny when numerous rumors began to circulate claiming that the group received large financial contributions from political parties on the right and left. NINJA’s financial situation became even more contested when opponents started to accuse group leadership of being highly secretive about NINJA’s budget. Along with these financial considerations, NINJA’s commitment to non-partisan, nationwide coverage has in some cases led to a drop in membership as collaborators have stopped contributing in order to start their own TwitCasting channels including MídiaCAPOEIRA in Salvador, MídiaGEISHA in São Paulo, and Colletivo Carranca in Rio. Former collaborators have also left to work with groups that are more directly aligned with political or social movements such as the increasingly popular Black Bloc anarchist movement. According to NINJA co-coordinator Felipe Altenfelder, the rise of these new groups has pushed NINJA to a point where it has to re-consider it’s role as an autonomous media producer (Belém 2014).
 

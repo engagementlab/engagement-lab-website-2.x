@@ -1,16 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/a-summary-of-the-civicmediachat-on-play-and-creativity-ea18dd9a893d
-canonical_url: https://medium.com/engagement-lab-emerson-college/a-summary-of-the-civicmediachat-on-play-and-creativity-ea18dd9a893d
-title: "A Summary of the #CivicMediaChat on Play and Creativity"
-subtitle: By Becky Michelson
-slug: a-summary-of-the-civicmediachat-on-play-and-creativity
-description: ""
-tags:
-  - civic-engagement
-  - civictech
-author: EL_News
-username: el-news
----
+
 
 # A Summary of the #CivicMediaChat on Play and Creativity
 

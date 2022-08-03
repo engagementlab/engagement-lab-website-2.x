@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/cuban-blogossphere-a-scenario-for-political-debate-and-dissent-8543ab10f6a4
-canonical_url: https://medium.com/civic-media-project/cuban-blogossphere-a-scenario-for-political-debate-and-dissent-8543ab10f6a4
-title: 'Cuban Blogossphere: A Scenario for Political Debate and Dissent'
-subtitle: Lazaro Bacallao-Pino (ICEI-University of Chile)
-slug: cuban-blogossphere-a-scenario-for-political-debate-and-dissent
-description: ''
-tags:
-    - storytelling
-    - cuba
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Cuban Blogossphere: A Scenario for Political Debate and Dissent
 
 ### *Lazaro Bacallao-Pino (*ICEI-University of Chile)
@@ -29,15 +14,15 @@ There are three trends in the Cuban blogosphere:
 
 GeneraciónY (GenerationY) — launched by Yoani Sánchez in 2007 — is the most widely know example of the first trend. Translated into more than seventeen languages, it has about 14 million monthly visitors (all languages) and each post usually receives hundreds of comments. Committed with helping “to build a plural, inclusive Cuba,” she declares she created the blog as “a medium that would allow me to tell all those stories that I saw every day and answer the questions that arose when looking at my reality.” Since the blog has been blocked from Cuba, she has had to practice a “blind blogging,” with no access to feedback from readers. She emailed her texts to friends abroad to post it for her, creating an offline network of people who guarantee its continuity. From May, 2014, Generación Y has become part of a major project: 14ymedio.com (English: 14andahalf), an independent digital newspaper, described as the “development of a personal adventure that has become a collective project.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_gPon-H-fpLXHdjGf.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_gPon-H-fpLXHdjGf.jpg)
 
 La Polémica Digital (The Digital Controversy) — launched in 2008 by Elaine Díaz, a Cuban journalist, as a “space to discuss on Cuba” — is an example of the second above-mentioned trend. Each entry in the blog has a number of comments ranging from ten to 50, and there are more than 900 persons who like it in Facebook. Topics on the blog range from issues on digital journalism to criticisms on aspects and situations of everyday life in Cuba (corruption, censorship in the press). Due to her commitment to the systems, she acknowledges that there are taboo subjects, like education or health care, and even confesses her fear of posting something that could be misunderstood and then be punished. The blog has certain “rules of the game”: five points about the assumptions on which comments will be removed, for achieving a “peaceful coexistence” among readers. After a year online, comments began to be moderated, arguing the blog was not a chat or discussion forum.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bsQqzTb9XvnQLuev.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bsQqzTb9XvnQLuev.jpg)
 
 Meanwhile, El Blog de Yohandry (Yohandry’s Blog) shows the third trend. Created in 2008 too, its author was a frequent participant in Generación Y by commenting on it but, arguing that he had been blocked, he created his own blog. Firstly, the blogger — who remains incognito — created a blog hosted by _El País_ and open to comments but, after some time, he denounced his blog had been blocked and then moved towards Wordpress. Currently, the blog has its own domain and comments are controlled, since the blogger decided not to give space to “subversive messages.”However, the number of comments has decreased to the point that most posts have no comments. One of its main topic has been the “denouncement” of Yoani Sánchez and there is even a section dedicated to her.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_RbYZRMvMhM2fLP8O.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_RbYZRMvMhM2fLP8O.jpg)
 
 This diversity shows the political divide in the Cuban blogosphere, even in the blogger’s communities, divided into Bloggers Cuba (community of revolutionary bloggers) and Cuban Voices (community of dissident bloggers).
 

@@ -1,36 +1,20 @@
----
-url: https://medium.com/civic-media-project/marriage-equality-facebook-profiles-pictures-and-civic-participation-d6f50989382c
-canonical_url: https://medium.com/civic-media-project/marriage-equality-facebook-profiles-pictures-and-civic-participation-d6f50989382c
-title: Marriage Equality, Facebook Pictures, and Civic Participation
-subtitle: Brady Robards (University of Tasmania, Australia) and Bob Buttigieg (Griffth
-    University)
-slug: marriage-equality-facebook-profiles-pictures-and-civic-participation
-description: ''
-tags:
-    - lgbtq
-    - community-and-action
-    - social-network
-author: EL_News
-username: el-news
----
-
 # Marriage Equality, Facebook Pictures, and Civic Participation
 
 ### *Brady Robards (*University of Tasmania, Australia) _and Bob Buttigieg (Griffth University)_
 
 On March 25, 2013, the “Human Rights Campaign” (HRC) — a lesbian, gay, bisexual, and transgender (LGBT) lobby — urged people to change their Facebook profile pictures to a pink-on-red equals sign to show support for marriage equality (see fig. 1). The campaign corresponded with a U.S. Supreme Court meeting to debate the issue. Shortly after, on March 30, Eytan Bashky (2013) from the Facebook data science team reported that “roughly 2.7 million (120%) more [users], updated their profile photo on Tuesday, March 26 compared to the previous Tuesday,” which was roughly attributed to the HRC push. The campaign to change Facebook profile pictures spread to become a global phenomenon. Variations on the HRC profile picture emerged, some in support of the campaign, others opposing it, and others critiquing the impact changing one’s profile picture can have. In this case study, we explore the campaign through the lens of the “actualizing citizen” (Miegel and Olsson 2007) and discourses around “slacktivism” (Christensen 2011).
 
-![Figure 1 — Screen capture from the public HRC Facebook page, taken July 1, 2014]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3eQ8uLaKLNdxlXzubzE_aQ.png)
+![Figure 1 — Screen capture from the public HRC Facebook page, taken July 1, 2014](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3eQ8uLaKLNdxlXzubzE_aQ.png)
 
 # Variations on a meme
 
 After posting their call to action, a range of variations to the HRC’s image emerged, notably including several brands that sought to “hitch their wagon” to the campaign such as Maybelline, Absolut Vodka, and Bud Light (see fig. 2). These brands were able to associate themselves with the goodwill of the campaign, and also “plug into” its viral spread.
 
-![Figure 2 — Branding: Variations on a meme]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2o5ANstfuWhtwZS_dRnVlg.png)
+![Figure 2 — Branding: Variations on a meme](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2o5ANstfuWhtwZS_dRnVlg.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tJB-djhJEUagPOfs6U35GA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tJB-djhJEUagPOfs6U35GA.png)
 
-![Figure 3 Critiques: “Assimilation does not equal liberation”; and “Welp, I’ve done my part!”]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OQWjoQQPObH2-tD2WhUbQQ.png)
+![Figure 3 Critiques: “Assimilation does not equal liberation”; and “Welp, I’ve done my part!”](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OQWjoQQPObH2-tD2WhUbQQ.png)
 
 # Critiques
 

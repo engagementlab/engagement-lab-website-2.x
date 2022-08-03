@@ -1,21 +1,4 @@
----
-url: https://medium.com/make-the-breast-pump-not-suck-hackathon/building-community-at-our-hackathon-a08a76bb5ea6
-canonical_url: https://medium.com/make-the-breast-pump-not-suck-hackathon/building-community-at-our-hackathon-a08a76bb5ea6
-title: Building Community at our Hackathon
-subtitle: By the Make the Breast Pump Not Suck Team
-slug: building-community-at-our-hackathon
-description: ''
-tags:
-    - diversity
-    - hackathons
-    - breastfeeding
-    - intersectionality
-    - intersectional-feminism
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mDTwrM47Qyrwz6EWt_uObQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mDTwrM47Qyrwz6EWt_uObQ.png)
 
 # **Building Community at our Hackathon**
 

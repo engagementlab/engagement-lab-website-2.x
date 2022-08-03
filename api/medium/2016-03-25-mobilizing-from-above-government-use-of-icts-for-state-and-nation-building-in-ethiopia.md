@@ -1,30 +1,14 @@
----
-url: https://medium.com/civic-media-project/mobilizing-from-above-government-use-of-icts-for-state-and-nation-building-in-ethiopia-426199a43097
-canonical_url: https://medium.com/civic-media-project/mobilizing-from-above-government-use-of-icts-for-state-and-nation-building-in-ethiopia-426199a43097
-title: 'Mobilizing From Above: Government Use of Icts for State and Nation Building
-    in Ethiopia'
-subtitle: Iginio Gagliardone (University of Oxford)
-slug: mobilizing-from-above-government-use-of-icts-for-state-and-nation-building-in-ethiopia
-description: ''
-tags:
-    - education-technology
-    - ethiopia
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Mobilizing From Above: Government Use of Icts for State and Nation Building in Ethiopia
 
 ### *Iginio Gagliardone (*University of Oxford)
 
 Ethiopia’s Woredanet and Schoolnet represent a concrete example of how ICT can be captured by governments seeking to increase control and legitimacy in processes of state and nation building. Woredanet (Fig. 1), which stands for “network of district (woreda) administrations” employs the same protocol that the Internet is based upon; but rather than allowing individuals to independently seek information and express their opinion, it enables ministers and cadres in Addis Ababa to videoconference with the regional and woreda offices and instruct them on what they should be doing and how.
 
-![Fig. 1 The Woredanet equipment, composed of, from top to bottom, a video-camera, a plasma TV screen, a decoder, an amplifier/equalizer (© Author)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_yT0Lv4JQ4PPSyamS.jpg)
+![Fig. 1 The Woredanet equipment, composed of, from top to bottom, a video-camera, a plasma TV screen, a decoder, an amplifier/equalizer (© Author)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_yT0Lv4JQ4PPSyamS.jpg)
 
 Schoolnet (Fig. 2) uses a similar architecture to broadcast pre-recorded classes in a variety of subjects, from mathematics to civics, to all secondary schools in the country, while also offering political education to school teachers and other government officials (Gagliardone 2014).
 
-![Fig 2 The Schoolnet equipment, the decoder in this case is in a separate room and can work only to receive and not to send signals (© Author)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_WRdAFEuYWa__PlV2.jpg)
+![Fig 2 The Schoolnet equipment, the decoder in this case is in a separate room and can work only to receive and not to send signals (© Author)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_WRdAFEuYWa__PlV2.jpg)
 
 The design of both systems has been profoundly influenced by the idea of using ICT for mass mobilization. However, rather than referring to individuals self-organizing to speak up to power and advance a specific agenda, the idea of mass mobilization that has inspired those who envisioned Woredanet and Schoolnet dates back to the time in which the precursor of Ethiopia’s ruling party, the guerrilla movement known as Tigrayan People’s Liberation Front (TPLF), was fighting the USSR-backed dictatorship of the Derg, and is firmly rooted in Marxist-Leninist thinking. As a former guerrilla fighter explained, mass mobilization implied a centralized connection between a vanguard and the masses:
 

@@ -1,21 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/engagement-lab-hosts-ylai-2017-fellow-d18653dce1f2
-canonical_url: https://medium.com/engagement-lab-emerson-college/engagement-lab-hosts-ylai-2017-fellow-d18653dce1f2
-title: Engagement Lab Hosts YLAI 2017 Fellow
-subtitle: Over the course of four weeks, the Engagement Lab hosted Charles Hutson,
-    a civic tech entrepreneur and a high school IT teacher, as a YLAI…
-slug: engagement-lab-hosts-ylai-2017-fellow
-description: ''
-tags:
-    - ylai2017
-    - civic-technology
-author: EL_News
-username: el-news
----
-
 # Engagement Lab Hosts YLAI 2017 Fellow
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tAbDdakfDleP853_yPM7RQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tAbDdakfDleP853_yPM7RQ.png)
 
 Over the course of four weeks, the Engagement Lab hosted **Charles Hutson**, a civic tech entrepreneur and a high school IT teacher, as a YLAI fellow through [the 2017 Professional Fellows Program](https://ylai.state.gov/fellowship/).
 

@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/act-advocate-digital-tools-for-the-2020-election-fb0e4c1c0c28
-canonical_url: https://medium.com/engagement-lab-emerson-college/act-advocate-digital-tools-for-the-2020-election-fb0e4c1c0c28
-title: 'Act & Advocate: Digital Tools for the 2020 Election'
-subtitle: At their advent, Web 2.0 platforms were praised for their democratizing
-    affordances. Over the years, we’ve seen the internet give voice to…
-slug: act-advocate-digital-tools-for-the-2020-election
-description: ''
-tags:
-    - civic-engagement
-    - civic-media
-    - election-2020
-    - digital-organizing
-    - gotv
-author: EL_News
-username: el-news
----
-
 # Act & Advocate: Digital Tools for the 2020 Election
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ip_aF3lw6u8slwo2-bO6vA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ip_aF3lw6u8slwo2-bO6vA.jpeg)
 
 At their advent, Web 2.0 platforms were praised for their democratizing affordances. Over the years, we’ve seen the internet give voice to previously marginalized communities and those kept out by the gatekeeping of traditional media. We have connected, mobilized, celebrated, and advocated all online, particularly as more of civic life has moved online due to the COVID-19 pandemic.
 

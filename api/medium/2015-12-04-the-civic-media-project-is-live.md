@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/the-civic-media-project-is-live-c6092efe5fe9
-canonical_url: https://medium.com/engagement-lab-emerson-college/the-civic-media-project-is-live-c6092efe5fe9
-title: The Civic Media Project is Live!
-subtitle: By Becky Michelson
-slug: the-civic-media-project-is-live
-description: ''
-tags:
-    - education
-    - journalism
-author: EL_News
-username: el-news
----
-
 # **The Civic Media Project is Live!**
 
 ### By Becky Michelson
 
 03/10/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_WUJVpC3tO0B73A9A.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_WUJVpC3tO0B73A9A.png)
 
 The Engagement Lab at Emerson College and [MIT Press](http://mitpress.mit.edu/) are excited to launch the civic media project, an initiative that gathers leading scholars to collectively define the civic media space. Today we are launching our online [Civic Media Project](http://civicmediaproject.org/works/civic-media-project/index), a collection of over 100 case studies from around the world that explore the intersection of media, technology, and engagement in civic life. The civic media project is part of a larger initiative in civic media that incorporates two main features:
 

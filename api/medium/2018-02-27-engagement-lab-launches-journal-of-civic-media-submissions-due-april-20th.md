@@ -1,29 +1,12 @@
----
-url: https://medium.com/engagement-lab-emerson-college/engagement-lab-launches-journal-of-civic-media-submissions-due-april-20th-6842836346b1
-canonical_url: https://medium.com/engagement-lab-emerson-college/engagement-lab-launches-journal-of-civic-media-submissions-due-april-20th-6842836346b1
-title: Engagement Lab launches Journal of Civic Media, Submissions Due April 20th
-subtitle: The Engagement Lab is pleased to announce the launch of the Journal of Civic
-    Media (JCM), a first-of-its-kind publication dedicated to the…
-slug: engagement-lab-launches-journal-of-civic-media-submissions-due-april-20th
-description: ''
-tags:
-    - smart-cities
-    - civic-media
-    - journal
-    - submission
-author: EL_News
-username: el-news
----
-
 # **Engagement Lab launches Journal of Civic Media, Submissions Due April 20th**
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8V-vYgvFkT58L5bugtAerg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8V-vYgvFkT58L5bugtAerg.jpeg)
 
 The Engagement Lab is pleased to announce the launch of the [Journal of Civic Media (JCM)](https://www.journalofcivicmedia.org), a first-of-its-kind publication dedicated to the field.
 
 JCM will be published twice per year and edited by graduate students in the [Civic Media: Art and Practice](http://www.emerson.edu/academics/civic-media-art-practice-ma) program at Emerson College. JCM’s inaugural call for submissions is active at this time, its theme is “Public Engagement in the Smart City.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_4HNSCKNul-STZP3KOHRu7A.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_4HNSCKNul-STZP3KOHRu7A.png)
 
 > > “A forum for the contemplation and discussion of civic media topics is necessary to promote this young but critical field”
 

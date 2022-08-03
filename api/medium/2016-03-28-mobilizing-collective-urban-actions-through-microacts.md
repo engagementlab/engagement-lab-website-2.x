@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/mobilizing-collective-urban-actions-through-microacts-6d3bfb6e6625
-canonical_url: https://medium.com/civic-media-project/mobilizing-collective-urban-actions-through-microacts-6d3bfb6e6625
-title: Mobilizing Collective Urban Actions through MicroActs
-subtitle: Shriya Malhotra (Partizaning), Christo de Klerk, and Nitin Sawhney (The
-    New School)
-slug: mobilizing-collective-urban-actions-through-microacts
-description: ''
-tags:
-    - urban-planning
-    - systems-and-design
-    - community-organization
-author: EL_News
-username: el-news
----
-
 # Mobilizing Collective Urban Actions through MicroActs
 
 ### Shriya Malhotra (Partizaning), Christo de Klerk, and Nitin Sawhney (The New School)
@@ -26,7 +10,7 @@ The public mailboxes were a series of civic urban interventions devised by Parti
 
 Mailboxes were set-up as site-specific devices to support community participation, combining the aesthetics of an everyday public object with street art tactics. They were designed as a form of placemaking to encourage community discourse, and as a tactical medium to turn a familiar form of sanctioned communication into a new mode of localized collective action. Since 2012, dozens of mailboxes have been installed in several of Moscow’s districts, supported by active residents, institutions and government agencies.
 
-![Figure 1: A public mailbox installed for the Cooperative Urbanism project in Mitino, Moscow, July 2012. Credit: Anton Kolobakhen.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_noJzjZIWyw99AX6q6yuxYQ.jpeg)
+![Figure 1: A public mailbox installed for the Cooperative Urbanism project in Mitino, Moscow, July 2012. Credit: Anton Kolobakhen.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_noJzjZIWyw99AX6q6yuxYQ.jpeg)
 
 > > The goal of the intervention was to inspire residents to act and improve their urban environments, as well as to actively engage in local civic processes. The intervention later evolved into supporting a dialogue with municipal authorities.
 
@@ -36,7 +20,7 @@ Alternatively, a note accompanying the mailbox suggested that residents act to b
 It was observed that mailboxes put up in the winter received fewer letters and were re-purposed by residents as receptacles for trash or lost items. This suggests alternative placemaking while reflecting the impacts of weather on use of space. Not surprisingly, the maximum responses were received (approximately 150 letters) during the summer, when people were more engaged in urban public spaces. However, supporting residents to take ownership and collective, creative actions to change their urban environments remained a challenge.
 
 ![Figure 2: Mailbox installed with the public library in Chistie Prudie. Moscow, July 2012. Credit: Igor Ponosov. Several key lessons emerged across the iterations of the public mailboxes:
-Co-operation to support local agency: Mailboxes potentially serve as devices for generating site-specific civic dialogue (including gathering complaints, suggestions, and ideas). But this can only be initiated and sustained with active participation and ownership by local organizers and residents throughout the design phase of the project: scouting locations, installing/maintaining mailboxes, defining questions, and reading or responding to letters. A forum for interaction beyond the mailboxes (via meetings or online engagement) is also crucial.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WnHxAdFibEncehHBCuZSBg.jpeg)
+Co-operation to support local agency: Mailboxes potentially serve as devices for generating site-specific civic dialogue (including gathering complaints, suggestions, and ideas). But this can only be initiated and sustained with active participation and ownership by local organizers and residents throughout the design phase of the project: scouting locations, installing/maintaining mailboxes, defining questions, and reading or responding to letters. A forum for interaction beyond the mailboxes (via meetings or online engagement) is also crucial.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WnHxAdFibEncehHBCuZSBg.jpeg)
 
 Communication and transparency with participants: Participants that submit letters to the mailboxes deserve a meaningful outcome, whether a phone call or letter to keep them engaged, even if the issue remains unresolved. The timeliness and positive tone of language used in such correspondences can make a project feel more relevant and inclusive.
 
@@ -46,11 +30,11 @@ Physical location of interventions matter: Mailboxes are suited to outdoor publi
 
 While deploying the mailboxes across Moscow, it became evident that scaling the project and engaging participants more widely could be better supported through an online platform. Workshop participants at Strelka, including designers, developers, and community activists, developed a rapid prototype called synchroniCITY (Figures 3 and 5). It was designed to complement the mailboxes with written suggestions re-posted online by local volunteers, while some users could directly submit ideas for neighborhood improvement there. It was tested with local activists and residents in Troparevo-Nikulino (Figure 4) who were using the mailboxes to offer urban planning suggestions; their feedback helped the team refine the design for future use.
 
-![Figure 3: The original prototype platform, SynchroniCITY, emerged based on a workshop at the Strelka Institute in July 2012. It was co-designed and tested with local activists in Troparevo-Nikulino.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_f7LqyaMyulYMOF9M0jMOmg.png)
+![Figure 3: The original prototype platform, SynchroniCITY, emerged based on a workshop at the Strelka Institute in July 2012. It was co-designed and tested with local activists in Troparevo-Nikulino.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_f7LqyaMyulYMOF9M0jMOmg.png)
 
-![Figure 4: Residents in Troparevo-Nikulino providing feedback on the first prototype of SynchroniCITY. Image credit: Strelka Institute]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ExO25XsKQCO7cU5VQSdbow.png)
+![Figure 4: Residents in Troparevo-Nikulino providing feedback on the first prototype of SynchroniCITY. Image credit: Strelka Institute](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ExO25XsKQCO7cU5VQSdbow.png)
 
-![Figure 5: Public interventions tagged: offline and online participation share the challenge of adverse participation with contrasting significance. The mailbox covered in tags represents human authorship over public space while the SynchroniCITY website is spammed through machine writing.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_LiA6jEUvxH7XH61r2uDa6w.png)
+![Figure 5: Public interventions tagged: offline and online participation share the challenge of adverse participation with contrasting significance. The mailbox covered in tags represents human authorship over public space while the SynchroniCITY website is spammed through machine writing.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_LiA6jEUvxH7XH61r2uDa6w.png)
 
 # MicroActs for Mobilizing Collective Action Online and Offline
 
@@ -58,9 +42,9 @@ While deploying the mailboxes and prototype website, we conceptualized the notio
 
 With this framework in mind, the design team developed a new platform (www.MicroAct.org), centered on MicroActs that embody both issues and emerging solutions. The site allows users to post illustrative examples of useful actions, and tag, categorize or aggregate them into campaigns for extended advocacy among collectives. Others may replicate these MicroActs and devise new design iterations localized to their context of use, with all instantiations archived on the site. For example, a collective of cycling activists may document the design of hand-made signs and illuminated cycling paths that support safe riding in neighborhoods, while residents in other districts may repurpose or share their own design iterations. An aggregation of such MicroActs may gradually become part of a grassroots campaign around cycling advocacy in the city.
 
-![Figure 6: The newly designed MicroAct platform with user-generated posts organized in categories.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nwGynrY4I200GV3sCI9zJg.png)
+![Figure 6: The newly designed MicroAct platform with user-generated posts organized in categories.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nwGynrY4I200GV3sCI9zJg.png)
 
-![Figure 7: Mobile version of the MicroAct site showing how posts can be replicated and extended.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_FA2qbjjUgT1MG3mwhzskKw.png)
+![Figure 7: Mobile version of the MicroAct site showing how posts can be replicated and extended.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_FA2qbjjUgT1MG3mwhzskKw.png)
 
 The MicroAct platform has been designed with a simple and multi-lingual user interface, for use as a web-based and mobile application (Figures 6 and 7). While the platform continues to be developed, it is being tested with participants through ongoing workshops and can be used in conjunction with mailboxes installed in neighborhoods (which are a form of MicroActs themselves). The MicroAct platform and the public mailboxes explore forms of DIY Urbanism through networked and place-based self-organization, co-design and sharing. The challenge is to facilitate not only resident-led action, but also create a productive dialogue between residents and municipal actors, while fostering more inclusive and sustained modes of civic engagement.
 

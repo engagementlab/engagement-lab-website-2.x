@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/hacking-for-gold-395707940e18
-canonical_url: https://medium.com/civic-media-project/hacking-for-gold-395707940e18
-title: Hacking for Gold
-subtitle: Laurel Felt (Student Voice Project)
-slug: hacking-for-gold
-description: ''
-tags:
-    - learning-and-engagement
-    - hackathons
-    - youth-media
-author: EL_News
-username: el-news
----
-
 # Hacking for Gold
 
 ### Laurel Felt (Student Voice Project)
@@ -25,7 +10,7 @@ From 8 a.m. to 8 p.m. on Saturday, April 12, 2014, the Sage Hall Computer Lab at
 
 So what was the singular event that honored these educationally and civically meaningful ends? What was WebSlam? According to Tim Falls, Director of Developer Relations at @SendGrid, a better question is _why_ (Falls, “WHY Is a Hackathon?”). This case study will examine YCSC’s WebSlam, articulating why organizers convened a hackathon in south Los Angeles. Next, it will review participants’ educational experiences, examining how they learned through doing and cultivated versatile skills. Finally, it will explore community impacts.
 
-![Factual Software Engineer Ben Coppersmith (standing) works with fellow mentor Jerome Johnson (2nd from left) to help their team of students code a website in just ten hours. From left to right: YCSC student Kevin Amaya, mentor Jerome Johnson, mentor Ben Coppersmith, student Gisela Hernandez, student Ashley Shorter. | Photo: J. Morr]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_kTXs_nYXYgCCKRfEiSjP-g.png)
+![Factual Software Engineer Ben Coppersmith (standing) works with fellow mentor Jerome Johnson (2nd from left) to help their team of students code a website in just ten hours. From left to right: YCSC student Kevin Amaya, mentor Jerome Johnson, mentor Ben Coppersmith, student Gisela Hernandez, student Ashley Shorter. | Photo: J. Morr](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_kTXs_nYXYgCCKRfEiSjP-g.png)
 
 # Why WebSlam?
 
@@ -79,13 +64,13 @@ Educationally, WebSlam participants benefited by learning through doing and deve
 
 Participants learned to code via five after-school sessions prior to WebSlam. Although daily instruction concluded at 3 p.m., said instructor Oscar Menjivar, “We had students stay until 4 — that’s the time that we stayed. But I think if we were to stay maybe later, until 8 or 9, I think they would have wanted to stay.” His suspicions were confirmed on Saturday, when a team of three young men — Jose Sandoval, Hector Linares, and Michael Taton — refused to take a lunch break. While the trio might have been motivated by their work’s real world relevance (they were creating a site for a LATTC student’s start-up), it is likely that their passion for coding also kept them in their seats. Of coding, participant Taton, 21, a Spring 2014 graduate of CRCD Academy YouthBuild, said, “I just feel I pick it up easy” ([Taton 2014](https://www.youtube.com/watch?v=uP2B0Yinrn8#t=41)).
 
-![(from left) Teammates Michael Taton, Hector Linares, and Michael Sandoval take a quick break from coding the website for Shaquann’s Gourmet Cookies in order to smile for the camera | Photo: J. Morr]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_g5-pDkfmemZTBk1LW5CYpA.png)
+![(from left) Teammates Michael Taton, Hector Linares, and Michael Sandoval take a quick break from coding the website for Shaquann’s Gourmet Cookies in order to smile for the camera | Photo: J. Morr](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_g5-pDkfmemZTBk1LW5CYpA.png)
 
 Menjivar’s “learning through doing” method encourages commitment and autonomy. Inevitably, said Menjivar, after learners gain familiarity with the tools, explore, self-express, believe that it’s okay to fail, and learn how to address setbacks, “they start to have fun. They don’t want to leave the classroom. They’re engaged, they want to talk to each other, they’re asking you questions like, ‘So Oscar, how do I get into more jobs like this?’ ‘So Oscar, where do I go next, where do I find more information?’”
 
 Despenza attested, “Certain participants have found their love for coding and are like, ‘We want to do this, we want to intern somewhere.’”
 
-![Oscar Menjivar from URBAN TxT helps students with their website. | Photo: J. Morr]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0RkEm_r96s-cRjNMB8xJJA.png)
+![Oscar Menjivar from URBAN TxT helps students with their website. | Photo: J. Morr](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0RkEm_r96s-cRjNMB8xJJA.png)
 
 # Skill Development
 
@@ -93,7 +78,7 @@ Despenza attested, “Certain participants have found their love for coding and 
 
 They didn’t walk away empty-handed, however; investing in the hackathon provided them with opportunities to enrich several versatile skills. Explained Despenza, “Certain participants have learned, ‘I can do more than I thought I could.’ There was one student in particular — it was rough for him to get it down but he’s here today and he found, ‘I may not do this for the rest of my life, but I can do this if I put my mind to it.’” The significance of lessons such as this, and the value of positive self-talk such as Despenza modeled, is considerable (“Thought Self-Leadership,” Neck and Manz).
 
-![Factual tech mentor Morgan Mullaney (R) assists student Yasmeen Summerlin (L) with her website for LATTC’s Cosmetology Department’s Salon Service. | Photo: J. Morr]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xToa0i706hfuu-XXFYxOIw.png)
+![Factual tech mentor Morgan Mullaney (R) assists student Yasmeen Summerlin (L) with her website for LATTC’s Cosmetology Department’s Salon Service. | Photo: J. Morr](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xToa0i706hfuu-XXFYxOIw.png)
 
 Yasmeen Summerlin, 20, an 11th grader at Home Sweet Home YouthBuild who plans to graduate this December, is one of those students who cultivated perseverance. Summerlin doesn’t plan to pursue web development; she wants to become a crime scene investigator, and aspires to enter Boston University’s prestigious forensic science program. “I was going to give up yesterday because my ideas were being shot down and I’m just trying to please people,” said Summerlin. “And when my ideas are being shot down to please people, I’m obviously not pleasing people, I’m not the person you should be working with. But she [her favorite teacher, Despenza] wanted me to stay for this, so then I said, ‘Okay. I don’t throw stuff out’” (Summerlin 2014). Summerlin’s team, which re-designed LATTC’s Cosmetology Department Salon Service, ultimately was awarded second-place.
 
@@ -105,7 +90,7 @@ YCSC’s WebSlam provided an opportunity for local entities to collaboratively s
 
 Teamwork epitomized the WebSlam experience all parties involved. Despenza contacted Menjivar, who agreed to provide the coding instruction for the WebSlam she envisioned. A mutual acquaintance introduced Despenza to Samantha Walters, Co-location America’s Vice-President of Online Strategy, who provided the necessary sponsorship dollars. Joseph Guerrieri, LATTC’s Dean of Academic Affairs and Workforce Development, volunteered to host WebSlam at the college’s computer lab. Melanie Vaget responded to Despenza’s and Walters’s call for mentors, rounding up a group of her colleagues from L.A.-based tech company Factual.
 
-![Colocation America VP of Online Strategies Samantha Walters talks to student Jose Sandoval and client Robert Hubbard. | Photo: J. Morr]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_G3eLMp2EEL8EYakFB_kcjA.png)
+![Colocation America VP of Online Strategies Samantha Walters talks to student Jose Sandoval and client Robert Hubbard. | Photo: J. Morr](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_G3eLMp2EEL8EYakFB_kcjA.png)
 
 YCSC’s WebSlam, therefore, identifies various types of community partners who might be incented to support a civic endeavor such as this. It also suggests “self-interest” as a screening criterion — that is, partners must recognize participation as a means by which to achieve an important goal (e.g., satisfying a core personal value, furthering the company’s mission, investing in future earning potentials).
 
@@ -119,7 +104,7 @@ WebSlam participants also engaged in conversation and reflection throughout the 
 
 This civic media event provided an opportunity for female and minority youth to increase their awareness of STEM-related career paths, deepen civic engagement, learn about coding in a hands-on manner, and cultivate proficiency in several versatile skills. WebSlam partners were able to give back and realize personal goals, local entities received useful new websites, and the community supported service learning. Collectively, this benefits individual participants and facilitates neighborhood revival.
 
-![All WebSlam participants, mentors, and event sponsors/organizers gather together with LA City Council Member Curren Price (center) | Photo: J. Morr]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7utzvUkL_J5whaa6A0Bdhw.png)
+![All WebSlam participants, mentors, and event sponsors/organizers gather together with LA City Council Member Curren Price (center) | Photo: J. Morr](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7utzvUkL_J5whaa6A0Bdhw.png)
 
 # References
 

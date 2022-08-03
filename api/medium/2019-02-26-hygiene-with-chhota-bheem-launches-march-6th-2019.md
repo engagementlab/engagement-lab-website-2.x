@@ -1,26 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/hygiene-with-chhota-bheem-launches-march-6th-2019-83c3ac90b291
-canonical_url: https://medium.com/engagement-lab-emerson-college/hygiene-with-chhota-bheem-launches-march-6th-2019-83c3ac90b291
-title: Hygiene with Chhota Bheem Launches March 6th, 2019
-subtitle: Calling all Clean Warriors! The Engagement Lab at Emerson College is excited
-    to announce that Hygiene with Chhota Bheem is set to…
-slug: hygiene-with-chhota-bheem-launches-march-6th-2019
-description: ''
-tags:
-    - education
-    - hygiene
-    - health
-    - participatory-design
-    - codesign
-author: EL_News
-username: el-news
----
-
 # Hygiene with Chhota Bheem Launches March 6th, 2019
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oTGWGSAP4RnfUWHJr3o1Yw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oTGWGSAP4RnfUWHJr3o1Yw.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JAtU5SoujTEqCAHL6zj_9w.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JAtU5SoujTEqCAHL6zj_9w.png)
 
 Calling all Clean Warriors! The Engagement Lab at Emerson College is excited to announce that [\*\*\*Hygiene with Chhota Bheem](https://elab.emerson.edu/hygiene/?en=)\* is set to officially launch on March 6th, 2019.\*\*
 
@@ -36,7 +18,7 @@ The need for a program like Hygiene with Chhota Bheem couldn’t be more urgent.
 
 While serious progress has been made in recent years to make toilets more accessible in India, increasing the number of household toilets has not yet resulted in full uptake, or accounted for whether the types of toilets and the locations they were built are sustainable over time. Local attitudes need to change too: awareness and educational campaigns to promote knowledge of hygienic toilet use are essential.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_QVjX5MAA0jq7VddWUh8RcA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_QVjX5MAA0jq7VddWUh8RcA.jpeg)
 
 That’s where _Hygiene with Chhota Bheem_ comes in. By participating in games, challenges, and in-class exercises, students join the “Bheem Team” and develop awareness and best practices in hygiene and health.
 

@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/galas-mobilizing-and-managing-volunteer-humanitarian-efforts-online-during-euromaidan-protests-in-35c284b37e3f
-canonical_url: https://medium.com/civic-media-project/galas-mobilizing-and-managing-volunteer-humanitarian-efforts-online-during-euromaidan-protests-in-35c284b37e3f
-title: 'Galas: Mobilizing and Managing Volunteer Humanitarian Efforts Online During
-  Euromaidan Protests in…'
-subtitle: Tetyana Lokot (Merrill College of Journalism, University of Maryland)
-slug: galas-mobilizing-and-managing-volunteer-humanitarian-efforts-online-during-euromaidan-protests-in
-description: ""
-tags:
-- geolocation
-- community-organization
-- community-and-action
-author: EL_News
-username: el-news
----
-
 # Galas: Mobilizing and Managing Volunteer Humanitarian Efforts Online During Euromaidan Protests in Ukraine
 
 ### Tetyana Lokot (Merrill College of Journalism, University of Maryland)
@@ -24,7 +8,7 @@ The Internet augments civil resistance in many ways, including changes to its mo
 
 Online support for protest initiatives during Euromaidan in Ukraine formed spontaneously around particular needs; and in some cases, just a few individuals were able to take projects off the ground due to the affordances of existing free, open-source platforms that enable volunteer signup, project management, and resource mobilization online. Galas was one such project: one of its founders (known as DL, in this case study) observed that while there were lots of people on social media willing to help the Euromaidan protesters in Kyiv and elsewhere, the management and distribution of resources (funds, transportation, lodging, medications) was chaotic and inefficient. DL, who works as an IT manager at a software company, discussed this with friends (developers, programmers, a designer) and wondered if the protest crowdsourcing efforts would benefit from an online coordination tool. They then recalled that a real-time alert platform had already been tested during the heavy snowfalls in Kyiv the previous winter, and asked the platform creator if they could use it as a base for the new initiative. This is how Galas found a [home](http://www.galas.org.ua/).
 
->> Based around an Ushahidi crowdmap, Galas relied on a key group of skilled individuals for initial operations setup, website design and recruitment of unskilled volunteer administrators, who then monitored resource needs from various protest communities on social media, and managed messages submitted directly to the website or sent through email, Twitter, text, and the Galas iOS/Android apps.
+> > Based around an Ushahidi crowdmap, Galas relied on a key group of skilled individuals for initial operations setup, website design and recruitment of unskilled volunteer administrators, who then monitored resource needs from various protest communities on social media, and managed messages submitted directly to the website or sent through email, Twitter, text, and the Galas iOS/Android apps.
 
 All verified messages were then aggregated on the crowdmap, and the needs communicated via phone or email to a list of relevant suppliers/charities, compiled by Galas.
 
@@ -34,14 +18,12 @@ Bennett and Segerberg (2012) suggest that the use of digital networked media by 
 
 # REFERENCES
 
-Bennett, W. Lance, and Alexandra Segerberg. 2012. “The logic of connective action: Digital media and the personalization of contentious politics.” *Information, Communication & Society* 15 (5): 739–768.
+Bennett, W. Lance, and Alexandra Segerberg. 2012. “The logic of connective action: Digital media and the personalization of contentious politics.” _Information, Communication & Society_ 15 (5): 739–768.
 
-Castells, Manuel. 2013. *Communication power*. Oxford University Press.
+Castells, Manuel. 2013. _Communication power_. Oxford University Press.
 
-Chadwick, Andrew. 2006. *Internet politics: States, citizens, and new communication technologies*. Oxford University Press.
+Chadwick, Andrew. 2006. _Internet politics: States, citizens, and new communication technologies_. Oxford University Press.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

@@ -1,24 +1,8 @@
----
-url: https://medium.com/civic-media-project/regulationroom-f2a7f4b74cd8
-canonical_url: https://medium.com/civic-media-project/regulationroom-f2a7f4b74cd8
-title: RegulationRoom
-subtitle: Dmitry Epstein (University of Illinois, Cornell Law School) and Cheryl Blake
-    (Cornell Law School)
-slug: regulationroom
-description: ''
-tags:
-    - systems-and-design
-    - open-data
-    - advocacy
-author: EL_News
-username: el-news
----
-
 # RegulationRoom
 
 ### *Dmitry Epstein (*University of Illinois, Cornell Law School) *and Cheryl Blake (*Cornell Law School)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_x-hCyEojVnf1_iKqc3ODYA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_x-hCyEojVnf1_iKqc3ODYA.png)
 
 Rulemaking, the process used to make new health, safety, and economic regulations, is among the most open and participatory mechanisms in US federal policymaking (Storms 2013). Its formal legal structure establishes robust requirements for transparency and public participation. Rulemakers are required to notify the public of what is being proposed, explain the underlying legal and policy rationales, and provide supporting data. Participation is formally guaranteed by a period during which anyone may comment on a proposed rule. Further, all comments must be reviewed and considered.
 
@@ -26,7 +10,7 @@ However, in practice, meaningful public comment has been highly selective, domin
 
 CeRI (the Cornell e-Rulemaking Initiative), a cross-disciplinary group of researchers in law, communication, conflict resolution, and computing and information science, created [RegulationRoom](http://regulationroom.org/) with the goal of engaging missing stakeholders in the policymaking process (Storms 2013). As an action-research platform for online civic engagement, RegulationRoom can reach stakeholders nationwide in ways that would not be possible offline. In collaboration with the Department of Transportation and the Consumer Financial Protection Bureau, six live rulemakings have been hosted on the platform.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bPUJvdv9LHYwpGNIxsBC6Q.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bPUJvdv9LHYwpGNIxsBC6Q.png)
 
 The use of web-based tools has long been promoted as a means to lower the cost of public engagement in policymaking and other forms of political activism (Shirky 2008). RegulationRoom is unique, however, in its conception as a socio-technical system. Some civically oriented platforms, such as Ideascale and Change.org, rely primarily on technological tools rather than human support to structure participants’ engagement with policymakers. In contrast, RegulationRoom calls for a more hands-on approach to engagement engineering where technological tools and facilitative engagement practices are closely intertwined.
 

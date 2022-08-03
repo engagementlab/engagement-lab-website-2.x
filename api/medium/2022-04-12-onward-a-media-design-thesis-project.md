@@ -1,25 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/onward-a-media-design-thesis-project-317fc8dfa0c1
-canonical_url: https://medium.com/engagement-lab-emerson-college/onward-a-media-design-thesis-project-317fc8dfa0c1
-title: “Onward” — A Media Design Thesis Project
-subtitle: Written by Philip Jones
-slug: onward-a-media-design-thesis-project
-description: ''
-tags:
-    - media
-    - civics
-    - civic-engagement
-    - engagement
-    - design
-author: EL_News
-username: el-news
----
-
 # 2022 Media Design Thesis Project Spotlight: “Onward” by Philip Jones
 
 Written by Philip Jones
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YRlPcb2-zMdgqzmwIdGaNA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YRlPcb2-zMdgqzmwIdGaNA.png)
 
 Around a year ago, Phil found himself taking stock of what had been lost in the pandemic. As a [Media Design](https://websites.emerson.edu/grad-life/2021/12/17/what-is-media-design-the-inside-scoop-from-an-emerson-masters-student/) graduate student, he’d had it pretty easy, all things considered. The places Phil missed most were places not necessarily for socializing. He’d cracked the code on zoom game nights, was calling his family more, and made virtual church work well enough. What hurt most deeply was feeling like a member of an open society, where exploration and spontaneity were possible. When tragedy took hold of many of Phil’s friends, it was critical to stay in touch virtually. Sometimes though, he needed nothing more than to disappear into a crowd. [ArtsEmerson](https://artsemerson.org/?gclid=CjwKCAjwo8-SBhAlEiwAopc9W6LgQqgRwE3d16w1E_1eYvfNzRkzfl2GUfffJjTB9oXh-13UjuGX9RoC4rMQAvD_BwE) had a clever slogan back then “together apart”. Phil thought he was seeking a way to be “alone together”.
 

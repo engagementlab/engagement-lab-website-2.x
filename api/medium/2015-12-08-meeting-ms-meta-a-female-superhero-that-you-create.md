@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/meeting-ms-meta-a-female-superhero-that-you-create-fdcf41b334d9
-canonical_url: https://medium.com/engagement-lab-emerson-college/meeting-ms-meta-a-female-superhero-that-you-create-fdcf41b334d9
-title: 'Meeting Ms. Meta: A Female Superhero That You Create'
-subtitle: By Engagement Lab
-slug: meeting-ms-meta-a-female-superhero-that-you-create
-description: ''
-tags:
-    - comics
-    - movies
-author: EL_News
-username: el-news
----
-
 # Meeting Ms. Meta: A Female Superhero That You Create
 
 ### By Engagement Lab
 
 10/21/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_0RQkoKsGEJX9saPz.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_0RQkoKsGEJX9saPz.jpg)
 
 The reality is often different from what is presented. Movies, games, and even column writers provide their audiences with stories that aren’t true to their origin. Case in point: _Stonewall_, and its whitewashing; Ridley Scott’s movies, and his Caucasian Egyptians; the assassins in _Assassin’s Creed_, and their supposedly altruistic nature.[[i]](http://engagementgamelab.org/blog/#_edn1) So rather than continue with the inaccuracies and promotions of stereotypical characters, Ms. Meta’s creator Sarah Zaidan wishes to obliterate all of that.
 

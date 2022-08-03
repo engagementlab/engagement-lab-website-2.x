@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/guerrilla-research-tactics-alternative-research-methods-in-urban-enviornments-8f902001c638
-canonical_url: https://medium.com/civic-media-project/guerrilla-research-tactics-alternative-research-methods-in-urban-enviornments-8f902001c638
-title: 'Guerrilla Research Tactics: Alternative Research Methods in Urban Enviornments'
-subtitle: Glenda Amayo Caldwell, Lindy Osborne, Dr. Ben Kraal,(Queensland University
-    of Technology), Dr. Inger Mewburn (Australian National…
-slug: guerrilla-research-tactics-alternative-research-methods-in-urban-enviornments
-description: ''
-tags:
-    - diy
-    - urban-planning
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # Guerrilla Research Tactics: Alternative Research Methods in Urban Enviornments
 
 ### _Glenda Amayo Caldwell, Lindy Osborne,_ Dr. Ben Kraal,(Queensland University of Technology)*, Dr. Inger Mewburn (*Australian National University)
@@ -22,37 +6,37 @@ Guerrilla Research Tactics (GRT) involves the use of unexpected design intervent
 
 The GRT project drew out of small-scale experiments such as Print + Talk = Love (PTL). This was a situated paper-based intervention that invited ordinary citizens to discuss place-based topics that had no connections to digital devices or web based platforms. PTL was constructed by a large piece of corrugated cardboard that had pinned pieces of paper with printed questions relating to the event or place in which the intervention was located as seen in figure 1. Clips and string were used to attach colored pens to the board. The pieces of paper had blank space allowing for participants to write their responses to such questions as, “What’s your great idea for Grey St.?” (Parra-Agudelo et al. 2013). The board was interactive, allowing participants to express themselves on paper through their own personalized way of manipulating, writing, drawing or repositioning the pieces of paper.
 
-![Figure 1 Photo: Mark Bilandzic. Print + Talk = Love at the Changing Lanes event in Brisbane, QLD May 2012]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ko8sR2exAQM_eBkl.jpg)
+![Figure 1 Photo: Mark Bilandzic. Print + Talk = Love at the Changing Lanes event in Brisbane, QLD May 2012](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ko8sR2exAQM_eBkl.jpg)
 
 PTL was purposely designed to be easy to use and easy to interact with. When deploying PTL its location and setup was considered carefully along with its visibility and content. All of which contributed to the ability for researchers to stand back and allow for unobtrusive observation (Parra-Agudelo et al. 2013).
 
-![Figure 2 Photo: Mark Bilandzic. Print + Talk = Love, Brisbane, QLD May 2012]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_d3iBW25WrT-6Bmf_.jpg)
+![Figure 2 Photo: Mark Bilandzic. Print + Talk = Love, Brisbane, QLD May 2012](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_d3iBW25WrT-6Bmf_.jpg)
 
 Another experiment involving an interactive application on urban screens was Discussions in Space (DIS), a public participation tool for urban public places (Schroeter 2012; Schroeter et al. 2012). DIS allowed situated users to respond to context specific questions such as “Brisbane’s laneways need more…?” through SMS, Twitter, and a website, as shown in figure 2. The responses and messages are revealed on the dynamic screen in an animated way.
 
 > > DIS has demonstrated that when it is situated within the right parameters, it can be a useful tool in collecting urban planning data from young people who generally do not participate in typical community consultation processes (Schroeter 2012; Schroeter et al. 2012).
 
-![Figure 3 Photo: Glenda Caldwell. Discussions in Space at the Changing Lanes event in Brisbane, QLD May 2012]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0__IqzP93fBDTzneon.png)
+![Figure 3 Photo: Glenda Caldwell. Discussions in Space at the Changing Lanes event in Brisbane, QLD May 2012](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0__IqzP93fBDTzneon.png)
 
 Researchers employing PTL and DIS extended their data beyond the comments collected; they also conducted unobtrusive observations, photographs, and video recordings to examine how users interacted with the displays. In the case of DIS, geo-locative data was available through some of the twitter comments.
 
 Confronted with the challenge of engaging research participants, a group of Queensland University of Technology, Brisbane, Australia, researchers began to interrogate the impact of activating PTL and DIS in public spaces and test their effectiveness as potential research tools. Providing researchers with both analogue and digital examples of experimental interventions allowed for researchers to trial and experiment with a range of research approaches. Analogue, digital, and hybrid (analogue and digital) variations of PTL and DIS were implemented in Australia and New Zealand, encouraging participants to engage both with the physical intervention and accompanying digital websites and surveys.
 
-![Figure 4 Photo: Louise Barbour. Situated paper-based design intervention]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_YI15okFXvxaWJD2f.png)
+![Figure 4 Photo: Louise Barbour. Situated paper-based design intervention](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_YI15okFXvxaWJD2f.png)
 
-![Figure 5 Photo: Lindy Osborne. The Puzzle of Collaboration]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_nviu_omcX25blb7Z.png)
+![Figure 5 Photo: Lindy Osborne. The Puzzle of Collaboration](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_nviu_omcX25blb7Z.png)
 
 Figure 3 is a photo of a variation of PTL used to engage with Fashion Design students in a study about studio based learning environments. The researcher designed the pieces of paper to resemble Polaroids. The papers also had a mix of a few different questions and ultimately used this approach to collect data instead of a survey or questionnaire. Another adaptation of PTL is shown in figure 5 called the Puzzle of Collaboration where the researcher was examining the motivation behind interdisciplinary collaboration. This adaptation used colored pieces of paper that were cut into puzzle pieces where participants could write their responses to targeted questions. The papers were pinned on the board and fit together as a large puzzle.
 
 Mural Wall was a hybrid adaptation of PTL, which was used to engage with the public to question their preference for design ideas of a third place for an underutilized railway underpass (Caldwell et al. 2013). Five hand drawn vignettes — such as the one in figure 5 — were posted on a large corrugated cardboard depicting potential uses for that location, and participants were invited to vote for their preferred design idea by using sticky dots and post-it notes. The Mural Wall also included QR codes that linked to a wordpress site that included more information about the research project such as ethical clearance, survey and social media links, and research team information (Caldwell et al. 2013).
 
-![Figure 6: illustrated design vignette. The Mural Wall]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_3EE59FE8fPsDWim3.png)
+![Figure 6: illustrated design vignette. The Mural Wall](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_3EE59FE8fPsDWim3.png)
 
 More projects began to be conceived in the same GRT mode, for example a hybrid approach called “Poll Bombing”: the strategic placement of physical artifacts with embedded QR codes linked to web-based surveys and polls. Figure 6 is an example of an origami paper crane that was placed in targeted locations. The paper used text and words to express the research topic in question. It also had a sign asking for the participant to unfold the crane and look inside it. On the inside a QR code was found which when scanned would take the user to the survey.
 
-![Figure 7 Photo: Glenda Caldwell. A paper crane with a QR code inside]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_H1wVipVCp2Hj_fUy.png)
+![Figure 7 Photo: Glenda Caldwell. A paper crane with a QR code inside](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_H1wVipVCp2Hj_fUy.png)
 
-![Figure 8 Photo: Leonardo Parra Agudelo. Pink stickers placed in urban environments]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_11usAdjVAZ6wuP0-.png)
+![Figure 8 Photo: Leonardo Parra Agudelo. Pink stickers placed in urban environments](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_11usAdjVAZ6wuP0-.png)
 
 A similar approach was the use of carefully designed stickers placed in urban spaces shown in figure 7. The stickers used bright colors and simple graphics and text to ask open-ended and location specific questions, such as, “This space needs…” The sticker also included a QR code taking the participant to a website that contained more information about the research project.
 

@@ -1,20 +1,3 @@
----
-url: https://medium.com/civic-media-project/transforming-conceptions-of-teacher-professional-development-a-three-year-case-study-at-a-rural-f31b06273add
-canonical_url: https://medium.com/civic-media-project/transforming-conceptions-of-teacher-professional-development-a-three-year-case-study-at-a-rural-f31b06273add
-title: 'Transforming conceptions of Teacher Professional Development: a three year-case
-    study at a rural…'
-subtitle: Sara Villagrá-Sobrino (University of Oviedo and University of Valladolid),
-    Luis. P Prieto-Santos, Iván. M Jorrín-Abellán, and Sara…
-slug: transforming-conceptions-of-teacher-professional-development-a-three-year-case-study-at-a-rural
-description: ''
-tags:
-    - learning-and-engagement
-    - education-technology
-    - data-visualization
-author: EL_News
-username: el-news
----
-
 # Transforming conceptions of Teacher Professional Development: a three year-case study at a rural school in Spain
 
 ### *Sara Villagrá-Sobrino (*University of Oviedo and University of Valladolid)_, Luis. P Prieto-Santos, Iván. M Jorrín-Abellán, and Sara García-Sastre_
@@ -37,7 +20,7 @@ The main issue in the initial research effort was to introduce a new Computer Su
 
 For this critical and transformative inquiry process data was collected using a variety of qualitative techniques: three semi-structured in depth interviews and one focus group with teachers, as well as 31 participant observations of classroom enactments. In addition screen, audio and video recordings, scripts of teacher’s activities and other documentation such as teacher training school programs etc, were analyzed in order to provide triangulated conclusions supported by enhanced evidence (Prieto, 2012; Villagrá 2012). Figure 1, provides an example of the conceptual structure of “Ana de Austria Case Study.”
 
-![[Figure 1]: Conceptual structure Ana de Austria Primary School (Spain)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_fOujCwXweNi1VBuw4IFnBw.png)
+![[Figure 1]: Conceptual structure Ana de Austria Primary School (Spain)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_fOujCwXweNi1VBuw4IFnBw.png)
 
 # Understanding teacher design and enactment in technology enriched classrooms
 
@@ -49,9 +32,9 @@ The analysis of the designs allowed us to identify a set of pedagogical recurren
 
 An equivalent set of recurrent elements was encountered when we analyzed the observed activities where these designs were enacted in the classroom. As an example of how the analysis of teacher orchestration was performed, we present here a description and graphical representation in figure 2.1.
 
-![[Figure 2.1]: Example atomic pattern cards used in the workshop, both for design-time (left) and enactment-time (right).]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wxDyJXC559FEgOx9eYSKEw.png)
+![[Figure 2.1]: Example atomic pattern cards used in the workshop, both for design-time (left) and enactment-time (right).](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wxDyJXC559FEgOx9eYSKEw.png)
 
-![[Figure 2.2] Graphical representation of the enactment analysis of an observed Group Scribbles activity at Ana de Austria School.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_De0Tp8LtQKL2ZUKBSlRQyg.png)
+![[Figure 2.2] Graphical representation of the enactment analysis of an observed Group Scribbles activity at Ana de Austria School.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_De0Tp8LtQKL2ZUKBSlRQyg.png)
 
 Figure 2.1 shows one of the observed activities performed by a K6–7 teacher in a Science class. The activity involved a group of 18 students working in pairs with tablet PCs. Through this activity students were to asked to recognize common objects, professions and buildings that are more present in rural contexts, in contrast with others commonly found in the cities.
 
@@ -65,7 +48,7 @@ As a result of the analysis explained above, we asked ourselves the following qu
 
 Thus, several workshops were conducted with teachers at Ana de Austria school to illuminate the aforementioned Issue. Nevertheless, for the sake of brevity, they will not be described here. Figure 2.2 provides an illustrative scheme of a prototype example of workshop.
 
-![[Figure 2.3] Phases of a prototype workshop with teachers carried out in Ana de Austria Primary School]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A6FSt1Gyb3YgE9ynVOu6Gw.png)
+![[Figure 2.3] Phases of a prototype workshop with teachers carried out in Ana de Austria Primary School](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A6FSt1Gyb3YgE9ynVOu6Gw.png)
 
 A conceptual idea of pedagogical routines has been in usage in professional development workshops both in primary and higher education settings, as a tool to help teachers in designing and enriching collaborative learning activities with ICT, as well as part of a learning design approach (Prieto, Dimitriadis & Villagrá, 2011). This kind of representations could be specially useful embedded as a “professional language” (Law, Laurillard & Lee, 2011) to help teachers and practitioners in the path of describe and communicate their reflections about designs and their own practice.
 

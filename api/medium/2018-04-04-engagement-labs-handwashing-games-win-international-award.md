@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/engagement-labs-handwashing-games-win-international-award-6991b1f4d87f
-canonical_url: https://medium.com/engagement-lab-emerson-college/engagement-labs-handwashing-games-win-international-award-6991b1f4d87f
-title: Engagement Lab’s Handwashing Games Win International Award
-subtitle: The Engagement Lab received the 2018 Gaming Award from the International
-    Society for Neglected Tropical Diseases (ISNTD) Festival, which…
-slug: engagement-labs-handwashing-games-win-international-award
-description: ''
-tags:
-    - engagement
-    - games
-    - sanitation
-    - public-health
-    - children
-author: EL_News
-username: el-news
----
-
 # **_Engagement Lab’s Handwashing Games Win International Award_**
 
-![Mary Beth Dawson (right) receives ISNTD 2018 Gaming Award on behalf of the Engagement Lab.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_l1cR-jgvqg7DYRr8vlyIrQ.png)
+![Mary Beth Dawson (right) receives ISNTD 2018 Gaming Award on behalf of the Engagement Lab.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_l1cR-jgvqg7DYRr8vlyIrQ.png)
 
 The\***\* Engagement Lab received the 2018 Gaming Award from the[\*\*** International Society for Neglected Tropical Diseases (ISNTD) Festival](http://isntdfestival.com/home/4593212572), which highlights efforts in arts, science, communication and entertainment that strive to address global challenges in tropical diseases. The festival recognized [**Handwashing with Ananse**](https://elab.emerson.edu/projects/handwashing-with-ananse) and[ \*\*Hygiene with Chhota Bheem](https://elab.emerson.edu/projects/hygiene-with-chhota-bheem),** two of the Lab’s game projects in Ghana and India**,\*\* for outstanding impact on reducing the spread of diseases associated with poverty. Each game encourages handwashing with soap and water for children 7–11 years old and advocacy for better hygiene conditions.
 
@@ -26,11 +8,11 @@ The\***\* Engagement Lab received the 2018 Gaming Award from the[\*\*** Internat
 
 > **\*— Mary Beth Dawson**, **Project Manager at the Engagement Lab.\***
 
-![Image from Handwashing With Ananse storybook.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8KOSNzxXY8b05a38BiT7ig.png)
+![Image from Handwashing With Ananse storybook.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8KOSNzxXY8b05a38BiT7ig.png)
 
 Through interactive stories of _Ananse the Spider_, a traditional character from Ghanaian folklore, **Handwashing with Ananse** teaches primary school children in Ghana the importance of handwashing. **Hygiene with Chhota Bheem** is centered around the popular Indian cartoon character _Bheem_, who teaches children to defeat an evil Germ Wizard by washing their hands and using the toilet. In both projects, children are encouraged to play games based on the stories, practice handwashing with soap and soapy water as well as teach their peers what they have learned.
 
-![Download the Hygiene with Chhota Bheem Android mobile game in the Google Play Store here.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_czfXtvP36lnO5vLLtm8U_w.png)
+![Download the Hygiene with Chhota Bheem Android mobile game in the Google Play Store here.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_czfXtvP36lnO5vLLtm8U_w.png)
 
 > “The Engagement Lab’s expertise is in designing media experiences that motivate public mindedness and action taking. These projects are exciting demonstrations of the power of play in encouraging individuals to take care of the public’s health.”
 

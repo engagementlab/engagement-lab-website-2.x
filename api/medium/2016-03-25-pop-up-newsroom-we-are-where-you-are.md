@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/pop-up-newsroom-we-are-where-you-are-8870cc58603f
-canonical_url: https://medium.com/civic-media-project/pop-up-newsroom-we-are-where-you-are-8870cc58603f
-title: 'Pop-Up Newsroom: “We Are Where You Are”'
-subtitle: David Baines (Newcastle University, England), Priya Rajsekar (Asian College
-    of Journalism, India), Marco van Kerkhoven (Utrecht School of…
-slug: pop-up-newsroom-we-are-where-you-are
-description: ''
-tags:
-    - citizen-journalism
-    - social-network
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Pop-Up Newsroom: “We Are Where You Are”
 
 ### *David Baines (*Newcastle University, England)*, Priya Rajsekar (*Asian College of Journalism, India)*, Marco van Kerkhoven (*Utrecht School of Journalism, Netherlands)*, and Melissa Wall (*California State University)
@@ -22,9 +6,9 @@ Journalism continues to be closely tied to the health of civic life, but do jour
 
 Our student journalism project, the Pop-Up Newsroom, challenges the idea that all news outlets need permanent physical newsrooms. It creates temporary, virtual news spaces to encourage participants to break free of traditional news norms and socialization to get closer to local communities. Pop-Up Newsroom denizens report for limited time periods, disseminating their stories instantaneously with their own cell phones and personal social media accounts on Twitter, Facebook, etc. A shared hashtag networks their reporting. Rather than trying to drive audiences to a single organizational website, the project creates information surges via social media. As one student participant has noted: “Every individual who is able to use a smart phone can be self-media.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mRb9oti-xA25F2wDSVXReA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mRb9oti-xA25F2wDSVXReA.png)
 
-![Student Collaboration for Oscars Coverage, Enthusiastic student participation in Pop-Up]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Dqwc-hU7l4qjofNvXNq88Q.png)
+![Student Collaboration for Oscars Coverage, Enthusiastic student participation in Pop-Up](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Dqwc-hU7l4qjofNvXNq88Q.png)
 
 The students’ work is further distributed by temporary “Command Centers,” usually consisting of students with laptops often located in public spaces such as coffee shops. These curators monitor students’ and the general public’s social media posts about the same topic, selecting content to redistribute via Pop-Up Newsroom social media accounts. Often, the curating is physically done in the communities from which the reporting takes place. Producing news on the scene makes the processes of production more transparent and de-emphasizes journalist-source disparities. Student reporters say this allows them to “reach those areas which the mainstream media prefers not to.”
 
@@ -32,15 +16,15 @@ Taking away the physical newsroom has helped enable the creation of a much large
 
 Freeing students from the structured newsroom encourages them to challenge traditional news conventions such as reliance on elite sources, which industrial news spaces have been designed to accommodate. Participants conceptualize their journalism roles less as “speaking for” citizens and, instead, “speaking with” them (Blumler and Coleman 2013, 183). Thus, students connect with a broader range of voices, rather than simply privileging traditional go-to sources. They amplify the personal stories recounted to them by ordinary citizens and members of traditionally marginalized groups. For example, Indian students covering poverty interviewed slum-dwellers, transgenders, and those forced into poverty due to caste discrimination. In the absence of bulky and intrusive media devices, these nontraditional sources opened up, allowing Pop-Up Newsroom to highlight stories typically invisible in mainstream news coverage. “Never before have I spent so much time listening to their stories,” one student said about her reporting.
 
-![Tweet about transgender advocacy]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bbUNv5klBfFL_i9S.png)
+![Tweet about transgender advocacy](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bbUNv5klBfFL_i9S.png)
 
 > > “The questions that came to my mind were, ‘What the hell have I done for my society? How am I going to bring about change to the current situation?”These experiences further spurred some students to take a broader look at their work by creating multimedia [reflections](https://www.youtube.com/watch?v=G3GYWKnpc_k&feature=youtu.be) on their roles as journalists.
 
 Working with Pop-Up Newsroom, students come to understand the power of communication networks — how they generate new ways of interacting with audiences by the means of texts, videos, and photos they post on their social media accounts; and how they are reposted, favorited, etc. by others including members of the communities they were reporting on. These interactions have ranged from the United Nations reposting students’ tweets from Chennai, to a low-income health clinic in Los Angeles and the students reporting from that location promoting each other on their Twitter accounts. Reflecting on this sort of engagement, a student said that before her Pop-Up experience, she had never reported with this “amount of involvement with the public. I both engaged communities and organizations.”
 
-![Tweet raising awareness about poverty]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_7YFgPEDvV9P3q0Rt.png)
+![Tweet raising awareness about poverty](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_7YFgPEDvV9P3q0Rt.png)
 
-![Student Journalism about Indian Slums]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_flFXX-FF8qFm_pZm.png)
+![Student Journalism about Indian Slums](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_flFXX-FF8qFm_pZm.png)
 
 The networked structure also meant students became connected to other Pop-Up Newsroom participants, which included anyone using the designated hashtag or sharing Pop-Up content, around the world. According to TweetReach, the hashtag#livepoverty reached 54,590 Twitter accounts over 48 hours; #IWDpopup reached 187,295 accounts. This shows that the project was bringing many more people into the conversation than the students themselves.
 

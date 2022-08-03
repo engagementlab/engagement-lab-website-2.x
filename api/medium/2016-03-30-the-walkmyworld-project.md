@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/the-walkmyworld-project-68ac70db6966
-canonical_url: https://medium.com/civic-media-project/the-walkmyworld-project-68ac70db6966
-title: 'The #WalkMyWorld Project'
-subtitle: Greg McVerry (Southern Connecticut State University), Ian O’Byrne (University
-    of New Haven), Kristine E. Pytash (Kent State University)…
-slug: the-walkmyworld-project
-description: ''
-tags:
-    - learning-and-engagement
-    - hashtag-activism
-    - education-technology
-author: EL_News
-username: el-news
----
-
 # The #WalkMyWorld Project
 
 ### Greg McVerry (Southern Connecticut State University), Ian O’Byrne (University of New Haven), Kristine E. Pytash (Kent State University), Ryan M. Rish (Kennesaw State University), Molly Shields (Flagler College), and Julie B. Wise (University of Delaware)
@@ -24,7 +8,7 @@ The #WalkMyWorld project was a social media experiment to provide pre-service te
 
 For ten weeks, participants visually represented an aspect of their lives using any preferred medium, such as images or videos, applying the #WalkMyWorld hashtag on Twitter as they explored their own and each other’s lifeworlds. #WalkMyWorld grew as an extension of a five-year project examining the intersection of social media and poetry. Participants in #WalkMyWorld documented their world by posting of pictures, videos, blog posts, comic strips, etc. on Twitter. This emergent community completed a series of “learning events” involving reading and responding to the poetry of Robert Hass (See Table 1) by sharing their personal histories through multimodal representations. The shift from individual to collaborative learning developed quickly as participants narrated lifeworlds.
 
-![Table 1: For more information on the project, learning events, and materials shared please visit the following website: https://sites.google.com/site/walkmyworldproject/]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZBSm6b1w7dMuXuzA8Pilgg.png)
+![Table 1: For more information on the project, learning events, and materials shared please visit the following website: https://sites.google.com/site/walkmyworldproject/](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZBSm6b1w7dMuXuzA8Pilgg.png)
 
 # Theory and Perspectives
 

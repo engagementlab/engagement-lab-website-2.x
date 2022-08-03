@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/webabludatel-a-russian-electoral-observation-app-76808e2e7cec
-canonical_url: https://medium.com/civic-media-project/webabludatel-a-russian-electoral-observation-app-76808e2e7cec
-title: 'Webabludatel: A Russian Electoral Observation App'
-subtitle: Ksenia Ermoshina (Center for Sociology of Innovation, France)
-slug: webabludatel-a-russian-electoral-observation-app
-description: ''
-tags:
-    - mobile
-    - corruption
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Webabludatel: A Russian Electoral Observation App
 
 ### *Ksenia Ermoshina (*Center for Sociology of Innovation, France)
@@ -31,9 +16,9 @@ An observer and user of WebNabludatel, shares her user experience of the app:
 
 So, even if the app is useful to fix visible fraud, it can not really prevent or control everything. It is first of all conceived to organize observer’s activity, instruct and empower him legally.
 
-![Screenshot of the application with questions: “Information on candidates is correctly provided” (yes/no), “The pattern of a bulletin available” (yes/no), “Bigger version of protocol available”, “Propaganda materials closer than 50 meters from polling station”. Provided by WN team]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_3F3YWfe4z5jD-rvq.png)
+![Screenshot of the application with questions: “Information on candidates is correctly provided” (yes/no), “The pattern of a bulletin available” (yes/no), “Bigger version of protocol available”, “Propaganda materials closer than 50 meters from polling station”. Provided by WN team](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_3F3YWfe4z5jD-rvq.png)
 
-![A screenshot of the app with infographics: 10 rules respected, 2 rules violated, (“urns were not demonstrated before sealed”, and “suspicious voters seen on the polling station”). Provided by WN team]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_OzNXtzoju1oT2_pT.png)
+![A screenshot of the app with infographics: 10 rules respected, 2 rules violated, (“urns were not demonstrated before sealed”, and “suspicious voters seen on the polling station”). Provided by WN team](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_OzNXtzoju1oT2_pT.png)
 
 Mobile technology plays here a crucial part, as it comes in response to a specific user experience: need for immediate reaction, simplified and structured information available “at hand,” geolocation function that helps to map data, photo and video features to document the event. An SOS-button was equally integrated into the interface, giving observers a possibility to ask for lawyers’ help in one click, in case of aggression or illegal expulsion from the polling station.
 
@@ -41,7 +26,7 @@ Mobile technology plays here a crucial part, as it comes in response to a specif
 
 The application was used by 6197 persons during the presidential elections of the 4th of March 2012, 11709 frauds were registered, classified and geolocated. According to these data “Golos” started legal proceedings against some of the falsificators.
 
-![Statistics in different regions of Russia, screenshot provided by WN team]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_vDu8LTnSNtvDcpgZ.png)
+![Statistics in different regions of Russia, screenshot provided by WN team](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_vDu8LTnSNtvDcpgZ.png)
 
 The application had a certain international success, winning the German “Deutsche Welle Blog Awards” with 549 voices as the “best usage of technologies for social good.” The code source of the app was reused by Ukrainian and Moldavian activists.
 

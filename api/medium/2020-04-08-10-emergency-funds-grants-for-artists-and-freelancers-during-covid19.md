@@ -1,22 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/10-emergency-funds-grants-for-artists-and-freelancers-during-covid19-ac52b53e98f8
-canonical_url: https://medium.com/engagement-lab-emerson-college/10-emergency-funds-grants-for-artists-and-freelancers-during-covid19-ac52b53e98f8
-title: 10 Emergency Funds & Grants for Artists and Freelancers During COVID19
-subtitle: In the wake of the COVID19 pandemic, we have been considering ways to support
-    communities in need and foster connectivity in a digital…
-slug: 10-emergency-funds-grants-for-artists-and-freelancers-during-covid19
-description: ''
-tags:
-    - emergency-funding
-    - artists-need-to-get-paid
-    - emergency-fund
-    - freelancers
-    - grants-to-pay-bills
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zBZlRpKPDIqW53FK6Tfstg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zBZlRpKPDIqW53FK6Tfstg.png)
 
 # 10 Emergency Funds & Grants for Artists and Freelancers During COVID19
 

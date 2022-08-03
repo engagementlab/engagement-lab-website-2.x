@@ -1,17 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/boston-civic-media-metrics-methods-conference-session-3-institutions-2722312fedb6
-canonical_url: https://medium.com/engagement-lab-emerson-college/boston-civic-media-metrics-methods-conference-session-3-institutions-2722312fedb6
-title: 'Boston Civic Media: Metrics & Methods conference | Session 3: Institutions'
-subtitle: By Engagement Lab
-slug: boston-civic-media-metrics-methods-conference-session-3-institutions
-description: ''
-tags:
-    - education
-    - college
-author: EL_News
-username: el-news
----
-
 # Boston Civic Media: Metrics & Methods conference | Session 3: Institutions
 
 ### By Engagement Lab
@@ -30,19 +16,19 @@ Paul introduces panelists and the session connecting to the previous panel sessi
 
 # [\*\*Holly St. Clair](http://www.mapc.org/about-mapc/staff/holly-st-clair) from MAPC\*\*
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_0X_ic3oCyeNdDgXe.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_0X_ic3oCyeNdDgXe.jpg)
 
 Holly works at a research and planning agency, providing technical support to 113 cities and towns around Boston to guide processes and broaden participation in the process. [MAPC](http://www.mapc.org/) specializes in data, information, and technology. The conversation starts with money. Collaborations with institutions and expectations are guided by finances. For example, grant funding with universities often offer more flexibility. Foundation funding grants often function at the beginning of a long-range process to set the agenda over several years. When money comes from a fee-for-service model, in conjunction with multiple municipalities, MAPC has to negotiate among differences in financial capacity, in order to maximize voices in the collaborative process. One of the challenges is how to work with smaller municipalities when their funding models are at a much smaller scale._“Best practices” are defined only in relation to large municipalities adopting an intervention._ Financial planning cycles often differ between institutions — fiscal year, academic calendar, grant-making timeline.
 
 # [\*\*Kei Kawashima-Ginsberg](http://www.civicyouth.org/kei-kawashima-ginsberg-named-new-director-of-circle/) from Circle\*\*
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_SLI9xgz-ZzlOtOSW.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_SLI9xgz-ZzlOtOSW.jpg)
 
 When institutions in the community want to partner with academic institutions, certain challenges arise, particularly in the arena of culture. [Circle](http://www.civicyouth.org/)‘s research is informed mainly by practice, separate from institutions. Larger and louder institutions and municipalities have access to more capacity and more funding.*How does the university as an institution catch that “great idea” and scale up?*Institutions gravitate toward like institutions, and often ignore those who are outside of the academic system, not knowing what to do with them. Another challenge is working with faculty who plan courses maybe 6-months out, but grants often require a planning timeline up to a year out. There can be ways around this, if institutions are willing to be flexible, working on shorter funding timelines. Another challenge and opportunity involves the sustainability of research projects in communities, how they can go on after the initial research and injection of funding ends. Finally, it is important that there is a clear process for bringing partners into the process, e.g., clear guidelines for nonprofits seeking students and for students who are going out into the community who areaware and ready to contribute.
 
 # [\*\*Colin Maclay](https://digital.hbs.edu/about-us/) from Harvard Business School\*\*
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_6B9qgFwQDCXh_5qW.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_6B9qgFwQDCXh_5qW.png)
 
 Partnerships between academic institutions, foundations and communities, uniting the threads between research and practice are the “holy grail” — but often not realized. How do you unlock those complex opportunities? The inherent mismatches between institutions can only come through attentiveness to 1) patience, 2) setting expectations clearly, and 3) mutual respect between the students/faculty and the communities. **Important for organizations avoidingseeing universities as free consulting, and universities seeing practitionersas “subjects” rather than collaborators**. We do have a lot to learn from each other. It’s important that all of this work happens in an atmosphere of learning, with opportunities to adjust the research and real world obstacles organically. All of these can help to lay out a sustainable relationship between institutions and communities that will bear fruit over time. None of this is easy or quick.
 

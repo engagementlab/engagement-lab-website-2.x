@@ -1,17 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/day-2-game-development-camp-guest-post-by-basma-albanna-bf74c8efaa90
-canonical_url: https://medium.com/engagement-lab-emerson-college/day-2-game-development-camp-guest-post-by-basma-albanna-bf74c8efaa90
-title: 'Day 2: Game Development Camp, Guest Post by Basma Albanna'
-subtitle: By Engagement Lab
-slug: day-2-game-development-camp-guest-post-by-basma-albanna
-description: ''
-tags:
-    - education
-    - videogames
-author: EL_News
-username: el-news
----
-
 # Day 2: Game Development Camp, Guest Post by Basma Albanna
 
 ### By Engagement Lab
@@ -34,7 +20,7 @@ We started off with a talk by Paul Mihailidis, Associate Director at Engagement 
 
 Following Paul’s talk we headed to Harvard’s [Berkman Center](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CB8QFjAA&url=http%3A%2F%2Fberkman.harvard.edu%2F&ei=6GYAVZ6EMcOvggS6yIDYBA&usg=AFQjCNEyllNQJlnx-E2f_HxRq4lZ2H0Ukg&bvm=bv.87611401,d.eXY) to attend an insightful workshop titled “Distributed and Digital Disaster Response” by Willow Brugh. A sweet gesture was that they served us falafel for lunch (originally an Egyptian dish) and it was so good that it can almost beat the best falafel back in our country!
 
-![Game Development Camp outside the Berkman Center!]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_nNvGSu-B_QM5rGa4.jpg)
+![Game Development Camp outside the Berkman Center!](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_nNvGSu-B_QM5rGa4.jpg)
 
 Nobody said the day was over!! After that, we headed back to Emerson College for another dose of awesome advice by Meg Mcginley, a game designer at[Games by Play Date](https://playdatenh.wordpress.com/), a podcaster on [Brilliant Gameologist](http://brilliantgameologists.com/), and a tabletop roleplaying game creator. She provided insight for making meaningful mechanics out of live action elements such as conversation. She also told us all about her experience with game design, taking games to the market and game design killers to avoid.
 

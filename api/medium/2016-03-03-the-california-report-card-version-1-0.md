@@ -1,35 +1,20 @@
----
-url: https://medium.com/civic-media-project/the-california-report-card-version-1-0-61b426e0e10
-canonical_url: https://medium.com/civic-media-project/the-california-report-card-version-1-0-61b426e0e10
-title: The California Report Card Version 1.0
-subtitle: The CITRIS Connected Communities Initiative at UC Berkeley
-slug: the-california-report-card-version-1-0
-description: ''
-tags:
-    - systems-and-design
-    - transparency
-    - open-data
-author: EL_News
-username: el-news
----
-
 # The California Report Card Version 1.0
 
 ### _The CITRIS Connected Communities Initiative at UC Berkeley_
 
 Mobile technology offers new opportunities for the public to express views and insights, consider the views of others, and directly engage with political leaders (e.g., Hemphill & Roback 2014, Himmelroos & Christensen 2014, Graham et al. 2013, Landemore 2013).
 
-![Graphic summary of the California Report Card v1.0 (Illustration courtesy of Grace Jang)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OlMBrBwwdUpU_74YjT2Ibg.jpeg)
+![Graphic summary of the California Report Card v1.0 (Illustration courtesy of Grace Jang)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OlMBrBwwdUpU_74YjT2Ibg.jpeg)
 
 However, the volume and diversity of ideas can be difficult to manage or may not result in actionable suggestions. A specific and timely response from government leaders is important to close the loop to sustain engagement (NDI 2014; Newsom 2013).
 
 The California Report Card (CRC) v1.0 is an experimental platform that streamlines public input by openly encouraging suggestions from a broad range of participants, and combining peer-to-peer review with statistical models to identify and highlight the most insightful ideas.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_FB5h5eX9350KnDikhFCVgg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_FB5h5eX9350KnDikhFCVgg.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DKswSjs9iUKEezmTm5W8PQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DKswSjs9iUKEezmTm5W8PQ.jpeg)
 
-![The California Report Card V1.0 User Interface, the CAFE, and grading an issue suggested by a participant.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_BuyE4oq160TAtDjl9BqwgA.jpeg)
+![The California Report Card V1.0 User Interface, the CAFE, and grading an issue suggested by a participant.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_BuyE4oq160TAtDjl9BqwgA.jpeg)
 
 The CITRIS Data and Democracy Initiative developed the CRC in collaboration with the Office of California Lt. Governor Gavin Newsom to explore how technology can improve communication among voters and public officials. The CRC aims to increase public engagement with government and to tap California’s collective intelligence. In CRC v1.0, participants graded the State of California on six timely issues and suggested topics that deserve increased priority at the state level.
 

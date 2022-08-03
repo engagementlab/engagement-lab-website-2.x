@@ -1,20 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/impact-connectivity-in-the-2021-social-justice-media-symposium-8f52831bd79f
-canonical_url: https://medium.com/engagement-lab-emerson-college/impact-connectivity-in-the-2021-social-justice-media-symposium-8f52831bd79f
-title: Impact & Connectivity in the 2021 Social Justice + Media Symposium
-subtitle: Media can connect people, drive social change, and help bring about equitable
-    futures. But how can just being connected with people…
-slug: impact-connectivity-in-the-2021-social-justice-media-symposium
-description: ''
-tags:
-    - impact
-    - connection
-    - social-justice
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jvz8aJiR6pL6MWu9O4EvEA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jvz8aJiR6pL6MWu9O4EvEA.png)
 
 # Impact & Connectivity in the 2021 Social Justice + Media Symposium
 

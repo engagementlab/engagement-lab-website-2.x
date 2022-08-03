@@ -1,19 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/introducing-the-transforming-narratives-of-gun-violence-initiative-17003d7d67c5
-canonical_url: https://medium.com/engagement-lab-emerson-college/introducing-the-transforming-narratives-of-gun-violence-initiative-17003d7d67c5
-title: Introducing The Transforming Narratives of Gun Violence Initiative
-subtitle: Last week, we here at the Engagement Lab, in partnership with the Louis
-    D. Brown Peace Institute and the Center for Gun Violence Prevention…
-slug: introducing-the-transforming-narratives-of-gun-violence-initiative
-description: ''
-tags: []
-author: EL_News
-username: el-news
----
-
 # Introducing The Transforming Narratives of Gun Violence Initiative
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lgqsjqP59Ofz7Upj9PYc8w.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lgqsjqP59Ofz7Upj9PYc8w.jpeg)
 
 Last week, we here at the Engagement Lab, in partnership with the[ Louis D. Brown Peace Institute](https://www.ldbpeaceinstitute.org/) and the [Center for Gun Violence Prevention](https://www.massgeneral.org/gun-violence-prevention) at Massachusetts General Hospital, launched the 2021 [Transforming Narratives of Gun Violence Initiative](https://www.transformnarratives.org/).
 
@@ -67,4 +54,4 @@ Congresswoman Ayanna Pressley has been fighting to scale gun licensing laws acro
 
 “But the work does not begin in Congress,” she said. “It begins in community, with partnerships, like the one that we’re launching today.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_HFfN2Fr1ZI8-jHhsVZiUvA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_HFfN2Fr1ZI8-jHhsVZiUvA.jpeg)

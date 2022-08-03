@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/engagement-lab-faculty-statement-on-orlando-mass-shooting-dc678cb84b6e
-canonical_url: https://medium.com/engagement-lab-emerson-college/engagement-lab-faculty-statement-on-orlando-mass-shooting-dc678cb84b6e
-title: Engagement Lab Faculty and Staff Statement on Orlando Mass Shooting
-subtitle: On Sunday, our country woke to hear the news of the most deadly mass shooting
-    by an individual in US history — resulting in the murder of…
-slug: engagement-lab-faculty-statement-on-orlando-mass-shooting
-description: ''
-tags:
-    - gun-violence
-    - guns
-    - civic-engagement
-    - civic-media
-author: EL_News
-username: el-news
----
-
 # Engagement Lab Faculty and Staff Statement on Orlando Mass Shooting
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DKczrQZoNbI_0p7nRkUlCA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DKczrQZoNbI_0p7nRkUlCA.jpeg)
 
 On Sunday, our country woke to hear the news of the most deadly mass shooting by an individual in US history — resulting in the murder of 49 people and wounding of 53 others who were celebrating Pride Month on Latin Night at Pulse Nightclub in Orlando, Florida. This senseless mass murder targeted a young, LGBTQIA, Latinx community, but its impact has resonated across the globe, across differences, across communities.
 

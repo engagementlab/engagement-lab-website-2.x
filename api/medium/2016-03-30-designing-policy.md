@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/designing-policy-ca13a4af8690
-canonical_url: https://medium.com/civic-media-project/designing-policy-ca13a4af8690
-title: Designing Policy
-subtitle: Laura Forlano (IIT Institute of Design)
-slug: designing-policy
-description: ""
-tags:
-- systems-and-design
-- advocacy
-- urban-planning
-author: EL_News
-username: el-news
----
-
 # Designing Policy
 
 ### Laura Forlano (IIT Institute of Design)
@@ -23,7 +8,7 @@ This case discusses the processes and tools created through a yearlong research 
 
 These new urban citizens with which we share our spaces and delegate our decisions are not well understood (Latour 1992). This is because the technologies (as well as the data that they collect) are often proprietary ‘black boxes,’ and the political decisions that result in their widespread appropriation and deployment take place within obscure government departments. The goal of the Designing Policy project was to open up the black box of urban technology as a site for the discussion of values (Nissenbaum 2001) and ethics, as well as to illustrate the ways in which urban technology systems might be designed around alternative framings and questions.
 
->> The purpose of the design workshops and the visual toolkit was to interest participants from a broad range of backgrounds and expertise in thinking about urban technology as a site of intervention in public policy decisions and as a site where cities (and their politics) are made.
+> > The purpose of the design workshops and the visual toolkit was to interest participants from a broad range of backgrounds and expertise in thinking about urban technology as a site of intervention in public policy decisions and as a site where cities (and their politics) are made.
 
 Specifically, given widespread interest in the use of big data and the ‘internet of things’ for the purpose of tracking and monitoring people as well as delivering city services, the workshops sought to increase awareness of the ways in which urban technologies mediate the relationships between citizens and policymakers around important issues; issues that are often defined in a top-down manner by policymakers such as privacy, security, efficiency, and innovation. At the same time, the workshops were intended to open up urban technologies as sites of experimentation and generative engagements that map onto the everyday lives of citizens — which include a deeper, messier, more nuanced and bottom-up understanding of issues, definitions and frameworks.
 
@@ -35,7 +20,7 @@ However, despite the emphasis on participation, it is necessary to acknowledge t
 
 Finally, even when a diverse group of participants can be engaged, it is important to note that collaboration and consensus is not necessary all of the time. In fact, it may be more important to find ways to surface the tensions, dissensus and disagreements, and formats that can allow these differing positions to contribute positively to reframing issues and opening up about the issues being discussed (Mouffe 2003). Again, the focus is not on solving problems but rather on learning processes that allow diverse groups to engage in raising questions. In this way, it is possible to imagine that new constituencies might form around complex socio-technical issues.
 
->> The Designing Policy project engaged approximately 100 participants in three cities in rethinking the role of urban technology in cities around citizen-defined values.
+> > The Designing Policy project engaged approximately 100 participants in three cities in rethinking the role of urban technology in cities around citizen-defined values.
 
 Over 500 copies of the visual toolkit were printed and, to date, about half have been distributed. Notably, the City of Boston’s Office of New Urban Mechanics alone requested 20 copies. In addition, the visual toolkit has been viewed online over 750 times. One of the theoretical implications of the project is in the value of physical and visual artifacts in communicating complex ideas more quickly to a broader range of people than are typically reached by academic journal articles, which are not widely read, cited or circulated (Galey and Ruecker 2010, 414). This was illustrated through the hands-on prototyping activities that took place at the workshop as well as in the production of the visual toolkit.
 
@@ -59,8 +44,6 @@ Mouffe, Chantal. 2003. “Pluralism, Dissensus and Democratic Citizenship.” II
 
 Galey, Alan, and Stan Ruecker. 2010. “How a Prototype Argues.” Literary and Linguistic Computing 25(4): 405–24.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

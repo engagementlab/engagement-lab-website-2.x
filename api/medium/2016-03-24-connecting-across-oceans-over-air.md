@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/connecting-across-oceans-over-air-d870f917d09c
-canonical_url: https://medium.com/civic-media-project/connecting-across-oceans-over-air-d870f917d09c
-title: Connecting Across Oceans Over Air
-subtitle: by Elizabeth Brunner, Yvette Shen, and Kevin DeLuca (University of Utah)
-slug: connecting-across-oceans-over-air
-description: ''
-tags:
-    - china
-    - art
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # Connecting Across Oceans Over Air
 
 ### _by Elizabeth Brunner, Yvette Shen, and_ _Kevin DeLuca (University of Utah)_
@@ -29,7 +14,7 @@ Local advocacy groups, middle schools, high schools, religious organizations, an
 
 Art served as a powerful tool that opened up conversations beyond facts and figures, shared information across cultures, and helped people to think about the problem of air pollution anew. Since the project was very visual in nature, images of the work travelled from the museum to the gallery to the webpage to the newspaper to podcasts to classrooms quickly, engaging people from ten states across the U.S. and ten countries. People contributed in person and online. One poet unable to visit the gallery space in person, submitted his creative project through the BJ-SLC Connect website so it could be added to the online and physical walls of the project.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_H8_HGiX3BUkPtAhd5brafA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_H8_HGiX3BUkPtAhd5brafA.jpeg)
 
 # Thinking Through Networks
 
@@ -39,29 +24,29 @@ This case study helps to illustrate that the braiding of activism in the gallery
 
 The three artists from Beijing — Li Gang, Dai Dandan, and Huang Xu — were joined by Taiwanese artist, Meimei Chang, and American artist/photojournalist, Matthew Niederhauser. Together, the five of them turned the Gittins Gallery into a Living Gallery. For three weeks, the artists worked in the space and invited visitors to join them. Using input from locals about their experiences and research they conducted about Salt Lake, they each created works that spoke specifically to community issues. The vibrant online conversation that blossomed concurrently both informed and inspired the art, artists, and visitors to the space who all contributed to the show.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A5c7WAIHeAiuw4HzLTvH5Q.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A5c7WAIHeAiuw4HzLTvH5Q.png)
 
 The artwork was as wild as the networks it traversed, and ranged from outrageous and creative solutions to the poor air quality to sympathetic displays to cultural critiques. Li Gang brought x-rays of his lungs taken in Beijing to Salt Lake. Fearing he had the “Beijing cough,” Li went to the hospital the week before he came to Salt Lake City. Li combined the x-rays of his Beijing lungs with the natural landscape of Salt Lake, thus creating a hybridization of his body — which has lived its life in Beijing, with a U.S. city — that caused the viewers to pause. With recent studies finding that the air pollution from China’s manufacturing processes is now reaching the United States, this piece re-thinks the relationship between the two countries.
 
-![Figure 3 Li Gang’s Beijing Lung in SLC]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZZQURISyNr6KgliVLTG9kg.png)
+![Figure 3 Li Gang’s Beijing Lung in SLC](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZZQURISyNr6KgliVLTG9kg.png)
 
-![Figure 4 Dai Dandan’s Salt Lake Central]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_O6LE9cK62VqjxARcZtmaOA.png)
+![Figure 4 Dai Dandan’s Salt Lake Central](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_O6LE9cK62VqjxARcZtmaOA.png)
 
-![Figure 5 Art work by the visiting artists]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ubPamnvGQE0dFJrR9UKVoQ.png)
+![Figure 5 Art work by the visiting artists](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ubPamnvGQE0dFJrR9UKVoQ.png)
 
 Dai Dandan altered perspectives by weaving together images of the Salt Lake Valley covered in a layer of dirty haze. The result: a 4’ by 4’ piece that mesmerized and drew viewers into a space where the smog surrounded her/him. Though residents of Salt Lake will often flee to the nearby mountains to get out of the polluted valley, Dai’s piece did not allow for an exit from the smog-saturated city. The viewers are forced to cope with the pollution that envelops them.
 
 The artists worked alongside visitors to the space. Tired of lethargic legislators more sympathetic to big companies than residents afflicted with asthma, autism, and respiratory illnesses, people from across the Valley joined the artists to express themselves in a way that became visible and moved beyond words. By creating art for public display, these messages did not get lost amid pages and pages of bills, propositions, and proposals that died in the legislature. One high school teacher and activist used a mask used for filtering out dangerous PM2.5 particles in the air to create her contribution. By piercing the fabric of the mask with screws, nails, and pins, she wanted to let others know what it feels like to be an asthma sufferer on bad quality days. Nature Conservancy volunteers who had found out about the Living Gallery online came in to paint canvases. Activists from near and far shared stories, statistics, and support via Facebook conversations, sharing, following, and tweeting, which then influenced the work created by the artists.
 
-![A group of students in a sustainable design course came in once to twice a week over the duration of the show to talk with the artists and other visitors. They designed a series of images intended to urge people in the Valley to action by highlighting the damage these toxins do to people.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_V8GFWalQHUj5MexQOWBVKw.png)
+![A group of students in a sustainable design course came in once to twice a week over the duration of the show to talk with the artists and other visitors. They designed a series of images intended to urge people in the Valley to action by highlighting the damage these toxins do to people.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_V8GFWalQHUj5MexQOWBVKw.png)
 
 # The Living Gallery Lives On via Civic Engagement
 
 Though the Living Gallery lasted only three weeks, discussions proliferated long after. It is in these inter-actions that the most fertile spaces for conversation were created. As people stopped by in-person and engaged online, Global Citizenship college students met area high school students; art students exchanged ideas with engineers. Simultaneously, people in China were talking with people in Salt Lake, Ohio, Japan, California, and Europe using the social media feeds. Work of the participants completed, the show closed, but the conversation didn’t. It echoed and rippled across radiowaves, the website, social media feeds, and blogs. People continue to engage with the project over social media today.
 
-![Gallery View]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tTsPbcwMALgIakVRYYlr3w.png)
+![Gallery View](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tTsPbcwMALgIakVRYYlr3w.png)
 
-![Gallery View]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lKJh_aJRayhlAKktThRwGw.png)
+![Gallery View](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lKJh_aJRayhlAKktThRwGw.png)
 
 Civic engagement via social media strengthens the networks necessary to demand more sustainable environmental policies and practices. Since our conversations increasingly employ images, social media becomes a convenient platform for sharing visual information and ideas. These visual conversations are of the utmost importance as we move between regional and global fights for a healthier environment because images have the unique ability to transcend language barriers, at least to some degree. In the case of the Beijing-SLC Connect project, art — a form typically reserved for small elite spaces — became a new medium that connected people who speak Chinese, English, Japanese, Spanish, and French towards a common cause: raising awareness and action to reduce air pollution across the globe.
 

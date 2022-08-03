@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/strike-debt-and-the-rolling-jubilee-building-a-debt-resistance-331c32692e3e
-canonical_url: https://medium.com/civic-media-project/strike-debt-and-the-rolling-jubilee-building-a-debt-resistance-331c32692e3e
-title: 'Strike Debt and the Rolling Jubilee: Building a Debt Resistance'
-subtitle: Erhardt Graeff (University of Colorado)
-slug: strike-debt-and-the-rolling-jubilee-building-a-debt-resistance
-description: ''
-tags:
-    - advocacy
-    - social-network
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # Strike Debt and the Rolling Jubilee: Building a Debt Resistance
 
 ### Erhardt Graeff (University of Colorado)
@@ -23,7 +8,7 @@ username: el-news
 
 Growing out of Occupy Wall Street, Strike Debt has been working since May 2012 to build a social movement through various forms of media and market-based activism under the banner of “debt resistance.” They cite the history of Biblical jubilees that cancelled debt to normalize society (Graeber 2011), the debtor movement like El Barzon in Mexico (Caffentzis 2013), and “mortgage strikes” by Empowering the Strengthening Ohio’s Peoples (Strike Debt 2014, 93), to make an intellectual and moral argument for why debt resistance is justified against the contemporary system of debt that in their analysis causes dehumanizing shame and suffering. They describe debt as a weapon and a web that catches you, such that as soon as you pay off one loan you are indebted for another reason (Graeff and Bhargava 2014).
 
-![Strike Debt banner at S17 (Photograph by Chase Wilson in Portland, Oregon, September 17, 2012)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_INBJY5pGC7LLo-FfhO-Fig.png)
+![Strike Debt banner at S17 (Photograph by Chase Wilson in Portland, Oregon, September 17, 2012)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_INBJY5pGC7LLo-FfhO-Fig.png)
 
 # Prehistory of Strike Debt
 
@@ -51,13 +36,13 @@ Strike Debt continued to organize debt assemblies over the summer (Ross 2013), b
 
 Following S17 and the launch of DROM, Strike Debt focused on planning a launch for the Rolling Jubilee to coincide with the November 15, 2012 anniversary of OWS’s eviction from Zuccotti Park. Its Facebook page had already been registered August 14, and its website’s domain names were registered September 26–27. On October 22, they shared a screenshot of the teaser page on their website via Facebook.
 
-![Rolling Jubilee teaser page screenshot shared on Facebook, October 22, 2012]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ER_JZv9UAqSGtHQwofpNhQ.png)
+![Rolling Jubilee teaser page screenshot shared on Facebook, October 22, 2012](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ER_JZv9UAqSGtHQwofpNhQ.png)
 
 Returning to the successful tactic of story sharing employed by OSDC and the debt assemblies, on October 29, Strike Debt started curating stories arguing for debt resistance on Tumblr. A larger social media bomb via Twitter and blogs was planned to launch the Rolling Jubilee using a mailing list of organizers from the Occupy Movement’s network of encampments — a strategy inspired in part by the Kony2012 campaign’s successful construction and activation of on-the-ground networks to make their video go “viral” (Larson and Smith 2014).
 
 The launch was designed as a “telethon” entitled “The People’s Bailout,” featuring musicians and comedians taking the stage and a livestream simulcast — all ticket proceeds went to the Rolling Jubilee fund and online donations were tallied with updates punctuating the acts. The social media bomb was planned for a week ahead of time. They created a promotional video and poster for the event, and drafted a press release for their network for promotional use. Unexpected social media success came on November 8 as co-organizer and co-host of the telethon David Rees posted the announcement to his well-followed Tumblr blog the night before the bomb; it piqued the interest of actor and writer Wil Wheaton who re-blogged it, putting the press release in front of his large audience of followers. Within 48 hours, the online donations surpassed the $50,000 goal (Larson and Smith 2014).
 
-![The People’s Bailout, Rolling Jubilee “telethon” Poster]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_TYDZdquyhWWK9b7BHZJtdA.png)
+![The People’s Bailout, Rolling Jubilee “telethon” Poster](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_TYDZdquyhWWK9b7BHZJtdA.png)
 
 By the end of its first push, the Rolling Jubilee took in $435,000 (Tepper 2012), well surpassing its goal. However, critics dismissed the Rolling Jubilee as a “gimmick,” arguing it was at a scale too small to have impact and was a distraction from more useful tactics like educating people about strategic bankruptcy (Henwood 2012; Smith 2012). They also questioned its ability to build a movement through debt forgiveness (Konczal 2012b). Strike Debt organizers reiterated that it was never meant to be a large-scale solution (Ross and Ackerman 2012; Ross and Taylor 2012), as McKee had noted early on. Instead, Ross and Taylor’s piece in The Nation emphasized that the Rolling Jubilee was “an act of solidarity and an opportunity for public education,” and introduced the broad set of debt resistance strategies and the long-term vision of a system of positive credit through mutual aid (2012).
 

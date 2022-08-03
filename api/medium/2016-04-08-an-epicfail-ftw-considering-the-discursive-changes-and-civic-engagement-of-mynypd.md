@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/an-epicfail-ftw-considering-the-discursive-changes-and-civic-engagement-of-mynypd-4203664a6a07
-canonical_url: https://medium.com/civic-media-project/an-epicfail-ftw-considering-the-discursive-changes-and-civic-engagement-of-mynypd-4203664a6a07
-title: 'An #EpicFail #FTW: Considering the Discursive Changes and Civic Engagement
-    of #MyNYPD'
-subtitle: Sarah Whitcomb Lozier (University of California, Riverside)
-slug: an-epicfail-ftw-considering-the-discursive-changes-and-civic-engagement-of-mynypd
-description: ''
-tags:
-    - advocacy
-    - police
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # An #EpicFail #FTW: Considering the Discursive Changes and Civic Engagement of #MyNYPD
 
 ### *Sarah Whitcomb Lozier (*University of California, Riverside)
@@ -24,21 +8,21 @@ The focus of this case study is the “hijacking” of the #MyNYPD hashtag by Tw
 
 At 10:55 a.m., [@NYPDnews](https://twitter.com/NYPDnews) tweeted: “Do you have a photo w/ a member of the NYPD? Tweet us & tag it #myNYPD. It may be featured on our Facebook” (NYPD News 2014).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_vJhMBe8YcVASuGb9.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_vJhMBe8YcVASuGb9.png)
 
-![Twitter Post from April 22]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_c5mpc9X_xkElgrDt.png)
+![Twitter Post from April 22](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_c5mpc9X_xkElgrDt.png)
 
 Accompanying the tweet was an image of two NYPD officers and a smiling member of their public, posing for a picture in front of a squad car. As the model photo demonstrates, the expectation of this social media campaign was to elicit photographs of the New York citizenry being protected and served by New York’s Finest. Some Twitter users, like Lindsay Dixon (@poshwonderwoman) and JP Quinn (@JPQ904), responded with the expected photos and tweets. At 11:34 a.m., Dixon provided a picture of herself, smiling, surrounded by three uniformed officers with the 140 character caption: “@NYPDnews my photo from the ride along with the boys from the 90th pct #myNYPD,” (Dixon 2014) and at 10:59 a.m. Quinn tweeted a photo of a delightfully smirking Yankees fan posing with an equally jolly uniformed officer, captioned: “@NYPDnews #MyNYPD #MyBrother #YankeeStadium” (Quinn 2014).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_qkY5DuJXZspqbNc-.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_qkY5DuJXZspqbNc-.png)
 
 Little more than an hour after @NYPDNews’s original tweet, however, the tide turned as twitter users co-opted the #myNYPD hashtag, mobilizing it to flood Twitter with photos of alleged police brutality. Sincere photos like Dixon’s and Quinn’s were quickly drowned by this continuous wave of violent images accompanied by biting, sarcastic captions. Occupy Wall Street (@OccupyWallStreetNYC), for example, posted an image of an officer in the act of forcefully swinging a baton at protestors with the caption “Here the #NYPD engages with its citizenry, changing hearts and minds one baton at a time. #MyNYPD” (Occupy Wall Street 2014).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_srDP8STwr4ZM3brF.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_srDP8STwr4ZM3brF.png)
 
 Similarly, Casey Aldridge (@CaseyJAldridge) tweeted an image of a man lying on the ground screaming as his leg is trapped under a police motorcycle. The caption accompanying this photo reads, “’And we’re going to have to run you over, just for good measure.’ #MyNYDP” (Aldridge 2014).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_WLPfH_BtLP6CdIGR.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_WLPfH_BtLP6CdIGR.png)
 
 By the end of the day, #MyNYPD was the top trending conversation on Twitter, having sparked a viral visualization of police brutality that raged across the country: from #MyNYPD to #MyLAPD and #MyOPD (Oakland), to #MyAPD (Albuquerque) and #MyCPD (Chicago). The original invitation to tweet a photo with a member of the NYPD with the hashtag #MyNYPD became an invitation to “post police brutality photos…that reveal the reality of your local police department, with the hashtag #My(Insert Your Corrupt Police Department Here)” ([Methyl 2014](http://theantimedia.org/global-police-brutality-twitter-storm/)).
 

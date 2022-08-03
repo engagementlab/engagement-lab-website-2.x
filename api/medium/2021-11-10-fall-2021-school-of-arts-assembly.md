@@ -1,20 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/fall-2021-school-of-arts-assembly-46ca743cf931
-canonical_url: https://medium.com/engagement-lab-emerson-college/fall-2021-school-of-arts-assembly-46ca743cf931
-title: School of Arts Fall 2021 Assembly
-subtitle: This year, Emerson College’s School of the Arts Fall Assembly featured the
-  work we’ve been doing with our faculty partners to change the…
-slug: fall-2021-school-of-arts-assembly
-description: ""
-tags:
-- codesign
-- partnered-studios
-- participatory-design
-- participatory-democracy
-author: EL_News
-username: el-news
----
-
 # School of Arts Fall 2021 Assembly
 
 This year, Emerson College’s School of the Arts Fall Assembly featured the work we’ve been doing with our faculty partners to change the way we think about higher education. [Thomas Vogel](https://www.emerson.edu/faculty-staff-directory/thomas-vogel), [Rashin Fahandej](http://www.rashinfahandej.com/about), and [Ioana Jucan](https://ioanajucan.com/) all shared their experiences teaching the Fall 2021 Partnered Studios courses, modeling how university education can align student learning objectives with community needs to bring institutions of higher learning into better conversation and allyship with their neighbors.
@@ -30,5 +13,3 @@ Professor Jucan’s “Live Art and Digital Cultures” course (IN 374 and BC 32
 Keep an eye out for this semester’s Partnered Studios and the new [Codesign Institute](https://codesign.elab.emerson.edu/), a two-week Summer and Winter course in co-design meant to better prepare students for collaborative community projects.
 
 To view the School of Arts Fall 2021 Assembly in its entirety, click [here](https://drive.google.com/file/d/1pXFpx0RRrYtHV7SAosv9lGfLiHhLPQto/view?usp=sharing).
-
-

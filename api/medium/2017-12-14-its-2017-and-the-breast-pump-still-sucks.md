@@ -1,21 +1,3 @@
----
-url: https://medium.com/make-the-breast-pump-not-suck-hackathon/its-2017-and-the-breast-pump-still-sucks-a8c682078287
-canonical_url: https://medium.com/make-the-breast-pump-not-suck-hackathon/its-2017-and-the-breast-pump-still-sucks-a8c682078287
-title: It’s 2018, and the breast pump still sucks!
-subtitle: Mark your calendars. The Make the Breast Pump Not Suck Hackathon 2.0 is
-    happening on April 27–29, 2018 at the MIT Media Lab!
-slug: its-2017-and-the-breast-pump-still-sucks
-description: ''
-tags:
-    - breastfeeding
-    - breastfeeding-innovation
-    - postpartum
-    - systems-change
-    - healthcare
-author: EL_News
-username: el-news
----
-
 # It’s 2018, and the breast pump still sucks!
 
 Mark your calendars. The Make the Breast Pump Not Suck Hackathon 2.0 is happening on **April 27–29, 2018** at the **MIT Media Lab**!
@@ -28,31 +10,31 @@ A lot has happened in the space since our [2014 hackathon](https://www.makethebr
 
 We were astonished by the viral success of the [2014 hackathon](https://www.makethebreastpumpnotsuck.com/our-2014-event/), as well as its impacts. We are back with a [bigger team and an incredible Advisory Board](https://www.makethebreastpumpnotsuck.com/team/) to catalyze brilliance in research, design, and policy for breastfeeding. Check out our [new site](https://www.makethebreastpumpnotsuck.com/) to learn more about our efforts and ways to get involved. We are:
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_teeJhZX5ZTn8IJJm.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_teeJhZX5ZTn8IJJm.jpg)
 
 # Kickstarting new ideas at the hackathon 2.0.
 
 We are curating teams around 3D-printed flanges, Alexa/Siri interfaces for nursing parents, smart “fourth trimester” baby scales and data visualizations of formula company money. Oh — and smarter, better, more comfortable, more affordable, more discreet, less sucky breast pumps! [_Read more here._](https://www.makethebreastpumpnotsuck.com/#hackathon)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_BDEMvORtj1jPsG8j.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_BDEMvORtj1jPsG8j.jpg)
 
 # Cultivating community innovation teams
 
 Teams hail from Boston, Detroit, Tupelo, and Albuquerque. Their designs range from a birth clinic, to nursing-friendly indigenous clothing and peer lactation support. [_Read more here._](https://www.makethebreastpumpnotsuck.com/community/)
 
-![Photo courtesy of MIT Media Lab.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ODXiJAJ_86fei0y1.jpg)
+![Photo courtesy of MIT Media Lab.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ODXiJAJ_86fei0y1.jpg)
 
 # Focusing on Systems
 
 Convening leaders for the [Make Family Leave Policy Not Suck Summit](https://www.makethebreastpumpnotsuck.com/#policysummit) on paid family leave.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_T9mM8ZLms8PEGwMr.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_T9mM8ZLms8PEGwMr.jpg)
 
 # Collecting stories of breastfeeding and pumping
 
 With a specific focus on low-income parents, women and parents of color, and LGBTQ+ who face the most challenges amidst structural racism, classism, patriarchy and other systems of oppression. [Read more here](https://www.makethebreastpumpnotsuck.com/#research).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_7mw6qI_OAfs8viWE.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_7mw6qI_OAfs8viWE.jpg)
 
 # Our innovation is inclusive and intersectional
 

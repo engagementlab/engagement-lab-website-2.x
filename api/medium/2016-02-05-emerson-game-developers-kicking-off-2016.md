@@ -1,20 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/emerson-game-developers-kicking-off-2016-4f7b60a7b030
-canonical_url: https://medium.com/engagement-lab-emerson-college/emerson-game-developers-kicking-off-2016-4f7b60a7b030
-title: Emerson Game Developers Kicking Off 2016!
-subtitle: Emerson Game Developers Kicking Off 2016!
-slug: emerson-game-developers-kicking-off-2016
-description: ''
-tags:
-    - game-development
-    - students
-author: EL_News
-username: el-news
----
-
 # Emerson Game Developers Kicking Off 2016!
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3Tgg0UIU7L4TJJeWHEWVJQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3Tgg0UIU7L4TJJeWHEWVJQ.jpeg)
 
 Emerson Game Developers Kicking Off 2016!
 

@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/in-cairo-engaged-citizens-design-games-5e84e51f7465
-canonical_url: https://medium.com/engagement-lab-emerson-college/in-cairo-engaged-citizens-design-games-5e84e51f7465
-title: In Cairo, Engaged Citizens Design Games
-subtitle: By Engagement Lab
-slug: in-cairo-engaged-citizens-design-games
-description: ''
-tags:
-    - games
-    - game-design
-author: EL_News
-username: el-news
----
-
 # In Cairo, Engaged Citizens Design Games
 
 ### By Engagement Lab
 
 09/30/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_MxsEBlxSWocTNjGH.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_MxsEBlxSWocTNjGH.jpg)
 
 # Looking back at UNDP/Engagement Lab’s Games for Development Workshop in Egypt
 
@@ -28,7 +14,7 @@ Each was strongly committed to creating positive change, and most had no experie
 
 The workshop consisted of lectures, guided exercises, and plenty of time to let teams explore their topics of interest, design, and iterate on their game prototypes. I think what was most impressive, and most gratifying as an instructor, was seeing novice designers make the cognitive leaps necessary to think like game design experts and embrace the aspects of play that make it such a powerful tool for engagement.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_AFoBRHyxor3x37u_.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_AFoBRHyxor3x37u_.jpg)
 
 # Next-Level Thinking
 
@@ -38,7 +24,7 @@ One common attitude is that games should be used to stealthily teach content to 
 
 In order to reframe the way we think about games and correctly identify how and when to use them as a tool, a number of cognitive leaps are needed. Here are some of the most important ones that I saw being made at the workshop.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bdMNvOzA2j7s-YhK.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bdMNvOzA2j7s-YhK.jpg)
 
 # 1. Games need to be fun in their own right
 
@@ -70,7 +56,7 @@ When working in the development context or designing a game for social change, t
 
 When form does not match function, there are two ways to approach the problem. The first is to chop away actions that don’t seem to support the narrative. Removing or altering mechanics that are counter-intuitive seems obvious, but it is not a natural instinct. It must be learned. The second approach is to alter the story, or create in-world reasonings that explain quirks of the game system. Typically, a combination of these two tactics are needed to make a game and its narrative feel integrated. Not all the games that came out of the workshop had a strong narrative component, but the more the designers considered the alignment of story and mechanics, the better their games became.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_9Heiwb-an0MZtc3P.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_9Heiwb-an0MZtc3P.jpg)
 
 # Building Confidence
 
@@ -78,7 +64,7 @@ Another outcome of the workshop was building confidence. Before the workshop, al
 
 What explains this huge boost in confidence? I believe it’s because of the insistence of the workshop itself that every member not just experiment with game design, but actually create a playable game. Although the stakes of the workshop were low, the tone and pace of the workshop put tremendous pressure on the groups to achieve something playable for the showcase at the end of Day 3. Different groups handled this pressure in different ways, but all achieved a playable game prototype. More than that, they were all _good_, and the level of polish and completeness that the best games showed surprised even me.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_1vkjprUTJCZHmWxn.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_1vkjprUTJCZHmWxn.jpg)
 
 # Training of the Trainers and the Future of Games4Dev
 

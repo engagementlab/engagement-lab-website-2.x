@@ -1,35 +1,20 @@
----
-url: https://medium.com/civic-media-project/the-community-media-drupal-project-74e3bfa9e
-canonical_url: https://medium.com/civic-media-project/the-community-media-drupal-project-74e3bfa9e
-title: The Community Media Drupal Project
-subtitle: Jason Daniels
-slug: the-community-media-drupal-project
-description: ''
-tags:
-    - philanthropy
-    - storytelling
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # The Community Media Drupal Project
 
 ### _Jason Daniels_
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_eI3fb0Nv5LfKxaAU.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_eI3fb0Nv5LfKxaAU.png)
 
 _In 2012 a loose coalition of community access TV stations committed to continue to work towards the original vision of the Knight funded Open Media Project at a summit in Austin, TX. This collaboration’s aim was to further develop the project to align the principles of open source with the philosophy of community access. Participants challenge each other and themselves to be more than users and invest in a shared code base that is functional, feature rich, free and flexible. These stations are committed to openly sharing improvements, documentation, and problems with the community._
 
 Public Access TV stations from around the United States have been utilizing Drupal as an open source platform since the release of Drupal 4.7 (1). Each major release of this software has fostered further adoption by community access TV users and a new level of engagement with open source software. Drupal 5 was widely adopted as a solution for community access stations. Drupal 6 saw further custom development for community media specific functionality. What distinguishes the community media activity on Drupal 7 and CiviCRM 4.x is due in part by the effort dubbed the CMDrupal project. This is an ongoing effort to merge the practice of nurturing an open source software ecosystem with the philosophy of organized community media.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_EGwkcAPN606JS9EN.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_EGwkcAPN606JS9EN.jpg)
 
 The Community Media Drupal Summit established a venue for web developers and community media practitioners to initiate open conversations around both the idea and implementation of a shared codebase. This group coalesced in March of 2012 in Austin, TX. Stefan Wray’s invitation email:
 
 _…A small group of community media centers’ decision makers and staff who deal with technology, along with Drupal developers working in this field, are gathering to discuss the status of our work in progress with the implementation of Drupal-based tools at our facilities, ways we can collaborate and share, and what we see as our future direction that is only limited by our imagination. The focus is to develop a culture of collaboration. (2)_
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_wM-hCdm0AF5K-JU6.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_wM-hCdm0AF5K-JU6.png)
 
 The work following the Channel Austin summit in 2012 has encouraged development and communication out in the open, establishing this project as a prerequisite to successful collaboration.
 

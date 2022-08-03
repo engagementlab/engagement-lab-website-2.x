@@ -1,25 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/this-years-cmap-cohort-leverage-technology-research-exhibit-civic-media-projects-82e1e5b362
-canonical_url: https://medium.com/engagement-lab-emerson-college/this-years-cmap-cohort-leverage-technology-research-exhibit-civic-media-projects-82e1e5b362
-title: This Year’s CMAP Cohort Leverage Technology & Research, Exhibit Civic Media
-    Projects
-subtitle: Earlier this month, educators, students, technologists, and citizens throughout
-    the greater Boston area came together at Emerson College’s…
-slug: this-years-cmap-cohort-leverage-technology-research-exhibit-civic-media-projects
-description: ''
-tags:
-    - civic-engagement
-    - civic-media
-    - graduate-school
-author: EL_News
-username: el-news
----
-
 # This Year’s CMAP Cohort Leverage Technology & Research, Exhibit Civic Media Projects
 
-![Stanley Dominique, 2017–2018 CMAP cohort, demonstrates his civic AR project.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_cousKKN-9HagLwDhA9igCg.png)
+![Stanley Dominique, 2017–2018 CMAP cohort, demonstrates his civic AR project.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_cousKKN-9HagLwDhA9igCg.png)
 
-![CMAP cohort Sharon Amuguni showcases her civic media project, “Through the Words of My Neighbors”.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lBGiqRDhb7xBgV_OztOUKg.png)
+![CMAP cohort Sharon Amuguni showcases her civic media project, “Through the Words of My Neighbors”.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_lBGiqRDhb7xBgV_OztOUKg.png)
 
 Earlier this month, educators, students, technologists, and citizens throughout the greater Boston area came together at Emerson College’s Urban Arts Gallery to celebrate this year’s cohort of [Civic Media: Art and Practice (CMAP)](https://elab.emerson.edu/cmap) graduate students and experience their final civic media projects.
 
@@ -29,7 +12,7 @@ Working closely with our esteemed faculty, they develop a deep knowledge base an
 
 This year’s cohort put together some hugely groundbreaking thesis projects — keep reading for a look at what each student brought to the table this year.
 
-![At the CMAP exhibition, Melissa Teng takes a look at her own VR short films. Behind her, research lines the walls.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OiJpL1-pV7cMF2jndxkQTA.png)
+![At the CMAP exhibition, Melissa Teng takes a look at her own VR short films. Behind her, research lines the walls.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OiJpL1-pV7cMF2jndxkQTA.png)
 
 **Melissa Teng** —
 
@@ -59,7 +42,7 @@ Working to address the isolation and emotional hardship that many LGBTQ+ youth d
 
 _LGBTQ&A_ is a digital safe space that enables LGBTQ+ youth to ask questions and receive guidance from mentors & leaders representative of their gender and/or sexual identity. Young people from the LGBTQ+ community were polled throughout the prototype’s development, informing many of the app’s features, with the hope that by sharing experiences and making critical connections the LGBTQ+ community can become more accessible worldwide.
 
-![Lauren Stott talks about her CMAP thesis project, which is outlined on the wall behind her.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_j0d2cTNkvFxhYDwCXTetjw.png)
+![Lauren Stott talks about her CMAP thesis project, which is outlined on the wall behind her.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_j0d2cTNkvFxhYDwCXTetjw.png)
 
 **Lauren Stott** —
 

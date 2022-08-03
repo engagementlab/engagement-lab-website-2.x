@@ -1,25 +1,10 @@
----
-url: https://medium.com/civic-media-project/pivot-surreptitious-communications-design-for-victims-of-human-trafficking-e6de9ae922ad
-canonical_url: https://medium.com/civic-media-project/pivot-surreptitious-communications-design-for-victims-of-human-trafficking-e6de9ae922ad
-title: 'Pivot: Surreptitious Communications Design for Victims of Human Trafficking'
-subtitle: Tad Hirsch (University of Washington)
-slug: pivot-surreptitious-communications-design-for-victims-of-human-trafficking
-description: ''
-tags:
-    - advocacy
-    - community-and-action
-    - art
-author: EL_News
-username: el-news
----
-
 # Pivot: Surreptitious Communications Design for Victims of Human Trafficking
 
 ### *Tad Hirsch (*University of Washington)
 
 Pivot is an outreach tool that provides rescue information to human trafficking victims by hiding messages in generic-looking menstrual pads, which can be discretely distributed by medical workers, social service providers, and other civic groups (figure 1). Pivot is a low-tech, interventionist civic media project that enables citizens to take direct action addressing a pressing public issue. It exemplifies surreptitious communications design, a strategy that emphasizes concealment and obfuscation to deliver messages for intended audiences without detection or interference by adversaries.
 
-![Figure 1: Anti-human trafficking messaging, printed on water-soluble paper and inserted into generic sanitary pad packaging.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_q_SGMAcTSQNs5xnIvUD58A.jpeg)
+![Figure 1: Anti-human trafficking messaging, printed on water-soluble paper and inserted into generic sanitary pad packaging.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_q_SGMAcTSQNs5xnIvUD58A.jpeg)
 
 # Background
 
@@ -29,13 +14,13 @@ Human trafficking has emerged as a key global human rights issue. The United Nat
 
 marked July 30, 2014 the first [“United Nations World Day Against Trafficking in Persons.”](http://www.unodc.org/endht) In the United States, President Obama has made human trafficking a top human rights priority, declaring “our fight against human trafficking is one of the great human rights causes of our time” (The White House 2012).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ofliPc16-NLq1zBzDbgWHQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ofliPc16-NLq1zBzDbgWHQ.png)
 
 There have been numerous print, broadcast, and social media campaigns to raise awareness of human trafficking and solicit donations for anti-trafficking groups (see for example, the United Nations’ [“Blue Heart”](http://www.unodc.org/blueheart) and New York City’s [“Let’s End Human Trafficking”](http://www.nyc.gov/html/endht/html/home/home.shtml) campaigns). The Pivot project complements these efforts, but focuses on direct intervention by outreach workers and civic organizations.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zTZoPXwvDcY99TcM_qdLwQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_zTZoPXwvDcY99TcM_qdLwQ.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_exzBWcLdvXX2JlBjK7pTtQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_exzBWcLdvXX2JlBjK7pTtQ.png)
 
 # Stakeholders
 
@@ -59,7 +44,7 @@ Pivot was designed to encourage victims to seek help, and to provide on-demand a
 
 Designers developed a water-soluble information sheet that is inserted into sealed, nondescript packages of sanitary pads. The insert encourages human trafficking victims to call the National Human Trafficking Resource Center’s 24-hour hotline, which provides referrals to victim service agencies. To help victims understand their circumstances and the options available to them, it portrays a variety of trafficking scenarios including sexual, agricultural, and domestic labor. To mitigate linguistic and literacy concerns, information is presented in a highly visual, comic-strip format which can be easily adapted to a variety of languages. The information sheet also includes a tear-away tab that features the hotline number disguised as a fortune-cookie insert (figure 2). This tab can be discretely kept and accessed for later use, while the remainder of the information sheet can be safely flushed down a toilet.
 
-![Figure 2: Tear-away tab featuring the National Human Trafficking Resource Center’s hotline number, disguised as a fortune cookie insert.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bc38NcsHXJaxFmD5pQnpLg.jpeg)
+![Figure 2: Tear-away tab featuring the National Human Trafficking Resource Center’s hotline number, disguised as a fortune cookie insert.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bc38NcsHXJaxFmD5pQnpLg.jpeg)
 
 # Work to date
 

@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-justin-warren-2017-18-cohort-148e355801dd
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-justin-warren-2017-18-cohort-148e355801dd
-title: 'CMAP Student Spotlight: Justin Warren, 2017–18 Cohort'
-subtitle: Justin Warren, between being a fire performer, chess instructor, game designer,
-    musician, and filmmaker, has always found a way to keep the…
-slug: cmap-student-spotlight-justin-warren-2017-18-cohort
-description: ''
-tags:
-    - civic-media
-    - social-media
-    - engagement
-    - emerson-cmap-spotlight
-    - students
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Justin Warren, 2017–18 Cohort
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wuPT8DnVLnDCLuMskJWeJQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_wuPT8DnVLnDCLuMskJWeJQ.jpeg)
 
 **\*Justin Warren**, between being a fire performer, chess instructor, game designer, musician, and filmmaker, has always found a way to keep the concept of play at the center of his life. He hopes to explore this passion and study how to harness play’s potential for social good as a Master of Arts student at the Engagement Lab. He’s designing a digital game for civic participation as his thesis project, and is currently developing a podcast aimed at investigating play’s role in society.\*
 
@@ -28,7 +10,7 @@ username: el-news
 **What does civic media mean to you?
 **To me it’s about understanding how people engage with the world around them. Nowadays we’re constantly surrounded by all sorts of fascinating forms of media vying for our attention. The goal in my mind is to help ensure that everyone has a fair chance to have their voice heard and their story told amidst this media maelstrom — and that people are encouraged to actually listen and act on what they learn.
 
-![Photo credit: Becky Bastien]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dkitkqvMtYfFHeGy-8Cpew.jpeg)
+![Photo credit: Becky Bastien](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dkitkqvMtYfFHeGy-8Cpew.jpeg)
 
 > > My desire to find creative ways to contribute to important issues grew, and CMAP ended up looking like a perfect fit.
 
@@ -38,7 +20,7 @@ I would just love if everyone was less driven to Always be Right. So much good w
 **What would you want the civic media community to know about you?**
 I’ve always been highly enthusiastic about the idea of play and playfulness in life. I don’t know exactly what path this passion will lead me down, but I’d love to meet and learn from other playful practitioners, performers, or philosophers out there! One shorter-term goal I have is to launch a podcast centered around play in all its forms — if nothing else, I’ve got my title: ‘Seize the Play’. Stay tuned!
 
-![Photo credit: Anna Ladd]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_p1bw4sp_nKAou2vDpBFaNQ.jpeg)
+![Photo credit: Anna Ladd](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_p1bw4sp_nKAou2vDpBFaNQ.jpeg)
 
 **Are there any specific projects that you’ve done in the past that intersect with your studies now?**
 My work with Games for Change gave me great exposure to the industry of serious games as well as with team management and organization in general. Independent of that, a recent game design project of mine really helped solidify my confidence in pursuing it more professionally. While it wasn’t a serious game at all, I poured my heart into the development and marketing process and it was an amazing experience overall.

@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-sharon-amuguni-2017-18-cohort-6ea43b366ea7
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-sharon-amuguni-2017-18-cohort-6ea43b366ea7
-title: 'CMAP Student Spotlight: Sharon Amuguni, 2017–18 cohort'
-subtitle: Sharon Amuguni is interested in the synthesis of art and media as a tool
-    to revitalize communities, and initiate authentic dialogue and…
-slug: cmap-student-spotlight-sharon-amuguni-2017-18-cohort
-description: ''
-tags:
-    - civic-media
-    - social-media
-    - engagement
-    - emerson-cmap-spotlight
-    - students
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Sharon Amuguni, 2017–18 cohort
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_gshJrvyvaXTlzMAn.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_gshJrvyvaXTlzMAn.jpeg)
 
 **_Sharon Amuguni_** _is interested in the synthesis of art and media as a tool to revitalize communities, and initiate authentic dialogue and action around social issues. Sharon believes in the power of alternative creative production as a means of activism. Sharon is also a poet and is passionate about exploring conversations of emotional and mental health within communities of color. She thinks poetry can be a cathartic act of self care and resistance._
 
@@ -31,7 +13,7 @@ I saw Claudia Rankine speak at Cutler theater last year and felt really inspired
 **What is one change you would like to see in the world?
 **I’d like for there to be more scrutiny in the way some forms of philanthropy work and how they can often perpetuate the problem. I’d like for more agency and praise to be given to local organizations, both nationally and internationally, that are invested in their communities and are continuously putting in the hard work. I’d like for more people to give without expecting anything in return and for individuals to feel more responsibility towards one another.
 
-![Photo credit: Aakanksha Gupta]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DPXbaStp474x_nhrpEjXZA.jpeg)
+![Photo credit: Aakanksha Gupta](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DPXbaStp474x_nhrpEjXZA.jpeg)
 
 > > To me civic media means utilizing technology and media for the purpose of uplifting communities.
 
@@ -41,7 +23,7 @@ I saw Claudia Rankine speak at Cutler theater last year and felt really inspired
 **Are there any specific projects that you’ve done in the past that intersect with your studies now?
 **Last year I began working as the program assistant for Boston AIR, the City’s first residency program. It’s been such a privilege to see and support all of these amazing local artists working to create a positive impact in Boston communities. Much of what we’re discussing in our classes they’re doing in practice. It’s also shown me the potential there is in involving artists, media makers, and activists in the work being done in municipal departments.
 
-![Sharon and other CMAP students at HUB Week 2017. Photo credit: Aakanksha Gupta]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0krIpnNss3r-9VFdBDtUpA.jpeg)
+![Sharon and other CMAP students at HUB Week 2017. Photo credit: Aakanksha Gupta](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0krIpnNss3r-9VFdBDtUpA.jpeg)
 
 **How do you define engagement? What does being engaged mean to you?**
 To me being engaged means choosing to actively step in to the communities around you, being empathetic, critical and attentive to their issues and needs. It means wanting to create stronger relationships and better lives for everyone within that community, even those unable to step in alongside you.

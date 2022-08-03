@@ -1,31 +1,13 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-lauren-stott-2017-18-c71be1c3745f
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-lauren-stott-2017-18-c71be1c3745f
-title: 'CMAP Student Spotlight: Lauren Stott, 2017–18 Cohort'
-subtitle: Lauren Stott is a local government management professional who is passionate
-    about the role of new media in community engagement. Lauren…
-slug: cmap-student-spotlight-lauren-stott-2017-18
-description: ''
-tags:
-    - civic-media
-    - social-media
-    - engagement
-    - emerson-cmap-spotlight
-    - students
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Lauren Stott, 2017–18 Cohort
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_R-cWBGPRUw9JbQzj1ypWEg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_R-cWBGPRUw9JbQzj1ypWEg.jpeg)
 
 **\*Lauren Stott** is a local government management professional who is passionate about the role of new media in community engagement. Lauren worked in journalism and local government throughout the suburbs of Chicagoland before coming to Boston to study Civic Media at Emerson.\*
 
 **What was the path that brought you to CMAP?
 **I worked in journalism and local government before coming to CMAP to learn more about true, quality engagement methods and practices. I saw a lot of room for growth in civic engagement, and I felt drawn to learning about the innovative ways municipalities can help residents affect and lead government processes.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_iEfr6skKYsR5RdTif-DaZA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_iEfr6skKYsR5RdTif-DaZA.jpeg)
 
 > > I saw a lot of room for growth in civic engagement, I felt drawn to learning about the innovative ways municipalities can help residents affect and lead government processes.
 
@@ -41,7 +23,7 @@ username: el-news
 **Are there any specific projects that you’ve done in the past that intersect with your studies now?**
 I worked previously as a local government intern/analyst in several Illinois communities. These roles required a lot of engagement with different stakeholders groups as we worked to incorporate visioning from these groups into strategic planning, economic development and equity initiatives.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_J_8fSB5-gpPJXeSP6uZ93w.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_J_8fSB5-gpPJXeSP6uZ93w.jpeg)
 
 **How do you define engagement? What does being engaged mean to you?**
 Being engaged is caring enough about something to be involved in the process for making it successful.

@@ -1,38 +1,22 @@
----
-url: https://medium.com/civic-media-project/becoming-civic-fracking-air-pollution-and-environmental-sensing-technologies-65aefeb7781e
-canonical_url: https://medium.com/civic-media-project/becoming-civic-fracking-air-pollution-and-environmental-sensing-technologies-65aefeb7781e
-title: 'Becoming Civic: Fracking, Air Pollution, and Enviornmental Sensing Technologies'
-subtitle: Jennifer Gabrys (Goldsmiths, University of London), Nerea Calvillo, Tom
-    Keene, Helen Pritchard, and Nick Shapiro
-slug: becoming-civic-fracking-air-pollution-and-environmental-sensing-technologies
-description: ''
-tags:
-    - community-and-action
-    - politics
-    - journalism
-author: EL_News
-username: el-news
----
-
 # Becoming Civic: Fracking, Air Pollution, and Enviornmental Sensing Technologies
 
 ### *Jennifer Gabrys (*Goldsmiths, University of London)_, Nerea Calvillo, Tom Keene, Helen Pritchard, and Nick Shapiro_
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bBJ3E62QXqUtau5o4hZF1w.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bBJ3E62QXqUtau5o4hZF1w.png)
 
 Within the broader context of civic media, a number of environmental sensing technologies and practices are emerging that seek to enable citizens to use DIY and low-tech monitoring tools to understand and act upon environmental problems. Such “citizen sensing” projects intend to democratize the collection and use of environmental sensor data in order to facilitate expanded citizen engagement in environmental issues. But how effective are these practices of citizen sensing in not just providing “crowd-sourced” data sets, but also in giving rise to new modes of environmental awareness and practice?
 
 **_The Citizen Sense project investigates the relationship between technologies and practices of environmental sensing and citizen engagement._**
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oDrUU09QuBQJGnpNqe9p1g.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oDrUU09QuBQJGnpNqe9p1g.png)
 
 Environmental sensors, which are an increasing part of digital communication infrastructures, are commonly deployed for monitoring within scientific study, as well as urban and industrial applications. Practices of monitoring and sensing environments — or citizen sensing — have migrated to a number of everyday participatory applications, where users of smart phones and networked devices are able to undertake environmental observation and data collection. While environmental citizenship and citizen science are established areas of research, citizen sensing is an environmental practice that has not yet been analyzed in detail — although many claims are made about the capacities of digital monitoring technologies to enhance and enable democratic participation in environmental science and politics.
 
 Through three project areas, the Citizen Sense project examines environmental sensing practices, and tests their capacity for generating new types of civic engagement. The first project area, “Pollution Sensing,” concentrates on citizen- sensing practices that use sensors to detect environmental disturbance, with a particular focus on air pollution. The second project area, “Urban Sensing,” examines urban sustainability or “smart city” projects that implement citizen-sensing practices along with sensor technologies often to realize more efficient or environmentally sound urban processes. The third project area investigates “Wild Sensing,” and focuses on citizen-sensing practices that map and track flora and fauna activity and habitats, as well as engage with organisms as organic sensors of sorts. This brief case study describes Citizen Sense project work from the first project area of “pollution sensing” in relation to monitoring air quality near infrastructure of unconventional natural gas extraction in the form of hydraulic fracturing (or fracking) in northeastern Pennsylvania, USA. We consider both how citizen-sensing practices are already underway in this region, and how to contribute to this process through further participatory and practice-based citizen-sensing initiatives.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YDHntJQE556pAs3NOUnIAw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YDHntJQE556pAs3NOUnIAw.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_GZAbi9ew_Q-h9H1zcncpSw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_GZAbi9ew_Q-h9H1zcncpSw.png)
 
 # Environmental Monitoring and Fracking
 
@@ -40,7 +24,7 @@ Pennsylvania has a long history of oil and gas extraction. The world’s first o
 
 In the case of fracking, environmental monitoring may become a source of indeterminate and even contentious data. At the disjuncture of official monitoring data and the experiences of residents living on the shale field, citizens are attempting to engage with environmental monitoring to begin to generate evidence that speaks to their particular experiences. Citizen Sense fieldwork has raised multiple questions about what citizen monitoring practices might sense and be able to sense, and within what larger landscape of environmental monitoring might the findings of pollution monitoring be located, questioned, and differently mobilized.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OAy6oY9PF97uuDGUHBJEVw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_OAy6oY9PF97uuDGUHBJEVw.png)
 
 # Civic Technology and Practice-Based Research
 
@@ -48,7 +32,7 @@ The Citizen Sense project has undertaken both a review of existing citizen-sensi
 
 Multiple “kits” have been developed in the course of this practice-based research, from a “Logbook of Monitoring Practices” given to residents that asks them to document their particular concerns and questions about fracking and environmental monitoring; to off-the-shelf digital and analog sensors that capture volatile organic compounds (VOCs) and particular matter (PM); to bespoke digital sensors and web platforms for testing how sensed variables, experience, and collective monitoring data might come together to form new understandings of air pollution. These methods set out to multiply understandings and possibilities of democratized environmental action through citizen sensing practices. In this way, the Citizen Sense project seeks to generate new interpretive understandings of citizen sensing through an iterative relationship between theory, practice and field-based investigations, and to put forward new models for understanding citizen sensing.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rLGyx3knLYQsv3T-1Hlncw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rLGyx3knLYQsv3T-1Hlncw.png)
 
 # Becoming Civic: Environmental Sensing as a Political Technology in Process
 

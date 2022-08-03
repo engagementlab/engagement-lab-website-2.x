@@ -1,24 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/social-media-culture-and-political-protest-a-look-at-the-case-of-the-idlenomore-movement-in-c1f7d822c6ec
-canonical_url: https://medium.com/engagement-lab-emerson-college/social-media-culture-and-political-protest-a-look-at-the-case-of-the-idlenomore-movement-in-c1f7d822c6ec
-title: Social Media, Culture, and Political Protest
-subtitle: 'A Look at the Case of the #IdleNoMore Movement in Canada'
-slug: social-media-culture-and-political-protest-a-look-at-the-case-of-the-idlenomore-movement-in
-description: ''
-tags:
-    - idle-no-more
-    - canada
-    - social-media
-    - civic-media
-author: EL_News
-username: el-news
----
-
 # **Social Media, Culture, and Political Protest**
 
 ### **A Look at the Case of the #IdleNoMore Movement in Canada**
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1aOvXtpZmpq8neTgpRIwcQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1aOvXtpZmpq8neTgpRIwcQ.jpeg)
 
 **Abby Cecilia Medina**
 Ph.D. Student, Education and Psychology, University of Michigan

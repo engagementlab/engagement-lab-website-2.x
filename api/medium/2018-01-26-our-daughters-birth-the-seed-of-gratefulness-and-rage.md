@@ -1,34 +1,16 @@
----
-url: https://medium.com/make-the-breast-pump-not-suck-hackathon/our-daughters-birth-the-seed-of-gratefulness-and-rage-68804cad76f6
-canonical_url: https://medium.com/make-the-breast-pump-not-suck-hackathon/our-daughters-birth-the-seed-of-gratefulness-and-rage-68804cad76f6
-title: 'Our Daughter’s Birth: The Seed of Gratefulness and Rage'
-subtitle: By Kate Krontiris, Principal Investigator for Make the Breast Pump Not Suck
-    Hackathon and Paid Family Leave Policy Summit
-slug: our-daughters-birth-the-seed-of-gratefulness-and-rage
-description: ''
-tags:
-    - breastfeeding
-    - breast-pump
-    - postpartum
-    - systems-thinking
-    - breastfeedinginnovation
-author: EL_News
-username: el-news
----
-
 # Our Daughter’s Birth: The Seed of Gratefulness and Rage
 
 By Kate Krontiris, Principal Investigator for [_Make the Breast Pump Not Suck Hackathon and Paid Family Leave Policy Summit_](https://www.makethebreastpumpnotsuck.com/)
 
 When our daughter Nyaanina was born two years ago, she had a particularly intense form of jaundice that required her to be under special blue lights immediately. After three hours under the lights, we’d get her for barely 30 minutes, and then we would begrudgingly hand her back to the nurses to return under the lights. During those precious minutes holding this new, warm soul, I would do my best to get her to feed from the breast — a choice I was determined to stick with, over formula. Our doctors had told us that the only way for her to improve was to make her excrete as much as possible. Although many women don’t start using a breast pump until weeks after birth, I was hooked up to one on day two, so that we could ramp up my supply as rapidly as possible (or so I thought). I remember the lactation consultant at the hospital giving me a quick tutorial on the machine and handing me a bunch of syringes to collect the colostrum my breasts would produce.
 
-![We started calling Nina “Lieutenant NiSo” for her ability to soldier on through all of the feedings she underwent in those first few weeks. She moved up to General rank pretty quickly…]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_iIB-fy6Pc5GN4WWdoRGKsw.jpeg)
+![We started calling Nina “Lieutenant NiSo” for her ability to soldier on through all of the feedings she underwent in those first few weeks. She moved up to General rank pretty quickly…](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_iIB-fy6Pc5GN4WWdoRGKsw.jpeg)
 
 Our process was this: I would attempt to feed her at the breast, then hand her over to her dad, who would try to keep her awake to drink another serving of pumped milk, while I then attached my body to the uncomfortable and noisy breast pump in order to produce her next dose of boob juice. I didn’t really understand how the machine worked, but I knew I was supposed to ramp up the suction to a certain level and then just let it stay on for a while. When we left the hospital after five days, we had to go through this process every 1.5 hours, around the clock, for a week — and then every 2–3 hours, around the clock, for a few weeks after that.
 
 Thankfully, my milk came in pretty quickly, but the crushing pumping routine led to an oversupply that overwhelmed my daughter’s ability to drink all the milk available. Trying to swallow from a veritable fire hose, she compensated with a latch that left my nipple cracked. I would cringe every time she attempted to feed on my injured side. I had heard people tell me “breastfeeding is not supposed to hurt” but that seemed both incorrect and also impractical. Breastfeeding is not supposed to hurt too badly is probably a more accurate statement — but for a first-time parent who has just gone through the pain of labor, how was I supposed to know when was too much pain?
 
-![Do I look happy to you? No. Happy is not the word I would use.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VS9kBNXUjEl9f_SNHNQTnQ.jpeg)
+![Do I look happy to you? No. Happy is not the word I would use.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VS9kBNXUjEl9f_SNHNQTnQ.jpeg)
 
 I have a picture of myself from this time. In it, my daughter is trying to nurse on my functioning side while I’m using a pump to collect the milk on the injured side. My eyes are hollow, almost empty, my face is pale. I’m exhausted and emotional, trying to keep up with the round-the-clock pumping cycle. I remember feeling like I wasn’t actually getting to know my new daughter, so focused was I on keeping her body alive and healthy. My own body had lost a lot of blood during the birth and was struggling to keep up with the energy requirements of feeding another human while at the same time healing itself. I remember bursting into tears without warning and for reasons I couldn’t explain.
 

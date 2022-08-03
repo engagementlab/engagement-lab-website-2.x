@@ -1,35 +1,17 @@
----
-url: https://medium.com/engagement-lab-emerson-college/meet-the-newest-elab-students-transforming-narratives-of-gun-violence-9ca99bba54e3
-canonical_url: https://medium.com/engagement-lab-emerson-college/meet-the-newest-elab-students-transforming-narratives-of-gun-violence-9ca99bba54e3
-title: Meet the Newest eLab Students Transforming Narratives of Gun Violence
-subtitle: The Transforming Narratives of Gun Violence (TNGV) initiative has three
-    new team members, at the Engagement Lab. We are so excited to have…
-slug: meet-the-newest-elab-students-transforming-narratives-of-gun-violence
-description: ''
-tags:
-    - civic-engagement
-    - media
-    - research
-    - transforming
-    - gun-violence
-author: EL_News
-username: el-news
----
-
 # **Meet the Newest eLab Students Transforming Narratives of Gun Violence**
 
-![Meet John, Marly, and Destiny.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_6TVGsYF9ypet6CMGxAxj2Q.png)
+![Meet John, Marly, and Destiny.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_6TVGsYF9ypet6CMGxAxj2Q.png)
 
 The [Transforming Narratives of Gun Violence](https://www.transformnarratives.org/) (TNGV) initiative has three new team members, at the Engagement Lab. We are so excited to have each of them on board and for them to introduce themselves to you, as part of this important collaboration.
 
-![Marly Kaufman is a sophomore in media arts production/film major at Emerson College.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AFLYzsCtWO0KqB4okN40wg.png)
+![Marly Kaufman is a sophomore in media arts production/film major at Emerson College.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AFLYzsCtWO0KqB4okN40wg.png)
 
 “My name is Marly Kaufman and I am a sophomore media arts production/film major at Emerson College. I am a creator with a passion for video, audio and photography editing, and graphic design. When I am not pursuing my career passion, I enjoy listening to music, singing, going to the gym, attending concerts, and watching movies and TV shows. As my passions lie in all forms of media, I hope to implement change in the world with artistic film in my community and beyond. Transitioning from South Florida to Boston and studying film at Emerson has opened my eyes to the turmoil and injustice in the world. I am fortunate to use my skill set diving into the problems we face as a society while expressing myself through film. As a teen, my desire to communicate feelings was interpreted through my art in music, drawing, and travel-video documenting. Now I hope to create art through images and editing inspiring content. After learning the software on my own, I really fell in love with editing. I am so glad to be a part of TNGV and its amazing team of individuals. I feel it is a step in the right direction towards transforming the dominant narratives of gun violence.”
 
-![Destiny Murray is a graduate school at Boston College studying Social Work.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_h1FphOQN7rB8wv6u_I-d8A.png)
+![Destiny Murray is a graduate school at Boston College studying Social Work.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_h1FphOQN7rB8wv6u_I-d8A.png)
 
 “My name is Destiny Murray, and I’m a graduate student at Boston College studying Social Work through a macro lens, focusing on community outreach, advocacy, policy work, and systemic change. I am interning at Emerson’s Engagement Lab this spring, and with this initiative, which really speaks to my heart. I’m originally from Orlando, Florida, where I lived within two miles of Pulse Nightclub; I come from a city still reeling from a tragic mass shooting, whose residents have to drive past the structure where we lost 49 family members every day. I graduated from the University of Central Florida this past May with my Bachelor’s degree in Social Work, despite starting out as a Photonic Science and Engineering major. My partner and I just moved to New England over the summer. I love to read, watch sports, listen to podcasts, and go for walks with my five-year-old fur baby. My goal is to one day go to law school, and utilize the law in a humane way that creates resounding change through an organization like the ACLU, or the Innocence Project. I feel so lucky to have landed at the Engagement Lab, and I’m really looking forward to working with this team of phenomenal people on an initiative that is desperately needed in every corner of our country.”
 
-![John Yang is a student at Emerson College majoring in culture, media, and literature.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3yLDjU5B5KJA4d67_KWXRQ.png)
+![John Yang is a student at Emerson College majoring in culture, media, and literature.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_3yLDjU5B5KJA4d67_KWXRQ.png)
 
 “​​My name is John Yang and I am a student at Emerson College majoring in culture, media, and literature. I appreciate art, love creativity, and adore comfort food. Because of this, you’re most likely to find me at a local art museum or at some random restaurant trying out their hot spicy fried chicken wings. I also enjoy graphic novels and am a full-fledged Marvel fan (Though, I will indulge in DC as well as mangas). I’ve seen every Marvel movie released and usually buy my tickets in advance just to ensure I see it on the release date, so I don’t have to hear any spoilers. Heroism and selfless sacrifice are something I applaud. Maybe it is the influence of heroes but I find joy in applying myself to situations that benefit my community. I have found that you don’t need a cape or colorful suit to be part of social betterment. All you need is a belief in equality and a voice to manifest its actions into existence. I have found that voice here at ELab.”

@@ -1,19 +1,4 @@
----
-url: https://medium.com/civic-media-project/civic-media-project-introduction-40553f34365b
-canonical_url: https://medium.com/civic-media-project/civic-media-project-introduction-40553f34365b
-title: Civic Media Project Introduction
-subtitle: By Eric Gordon and Paul Mihailidis
-slug: civic-media-project-introduction
-description: ''
-tags:
-    - civictech
-    - civic-media
-    - introduction
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7nJrpzVaqxzz9cBVTbBNZw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_7nJrpzVaqxzz9cBVTbBNZw.jpeg)
 
 # Civic Media Project Introduction
 

@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/code-for-america-scaling-civic-engagement-through-open-data-and-software-design-1e1e430accd6
-canonical_url: https://medium.com/civic-media-project/code-for-america-scaling-civic-engagement-through-open-data-and-software-design-1e1e430accd6
-title: 'Code for America: Scaling Civic Engagement Through Open Data and Software
-    Design'
-subtitle: Andrew Richard Schrock (University of Southern California)
-slug: code-for-america-scaling-civic-engagement-through-open-data-and-software-design
-description: ''
-tags:
-    - hackathons
-    - transparency
-    - systems-and-design
-author: EL_News
-username: el-news
----
-
 # Code for America: Scaling Civic Engagement Through Open Data and Software Design
 
 ### *Andrew Richard Schrock (*University of Southern California)
@@ -24,7 +8,7 @@ username: el-news
 
 Code for America’s rapid scaling up and record of working with municipal governments provide examples of how technology design can be integrated with mechanisms for collective action and improving government responsiveness.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_TeP4ioiBSbvr41vX.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_TeP4ioiBSbvr41vX.png)
 
 # Connecting Code with Civic Engagement
 

@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/distanced-and-connected-a-message-from-the-engagement-lab-284ead7c0bdd
-canonical_url: https://medium.com/engagement-lab-emerson-college/distanced-and-connected-a-message-from-the-engagement-lab-284ead7c0bdd
-title: 'Distanced and Connected: a Message from the Engagement Lab'
-subtitle: The Engagement Lab is devoted to the design and understanding of values-forward
-    public participation with media and technology. Much of…
-slug: distanced-and-connected-a-message-from-the-engagement-lab
-description: ''
-tags:
-    - civic-media
-    - public-health
-    - civic-technology
-    - community
-author: EL_News
-username: el-news
----
-
 # **Distanced and Connected: a Message from the Engagement Lab**
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ih2CfmRUSA76ZBuFnMUKYQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ih2CfmRUSA76ZBuFnMUKYQ.png)
 
 The Engagement Lab is devoted to the design and understanding of values-forward public participation with media and technology. Much of the work of our faculty, staff, and students over the last decade has focused on connecting geography and place to mediated communication. We have developed [in-person games for public participation](https://elab.emerson.edu/projects/atstake), [VR for prison reentry](https://elab.emerson.edu/projects/covr-collaborative-virtual-reality-for-reentry), we have created [media literacy curricula for classrooms](https://elab.emerson.edu/projects/emerging-citizens), [mechanisms for citizen-centered smart city planning](http://civicsmart.city/), and [play-based hygiene programs for children](http://elab.emerson.edu/hygiene). What has connected our projects are two things: 1) the participatory methods through which they are designed, and 2) the resulting playful media tools and processes that generate social connectivity. You see, we’ve been designing for a world that has been too quick to distinguish between what happens online and what happens off. The often efficient online solutions for planning, participation and learning, that we see in smart cities and many digital learning tools, too often lack human touch, or qualities of what Gabriel Mugar and I call [\*meaningful inefficiencies.](https://global.oup.com/academic/product/meaningful-inefficiencies-9780190870133?lang=en&cc=us#)\* These are the deliberately designed spaces for relation and connection that need to be built into otherwise efficient digital processes. Very often, designing these requires some consideration of place and co-presence.
 

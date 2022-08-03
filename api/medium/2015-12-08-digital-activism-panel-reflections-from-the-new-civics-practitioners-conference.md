@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/digital-activism-panel-reflections-from-the-new-civics-practitioners-conference-3a971cc920f2
-canonical_url: https://medium.com/engagement-lab-emerson-college/digital-activism-panel-reflections-from-the-new-civics-practitioners-conference-3a971cc920f2
-title: Digital Activism Panel Reflections from the New Civics Practitioners Conference
-subtitle: By Becky Michelson
-slug: digital-activism-panel-reflections-from-the-new-civics-practitioners-conference
-description: ''
-tags:
-    - education
-    - teaching
-author: EL_News
-username: el-news
----
-
 # Digital Activism Panel Reflections from the New Civics Practitioners Conference
 
 ### By Becky Michelson
 
 06/30/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_4ElR9B_xMMc1yP5O.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_4ElR9B_xMMc1yP5O.png)
 
 “Democracy is a verb” is the tagline of [the Mikva Challenge](http://www.mikvachallenge.org/): an organization that focuses on civic education and empowerment for youth, based in Chicago. Last week, they hosted the “New Civics Practitioners Conference”: the first conference of it’s kind bringing together ~200 civic education leaders, youth program workers, and educators nationwide. In collaboration with the [National Action Civics Collaborative](http://actioncivicscollaborative.org/), the conference was conceived of to address capacity building for educators to support empowering civic participation for youth amidst the rapidly changing democratic and technology-saturated landscape. The conference organizers aimed to provide, “comprehensive exposure to a range of new civics instruction: from action civics to youth media production, from digital civic learning to controversial issues debates.”
 
@@ -26,7 +12,7 @@ With the generous support of the Knight Foundation and the McCormick Foundation,
 
 The dive into Mikva’s curriculum was led by Chicago-based teachers with years of experience implementing this resource. Participants, who were largely teachers from [the twenty-six Knight Resident Communities](http://www.knightfoundation.org/about/communities/), worked in small groups to complete key activities from each stage in the curriculum, which takes students from an exploration of their communities to implementation (and reflection on) action to impact local decision makers. One of the curriculum’s key strategies is for students to explore their own values in the context of community to develop intention for change and leadership. Mikva shared [videos](https://www.mikvachallenge.org/educators/online-resources/issues/project-soapbox/) of students making short, powerful speeches about the social problems that affect them. The curriculum takes students through a variety of research methods, a power analysis, and an assessment of different strategies to impact decision makers. The lunch break featured student panelists speaking about their own action civic projects, including a team of high school juniors who designed a series of workshops for first year students about healthy relationships, ranging from romance to bullying. The plenary speaker at the day’s end was [Diane Hess](http://www.news.wisc.edu/23815), Dean of the School of Education at the University of Wisconsin-Madison, and Senior Vice President of the Spencer Foundation. She described our country’s growing political polarization and her research on the positive impact of classroom discussion about controversial political issues in seeding students with the skills for democratic life.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Fc4zewThNdl4u9Uc.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Fc4zewThNdl4u9Uc.png)
 
 > Where do you want to make power visible to students, so they can become students of power? @MikvaBrian @MikvaChallenge #newcivics
 >
@@ -46,9 +32,9 @@ The Engagement Lab was asked to participate because many of our projects are you
 
 This year, civic curriculum resources, including the game-based [Emerging Citizens](http://engagementgamelab.org/games/emerging-citizens/) curriculum and [the learning guide for the Civic Media Project](http://civicmediaproject.org/works/civic-media-project/learning-guide)have had more of a focus. The modular, downloadable Emerging Citizens curriculum offers a playful and interactive approach for critically reviewing and creating media. Meanwhile, the learning guide provides accessible prompts and activities for learning about media used civically and its influence on engagement. Both projects help youth to make connections between local and global issues while considering solutions to real-world problems. Read more about our media literacy and global change initiatives [here](http://engagementgamelab.org/initiatives/#medialit).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_V2YIsijP3Z5O85px.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_V2YIsijP3Z5O85px.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_R9SnmiWcG3L5aAuQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_R9SnmiWcG3L5aAuQ.png)
 
 The second day of the New Civics Practitioners conference featured two sessions of the Digital Activism panel- to facilitate discussions about the use of emerging technologies for awareness-raising, advocacy, and effective civic participation. Panel participants included the Engagement Lab, the Smart Chicago Collaborative, and the Mikva Challenge.
 
@@ -58,17 +44,17 @@ Some of the themes that emerged from the panel included: translating awareness r
 
 Towards the end of the panel, educators shared resources with each other after asking questions like, “Is there anything that brings a lot of the digital engagement tools into one place?”. Resources such as [Edmodo](https://www.edmodo.com/), [Safari Montage](http://www.safarimontage.com/), [Schoolology](https://www.schoology.com/home.php), [Symbaloo](https://www.symbaloo.com/), [GroupMe](https://groupme.com/), and[ Remind101](https://www.remind.com/) were shared. Check out the resources section at the bottom of this post for more tools and sites.\*\* Though the conversation continued energetically after the panel ended, one of the last points touched upon how engaging youth in emerging technologies helps demonstrate how technology design much more than simply coding. Sonja Marziano of the Smart Chicago Collaborative, shared an upcoming summer program for youth to develop technology projects for issues they care about. The program will help illustrate that beyond coding, tech projects often require design, research, marketing, etc.
 
-![Digital Activism Panel, morning session panel participants: Jedd Cohen, The Engagement Lab, Dan O’Neil, Smart Chicago, Chris Rudd, Mikva Challenge. Moderated by: Lisa Kim]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_jo6_vfkh2ycjU-gN.png)
+![Digital Activism Panel, morning session panel participants: Jedd Cohen, The Engagement Lab, Dan O’Neil, Smart Chicago, Chris Rudd, Mikva Challenge. Moderated by: Lisa Kim](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_jo6_vfkh2ycjU-gN.png)
 
 Engagement Lab staff was also able to attend the workshop run by Boston-based Youth on Board (YOB) about the approach that guided the creation of their [Know Your Rights app](http://www.bostonstudentrights.org/#/app/item/2) for students.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_a6mceb-2aBIFaPOF.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_a6mceb-2aBIFaPOF.png)
 
 The adult and teen staff lead participants through activities exploring three ingredients to successful practice of action civics: Social Emotional Learning (SEL), student-directed learning, and claiming space for action civics. SEL is particularly important because it provides a strong foundation for anti-oppression work, which requires confronting difficult emotions, and creates the basis for democratic process in the classroom. Also cited was the [Susan Brown Exchange’s Social Emotional Learning Challenge](http://hosted.verticalresponse.com/1170959/6c1762e388/546413979/513de83b44/), which has an upcoming report highlighting strategies used by a handful of practitioners around the country, including YOB. Student-directed learning guides the agenda for action civics work, so staff shared their outline for youth participatory action research, a practice at the heart of the Emerging Citizens Curriculum. YOB explained that claiming space for action civics is critical because of reduced funding and other threats to civic learning, in Boston and elsewhere. For the past two years, Boston Public Schools has moved to combine Social Studies and English Language Arts into a single Humanities department.
 
 The jam-packed two day conference left many inspired to apply the lessons and reflections in their education communities back home. Our lab was most stimulated by learning from educators that have thriving youth empowerment programs due to support from administrators, legislators, and influential community stakeholders. We realize that a new civics movement is one that is interdisciplinary, collaborative, and embracing of youth-led ideas and technologies and are excited to keep developing projects that support this model.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_SdawGJ7z1cUkyI5w.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_SdawGJ7z1cUkyI5w.png)
 
 _More Resources Mentioned in the Digital Activism Panel_
 

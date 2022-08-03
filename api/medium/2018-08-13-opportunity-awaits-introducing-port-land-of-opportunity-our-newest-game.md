@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/opportunity-awaits-introducing-port-land-of-opportunity-our-newest-game-370ad6bf4e6c
-canonical_url: https://medium.com/engagement-lab-emerson-college/opportunity-awaits-introducing-port-land-of-opportunity-our-newest-game-370ad6bf4e6c
-title: 'Opportunity Awaits: Introducing (Port)Land of Opportunity, Our Newest Game'
-subtitle: The Engagement Lab is pleased to announce the release of our newest game,
-    “(Port)Land of Opportunity.” In collaboration with the City of…
-slug: opportunity-awaits-introducing-port-land-of-opportunity-our-newest-game
-description: ''
-tags:
-    - urban-planning
-    - civic-media
-    - engagement
-    - civictech
-author: EL_News
-username: el-news
----
-
 # Opportunity Awaits: Introducing (Port)Land of Opportunity, Our Newest Game
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_etFjoj0nPry2O4fh-i8w0g.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_etFjoj0nPry2O4fh-i8w0g.png)
 
 The Engagement Lab is pleased to announce the release of our newest game, “(Port)Land of Opportunity.” In collaboration with the City of Portland, Maine’s Office of Economic Opportunity, our team at the Engagement Lab has spent the last seven months co-designing a tool to inform and engage immigrants and refugees in the city regarding available services. The [Office of Economic Opportunity](https://www.portlandmaine.gov/2108/Office-of-Economic-Opportunity) wanted to try stepping away from more conventional approaches of seeking community feedback (such as interviews and focus groups, as they have used in the past) and instead create an educational game in hopes of making the process more engaging and meaningful to participants. The game is playable on desktop or mobile devices and is currently being rolled out across the city.
 

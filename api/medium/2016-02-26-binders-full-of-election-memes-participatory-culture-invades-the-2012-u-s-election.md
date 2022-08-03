@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/binders-full-of-election-memes-participatory-culture-invades-the-2012-u-s-election-238b832a81b1
-canonical_url: https://medium.com/civic-media-project/binders-full-of-election-memes-participatory-culture-invades-the-2012-u-s-election-238b832a81b1
-title: 'Binders Full of Election Memes: Participatory Culture Invades the 2012 U.S.
-    Election'
-subtitle: Erhardt Graeff
-slug: binders-full-of-election-memes-participatory-culture-invades-the-2012-u-s-election
-description: ''
-tags:
-    - play-and-creativity
-    - social-network
-    - memes
-author: EL_News
-username: el-news
----
-
 # Binders Full of Election Memes: Participatory Culture Invades the 2012 U.S. Election
 
 ### Erhardt Graeff
@@ -30,27 +14,27 @@ During the televised debate on October 3, 2012, Mitt Romney discussed ways he wo
 
 What emerges immediately is the proliferation of [image macro memes](http://knowyourmeme.com/memes/events/fired-big-bird-mitt-romney-hates-big-bird), [new Twitter parody accounts](http://www.buzzfeed.com/stacylambe/big-bird-responds-to-mitt-romney-on-twitter), and a significant amount of media attention.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yU1QAhDJHDqqvKXYa1JupA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yU1QAhDJHDqqvKXYa1JupA.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_x3eH3C2y2Q3FBDhXSyoU6g.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_x3eH3C2y2Q3FBDhXSyoU6g.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_snQSNfxsxZeZ8atmqQFa0g.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_snQSNfxsxZeZ8atmqQFa0g.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mUxLcbpXBs_tEMTNnbVEsg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mUxLcbpXBs_tEMTNnbVEsg.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_R8iK3hgulPC-_vtJQc-hiw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_R8iK3hgulPC-_vtJQc-hiw.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_MJVPL7dkA2GtCTfKF6aIfA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_MJVPL7dkA2GtCTfKF6aIfA.png)
 
-![The memes played with the tropes of Sesame Street, referenced earlier political discourse around Romney’s work at Bain as well as other popular memes like the “It’s simple, We Kill the Batman” — a very common practice. Other memes reference historical political imagery like “The Gadsden Flag,” recent political movements — like the Egyptian Arab Spring mantra “We are all Khaled Said,”. There was even an attempt at campaign messaging construction “comparing” the two candidates’ accomplishments and potential. We also saw Romney supporters enter into the discourse, exploiting the meme to make fun of Obama, and using the same tropes as jokes, to make it full circle.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_9cMormfF9ydvC1DvE5-Psw.png)
+![The memes played with the tropes of Sesame Street, referenced earlier political discourse around Romney’s work at Bain as well as other popular memes like the “It’s simple, We Kill the Batman” — a very common practice. Other memes reference historical political imagery like “The Gadsden Flag,” recent political movements — like the Egyptian Arab Spring mantra “We are all Khaled Said,”. There was even an attempt at campaign messaging construction “comparing” the two candidates’ accomplishments and potential. We also saw Romney supporters enter into the discourse, exploiting the meme to make fun of Obama, and using the same tropes as jokes, to make it full circle.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_9cMormfF9ydvC1DvE5-Psw.png)
 
 This case sees political discourse play out as both Anti-Romney and Anti-Obama, with competing narratives when the meme hits some threshold of attention. And mainstream media plays a key role in amplifying the memes.
 
-![Most Mentioned Words in Relation to “Romney” from Top 25 MSM Sources in Media Cloud during week beginning 2012–10–01]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jZqQHDOXFYhLq8W3RSsZWw.png)
+![Most Mentioned Words in Relation to “Romney” from Top 25 MSM Sources in Media Cloud during week beginning 2012–10–01](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_jZqQHDOXFYhLq8W3RSsZWw.png)
 
 Using the media analysis tool [Media Cloud](http://mediacloud.org/), I found “pbs” among the most mentioned words in relation to “Romney” in stories from the top 25 most trafficked online mainstream media sources during the week of October 1, 2012.
 
-![Sentences mentioning “Romney” in Media Cloud during week beginning 2012–10–01]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mY7CoA8IJzPrlEClM3Ylzg.png)
+![Sentences mentioning “Romney” in Media Cloud during week beginning 2012–10–01](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mY7CoA8IJzPrlEClM3Ylzg.png)
 
 Then, I used Media Cloud to browse the specific sentences mentioning PBS in those “Romney” articles.
 
@@ -68,11 +52,11 @@ During the second presidential debate on October 16, Mitt Romney responds to a q
 
 23-year-old experienced social media manager Veronica de Souza was watching. And while parody accounts were springing up on Twitter, she went to Tumblr, registered [bindersfullofwomen.tumblr.com](http://bindersfullofwomen.tumblr.com/), and started making memes and inviting others to contribute.
 
-![Many featured Trapper Keeper and Lisa Frank style imagery.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A-dO2U4u4EJQ-uCF9yZdDw.png)
+![Many featured Trapper Keeper and Lisa Frank style imagery.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A-dO2U4u4EJQ-uCF9yZdDw.png)
 
-![There were some classic cultural references.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DyLsSKKaDIRwq-iyKPW67A.png)
+![There were some classic cultural references.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_DyLsSKKaDIRwq-iyKPW67A.png)
 
-![People started photographing made-up binders in their places of work and posting them online.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JAPHohPqXZ74zGdsmaL3SA.png)
+![People started photographing made-up binders in their places of work and posting them online.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JAPHohPqXZ74zGdsmaL3SA.png)
 
 This case was strongly centered around the specific Tumblr blog created by de Souza the night of the debate. She made it open to contributions and curated them. Tumblr is designed for sharing content through its “submit” and “re-blog” features that in one click allow content to be shared on a Tumblr blog.
 
@@ -90,11 +74,11 @@ President Obama gave a speech on July 13, 2012 at a fire station in Roanoke, Vir
 
 Republican and conservative Internet users started generating memes, eventually pulling in the Republican Party, Romney’s Campaign, and mainstream media.
 
-![Several of these election memes featured Obama dismissing famous American inventors.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__5kmK20d_CdIG_9RbsUiOQ.png)
+![Several of these election memes featured Obama dismissing famous American inventors.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__5kmK20d_CdIG_9RbsUiOQ.png)
 
-![They skewered Democratic Party veteran Al Gore and Obama simultaneously.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_H96dS4dSgDn8RO8NnWIa4A.png)
+![They skewered Democratic Party veteran Al Gore and Obama simultaneously.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_H96dS4dSgDn8RO8NnWIa4A.png)
 
-![Conservative groups made their own branded image macros.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0Qf18gBCTRK-4IZIa7KN-g.png)
+![Conservative groups made their own branded image macros.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0Qf18gBCTRK-4IZIa7KN-g.png)
 
 [You didn’t build that](http://scalar.usc.edu/works/civic-media-project/media/You%20didn%27t%20build%20that%20.gif)
 

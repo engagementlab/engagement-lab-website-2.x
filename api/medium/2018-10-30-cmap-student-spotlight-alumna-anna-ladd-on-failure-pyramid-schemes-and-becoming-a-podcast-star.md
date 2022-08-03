@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-alumna-anna-ladd-on-failure-pyramid-schemes-and-becoming-a-podcast-star-b6c607ac50fa
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-alumna-anna-ladd-on-failure-pyramid-schemes-and-becoming-a-podcast-star-b6c607ac50fa
-title: 'CMAP Student Spotlight: Alumna Anna Ladd on Failure, Pyramid Schemes, and
-    Becoming a Podcast Star'
-subtitle: We  sit down with CMAP alumna Anna Ladd, who won the Gimlet Creative “Casting
-    Call” podcasting competition earlier this year.
-slug: cmap-student-spotlight-alumna-anna-ladd-on-failure-pyramid-schemes-and-becoming-a-podcast-star
-description: ''
-tags:
-    - podcast
-    - civic-media
-    - graduate-school
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Alumna Anna Ladd on Failure, Pyramid Schemes, and Becoming a Podcast Star
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_NcFc8CAP03Ia98vjA_51dw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_NcFc8CAP03Ia98vjA_51dw.png)
 
 _Earlier this month, CMAP alumna Anna Ladd ’18 won the Gimlet Creative “Casting Call” podcasting competition with her pilot episode of “An Exciting Business Opportunity,” a podcast that explores the dark underbelly of multi-level marketing companies (MLMs.) We sat down with Anna to learn more about her work and what inspired the idea for her award-winning podcast._
 
@@ -27,7 +10,7 @@ After graduation from her undergraduate studies in the spring of 2016, Ladd felt
 
 Although that specific concept didn’t manifest, Ladd followed an organic path of inspiration that led her to create “Ok But Who Cares,” a podcast series that focuses on “weird little holes on the internet” that have intrigued Ladd in her online wanderings.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ksoBeXHll1pwWp63Uic5Eg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ksoBeXHll1pwWp63Uic5Eg.jpeg)
 
 Back in 2014, when Ladd decided to start a rock band, she started teaching herself how to record and edit music. As a result of that process, she developed a technical aptitude for digital recording. Expanding those skills to podcasting turned out to be a new challenge for Ladd.
 
@@ -41,7 +24,7 @@ Looking back on her first podcasts Ladd remarks “Sometimes I’m like, ‘oh t
 
 When asked about how the “Casting Call” opportunity came into her focus, Ladd talks about how “serendipitously” things unfolded. “I’ve had a long-running fascination with MLMs for years…and one day I was just like ‘I want to create a podcast where I try out weird MLM detox and health products with my friends, who wants to drink shakes with me?’” The idea may have been sparked in jovial impulse, but the more Ladd discovered about MLMs and the people who had experienced MLM systems firsthand, the more Ladd realized that the concept could be a great opportunity to explore an “untapped wealth” of storytelling.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_09b6dQHYCyv7w7MMSYLoVw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_09b6dQHYCyv7w7MMSYLoVw.jpeg)
 
 A week or so later, Ladd saw the “Casting Call” competition posted on social media. She immediately knew that she wanted to submit her idea, but other responsibilities kept her from preparing her application, and combined with a lack of confidence about her idea, she nearly didn’t apply.
 

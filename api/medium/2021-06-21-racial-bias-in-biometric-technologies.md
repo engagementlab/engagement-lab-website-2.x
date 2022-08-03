@@ -1,21 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/racial-bias-in-biometric-technologies-5f51791a960c
-canonical_url: https://medium.com/engagement-lab-emerson-college/racial-bias-in-biometric-technologies-5f51791a960c
-title: Racial Bias in Biometric Technologies
-subtitle: Facial recognition technology is something that’s been a contentious point
-    of discussion over previous years due to its utilization and the…
-slug: racial-bias-in-biometric-technologies
-description: ''
-tags:
-    - smart-cities
-    - racial-justice
-author: EL_News
-username: el-news
----
-
 # Racial Bias in Biometric Technologies
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1sOA6oE35Is7nNFkPX9vGA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1sOA6oE35Is7nNFkPX9vGA.png)
 
 Facial recognition technology is something that’s been a contentious point of discussion over previous years due to its utilization and the communities it impacts. Numerous bills have been brought before state and [national](https://www.congress.gov/bill/116th-congress/house-bill/7356/text) legislatures to consider banning the use of this software in light of recent [reports](https://www.biometricupdate.com/201802/chincotech-tackles-racial-bias-in-facial-recognition-systems) that have shown that the technology has shown racial bias. In Massachusetts, [S.1385](https://malegislature.gov/Bills/191/S1385) is a bill currently working its way through the state legislature in order to put a moratorium on facial recognition and other remote biometric technologies. Cities today are always trying to become “smarter” technologically, but it can’t be at the expense of the citizens who are already unjustly targeted by law enforcement. By analyzing the participatory design principles and previous work done in the [Smart Cities Initiative](https://elab.emerson.edu/research/initiatives/civic-smart-cities) and how they can be utilized, we can see how discussion surrounding this issue can be facilitated and a policy decision can be made.
 

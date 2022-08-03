@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/emerson-engagement-lab-s-indie-game-discussion-group-post-mortem-8b367a62c20b
-canonical_url: https://medium.com/engagement-lab-emerson-college/emerson-engagement-lab-s-indie-game-discussion-group-post-mortem-8b367a62c20b
-title: Emerson Engagement Lab’s Indie Game Discussion Group Post Mortem
-subtitle: By Jordan Pailthorpe
-slug: emerson-engagement-lab-s-indie-game-discussion-group-post-mortem
-description: ''
-tags:
-    - education
-    - gaming
-author: EL_News
-username: el-news
----
-
 # Emerson Engagement Lab’s Indie Game Discussion Group Post Mortem
 
 ### By Jordan Pailthorpe
 
 05/18/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_smKatZnWtJt2YVlW.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_smKatZnWtJt2YVlW.png)
 
 Over the last five weeks of the semester, I started something I call the [Indie Game Discussion Group](https://eglgamestudies.wordpress.com/2015/03/30/game-discussion-series-4215-papers-please/). Every Thursday night at the Engagement Lab 10+ students, faculty, and local game enthusiasts would gather in our common space to play and discuss alternative games in a semi-formal setting.
 
@@ -36,7 +22,7 @@ When starting this group, I had no idea if it was going to sustain itself or eve
 
 # **The Structure**
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_6MegldwzQo6IIYge.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_6MegldwzQo6IIYge.png)
 
 At the start of each week I would create a list of games that center around a specific genre, theme, or idea. Each session would place students into a different kind of play experience, either asking them to play games together in small groups, take turns switching off hot seat style while others observed/directed, or even watching [lets play videos](http://en.wikipedia.org/wiki/Let%27s_Play_%28video_gaming%29) where we would watch an online personality play through a game for us. For example, in week 4’s discussion [“The rebirth of ASCII and how mystery can make games go viral “](https://eglgamestudies.wordpress.com/2015/04/20/game-discussion-series-42315-candybox-a-dark-room-drowning-the-gold-factory-speedwarp/) we discussed and played incremental games such as [Candybox](http://candies.aniwey.net/) and [Drowning](http://game.notch.net/drowning/#). Because these are somewhat passive games that require a player to leave them running and return to them at certain moments during the day, we loaded all the games immediately at the start of the session with one persona guiding the mouse, but taking direction from the entire group.
 
@@ -48,7 +34,7 @@ Therefore we were not just playing games and talking about them, but framing the
 
 **What worked?**
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_IsIWNnjqGXadXMgM.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_IsIWNnjqGXadXMgM.png)
 
 _Starting from a base set of interested participants_
 
@@ -60,7 +46,7 @@ I feel we benefited from having isolated discussions that started and concluded 
 
 _The weekly, structured meeting time doesn’t shift or change._
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_PHO80M6PzEyYznEO.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_PHO80M6PzEyYznEO.jpg)
 
 Perhaps this is a slightly obvious point, but one I think it’s worth mentioning. A group like this thrives on having consistency to establish importance. It was crucial to have a meeting every week no matter what and to keep them at the same day/time. Otherwise students might not have known it was happening and might not have shown up or even bothered to find out.
 
@@ -68,7 +54,7 @@ _Attention to accessibility, representation, and game literacy._
 
 Within the core group of students who came to all the meetings, there was a wide range of experience levels with gameplay and game thinking. It was important to keep an eye out for those who identified as “not a gamer” and took that vulnerable risk of coming into a space consisting of what they most likely felt were experts (though no one in the group self identifies that way). I made sure to invite those who wouldn’t readily volunteer to play and gave them the chance to take the stage. I especially was aware of doing this whenever noticing a student slipping away from the conversation, intentionally or subconsciously. This sense of inclusion really helped to gel the group together and I think helped retention as well.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bR094SbUv8-pI8rL.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bR094SbUv8-pI8rL.jpg)
 
 _Structured, moderated discussion._
 
@@ -76,7 +62,7 @@ Instead of just having students speak on how they were feeling, we settled into 
 
 _Choosing games not many have played to expose participants to new ideas._
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_me9pPW3xPxw5Ez8J.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_me9pPW3xPxw5Ez8J.jpg)
 
 Everyone loves to talk about the things they like or know well. The first week I asked everyone what they would want to see played in this group and quickly realized if I catered to everyone’s wishes the discussion would regress into already solidified opinion versus solidified opinion. Though I do want to work towards student curation and explore more popular games critically (more on that below!), I feel it was beneficial to not use games many were familiar with and instead highlight those games and people that no one ever knew about. Basically, [if it had a TV commercial](https://www.callofduty.com/) or you could buy it in Gamestop we probably weren’t going to play it!
 

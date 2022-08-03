@@ -1,25 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/liveblog-of-research-in-the-mo-ve-ment-civic-media-political-unrest-and-the-role-of-the-971a56f2dd62
-canonical_url: https://medium.com/engagement-lab-emerson-college/liveblog-of-research-in-the-mo-ve-ment-civic-media-political-unrest-and-the-role-of-the-971a56f2dd62
-title: 'Liveblog of Research in the Mo(ve)ment: Civic Media, Political Unrest, and
-    the Role of the…'
-subtitle: By Engagement Lab
-slug: liveblog-of-research-in-the-mo-ve-ment-civic-media-political-unrest-and-the-role-of-the
-description: ''
-tags:
-    - blacklivesmatter
-    - media
-author: EL_News
-username: el-news
----
-
 # Liveblog of Research in the Mo(ve)ment: Civic Media, Political Unrest, and the Role of the University
 
 ### By Engagement Lab
 
 06/11/2015
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ynh-rrN2eX44LIsS.JPG)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_ynh-rrN2eX44LIsS.JPG)
 
 **Moderator**: [Susan Owusu](http://www.wheelock.edu/academics/faculty-and-administration/owusu-susan), Director of Wheelock College’s Communications and Media Literacy program
 
@@ -57,7 +42,7 @@ And so my question has always been and remains how do we create stories that peo
 
 **Terry** says that everyone needs to do something. There can’t be a type of thinking that this problem is just a black issue. We’re all interdependent, and related to everyone. Another tool for the black life survival guide is the “race card.” The card is meant to be for someone who owns a black body. This is satire that we use to help grieve, and to be a product of a system that promotes a system of suppression, and this card promotes a dialog of real connections to privilege, We need to understand what we can do to promote solidarity as human beings, to show that we are interdependent and interconnected. For any issue, we are connected.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_sjmmw_UF3o7jz_Cm.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_sjmmw_UF3o7jz_Cm.png)
 
 **Ted** says that Boston is a small and safe city. If you count Boston and Cambridge they amount to about a quarter of the population of Brooklyn. It’s an easy city to get around in. The reality is that most students and faculty never get into Boston to experience it for what it is. Many students have never been to Fenway or the Garden let alone [Dorchester](http://www.cityofboston.gov/neighborhoods/dorchester.asp) or [Mission Hill](http://www.cityofboston.gov/neighborhoods/missionhill.asp). The initial challenge is for us to get students to get out into the city. To feel comfortable being in the city. The demographic of most students is not a working class demographic. The students in prestigious schools have no hint of what it means to be in an urban community interacting with people. One of the first things that should happen is that activists should adopt people from campuses and take students into communities. We should develop understandings of race and class that enable us to be more empathetic. That’s the first thing. The second thing is that we have more smart people in Boston than any other city and yet we use very little of that intellect and data to serve and support communities.
 
@@ -75,7 +60,7 @@ We also need to teach people how to use media and data for effective and useful 
 
 **Ted** Landsmark says we need to look at our networks and see how diverse they are. We need to notice our limitations, and fix them. We need to utilize the networks we have to expand and diversify them and to make them matter. Next thing to do is to make sure that your media expression tools are ready to go. You need to be ready to document. “don’t let your battery die” We’ve got access to tools that can enable us to do extraordinary things, as long as the batteries are charged. The tools are transformative, they just need to be ready to be used, and when we need them. There was a famous photo of me that was taken on the last role of film that that photographer had…
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Gj7tnC6sQwdwU2nU.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_Gj7tnC6sQwdwU2nU.png)
 
 **Laura** appreciates the point about diversity. One of her fears is that people like Wes Lowery at the Washington Post are getting let go. What happens then? Building our networks now goes a long way but there’s a lot to do among traditional producers to do the best we can. Not just in the moment but for the long run.
 

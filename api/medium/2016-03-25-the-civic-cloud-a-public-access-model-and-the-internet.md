@@ -1,21 +1,6 @@
----
-url: https://medium.com/civic-media-project/the-civic-cloud-a-public-access-model-and-the-internet-d70413cf2d15
-canonical_url: https://medium.com/civic-media-project/the-civic-cloud-a-public-access-model-and-the-internet-d70413cf2d15
-title: 'The Civic Cloud: A Public Access Model and the Internet'
-subtitle: Bradley Holt and Jason Pelletier (Code for America)
-slug: the-civic-cloud-a-public-access-model-and-the-internet
-description: ""
-tags:
-- cloud-computing
-- privacy
-- systems-and-design
-author: EL_News
-username: el-news
----
-
 # The Civic Cloud: A Public Access Model and the Internet
 
-### *Bradley Holt and Jason Pelletier* (Code for America)
+### _Bradley Holt and Jason Pelletier_ (Code for America)
 
 Community media advocates have long recognized the growing importance of digital media. Forward-looking public, educational, and governmental (PEG) access organizations have embraced digital media through various forms of digital production and distribution. The Civic Cloud, a shared computing resource for community-created Internet applications and digital creative works, is an example of how the PEG access model can be applied to the Internet as a fundamentally distinct form of mass media (Ohiagu 2011).
 
@@ -43,7 +28,7 @@ Mobile apps, websites, and other digital works are forms of media. Adults in the
 
 The Internet is a highly commercialized space built by a tech industry with a striking lack of diversity. For example, 85 percent of Facebook’s tech workforce is male (50.8 percent of the United States population is female). Four percent of Facebook’s employees are Hispanic (16.9 percent of the United States population is Hispanic or Latino), and two percent are black (13.1 percent of the United States population is black or African American alone) (“Facebook Mirrors Tech Industry’s Lack of Diversity” 2014), (“USA QuickFacts” 2014).
 
->> The need to affirmatively provide a diversity of perspectives online is just as important as with other forms of mass media.
+> > The need to affirmatively provide a diversity of perspectives online is just as important as with other forms of mass media.
 
 The digital divide has followed existing social inequalities along demarcations such as gender, race, ethnicity, and wealth (Drori 2005, 64–70). The Civic Cloud offers a non-commercial digital space in which a diversity of perspectives can be shared, with a focus on those voices most often marginalized.
 
@@ -63,16 +48,14 @@ Burlington’s Civic Cloud could inspire similar endeavors in other communities 
 
 # References
 
-Belson, David, ed., *Akamai’s State of the Internet Q4 2013 Report | Volume 6 Number 4* (Cambridge, Mass.: Akamai Technologies, 2013), 23.
+Belson, David, ed., _Akamai’s State of the Internet Q4 2013 Report | Volume 6 Number 4_ (Cambridge, Mass.: Akamai Technologies, 2013), 23.
 
-Ohiagu, Obiageli P, 2011. “The Internet: The Medium of the Mass Media.” *Kiabara: Journal of Humanities* 16 (2): 225–232.
+Ohiagu, Obiageli P, 2011. “The Internet: The Medium of the Mass Media.” _Kiabara: Journal of Humanities_ 16 (2): 225–232.
 
-Drori, Gili S. 2005. *Global E-Litism: Digital Technology, Social Inequality, and Transnationality*. New York: Macmillan.
+Drori, Gili S. 2005. _Global E-Litism: Digital Technology, Social Inequality, and Transnationality_. New York: Macmillan.
 
-Linder, Laura R. 1999. *Public* *Access Television: America’s Electronic Soapbox*.** Westport, Conn.: Greenwood Publishing Group, 1999.
+Linder, Laura R. 1999. _Public_ _Access Television: America’s Electronic Soapbox_.\*\* Westport, Conn.: Greenwood Publishing Group, 1999.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

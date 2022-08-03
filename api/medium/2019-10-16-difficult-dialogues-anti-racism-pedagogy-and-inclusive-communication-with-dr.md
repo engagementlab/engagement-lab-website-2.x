@@ -1,23 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/difficult-dialogues-anti-racism-pedagogy-and-inclusive-communication-with-dr-c23fa9395850
-canonical_url: https://medium.com/engagement-lab-emerson-college/difficult-dialogues-anti-racism-pedagogy-and-inclusive-communication-with-dr-c23fa9395850
-title: 'Difficult Dialogues, Anti-Racism Pedagogy,
-
-    and Inclusive Communication with Dr.'
-subtitle: Earlier this month, Dr. Srivi Ramasubramanian joined Media Design students,
-    faculty, and members of the Engagement Lab to facilitate an…
-slug: difficult-dialogues-anti-racism-pedagogy-and-inclusive-communication-with-dr
-description: ''
-tags:
-    - media-design
-    - anti-racism
-    - diversity-and-inclusion
-    - emerson-college
-author: EL_News
-username: el-news
----
-
-![Dr. Ramasubramanian engaging Media Design students and members of the Emerson community with a conversation about diversity and inclusivity on college campuses.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZaiIWtbPSv3twwSg0RDwpA.png)
+![Dr. Ramasubramanian engaging Media Design students and members of the Emerson community with a conversation about diversity and inclusivity on college campuses.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZaiIWtbPSv3twwSg0RDwpA.png)
 
 # Difficult Dialogues, Anti-Racism Pedagogy,
 
@@ -27,7 +8,7 @@ Earlier this month, Dr. Srivi Ramasubramanian joined Media Design students, facu
 
 Dr. Srivi Ramasubramanian teaches at Texas A&M University, where she is a Professor of Communication, Affiliated Professor of Women’s and Gender Studies, and former Associate Dean for Climate & Inclusion. Her scholarship focuses on diversity, identity (especially race, gender, religion, and nationality) critical media effects, stereotyping, dialogue, media literacy, youth , and mindfulness.
 
-![Dr. Ramasubramanian with Erica Scharrer, Professor of Communication at the University of Massachusetts, Azeta Hatef, Assistant Professor of Journalism, Emerson College, and Paul Mihailidis, Program Director of the Media Design Program]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_o5ifvygJlCxgv4oa.jpeg)
+![Dr. Ramasubramanian with Erica Scharrer, Professor of Communication at the University of Massachusetts, Azeta Hatef, Assistant Professor of Journalism, Emerson College, and Paul Mihailidis, Program Director of the Media Design Program](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_o5ifvygJlCxgv4oa.jpeg)
 
 Azeta Hatef, Assistant Professor of Journalism, Emerson College
 

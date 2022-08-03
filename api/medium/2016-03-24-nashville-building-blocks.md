@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/nashville-building-blocks-2343d7cffb33
-canonical_url: https://medium.com/civic-media-project/nashville-building-blocks-2343d7cffb33
-title: 'Nashville: Building Blocks'
-subtitle: Ty Hollett (Vanderbilt University, Peabody College)
-slug: nashville-building-blocks
-description: ''
-tags:
-    - games
-    - education-technology
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # Nashville: Building Blocks
 
 ### *Ty Hollett (*Vanderbilt University, Peabody College)
@@ -27,17 +12,17 @@ NBB leverages the production-centered peer culture surrounding _Minecraft_ to im
 
 Gameplay on NBB’s server takes the Nashville community as its theme and emphasizes collaboration among players as they continually develop their city. NBB participants operate in “Creative Mode,” which provides instant access to all building materials. As opposed to castles and Mega Men, NBB participants build neighborhoods, parks, transport systems, urban farms, and more (Figure 1.1).
 
-![Figure 1.1: Examples of various builds by members of Nashville: Building Blocks]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_X-IwmfkhEcmvcNb5z0eESg.jpeg)
+![Figure 1.1: Examples of various builds by members of Nashville: Building Blocks](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_X-IwmfkhEcmvcNb5z0eESg.jpeg)
 
 # **_put audio clip here_**
 
 As participants discuss, plan, and build, both in the game world and face-to-face, they take part in what is called augmented deliberation. Gordon and Manosevitch (2010) have put forth augmented deliberation as a form of participatory urban planning that simultaneously unites neighborhood residents in a physical and digital space. NBB is modeled off of this activity (Figure 1.2). Augmented deliberation enables participants to visualize and experience space, thus alleviating difficulties participants confront in understanding abstract spatial concepts. As a form of augmented deliberation, NBB seeks to place participants in “both places at once,” integrating interactions, collaboration, and idea-exchange that cut across digital and physical spaces. Additionally, augmented deliberation facilitates various forms of “perspective-taking,” or empathetically inhabiting another resident’s perspective via an avatar (Gordon et al. 2011). All face-to-face components of augmented deliberation take place in the Nashville Public Library’s digital media learning lab, which teens named The Studio.
 
-![Figure 1.2: Augmented collaboration and deliberation across digital and physical spaces.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_b54k8LRJLpFQnolzfhIYwQ.jpeg)
+![Figure 1.2: Augmented collaboration and deliberation across digital and physical spaces.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_b54k8LRJLpFQnolzfhIYwQ.jpeg)
 
 [The Studio](http://goo.gl/2DPB5d) provides local teens access to activities like music production, tinkering, and gaming, as well as informal hangout spaces after-school. While the world in which participants build is openly accessible via the server, formal NBB meetings take place twice each week, thus providing youth with regular opportunities to consider the needs of their community. For instance, participants recently focused their attention on the re-development of a Nashville neighborhood named Cayce Place. Using documents provided by the Metro Development and Housing Agency (2014, Figure 1.3) — the organization heading re-development — participants imagined the possibilities for Cayce Place, expanding on previous stakeholder meetings in which residents voiced their concerns about displacement; their desires to build a culture of respect, safety and community; as well as the need for access to healthy foods. In response, participants plotted out and built urban gardens and community centers; they considered the importance of parks in providing opportunities for residents to come together, creating sites for inter-generational activity; they deliberated the role of transportation, its role in providing residents access to other areas in the city, and set the groundwork for a rail system.
 
-![Re-envisioning Cayce Place. Documents provided by Nashville’s Metropolitan Development and Housing Agency.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mKzGdCSqw4LUBvr5aAtqEw.jpeg)
+![Re-envisioning Cayce Place. Documents provided by Nashville’s Metropolitan Development and Housing Agency.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mKzGdCSqw4LUBvr5aAtqEw.jpeg)
 
 NBB seeks to re-imagine participatory civics across space, time, and scale. This entails a shift from thinking in terms of youth civic engagement to thinking in terms of “geographies of responsibility” (Massey 2004), or civic geographies.
 

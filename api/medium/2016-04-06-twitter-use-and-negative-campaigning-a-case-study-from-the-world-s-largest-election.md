@@ -1,20 +1,5 @@
----
-url: https://medium.com/civic-media-project/twitter-use-and-negative-campaigning-a-case-study-from-the-world-s-largest-election-355833a7370a
-canonical_url: https://medium.com/civic-media-project/twitter-use-and-negative-campaigning-a-case-study-from-the-world-s-largest-election-355833a7370a
-title: "Twitter Use and Negative Campaigning: \nA Case Study from the World’s Largest
-  Election"
-subtitle: Nikhil Moro (University of North Texas)
-slug: twitter-use-and-negative-campaigning-a-case-study-from-the-world-s-largest-election
-description: ""
-tags:
-- elections
-- india
-- community-and-action
-author: EL_News
-username: el-news
----
+# Twitter Use and Negative Campaigning:
 
-# Twitter Use and Negative Campaigning: 
 A Case Study from the World’s Largest Election
 
 ### Nikhil Moro (University of North Texas)
@@ -23,7 +8,7 @@ That Twitter could catalyze political change became evident in summer 2009 when 
 
 Since then, the use of Twitter has evolved from political activism to campaigning, with politicians around the world using it to mediate political change through self-promotion, education, agenda-setting, content discovery, and interpersonal communication.
 
->> Twitter’s campaign use came to the fore in the U.S. presidential election of 2012, and more recently, for the first time in Asia, in the other great aspiring democracy, India. Prominent Indian politicians were tweeting feverishly to influence voters in summer 2014 in the largest election the world had ever seen, the Indian parliamentary election.
+> > Twitter’s campaign use came to the fore in the U.S. presidential election of 2012, and more recently, for the first time in Asia, in the other great aspiring democracy, India. Prominent Indian politicians were tweeting feverishly to influence voters in summer 2014 in the largest election the world had ever seen, the Indian parliamentary election.
 
 The quinquennial election, with 814 million voters of unparalleled cultural and economic diversity, saw some 8,000 candidates vying for 543 seats in the Lok Sabha, the lower house of Parliament, in all 28 states and seven Union territories. Indians staggered-voted on nine dates between April 7 and May 12, 2014. Politicians campaigned in open-air public rallies often in raucous, dusty and scorching conditions. In stump speeches, they invoked age-old themes of economic resurgence, national identity, and public accountability through hot-button issues: unemployment, secularism and corruption.
 
@@ -49,16 +34,14 @@ Later, the election results held a lesson for elevating the Twitter-mediated dis
 
 # REFERENCES
 
-Buell, Emmett H., and Sigelman Lee. 2008. *Attack Politics: Negativity in Presidential Campaigns Since 1960*. Lawrence, Kansas: University Press of Kansas.
+Buell, Emmett H., and Sigelman Lee. 2008. _Attack Politics: Negativity in Presidential Campaigns Since 1960_. Lawrence, Kansas: University Press of Kansas.
 
-Lau, Richard R., and Ivy Brown Rowner. 2009. “Negative campaigning.” *Annual Review of Political Science* 12: 285–306.
+Lau, Richard R., and Ivy Brown Rowner. 2009. “Negative campaigning.” _Annual Review of Political Science_ 12: 285–306.
 
-Lee, Kyumin, James Caverlee, Zhiyuan Cheng, and Daniel Z. Sui. 2013. “Campaign extraction from social media,” *ACM Transactions on Intelligent Systems and Technology* 5 (1): 1–28.
+Lee, Kyumin, James Caverlee, Zhiyuan Cheng, and Daniel Z. Sui. 2013. “Campaign extraction from social media,” _ACM Transactions on Intelligent Systems and Technology_ 5 (1): 1–28.
 
-Thejll-Moller, Steffen. 2013. “Social media in traditional political party campaigns: is there a winning formula?” *European View* 12 (1): 33–39.
+Thejll-Moller, Steffen. 2013. “Social media in traditional political party campaigns: is there a winning formula?” _European View_ 12 (1): 33–39.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

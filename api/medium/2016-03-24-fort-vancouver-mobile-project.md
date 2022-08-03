@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/fort-vancouver-mobile-project-6c9661be325b
-canonical_url: https://medium.com/civic-media-project/fort-vancouver-mobile-project-6c9661be325b
-title: FORT VANCOUVER MOBILE PROJECT
-subtitle: Brett Oppegaard (University of Hawaii)
-slug: fort-vancouver-mobile-project
-description: ''
-tags:
-    - social-network
-    - mobile
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # FORT VANCOUVER MOBILE PROJECT
 
 ### *Brett Oppegaard (*University of Hawaii)
@@ -31,17 +16,17 @@ Example: A Tweet-alogue –
 
 We had mountains of material — historic letters, diary entries, and book sections — about the real-life characters in our “Kanaka” narrative. That included back-and-forth exchanges between the story’s protagonist, William Kaulehelehe, a Hawaiian-born chaplain brought to Fort Vancouver to proselytize to fellow Sandwich Islanders, and the administrative and social leaders of the region. But much of that compelling discourse was buried in the minutiae of dense and dry procedural accounts from the era. To make the dialogue more accessible, and engaging, we took excerpts and added a touch of Twitterese, such as @ signs, and then put the pieces back together to form roughly comprehensible conversations. These strings of direct quotes, geolocated and embedded in locations that relate to the topics mentioned, can be animated together by users through a swiping motion.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mK1LEFqNdJI4Wt1osayNLA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_mK1LEFqNdJI4Wt1osayNLA.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AZ2QC4BoO8dWza3UfBXBpQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AZ2QC4BoO8dWza3UfBXBpQ.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2dJ-SwB_2oS2eO2VrxZy_w.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_2dJ-SwB_2oS2eO2VrxZy_w.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_SCGvOppv4wF_cm_uKpr-Tg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_SCGvOppv4wF_cm_uKpr-Tg.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_cAYJuuJun4dJeSY5cH8e5w.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_cAYJuuJun4dJeSY5cH8e5w.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YsqK8S5YgGWoDLUx5RDEuQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YsqK8S5YgGWoDLUx5RDEuQ.png)
 
 # Media forms
 
@@ -70,25 +55,25 @@ Mobile technologies allow, for the first time, easy access to video interpretati
 
 Studying mobile interaction activities, through audio / video production, discussion prompts, quizzes, physical tasks, etc. One of the overarching goals of the research team is to provide mobile media that prompts other mobile media. So when a video clip, for example, is given to a visitor at a particular site, the mobile app also asks for the user to thoughtfully participate in the history-building of the place, by making something in response to the original clip and to a specific thematic goal. Then, that user-generated content can be shared with other app users. For example, when the Fort Vancouver Mobile app shows a video clip of an archaeologist making an exciting find on location, the app simply asks, before revealing the answer, “What do you think he found?”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A8EK2wsNaX-RMq8GYr1HOg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A8EK2wsNaX-RMq8GYr1HOg.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Woy0wRj53HjwmoOu0ncQkw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Woy0wRj53HjwmoOu0ncQkw.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tKnCM7x3hTx07f-roCWRKg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_tKnCM7x3hTx07f-roCWRKg.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A8EK2wsNaX-RMq8GYr1HOg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_A8EK2wsNaX-RMq8GYr1HOg.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dRBH1uWYqXupXuW9utvaXQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dRBH1uWYqXupXuW9utvaXQ.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Kws4-XsNj_OVSjwcKDuxPw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Kws4-XsNj_OVSjwcKDuxPw.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_r6rS-KQlJ2wQN8IMYTzqrg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_r6rS-KQlJ2wQN8IMYTzqrg.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_r6rS-KQlJ2wQN8IMYTzqrg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_r6rS-KQlJ2wQN8IMYTzqrg.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bRWk0jjLoldHG0kqR-m0HA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_bRWk0jjLoldHG0kqR-m0HA.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rssvmN5Gl2w9UpWpby88cg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_rssvmN5Gl2w9UpWpby88cg.png)
 
 **Example: Embedded Photographs
 **Similar to the mobile options now available for video, still photography also has emerging potential as an interactive, geolocated media form. In the Old Apple Tree case, mentioned above, we wondered what we could do with still photography that would somehow compel users to participate in the history-making process. With that goal, we bought the rights to a few of the local newspaper’s best images of the historic tree from the past century, added contextual text to those, and through GPS coordinates placed them at the base of the tree, so the Fort Vancouver Mobile app user would be able to compare the tree today with images of it from yesteryear. At the end of this sequence, cycled through via swiping, we asked users if they wanted to pose with the tree and take their own picture. This function turned the mobile camera on, and, when completed, allowed the user to share that image via social media channels. Many of the app users have chosen to take a picture with the tree, and these images have become a part of the fabric of the Old Apple Tree’s legacy.
@@ -110,15 +95,15 @@ Studying various factors of engagement, such as motivation, social facilitation,
 **Example: History Quizzes**
 New technologies enable new ways of learning, but they also allow us to reexamine and tweak traditional methods as well. In the Fort Vancouver Mobile app, we experimented with the idea of an embodied quizzing method, in which app users walked around the historic site, trying to find short segments of information (which were pushed to the app at various GPS coordinates, based on the surroundings) followed by a multiple-choice quiz. The example below is from the “base ball” segment, attempting to tie together history external of the site, as in the national development of a sport, with the local effects of the trend.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Dq7LtT8GK47tEnvN2kpeHw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Dq7LtT8GK47tEnvN2kpeHw.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Kws4-XsNj_OVSjwcKDuxPw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Kws4-XsNj_OVSjwcKDuxPw.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sVxf7KziMSRxNaTW50gVqQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sVxf7KziMSRxNaTW50gVqQ.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_hPX6K14Sak1dq9ObxToQsA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_hPX6K14Sak1dq9ObxToQsA.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JZ49ywQssSKmc0oobEZiqQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_JZ49ywQssSKmc0oobEZiqQ.png)
 
 # REFERENCES
 

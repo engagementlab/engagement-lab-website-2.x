@@ -1,18 +1,3 @@
----
-url: https://medium.com/@el-news/hacking-politics-civic-struggles-to-politicize-technologies-c648a8882ff1
-canonical_url: https://medium.com/@el-news/hacking-politics-civic-struggles-to-politicize-technologies-c648a8882ff1
-title: 'Hacking politics: civic struggles to politicize technologies'
-subtitle: Sebastian Kubitschko (University of Bremen)
-slug: hacking-politics-civic-struggles-to-politicize-technologies
-description: ""
-tags:
-- learning-and-engagement
-- hacking
-- diy
-author: EL_News
-username: el-news
----
-
 # Hacking politics: civic struggles to politicize technologies
 
 ### Sebastian Kubitschko (University of Bremen)
@@ -21,7 +6,7 @@ Despite the longstanding equating of hacking as infused with political significa
 
 Considering transformations of civic engagement and politics, hackers might not necessarily be the first actors that come to mind. “Hackers” is often used as a catchall phrase to describe almost any computer-related crime and tend to be portrayed as anti-social, possibly dangerous individuals, who attack systems, invade privacy and even threaten national security (Coleman 2012). Governments’ and mainstream media’s obsession with the activities of particular groups — most prominently Anonymous and WikiLeaks — further reinforce this labeling.
 
->> Founded in 1981 in Germany and with a membership figure of around 4500 the CCC stands in stark contrast to such stereotyping and criminalization. The Club is a heterogeneous collection of multi-socialized and multi-determined citizens that bring together knowledge, experience and skills related to the functioning and political consequences of MTI.
+> > Founded in 1981 in Germany and with a membership figure of around 4500 the CCC stands in stark contrast to such stereotyping and criminalization. The Club is a heterogeneous collection of multi-socialized and multi-determined citizens that bring together knowledge, experience and skills related to the functioning and political consequences of MTI.
 
 For over three decades its members have been engaging in the area of conflict between technological and social developments.
 
@@ -37,24 +22,22 @@ Acting with, through and about MTI are interlocking arrangements that enable the
 
 # REFERENCES
 
-Cohen, Jean, and Andrew Arato. 1992. *Civil Society and Political Theory*. Cambridge, UK: Polity Press.
+Cohen, Jean, and Andrew Arato. 1992. _Civil Society and Political Theory_. Cambridge, UK: Polity Press.
 
-Coleman, Gabriella. 2012. *Coding Freedom: The Ethics and Aesthetics of Hacking*. Princeton, NJ: Princeton University Press.
+Coleman, Gabriella. 2012. _Coding Freedom: The Ethics and Aesthetics of Hacking_. Princeton, NJ: Princeton University Press.
 
-Couldry, Nick. 2012. *Media, Society, World: Social Theory and Digital Media Practice*. Cambridge, UK: Polity Press.
+Couldry, Nick. 2012. _Media, Society, World: Social Theory and Digital Media Practice_. Cambridge, UK: Polity Press.
 
-Jordan, Tim, and Paul Taylor. 1998. “A Sociology of Hackers.” *The Sociological Review* 46 (4): 757–780.
+Jordan, Tim, and Paul Taylor. 1998. “A Sociology of Hackers.” _The Sociological Review_ 46 (4): 757–780.
 
-Kelty, Christopher. 2008. *Two Bits: The Cultural Significance of Free Software*. Durham, NC: Duke University Press.
+Kelty, Christopher. 2008. _Two Bits: The Cultural Significance of Free Software_. Durham, NC: Duke University Press.
 
-Kubitschko, Sebastian. Forthcoming. 2015. “Hackers’ Media Practices.” *Convergence* 21 (3).
+Kubitschko, Sebastian. Forthcoming. 2015. “Hackers’ Media Practices.” _Convergence_ 21 (3).
 
-Rosanvallon, Pierre. 2008. *Counter-Democracy: Politics in an Age of Distrust*. Cambridge, UK: Cambridge University Press.
+Rosanvallon, Pierre. 2008. _Counter-Democracy: Politics in an Age of Distrust_. Cambridge, UK: Cambridge University Press.
 
-Rucht, Dieter. 2013. “Protest Movements and Their Media Usages.” In *Mediation and Protest Movements*, edited by Bart Cammaerts, Alice Mattoni and Patrick McCurdy, 249–268. Bristol, UK: Intellect.
+Rucht, Dieter. 2013. “Protest Movements and Their Media Usages.” In _Mediation and Protest Movements_, edited by Bart Cammaerts, Alice Mattoni and Patrick McCurdy, 249–268. Bristol, UK: Intellect.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

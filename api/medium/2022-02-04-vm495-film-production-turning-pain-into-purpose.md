@@ -1,26 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/vm495-film-production-turning-pain-into-purpose-d31aa0d3d7fb
-canonical_url: https://medium.com/engagement-lab-emerson-college/vm495-film-production-turning-pain-into-purpose-d31aa0d3d7fb
-title: 'VM495 Film Production: Turning Pain into Purpose'
-subtitle: by John Yang
-slug: vm495-film-production-turning-pain-into-purpose
-description: ''
-tags:
-    - gun-violence
-    - film
-    - production
-    - narrative
-author: EL_News
-username: el-news
----
-
 # VM495 Film Production: **Turning Pain into Purpose**
 
 by John Yang
 
 There are at least two sides to every story. But what happens when a specific side of the story is silenced? For example, the tortoise would have no purpose for his race without the hare’s side of the story. The hare’s overconfidence creates an arena for the tortoise’s slow and efficient pace to win the race. Without the hare, the narrative of the race is not complete. The hare is important to show how interrelationships impact others in a community. Yet, when the media reports on gun violence it doesn’t give us all the information. The only information divulged is how many shots were fired, how many were injured or dead. This is attention-grabbing breaking news, and it has become the dominant narrative of gun violence. However, this isn’t the whole story. Gun violence destroys families and communities. Understanding how this happens is the focus of a new documentary film course at Emerson College.
 
-![VM495: Film Production (Photo taken by Marly Kaufman)]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZbbaYE-LaM0hPLLnjGdW0A.jpeg)
+![VM495: Film Production (Photo taken by Marly Kaufman)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ZbbaYE-LaM0hPLLnjGdW0A.jpeg)
 
 VM495: Film Production taught by Professors Theodore Life and Eric Gordon, is part of the Engagement Lab’s [Transforming Narratives of Gun Violence](http://transformnarratives.org) initiative, a partnership with Massachusetts General Hospital’s Center for Gun Violence Prevention and The Louis D. Brown Peace Institute.
 

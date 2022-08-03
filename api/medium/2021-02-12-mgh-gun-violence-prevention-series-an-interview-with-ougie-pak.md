@@ -1,21 +1,4 @@
----
-url: https://medium.com/engagement-lab-emerson-college/mgh-gun-violence-prevention-series-an-interview-with-ougie-pak-78d9294b50d1
-canonical_url: https://medium.com/engagement-lab-emerson-college/mgh-gun-violence-prevention-series-an-interview-with-ougie-pak-78d9294b50d1
-title: 'MGH Gun Violence Prevention Series: An Interview with Ougie Pak'
-subtitle: Every year, Americans are impacted by gun violence in a variety of ways.
-    Whether it be interpersonal violence, mass shootings, or in other…
-slug: mgh-gun-violence-prevention-series-an-interview-with-ougie-pak
-description: ''
-tags:
-    - gun-violence-prevention
-    - civic-media
-    - civic-engagement
-    - gun-violence
-author: EL_News
-username: el-news
----
-
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_G-o_qj0VtANTTlQFpoCCDA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_G-o_qj0VtANTTlQFpoCCDA.png)
 
 # MGH Gun Violence Prevention Series: An Interview with Ougie Pak
 

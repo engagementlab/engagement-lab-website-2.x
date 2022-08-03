@@ -1,24 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/storytelling-with-data-why-how-when-26ed6e0c6d6a
-canonical_url: https://medium.com/engagement-lab-emerson-college/storytelling-with-data-why-how-when-26ed6e0c6d6a
-title: 'Storytelling with Data: Why? How? When?'
-subtitle: By Catherine D’Ignazio
-slug: storytelling-with-data-why-how-when
-description: ''
-tags:
-    - data-visualization
-    - design
-author: EL_News
-username: el-news
----
-
 # Storytelling with Data: Why? How? When?
 
 ### By Catherine D’Ignazio
 
 04/06/2015
 
-![Image by @arnicas for #OpenVisConf]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_wZOgzTIXcTQSv4Yc.png)
+![Image by @arnicas for #OpenVisConf](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_wZOgzTIXcTQSv4Yc.png)
 
 **From the [OpenVisConf website](http://openvisconf.com/):** [\*Robert Kosara](https://eagereyes.org/) is Research Scientist at Tableau Research. Before he joined Tableau in 2012, he was a professor of computer science at UNC Charlotte. Robert has created visualization techniques like Parallel Sets and performed research into the perceptual and cognitive basics of visualization. Recently, his research has focused on how to communicate data using tools from visualization, and how storytelling can be adapted to incorporate data, interaction, and visualization.\*
 
@@ -46,7 +32,7 @@ Here she turned a bunch of numbers into something interesting to explore. It is 
 
 This technique, according to academics, is also really bad. Because it could lead to a “hairball line chart”.
 
-![The Hairball Line Chart a.k.a. The Spaghetti Chart]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_P5hTLc3t53avBHMY.png)
+![The Hairball Line Chart a.k.a. The Spaghetti Chart](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_P5hTLc3t53avBHMY.png)
 
 He shows [the ebb and flow of movies from the NYTimes](http://www.nytimes.com/interactive/2008/02/23/movies/20080223_REVENUE_GRAPHIC.html). Things like this work well for promoting exploration because they get people interested even though they might counteract academic wisdom about data graphics.
 
@@ -54,7 +40,7 @@ He shows ISOTYPE visualizations. This uses symbols to show numbers. Over time th
 
 ISOTYPE stands for International System of Typographic Picture Education. Developed by Marie Neurath, her husband Otto Neurath, and Gerd Arntz
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_IweAR7tcVrSqSArJ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_IweAR7tcVrSqSArJ.png)
 
 He then shows [the famous chart of Napolean’s march into Russia popularized by Edward Tufte](http://www.edwardtufte.com/tufte/posters). This is another example of a chart that worked well for a singular purpose and has never been able to be used again. It is valuable to do very specific things but we have to appreciate how specific they are.
 

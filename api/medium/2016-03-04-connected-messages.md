@@ -1,24 +1,8 @@
----
-url: https://medium.com/civic-media-project/connected-messages-6549ac07938d
-canonical_url: https://medium.com/civic-media-project/connected-messages-6549ac07938d
-title: Connected Messages
-subtitle: Orkan Telhan (University of Pennsylvania, School of Design), Yasmin B. Kafai,
-    Richard Lee Davis, K-Fai Steele, and Barrie M. Adleberg
-slug: connected-messages
-description: ''
-tags:
-    - learning-and-engagement
-    - data
-    - art
-author: EL_News
-username: el-news
----
-
 # Connected Messages
 
 ### *Orkan Telhan (*University of Pennsylvania, School of Design)_, Yasmin B. Kafai, Richard Lee Davis, K-Fai Steele, and Barrie M. Adleberg_
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Fej9ylxqvrqQeZG8MAzubg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Fej9ylxqvrqQeZG8MAzubg.png)
 
 Connected Messages is a construction kit that lets youth express personal and communal ideas by designing interactive community murals. The project was launched by the Maker Jawn Initiative across five Free Library branches in Philadelphia, and over 1,000 youth collaborated to create murals from foam boards, markers, and low-cost networking technologies. The murals function as programmable public displays that connect local neighborhoods with online audiences. Messages about love, family, hope, and questions about violence and social justice drawn with colored markers on the mural boxes by community youth are combined with digital messages sent to the boards from the Connected Messages [website](http://civicmediaproject.org/works/civic-media-project/connected.ecrafting.org).
 
@@ -36,13 +20,13 @@ Many spaces in children’s museums, science centers, community organizations, a
 
 The displays are built pixel-by-pixel from cardboard boxes that include an LED and conductive traces. Participants use blank boxes and decorate them according to different themes with their drawings and writings. The boxes are then arranged on a grid and mounted onto foam boards. The board connects the boxes with each other and makes them individually addressable through a circuit controlled by a microcontroller. Through a wireless connection to the Internet, each board can receive messages from a website since a web user can turn on or off each box. The website features a virtual representation of the mural and web users can send animated messages to the physical murals located in different community locations.
 
-![Figure 1. Foam board with copper traces (upper left), Electric Imp and a modem (upper right), back of tile boxes with copper connectors (lower left), and tile boxes with designs on board (lower right).]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-gwzBXYgWVQZz9KYjdPNBA.png)
+![Figure 1. Foam board with copper traces (upper left), Electric Imp and a modem (upper right), back of tile boxes with copper connectors (lower left), and tile boxes with designs on board (lower right).](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-gwzBXYgWVQZz9KYjdPNBA.png)
 
 The Connected Messages murals were set up and designed during the summer of 2013 in five Free Library locations in underserved neighborhoods across North and West Philadelphia, communities that have been decimated by poverty (according to the 2011 census, 65.46% of households earning less than $25,000) and crime (584.66 cases of aggravated assault/100,000 people) with fewer than 2% of adults employed in professional, scientific, and technical services. Five Maker Mentors led the mural activities, a team that consisted of three men and two women ages 21–31, with backgrounds as working artists and undergraduate students.
 
-![Figure 2. Connected Messages website interface.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_NXjKO12Sh2lpOTvc2IQKOQ.png)
+![Figure 2. Connected Messages website interface.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_NXjKO12Sh2lpOTvc2IQKOQ.png)
 
-![Figure 3. Connected Messages box reflecting on the Trayvon Martin trial.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_uAjEsAKq3wT8AEULViJdkw.png)
+![Figure 3. Connected Messages box reflecting on the Trayvon Martin trial.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_uAjEsAKq3wT8AEULViJdkw.png)
 
 Over 1,000 youth, between ages 6–19 years, participated in Connected Messages activities, their daily participation fluctuating from three to thirty participants. Youth and mentors at each location developed themes for their board around bravery, kindness, acceptance, and anti-bullying based on Lady Gaga’s Born Brave Bus Tour, which visited Philadelphia in March 2013. While all of the branches started from Lady Gaga tour themes, different branches personalized their murals according to the interests of their participants to give a true sense of ownership in the project. One library location — embedded within a nonprofit whose mission is to reduce the recidivism of adjudicated African-American youth — created boxes that addressed recent school closings versus new prison construction, their perspectives on the Trayvon Martin trial, and choosing positivity and creative outlets over perpetuating violence. All the completed display boards were gathered for a final celebratory event at the main branch of the Free Library. During the event, local makers from different branches witnessed the boards together, learned about the different topics discussed at each branch and leveraged the opportunity to interact with a larger online community within Philadelphia.
 

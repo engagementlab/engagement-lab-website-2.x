@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/karen-klein-case-study-d4f86a4fac3f
-canonical_url: https://medium.com/civic-media-project/karen-klein-case-study-d4f86a4fac3f
-title: Karen Klein Case Study
-subtitle: Morgan Jaffe (KAOS-FM Radio at Evergreen State College)
-slug: karen-klein-case-study
-description: ''
-tags:
-    - privacy
-    - social-network
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # Karen Klein Case Study
 
 ### Morgan Jaffe (KAOS-FM Radio at Evergreen State College)
@@ -23,11 +8,11 @@ As discussed in _Convergence Culture_ (Jenkins 2006), _Broadcasting in the 21st 
 
 In June 2012, four 7th grade students from the Greece Athena Middle School in Greece, NY videotaped themselves bullying Klein on their bus ride home. The boys appeared on the film, calling Klein a “bitch” and a “fat ass,” mocking her appearance and age, threatening her, and making her cry. These videos, user-generated content entitled “[Making the Bus Monitor Cry](https://www.youtube.com/watch?v=l93wAqnPQwk.),” “[Bus Monitor Harassment](https://www.youtube.com/watch?v=74bkNuQv2I8),” and “[Bus Monitor Harassment 2](https://www.youtube.com/watch?v=SBedTlo7BDs&feature=plcp),” were later posted throughout various social media sites and outlets. While the videos of these boys bullying Klein were originally posted on Facebook, a user who was not one of the bullies reposted the recordings on YouTube. Within a day the videos went viral, demonstrating a perfect example of participatory culture.
 
-![Image 1: Screenshot of the video “Making the Bus Monitor Cry” from YouTube.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ImLSmOorMU-XzMBVE3fM3Q.png)
+![Image 1: Screenshot of the video “Making the Bus Monitor Cry” from YouTube.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ImLSmOorMU-XzMBVE3fM3Q.png)
 
-![Image 2: Screenshot of the video “Bus Monitor Harassment]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Cw5SgXImc8eQbFeKB1rY1Q.png)
+![Image 2: Screenshot of the video “Bus Monitor Harassment](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Cw5SgXImc8eQbFeKB1rY1Q.png)
 
-![Image 3: Screenshot of the video “Bus Monitor Harassment 2]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YWoi_TZJURfChnGkJaOd1A.png)
+![Image 3: Screenshot of the video “Bus Monitor Harassment 2](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YWoi_TZJURfChnGkJaOd1A.png)
 
 The digital world and Internet culture is based around this _participatory culture_ (Hobbs 2010; Jenkins 2006; Jenkins et al 2006; Park 2012, [“CapitalTrigga, Bus Monitor Harassment 2” 2012](https://www.youtube.com/watch?v=SBedTlo7BDs&feature=plcp)). In “Confronting the Challenges of a Participatory Culture: Media Education for the 21st Century,” Jenkins et al. define the term as:
 
@@ -43,9 +28,9 @@ The boys who filmed themselves taunting Klein, however, are not the focal point 
 
 The online reaction to the videos of Klein being bullied was tremendous. Audiences posted response videos on YouTube and there were multiple discussion threads about the incident on Reddit ([“jelloleaf, Kids call bus monitor ‘fat’” 2012](http://redd.it/vb5gj), “[razorsheldon, CALL TO ARMS” 2012](http://redd.it/vbfxq))— a participatory site that (based on points and voting) shares web content such as text posts, videos, and other links. The more points (and community approval and awareness) a post gets, the more likely the content will reach the front page, where the most users will see it. These Reddit users were incredibly active consumers, and their sharing of the videos was essential.
 
-![Image 4: Screenshot of one of the Reddit threads discussing the Karen Klein videos]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VioQhFgJMOSM48yZW-bXkA.png)
+![Image 4: Screenshot of one of the Reddit threads discussing the Karen Klein videos](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_VioQhFgJMOSM48yZW-bXkA.png)
 
-![Image 5: Screenshot of a second Reddit thread discussing the Karen Klein videos]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_6suyPCHw5NSRT5yooU_lDg.png)
+![Image 5: Screenshot of a second Reddit thread discussing the Karen Klein videos](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_6suyPCHw5NSRT5yooU_lDg.png)
 
 After much discussion, Reddit users began looking for further information, finding the name and location of the school, Karen Klein’s Facebook profile, and the names, Facebook pages, and phone numbers of her tormentors. After much of the personal information was posted, Reddit moderators stepped in, shutting down the thread for privacy violations. Moving the discussion to another site, the videos were also shared on 4chan — an image-based bulletin board community where users can post comments and share images. (The discussion surrounding Karen Klein, however, no longer exists, as 4chan has no archive and threads expire). 4chan users reposted the information that had been shared on Reddit, again sharing the same information that had previously been posted on Reddit; but this time also including their home addresses. The users had found out Klein’s tormentor’s information, and now they wanted to find a way hold them accountable.
 
@@ -53,9 +38,9 @@ The users on Reddit and 4chan are perfect examples of produsers. In _Blogs, Wiki
 
 As Bruns further writes, it is about “transferring knowledge” and turning internet consumption and information from a static practice into a shared space where users participate and share with each other (ibid, 208). People began calling the Greece school system and the student’s homes, demanding action. 4chan users posted that Klein only stayed at her job because it was the only work she could find, and she could not afford to quit. One Reddit user, Max Sidorov, started a fundraiser on Indiegogo (a crowdfunding website) with the original intention to raise money for Klein to go on a vacation ([Sidorov 2012](https://www.indiegogo.com/projects/lets-give-karen-the-bus-monitor-h-klein-a-vacation--6)). The users Reddit and 4chan users further participated in produasage, when they built awareness of her situation and helped raise money through the Indiegogo campaign and researching to find out the perpetrators in this incident, and see to it that they faced consequences for their actions.
 
-![Image 6: A screenshot of the Indiegogo page started to raise money for Karen Klein by Max Sidorov.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_45d9KTPukyTQcowdF8IEhA.png)
+![Image 6: A screenshot of the Indiegogo page started to raise money for Karen Klein by Max Sidorov.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_45d9KTPukyTQcowdF8IEhA.png)
 
-![Image 7: A screenshot of the Karen Klein Foundation website.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_BnjDFG2JXZkB9-FoRFYmYg.png)
+![Image 7: A screenshot of the Karen Klein Foundation website.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_BnjDFG2JXZkB9-FoRFYmYg.png)
 
 After the video went viral, being broadcasted on both social media sites and in traditional news and print, the campaign raised over $700,000. Klein later used a portion of the money to start an anti-bullying organization: The Karen Klein Foundation. Additionally, the students in question were suspended from school for a year, required to complete 50 hours of community service with senior citizens, and had to attend a formal program in bullying prevention.
 

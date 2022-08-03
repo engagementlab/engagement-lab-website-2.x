@@ -1,22 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/apply-now-for-civic-media-art-practice-ma-program-at-emerson-college-51c87fb04eab
-canonical_url: https://medium.com/engagement-lab-emerson-college/apply-now-for-civic-media-art-practice-ma-program-at-emerson-college-51c87fb04eab
-title: 'Apply Now for Civic Media: Art & Practice MA Program at Emerson College (Deadline:
-    March 1st)'
-subtitle: The application deadline is fast approaching for admission to the Engagement
-    Lab @ Emerson College’s master of arts program — Civic Media…
-slug: apply-now-for-civic-media-art-practice-ma-program-at-emerson-college
-description: ''
-tags:
-    - education
-    - tech
-author: EL_News
-username: el-news
----
-
 # Apply Now for Civic Media: Art & Practice MA Program at Emerson College (Deadline: March 1st)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__rlNq6v3EzAVWQ25SGsiHQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__rlNq6v3EzAVWQ25SGsiHQ.png)
 
 The application deadline is fast approaching for admission to the [Engagement Lab @ Emerson College](http://elab.emerson.edu/)’s master of arts program — [Civic Media: Art & Practice](http://elab.emerson.edu/programs/cmap/). The 12-month program will give students the opportunity to experiment with an array of modalities — from digital games to interactive art and participatory design to organizational capacity building — to launch their own thesis project in collaboration with real world partners, locally and internationally. Applications are currently being accepted. **Anyone who wishes to be considered for fellowship funding should [apply online](http://www.emerson.edu/academics/graduate-degrees) by March 1, 2016**.
 
@@ -29,7 +13,7 @@ So, what does Civic Media encompass? It’s a wide-ranging category that is curr
 
 Additionally, graduate students interested in the education field or global development work will have the opportunity to serve as teaching assistants at the [Salzburg Academy of Media and Global Change](http://salzburg.umd.edu/) in Austria. During three intensive weeks, undergraduates from all over the world prototype civic media projects in a program that emphasizes how culture, media, and technology can impact social movements and civic life and governance. The experience provides CMAP graduate students the unique opportunity to teach others what they have learned, a skill core to pedagogical mission of the CMAP program.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_XVbtiAT8fbaxtiUnVxo5_g.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_XVbtiAT8fbaxtiUnVxo5_g.png)
 
 Anyone interested in learning more about the CMAP program or applying should reach out to Christina Wilson at the Engagement Lab (christina at elab dot emerson dot edu). Prospective students can also request more information about graduate studies at Emerson College and find out how to apply online at: [http://www.emerson.edu/academics/graduate-degrees](http://www.emerson.edu/academics/graduate-degrees).
 

@@ -1,21 +1,3 @@
----
-url: https://medium.com/make-the-breast-pump-not-suck-hackathon/its-time-for-us-to-win-36d39083c60c
-canonical_url: https://medium.com/make-the-breast-pump-not-suck-hackathon/its-time-for-us-to-win-36d39083c60c
-title: It’s Time for Us to Win
-subtitle: By Jennifer Roberts, Chair of the Advisory Board, Equity & Inclusion Lead
-    for Make the Breast Pump Not Suck
-slug: its-time-for-us-to-win
-description: ''
-tags:
-    - breastfeeding
-    - breastfeedinginnovation
-    - postpartum
-    - systems-change
-    - hackathons
-author: EL_News
-username: el-news
----
-
 # It’s Time for Us to Win
 
 By Jennifer Roberts, Chair of the Advisory Board, Equity & Inclusion Lead for Make the Breast Pump Not Suck
@@ -30,13 +12,13 @@ And though it was never easy, I recognize I have some privilege here. I had exce
 
 > Our expensive, failing, inequitable healthcare system fueled by systemic racism has kept many women from feeling empowered to make a decision like the one I made. A decision that essentially saved my daughter’s life.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__vKt_pSi7tscMY1Q8BkPsQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__vKt_pSi7tscMY1Q8BkPsQ.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_MI81U-s5yiYGfKf5gL5IQg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_MI81U-s5yiYGfKf5gL5IQg.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_l7uRs8SHfT-nkGndIr9Kdw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_l7uRs8SHfT-nkGndIr9Kdw.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_S0rdQko6fpymtmW7-KSkOQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_S0rdQko6fpymtmW7-KSkOQ.jpeg)
 
 I’ve watched as Serena Williams, arguably one of the greatest athletes of our time, [shared her story](https://qz.com/1177004/serena-williamss-terrifying-childbirth-story/) of fighting to save her own life after her daughter’s delivery. And I hear of poor moms of color who aren’t given information on breastfeeding because it’s assumed (or decided for them) that breastfeeding isn’t something they desire to do. I’ve seen stories of middle class mothers, much like myself, who can’t afford to hire a doula to advocate for them so they try their best to advocate for themselves. Even being rich and [accomplished doesn’t save us](https://www.propublica.org/article/nothing-protects-black-women-from-dying-in-pregnancy-and-childbirth). So, many times, most times if we’re honest, for parents who look like me the weight of prejudice becomes too much for some of us to bear and we don’t breastfeed, don’t advocate and many times, we [don’t live](https://www.npr.org/2017/12/07/568948782/black-mothers-keep-dying-after-giving-birth-shalon-irvings-story-explains-why) to tell about it.
 

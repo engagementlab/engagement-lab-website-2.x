@@ -1,26 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/how-a-play-based-curriculum-transforms-students-into-hygiene-advocacy-superheroes-6818819a93ff
-canonical_url: https://medium.com/engagement-lab-emerson-college/how-a-play-based-curriculum-transforms-students-into-hygiene-advocacy-superheroes-6818819a93ff
-title: How A Play-Based Curriculum Transforms Students Into Hygiene Advocacy Superheroes
-    |…
-subtitle: As Santhoshini walked into her fourth-grade classroom, she noticed that
-    smartphones, computers, and a projector had replaced the course…
-slug: how-a-play-based-curriculum-transforms-students-into-hygiene-advocacy-superheroes
-description: ''
-tags:
-    - education
-    - hygiene
-    - pedagogy
-    - sanitation
-author: EL_News
-username: el-news
----
-
 # How A Play-Based Curriculum Transforms Students Into Hygiene Advocacy Superheroes | #BeatGermsWithBheem
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_B-wmYklD0aE1k1NIEWXklw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_B-wmYklD0aE1k1NIEWXklw.png)
 
-![Santhoshini, one of the students who participated in our 2018 pilot program.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_kyP_AhCsz2vfpQrx8p8JCg.png)
+![Santhoshini, one of the students who participated in our 2018 pilot program.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_kyP_AhCsz2vfpQrx8p8JCg.png)
 
 _As Santhoshini walked into her fourth-grade classroom, she noticed that smartphones, computers, and a projector had replaced the course materials she would normally find at her table. Once all the students settled down, the teacher said the magic words — “Today, we are going to play some games and watch videos!” — and introduced the excited students to a new program called_ [Hygiene with Chhota Bheem](https://elab.emerson.edu/hygiene/)\*.
 
@@ -28,13 +10,13 @@ _As Santhoshini walked into her fourth-grade classroom, she noticed that smartph
 
 Over the next four weeks, Santhoshini played games that taught her how germs make us sick when we don’t wash our hands with soap, chanted spells that helped her learn the steps of proper handwashing and toilet use, and viewed videos and storybooks where Chhota Bheem (her favorite cartoon character) and his friends defeated the evil Germ Wizard. She learned healthy hygiene habits while strengthening her reading skills, and playing and learning in groups gave her the confidence to adapt all this knowledge to her everyday life.\*
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-qxRn9GjxP_ggqWQlopOxQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-qxRn9GjxP_ggqWQlopOxQ.png)
 
 When developing the _Hygiene with Chhota Bheem_ learning program, our team faced a unique challenge: proper handwashing and toilet use techniques are extremely important, but for many young people, these subjects can be uncomfortable, gross, or embarrassing to talk about. What to do?
 
 Over time, and with rigorous testing, we found that a focus on a **play-based, immersive pedagogical model** that encourages learning through games, experiential activities, and storytelling, was extremely effective at breaking down stigma and transforming hygiene attitudes and behaviors.
 
-![Students gather around as a teacher reads from a Hygiene with Chhota Bheem storybook.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_QVjX5MAA0jq7VddWUh8RcA.jpeg)
+![Students gather around as a teacher reads from a Hygiene with Chhota Bheem storybook.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_QVjX5MAA0jq7VddWUh8RcA.jpeg)
 
 Participatory activities like the ones featured in _Hygiene with Chhota Bheem_ provide an opportunity for young learners like Santhoshini to use their knowledge, skills, and life experiences to analyze sanitation issues both individually and as a group in a fun and approachable way. Additionally, these participatory activities enable learners to identify and circumvent their own barriers to learning about health and hygiene practices, better enabling them to become hygiene advocates for themselves and their communities.
 
@@ -48,7 +30,7 @@ _Hygiene with Chhota Bheem_ is a purposeful play experience that facilitates dee
 
 And by collaborating with their peers to achieve hygiene goals and advocating about better hygiene practices to their communities, children who participate in the program become more community-minded, and therefore more critical and active citizens.
 
-![Students watch Hygiene with Chhota Bheem story videos on tablets.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_UFX4QqJKk4cJEap1y6oABA.jpeg)
+![Students watch Hygiene with Chhota Bheem story videos on tablets.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_UFX4QqJKk4cJEap1y6oABA.jpeg)
 
 # Transmedia Storytelling
 
@@ -86,7 +68,7 @@ _Hygiene with Chhota Bheem_ helps children develop the knowledge, attitudes, and
 
 By showing them how Bheem and his friends advocate to their community, and helping them to emulate that advocacy, participants gain the skills to demonstrate and defend their learnings and ideas by problem-solving with their family and friends.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-qxRn9GjxP_ggqWQlopOxQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-qxRn9GjxP_ggqWQlopOxQ.png)
 
 _Once Santhoshini understood the importance of washing hands with soap and using a toilet, she began convincing her parents that they needed to build a toilet at home. She even used her knowledge to convince her grandmother to stop defecating in the open, something she had done for most of her life!_
 

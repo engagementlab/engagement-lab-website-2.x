@@ -1,20 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/performing-solutions-a-dramatic-approach-to-gun-violence-prevention-th372-db6823d5c360
-canonical_url: https://medium.com/engagement-lab-emerson-college/performing-solutions-a-dramatic-approach-to-gun-violence-prevention-th372-db6823d5c360
-title: 'Performing Solutions: A Dramatic Approach to Gun Violence Prevention (TH372)'
-subtitle: Written by Destiny Murray
-slug: performing-solutions-a-dramatic-approach-to-gun-violence-prevention-th372
-description: ''
-tags: []
-author: EL_News
-username: el-news
----
-
 # **Performing Solutions: A Dramatic Approach to Gun Violence Prevention (TH372)**
 
 Written by Destiny Murray
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sIuPjBEH0fC5Sao17EWFMw.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_sIuPjBEH0fC5Sao17EWFMw.png)
 
 Speaking with [Dana Edell](https://www.emerson.edu/faculty-staff-directory/dana-edell), instructor of TH372 and assistant professor at Emerson College, helped shine a light on what studio courses are all about within the [Transforming Narratives of Gun Violence](https://www.transformnarratives.org/) initiative.
 

@@ -1,18 +1,6 @@
----
-url: https://medium.com/@el-news/alumna-spotlight-a49d4bd0242d
-canonical_url: https://medium.com/@el-news/alumna-spotlight-a49d4bd0242d
-title: Alumna Spotlight
-subtitle: Interview with Samantha Viotty
-slug: alumna-spotlight
-description: ''
-tags: []
-author: EL_News
-username: el-news
----
-
 # Alumna Spotlight
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WcHgJIK0wcdDzns2H01sWw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_WcHgJIK0wcdDzns2H01sWw.jpeg)
 
 **Name** Samantha (Sam) Viotty ‘17
 

@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/horizontal-networking-and-the-music-of-idle-no-more-899f66504e20
-canonical_url: https://medium.com/civic-media-project/horizontal-networking-and-the-music-of-idle-no-more-899f66504e20
-title: Horizontal Networking and the Music of Idle No More
-subtitle: Liz Przybylski (Northwestern University)
-slug: horizontal-networking-and-the-music-of-idle-no-more
-description: ''
-tags:
-    - social-media
-    - community-and-action
-    - music
-author: EL_News
-username: el-news
----
-
 # Horizontal Networking and the Music of Idle No More
 
 ### *Liz Przybylski (*Northwestern University)
@@ -29,41 +14,41 @@ Participants in #IdleNoMore call attention to movement concerns through messages
 
 Following the music video’s circulation on Twitter demonstrates how users shape their collective identity through re-manifesting a video that became symbol for a larger movement (Kurzman 2012). At the height of #IdleNoMore during the winter of 2012–2013, Drezus used his own Twitter account to let followers know about the song before it was released:
 
-![Figure 1: Dec 22, 2012]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-FZytc1oevQ5uEPMwMsDkw.png)
+![Figure 1: Dec 22, 2012](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_-FZytc1oevQ5uEPMwMsDkw.png)
 
 Then, other active users previewed the song:
 
-![Figure 2: Dec 25, 2012]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_aIlhJ0kqMkoxvJhlfBE7oQ.png)
+![Figure 2: Dec 25, 2012](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_aIlhJ0kqMkoxvJhlfBE7oQ.png)
 
 Once released, Twitter participants commented on the video:
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PJvvYd45DGF6zVtUs2g5UQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_PJvvYd45DGF6zVtUs2g5UQ.png)
 
-![Figure 3: Jan 11, 2013]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_V4QYBu_eOi0bVuO9kFHuMQ.png)
+![Figure 3: Jan 11, 2013](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_V4QYBu_eOi0bVuO9kFHuMQ.png)
 
 In response, other users re-tweeted and set the tweet as a favorite, sharing it to their networks as well:
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Eow_Vxy7bKP_uD0gGqgIlQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Eow_Vxy7bKP_uD0gGqgIlQ.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_slbTKFy5p2_LgsPT3maSGg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_slbTKFy5p2_LgsPT3maSGg.png)
 
 As the number of uses of the IdleNoMore hashtag decreased into winter and early spring, individuals tweeted this video with messages to stay inspired, sometimes incorporating #staystrong:
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xn9U7JK7Y23AyYT17nwNyA.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xn9U7JK7Y23AyYT17nwNyA.png)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Km_yRH3LUj0i1W_RlFcZ8g.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Km_yRH3LUj0i1W_RlFcZ8g.png)
 
 There were also efforts to create new enthusiasm through campaigns like Sovereignty Summer. In May, INM tweeted this video with a message to engage activists for summer events:
 
-![Figure 6: May 26, 2013]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_k6vP2Rqsz8fedEZvJp3zlw.png)
+![Figure 6: May 26, 2013](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_k6vP2Rqsz8fedEZvJp3zlw.png)
 
 Users commented on how the video became an anthem over time:
 
-![Figure 7: Jun 7, 2013]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nsKW_Z_M4U4aVTJTO7y-cA.png)
+![Figure 7: Jun 7, 2013](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_nsKW_Z_M4U4aVTJTO7y-cA.png)
 
 In August 2013, the video once again surged as the Aboriginal Peoples Choice Music Awards created a buzz around Indigenous popular music. Drezus, who won a 2013 award for the album* Red Winter*, spoke about ongoing treaty concerns when he walked the red carpet for the awards ceremony. After this appearance, INM tweeted the video “Red Winter” once again.
 
-![Figure 8: 20 Aug, 2013]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_9XFHBlTizhF8IbCsZY8u-A.png)
+![Figure 8: 20 Aug, 2013](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_9XFHBlTizhF8IbCsZY8u-A.png)
 
 The music video’s circulation required participation from many actors who tweeted links to the video, and after watching it online, left comments and shared it further. Beyond participants who acted in the filming of the music video, activists virtually passed the video on to friends and community members, attaching their own commentary while doing so. People who circulate a music video through social networks participate in the life of the song and help determine who hears its message. Online commentators interpret the music and, as evidenced online, the original artists and producers reply to these posts (This music video also had an offline life, playing for example in a film festival. While connections between online and offline organizing extend beyond the scope of this case study, it should be noted that the circulation of this online material had offline resonances).
 

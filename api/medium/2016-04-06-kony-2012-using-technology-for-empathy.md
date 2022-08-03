@@ -1,31 +1,16 @@
----
-url: https://medium.com/civic-media-project/kony-2012-using-technology-for-empathy-8e8ae19c2f7a
-canonical_url: https://medium.com/civic-media-project/kony-2012-using-technology-for-empathy-8e8ae19c2f7a
-title: 'Kony 2012: Using Technology for Empathy'
-subtitle: Margie Dillenburg (Former Chief Operations Officer, Invisible Children)
-slug: kony-2012-using-technology-for-empathy
-description: ''
-tags:
-    - uganda
-    - social-justice
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # Kony 2012: Using Technology for Empathy
 
 ### Margie Dillenburg (Former Chief Operations Officer, Invisible Children)
 
 The term empathy has recently been on the minds of philosophers (Krznaric 2012), neurologists (Decety and Ickes 2009), health care professionals (Spiro 1992; VanHooft 2011), social workers (Gerdes, Importance of Empathy for Social Work Practice: Integrating New Science 2011), educators (Brooks 2009; Endacott 2010; Yilmaz 2007), and in the media (First Read Minute 2014). Empathy, though simply defined as one’s ability to comprehend the situation of another, is a complex process of the mind and heart (Gerdes 2011; Davis 1980). Findings connect it to a myriad of pro-social outcomes such as helping behavior (Graziano, Habashi and Sheese 2007), cooperating skills, self-esteem, and civic engagement (Noddings 2002). It also has inverse associations with bullying, racism, depression, and aggression (Legault, Gutsell and Inzlict 2011). In education particularly, there has been an emerging focus on building “21st Century Skills,” increasing the spotlight on empathy building in schools (Framework for 21st Century Learning 2010).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__RcvPvP4aOaQo-Rp8BxACQ.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1__RcvPvP4aOaQo-Rp8BxACQ.png)
 
 These 21st Century Skills require students to cooperate and communicate across cultural lines, to have a command of technology, and to demonstration imaginative problem solving skills, all of which relate to empathy. They are also represented in the engagement model of [\*Kony 2012](http://invisiblechildren.com/kony-2012/)* and its parent organization, Invisible Children(Russell 2012). For this reason [*Invisible Children*](https://www.youtube.com/watch?v=gsPI_fhxib4) was a fixture in many schools prior to the release of *Kony 2012.\* Educators identified Invisible Children’s engagement programs as a way to teach 21st Century skills and empathy (Kligler-Vilenchik and Shresthova 2012).
 
 > > This viral phenomenon provides an opportunity to examine the opportunities when technology, film, and sound educational pedagogy are used to engage millennials’ empathic potential.
 
-![Listed are the top 15 viral videos, represented by millions of views. Kony 2012 is the only of the videos of serious content, and also at least 20 minutes longer than each of the other videos represented. This offers evidence that millennials can engage in content-rich media consumption when that media is strategically engaging. Educational or instructional content can be used to impart curricular goals such as empathy.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_T2AkT6ixxaYHxlgJcHkKkQ.png)
+![Listed are the top 15 viral videos, represented by millions of views. Kony 2012 is the only of the videos of serious content, and also at least 20 minutes longer than each of the other videos represented. This offers evidence that millennials can engage in content-rich media consumption when that media is strategically engaging. Educational or instructional content can be used to impart curricular goals such as empathy.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_T2AkT6ixxaYHxlgJcHkKkQ.png)
 
 \*For those unfamiliar with Invisible Children, or need a reminder of what happened when Kony 2012 went viral, this figure to the left gives a visual and numerical overview. It represents a breakdown of Kony 2012’s conception, execution, life-span, and results, as reported by Invisible Children.
 

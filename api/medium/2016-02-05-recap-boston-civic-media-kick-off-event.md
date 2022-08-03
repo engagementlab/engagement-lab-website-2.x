@@ -1,17 +1,3 @@
----
-url: https://medium.com/engagement-lab-emerson-college/recap-boston-civic-media-kick-off-event-9c85a8145c9c
-canonical_url: https://medium.com/engagement-lab-emerson-college/recap-boston-civic-media-kick-off-event-9c85a8145c9c
-title: 'Recap: Boston Civic Media Kick-off Event'
-subtitle: 'Live-blogged by: Renee Siobhan'
-slug: recap-boston-civic-media-kick-off-event
-description: ''
-tags:
-    - journalism
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
 # Recap: Boston Civic Media Kick-off Event
 
 _Live-blogged by: Renee Siobhan_
@@ -43,14 +29,14 @@ To address the question of “What is Civic Media?” Erhardt approaches it from
 
 In order to ensure these values translate into the project at hand, he emphasized that “Participatory civics demands participatory design.” Erhardt’s current project [Promise Tracker](https://civic.mit.edu/promise-tracker) explores the question, “how can citizens hold elected leaders accountable for promises that they made during the campaign season?” Promise Tracker is a tool currently being piloted in Brazil, allowing citizens to prioritize issues most important to them. They are able to see the origin of a promise, participate in collecting data and track the promises politicians make taking the necessary action if they are not fulfilled. The project enables young people to become more active and engaged members in their own community, surveying, recording data, and Erhardt says, “making data to make change, not just making media.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_GMNzLX1tWIzYFM38.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_GMNzLX1tWIzYFM38.jpg)
 
 By building a technology that is able to facilitate change in meaningful ways, we think this is one way we can contribute to building community here at Boston Civic Media.
 
 [\*\*Sara Wylie](http://www.northeastern.edu/cssh/faculty/sara-wylie) from Northeastern University- Public Lab\*\*
 Sara investigates the political heart of civic media work.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_6b-8ddFNFOrBaOwb.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_6b-8ddFNFOrBaOwb.jpg)
 
 **_“Thus we seek to bestir the people into an awareness of their own condition, provide inspiration for their thoughts and rouse them to pursue their true insights”_**
 
@@ -71,7 +57,7 @@ The “_civic_” in Civic Media is not about outcomes, but about process and po
 
 Eric and Paul co-edited a book, [Civic Media: Technology, Design, Practice (2016).](https://mitpress.mit.edu/books/civic-media) It is a collection of thematic essays to frame the idea of Civic Media. The book includes 19 chapters, 25 case studies, and brings in scholars and practitioners from diverse fields, with the hope of finding a common language and purpose.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_XCnTK-cfQboPr-2K.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_XCnTK-cfQboPr-2K.jpg)
 
 Paul notes that in order to be relevant, it needs to be theoretically informed. To make the theories from the book come to life, Paul and Eric have received many short case studies that mirror sections in the book, presented as an extension of the book and meant to activate ideas on politics, play and creativity, systems and design among others. The case studies can be found on the [Civic Media Project.](http://civicmediaproject.org/works/civic-media-project/index) The goal is to connect theory to practice by using case studies that are representative of real world accounts.
 
@@ -246,7 +232,7 @@ First Activity — write on sticky notes and post around the room
 
 Second activity — Start building map of the space — of partners you are with and who you would like to connect with. A Community partner map.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_upwPJlRUSoEXhOEt.jpg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_upwPJlRUSoEXhOEt.jpg)
 
 **Concluding Remarks**
 

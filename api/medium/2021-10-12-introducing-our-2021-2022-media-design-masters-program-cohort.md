@@ -1,26 +1,8 @@
----
-url: https://medium.com/engagement-lab-emerson-college/introducing-our-2021-2022-media-design-masters-program-cohort-4db77f8b6eac
-canonical_url: https://medium.com/engagement-lab-emerson-college/introducing-our-2021-2022-media-design-masters-program-cohort-4db77f8b6eac
-title: Introducing our 2021–2022 Media Design Masters’ Program Cohort
-subtitle: It’s a new academic session at Emerson College and the Media Design 2021–2022
-    cohort has been busy settling into the new post-pandemic…
-slug: introducing-our-2021-2022-media-design-masters-program-cohort
-description: ''
-tags:
-    - civic-media
-    - masters-degree
-    - media-design
-    - students
-    - student-life
-author: EL_News
-username: el-news
----
-
 # Introducing our 2021–2022 Media Design Masters’ Program Cohort
 
 It’s a new academic session at Emerson College and the Media Design 2021–2022 cohort has been busy settling into the new post-pandemic academic routines here at our Engagement Lab. This year, we have students coming from all over the world joining us.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_T9TzEoNQRei9BSm88Mg-rQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_T9TzEoNQRei9BSm88Mg-rQ.jpeg)
 
 **Xufan Hu**, originally from China, is a media designer and a filmmaker. He just graduated from American University and is excited to be bringing his creativity to our Media Design program. **Amy Zhang**, our second cohort student, is a writer, producer, and artist. She worked at the documentary theater company Ping Chong + Company for two years, before producing for Patriot Act with Hasan Minhaj. Over the pandemic, she started a series of writing workshops for Asian American writers, as well as created civic engagement tools for immigrant populations in NYC. The next cohort student, **Jiatao Cui**, comes from Xi’an, China. Jiatao also comes from a film background and is excited to apply his skill with visual storytelling to civic media. **Fatimah Yesuf**, joined us from Lagos, Nigeria. Fatimah’s undergraduate degree was in Mass Communication at the University of Lagos. Fatimah’s love for design brings her to Emerson as she would like to cultivate skills towards a career in Product Design. Originally from China, **Sharry Li** graduated from Boston University with a dual degree in Economics and Finance. Seeking to explore the truth about emerging media, she applied to the Media Design program at Emerson College. Sharry has been dancing for most of her life and is interested in using Virtual Reality to visualize dance experiences. **Aaron Stier-Cohen**, our last student of the 2021–2022 cohort, was born and raised just outside Boston. Aaron comes to us from the University of Pittsburgh with a background in journalism, pedagogy, and communication. We are super excited to see what this diverse group will bring to the table throughout this semester and beyond.
 

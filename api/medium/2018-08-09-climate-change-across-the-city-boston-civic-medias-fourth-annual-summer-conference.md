@@ -1,20 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/climate-change-across-the-city-boston-civic-medias-fourth-annual-summer-conference-93b27ecbee46
-canonical_url: https://medium.com/engagement-lab-emerson-college/climate-change-across-the-city-boston-civic-medias-fourth-annual-summer-conference-93b27ecbee46
-title: 'Climate Change Across The City: Boston Civic Media’s Fourth Annual Summer
-    Conference'
-subtitle: To confront the wicked problem of climate change, we must work together.
-slug: climate-change-across-the-city-boston-civic-medias-fourth-annual-summer-conference
-description: ''
-tags:
-    - climate-change
-author: EL_News
-username: el-news
----
-
 # Climate Change Across The City: Boston Civic Media’s Fourth Annual Summer Conference
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0iviqK95nyyMoX8ZxZ2p5Q.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_0iviqK95nyyMoX8ZxZ2p5Q.jpeg)
 
 **_To confront the wicked problem of climate change, we must work together._**
 

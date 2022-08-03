@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/hackathons-as-a-site-for-civic-iot-initial-insights-421acc22d388
-canonical_url: https://medium.com/civic-media-project/hackathons-as-a-site-for-civic-iot-initial-insights-421acc22d388
-title: 'Hackathons as a Site for Civic IOT: Initial Insights'
-subtitle: Carl DiSalvo (Georgia Institute of Technology) and Ken Anderson (Cultural
-  Transformations Lab at Intel)
-slug: hackathons-as-a-site-for-civic-iot-initial-insights
-description: ""
-tags:
-- hackathons
-- data-visualization
-- systems-and-design
-author: EL_News
-username: el-news
----
-
 # Hackathons as a Site for Civic IOT: Initial Insights
 
 ### Carl DiSalvo (Georgia Institute of Technology) and Ken Anderson (Cultural Transformations Lab at Intel)
@@ -32,18 +16,16 @@ The 2014 National Day of Civic Hacking thus served as a worthwhile site to proto
 
 Beyond being a site for ad-hoc design, what insights can be gleaned from this case study to reflect on the character of participation in civic hackathons?
 
-To begin with, in addition to UX as project management, we might acknowledge the role of UX in organizing a coalition of effort at the hackathon. In effect, the UX role made the practice technically tractable. One might argue this has an effect of stripping a civic practice into a mere set of design requirements. To an extent that is true. There was only minor engagement with foraging as a practice, or local food systems as an issue. But this minor engagement is not entirely problematic when it occurs in participation with a network of comment — a collective. In civic contexts we might want to realize a kind of collective engagement that includes but is not limited to individuals. *The individual participates in the collective. The collective participates in the issue.* This is not to suggest to that there is no individual responsibility. Nor is it an embrace of solutionism (Morozov 2013). Rather, it is recognition that the kinds of ad-hoc design practices that comprise civic hackathons require new appreciations for what constitutes civic engagement.
+To begin with, in addition to UX as project management, we might acknowledge the role of UX in organizing a coalition of effort at the hackathon. In effect, the UX role made the practice technically tractable. One might argue this has an effect of stripping a civic practice into a mere set of design requirements. To an extent that is true. There was only minor engagement with foraging as a practice, or local food systems as an issue. But this minor engagement is not entirely problematic when it occurs in participation with a network of comment — a collective. In civic contexts we might want to realize a kind of collective engagement that includes but is not limited to individuals. _The individual participates in the collective. The collective participates in the issue._ This is not to suggest to that there is no individual responsibility. Nor is it an embrace of solutionism (Morozov 2013). Rather, it is recognition that the kinds of ad-hoc design practices that comprise civic hackathons require new appreciations for what constitutes civic engagement.
 
 Civic hackathons provide a site and practice of ad-hoc design with the potential to contribute to new forms and modes of civics. How do we discover these forms? How do we appreciate these potentials without being seduced?
 
 # REFERENCES
 
-Morelli, Nicola. 2002. “Designing Product/Service Systems: A Methodological Exploration.” *Design Issues* 18 (3): 3–17.
+Morelli, Nicola. 2002. “Designing Product/Service Systems: A Methodological Exploration.” _Design Issues_ 18 (3): 3–17.
 
-Morozov, E. 2013. *To Save Everything, Click Here: The Folly of Technological Solutionism*.PublicAffairs.
+Morozov, E. 2013. _To Save Everything, Click Here: The Folly of Technological Solutionism_.PublicAffairs.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/program-director-paul-mihailidis-on-our-ma-in-media-design-same-mission-clearer-approach-ca673cdd96b4
-canonical_url: https://medium.com/engagement-lab-emerson-college/program-director-paul-mihailidis-on-our-ma-in-media-design-same-mission-clearer-approach-ca673cdd96b4
-title: 'Program Director Paul Mihailidis on our  MA in Media Design: Same Mission,
-    Clearer Approach'
-subtitle: 'In the Fall of 2016 Emerson College launched a new Master’s program in
-    Civic Media: Art & Practice. In developing our program, we focused…'
-slug: program-director-paul-mihailidis-on-our-ma-in-media-design-same-mission-clearer-approach
-description: ''
-tags:
-    - media-design
-    - graduate-school
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
 # Program Director Paul Mihailidis on our MA in Media Design: Same Mission, Clearer Approach
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_GhCFbgNsjMqU1lS4uvdK3A.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_GhCFbgNsjMqU1lS4uvdK3A.png)
 
 In the Fall of 2016 Emerson College launched a new Master’s program in Civic Media: Art & Practice. In developing our program, we focused on the elements and aspects that made our program unique, namely:
 
@@ -27,7 +10,7 @@ In the Fall of 2016 Emerson College launched a new Master’s program in Civic M
 
 -   Harnesses the creative processes that are involved in working with communities to solve problems
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_5ddGI9Oc9aZxy3RgrI42lA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_5ddGI9Oc9aZxy3RgrI42lA.jpeg)
 
 Housed in the Engagement Lab at Emerson, CMAP was born with an ambitious mission to be a graduate experience like none other. We wanted to teach students the design process of building media technologies, designs, and practices, that can have real world impact. The lab has been doing this for years, and so the pedagogical application of this was not difficult to see. Courses were built to teach students foundational knowledge in the emerging space of civic media, in how to work with communities, and in the design processes that are needed to develop prototypes. Those foundations were in place from the beginning, and still are today. Students chose thesis partners, and work on applied projects (read about them [here](https://medium.com/engagement-lab-emerson-college/this-years-cmap-cohort-leverage-technology-research-exhibit-civic-media-projects-82e1e5b362)) that they implemented and exhibited within the 12-month time period. Students also have the opportunity to participate in the Salzburg Academy on Media in Austria.
 

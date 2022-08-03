@@ -1,24 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-emily-baeza-on-mentorship-media-and-forging-her-own-path-c6bb756107f8
-canonical_url: https://medium.com/engagement-lab-emerson-college/cmap-student-spotlight-emily-baeza-on-mentorship-media-and-forging-her-own-path-c6bb756107f8
-title: 'CMAP Student Spotlight: Emily Baeza on Mentorship, Media, and Forging Her
-    Own Path'
-subtitle: Emily Baeza is a Masters candidate in the Civic Media Art and Practice (CMAP)
-    Program at Emerson College. She describes herself as a…
-slug: cmap-student-spotlight-emily-baeza-on-mentorship-media-and-forging-her-own-path
-description: ''
-tags:
-    - education
-    - civictech
-    - civic-media
-    - graduate-school
-author: EL_News
-username: el-news
----
-
 # CMAP Student Spotlight: Emily Baeza on Mentorship, Media, and Forging Her Own Path
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Qup1fkyLKdqL2NNPHDsAng.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_Qup1fkyLKdqL2NNPHDsAng.png)
 
 _Emily Baeza is a Masters candidate in the [Civic Media Art and Practice (CMAP) Program at Emerson College](https://www.emerson.edu/academics/media-design-ma).\*\*\*\* She describes herself as a passion-driven, data-informed storyteller and mentor. We sat down with Emily to learn more about her story, and what brought her all the way to Boston from Los Angeles, California._
 
@@ -34,7 +16,7 @@ Baeza credits her own experiences as a musician for not only giving her confiden
 
 After graduating from Whittier College in 2013 with a Bachelor’s Degree in Journalism, Baeza became involved in the service organizations [AmeriCorps](https://www.nationalservice.gov/programs/americorps) and [City Year](https://www.cityyear.org/).
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1Pfi4NLyTDGtIDvIq7JmjA.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1Pfi4NLyTDGtIDvIq7JmjA.jpeg)
 
 “I didn’t think of myself as being educator or someone who would be working with youth particularly, but I really loved the service experience that [these organizations] were going to provide, and so I did my first service year and then I ended up doing a second service year.”
 
@@ -44,7 +26,7 @@ Baeza recognizes that the success of programs like City Year and Las Fotos Proje
 
 “I’ve worked as a marketing professional, and it’s interesting being able to step in both worlds and think about ‘how can I shape this one person’s experience?’ I think that kind of ties into what we’re doing now in CMAP, when we’re designing for the margins and thinking about building empathy and how that’s step one. You can’t enter these spaces with a savior complex. If you’re truly there to help make something better, it has to be able to come from the people you are serving. I am just there to help facilitate, or be a catalyst, for action. You can’t expect that you are going to solve something.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_z29o-jPBZT88bQ28sA2RXg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_z29o-jPBZT88bQ28sA2RXg.jpeg)
 
 “There are some students that I have kept in touch with, and there are some that I haven’t. It’s not about them remembering me or being in touch with me, it’s about them being able to have the confidence to navigate more spaces without me…and feel equipped to continue the work on their own ” For Baeza, that’s the most rewarding part.
 
@@ -56,7 +38,7 @@ For Baeza, social media isn’t just about sharing content, it’s about sharing
 
 “I feel like social media is kind of on that pipeline of ‘if this then that, if this then that.’ If it wanted to tell stories then I had to learn how to type them up, and I had to be able to learn how to put them into something that could be delivered, and then I had to also figure out some way to get the photos to tell that story. That kind of snowballed into me learning photography, learning design, learning video, with all of the intention of telling stories.”
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_kfVSw20mZ5M16djmX5VRUw.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_kfVSw20mZ5M16djmX5VRUw.jpeg)
 
 Before Baeza came to Boston, she had her arm adorned with a tattoo of a California poppy to remind her of her family origins in California and Mexico, and the indigenous lands and people that came even before those territories were created. “Being out here, not seeing a lot of cacti, experiencing a different climate is just something that touches me on a very personal level. My skin was made for me to exist somewhere very different from here. My skin is a constant reminder [for me] that I made this decision to be here.”
 

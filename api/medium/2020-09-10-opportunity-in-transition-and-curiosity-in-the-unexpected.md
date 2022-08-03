@@ -1,23 +1,6 @@
----
-url: https://medium.com/engagement-lab-emerson-college/opportunity-in-transition-and-curiosity-in-the-unexpected-6c282f712da
-canonical_url: https://medium.com/engagement-lab-emerson-college/opportunity-in-transition-and-curiosity-in-the-unexpected-6c282f712da
-title: Opportunity in Transition and Curiosity in the Unexpected
-subtitle: Since the Engagement Lab’s founding in 2010, we have sought to explore the
-    intersection of digital culture and civic life, designing tools…
-slug: opportunity-in-transition-and-curiosity-in-the-unexpected
-description: ''
-tags:
-    - civic-media
-    - civic-design
-    - civictech
-    - civic-engagement
-author: EL_News
-username: el-news
----
-
 # Opportunity in Transition and Curiosity in the Unexpected
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oulN4T-E6Iuui-VL1M8T0Q.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oulN4T-E6Iuui-VL1M8T0Q.jpeg)
 
 Since the Engagement Lab’s founding in 2010, we have sought to explore the intersection of digital culture and civic life, designing tools, processes and resources for civic institutions to effectively engage publics in the pursuit of a more equitable future. In 2016, we launched the Civic Media Art and Practice graduate program, which brought civic media into the classroom, incorporating principles of participatory design and research that influenced the program’s shift into the current Media Design MA program. Throughout each of these transitions, the core mission of the Engagement Lab has remained: to uplift and center marginalized voices in conversations about civic life.
 

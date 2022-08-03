@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/the-yosoy132-movement-in-mexico-3d6be97034a6
-canonical_url: https://medium.com/civic-media-project/the-yosoy132-movement-in-mexico-3d6be97034a6
-title: 'The #YoSoy132 movement in Mexico'
-subtitle: Emiliano Trere (Autonomous University of Querétaro, Mexico)
-slug: the-yosoy132-movement-in-mexico
-description: ''
-tags:
-    - hashtag-activism
-    - mexico
-    - community-and-action
-author: EL_News
-username: el-news
----
-
 # The #YoSoy132 movement in Mexico
 
 ### Emiliano Trere (Autonomous University of Querétaro, Mexico)
@@ -23,7 +8,7 @@ The movement #YoSoy132 emerged less than two months before the Mexican elections
 
 On Friday, May 11, 2012, EPN arrived at the Universidad Iberoamericana in Mexico City to give a conference. During the candidate’s presentation, students began to question him with posters; the questions raised were regarding the police repression in Atenco that occurred in 2006 when EPN was governor of the state of Mexico. When EPN justified Atenco’s violent repression, tension rose and he had to leave the university surrounded by a security cordon. The triggers that led students to organize the movement were the subsequent statements released by some PRI politicians who qualified students as thugs, violent, fascist, and intolerant — going so far as to deny their affiliation with the university. Mexican television networks and the newspaper chain Organización Editorial Mexicana presented versions of the event where EPN was portrayed as a hero against a boycott organized by the left.
 
-![The 12 May 2012 cover of the Mexican newspaper El Sol de México (The Sun of Mexico) of the Organización Editorial Mexicana (Mexican Editorial Organization) reads “Success of Peña, despite orchestrated attempt of boycott.”]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ime5rEUABOK-8Ae4ghrAng.png)
+![The 12 May 2012 cover of the Mexican newspaper El Sol de México (The Sun of Mexico) of the Organización Editorial Mexicana (Mexican Editorial Organization) reads “Success of Peña, despite orchestrated attempt of boycott.”](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_ime5rEUABOK-8Ae4ghrAng.png)
 
 Facing manipulative media coverage, 131 university students published a video on YouTube:
 
@@ -34,7 +19,7 @@ _131 Alumnos de la Ibero responden / YouTube_
 
 These 11 minutes are powerful because they build an event where individual responsibility is assumed and students talk from a “place of identity” (Reguillo, 2012), contrasting the official media discourse, reclaiming their agency, and using mass self-communication (Castells 2009) to trigger collective identification processes. The phrase “131 Students from Ibero” quickly became one of the [trending topics on Twitter in Mexico and worldwide](http://capitalsocialmexico.com/2012/05/15/mas-sobre-la-viralizacion-del-tt-sobre-la-ibero-que-dio-la-vuelta-al-mundo/). Other students began to join the protest, stating, “I’m one more of you,” “I’m 132,” thus leading to the creation of the Twitter hashtag #YoSoy132, which went on to identify the whole movement.
 
-![The YouTube video that started it all: 131 students of the Universidad Iberoamericana respond to the critiques by exposing their university credentials.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EAC78PhwGjMbdQ6yKmD8Dg.png)
+![The YouTube video that started it all: 131 students of the Universidad Iberoamericana respond to the critiques by exposing their university credentials.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_EAC78PhwGjMbdQ6yKmD8Dg.png)
 
 # Media democratization and Mexican telecracy
 
@@ -51,17 +36,17 @@ This emphasis on media democratization is perfectly understandable in the Mexica
 
 Activists of #YoSoy132 also created their own citizens’ media (Rodriguez 2001), such as magazines, gazettes, alternative radio stations, and fanzines.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YGan-awDdwWhDNPKPLW-jg.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_YGan-awDdwWhDNPKPLW-jg.jpeg)
 
-![The first (left) and second (right) number of the Megáfon132 gazette of #YoSoy132.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AP0_enSgI8pCbzshz4Pyjg.jpeg)
+![The first (left) and second (right) number of the Megáfon132 gazette of #YoSoy132.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AP0_enSgI8pCbzshz4Pyjg.jpeg)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_q98yKArfNB92Au97bCfxBQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_q98yKArfNB92Au97bCfxBQ.jpeg)
 
-![The number 0 (left) and 1 (right) of the Cientotreintaydos (132) magazine.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_pZEa3sQ-YbHpE232zoNwIQ.jpeg)
+![The number 0 (left) and 1 (right) of the Cientotreintaydos (132) magazine.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_pZEa3sQ-YbHpE232zoNwIQ.jpeg)
 
 Furthermore, the movement represented an occasion for young Mexican artists to apply their skills to the production of graffiti, posters, and performances; many of these artistic productions also signal the power of civic media to travel beyond the technical limitations of the online realm and infiltrate other territories, as the [creation of the HASHTAG magazine](http://www.revistahashtag.net/) and other forms of art indicate.
 
-![“Esperanza” (Hope), “Hope will always be more powerful than fear”, by artist Luis Emilio Lepine]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oj7p9R8C7Xp0-XVxTlIL7w.png)
+![“Esperanza” (Hope), “Hope will always be more powerful than fear”, by artist Luis Emilio Lepine](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oj7p9R8C7Xp0-XVxTlIL7w.png)
 
 #YoSoy132 is part of a cycle of contention (Tarrow 1998) that has shaken the world since 2011, from the Arab Spring to the Brazilian revolts. Like many of these uprisings, #YoSoy132 was mainly comprised of a young, urban, and networked middle class that successfully merged online and offline actions in order to fight against the worn mechanisms of contemporary neoliberal democracies. Its original trait has been situating the dangerous interconnections between media and politics as the central obstacle to the production of an informed and conscious citizenry.
 

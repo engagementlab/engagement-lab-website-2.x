@@ -1,24 +1,8 @@
----
-url: https://medium.com/civic-media-project/alternative-13-news-a-new-way-to-involve-young-citizens-in-ngdo-cooperation-work-through-social-dd7192c15055
-canonical_url: https://medium.com/civic-media-project/alternative-13-news-a-new-way-to-involve-young-citizens-in-ngdo-cooperation-work-through-social-dd7192c15055
-title: 'Alternative 13 News: A New Way to Involve Young Citizens in NGDO Cooperation
-    Work Through Social…'
-subtitle: José María Herranz de la Casa (niversity of Castilla-La Mancha, Spain)
-slug: alternative-13-news-a-new-way-to-involve-young-citizens-in-ngdo-cooperation-work-through-social
-description: ''
-tags:
-    - games
-    - mexico
-    - play-and-creativity
-author: EL_News
-username: el-news
----
-
 # Alternative 13 News: A New Way to Involve Young Citizens in NGDO Cooperation Work Through Social Media and Gaming
 
 ### *José María Herranz de la Casa (*niversity of Castilla-La Mancha, Spain)
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xM31K1iPigD2TtDnGugSOQ.jpeg)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xM31K1iPigD2TtDnGugSOQ.jpeg)
 
 Anesvad is a Spanish Non-Governmental Development Organization (NGDO). It is an independent group and a confessional whose aim is to promote and protect health as a fundamental human right. Currently, Anesvad is developing projects in 19 countries in the continents of Asia, Africa, and Latin America.
 
@@ -36,7 +20,7 @@ Players enrolled in the Alternative 13 News platform had to stand up for several
 
 There were collaborative challenges where players had to join others to solve a series of riddles in order to uncover a hidden plot (e.g. [Who Killed the Judge B. Perez?](http://www.alternativa13.com/node/322); [Where is Sara Beramendi?](http://www.alternativa13.com/node/504)). They also faced some dilemmas and challenges in the form of collective decision-making, which was resolved by a vote by all participants.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_KjAiI9otMcWmg0GVqPX20g.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_KjAiI9otMcWmg0GVqPX20g.png)
 
 Social organizations and NGOs are increasing social media use to reach citizens (Guo and Saxton 2013; Waters et al 2009; Nah and Saxton 2013) and this project is a clear example of such development. During those three weeks, Alternative 13 used social media ([Twitter](https://twitter.com/Alternativa_13), [Pinterest](http://www.pinterest.com/alternativa13/pistas-de-alternativa-13/), [Youtube](http://www.alternativa13.com/node/535) to [Wordpress](http://diariodeunaestudiantevirtual.wordpress.com/) and [Blogger](http://damianreinosa.blogspot.com.es/) blogs) to make content more dynamic. The news site was updated as the challenges were issued.
 

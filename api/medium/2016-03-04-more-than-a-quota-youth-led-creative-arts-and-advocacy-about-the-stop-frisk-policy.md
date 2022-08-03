@@ -1,19 +1,3 @@
----
-url: https://medium.com/civic-media-project/more-than-a-quota-youth-led-creative-arts-and-advocacy-about-the-stop-frisk-policy-5e3b49d876c7
-canonical_url: https://medium.com/civic-media-project/more-than-a-quota-youth-led-creative-arts-and-advocacy-about-the-stop-frisk-policy-5e3b49d876c7
-title: '“More Than a Quota”: Youth-led Creative Arts and Advocacy About the Stop &
-    Frisk Policy'
-subtitle: Jazmin Chavez (LatinoJustice PRLDEF), Sarwat Siddiqui, and Armando Somoza
-slug: more-than-a-quota-youth-led-creative-arts-and-advocacy-about-the-stop-frisk-policy
-description: ''
-tags:
-    - learning-and-engagement
-    - social-justice
-    - police
-author: EL_News
-username: el-news
----
-
 # “More Than a Quota”: Youth-led Creative Arts and Advocacy About the Stop & Frisk Policy
 
 ### *Jazmin Chavez (*LatinoJustice PRLDEF)_, Sarwat Siddiqui, and Armando Somoza_
@@ -36,7 +20,7 @@ New Yorkers were stopped by the NYPD over half a million times in 2012 and 5 mil
 
 Our youth have become producers of original media and have designed a social media campaign to capture and tell their stories. The HIVE NYC Learning Network , the MacArthur Foundation’s Digital Media and Learning Initiative , supported this collaboration between organizations to create new learning pathways and innovative education practices.
 
-![]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_XnUfGWozfUIvrL3FyAJsAg.png)
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_XnUfGWozfUIvrL3FyAJsAg.png)
 
 # Youth Participatory Politics: Media Makers, Movement Entrepreneurs
 
@@ -64,7 +48,7 @@ In December 2013, students presented “More Than A Quota: Our Experience, Our S
 
 # Digital Resources
 
-![Infographic]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8GYS7fcfSnCiDiTpsQxalQ.jpeg)
+![Infographic](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_8GYS7fcfSnCiDiTpsQxalQ.jpeg)
 
 **vimeo**:
 [![vimeo](http://i.vimeocdn.com/video/387691736_1280.jpg)](https://player.vimeo.com/video/55977221)

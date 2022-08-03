@@ -1,27 +1,10 @@
----
-url: https://medium.com/engagement-lab-emerson-college/engagement-lab-creates-game-based-curriculum-for-sanitation-project-in-india-fb3d33a068aa
-canonical_url: https://medium.com/engagement-lab-emerson-college/engagement-lab-creates-game-based-curriculum-for-sanitation-project-in-india-fb3d33a068aa
-title: Engagement Lab Creates Game-Based Curriculum for Sanitation Project in India
-subtitle: As of 2015, 20% of all global deaths from diarrhea or pneumonia in children
-    under five happen in India.¹ In Tamil Nadu, India, about 47% of…
-slug: engagement-lab-creates-game-based-curriculum-for-sanitation-project-in-india
-description: ''
-tags:
-    - india
-    - engagement
-    - games
-    - sanitation
-author: EL_News
-username: el-news
----
-
 # Engagement Lab Creates Game-Based Curriculum for Sanitation Project in India
 
-![Teachers pose after completing training to facilitate Hygiene with Chhota Bheem (Institute of Public Health, Poonamallee, Chennai, Tamil Nadu; 23 January 2018).]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_VOV5lxPp9_JGQn0G.jpeg)
+![Teachers pose after completing training to facilitate Hygiene with Chhota Bheem (Institute of Public Health, Poonamallee, Chennai, Tamil Nadu; 23 January 2018).](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_VOV5lxPp9_JGQn0G.jpeg)
 
 As of 2015, 20% of all global deaths from diarrhea or pneumonia in children under five happen in India.¹ In Tamil Nadu, India, about 47% of people practice open defecation, with rates as high as 80% in some districts of the state.² Systematic reviews also estimate that only 15% of people in India regularly practice handwashing with soap.³ Access to improved sanitation facilities (i.e. toilet use) and handwashing with soap are both interventions that are proven to greatly reduce diarrhea and pneumonia.
 
-![Children sing and chant steps of toilet use in one of the Hygiene with Chhota Bheem classroom activities.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bvdAQAHyL-VhHbfW.png)
+![Children sing and chant steps of toilet use in one of the Hygiene with Chhota Bheem classroom activities.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_bvdAQAHyL-VhHbfW.png)
 
 To address this, the Engagement Lab developed** Hygiene with Chhota Bheem**, a game-based curriculum that encourages handwashing with soap and toilet use among children ages 7–11 living in Tamil Nadu, India. The curriculum was developed in partnership with Green Gold Animation, the Indian Red Cross Society, the Mary Anne Charity Trust, and and a Working Group of NGOs and civil society groups dedicated to improving sanitation and hygiene in Tamil Nadu. It was playtested over several months with primary school children in Tamil Nadu.
 
@@ -33,7 +16,7 @@ Hygiene with Chhota Bheem shows children videos featuring _Bheem_, the protagoni
 
 From January 22nd–26th, **Eric Gordon, Executive Director of the Engagement Lab and Professor at Emerson College,** and **Mary Beth Dawson, Project Manager at the Engagement Lab,** visited Tamil Nadu to train teachers to implement the hygiene and sanitation curriculum. The curriculum is being tested with nearly 3,000 primary school children in a 30-school pilot study in Tiruvallur district, Tamil Nadu.
 
-![Children practice washing their hands after learning how to make soapy bottles and how to properly wash hands with soap.]https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_iO_WTpYlwJXTTBt6.png)
+![Children practice washing their hands after learning how to make soapy bottles and how to properly wash hands with soap.](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_iO_WTpYlwJXTTBt6.png)
 
 Teachers will implement **Hygiene with Chhota Bheem** for four weeks in February 2018. The Mary Anne Charity Trust (MACT) has partnered with the Engagement Lab to conduct surveys and observations of toilets and handwashing stations at participating schools at baseline and two weeks after the curriculum has ended. “Evaluating _Hygiene with Chhota Bheem_ in this pilot study will help us understand if the curriculum is effective in generating learning and behavior change among children,” said Dawson.
 

@@ -1,18 +1,3 @@
----
-url: https://medium.com/civic-media-project/iran-the-u-s-and-online-diplomacy-959f5b6541b6
-canonical_url: https://medium.com/civic-media-project/iran-the-u-s-and-online-diplomacy-959f5b6541b6
-title: Iran, the U.S., and Online Diplomacy
-subtitle: Saranaz Barforoush (University of Maryland)
-slug: iran-the-u-s-and-online-diplomacy
-description: ""
-tags:
-- iran
-- elections
-- community-and-action
-author: EL_News
-username: el-news
----
-
 # Iran, the U.S., and Online Diplomacy
 
 ### *Saranaz Barforoush (*University of Maryland)
@@ -25,7 +10,7 @@ For thirty-two years little changed for Iranians wanting greater access to and k
 
 The Obama administration felt politically empowered to differentiate between Iranians and their government because of the Iranian grassroots activism of the Green Movement in 2009. At home, the Movement did not achieve political success — Iranian President Ahmadinejad was sworn in after the disputed elections and authorities placed the leaders of the Green Movement, Mir Hossein Mousavi and Mehdi Karoubi, under house arrest. However, because of the scenes transmitted via social media of young men and woman marching the streets of Tehran and other major cities demanding the recount of their votes and other democratic rights, many Americans and Europeans began to see openings to engage with the public — via digital media.
 
->> Today most of the virtual U.S. embassy website mirrors that of brick-and-mortar American embassies.
+> > Today most of the virtual U.S. embassy website mirrors that of brick-and-mortar American embassies.
 
 Yet the space for Iranians does include some unique features for users — most intriguingly links to USAdarFarsi, the Farsi language social media divisions of the State Department. Via those links, which connect to Twitter, Facebook, YouTube, and other State Department social media channels, Iranian users can access information about the United States and its policies towards Iran.
 
@@ -40,8 +25,6 @@ The common message of the State Department virtual embassy and social media webs
 
 The goal of “civic media” is to “empower the public to engage within and beyond the people, places, and problems of their community.” Most everyday Iranians, those who only have access to the sites approved by their government, still blame the United States for the impact of sanctions in Iran. And most Americans — those who don’t speak Farsi — cannot engage on the USAdarFarsi sites. For all its innovation, a virtual embassy cannot make up for face-to-face or person-to-person interactions. Civic media can only stretch so far between enemy countries.
 
-*If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media).*
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
 
-[*The Engagement Lab @ Emerson College*](http://elab.emerson.edu)
-
-
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)
