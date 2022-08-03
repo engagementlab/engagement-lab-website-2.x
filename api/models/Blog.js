@@ -47,12 +47,6 @@ Blog.add({
         required: true,
         initial: true,
     },
-    image: {
-        label: 'Thumbnail',
-        type: Types.CloudinaryImage,
-        folder: 'homepage-2.0/news',
-        note: '',
-    },
     body: {
         type: Types.Markdown,
         required: true,
