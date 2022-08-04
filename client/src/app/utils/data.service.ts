@@ -209,4 +209,28 @@ export class DataService {
                 return throwError(error);
             });
     }
+
+    /**
+     Get news from Lab's newer CMS API 
+     * @function
+     * @returns Observable
+     * @param {string} key - Key for a single news item
+     */
+    public getNews(key: string = null): Observable<any> {
+        this.isLoading.next(true);
+
+        let url = environment.new_api_url + `/rest/news/${key ? key : ''}`;
+
+        return this.http
+            .get(url)
+            .map((res: any) => {
+                this.isLoading.next(false);
+
+                return res;
+            })
+            .catch((error: any) => {
+                this.isLoading.next(false);
+                return throwError(error);
+            });
+    }
 }
