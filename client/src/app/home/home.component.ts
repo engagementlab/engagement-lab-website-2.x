@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     public errors: any;
 
     public content: any;
+    public news: any;
 
     public latestEvent: any;
 
@@ -63,29 +64,30 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     async ngOnInit(): Promise<void> {
         const query = `
-            {
-                allAboutPages {
-                    tagline {
-                        html
+                    {
+                        allAboutPages {
+                            tagline {
+                                html
+                            }
+                        }
+                        recentEvents {
+                            name
+                            key
+                            date
+                            shortDescription
+                        }
                     }
-                }
-                recentEvents {
-                    name
-                    key
-                    date
-                    shortDescription
-                }
-                allNewsItems {
-                    title
-                    url
-                    image {
-                        public_id
-                    }
-                }
-            }
-        `;
+                `;
 
         this.content = await this.dataSvc.getSet('homepage', query);
+        this.dataSvc.getNews('recent').subscribe(
+            async (data: any) => {
+                this.news = data;
+            },
+            (error: any) => {
+                console.log(error);
+            },
+        );
 
         // Load particles effect after content render
         setTimeout(() => {

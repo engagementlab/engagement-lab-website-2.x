@@ -2,340 +2,328 @@
 @import '~src/styles/_mixins';
 
 a {
-  color: black;
-
-  &:visited {
     color: black;
-  }
 
-  &.view {
-
-    display: flex;
-    justify-content: flex-end;
-
-    h1 {
-      display: flex;
-
-      @include font-overpass;
-      font-size: 1em;
-      font-weight: 600;
-      letter-spacing: normal;
+    &:visited {
+        color: black;
     }
 
-    @include phones {
-      svg {
-        max-width: 16px;
-      }
-    }
+    &.view {
+        display: flex;
+        justify-content: flex-end;
 
-  }
+        h1 {
+            display: flex;
+
+            @include font-overpass;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: normal;
+        }
+
+        @include phones {
+            svg {
+                max-width: 16px;
+            }
+        }
+    }
 }
 
 #particles {
-  position: absolute;
-  max-width: 100%;
+    position: absolute;
+    max-width: 100%;
 }
 
 #intro {
+    padding-bottom: 12%;
 
-  padding-bottom: 12%;
+    h1 {
+        font-weight: 300;
+        @include pxtoem(32, 48);
 
-  h1 {
-    font-weight: 300;
-    @include pxtoem(32, 48);
+        @include phones {
+            padding: 0;
+        }
 
-    @include phones {
-      padding: 0;
+        span {
+            display: none;
+            opacity: 0;
+        }
+
+        a {
+            border-bottom: 1px solid black;
+        }
+
+        strong {
+            font-weight: 300;
+
+            &:nth-of-type(1) {
+                color: $mango;
+            }
+
+            &:nth-of-type(2) {
+                color: $tomato;
+            }
+
+            &:nth-of-type(3) {
+                color: $green-blue;
+            }
+        }
+
+        &.show {
+            span {
+                display: inline-block;
+            }
+        }
     }
 
-    span {
-      display: none;
-      opacity: 0;
+    @include keyframes(fade-tagline) {
+        0% {
+            background-size: 50%;
+        }
+
+        100% {
+            background-size: 30000%;
+        }
     }
 
-    a {
-      border-bottom: 1px solid black;
+    #tagline {
+        font-family: 'LunchtypeMedium';
+        @include pxtoem(28, 36);
+        line-height: 1.41;
+        letter-spacing: 0.5px;
+
+        #inner {
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        @include transition(clip-path, 0.5s, cubic-bezier(0.86, 0, 0.07, 1));
+
+        .cover {
+            position: absolute;
+            height: 100%;
+
+            background: rgb(255, 255, 255);
+        }
+
+        ::ng-deep p {
+            strong {
+                background: black;
+                animation: fade-tagline 2s cubic-bezier(0.23, 1, 0.32, 1) 0s 1
+                    forwards;
+
+                &:nth-child(1) {
+                    background: linear-gradient(90deg, $tomato 1%, black 1%);
+                    background-size: 50%;
+                    background-clip: text;
+                    animation-delay: 2.2s;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                &:nth-child(2) {
+                    background: linear-gradient(
+                        90deg,
+                        $green-blue 1%,
+                        black 1%
+                    );
+                    background-size: 50%;
+                    background-clip: text;
+                    animation-delay: 2.6s;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                &:nth-child(3) {
+                    background: linear-gradient(90deg, $mango 1%, black 1%);
+                    background-size: 50%;
+                    background-clip: text;
+                    animation-delay: 3.1s;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
     }
 
-    strong {
-      font-weight: 300;
-
-      &:nth-of-type(1) {
-        color: $mango;
-      }
-
-      &:nth-of-type(2) {
-        color: $tomato;
-      }
-
-      &:nth-of-type(3) {
-        color: $green-blue;
-      }
-    }
-
-    &.show {
-      span {
+    #button {
+        position: relative;
         display: inline-block;
-      }
-    }
-  }
+        width: 460px;
+        z-index: 2;
 
-  @include keyframes(fade-tagline) {
-    0% {
-      background-size: 50%;
-    }
+        opacity: 0;
 
-    100% {
-      background-size: 30000%;
+        @include transition(all, 0.2s, cubic-bezier(0.86, 0, 0.07, 1));
+        transform-origin: top center;
 
-    }
-  }
-
-  #tagline {
-
-    font-family: 'LunchtypeMedium';
-    @include pxtoem(28, 36);
-    line-height: 1.41;
-    letter-spacing: 0.5px;
-
-    #inner {
-      overflow: hidden;
-      opacity: 0;
-    }
-
-    @include transition(clip-path, .5s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
-
-    .cover {
-      position: absolute;
-      height: 100%;
-
-      background: rgb(255, 255, 255);
-    }
-
-    ::ng-deep p {
-
-      strong {
-        background: black;
-        animation: fade-tagline 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s 1 forwards;
-
-        &:nth-child(1) {
-          background: linear-gradient(90deg, $tomato 1%, black 1%);
-          background-size: 50%;
-          background-clip: text;
-          animation-delay: 2.2s;
-          -webkit-text-fill-color: transparent;
+        &.closed {
+            @include translate(0, -100%);
+            opacity: 0;
         }
 
-        &:nth-child(2) {
-          background: linear-gradient(90deg, $green-blue 1%, black 1%);
-          background-size: 50%;
-          background-clip: text;
-          animation-delay: 2.6s;
-          -webkit-text-fill-color: transparent;
+        @include phones {
+            width: 100%;
+        }
+    }
+
+    // MC Email form
+    #newsletter-wrap {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &.show {
+            display: flex;
         }
 
-        &:nth-child(3) {
-          background: linear-gradient(90deg, $mango 1%, black 1%);
-          background-size: 50%;
-          background-clip: text;
-          animation-delay: 3.1s;
-          -webkit-text-fill-color: transparent;
+        .error {
+            display: none;
+            opacity: 0;
+            @include transition(all, 0.4s, cubic-bezier(0.86, 0, 0.07, 1));
+
+            &.open {
+                display: block;
+                opacity: 1;
+            }
         }
-      }
     }
 
-  }
+    #newsletter {
+        @include translate(0, -100%);
+        justify-content: space-between;
+        width: 460px;
+        opacity: 0;
 
-  #button {
-    position: relative;
-    display: inline-block;
-    width: 460px;
-    z-index: 2;
+        @include transition(all, 0.4s, cubic-bezier(0.86, 0, 0.07, 1));
 
-    opacity: 0;
+        @include phones {
+            width: 100%;
+        }
 
-    @include transition(all, .2s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
-    transform-origin: top center;
+        &.open {
+            @include translate(0);
+            opacity: 1;
+        }
 
-    &.closed {
-      @include translate(0, -100%);
-      opacity: 0;
+        h3 {
+            font-size: 1em;
+        }
+
+        @include newsletter-form;
     }
-
-    @include phones {
-      width: 100%;
-    }
-
-  }
-
-  // MC Email form
-  #newsletter-wrap {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    &.show {
-      display: flex;
-    }
-
-    .error {
-      display: none;
-      opacity: 0;
-      @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
-
-      &.open {
-        display: block;
-        opacity: 1;
-      }
-    }
-  }
-
-  #newsletter {
-    @include translate(0, -100%);
-    justify-content: space-between;
-    width: 460px;
-    opacity: 0;
-
-    @include transition(all, .4s, cubic-bezier(0.860, 0.000, 0.070, 1.000));
-
-    @include phones {
-      width: 100%;
-    }
-
-    &.open {
-      @include translate(0);
-      opacity: 1;
-    }
-
-    h3 {
-      font-size: 1em;
-    }
-
-    @include newsletter-form;
-
-  }
-
 }
 
 #news-wrap {
-
-  background-color: black;
-  color: white;
-
-  padding: 2%;
-  margin-top: 17%;
-
-  a {
-    svg {
-      @include translate(0, -7px);
-
-      .arrow {
-        @include transition(transform, .2s, ease-in-out);
-      }
-    }
-
-    &:hover {
-      svg {
-        .arrow {
-          @include translate(15px, -15px);
-        }
-      }
-    }
-  }
-
-  a,
-  h1 {
+    background-color: black;
     color: white;
-  }
 
-  h1 {
-    font-size: 1.12em;
-  }
+    padding: 2%;
+    margin-top: 17%;
 
-  p {
-    @include font-overpass;
-    font-weight: 600;
-    font-size: 1.35em;
-    line-height: 1.38;
-    letter-spacing: 1.5px;
-  }
+    a {
+        svg {
+            .arrow {
+                @include transition(transform, 0.2s, ease-in-out);
+            }
+        }
 
-  #news {
-    padding-left: 2%;
-    padding-right: 6%;
-  }
-
-  .item {
-    @include phones {
-      padding: 0;
+        &:hover {
+            svg {
+                .arrow {
+                    @include translate(15px, -15px);
+                }
+            }
+        }
     }
-  }
 
+    a,
+    h1 {
+        color: white;
+    }
+
+    h1 {
+        font-size: 1.12em;
+    }
+
+    p {
+        @include font-overpass;
+        font-weight: 600;
+        font-size: 1.35em;
+        line-height: 1.38;
+        letter-spacing: 1.5px;
+    }
+
+    #news {
+        padding-left: 2%;
+        padding-right: 6%;
+    }
+
+    .item {
+        @include phones {
+            padding: 0;
+        }
+    }
 }
 
 #events {
+    margin-top: 10%;
 
-  margin-top: 10%;
-
-  @include phones {
-    margin-top: 35%;
-  }
-
-  .view {
-    svg {
-      @include transition(transform, .2s, ease-in-out);
+    @include phones {
+        margin-top: 35%;
     }
 
-    &:hover {
-      svg {
-        @include translate(15%);
-      }
-    }
-  }
+    .view {
+        svg {
+            @include transition(transform, 0.2s, ease-in-out);
+        }
 
-  h1 {
-    font-size: 1.12em;
-  }
-
-  h2 {
-    font-size: 2.7em;
-    font-weight: 400;
-    line-height: 1.07;
-    letter-spacing: 1.3px;
-
-    margin-top: 0;
-
-    @include mobile-only {
-      font-size: 1.5em;
-    }
-  }
-
-  .item {
-
-    // What a fustercluck of padding
-    &:not(.first) {
-      .columns {
-        margin-top: 5%;
-      }
+        &:hover {
+            svg {
+                @include translate(15%);
+            }
+        }
     }
 
-    &.first {
-      margin-top: 3%;
+    h1 {
+        font-size: 1.12em;
     }
 
-    .columns {
-      margin-bottom: 1%;
+    h2 {
+        font-size: 2.7em;
+        font-weight: 400;
+        line-height: 1.07;
+        letter-spacing: 1.3px;
+
+        margin-top: 0;
+
+        @include mobile-only {
+            font-size: 1.5em;
+        }
     }
 
-    .date {
-      font-size: 1.9em;
-      padding-top: 0;
+    .item {
+        // What a fustercluck of padding
+        &:not(.first) {
+            .columns {
+                margin-top: 5%;
+            }
+        }
 
-      @include mobile-only {
-        font-size: 1.55em;
-      }
+        &.first {
+            margin-top: 3%;
+        }
+
+        .columns {
+            margin-bottom: 1%;
+        }
+
+        .date {
+            font-size: 1.9em;
+            padding-top: 0;
+
+            @include mobile-only {
+                font-size: 1.55em;
+            }
+        }
     }
-  }
-
 }
