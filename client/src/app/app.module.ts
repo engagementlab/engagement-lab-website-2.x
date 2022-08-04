@@ -82,6 +82,7 @@ import { StudioInitiativeComponent } from './initiatives/initiative/initiative.c
 import { NewsComponent } from './news/news.component';
 import { NewsIndexComponent } from './news/index.component';
 import { SafeHtml } from './utils/safe-html.pipe';
+import { NewsArchiveComponent } from './news/archive/archive.component';
 
 export const cloudinary = {
     Cloudinary,
@@ -109,6 +110,7 @@ export const config: CloudinaryConfiguration = appConfig;
         InitiativeComponent,
         NavComponent,
         NewsComponent,
+        NewsArchiveComponent,
         NewsIndexComponent,
         NotFoundComponent,
         PartnerComponent,

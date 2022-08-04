@@ -10,6 +10,7 @@ import { keyframes } from '@angular/animations';
 })
 export class NewsIndexComponent implements OnInit {
     public news: any;
+    public newsArchive: any;
 
     constructor(private _dataSvc: DataService) {}
 
@@ -25,17 +26,15 @@ export class NewsIndexComponent implements OnInit {
             }
         `;
         // const response = await this._dataSvc.getSet('news', query);
-        // this._dataSvc.getNewsArchive().subscribe(
-        //     (data: any) => {
-        //         this.news = data;
-        //     },
-        //     (error: any) => {
-        //         console.log(error);
-        //     },
-        // );
+        this._dataSvc.getNews().subscribe(
+            (data: any) => {
+                this.news = data;
+            },
+            (error: any) => {
+                console.log(error);
+            },
+        );
         const response = await this._dataSvc.getSet('news', query);
-        this.news = response['allBlogItems'];
-
-        console.log(this.news);
+        this.newsArchive = response['allBlogItems'];
     }
 }

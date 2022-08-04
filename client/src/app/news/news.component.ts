@@ -38,24 +38,14 @@ export class NewsComponent {
 
             // Force content reset
             this.content = undefined;
-            const query = `
-            {
-                getBlogItem(key: "${key}") {
-                    datePosted
-                    title
-                    body {
-                        html
-                    }
-                }
-            }`;
-
-            const content = await this.dataSvc.getSetWithKey(
-                'news',
-                key,
-                query,
+            this.dataSvc.getNews(key).subscribe(
+                (data: any) => {
+                    this.setContent(data);
+                },
+                (error: any) => {
+                    console.log(error);
+                },
             );
-            // eslint-disable-next-line dot-notation
-            if (content) this.setContent(content['getBlogItem']);
         });
     }
 
@@ -69,17 +59,4 @@ export class NewsComponent {
         // this.next = data.next;
         // this.previous = data.prev[0];
     }
-
-    // Toggle event video to display embed
-    embedVideo() {
-        this.videoDisplayToggle = true;
-    }
-
-    // @HostListener('window:keyup', ['$event'])
-    // keyEvent(event: KeyboardEvent): void {
-    //     if (event.keyCode === KEY_CODE.RIGHT_ARROW)
-    //         this.router.navigateByUrl(`/events/${this.next.key}`);
-    //     if (event.keyCode === KEY_CODE.LEFT_ARROW)
-    //         this.router.navigateByUrl(`/events/${this.previous.key}`);
-    // }
 }

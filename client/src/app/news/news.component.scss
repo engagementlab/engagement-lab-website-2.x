@@ -12,16 +12,21 @@
 
 #date {
     @include font-overpass;
-    font-size: 0.9em;
+    font-size: 1.3em;
     font-weight: 600;
     line-height: 1.29;
     letter-spacing: 0.8px;
 }
 
 #body {
-    ::ng-deep img {
-        width: auto !important;
-        max-width: 80%;
+    ::ng-deep {
+        img {
+            width: auto !important;
+            max-width: 80%;
+        }
+        div:first-child {
+            column-gap: 5rem;
+        }
     }
 }
 

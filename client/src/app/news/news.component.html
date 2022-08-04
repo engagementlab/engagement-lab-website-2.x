@@ -5,13 +5,13 @@
 
     <div class="columns is-mobile is-multiline">
         <div id="date" class="column is-full-tablet is-11-mobile">
-            {{ content?.datePosted | date: 'MMMM dd, yyyy' }}
+            {{ content?.publishDate | date: 'MMMM dd, yyyy' }}
         </div>
 
         <div
             id="body"
             class="column is-11-mobile is-three-quarters-tablet"
-            [innerHtml]="content?.body.html"
+            [innerHtml]="content?.bodyHTML | safeHtml"
         ></div>
     </div>
     <!-- 

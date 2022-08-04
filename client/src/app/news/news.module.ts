@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { NewsIndexComponent } from './index.component';
 import { NewsComponent } from './news.component';
+import { NewsArchiveComponent } from './archive/archive.component';
 
 const routes: Routes = [
     {
@@ -13,10 +14,13 @@ const routes: Routes = [
         path: ':key',
         component: NewsComponent,
     },
+    {
+        path: 'archive/:key',
+        component: NewsArchiveComponent,
+    },
 ];
 
 @NgModule({
-    declarations: [],
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
 })
