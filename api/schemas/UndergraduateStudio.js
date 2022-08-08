@@ -17,6 +17,7 @@ const UndergraduateStudio = {
       current: Boolean
       description: Markdown
       faculty: [Person]
+      semester: String!
     }
   `,
     queries: ['currentUndergraduateStudios: [UndergraduateStudio]'],

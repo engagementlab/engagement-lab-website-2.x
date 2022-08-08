@@ -10,6 +10,6 @@
 		"people": ["people"],
 		"files/resources": ["tools"],
 		"about": ["About", "Contact", "partners", "PartnerIntro", "jobs"],
-		"miscellaneous": ["events", "NewsItem", "Filter"]
+		"miscellaneous": ["BlogItem", "events", "Filter"]
 	}
 }

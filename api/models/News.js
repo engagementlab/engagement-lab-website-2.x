@@ -22,6 +22,7 @@ const News = new keystone.List('NewsItem', {
     map: {
         name: 'title',
     },
+    hidden: true,
 });
 
 /**

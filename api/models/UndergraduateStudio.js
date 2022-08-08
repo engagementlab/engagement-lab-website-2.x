@@ -46,6 +46,9 @@ UndergraduateStudio.add({
         many: true,
         ref: 'Person',
     },
+    semester: {
+        required: true, initial: true, type: Types.Select, options: ['Fall', 'Spring'],
+    },
 });
 
 /**

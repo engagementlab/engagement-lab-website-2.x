@@ -22,6 +22,7 @@ const Blog = new keystone.List('Blog', {
     map: {
         name: 'title',
     },
+    hidden: true,
 });
 
 /**
