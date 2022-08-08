@@ -10,11 +10,17 @@ const routes: Routes = [
         path: '',
         children: [
             {
-                // Redir base route to projects
+                // Redir base route to undergrad
                 path: '',
-                redirectTo: 'graduate',
+                redirectTo: 'undergraduate',
                 pathMatch: 'full',
             },
+            // {
+            //     // Redir old route to undergrad
+            //     path: 'curriculum',
+            //     redirectTo: 'undergraduate',
+            //     pathMatch: 'full',
+            // },
             {
                 path: 'graduate',
                 component: GraduateCurriculumComponent,

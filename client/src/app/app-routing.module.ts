@@ -69,7 +69,7 @@ const routes: Routes = [
     // Preserve old paths
     {
         path: 'graduate',
-        redirectTo: '/curriculum',
+        redirectTo: '/curriculum/graduate',
         pathMatch: 'prefix',
     },
     {

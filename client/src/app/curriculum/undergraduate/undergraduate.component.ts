@@ -39,6 +39,7 @@ export class UndergraduateComponent implements OnInit {
                     public_id
                 }
             }
+            semester
           }
         }
       `;
