@@ -15,6 +15,7 @@ const Studios = {
         summary: String
         initiativesSummary: String
         video: String
+        videoThumbnail: Image
     }
     type Studio {
       id: ID!
