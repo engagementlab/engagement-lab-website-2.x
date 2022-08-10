@@ -33,6 +33,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class StudiosIndexComponent implements OnInit {
     public content: any;
     public videoUrl: string;
+    public videoDisplayToggle: boolean;
 
     constructor(
         private dataSvc: DataService,
@@ -46,6 +47,9 @@ export class StudiosIndexComponent implements OnInit {
                   summary
                   initiativesSummary
                   video
+                  videoThumbnail {
+                    public_id
+                  }
             }
 
             allStudioInitiatives {
@@ -70,5 +74,10 @@ export class StudiosIndexComponent implements OnInit {
         this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
             `https://player.vimeo.com/video/${this.content.studiosIntro.video}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
         ) as string;
+    }
+
+    // Toggle video to display embed
+    embedVideo() {
+        this.videoDisplayToggle = true;
     }
 }

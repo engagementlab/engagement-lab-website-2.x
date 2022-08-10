@@ -5,6 +5,48 @@ h3 {
     @include font-lunchtype-med;
 }
 
+.video {
+    a {
+        display: block;
+        position: relative;
+        .icon {
+            @include transition(transform, 0.15s, ease-in-out);
+            position: absolute;
+            left: calc(50% - 40px);
+            top: calc(50% - 40px);
+
+            @include phones {
+                left: calc(50% - 12px);
+                top: calc(50% - 12px);
+            }
+        }
+
+        &:hover {
+            .icon {
+                @include scale(1.2);
+            }
+        }
+    }
+
+    .title {
+        @include font-overpass;
+    }
+
+    .embed {
+        .frame {
+            position: relative;
+            padding: 56.25% 0 0 0;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
 #buttons {
     display: inline-flex;
     justify-content: space-around;

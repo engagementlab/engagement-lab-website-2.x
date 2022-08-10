@@ -173,7 +173,6 @@ export class NavComponent implements AfterViewInit {
         const details = document.querySelectorAll('.sublink-label');
         // Add the onclick listeners.
         details.forEach(targetDetail => {
-            console.log(targetDetail);
             targetDetail.removeAttribute('open');
         });
     }
