@@ -4,7 +4,7 @@
 	"subdomain": "elab",
 	"database": "engagement-lab",
 	"admin_nav": {
-		"initiatives": ["Studio", "StudiosIntro"],
+		"initiatives": ["StudioInitiative", "StudiosIntro"],
 		"Curriculum": ["masters", "Curriculum", "Undergraduate", "UndergraduateStudio"],
 		"research": ["projects", "publications"],
 		"people": ["people"],

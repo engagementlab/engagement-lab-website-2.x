@@ -26,6 +26,7 @@ const Studio = new keystone.List('Studio', {
         from: 'name',
         unique: true,
     },
+    hidden: true,
 });
 
 /**
