@@ -29,7 +29,7 @@ const Filter = {
             category: 'Cohort',
         }, 'key label name current _id')
             .sort([
-                ['key', 'ascending']
+                ['key', 'descending']
             ]).exec(),
     },
 

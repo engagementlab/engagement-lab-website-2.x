@@ -78,8 +78,8 @@ Filters.add({
     },
     label: {
         type: String,
+        note: 'Cohort label (format is "2019 - 2020"). Otherwise `Name` is used.',
         dependsOn: {
-            note: 'Cohort label (format is "2019 - 2020"). Otherwise `Name` is used.',
             category: 'Cohort',
         },
     },
