@@ -10,36 +10,40 @@ exports.config = {
     distFolder: './dist/browser',
     routes: {
         // All studios pages
-        '/studios/studio/:key': {
+        '/initiatives/studio/:key': {
             type: 'studios',
         },
         // All studio initiatives pages
-        '/studios/initiatives/:key': {
+        '/initiatives/:key': {
             type: 'studioinitiatives',
         },
         // All grad project pages
-        '/graduate/projects/:key': {
+        '/curriculum/graduate/projects/:key': {
             type: 'mdprojects',
         },
         // All grad faculty pages
-        '/graduate/faculty/:key': {
+        '/curriculum/graduate/faculty/:key': {
             type: 'gradfaculty',
         },
         // All grad student/alumni pages
-        '/graduate/students/:key': {
-            type: 'gradstudents',
-        },
+        // '/graduate/students/:key': {
+        //     type: 'gradstudents',
+        // },
         // All project pages
         '/research/projects/:key': {
             type: 'projects',
         },
-        // All initiative pages
-        '/research/initiatives/:key': {
-            type: 'initiatives',
-        },
         // All event pages
         '/events/:key': {
             type: 'events',
+        },
+        // All news pages
+        '/news/:key': {
+            type: 'news',
+        },
+        // All archive pages
+        '/news/archive/:key': {
+            type: 'newsarchive',
         },
         // All people
         '/people/:key': {
