@@ -216,21 +216,35 @@ export class DataService {
      * @returns Observable
      * @param {string} key - Key for a single news item
      */
-    public getNews(key: string = null): Observable<any> {
+    public async getNews(key: string = null): Promise<unknown> {
         this.isLoading.next(true);
+        const stateKey = `news${key ? '-' + key : ''}`;
 
-        let url = environment.new_api_url + `/rest/news/${key ? key : ''}`;
+        if (!isScullyGenerated()) {
+            let url = environment.new_api_url + `/rest/news/${key ? key : ''}`;
 
-        return this.http
-            .get(url)
-            .map((res: any) => {
+            const data = await this.http.get(url).toPromise();
+
+            // Cache result in state
+            this.transferState.setState(stateKey, data);
+            this.isLoading.next(false);
+
+            return data;
+        }
+
+        // Get cached state for this key
+        const state = new Promise<unknown[]>((resolve, reject) => {
+            try {
+                this.transferState
+                    .getState<unknown[]>(stateKey)
+                    .subscribe(res => {
+                        if (res) resolve(res['data']);
+                    });
+            } catch (error) {
                 this.isLoading.next(false);
-
-                return res;
-            })
-            .catch((error: any) => {
-                this.isLoading.next(false);
-                return throwError(error);
-            });
+                reject(error);
+            }
+        });
+        return state;
     }
 }

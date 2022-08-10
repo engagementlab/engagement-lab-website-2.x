@@ -15,14 +15,13 @@ const routes: Routes = [
                 redirectTo: 'undergraduate',
                 pathMatch: 'full',
             },
-            // {
-            //     // Redir old route to undergrad
-            //     path: 'curriculum',
-            //     redirectTo: 'undergraduate',
-            //     pathMatch: 'full',
-            // },
             {
                 path: 'graduate',
+                component: GraduateCurriculumComponent,
+                pathMatch: 'full',
+            },
+            {
+                path: 'graduate/faculty/:key',
                 component: GraduateCurriculumComponent,
                 pathMatch: 'full',
             },

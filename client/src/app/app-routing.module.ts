@@ -99,9 +99,9 @@ const routes: Routes = [
 
     { path: 'studios/studio/:key', redirectTo: 'initiatives/studio/:key' },
 
-    { path: 'masters', redirectTo: 'graduate' },
-    { path: 'masters/alumni', redirectTo: 'graduate/students' },
-    { path: 'masters/cohort/:key', redirectTo: 'graduate/students/:key' },
+    { path: 'masters', redirectTo: 'curriculum/graduate' },
+    { path: 'masters/alumni', redirectTo: 'curriculum/graduate' },
+    { path: 'masters/cohort/:key', redirectTo: 'curriculum/graduate' },
 
     // Redirect to other Azure static sites
     { path: 'hygiene/:path?', component: ExternalRedirectComponent },

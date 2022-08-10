@@ -26,15 +26,8 @@ export class NewsIndexComponent implements OnInit {
             }
         `;
         // const response = await this._dataSvc.getSet('news', query);
-        this._dataSvc.getNews().subscribe(
-            (data: any) => {
-                this.news = data;
-            },
-            (error: any) => {
-                console.log(error);
-            },
-        );
-        const response = await this._dataSvc.getSet('news', query);
+        this.news = await this._dataSvc.getNews();
+        const response = await this._dataSvc.getSet('news-archive', query);
         this.newsArchive = response['allBlogItems'];
     }
 }

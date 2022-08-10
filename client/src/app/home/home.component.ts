@@ -80,14 +80,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                 `;
 
         this.content = await this.dataSvc.getSet('homepage', query);
-        this.dataSvc.getNews('recent').subscribe(
-            async (data: any) => {
-                this.news = data;
-            },
-            (error: any) => {
-                console.log(error);
-            },
-        );
+        this.news = await this.dataSvc.getNews('recent');
 
         // Load particles effect after content render
         setTimeout(() => {

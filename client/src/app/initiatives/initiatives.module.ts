@@ -13,17 +13,33 @@ const routes: Routes = [
         path: '',
         component: StudiosIndexComponent,
     },
+    // {
+    //     path: 'partnered',
+    //     component: StudiosPartnerComponent,
+    // },
+    // {
+    //     path: 'thesis',
+    //     component: StudiosGraduateComponent,
+    // },
+    // {
+    //     path: 'cocurricular',
+    //     component: StudiosCocurricularComponent,
+    // },
+    // Redir deprecated paths
     {
         path: 'partnered',
-        component: StudiosPartnerComponent,
+        redirectTo: '',
+        pathMatch: 'full',
     },
     {
         path: 'thesis',
-        component: StudiosGraduateComponent,
+        redirectTo: '',
+        pathMatch: 'full',
     },
     {
-        path: 'cocurricular',
-        component: StudiosCocurricularComponent,
+        path: 'deprecated',
+        redirectTo: '',
+        pathMatch: 'full',
     },
     {
         path: 'studio/:key',

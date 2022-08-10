@@ -38,14 +38,8 @@ export class NewsComponent {
 
             // Force content reset
             this.content = undefined;
-            this.dataSvc.getNews(key).subscribe(
-                (data: any) => {
-                    this.setContent(data);
-                },
-                (error: any) => {
-                    console.log(error);
-                },
-            );
+            const data = this.dataSvc.getNews(key);
+            this.setContent(data);
         });
     }
 
