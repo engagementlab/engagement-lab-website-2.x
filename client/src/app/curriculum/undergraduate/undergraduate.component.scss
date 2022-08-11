@@ -1,3 +1,8 @@
 #studios {
     margin: 0;
+    p {
+        ::ng-deep a {
+            border-bottom: solid 2px black;
+        }
+    }
 }

@@ -83,6 +83,7 @@ import { NewsComponent } from './news/news.component';
 import { NewsIndexComponent } from './news/index.component';
 import { SafeHtml } from './utils/safe-html.pipe';
 import { NewsArchiveComponent } from './news/archive/archive.component';
+import { UndergraduateComponent } from './curriculum/undergraduate/undergraduate.component';
 
 export const cloudinary = {
     Cloudinary,
@@ -92,6 +93,16 @@ export const config: CloudinaryConfiguration = appConfig;
 @NgModule({
     declarations: [
         AppComponent,
+
+        // Utils
+        AuthorFormatPipe,
+        ButtonComponent,
+        CdnImageComponent,
+        JoinPipe,
+        PrettyUrlPipe,
+        PluckPipe,
+        SafeHtml,
+        SlideshowComponent,
 
         // Components
         AboutComponent,
@@ -133,16 +144,7 @@ export const config: CloudinaryConfiguration = appConfig;
         StudioThumbComponent,
         StudioInitiativeComponent,
         TeamComponent,
-
-        // Utils
-        AuthorFormatPipe,
-        ButtonComponent,
-        CdnImageComponent,
-        JoinPipe,
-        PrettyUrlPipe,
-        PluckPipe,
-        SafeHtml,
-        SlideshowComponent,
+        UndergraduateComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'elabHome' }),

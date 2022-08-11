@@ -99,6 +99,7 @@ const facultyIdPlugin = async (route, config) => {
     const routes = [];
     response.data.data.allMastersPages.faculty.forEach((res) => {
         routes.push({ route: `/curriculum/graduate/faculty/${res.key}` });
+        routes.push({ route: `/curriculum/undergraduate/faculty/${res.key}` });
     });
     return Promise.resolve(routes);
 };

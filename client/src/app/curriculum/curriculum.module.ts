@@ -30,6 +30,11 @@ const routes: Routes = [
                 component: UndergraduateComponent,
                 pathMatch: 'full',
             },
+            {
+                path: 'undergraduate/faculty/:key',
+                component: UndergraduateComponent,
+                pathMatch: 'full',
+            },
         ],
     },
 ];
@@ -38,6 +43,6 @@ const routes: Routes = [
     imports: [CommonModule, RouterModule.forChild(routes)],
     exports: [RouterModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    declarations: [UndergraduateComponent],
+    declarations: [],
 })
 export class CurriculumModule {}

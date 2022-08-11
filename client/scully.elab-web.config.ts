@@ -25,6 +25,10 @@ exports.config = {
         '/curriculum/graduate/faculty/:key': {
             type: 'gradfaculty',
         },
+        // All undergrad faculty pages
+        '/curriculum/undergraduate/faculty/:key': {
+            type: 'gradfaculty',
+        },
         // All grad student/alumni pages
         // '/graduate/students/:key': {
         //     type: 'gradstudents',

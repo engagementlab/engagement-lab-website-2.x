@@ -162,6 +162,6 @@ export class GraduateCurriculumComponent implements OnInit {
         this.gettingPerson = false;
         this.currentPerson = undefined;
 
-        this.router.navigateByUrl('graduate');
+        this.router.navigateByUrl('curriculum/graduate');
     }
 }

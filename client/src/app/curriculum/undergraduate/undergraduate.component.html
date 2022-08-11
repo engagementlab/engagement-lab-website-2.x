@@ -1,3 +1,8 @@
+<person-modal
+    *ngIf="currentPerson"
+    [person]="currentPerson"
+    (onClose)="closePerson()"
+></person-modal>
 <section class="columns is-mobile is-multiline" *ngIf="content">
     <h2 class="column is-full-tablet is-11-mobile">
         Social Impact Design Minor
@@ -28,7 +33,11 @@
                     >:</em
                 >&nbsp;
                 <span *ngFor="let person of studio.faculty; let i = index">
-                    <a class="href" routerLink="/people/{{ person.key }}"
+                    <a
+                        class="href"
+                        routerLink="/curriculum/undergraduate/faculty/{{
+                            person.key
+                        }}"
                         >{{ person.name.first }} {{ person.name.last }}</a
                     ><span *ngIf="i < studio.faculty.length - 1"
                         >,&nbsp;</span
