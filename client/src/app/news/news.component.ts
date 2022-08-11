@@ -1,7 +1,5 @@
-import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { DataService } from '../utils/data.service';
 
@@ -13,39 +11,13 @@ import { DataService } from '../utils/data.service';
 export class NewsComponent {
     public content: any;
 
-    public next: any;
-    public previous: any;
+    constructor(private dataSvc: DataService, private route: ActivatedRoute) {}
 
-    public videoDisplayToggle: boolean;
-    public videoUrl: SafeResourceUrl;
+    async ngOnInit() {
+        const { key } = this.route.snapshot.params;
+        const data = await this.dataSvc.getNews(key);
 
-    public thirdImgId: string;
-
-    private subscriber: Subscription;
-
-    @ViewChild('backgroundEnd') backgroundEnd: ElementRef;
-
-    constructor(
-        private dataSvc: DataService,
-        private route: ActivatedRoute,
-        private router: Router,
-        private sanitizer: DomSanitizer,
-    ) {
-        this.subscriber = router.events.subscribe(async e => {
-            if (!(e instanceof NavigationEnd)) return;
-
-            const { key } = this.route.snapshot.params;
-
-            // Force content reset
-            this.content = undefined;
-            const data = this.dataSvc.getNews(key);
-            this.setContent(data);
-        });
-    }
-
-    ngOnDestroy(): void {
-        // Cancel router subscribe
-        this.subscriber.unsubscribe();
+        this.setContent(data);
     }
 
     setContent(data: any): void {

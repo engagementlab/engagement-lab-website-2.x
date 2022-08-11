@@ -238,7 +238,7 @@ export class DataService {
                 this.transferState
                     .getState<unknown[]>(stateKey)
                     .subscribe(res => {
-                        if (res) resolve(res['data']);
+                        if (res) resolve(res);
                     });
             } catch (error) {
                 this.isLoading.next(false);
