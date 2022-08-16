@@ -64,8 +64,9 @@
     <h3 class="column is-full">{{ content.currentStudiosYear }} Studios</h3>
     <div id="studios" class="columns is-multiline">
         <div
-            *ngFor="let studio of studios"
-            class="column is-4-tablet is-11-mobile"
+            *ngFor="let studio of studios; let odd = odd"
+            class="column is-11-mobile"
+            [class.is-half-tablet]="!odd"
         >
             <h4>{{ studio.name }}</h4>
             <p>{{ studio.semester }} Semester</p>

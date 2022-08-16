@@ -32,8 +32,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class StudiosIndexComponent implements OnInit {
     public content: any;
-    public videoUrl: string;
-    public videoDisplayToggle: boolean;
+    public videoUrls: string[];
+    public videoDisplayToggle: boolean[] = [false];
 
     constructor(
         private dataSvc: DataService,
@@ -46,10 +46,6 @@ export class StudiosIndexComponent implements OnInit {
             studiosIntro {
                   summary
                   initiativesSummary
-                  video
-                  videoThumbnail {
-                    public_id
-                  }
             }
 
             allStudioInitiatives {
@@ -60,7 +56,11 @@ export class StudiosIndexComponent implements OnInit {
                 key
               }
               thumb { 
-                  public_id
+                public_id
+              }
+              video
+              videoThumbnail {
+                public_id
               }
             }
           }
@@ -70,14 +70,23 @@ export class StudiosIndexComponent implements OnInit {
             'intro',
             query,
         );
-        this.content = response;
-        this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-            `https://player.vimeo.com/video/${this.content.studiosIntro.video}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
-        ) as string;
+        this.setContent(response);
     }
 
-    // Toggle video to display embed
-    embedVideo() {
-        this.videoDisplayToggle = true;
+    setContent(data: any): void {
+        // Populate array for toggling video embeds and sanitize video IDs into iframe URLs
+        this.videoUrls = data['allStudioInitiatives'].map(initiative => {
+            this.videoDisplayToggle.push(false);
+
+            return this.sanitizer.bypassSecurityTrustResourceUrl(
+                `https://player.vimeo.com/video/${initiative.video}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
+            );
+        });
+        this.content = data;
+    }
+
+    // Toggle selected video to display embed
+    embedVideo(index: number) {
+        this.videoDisplayToggle[index] = true;
     }
 }

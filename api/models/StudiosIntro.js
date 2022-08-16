@@ -41,16 +41,6 @@ StudiosIntro.add({
     initiativesSummary: {
         type: Types.Textarea, label: 'Initiatives Summary Paragraph', required: true, initial: true,
     },
-    video: {
-        type: String,
-        label: 'Intro Video ID',
-        note: 'Must be video ID from a Vimeo URL (vimeo.com/**420657931** ← this is an ID)',
-    },
-    videoThumbnail: {
-        type: Types.CloudinaryImage,
-        folder: 'homepage-2.0/studios',
-        autoCleanup: true,
-    },
     /* partneredStudiosThumbnail: {
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/studios',

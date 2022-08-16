@@ -24,6 +24,8 @@ const StudioInitiative = {
             galleryVideoTitles: [String]
             galleryVideoCaptions: [String]
             galleryVideoThumbails: [Image]
+            video: String
+            videoThumbnail: Image
         }
   `,
     queries: ['allStudioInitiatives: [StudioInitiative]',

@@ -19,8 +19,7 @@ const { Types, } = keystone.Field;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const UndergraduateStudio = new keystone.List('UndergraduateStudio', {
-    // label: 'Undergraduate Studio',
-    // singular: 'Undergraduate Studio',
+    sortable: true,
 });
 
 /**

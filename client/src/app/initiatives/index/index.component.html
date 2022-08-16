@@ -4,49 +4,6 @@
         <h2>Social Impact Initiatives</h2>
         <h3 class="blurb">{{ content.studiosIntro.initiativesSummary }}</h3>
 
-        <h4>Intro Video</h4>
-        <div class="video">
-            <a
-                id="video-thumb"
-                [routerLink]=""
-                (click)="embedVideo()"
-                *ngIf="!videoDisplayToggle"
-            >
-                <cdn-image
-                    cloudinaryPrefix="/"
-                    cloudinaryId="{{
-                        content.studiosIntro.videoThumbnail.public_id
-                    }}"
-                    autoFormat="true"
-                    alt="Preview thumbnail image for initiatives introduction video."
-                    *ngIf="content.studiosIntro.videoThumbnail"
-                ></cdn-image>
-                <img
-                    src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
-                    alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
-                    *ngIf="!content.studiosIntro.videoThumbnail"
-                />
-                <span class="icon">
-                    <svg width="80" height="80" fill="none" viewBox="0 0 80 80">
-                        <path
-                            fill="#fff"
-                            d="M40 0C17.92 0 0 17.92 0 40s17.92 40 40 40 40-17.92 40-40S62.08 0 40 0zM29.44 55.84V24.16L56.96 40 29.44 55.84z"
-                        />
-                    </svg>
-                </span>
-            </a>
-            <div id="video-embed" class="embed" *ngIf="videoDisplayToggle">
-                <div class="frame">
-                    <iframe
-                        [src]="videoUrl"
-                        frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                </div>
-                <script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-        </div>
         <!-- <div id="video-embed" class="embed">
             <div class="frame">
                 <iframe
@@ -96,7 +53,12 @@
     </div> -->
 
     <div class="column is-11-mobile is-6-tablet is-4-desktop" *ngIf="content">
-        <div *ngFor="let initiative of content.allStudioInitiatives">
+        <div
+            *ngFor="
+                let initiative of content.allStudioInitiatives;
+                let i = index
+            "
+        >
             <a routerLink="/initiatives/{{ initiative.key }}">
                 <h3>
                     {{ initiative.name }}
@@ -111,6 +73,56 @@
                 ></cdn-image>
                 <p>{{ initiative.description }}</p>
             </a>
+            <h4>Intro Video</h4>
+            <div class="video">
+                <a
+                    id="video-thumb"
+                    [routerLink]=""
+                    (click)="embedVideo(i)"
+                    *ngIf="!videoDisplayToggle[i]"
+                >
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ initiative.videoThumbnail.public_id }}"
+                        autoFormat="true"
+                        alt="Preview thumbnail image for initiatives introduction video."
+                        *ngIf="initiative.videoThumbnail"
+                    ></cdn-image>
+                    <img
+                        src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
+                        alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
+                        *ngIf="!initiative.videoThumbnail"
+                    />
+                    <span class="icon">
+                        <svg
+                            width="80"
+                            height="80"
+                            fill="none"
+                            viewBox="0 0 80 80"
+                        >
+                            <path
+                                fill="#fff"
+                                d="M40 0C17.92 0 0 17.92 0 40s17.92 40 40 40 40-17.92 40-40S62.08 0 40 0zM29.44 55.84V24.16L56.96 40 29.44 55.84z"
+                            />
+                        </svg>
+                    </span>
+                </a>
+                <div
+                    id="video-embed"
+                    class="embed"
+                    *ngIf="videoDisplayToggle[i]"
+                >
+                    <div class="frame">
+                        <iframe
+                            [src]="videoUrls[i]"
+                            frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
         </div>
     </div>
 </section>
