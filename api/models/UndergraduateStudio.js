@@ -13,6 +13,8 @@
 const { keystone, } = global;
 const { Types, } = keystone.Field;
 
+const urlValidator = require('../utils').url;
+
 /**
  * @module undergraduate
  * @constructor
@@ -32,22 +34,31 @@ UndergraduateStudio.add({
         hidden: true,
         required: true,
     },
-    current: { type: Boolean, initial: true, },
+    // current: { type: Boolean, initial: true, },
     description: {
         type: Types.Markdown,
-        required: true,
-        initial: true,
     },
     faculty: {
         type: Types.Relationship,
-        required: true,
-        initial: true,
         many: true,
         ref: 'Person',
+    },
+    year: {
+        type: Types.Relationship,
+        ref: 'AcademicYear',
+        initial: true,
+        required: true,
     },
     semester: {
         required: true, initial: true, type: Types.Select, options: ['Fall', 'Spring'],
     },
+    url: {
+        type: Types.Url,
+        label: 'External URL',
+        validate: urlValidator,
+        note: 'External page describing this studio. Must be in format "http://www.something.org"',
+    },
+    requiredCourse: { type: Boolean, },
 });
 
 /**

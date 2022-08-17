@@ -41,11 +41,6 @@ Undergraduate.add({
         required: true,
         initial: true,
     },
-    studiosDescription: {
-        type: Types.Markdown,
-        required: true,
-        initial: true,
-    },
     currentStudiosYear: {
         type: String,
         required: true,

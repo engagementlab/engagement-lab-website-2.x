@@ -11,8 +11,8 @@
  * ==========
  */
 
-const { keystone } = global;
-const { Types } = keystone.Field;
+const { keystone, } = global;
+const { Types, } = keystone.Field;
 const urlValidator = require('../utils').url;
 
 /**
@@ -21,11 +21,11 @@ const urlValidator = require('../utils').url;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Job = new keystone.List('Job', {
-  label: 'Jobs',
-  singular: 'Job',
-  map: {
-    name: 'title',
-  },
+    label: 'Jobs',
+    singular: 'Job',
+    map: {
+        name: 'title',
+    },
 });
 
 /**
@@ -33,34 +33,34 @@ const Job = new keystone.List('Job', {
  * @main Job
  */
 Job.add({
-  enabled: {
-    type: Types.Boolean,
-    label: 'Enabled',
-    note: 'Will never appear on site if not enabled',
-  },
-  title: {
-    type: String,
-    label: 'Title',
-    required: true,
-    initial: true,
-    index: true,
-    note: 'Will appear before the job description',
-  },
-  description: {
-    type: Types.Markdown,
-    label: 'Description',
-    required: true,
-    initial: true,
-    note: 'This is the full description, including any and all relevant information about the job or its requirements',
-  },
-  url: {
-    type: Types.Url,
-    label: 'Application URL',
-    validate: urlValidator,
-    note: 'Link to Emerson job posting. Must be in format "http://www.something.org".',
-    required: true,
-    initial: true,
-  },
+    enabled: {
+        type: Types.Boolean,
+        label: 'Enabled',
+        note: 'Will never appear on site if not enabled',
+    },
+    title: {
+        type: String,
+        label: 'Title',
+        required: true,
+        initial: true,
+        index: true,
+        note: 'Will appear before the job description',
+    },
+    description: {
+        type: Types.Markdown,
+        label: 'Description',
+        required: true,
+        initial: true,
+        note: 'This is the full description, including any and all relevant information about the job or its requirements',
+    },
+    url: {
+        type: Types.Url,
+        label: 'Application URL',
+        validate: urlValidator,
+        note: 'Link to Emerson job posting. Must be in format "http://www.something.org".',
+        required: true,
+        initial: true,
+    },
 });
 
 /**

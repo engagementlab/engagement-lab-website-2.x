@@ -14,16 +14,23 @@ const UndergraduateStudio = {
     type UndergraduateStudio {
       id: ID!
       name: String!
-      current: Boolean
+      requiredCourse: Boolean
       description: Markdown
       faculty: [Person]
       semester: String!
+      url: String
+      year: AcademicYear
+    }
+    type AcademicYear {
+      label: String!
     }
   `,
-    queries: ['currentUndergraduateStudios: [UndergraduateStudio]'],
+    queries: ['allUndergraduateStudios: [UndergraduateStudio]', 'allYears: [AcademicYear]'],
     resolvers: {
-        currentUndergraduateStudios: async () => global.keystone.list('UndergraduateStudio').model.find({ current: true, })
-            .populate('faculty').exec(),
+        allUndergraduateStudios: async () => global.keystone.list('UndergraduateStudio').model.find()
+            .populate('faculty').populate('year').exec(),
+        allYears: async () => global.keystone.list('AcademicYear').model.find({}, 'label').sort({ label: 'desc', }).exec(),
+
     },
 
 };
