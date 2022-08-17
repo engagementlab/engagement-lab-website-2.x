@@ -45,7 +45,7 @@ Person.add({
     },
     category: {
         type: Types.Select,
-        options: 'faculty leadership, staff, faculty fellows, Masters, lab assistants',
+        options: 'leadership, staff, faculty fellows, Masters, lab assistants',
         default: 'staff',
         required: true,
         initial: true,
@@ -64,14 +64,14 @@ Person.add({
     onLeave: {
         type: Boolean,
         dependsOn: {
-            category: ['faculty leadership', 'faculty fellows'],
+            category: ['leadership', 'faculty fellows'],
         },
     },
     title: {
         type: String,
         label: 'Title',
         dependsOn: {
-            category: ['faculty leadership', 'staff', 'faculty fellows', 'lab assistants', 'undergraduate fellows'],
+            category: ['leadership', 'staff', 'faculty fellows', 'lab assistants', 'undergraduate fellows'],
         },
         initial: true,
         note: 'This appears below the name.',

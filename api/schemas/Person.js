@@ -37,6 +37,7 @@ const Person = {
         'allAlumniPeople: [Person]',
         'allStaffPeople: [Person]',
         'allFacultyPeople: [Person]',
+        'allLeadershipPeople: [Person]',
         'getPerson(key: String): Person'],
     resolvers: {
         allPeople: async (parent, args) => {
@@ -62,8 +63,11 @@ const Person = {
         allStaffPeople: async () => model.find({ enabled: true, category: 'staff', }).sort([
             ['name.first', 'ascending']
         ]).exec(),
-        allFacultyPeople: async () => model.find({ enabled: true, category: ['faculty leadership', 'faculty fellows'], }).sort([
+        allFacultyPeople: async () => model.find({ enabled: true, category: 'faculty fellows', }).sort([
             ['name.first', 'ascending']
+        ]).exec(),
+        allLeadershipPeople: async () => model.find({ enabled: true, category: 'leadership', }).sort([
+            ['sortOrder', 'ascending']
         ]).exec(),
         allMastersPeople: async () => {
             const cohort = await global.keystone.list('Filter').model.findOne({
