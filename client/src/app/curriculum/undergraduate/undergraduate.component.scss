@@ -1,8 +1,37 @@
+@import '~src/styles/_variables';
+@import '~src/styles/_mixins';
+#logo {
+    svg {
+        max-width: 900px;
+        width: 100%;
+    }
+}
 #studios {
     margin: 0;
     p {
         ::ng-deep a {
             border-bottom: solid 2px black;
+        }
+    }
+    h4 {
+        a {
+            border-bottom: solid 1px black;
+        }
+
+        svg {
+            @include scale(0.5);
+            transform-origin: left bottom;
+            .arrow {
+                @include transition(transform, 0.2s, ease-in-out);
+            }
+        }
+
+        &:hover {
+            svg {
+                .arrow {
+                    @include translate(15px, -15px);
+                }
+            }
         }
     }
 }

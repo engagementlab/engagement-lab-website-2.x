@@ -13,6 +13,7 @@ import { DataService } from '../utils/data.service';
 export class TeamComponent implements OnInit {
     public currentPerson: any;
 
+    public leadership: any[];
     public faculty: any[];
     public staff: any[];
     public students: any[];
@@ -44,6 +45,18 @@ export class TeamComponent implements OnInit {
 
         const query = `   
             {
+                allLeadershipPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    title
+                    image {
+                        public_id
+                    }
+                    onLeave
+                }
                 allFacultyPeople {
                     name {
                         first
@@ -97,6 +110,7 @@ export class TeamComponent implements OnInit {
         `;
 
         const response = await this.dataSvc.getSet('team', query);
+        this.leadership = response['allLeadershipPeople'];
         this.faculty = response['allFacultyPeople'];
         this.staff = response['allStaffPeople'];
         this.students = response['allMastersPeople'];

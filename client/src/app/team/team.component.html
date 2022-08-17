@@ -4,10 +4,12 @@
     (onClose)="closePerson()"
 ></person-modal>
 
+<h2>Leadership</h2>
+<people-grid [people]="leadership"></people-grid>
 <h2>Faculty</h2>
 <people-grid [people]="faculty"></people-grid>
-<h2>Staff</h2>
-<people-grid [people]="staff"></people-grid>
+<h2 *ngIf="staff && staff.length > 0">Staff</h2>
+<people-grid [people]="staff" *ngIf="staff && staff.length > 0"></people-grid>
 <h2>Students</h2>
 <people-grid [people]="students"></people-grid>
 

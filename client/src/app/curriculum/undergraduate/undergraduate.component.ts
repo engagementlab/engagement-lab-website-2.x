@@ -9,6 +9,8 @@ import { DataService } from 'src/app/utils/data.service';
 })
 export class UndergraduateComponent implements OnInit {
     public content: any;
+    public academicYears: any;
+    public requiredStudios: any;
     public studios: any;
 
     public currentPerson: any;
@@ -32,17 +34,18 @@ export class UndergraduateComponent implements OnInit {
 
         const query = `
         {
+            allYears {
+                label
+            }
           allUndergraduatePages {
             description {
                 html
             }
-            studiosDescription {
-                html
-            }
             currentStudiosYear
           }
-          currentUndergraduateStudios {
+          allUndergraduateStudios {
             name
+            requiredCourse
             description {
               html
             }
@@ -57,6 +60,11 @@ export class UndergraduateComponent implements OnInit {
                 }
             }
             semester
+            url
+            year
+            {
+                label
+            }
           }
         }
       `;
@@ -64,7 +72,19 @@ export class UndergraduateComponent implements OnInit {
         const response = await this.dataSvc.getSet('undergraduate', query);
 
         this.content = response['allUndergraduatePages'];
-        this.studios = response['currentUndergraduateStudios'];
+        this.academicYears = response['allYears'];
+        this.requiredStudios = response['allUndergraduateStudios'].filter(
+            studio => {
+                return studio.requiredCourse === true;
+            },
+        );
+        this.studios = response['allUndergraduateStudios'].filter(studio => {
+            return !studio.requiredCourse;
+        });
+    }
+
+    getYearStudios(label: string) {
+        return this.studios.filter(studio => studio.year.label === label);
     }
 
     async getPerson(key: string): Promise<void> {
@@ -101,7 +121,6 @@ export class UndergraduateComponent implements OnInit {
             query,
         );
         this.currentPerson = response['getPerson'];
-        console.log(this.currentPerson.image);
     }
 
     closePerson(): void {
