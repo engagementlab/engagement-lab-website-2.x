@@ -27,7 +27,7 @@ exports.signup = async function (req, res) {
 
         if (response.id) { res.status(200).send({ msg: 'ok', }); }
     } catch (e) {
-        if (e.response.body.title === 'Member Exists') {
+        if (e.response && e.response.body.title === 'Member Exists') {
             res.status(400).send('already_subscribed');
             return;
         }
