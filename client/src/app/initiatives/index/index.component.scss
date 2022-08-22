@@ -5,6 +5,10 @@ h3 {
     @include font-lunchtype-med;
 }
 
+a h3 {
+    text-decoration: underline;
+}
+
 .video {
     a {
         display: block;

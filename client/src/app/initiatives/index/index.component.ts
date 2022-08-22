@@ -58,10 +58,6 @@ export class StudiosIndexComponent implements OnInit {
               thumb { 
                 public_id
               }
-              video
-              videoThumbnail {
-                public_id
-              }
             }
           }
       `;
