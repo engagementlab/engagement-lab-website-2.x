@@ -40,8 +40,6 @@ Partner.add({
     },
     description: {
         type: String,
-        required: true,
-        initial: true,
     },
     type: {
         type: Types.Select,
