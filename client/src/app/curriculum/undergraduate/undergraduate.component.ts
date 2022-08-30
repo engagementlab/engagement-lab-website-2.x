@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/utils/data.service';
 
@@ -16,10 +17,14 @@ export class UndergraduateComponent implements OnInit {
     public currentPerson: any;
     private gettingPerson: boolean;
 
+    public videoUrl: SafeResourceUrl;
+    public videoDisplayToggle: boolean;
+
     constructor(
         private dataSvc: DataService,
         private router: Router,
         private _route: ActivatedRoute,
+        private sanitizer: DomSanitizer,
     ) {
         this._route.params.subscribe(params => {
             if (Object.keys(params).length < 1) return;
@@ -39,6 +44,9 @@ export class UndergraduateComponent implements OnInit {
             }
           allUndergraduatePages {
             description {
+                html
+            }
+            curriculumDescription {
                 html
             }
             currentStudiosYear
@@ -81,10 +89,16 @@ export class UndergraduateComponent implements OnInit {
         this.studios = response['allUndergraduateStudios'].filter(studio => {
             return !studio.requiredCourse;
         });
+        this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+            `https://player.vimeo.com/video/744697164?autoplay=1&color=00ab9e&byline=0&portrait=0`,
+        );
     }
 
     getYearStudios(label: string) {
         return this.studios.filter(studio => studio.year.label === label);
+    }
+    embedVideo() {
+        this.videoDisplayToggle = true;
     }
 
     async getPerson(key: string): Promise<void> {
