@@ -28,19 +28,6 @@
       "env": {
         "NODE_ENV": "staging"
       }
-    },
-
-    "production": {
-      "user": "node",
-      "host": "199.94.80.32",
-      "repo": "git@github.com:engagementlab/engagement-lab-website-2.x.git",
-      "ref": "origin/production",
-      "path": "/srv/engagement-lab-website-2.0",
-      "pre-deploy-local": "echo 'Cloning and building.';",
-      "post-deploy": "bash ./scripts/deploy.sh prod",
-      "env": {
-        "NODE_ENV": "production"
-      }
     }
   }
 }

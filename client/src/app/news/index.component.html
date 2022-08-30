@@ -1,0 +1,119 @@
+<h2 class="column is-half no-pad">News</h2>
+
+<section id="news">
+    <div class="newsItem column is-full" *ngFor="let newsItem of news">
+        <a
+            class="internal"
+            routerLink="/news/{{ newsItem.key }}"
+            *ngIf="!newsItem.externalLink || newsItem.externalLink.length === 0"
+        >
+            <hr />
+
+            <div class="columns is-mobile">
+                <h1 class="date column is-one-fifth hidden-mobile">
+                    {{ newsItem.publishDate | date: 'MMMM dd' }}
+                    <div class="year">
+                        {{ newsItem.publishDate | date: 'yyyy' }}
+                    </div>
+                </h1>
+                <h1 class="date column is-one-fifth hidden-tablet-plus">
+                    {{ newsItem.publishDate | date: 'MMM dd' }}
+                    <div class="year">
+                        {{ newsItem.publishDate | date: 'yy' }}
+                    </div>
+                </h1>
+
+                <div class="name column no-margin">
+                    <h2>
+                        {{ newsItem.title }}&nbsp;
+                        <svg
+                            width="32"
+                            height="23"
+                            fill="none"
+                            viewBox="0 0 32 23"
+                        >
+                            <path
+                                stroke="#000"
+                                d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                            />
+                        </svg>
+                    </h2>
+                </div>
+            </div>
+        </a>
+
+        <!-- External link -->
+        <a
+            class="external"
+            [href]="newsItem.externalLink"
+            *ngIf="newsItem.externalLink && newsItem.externalLink.length > 0"
+        >
+            <hr />
+
+            <div class="columns is-mobile">
+                <h1 class="date column is-one-fifth hidden-mobile">
+                    {{ newsItem.publishDate | date: 'MMMM dd' }}
+                    <div class="year">
+                        {{ newsItem.publishDate | date: 'yyyy' }}
+                    </div>
+                </h1>
+                <h1 class="date column is-one-fifth hidden-tablet-plus">
+                    {{ newsItem.publishDate | date: 'MMM dd' }}
+                    <div class="year">
+                        {{ newsItem.publishDate | date: 'yy' }}
+                    </div>
+                </h1>
+
+                <div class="name column no-margin">
+                    <h2>
+                        {{ newsItem.title }}&nbsp;
+                        <svg viewBox="0 -3.346 32 32" width="32" height="32">
+                            <g
+                                transform="matrix(0.091574, 0, 0, 0.091574, 0, 0)"
+                            >
+                                <g>
+                                    <path
+                                        class="arrow"
+                                        d="M266.422,0h-97.625c-9.65,0-17.5,7.851-17.5,17.5c0,9.649,7.85,17.5,17.5,17.5h55.377l-92.375,92.374   c-3.307,3.305-5.127,7.699-5.127,12.375c0,4.676,1.819,9.069,5.125,12.371c3.306,3.309,7.699,5.13,12.375,5.13   c4.674,0,9.069-1.82,12.376-5.127l92.374-92.375v55.377c0,9.649,7.851,17.5,17.5,17.5c9.649,0,17.5-7.851,17.5-17.5V17.5   C283.922,7.851,276.071,0,266.422,0z"
+                                    ></path>
+                                    <path
+                                        d="M201.137,253.922H30V82.785h128.711l30-30H15c-8.284,0-15,6.716-15,15v201.137c0,8.284,6.716,15,15,15h201.137   c8.284,0,15-6.716,15-15V95.211l-30,30V253.922z"
+                                        data-original="#000000"
+                                        class="active-path"
+                                        data-old_color="#000000"
+                                    ></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<h3 class="column is-half no-pad">News Archive</h3>
+<p>
+    The following articles were published previously on the Lab's Medium blog.
+    Some of them may have small formatting issues.
+</p>
+<section id="archive">
+    <div class="newsItem column is-full" *ngFor="let newsItem of newsArchive">
+        <a routerLink="/news/archive/{{ newsItem.key }}">
+            <div>
+                <h4>
+                    {{ newsItem.title }}
+                </h4>
+                <p class="no-margin">
+                    {{ newsItem.datePosted | date: 'MMM dd yyyy' }}
+                </p>
+                <hr />
+                <!-- <div
+                        id="body"
+                        class="column is-11-mobile is-three-quarters-tablet"
+                        [innerHtml]="newsItem.bodyHTML | safeHtml"
+                    ></div> -->
+            </div>
+        </a>
+    </div>
+</section>

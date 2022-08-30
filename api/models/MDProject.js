@@ -42,6 +42,7 @@ const MDProject = new keystone.List('MDProject', {
     label: 'Thesis Projects',
     singular: 'Thesis Project',
     sortable: true,
+    hidden: true,
     autokey: {
         path: 'key',
         from: 'name',

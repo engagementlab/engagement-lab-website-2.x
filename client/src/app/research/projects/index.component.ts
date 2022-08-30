@@ -81,6 +81,8 @@ export class ProjectIndexComponent implements OnInit {
                         public_id
                     }
                     status
+                    startYear
+                    endYear
                 }
                 allArchivedProjectPages {
                     name

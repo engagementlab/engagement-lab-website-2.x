@@ -209,4 +209,42 @@ export class DataService {
                 return throwError(error);
             });
     }
+
+    /**
+     Get news from Lab's newer CMS API 
+     * @function
+     * @returns Observable
+     * @param {string} key - Key for a single news item
+     */
+    public async getNews(key: string = null): Promise<unknown> {
+        this.isLoading.next(true);
+        const stateKey = `news${key ? '-' + key : ''}`;
+
+        if (!isScullyGenerated()) {
+            let url = environment.new_api_url + `/rest/news/${key ? key : ''}`;
+
+            const data = await this.http.get(url).toPromise();
+
+            // Cache result in state
+            this.transferState.setState(stateKey, data);
+            this.isLoading.next(false);
+
+            return data;
+        }
+
+        // Get cached state for this key
+        const state = new Promise<unknown[]>((resolve, reject) => {
+            try {
+                this.transferState
+                    .getState<unknown[]>(stateKey)
+                    .subscribe(res => {
+                        if (res) resolve(res);
+                    });
+            } catch (error) {
+                this.isLoading.next(false);
+                reject(error);
+            }
+        });
+        return state;
+    }
 }

@@ -15,7 +15,7 @@ const Curriculum = {
       id: ID!
       enabled: Boolean!
       name: String!
-      description: String!
+      type: String!
     }
   `,
     queries: ['allCurriculumPages: [Curriculum]'],

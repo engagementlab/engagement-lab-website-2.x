@@ -20,6 +20,11 @@ interface Link {
     href?: string;
     label: string;
     enabled?: boolean;
+    subLinks?: {
+        url?: string;
+        href?: string;
+        label: string;
+    }[];
 }
 
 @Component({
@@ -30,9 +35,37 @@ interface Link {
 export class NavComponent implements AfterViewInit {
     public navLinks: Link[] = [
         { url: '', label: 'Home', enabled: true },
-        { url: 'studios', label: 'Studios', enabled: true },
-        { url: 'graduate', label: 'Graduate Program', enabled: true },
-        { url: 'research', label: 'Research', enabled: true },
+        {
+            url: 'initiatives',
+            label: 'Social Impact Initiatives',
+            enabled: true,
+        },
+        {
+            label: 'Curriculum',
+            subLinks: [
+                {
+                    url: 'curriculum/undergraduate',
+                    label: 'Undergraduate',
+                },
+                {
+                    url: 'curriculum/graduate',
+                    label: 'Graduate',
+                },
+            ],
+        },
+        {
+            label: 'Research',
+            subLinks: [
+                {
+                    url: 'research/projects',
+                    label: 'Projects',
+                },
+                {
+                    url: 'research/publications',
+                    label: 'Publications',
+                },
+            ],
+        },
         { url: 'people', label: 'People', enabled: true },
         { url: 'about', label: 'About', enabled: true },
     ];
@@ -41,8 +74,8 @@ export class NavComponent implements AfterViewInit {
         { url: 'resources', label: 'Resources', enabled: true },
         { url: 'events', label: 'Events Calendar', enabled: true },
         {
-            href: 'https://medium.com/engagement-lab-emerson-college',
-            label: 'Lab Blog',
+            url: 'news',
+            label: 'News',
             enabled: true,
         },
         { url: 'partner', label: 'Partner With Us', enabled: true },
@@ -132,6 +165,16 @@ export class NavComponent implements AfterViewInit {
         this.menu.nativeElement.classList.add('wasOpened');
 
         document.querySelector('body').classList.toggle('noscroll');
+
+        const closed = !this.menuBtn.nativeElement.classList.contains('isOpen');
+        if (!closed) return;
+
+        // Fetch all the details (labels) for sublinks
+        const details = document.querySelectorAll('.sublink-label');
+        // Add the onclick listeners.
+        details.forEach(targetDetail => {
+            targetDetail.removeAttribute('open');
+        });
     }
 
     // Is passed route active?

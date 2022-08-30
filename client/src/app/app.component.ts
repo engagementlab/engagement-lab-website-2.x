@@ -17,9 +17,6 @@ import { DataService } from './utils/data.service';
 })
 export class AppComponent implements OnInit, AfterViewInit {
     public isQABuild: boolean;
-    public showStudiosNav: boolean;
-    public showResearchNav: boolean;
-    public showGradNav: boolean;
 
     public dataErrors: string;
     public imageErrors: string;
@@ -28,11 +25,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     title = 'Engagement Lab @ Emerson College';
 
-    @ViewChild('initiativesEl') initiativesEl: ElementRef;
-    @ViewChild('initiativesBtn') initiativesBtn: ElementRef;
-
-    @ViewChild('studiosEl') studiosEl: ElementRef;
-    @ViewChild('studiosBtn') studiosBtn: ElementRef;
     @ViewChild('attributes') attributions: ElementRef;
     @ViewChild('consent') consent: ElementRef;
     @ViewChild('revoke') revoke: ElementRef;
@@ -51,13 +43,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     ngOnInit() {
         // Monitor router
         this.router.events.subscribe(async evt => {
-            // Close initiatives nav on all navigation
-            if (this.initiativesEl)
-                this.initiativesEl.nativeElement.classList.remove('open');
-            // Close studios nav on all navigation
-            else if (this.studiosEl)
-                this.studiosEl.nativeElement.classList.remove('open');
-
             if (!(evt instanceof NavigationEnd)) return;
 
             // Get nav route when nav ends
@@ -68,33 +53,6 @@ export class AppComponent implements OnInit, AfterViewInit {
             if (!evt.url.includes('initiatives')) {
                 document.getElementById('initiative-bg').classList.value = '';
             }
-
-            // Show studios nav?
-            this.showStudiosNav =
-                evt.url.includes('studios') && !evt.url.includes('graduate');
-            // Show research nav?
-            this.showResearchNav = evt.url.indexOf('/research') === 0;
-            // Show graduate nav?
-            this.showGradNav = evt.url.includes('graduate');
-
-            // Get all current initiatives if on a research page
-            if (this.showResearchNav) {
-                const query = `
-                {
-                    allInitiativePages {
-                    name
-                        key
-                    }
-                }
-            `;
-
-                const content = await this.dataSvc.getSet(
-                    'app-initiatives',
-                    query,
-                );
-                this.initiatives = content['allInitiativePages'];
-            }
-
             if (evt.url.indexOf('/#') === 0) return;
 
             // Always go to top of page
@@ -136,18 +94,8 @@ export class AppComponent implements OnInit, AfterViewInit {
         );
     }
 
-    toggleInitiatives() {
-        this.initiativesBtn.nativeElement.classList.toggle('open');
-        this.initiativesEl.nativeElement.classList.toggle('open');
-    }
-
     studiosActive() {
         return this.currentUrl.indexOf('/studios/') > -1;
-    }
-
-    toggleStudios() {
-        this.studiosBtn.nativeElement.classList.toggle('open');
-        this.studiosEl.nativeElement.classList.toggle('open');
     }
 
     dismissErrors() {

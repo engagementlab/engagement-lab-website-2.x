@@ -14,10 +14,10 @@ const Masters = {
     type Masters {
       id: ID!
       name: String!
-      programDescription: String
-      partnerships: String!
+      programDescription: Markdown!
+      partnerships: Markdown!
+      coursesInfo: Markdown
       phases: [String]!
-      learningObjectives: Markdown!
       faculty: [Person]
       projects: [MDProject]
       studiosBlurb: String!

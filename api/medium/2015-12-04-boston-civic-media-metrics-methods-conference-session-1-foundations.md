@@ -1,0 +1,117 @@
+# Boston Civic Media: Metrics & Methods conference | Session 1: Foundations
+
+### By Engagement Lab
+
+06/11/2015
+
+**\*This is a liveblog account contributed to by Maya Wagoner at the** [Boston Civic Media Metrics & Methods Conference.](https://bostoncivic.media/)\*
+
+> > What are the unanswered questions that drive your work?
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_LLIrszGAVGZckDTn.jpg)
+
+**Christine Gaspar**
+
+-   As all of you know there are lots of barriers to participate in civic life. Our work at CUP focuses on the barriers there are to understanding public policy and planning issues and decision-making processes that really shape the place that we all live. We collaborate with community orgs and advocacy groups that come to us with specific issues that people are trying to engage around and are having trouble with and we work with them and with designers to come up with accessible visual things.
+
+-   I always ask why people ask me to be part of civic media things because our chosen medium is often print.
+
+-   Questions we keep asking ourselves over and over: “What tools can we create to foster real meaningful community engagement? and What does that look like? We really think of our projects as tools. How do people really process information? How do people actually process information? How do people learn and engage with things? We try to use a lot of the research out there for how people actually process visual information and how we incorporate that into our work. We want to know how embodied information works, how people physically interact with objects, and how that deepens their learning and their memory of information, so we try to incorporate things like that.
+
+-   We also think a lot about how do we meet people where they’re at. Sometimes literally (i.e. in the subway) but also languages, levels of literacy, what kinds of cultural references our work carries. That’s really critical for us. We try to collaborate directly with the communities we’re trying to reach to make sure they have input on that. It’s a real challenge, especially in the civic media space, as someone observed at our table, in a room that’s 95% white, what cultural references we’re bringing into our work.
+
+-   It’s important to know what obstacles people are actually facing, and to know what fears people have. We work a lot in immigrant communities. The first part of the project is usually addressing what the policy is not, because of the fears people have that are preventing them from hearing the real information.
+
+-   How do you use the power of narrative and personal experience to build bridges between poorly served communities and things like government services and decision making processes, especially when there are moments when people who are not part of decision making processes are not getting services, and sometimes it’s intentional. People are sometimes being intentionally excluded from those things, so how do you work in that space where that kind of tension exists?
+
+-   In this project, we had to teach people how to work with NYCHA, but since historically NYCHA has not always been useful for them, we have to give them alternative methods to get around working with NYCHA.
+
+-   How can we guarantee we’re not wasting people’s time? In particular, we don’t want to have people be worse off for engaging. We don’t want people coming out feeling more frustrated, or disempowered, or cynical, which is a real danger because then you’ve lost people.
+
+-   When do you work directly with individuals, and when do you work with intermediaries? In a lot of situations you can actually have more impact working with intermediaries.
+
+-   In a lot of civic tech space, there’s a pathological view of government as something that’s seen as broken. Like, tech is going to bring efficiency to these processes. But it’s about engagement, not efficiency. It’s about democracy, which frankly can be super inefficient, especially when it’s being inclusive. We’re never going to solve for inclusiveness and engagement if we’re always focused on solving for efficiency.
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_10SyR5Kbb0kBec_s.jpg)
+
+**Ethan Zuckerman**
+
+-   What does it mean to be an effective civic actor? What does it mean to help people become effective civic actors?
+
+-   We get these stories every two years about how bad we are at turning out to vote and what bad civic actors we are, but I see something very different on the ground, I see people turning out for a wide variety of civic activities, and protests, and engaging in many different ways. Part of what I’ve been trying to figure out is why we have this narrative that essentially beats people up for being so bad at civics.
+
+-   Maybe there’s a reason people aren’t voting. There’s very very little confidence in government. Confidence in all branches of government is on a steady slide. If you go deeper than this Gallup data, we have distrust in institutions of all kinds. You find this decline in trust of universities, in nonprofits, in all kinds of institutions. The only institutions in which we appear to have increasing confidence are the military and the police, which is more than a little terrifying. This sounds a little more like Egypt.
+
+-   How do we deal with this question of effective civics at a moment when we have very very low confidence in institutions? I think there are really good reasons to have low confidence in institutions.
+
+-   This leaves us with an uncomfortable divide: Christopher calls this the Institutionalist versus the Insurrectionist divide. He suggests that this is perhaps a better way of understanding politics in this country right now than the division between left and right. It’s a division of people who think we can make change within the institutions we have and people who think we either need to overthrow or radically transform those institutions to have a hope for change. I want to suggest that in rooms like this there tends to be a very very strong institutionalist bias. A lot of what we tend to do in this field of civics is say “if we understood these institutions better, if we understood how we interfaced with them and understood how we could have power within these institutions, we would find a way to have change. I do not necessarily disagree with this, but I know there are a whole lot of people who aren’t buying it. I want to make sure there is a path for civic change for people who find themselves on the insurrectionist side. (Christopher hayes: twilight of the elite)
+
+-   In our lab we use the technique called the “Inverted Lessig”. Lessig says we think of laws as the main way we regulate society, but there’s actually a bunch of ways we regulate society. Code makes certain behaviors possible or impossible, markets make certain things expensive or cheap, norms make certain behaviors acceptable or unacceptable. In the Inverted Lessig, we say these are all ways to be effective civic actors. When you spend time in the insurrectionist space, you spend a lot of time in the non-law side of this space.
+
+-   We think a lot also about thick vs. thin. We talk about this critique of “clicktivism.” [People often ask,] does any of this stuff really matter? Are you just clicking buttons and not taking action out in the world? Where is it appropriate to ask for one or the other (thick or thin engagement)? If you’re giving your whole self to vote, that’s voter suppression. We want voting to be a thin interaction.
+
+-   What does effective civics look like at a moment of high institutional mistrust?
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_UlhMRQx3NzP4YXwg.jpg)
+
+**Peter Levine**
+
+-   I will make a quick institutionalist case with two slides.
+
+-   My question is, how can we achieve really broad based civic engagement at a time when choice is massively disaggregated?
+
+-   We need to recruit people for non-civic reasons at scale with a business model or some other way of operating at scale that can bring a lot of people in whether they want to be civic or not, and that can bring people into civic life. If we don’t have lots of little NGOs and tools, we’re going to continue to see a pattern where only the most advanced or interested are participating.
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/0_70qH1zETJlsX3f3b.jpg)
+
+**Doris Sommer**
+
+-   I also want to talk about distrust of institutions by talking about my favorite mayor, a mayor of Bogotà.
+
+-   “They elected a nerd out of despair”
+
+-   He said, “let’s go after traffic death because we can’t go after drug lords just yet. We have to show change is possible,” because no one thought change was possible, so his secretary of culture said “nothing to do boss, it’s time to bring out the clowns” so he fired 20 corrupt traffic police and put 20 pantomime artists out with no authority. This was the first icebreaker. What I want to say is that without art, and participatory art, there was no way to crack the ice in Bogotà. The definition of art is simply, making something that didn’t exist before. That’s why technology and art are so close, that’s why art and design are close on rosters. art is simply artifice. If we’re not artists, we can’t make change. That’s the bottom line for reintegrating arts and humanities in this important project of civic engagement. How do you think about change if you don’t think like an artist?
+
+-   How do you make good news popular? How do you make it sell in the media? I ask my journalist friends, “how come we don’t know about good news?”
+
+-   What Mockus did was a statistical analysis of the where traffic deaths were most likely to occur, and he tried a couple of different methods of interventions. Try again, fail again, fail better. That’s a quote from Beckett. One artist said “let’s make public graves where traffic deaths happened”
+
+-   The artist Pedro Reyes melted guns and made shovels and instruments.
+
+-   Why doesn’t good news travel? How can we use civic media to make good news travel so we have good practices not to copy but to inspire us? How do we get out of academic silos when we talk about sparking interactions? I work in Latin American literature. I want to be working more closely with colleagues in politics, with colleagues at the Ed school, with colleagues in sociology, with colleagues who know how to do evaluations so we know what we’re doing. Mockus cured me of my allergy to evaluations and to statistical analyses. When he can show me that he reduced the homicide rate by 70% that’s more eloquent than any discourse analysis can bring me with words.
+
+-   How do we scale up good practices?
+
+-   How do we imagine we are going to end authoritarianism, clientalism, and all of the -isms that amount to corruption if we continue to teach children in rows where kids in the back look at the back of the heads of the kids in front of them and everyone competes for the attention of one person who asks all the questions and knows all the answers? Are we not teaching authoritarianism and corruption every day of the week in our boring schools?
+
+-   What is the role of research and evaluation in all of this, and what role does knowledge play in “scaling up”? I wonder if it’s a real fear that when there is knowledge, that institutions begin to adopt the insurrectionist narrative. That is happening. We see this in corporate and government culture. This narrative of participation and engagement is being picked up. Can that be addressed or perhaps avoided?
+
+**Ethan**
+
+-   I’ve tended to approach this from the question of efficacy. Efficacy is fundamentally an evaluative question.
+
+-   We’re working on something right now that asks whether coverage of shootings of African-American males by police has been different pre-Ferguson and post-Ferguson. This turns out to be a big data question. For the vast majority of cases, we’ve seen almost no coverage at all, and we’re looking to see whether a discontinuity analysis shows a pattern in attention pre- and post-Ferguson, whether the language changes, so on and so forth.
+
+-   One way to look at efficacy is to see if a strategy like #BlackLivesMatter is actually effective in changing the media environment. There’s also the issue of personal empowerment. Do you feel that you can put a hand on the lever of change? Do you feel like you can have influence on the issues you care about in your environment? The perception of efficacy is almost as important to me as actual efficacy. That may sound cynical, but what I’m really scared about is total disengagement. The insurrectionist narrative to me is a rather happy narrative because it suggests that rather than disengaging entirely, someone sees a way that they can engage even if they don’t trust the institution.
+
+**Doris**
+
+-   I want to follow on the question of optimism. Gramsci says that if you know something you know things are going badly. But that’s not the only thing that’s going on in people! The pessimism of reason, but the optimism of the will is why you get up every morning.
+
+-   For too long, FAS identified pessimism as sophistication! To be really smart, you knew that Foucault and Adorno were right. That kind of pessimism is deadening for both the institutional and insurrectionist model of change. We need to balance pessimism with joy and pleasure. Kids get into media because it’s fun, not because they think they need to know this to get ahead. We need to rescue pleasure from a kind of vivarian superstition we have about progress.
+
+**Peter**
+
+-   Civic studies could be described as (and you can look this up at Tufts) a kind of reorientation of the social sciences and humanities so they take an agensic perspective. It seems to me we know more about how programs affect individuals than ever before because we have more evaluation and it’s actually just cheaper. There was a time when you had to use punch cards. We know more about patterns of actual behavior in the world because of big data. I don’t think we feel we know as much as we did 30 years ago about how to make change. you don’t get that from copying data into a spreadsheet.
+
+> > My question is boxing in research as evaluation. There is so much room to make research much more performative and much more expressive. I want to hear your thoughts on how we can think of research beyond evaluation and combine some of this performative and self-efficacy as part of the research process and part of creating collective research.
+
+-   **Doris:** The research I’m interested in is collecting good practices. I think we’re losing steam by thinking that this is just a quirky guy here or a quirky guy here.
+
+-   **Ethan:** Trying to bring research into evaluating day-by-day week-by-week, that’s what’s really exciting to me about this practice. It’s always going to be important to have you know, peer reviewed research that takes months or years to get out, but I think those same processes can get used literally day by day looking at how we did today. My students are embedding in different social change organizations, and trying to bring that research practice into literally something that’s informing each move.
+
+-   **Christine:** I’m going to get their name wrong, but it’s something like “frameworks institute” in Washington DC, and their work is about trying to frame complex issues like how to you talk about climate change in the media, and it’s a really really research-based approach, but I think it’s a really important thing along those lines.
+
+> > We talked to young professionals in Boston and 96% of them said they would like to be more involved in government but they just don’t know how to get involved. Not being aware of community meetings, etc. How much is a communications gap, and how much of it is skepticism?
+
+-   **Ethan:** People want to matter. It depends how you ask these questions. This decline in civics narrative implies that we are a less worthy generation than the generation that has come before us. We’ve lost our spark, we’ve lost our passion, and that’s bullshit._ It’s really hard to know what we do._ this is not a moment of a diseased society. There is nothing wrong with us as a people.

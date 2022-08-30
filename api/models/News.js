@@ -12,7 +12,6 @@
  */
 const { keystone, } = global;
 const { Types, } = keystone.Field;
-const urlValidator = require('../utils').url;
 
 const News = new keystone.List('NewsItem', {
     autokey: {
@@ -23,6 +22,7 @@ const News = new keystone.List('NewsItem', {
     map: {
         name: 'title',
     },
+    hidden: true,
 });
 
 /**
@@ -41,29 +41,31 @@ News.add({
         type: Types.Boolean,
         note: 'Will never appear on site if not enabled',
     },
-    featured: {
-        type: Types.Boolean,
-    },
     datePosted: {
         type: Date,
         default: Date.now,
         required: true,
         initial: true,
     },
-    url: {
-        type: Types.Url,
-        required: true,
-        initial: true,
-        label: 'Link to Medium Post',
-        validate: urlValidator,
-        note: 'Must be in format "https://medium.com/engagement-lab-emerson-college/post-title". <br /><br /> **Please ensure image height is 300px, or it will render oddly.**',
-    },
+    // url: {
+    //     type: Types.Url,
+    //     required: true,
+    //     initial: true,
+    //     label: 'Link to Medium Post',
+    //     validate: urlValidator,
+    //     note: 'Must be in format "https://medium.com/engagement-lab-emerson-college/post-title". <br /><br /> **Please ensure image height is 300px, or it will render oddly.**',
+    // },
     image: {
+        label: 'Thumbnail',
         type: Types.CloudinaryImage,
         folder: 'homepage-2.0/news',
         note: '',
     },
-
+    body: {
+        type: Types.Markdown,
+        required: true,
+        initial: true,
+    },
 });
 
 News.schema.pre('save', next => {

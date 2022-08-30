@@ -10,6 +10,7 @@ export const environment = {
     universal: false,
     api_url: 'http://localhost:3000',
     data_url: 'http://localhost:3000',
+    new_api_url: 'https://cms.qa.transformnarratives.org',
 };
 
 /*

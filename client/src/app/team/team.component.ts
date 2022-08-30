@@ -13,7 +13,12 @@ import { DataService } from '../utils/data.service';
 export class TeamComponent implements OnInit {
     public currentPerson: any;
 
-    public people: any[];
+    public leadership: any[];
+    public faculty: any[];
+    public staff: any[];
+    public students: any[];
+    public cohorts: any[];
+    public alumni: any[];
 
     private gettingPerson: boolean;
 
@@ -40,7 +45,7 @@ export class TeamComponent implements OnInit {
 
         const query = `   
             {
-                allPeople {
+                allLeadershipPeople {
                     name {
                         first
                         last
@@ -50,18 +55,73 @@ export class TeamComponent implements OnInit {
                     image {
                         public_id
                     }
+                    onLeave
+                }
+                allFacultyPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    title
+                    image {
+                        public_id
+                    }
+                    onLeave
+                }
+                allStaffPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    title
+                    image {
+                        public_id
+                    }
+                }
+                allMastersPeople {
+                    name {
+                        first
+                        last
+                    }
+                    key
+                    image {
+                        public_id
+                    }
+                }
+                allAlumniPeople {
+                    name {
+                        first
+                        last
+                    }
                     cohortYear {
+                        key
                         label
                     }
-                    alumni
-                    category
-                    onLeave
+                    relatedLinks
+                }
+                allCohorts {
+                  key
+                  label
+                  current
                 }
             }
         `;
 
         const response = await this.dataSvc.getSet('team', query);
-        this.people = response['allPeople'];
+        this.leadership = response['allLeadershipPeople'];
+        this.faculty = response['allFacultyPeople'];
+        this.staff = response['allStaffPeople'];
+        this.students = response['allMastersPeople'];
+        this.alumni = response['allAlumniPeople'];
+        this.cohorts = response['allCohorts'].filter(c => !c.current);
+    }
+
+    getCohortAlumni(cohortKey: string) {
+        return this.alumni.filter(
+            student => student.cohortYear.key === cohortKey,
+        );
     }
 
     async getPerson(key) {

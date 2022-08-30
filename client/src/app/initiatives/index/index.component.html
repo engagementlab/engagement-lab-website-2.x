@@ -1,0 +1,192 @@
+<!-- intro -->
+<section id="intro" class="columns is-mobile" *ngIf="content">
+    <div class="column is-half-tablet is-10-mobile">
+        <h2>Social Impact Initiatives</h2>
+        <h3 class="blurb">{{ content.studiosIntro.initiativesSummary }}</h3>
+
+        <!-- <div id="video-embed" class="embed">
+            <div class="frame">
+                <iframe
+                    [src]="videoUrl"
+                    frameborder="0"
+                    allow="fullscreen; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+        </div> -->
+    </div>
+</section>
+
+<section
+    id="types"
+    class="columns is-mobile is-multiline no-margin"
+    *ngIf="content"
+>
+    <!-- <div id="status" class="columns column is-full is-mobile">
+        <span class="column flex">
+            <a
+                *ngFor="let initiative of content.allStudioInitiatives"
+                [attr.aria-label]="
+                    'Button to filter studios belonging to ' +
+                    initiative.name +
+                    ' initiative'
+                "
+                [class.active]="
+                    currentStudio && currentStudio.key === initiative.key
+                "
+                (click)="applySelector(initiative.key)"
+            >
+                <h3>
+                    {{ initiative.name }}
+                </h3>
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ initiative.thumb.public_id }}"
+                    width="250"
+                    autoFormat="true"
+                    [responsive]="true"
+                    [alt]="'Thumbnail image for initiative ' + initiative.name"
+                ></cdn-image
+            ></a>
+        </span>
+    </div> -->
+
+    <div class="column is-11-mobile is-6-tablet is-4-desktop" *ngIf="content">
+        <div
+            *ngFor="
+                let initiative of content.allStudioInitiatives;
+                let i = index
+            "
+        >
+            <a routerLink="/initiatives/{{ initiative.key }}">
+                <h3>
+                    {{ initiative.name }}
+                </h3>
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ initiative.thumb.public_id }}"
+                    width="250"
+                    autoFormat="true"
+                    [responsive]="true"
+                    [alt]="'Thumbnail image for initiative ' + initiative.name"
+                ></cdn-image>
+                <p>{{ initiative.description }}</p>
+            </a>
+            <!-- <h4>Intro Video</h4>
+            <div class="video">
+                <a
+                    id="video-thumb"
+                    [routerLink]=""
+                    (click)="embedVideo(i)"
+                    *ngIf="!videoDisplayToggle[i]"
+                >
+                    <cdn-image
+                        cloudinaryPrefix="/"
+                        cloudinaryId="{{ initiative.videoThumbnail.public_id }}"
+                        autoFormat="true"
+                        alt="Preview thumbnail image for initiatives introduction video."
+                        *ngIf="initiative.videoThumbnail"
+                    ></cdn-image>
+                    <img
+                        src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
+                        alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
+                        *ngIf="!initiative.videoThumbnail"
+                    />
+                    <span class="icon">
+                        <svg
+                            width="80"
+                            height="80"
+                            fill="none"
+                            viewBox="0 0 80 80"
+                        >
+                            <path
+                                fill="#fff"
+                                d="M40 0C17.92 0 0 17.92 0 40s17.92 40 40 40 40-17.92 40-40S62.08 0 40 0zM29.44 55.84V24.16L56.96 40 29.44 55.84z"
+                            />
+                        </svg>
+                    </span>
+                </a>
+                <div
+                    id="video-embed"
+                    class="embed"
+                    *ngIf="videoDisplayToggle[i]"
+                >
+                    <div class="frame">
+                        <iframe
+                            [src]="videoUrls[i]"
+                            frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<!-- <section
+    id="studios"
+    class="columns is-multiline is-mobile no-margin"
+    *ngIf="content"
+>
+    <div class="column is-full">
+        <hr />
+    </div>
+    <div id="filters" class="uppercase">
+        <div id="status" class="columns is-mobile is-multiline">
+            <span class="bold column is-full-mobile is-1-tablet"
+                >Initiatives:</span
+            >
+
+            <span class="controls column is-full-mobile is-8-desktop">
+                <a
+                    aria-label="Button to filter projects by any initiatives"
+                    data-toggle="all"
+                    (click)="applySelector(null)"
+                    [class.active]="!currentStudio"
+                >
+                    All
+                </a>
+                <a
+                    *ngFor="let initiative of content.allStudioInitiatives"
+                    [attr.aria-label]="
+                        'Button to filter studios belonging to ' +
+                        initiative.name +
+                        ' initiative'
+                    "
+                    [class.active]="
+                        currentStudio && currentStudio.key === initiative.key
+                    "
+                    (click)="applySelector(initiative.key)"
+                >
+                    {{ initiative.name }}
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="columns column is-multiline is-mobile is-full no-margin">
+        <div
+            class="column is-4-tablet is-11-mobile type"
+            *ngFor="let studio of content.allStudios"
+        >
+            <a
+                routerLink="/studios/studio/{{ studio.key }}"
+                *ngIf="isSelected(studio.key)"
+                [@inOutAnimation]
+            >
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ studio.thumb.public_id }}"
+                    width="301"
+                    autoFormat="true"
+                    [responsive]="true"
+                    [alt]="'Thumbnail image for studio ' + studio.name"
+                ></cdn-image>
+                <h4>{{ studio.name }}</h4>
+            </a>
+        </div>
+    </div>
+</section> -->

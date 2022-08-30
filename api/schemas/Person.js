@@ -18,6 +18,7 @@ const Person = {
             key: String!
             date: Date
             name: Name!
+            enabled: Boolean!
             category: String!
             title: String
             cohortYear: Filter
@@ -35,6 +36,8 @@ const Person = {
         'allMastersPeople: [Person]',
         'allAlumniPeople: [Person]',
         'allStaffPeople: [Person]',
+        'allFacultyPeople: [Person]',
+        'allLeadershipPeople: [Person]',
         'getPerson(key: String): Person'],
     resolvers: {
         allPeople: async (parent, args) => {
@@ -57,11 +60,26 @@ const Person = {
                     ['name.first', 'ascending']
                 ]).exec();
         },
-        allStaffPeople: async () => model.find({ category: { $in: ['faculty leadership', 'staff'], }, }).exec(),
-        allMastersPeople: async () => model.find({ category: 'Masters', alumni: { $ne: true, }, }).sort([
+        allStaffPeople: async () => model.find({ enabled: true, category: 'staff', }).sort([
             ['name.first', 'ascending']
-        ]).populate('cohortYear').exec(),
-        allAlumniPeople: async () => model.find({ category: 'Masters', alumni: true, }).sort([
+        ]).exec(),
+        allFacultyPeople: async () => model.find({ enabled: true, category: 'faculty fellows', }).sort([
+            ['name.first', 'ascending']
+        ]).exec(),
+        allLeadershipPeople: async () => model.find({ enabled: true, category: 'leadership', }).sort([
+            ['sortOrder', 'ascending']
+        ]).exec(),
+        allMastersPeople: async () => {
+            const cohort = await global.keystone.list('Filter').model.findOne({
+                category: 'Cohort',
+                current: true,
+            }).exec();
+            const people = await model.find({ enabled: true, category: 'Masters', cohortYear: cohort, }).sort([
+                ['name.first', 'ascending']
+            ]).exec();
+            return people;
+        },
+        allAlumniPeople: async () => model.find({ enabled: true, category: 'Masters', alumni: true, }).sort([
             ['name.first', 'ascending']
         ]).populate('cohortYear').exec(),
         getPerson: async (parent, args) => {

@@ -1,0 +1,75 @@
+# NewsActivist: Using globally networked writing to facilitate cross-campus dialogue and engagement
+
+### Nicole Fournier-Sylvester (Concordia University)
+
+# Introduction
+
+The correlation between classes that have open discussions of current events and the formulation of students’ commitments to civic engagement is well established (Gould 2012,27–29; McDevitt and Kiousis 2006, 257–262; Torney-Purta et al. 2001, 137–140). Research suggests, however, that many teachers avoid these types of classroom discussions because they feel ill equipped to deal with complex social and political issues and the unpredictability of student reactions. Further challenges include fear of repercussions and significant curriculum and time constraints (Hess, n.d.; Oulton, Dillon, and Grace 2004, 500). In addition, many students also refrain from participating in class discussions due to shyness, fears of being judged by peers, having insufficient time to think about their positions and large classroom sizes (Dutt-Doner and Powers 2000, 160; Hess 2001; Lusk and Weinberg 1994).
+
+To overcome these barriers, scholars have argued that online networks provide new opportunities for political discussion and venues for civic education (Bennett 2008, 11; Bennett, Wells, and Rank 2008, 116; Carpini, and X. 2000, 347; Middaugh and Kahne 2009, 212). One advantage of online dialogue over classroom discussion is that by responding and posting in the written form students are more accountable for how they present their positions than in a traditional classroom context. Students also report feeling more comfortable sharing their views online because discussions are more centered on the quality of arguments rather than the author. In addition, in an asynchronous dialogue students have more time at their disposal in which to ponder and formulate their own responses (Ghodarti and Gruba 2011, 443; Johnson 2001, 51; Meyer 2003, 56).
+
+Furthermore, civic education researchers and educators are increasingly calling for a more global conception of citizenship, grounded in the ability to engage in dialogue on social and political issues on an international level (Blades and Richardson; Merryfield, Lo, Po and Kasai 2008). In addition to addressing some of the challenges of in-class discussion, online discussion forums provide the opportunity for classrooms to transcend geographical boundaries and time zones and provide students access to the diversity of people and viewpoints that this curriculum requires.
+
+# Case Example: NewsActivist
+
+NewsActivist is a web 2.0-based asynchronous online forum created by teachers looking to provide a space for students to write about and discuss contemporary issues with other students from outside their classrooms. Although hundreds of sites have emerged since the 1990s with the aim of engaging youth in political debate, NewsActivist has certain attributes that distinguish it from other publically available online networks or course management sites and are particularly appealing to the civic-minded educator.
+
+First, upon registration to the site, teachers and students gain access to hundreds of discussion threads, which are organized according to themes established in accordance with students’ interests. The twenty-five themes include civil rights, education, the environment, and spirituality. In August 2014, these [discussion threads were made up of 3463 posts](http://www.newsactivist.com/en) from ninety-four classes based out of thirty-five educational institutions coming from countries such as Canada, the United States, India, and Japan. The site is thus designed around student-centered content, which is explored from multiple perspectives. These are key attributes to effective civic pedagogy.
+
+In addition, unlike publically accessible forums, the NewsActivist site is designed to support a high level of discussion in a monitored environment. Teachers must approve access to students before they can submit content and, even if the student chooses to be represented by a pseudonym, know the identity of every participant. Upon registration, students accept to adhere to certain norms of communication, which help maintain an open and respectful interaction. Teachers and students also have full privacy control. Students may, for example, determine whether their individual posts are publically available or only seen by certain classes or their teacher. Students are also able to flag any posts or comments that they deem inappropriate. As well, teachers have direct access to all postings and responses by their students and can monitor and remove content if needed.
+
+The civic-minded educator can use NewsActivist to improve critical thinking and deliberation skills by having students write about current events and receive, give and respond to feedback. Students can also develop media-literacy skills by exploring a variety of sources that discuss their topic of interest, from academic journals to mainstream media and blogs. Within the site, teachers are encouraged to coordinate assignments with other teachers through the “teachers’ forum.” This type of collaboration ensures a sustained contact between students from different classes and possibly from different countries; such interactions aid in the development of open-mindedness and tolerance. They also provide a space for students who might not feel comfortable engaging in discussions in a traditional classroom setting.
+
+When students use the NewsActivist site, they expand the boundaries of their classroom and learn to express themselves through a medium that is increasingly recognized as an important venue for the exercise of citizenship (Rheingold 2008, 100). Students can “recommend” particularly relevant and interesting posts, which are then featured on the home page. For students who opt to have their postings publically available, the open facing front page can motivate them to develop their public voice and consider their audience as they write about and comment on the contemporary issues that effect them.
+
+Finally, NewsActivist has built-in features that facilitate collaboration and course management. The “teachers’ forum” provides a space for teachers to share resources and identify collaborators, while consultants are available to help teachers design and integrate assignments that use NewsActivist to meet particular curricular goals. The site was also designed to help teachers easily access and grade their students’ submissions. As evidenced by the fact that NewsActivist has been used in Sociology, Business, Ethics, French and English as a Second Language courses, the usability and flexibility of the platform ensures that it can meet a variety of goals. For example, teachers may have students practice their writing and critical thinking skills by having students comment on existing news summaries, or, they may choose to coordinate entire courses with partners from around the world that culminate in a collaborative project or civic action.
+
+# Conclusion
+
+Although the case of integrating on-line discussions in the civics classroom is compelling, one cannot assume that the mere presence of technology will be transformative or democratizing. Online discussion forums should be considered an extension of instructional practices that allow for interactivity and reflection, the sharing of alternative perspectives and the development of a shared vocabulary (Kaylor and Weller 2007, 136). As within a classroom context, educators should ensure that norms of communication are established and respected in these dialogues. Educators may want to work with students to identify the conflicting values and pre-existing inequalities at the source of many social issues. This analysis will encourage students to disentangle themselves from their personal opinions and gain a wider perspective as they participate in online exchanges with students from outside the borders of their classroom. Finally, in addition to fostering offline civic participation, online discussion forums help students to explore global issues from multiple perspectives, which is increasingly considered to be a fundamental civic competency.
+
+# REFERENCES
+
+Bennett, Lance W. 2008. “Changing Citizenship in the Digital Age.” In _Civic life Online: Learning how Digital Media can Engage Youth_, edited by Lance W. Bennett, 1–14. Cambridge, MA: MIT Press.
+
+Bennett, Lance W., Chris Wells and Allison Rank. 2009. “Young Citizens and Civic Learning: Two Paradigms of Citizenship in the Digital Age.” _Citizenship Studies_ 13, no. 2 (2000): 105–120.
+
+Blades, David W. and George H. Richardson. 2006. “Introduction: Troubling the Canon of Citizenship Education.” In _Troubling the Canon of Citizenship Education_, edited by George H. Richardson and David W. Blades, 1–9. New York: Peter Lang.
+
+Delli Carpini, Michael X. 2000. “Gen.com: Youth, Civic Engagement and the New Information Environment.”_Political Communication_ 17 :341–349.
+
+Dutt-Doner, Karen M. and Susan M. Powers. 2000. “The Use of Electronic Communication to Develop Alternative Avenues for Classroom Discussion.” _Journal of Technology and Teacher Education_ 8 (2): 153–172.
+
+Ghodarti, Nazanin and Paul Gruba. “The Role of Asynchronous Discussion Forums in the Development of
+
+Collaborative Critical Thinking.” In: Proceedings of ASCILITE 2011 Changing Demands, Changing Directions, 2011, 437–451. Australia.
+
+Gould, Jonathan. (ed). 2012. _The Guardian of Democracy: The Civic Mission of Schools_. New York: The Center for Information and Research on Civic Learning and Engagement.
+
+Hess, Diana E. 2002. “Discussing Controversial Public Issues in Secondary Social Studies Classrooms: Learning from Skilled Teachers.” _Theory & Research in Social Education_ 30 (1):10–41.
+
+Hess, Diana E. 2001. Teaching Students to Discuss Controversial Public Issues. Bloomington, IN: ERIC Clearinghouse for Social Studies/Social Science Education.
+
+Johnson, Christopher M. 2001. “A Survey of Current Research on Online Communities of Practice.” _Internet and Higher Education_ 4 : 45–60.
+
+Kaylor, Mary and Karen Weller. 2007. “Pedagogy, Self-Assessment, and Online Discussion Groups.” _Journal of Educational Technology & Society_ 10 (1): 136–137.
+
+Lusk, Amy. B. and Adam S. Weinberg.1994. “Discussing Controversial Issues in the Classroom: Creating a Context for Learning.” _Teaching Sociology_ 22 : 301–308.
+
+McDevitt, Michael and Spiro Kiousis. 2007. “Deliberative Learning: An Evaluative Approach to Interactive Civic Education.” _Communication Education_ 55 (3): 247–264.
+
+Merryfield, Merry, Lo, Joe, Po, Sum and Masataka Kasai. 2008. “Worldmindedness: Taking Off the Blinders.” J*ournal of Curriculum and Instruction* 2 (1): 6–20.
+
+Meyer, Katrina A. 2003. Face-to-face Versus Threaded Discussions: The role of Time and Higher-Order Thinking. _Journal of Asynchronous Learning Networks_ 7 (3): 55–65.
+
+Middaugh, Ellen and Joseph Kahne. 2009. “Online Localities: Implications for Democracy and Education.”_Yearbook of the National Society for the Study of Education_ 108 (1): 192–218.
+
+Oulton, Christopher, Vanessa Day, Justin Dillon and Marcus M. Grace. 2004. “Controversial Issues: Teachers’ Attitudes and Practices in the Context of Citizenship Education.” _Oxford Review of Education_ 30:489–507.
+
+Rheingold, Howard. 2008. “Using Participatory Media and Public Voice to Encourage Civic Engagement.” In*Civic life Online: Learning how Digital Media can Engage Youth*, edited by Lance W. Bennett, 97–118. Cambridge, MA: MIT Press.
+
+Torney-Purta, Judith, Rainer H. Lehmann, Hans Oswald and Wolfram Schulz. 2001. Citizenship and Education in Twenty-Eight Countries: Civic Knowledge and Engagement at Aged Fourteen. Amsterdam: International Association for the Evaluation of Educational Achievement.
+
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
+
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

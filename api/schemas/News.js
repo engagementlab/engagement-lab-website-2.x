@@ -17,11 +17,11 @@ const News = {
       title: String
       key: String
       url: String
-      featured: Boolean
       image: Image
+      body: Markdown!
     }
   `,
-    queries: ['allNewsItems(featured: Boolean): [NewsItem]'],
+    queries: ['allNewsItems: [NewsItem]'],
     resolvers: {
         allNewsItems: async () => global.keystone.list('NewsItem').model.find({ enabled: true, }).exec(),
     },

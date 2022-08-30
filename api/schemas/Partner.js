@@ -22,7 +22,7 @@ const Partner = {
   `,
     queries: ['allPartners: [Partner]'],
     resolvers: {
-        allPartners: async () => global.keystone.list('Partner').model.find({}).exec(),
+        allPartners: async () => global.keystone.list('Partner').model.find({}).sort({ name: 'asc', }).exec(),
     },
 
 };

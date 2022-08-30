@@ -1,0 +1,23 @@
+# Racial Bias in Biometric Technologies
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_1sOA6oE35Is7nNFkPX9vGA.png)
+
+Facial recognition technology is something that’s been a contentious point of discussion over previous years due to its utilization and the communities it impacts. Numerous bills have been brought before state and [national](https://www.congress.gov/bill/116th-congress/house-bill/7356/text) legislatures to consider banning the use of this software in light of recent [reports](https://www.biometricupdate.com/201802/chincotech-tackles-racial-bias-in-facial-recognition-systems) that have shown that the technology has shown racial bias. In Massachusetts, [S.1385](https://malegislature.gov/Bills/191/S1385) is a bill currently working its way through the state legislature in order to put a moratorium on facial recognition and other remote biometric technologies. Cities today are always trying to become “smarter” technologically, but it can’t be at the expense of the citizens who are already unjustly targeted by law enforcement. By analyzing the participatory design principles and previous work done in the [Smart Cities Initiative](https://elab.emerson.edu/research/initiatives/civic-smart-cities) and how they can be utilized, we can see how discussion surrounding this issue can be facilitated and a policy decision can be made.
+
+Out of the three initiatives that the Engagement Lab has (Smart Cities, Health Advocacy, Trust In The News), Smart Cities has been the most prevalent in the news as of late. Technology keeps advancing faster and faster as it becomes integrated into the systems that regulate our towns and cities, and it’s become increasingly clear that it’s being used to target people of color. So how do we combat this? Where do we start? One of the main design principles that drives the initiative is “placing people and public value at the center of smart city efforts in contrast to these technology-centric visions that lack public reflection and democratic deliberation.” Technology is great, but if it doesn’t take public opinion into account (whose concerns regarding policing and technology have been loudly voiced since the George Floyd protests) then it’s not really for the benefit of the people. If the software that’s being designed isn’t equitable in terms of how it “recognizes” everyone, then it’ll perpetuate systemic inequalities even further.
+
+To get a better understanding of why a moratorium is being considered, we have to look at the data that’s come out. A recent [federal study](https://www.washingtonpost.com/technology/2019/12/19/federal-study-confirms-racial-bias-many-facial-recognition-systems-casts-doubt-their-expanding-use/) revealed that “Asian and African American people were up to 100 times more likely to be misidentified than white men, depending on the particular algorithm and type of search.” These numbers are staggering and point to why researchers and scientists are raising the alarm about how harmful this could be if fully implemented. One project done here at the Engagement Lab, however, provides insight into how working with the general public could propose a better policy decision or solution. [Civic Smart City](https://elab.emerson.edu/research/projects/civic-smart-city) is a project launched by Eric Gordon in 2018 that “disrupt this dynamic and create models of a civic smart city that works with publics to define problems, and reflect on potential solutions, before implementing new technologies”. The project was implemented through a series of workshops in which organizers sat with groups that walked through a “playbook” that “prioritizes a values-first approach that can be implemented across organizations”. The five main actions in the playbook are as follows:
+
+1. Embrace “Smart Cities”
+
+1. Cultivate Local Innovation Ecosystem
+
+1. Invite Public Influence
+
+1. Question Data
+
+1. Imagine The Possible
+
+This dynamic between researcher and participant is key here because it introduces the “smart city” technology that’s possible while also getting public feedback and questioning the existing data (which, in this case, is greatly needed). If facial recognition technology was approached in this manner, there could certainly be more equity and less bias.
+
+Even though facial recognition and biometric technologies are relatively new, the lack of public opinion is sorely needed in this area. It’s shown through the pedagogies and practices above that it’s key to moving forward with technology that works better for everyone. The moratorium is a great first step in combating this issue which can be built off of in making technology more fair when implemented into society.

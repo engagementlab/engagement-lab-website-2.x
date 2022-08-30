@@ -1,0 +1,80 @@
+@import '~src/styles/_variables';
+@import '~src/styles/_mixins';
+#logo {
+    svg {
+        max-width: 900px;
+        width: 100%;
+    }
+}
+
+.video {
+    a {
+        display: block;
+        position: relative;
+        .icon {
+            @include transition(transform, 0.15s, ease-in-out);
+            position: absolute;
+            left: calc(50% - 40px);
+            top: calc(50% - 40px);
+
+            @include phones {
+                left: calc(50% - 12px);
+                top: calc(50% - 12px);
+            }
+        }
+
+        &:hover {
+            .icon {
+                @include scale(1.2);
+            }
+        }
+    }
+
+    .title {
+        @include font-overpass;
+    }
+
+    .embed {
+        .frame {
+            position: relative;
+            padding: 56.25% 0 0 0;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+#studios {
+    margin: 0;
+    p {
+        ::ng-deep a {
+            border-bottom: solid 2px black;
+        }
+    }
+    h4 {
+        a {
+            border-bottom: solid 1px black;
+        }
+
+        svg {
+            @include scale(0.5);
+            transform-origin: left bottom;
+            .arrow {
+                @include transition(transform, 0.2s, ease-in-out);
+            }
+        }
+
+        &:hover {
+            svg {
+                .arrow {
+                    @include translate(15px, -15px);
+                }
+            }
+        }
+    }
+}

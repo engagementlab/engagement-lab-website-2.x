@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     public errors: any;
 
     public content: any;
+    public news: any;
 
     public latestEvent: any;
 
@@ -63,29 +64,23 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     async ngOnInit(): Promise<void> {
         const query = `
-            {
-                allAboutPages {
-                    tagline {
-                        html
+                    {
+                        allAboutPages {
+                            tagline {
+                                html
+                            }
+                        }
+                        recentEvents {
+                            name
+                            key
+                            date
+                            shortDescription
+                        }
                     }
-                }
-                recentEvents {
-                    name
-                    key
-                    date
-                    shortDescription
-                }
-                allNewsItems(featured: true) {
-                    title
-                    url
-                    image {
-                        public_id
-                    }
-                }
-            }
-        `;
+                `;
 
         this.content = await this.dataSvc.getSet('homepage', query);
+        this.news = await this.dataSvc.getNews('recent');
 
         // Load particles effect after content render
         setTimeout(() => {
@@ -97,7 +92,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                 document.getElementById('intro').clientHeight
             }px`;
 
-            console.log(particlesEl);
             this.drawParticles();
 
             // Animate tagline and intro

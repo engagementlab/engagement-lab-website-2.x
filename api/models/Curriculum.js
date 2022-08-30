@@ -20,9 +20,8 @@ const { Types, } = keystone.Field;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Curriculum = new keystone.List('Curriculum', {
-    label: 'Curricula',
-    singular: 'Curriculum',
-    plural: 'Curricula',
+    label: 'Courses',
+    singular: 'Course',
 });
 
 /**
@@ -41,8 +40,11 @@ Curriculum.add({
         initial: true,
         index: true,
     },
-    description: {
-        type: Types.Textarea,
+    type: {
+        type: Types.Select,
+        label: 'Type',
+        // note: 'Where will this filter apply?',
+        options: 'Core, Elective',
         required: true,
         initial: true,
     },
@@ -52,5 +54,5 @@ Curriculum.add({
  * Model Registration
  */
 Curriculum.defaultSort = '-createdAt';
-Curriculum.defaultColumns = 'name, enabled, updatedAt';
+Curriculum.defaultColumns = 'name, updatedAt';
 Curriculum.register();

@@ -1,0 +1,59 @@
+# Engagement Lab Seeks Full-Time Grants and Finance Director
+
+# Full-Time Grants and Finance Director for the Engagement Lab @ Emerson College
+
+# Start Date October 1, 2016
+
+# Description
+
+Reporting to the Executive Director and the Senior Advisor for the Academic Affairs department, the Grants and Finance Director will oversee all aspects of financial management, administrative planning, business operations, and human resource management for the Engagement Lab @ Emerson College. Working with the Executive Director, the Programs Manager, and the Lab Manager, the GFD will devise and oversee fiscal management strategies and processes to promote the financial health and sustainability of the Lab. S/he will liaise with Emerson College administrators and specifically work with the Office of Research and Creative Scholarship (ORCS), Academic Affairs, Human Resources, and Finance Departments at the College.
+
+# Required Knowledge, Skills & Education
+
+-   5–7 years of fiscal management, with a specialization in non-profit accounting and/or grants management.
+
+-   Education: Bachelor’s degree in finance and accounting or equivalent experience required; MBA or CPA preferred.
+
+-   Superior analytical, evaluative and skills with the ability to effectively interpret and use data to support decision making.
+
+-   Proficiency with grants accounting and finance. Working knowledge of federal grant regulations for institutes of higher education
+
+-   Microsoft Excel: intermediate-advanced skill level. Ability to learn new accounting and financial systems.
+
+-   Excellent written and verbal communication skills, strong interpersonal skills, and effective presentation skills.
+
+-   Demonstrated management skills focused on achieving results and developing staff.
+
+-   Superior collaboration skills, including proven ability to work effectively with multiple stakeholders, including staff members, external consultants, and professional advisors.
+
+-   Self-starter with the ability to juggle multiple projects and deadlines simultaneously;
+
+-   Innovative, creative problem solver; flexible and adaptable to change and comfortable with ambiguity
+
+-   Strategic thinker who can drive implementation of the vision/plan to achieve results.
+
+# Individual Work Activities
+
+-   Oversee all financial operations, including the management of both institutional funding and external (grants and contracts) support. Monitor Engagement Lab institutional funding accounts and soft funding accounts (grants and gifts); reconcile expenditures and encumbrances on a monthly basis.
+
+-   Prepare analyses of the financial activity of the Lab, including grant projections, spending patterns, financial forecasting, and employee retention and reductions in force. Collaborate effectively with ORCS, Academic Affairs, HR, and Finance staff to manage funding sources, shepherd sponsored funding proposals through the review/approval process, and to identify and resolve expense and revenue discrepancies.
+
+-   Assists Executive Director and Programs Manager in the development of line-item budgets for sponsored funding proposals.
+
+-   Direct and approve expense transfers for review, approval, and submission by ORCS, Academic Affairs, and Finance.
+
+-   Work with the Programs Manager to ensure appropriate salary and expenditure allocations on grant and contract accounts. Verify funding availability and allowability for salary charges and non-personnel expenditures.
+
+-   Assist the Executive Director in the formulation of the Lab’s overall strategic direction and business plan. When needed, serve as approval proxy for Executive Director for purchase requisitions, transfer approvals, and time approval for personnel.
+
+-   Oversee all HR operations for the Lab, including time approval, completion of performance evaluations and reviews, dispute resolutions, and hiring and termination processes.
+
+-   Directly supervise the Lab Manager in their management of day-to-day Lab operations and administrative tasks.
+
+# How to submit
+
+Submit an application online for this position [here](https://emerson.peopleadmin.com/postings/12456) or contact the Engagement Lab at info@elab.emerson.edu if you have any questions.
+
+# About the Engagement Lab
+
+The Engagement Lab is an applied research and design lab dedicated to reimagining civic engagement for a digital culture. We find new ways for communities to bring their voice forward, and new ways for institutions to respond. We work with partners to co-design solutions to the most pressing problems in democracy and governance, including participation gaps, gender or racial discrimination, lack of basic media literacies, youth exclusion, and gaps in public health practices. Our research and practice are influenced by the fields of media studies, communications, human centered design, and cultural studies. Our research ranges from basic research about play and learning to specific program evaluations. Learn more at [www.elab.emerson.edu.](http://www.elab.emerson.edu.)

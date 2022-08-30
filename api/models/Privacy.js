@@ -11,8 +11,8 @@
  * ==========
  */
 
-const { keystone } = global;
-const { Types } = keystone.Field;
+const { keystone, } = global;
+const { Types, } = keystone.Field;
 
 /**
  * Privacy model
@@ -20,10 +20,10 @@ const { Types } = keystone.Field;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Privacy = new keystone.List('Privacy', {
-  label: 'Privacy Policy',
-  singular: 'Privacy Policy',
-  nocreate: true,
-  nodelete: true,
+    label: 'Privacy Policy',
+    singular: 'Privacy Policy',
+    nocreate: true,
+    nodelete: true,
 });
 
 /**
@@ -32,25 +32,25 @@ const Privacy = new keystone.List('Privacy', {
  */
 Privacy.add({
 
-  name: {
-    type: String, default: 'Privacy Policy', hidden: true, required: true, initial: true,
-  },
-  content: {
-    type: Types.Markdown,
-    label: 'Page Content',
-    required: true,
-    initial: true,
-  },
-  lastUpdated: {
-    type: Date,
-    hidden: true,
-  },
+    name: {
+        type: String, default: 'Privacy Policy', hidden: true, required: true, initial: true,
+    },
+    content: {
+        type: Types.Markdown,
+        label: 'Page Content',
+        required: true,
+        initial: true,
+    },
+    lastUpdated: {
+        type: Date,
+        hidden: true,
+    },
 
 });
 
 Privacy.schema.post('save', (doc, next) => {
-  doc.lastUpdated = new Date();
-  next();
+    doc.lastUpdated = new Date();
+    next();
 });
 
 /**

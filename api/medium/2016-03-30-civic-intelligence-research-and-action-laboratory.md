@@ -1,0 +1,53 @@
+# Civic Intelligence Research and Action Laboratory
+
+### Douglas Schuler (The Evergreen State College)
+
+The Civic Intelligence Research and Action Laboratory (CIRAL) at the Evergreen State College, a non-traditional liberal arts college in Washington State has been flourishing with multimedia civic projects since 2011. CIRAL is an educational environment in which students work together in groups (called clusters) to conceive and develop their own projects. The projects are limited only by imagination and there has been a wide diversity in the 30+ projects thus far. One non-negotiable constraint is that the projects use, explore, and advance _civic intelligence_, the capacity for groups to address significant shared challenges effectively and equitably (Schuler 2001). The projects so far include an anti-bullying game, video explorations of community health, public panels and forums, online deliberation software (e-Liberate), Centralia ambassadors, housing for disabled veterans, activist road trips, and many others. Clusters have focused on homelessness, education, community health, pattern languages and 15–20 other themes. The Home Office cluster is responsible for managing our assemblies, coordinating information, improving and marketing CIRAL, and producing resources for CIRAL.
+
+![Organizational Structure for Proposed Student Union](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_xueNY8Uyq2daySHw-Slo6A.png)
+
+Students can register for a variable number of credits and there is no limit on the number of quarters that students can participate in the lab. The lab is available as an option every quarter, thus allowing students to be able to count on its availability. The lab’s “radical center” orientation raises important questions about the role of organizational innovation, agency, motivation, freedom, and the use of media — new and old — in education, group learning, and social change. We are beginning to think of CIRAL as an educational version of Social Labs (Hassan 2014).
+
+At the lab, “civic media” refers to the medium used (e.g. Google Docs or email) as well as media products (e.g. a video or game).
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_oXfSgdTi3PuB7L6UI-jlEQ.jpeg)
+
+![Scheduling and Participating in a Meeting (e-Liberate)](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_AaiGympo-u983yOupjfBzA.jpeg)
+
+> > CIRAL conceives of media inclusively it includes in-person encounters and arenas, in addition to those mediated by technology, and is often multi-faceted and ubiquitous.
+
+We embrace civic media as it is needed to attain objectives or support collaboration, resulting in a dynamic socio-technological ecosystem.
+
+**vimeo**:
+[![vimeo](http://i.vimeocdn.com/video/494509246_960.jpg)](https://player.vimeo.com/video/110308430)
+_Video 1: Introduction to Civic Intelligence and CIRAL_
+
+The use of civic media for internal use is an important and useful focus, especially since we employ the idea of civic intelligence in relation to the lab — which students are expected to “own” — and to the development and management of projects within it. One of our key media resources is the CIRAL Handbook, which includes the lab’s motivation and history. The handbook promotes continuity in a fluid environment of student turnover by reiterating our philosophy and expectations as well as providing basic guidelines (How is a cluster started? How do I know whether a project is suitable?). The Home Office cluster developed a video that explains CIRAL and is also used to help orient new students. We also require students to enter their profiles and weekly activity reports online so students (and faculty) can see the interests, skills, and activities of other CIRAL members.
+
+A critical part of CIRAL’s face-to-face approaches, is the weekly assembly. The faculty member opens the assembly with comments about the current status and opportunities and challenges. He or she then distributes the Fresh Sheet, CIRAL’s weekly newspaper, which contains brief reports and provides a historical record. Next are cluster reports and cluster meetings. Sharing reports from the clusters helps build shared consciousness and often leads to additional collaboration. Clusters meet at least once a week, often more, mostly face-to-face. There is also a CIRAL presence on Facebook for sharing news and maintaining the community including students who have graduated or otherwise are not participating regularly. CIRAL uses two email lists and has some presence on Twitter and less on Reddit. Additional resources online, including references, tutorials and tip sheets, and project archives are planned for the future. Students also rely on civic media of one sort or another to conduct their research.
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_4z13yBfz0628A89rP7dljA.png)
+
+The use of civic media to manage projects within CIRAL includes face-to-face meetings and communicating using email and telephones. This is important because many CIRAL students work or have family responsibilities and finding suitable meeting times is often difficult. For coordination, Google Docs provide vital capabilities for project development in many clusters. These capabilities include content development and storing, and, more significantly, sometimes complex and sophisticated group management systems for creating, monitoring, and undertaking shared tasks, responsibilities, and milestones.
+
+> > The civic media that CIRAL produces for people and groups outside the lab is the public side of the work and the intended audience helps determine the content and form that the media products assume.
+
+Two clusters have organized public forums, one on homelessness and one on starting non-profit organizations. The Games cluster created a mockup of the Anti-bullying game that the students will continue to improve. The Community Health cluster and the Evergreen Revival cluster joined forces to develop a survey and documentary involving Evergreen students, faculty, and staff focusing on the general health at Evergreen. Other CIRAL projects include interviews with atheists and one with immigrants. Another project developed a set of anti-patterns. Each anti-pattern presents a pattern of social behavior that cultivates oppression and other non-civically intelligent approaches that degrade life on the planet. The anti-patterns work together to form a complex network of reinforcing forces that could be challenged through CIRAL projects. The anti-patterns are available on the web and were presented at an international pattern language conference.
+
+![](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_yOjjRqg55rySqCBQZ8GtLA.jpeg)
+
+![Poster for College-wide Homelessness Survey and Ending Homelessness Forum](https://res.cloudinary.com/engagement-lab-home/image/upload/v1/homepage-2.0/news/medium/1_dvC9tnTNHUGQzXdA35y79g.jpeg)
+
+CIRAL provides a novel educational environment that helps prepare students for social innovation and activism with important skills, knowledge, and attitudes. CIRAL might not be for every student, but for the students who have participated, CIRAL has provided an exciting and encouraging break from the more scripted educational experiences they typically encounter. While the purpose of CIRAL is to explore and cultivate civic intelligence, it has collectively relied on a broad range of information and communication technology to create a communication repertoire that is often in flux and ad-hoc. Because CIRAL has not relied solely on fixed plans, its approach to technology changes organically. The civic media employed and created incorporated a rich and evolving mix of approaches, some of which were used only provisionally while some endured and were edited, expanded on, etc. as time went on.
+
+While Evergreen is a non-traditional college, the idea of convening a lab or studio environment similar to CIRAL is possible in a variety of educational settings — inside and outside of higher education. In the future we hope to see a network of research and action networks where CIRAL is but one such network among many.
+
+# REFERENCES
+
+Hassan, Zaid. The Social Labs Revolution. San Francisco: Berrett-Koehler Publishers, 2014
+
+Schuler, Douglas. “Cultivating Society’s Civic Intelligence: Patterns for a New ‘World Brain’.” Journal of Society, Information and Communication 4 no. 2 (2001): 157–181
+
+_If you like what you just read, please click the green ‘Recommend’ button below to spread the word! More case studies and calls for submissions are on the [Civic Media Project](http://www.civicmediaproject.com). To learn more about civic media, check out the book [Civic Media: Technology, Design, Practice](https://mitpress.mit.edu/books/civic-media)._
+
+[_The Engagement Lab @ Emerson College_](http://elab.emerson.edu)

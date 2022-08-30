@@ -19,7 +19,7 @@
 {"_id":{"$oid":"597b947793d1855392b87dda"},"__v":0,"appears":"Publication","category":"Keyword","current":false,"key":"diversity","name":"Diversity","previous":false,"sortOrder":11}
 {"_id":{"$oid":"597b944093d1855392b87dd3"},"__v":0,"category":"Keyword","current":false,"key":"civic-media","name":"Civic Media","previous":false,"sortOrder":5}
 {"_id":{"$oid":"597ba05b649f97105bca3b96"},"__v":0,"appears":"Project","category":"Format","current":false,"key":"public-art","name":"Public Art","previous":false,"sortOrder":43}
-{"_id":{"$oid":"5c509041127533742b271fc0"},"key":"2018-19-cohort","sortOrder":45,"category":"Cohort","name":"2018/19 Cohort","previous":false,"current":true,"__v":0,"label":"2018 - 2019"}
+{"_id":{"$oid":"5c509041127533742b271fc0"},"key":"2018-19-cohort","sortOrder":45,"category":"Cohort","name":"2018/19 Cohort","previous":false,"current":false,"__v":0,"label":"2018 - 2019"}
 {"_id":{"$oid":"5db090cd84d54b29662a58c3"},"key":"staff-and-students","sortOrder":49,"category":"Keyword","name":"Staff & Students","__v":0}
 {"_id":{"$oid":"5eea719ac650ba5471914cf6"},"key":"gabriel-mugar","sortOrder":52,"category":"Person","name":"Gabriel Mugar","__v":0,"contactEmail":""}
 {"_id":{"$oid":"597b9fe4649f97105bca3b87"},"__v":0,"appears":"Project","category":"Keyword","current":false,"key":"advocacy","name":"Advocacy","previous":false,"sortOrder":28}
@@ -52,5 +52,6 @@
 {"_id":{"$oid":"597b945793d1855392b87dd7"},"__v":0,"appears":"Publication","category":"Keyword","current":false,"key":"data-visualization","name":"Data Visualization","previous":false,"sortOrder":8}
 {"_id":{"$oid":"597b946593d1855392b87dd8"},"__v":0,"appears":"Publication","category":"Keyword","current":false,"key":"design","name":"Design","previous":false,"sortOrder":9}
 {"_id":{"$oid":"597b94c893d1855392b87de1"},"__v":0,"appears":"Publication","category":"Keyword","current":false,"key":"youth","name":"Youth","previous":false,"sortOrder":18}
-{"_id":{"$oid":"5f7790f61e0f154962dadb54"},"current":true,"name":"2020/2021 Cohort","category":"Cohort","sortOrder":53,"key":"2020-2021-cohort","__v":0,"label":"2020 - 2021"}
-{"_id":{"$oid":"61253493e82006281512e79e"},"current":true,"name":"2021/2022 Cohort","category":"Cohort","sortOrder":54,"key":"2021-2022-cohort","__v":0,"label":"2021 - 2022"}
+{"_id":{"$oid":"5f7790f61e0f154962dadb54"},"current":false,"name":"2020/2021 Cohort","category":"Cohort","sortOrder":53,"key":"2020-2021-cohort","__v":0,"label":"2020 - 2021"}
+{"_id":{"$oid":"61253493e82006281512e79e"},"current":false,"name":"2021/2022 Cohort","category":"Cohort","sortOrder":54,"key":"2021-2022-cohort","__v":0,"label":"2021 - 2022"}
+{"_id":{"$oid":"630e2335a7016b72cfabde1f"},"current":true,"name":"2022/2023 Cohort","category":"Cohort","sortOrder":55,"key":"2022-2023-cohort","__v":0,"label":"2022 - 2023"}

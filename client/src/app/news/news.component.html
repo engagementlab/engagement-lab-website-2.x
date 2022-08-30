@@ -1,0 +1,66 @@
+<div *ngIf="content">
+    <div id="name" class="columns is-multiline">
+        <h2 class="column is-full">{{ content?.title }}</h2>
+    </div>
+
+    <div class="columns is-mobile is-multiline">
+        <div id="date" class="column is-full-tablet is-11-mobile">
+            {{ content?.publishDate | date: 'MMMM dd, yyyy' }}
+        </div>
+
+        <div
+            id="body"
+            class="column is-11-mobile is-three-quarters-tablet"
+            [innerHtml]="content?.bodyHTML | safeHtml"
+        ></div>
+    </div>
+    <!-- 
+    <section
+        id="nextprev"
+        class="columns is-mobile is-multiline listing no-margin"
+    >
+        <div class="item column is-11-mobile is-half-tablet">
+            <a
+                id="prev"
+                class="prev"
+                routerLink="/events/{{ previous.key }}"
+                *ngIf="previous"
+            >
+                <hr class="hidden-mobile" />
+
+                <div>
+                    <h1 class="uppercase">
+                        previous event
+                    </h1>
+
+                    <h2>{{ previous.name }}</h2>
+                    <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                        <path
+                            stroke="#000"
+                            d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                        />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="item column is-11-mobile is-half-tablet" *ngIf="next">
+            <a id="next" routerLink="/events/{{ next.key }}">
+                <hr class="hidden-mobile" />
+
+                <div>
+                    <h1 class="uppercase">
+                        next event
+                    </h1>
+
+                    <h2>{{ next.name }}</h2>
+                    <svg width="32" height="23" fill="none" viewBox="0 0 32 23">
+                        <path
+                            stroke="#000"
+                            d="M.5 11.309h29.788M19.968 1L30.5 11.5 19.968 22"
+                        />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section> -->
+</div>

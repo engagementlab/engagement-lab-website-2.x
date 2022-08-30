@@ -78,29 +78,11 @@ Filters.add({
     },
     label: {
         type: String,
+        note: 'Cohort label (format is "2019 - 2020"). Otherwise `Name` is used.',
         dependsOn: {
-            note: 'Cohort label (format is "2019 - 2020"). Otherwise `Name` is used.',
             category: 'Cohort',
         },
     },
-});
-
-Filters.schema.pre('remove', next => {
-    // Remove resource from all that referenced it
-    keystone.list('Project').model.removeFilterRef(this._id, (err, removedCount) => {
-        if (err) console.error(err);
-
-        if (removedCount > 0) console.log(`Removed ${removedCount} references to '${this._id}'`);
-
-        // Remove resource from all that referenced it
-        keystone.list('Publication').model.removeFilterRef(this._id, (err, removedCount) => {
-            if (err) console.error(err);
-
-            if (removedCount > 0) console.log(`Removed ${removedCount} references to '${this._id}'`);
-
-            next();
-        });
-    });
 });
 
 Filters.schema.statics.findFilter = (resourceId, callback) => {

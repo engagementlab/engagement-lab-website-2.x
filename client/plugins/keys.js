@@ -15,13 +15,34 @@ const queryData = async (queryName,
     return response.data.data;
 };
 
+const initiativeIdPlugin = async (route, config) => {
+    // Obtain all initiative keys via graphql query
+    const response = await queryData('allStudios', true);
+    const routes = [];
+
+    response.allStudios.forEach((res) => {
+        routes.push({ route: `/initiatives/${res.customUrl || res.key}` });
+    });
+    return Promise.resolve(routes);
+};
+
 const studioIdPlugin = async (route, config) => {
     // Obtain all studio keys via graphql query
     const response = await queryData('allStudios', true);
     const routes = [];
 
     response.allStudios.forEach((res) => {
-        routes.push({ route: `/studios/studio/${res.customUrl || res.key}` });
+        routes.push({ route: `/initiatives/studio/${res.customUrl || res.key}` });
+    });
+    return Promise.resolve(routes);
+};
+const studioInitIdPlugin = async (route, config) => {
+    // Obtain all studio keys via graphql query
+    const response = await queryData('allStudioInitiatives');
+    const routes = [];
+
+    response.allStudioInitiatives.forEach((res) => {
+        routes.push({ route: `/initiatives/${res.key}` });
     });
     return Promise.resolve(routes);
 };
@@ -31,8 +52,6 @@ const mdprojectIdPlugin = async (route, config) => {
     const routes = [];
 
     response.allMDProjectPages.forEach((res) => {
-
-
         routes.push({ route: `/graduate/projects/${res.customUrl || res.key}` });
     });
     return Promise.resolve(routes);
@@ -44,15 +63,6 @@ const projectIdPlugin = async (route, config) => {
 
     response.allProjectPages.forEach((res) => {
         routes.push({ route: `/research/projects/${res.customUrl || res.key}` });
-    });
-    return Promise.resolve(routes);
-};
-const initiativeIdPlugin = async (route, config) => {
-    // Obtain all initiative keys via graphql query
-    const response = await queryData('allInitiativePages');
-    const routes = [];
-    response.allInitiativePages.forEach((res) => {
-        routes.push({ route: `/research/initiatives/${res.key}` });
     });
     return Promise.resolve(routes);
 };
@@ -88,7 +98,8 @@ const facultyIdPlugin = async (route, config) => {
     const response = await axios.post('http://localhost:3000/graphql', { query: body });
     const routes = [];
     response.data.data.allMastersPages.faculty.forEach((res) => {
-        routes.push({ route: `/graduate/faculty/${res.key}` });
+        routes.push({ route: `/curriculum/graduate/faculty/${res.key}` });
+        routes.push({ route: `/curriculum/undergraduate/faculty/${res.key}` });
     });
     return Promise.resolve(routes);
 };
@@ -112,13 +123,36 @@ const gradIdPlugin = async (route, config) => {
     });
     return Promise.resolve(routes);
 };
+const newsArchiveIdPlugin = async (route, config) => {
+    // Obtain all news archive keys via graphql query
+    const response = await queryData('allBlogItems');
+    const routes = [];
 
+    response.allBlogItems.forEach((res) => {
+        routes.push({ route: `/news/archive/${res.key}` });
+    });
+    return Promise.resolve(routes);
+};
+const newsIdPlugin = async (route, config) => {
+    // Obtain all news keys from new cms
+    const response = await axios.get('https://cms.qa.transformnarratives.org/rest/news');
+
+    const routes = [];
+
+    response.data.forEach((res) => {
+        routes.push({ route: `/news/${res.key}` });
+    });
+    return Promise.resolve(routes);
+};
 const validator = async (config) => [];
 registerPlugin('router', 'studios', studioIdPlugin, validator);
+registerPlugin('router', 'studioinitiatives', studioInitIdPlugin, validator);
 registerPlugin('router', 'mdprojects', mdprojectIdPlugin, validator);
 registerPlugin('router', 'gradfaculty', facultyIdPlugin, validator);
-registerPlugin('router', 'gradstudents', gradIdPlugin, validator);
+// registerPlugin('router', 'gradstudents', gradIdPlugin, validator);
 registerPlugin('router', 'projects', projectIdPlugin, validator);
 registerPlugin('router', 'initiatives', initiativeIdPlugin, validator);
 registerPlugin('router', 'events', eventIdPlugin, validator);
 registerPlugin('router', 'people', personIdPlugin, validator);
+registerPlugin('router', 'newsarchive', newsArchiveIdPlugin, validator);
+registerPlugin('router', 'news',  newsIdPlugin, validator);

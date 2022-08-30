@@ -9,4 +9,6 @@ git remote set-url origin https://$GH_TOKEN@github.com/engagementlab/engagement-
 git add bin/*
 git commit --message "Automated database export and generated static app (GH action #$GHA_RUNNUM) [skip ci]"
 
+git pull
+git commit --message "Merge branch 'main' of github.com:engagementlab/engagement-lab-website-2.x into main [skip ci]"
 git push

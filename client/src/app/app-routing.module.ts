@@ -29,9 +29,17 @@ const routes: Routes = [
     },
 
     {
-        path: 'studios',
+        path: 'initiatives',
         loadChildren: () =>
-            import('./studios/studios.module').then(m => m.StudiosModule),
+            import('./initiatives/initiatives.module').then(
+                m => m.StudiosModule,
+            ),
+    },
+
+    {
+        path: 'news',
+        loadChildren: () =>
+            import('./news/news.module').then(m => m.NewsModule),
     },
 
     {
@@ -41,9 +49,11 @@ const routes: Routes = [
     },
 
     {
-        path: 'graduate',
+        path: 'curriculum',
         loadChildren: () =>
-            import('./graduate/graduate.module').then(m => m.GraduateModule),
+            import('./curriculum/curriculum.module').then(
+                m => m.CurriculumModule,
+            ),
     },
     {
         path: 'partner',
@@ -56,24 +66,42 @@ const routes: Routes = [
             import('./resources/resources.module').then(m => m.ResourcesModule),
     },
 
-    // Preserve old paths (pre-v2.5)
+    // Preserve old paths
+    {
+        path: 'graduate',
+        redirectTo: '/curriculum/graduate',
+        pathMatch: 'prefix',
+    },
+    {
+        path: 'studios',
+        redirectTo: 'initiatives',
+    },
+    {
+        path: 'studios/initiatives/:key',
+        redirectTo: 'initiatives/initiative/:key',
+    },
+    {
+        path: 'studios/studio/:key',
+        redirectTo: 'initiatives/studio/:key',
+    },
     {
         path: 'initiatives/smart-cities',
-        redirectTo: 'research/initiatives/civic-smart-cities',
+        redirectTo: 'initiatives',
     },
     {
         path: 'initiatives/trust-and-the-news',
-        redirectTo: 'research/initiatives/engaged-journalism',
+        redirectTo: 'initiatives',
     },
-    { path: 'initiatives/:key', redirectTo: 'research/initiatives/:key' },
 
     { path: 'projects', redirectTo: 'research/projects' },
     { path: 'projects/:key', redirectTo: 'research/projects/:key' },
     { path: 'publications', redirectTo: 'research/publications' },
 
-    { path: 'masters', redirectTo: 'graduate' },
-    { path: 'masters/alumni', redirectTo: 'graduate/students' },
-    { path: 'masters/cohort/:key', redirectTo: 'graduate/students/:key' },
+    { path: 'studios/studio/:key', redirectTo: 'initiatives/studio/:key' },
+
+    { path: 'masters', redirectTo: 'curriculum/graduate' },
+    { path: 'masters/alumni', redirectTo: 'curriculum/graduate' },
+    { path: 'masters/cohort/:key', redirectTo: 'curriculum/graduate' },
 
     // Redirect to other Azure static sites
     { path: 'hygiene/:path?', component: ExternalRedirectComponent },
@@ -106,7 +134,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+    imports: [
+        RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
+    ],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}

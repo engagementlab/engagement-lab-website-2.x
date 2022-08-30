@@ -59,9 +59,9 @@ const Project = {
     schema: `
         type Project {
             archived: Boolean
-            bgImage: Image
             byline: String
             challengeTxt: String
+            partnersTxt: [String]
             customUrl: String
             date: Date
             description: String
@@ -91,6 +91,10 @@ const Project = {
             status: String
             strategyTxt: String!
             teamMembers: [String]
+            galleryVideos: [String]
+            galleryVideoTitles: [String]
+            galleryVideoCaptions: [String]
+            galleryVideoThumbails: [Image]
         }
         type ProjectResult {
             project: Project
@@ -103,7 +107,7 @@ const Project = {
         'allFeaturedProjectPages: [Project]',
         'getProject(key: String): ProjectResult'],
     resolvers: {
-        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, }).sort([['sortOrder', 'ascending']]).exec(),
+        allProjectPages: async () => model.find({ enabled: true, archived: { $ne: true, }, }).sort({ sortOrder: 1, }).exec(),
 
         allArchivedProjectPages: async () => model.find({ enabled: true, archived: true, }).exec(),
 

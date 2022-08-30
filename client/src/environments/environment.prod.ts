@@ -6,4 +6,5 @@ export const environment = {
     universal: true,
     data_url: 'http://localhost:3000',
     api_url: 'https://api.elab.emerson.edu/engagement-lab-home',
+    new_api_url: 'https://cms.qa.transformnarratives.org',
 };

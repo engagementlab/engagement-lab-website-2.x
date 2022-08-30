@@ -24,6 +24,7 @@ const Research = new keystone.List('Research', {
     plural: 'Research Page',
     nodelete: true,
     nocreate: true,
+    hidden: true,
     autokey: {
         path: 'key',
         from: 'name',

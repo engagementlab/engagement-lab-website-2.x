@@ -1,135 +1,130 @@
-@import "~src/styles/_variables";
+@import '~src/styles/_variables';
 @import '~src/styles/_mixins';
 
 h1 {
-  letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
 }
 
 app-button {
-  @include not-phones {
-    display: block;
-    margin-top: 14%;
-  }
-
-  &.archive {
-    ::ng-deep a {
-      padding-top: 5%;
-      padding-bottom: 5%;
-      padding-left: 5%;
-      padding-right: 5%;
+    @include not-phones {
+        display: block;
+        margin-top: 14%;
     }
 
-  }
+    &.archive {
+        ::ng-deep a {
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
 }
 
 .controls {
-
-  @include phones {
-    display: flex;
-    flex-direction: column;
-  }
-
+    @include phones {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 #intro {
-  @include font-overpass;
+    @include font-overpass;
 
-  a {
-    cursor: pointer;
+    a {
+        cursor: pointer;
 
-    // Current filter
-    &.mixitup-control-active {
-      text-decoration: underline;
+        // Current filter
+        &.mixitup-control-active {
+            text-decoration: underline;
+        }
     }
-  }
 
-  .bold {
-    font-weight: 900;
-  }
-
-  .controls a {
-    margin-right: 2%;
-
-    &:hover,
-    &.active {
-      border-bottom: 1px solid black;
+    .bold {
+        font-weight: 900;
     }
-  }
+
+    .controls a {
+        margin-right: 2%;
+
+        &:hover,
+        &.active {
+            border-bottom: 1px solid black;
+        }
+    }
 }
 
 #projects {
-  .project {
+    .project {
+        padding: 0;
+        margin-top: 3%;
+        margin-bottom: 3%;
 
-    padding: 0;
+        .bg {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            max-height: 330px;
 
-    .bg {
-      display: flex;
-      text-align: center;
-      align-items: center;
-      max-height: 330px;
+            overflow: hidden;
+        }
 
-      overflow: hidden;
+        h4 {
+            font-size: 1.7em;
+            margin-bottom: 0;
+        }
     }
-
-    h4 {
-      font-size: 1.7em;
-    }
-
-  }
 }
 
 #archive {
-
-  @include mq($until: mobileLg) {
-    display: none;
-  }
-
-  h3,
-  div {
-    align-items: center;
-  }
-
-  .item {
-    a:hover {
-
-      &.theme-0 {
-        color: $mango;
-      }
-
-      &.theme-1 {
-        color: $green-blue;
-      }
+    @include mq($until: mobileLg) {
+        display: none;
     }
-  }
 
-  .columns {
-    margin-top: 5%;
-  }
+    h3,
+    div {
+        align-items: center;
+    }
 
-  .type {
-    display: flex;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.33;
-    letter-spacing: 1.5px;
-  }
+    .item {
+        a:hover {
+            &.theme-0 {
+                color: $mango;
+            }
 
-  .name {
-    font-size: 1.9em;
-    line-height: 1.41;
-    letter-spacing: 0.5px;
-  }
+            &.theme-1 {
+                color: $green-blue;
+            }
+        }
+    }
 
-  .arrow {
-    justify-content: right;
-    text-align: right;
-  }
+    .columns {
+        margin-top: 5%;
+    }
 
+    .type {
+        display: flex;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.33;
+        letter-spacing: 1.5px;
+    }
+
+    .name {
+        font-size: 1.9em;
+        line-height: 1.41;
+        letter-spacing: 0.5px;
+    }
+
+    .arrow {
+        justify-content: right;
+        text-align: right;
+    }
 }
 
 @include mq($until: mobileLg) {
-  #archive-mobile {
-    justify-content: center;
-    display: flex;
-  }
+    #archive-mobile {
+        justify-content: center;
+        display: flex;
+    }
 }

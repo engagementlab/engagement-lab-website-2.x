@@ -4,4 +4,30 @@
     (onClose)="closePerson()"
 ></person-modal>
 
-<people-grid [people]="people"></people-grid>
+<h2>Leadership</h2>
+<people-grid [people]="leadership"></people-grid>
+<h2>Faculty</h2>
+<people-grid [people]="faculty"></people-grid>
+<h2 *ngIf="staff && staff.length > 0">Staff</h2>
+<people-grid [people]="staff" *ngIf="staff && staff.length > 0"></people-grid>
+<h2>Students</h2>
+<people-grid [people]="students"></people-grid>
+
+<h2>Alumni</h2>
+
+<div *ngFor="let cohort of cohorts">
+    <h3>{{ cohort.label }}</h3>
+
+    <p *ngFor="let student of getCohortAlumni(cohort.key)">
+        <span
+            *ngIf="
+                student.relatedLinks && student.relatedLinks.length > 0;
+                else noLink
+            "
+            >{{ student.name.first }} {{ student.name.last }}</span
+        >
+        <ng-template #noLink
+            >{{ student.name.first }} {{ student.name.last }}</ng-template
+        >
+    </p>
+</div>

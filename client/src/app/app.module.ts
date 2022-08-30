@@ -45,11 +45,11 @@ import { ErrorComponent } from './error/error.component';
 import { EventComponent } from './events/event.component';
 import { EventIndexComponent } from './events/index.component';
 import { FooterComponent } from './footer/footer.component';
-import { GraduateCurriculumComponent } from './graduate/curriculum/curriculum.component';
-import { GraduateAlumniComponent } from './graduate/alumni/alumni.component';
-import { GraduateStudiosComponent } from './graduate/studios/studios.component';
-import { GraduateProjectComponent } from './graduate/studios/project/project.component';
-import { GraduateInfoComponent } from './graduate/info/info.component';
+import { GraduateCurriculumComponent } from './curriculum/graduate/graduate.component';
+import { GraduateAlumniComponent } from './curriculum/alumni/alumni.component';
+import { GraduateStudiosComponent } from './curriculum/studios/studios.component';
+import { GraduateProjectComponent } from './curriculum/studios/project/project.component';
+import { GraduateInfoComponent } from './curriculum/info/info.component';
 import { HomeComponent } from './home/home.component';
 import { InitiativeComponent } from './research/initiatives/initiative.component';
 import { JobsComponent } from './jobs/jobs.component';
@@ -70,14 +70,20 @@ import { PersonModalComponent } from './team/person-modal/person-modal.component
 import { PluckPipe } from './utils/pluck.pipe';
 import { SlideshowComponent } from './utils/slideshow/slideshow.component';
 import { TeamComponent } from './team/team.component';
-import { StudiosIndexComponent } from './studios/index/index.component';
-import { StudioComponent } from './studios/studio/studio.component';
-import { StudiosGraduateComponent } from './studios/graduate/graduate.component';
-import { StudiosCocurricularComponent } from './studios/cocurricular/cocurricular.component';
-import { StudiosPartnerComponent } from './studios/partner/partner.component';
-import { StudioThumbComponent } from './studios/studio/thumb/thumb.component';
+import { StudiosIndexComponent } from './initiatives/index/index.component';
+import { StudioComponent } from './initiatives/studio/studio.component';
+import { StudiosGraduateComponent } from './initiatives/graduate/graduate.component';
+import { StudiosCocurricularComponent } from './initiatives/cocurricular/cocurricular.component';
+import { StudiosPartnerComponent } from './initiatives/partner/partner.component';
+import { StudioThumbComponent } from './initiatives/studio/thumb/thumb.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { PartnerComponent } from './partner/partner.component';
+import { StudioInitiativeComponent } from './initiatives/initiative/initiative.component';
+import { NewsComponent } from './news/news.component';
+import { NewsIndexComponent } from './news/index.component';
+import { SafeHtml } from './utils/safe-html.pipe';
+import { NewsArchiveComponent } from './news/archive/archive.component';
+import { UndergraduateComponent } from './curriculum/undergraduate/undergraduate.component';
 
 export const cloudinary = {
     Cloudinary,
@@ -87,6 +93,16 @@ export const config: CloudinaryConfiguration = appConfig;
 @NgModule({
     declarations: [
         AppComponent,
+
+        // Utils
+        AuthorFormatPipe,
+        ButtonComponent,
+        CdnImageComponent,
+        JoinPipe,
+        PrettyUrlPipe,
+        PluckPipe,
+        SafeHtml,
+        SlideshowComponent,
 
         // Components
         AboutComponent,
@@ -104,6 +120,9 @@ export const config: CloudinaryConfiguration = appConfig;
         JobsComponent,
         InitiativeComponent,
         NavComponent,
+        NewsComponent,
+        NewsArchiveComponent,
+        NewsIndexComponent,
         NotFoundComponent,
         PartnerComponent,
         PrivacyComponent,
@@ -123,16 +142,9 @@ export const config: CloudinaryConfiguration = appConfig;
         StudiosCocurricularComponent,
         StudiosPartnerComponent,
         StudioThumbComponent,
+        StudioInitiativeComponent,
         TeamComponent,
-
-        // Utils
-        AuthorFormatPipe,
-        ButtonComponent,
-        CdnImageComponent,
-        JoinPipe,
-        PrettyUrlPipe,
-        PluckPipe,
-        SlideshowComponent,
+        UndergraduateComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'elabHome' }),

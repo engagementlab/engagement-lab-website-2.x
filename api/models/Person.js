@@ -43,30 +43,35 @@ Person.add({
         initial: true,
         index: true,
     },
-    alumni: {
-        type: Boolean,
-        label:
-        'Is Alumni/Former Staff',
-    },
     category: {
         type: Types.Select,
-        options: 'faculty leadership, staff, faculty fellows, Masters, lab assistants',
+        options: 'leadership, staff, faculty fellows, Masters, lab assistants',
         default: 'staff',
         required: true,
         initial: true,
         note: 'This determines the section in which the person displays',
     },
+    enabled: {
+        type: Types.Boolean,
+        label: 'Enabled',
+        note: 'Determines if this person appears on the live site.',
+    },
+    alumni: {
+        type: Boolean,
+        label:
+        'Is Alumni',
+    },
     onLeave: {
         type: Boolean,
         dependsOn: {
-            category: ['faculty leadership', 'faculty fellows'],
+            category: ['leadership', 'faculty fellows'],
         },
     },
     title: {
         type: String,
         label: 'Title',
         dependsOn: {
-            category: ['faculty leadership', 'staff', 'faculty fellows', 'lab assistants'],
+            category: ['leadership', 'staff', 'faculty fellows', 'lab assistants', 'undergraduate fellows'],
         },
         initial: true,
         note: 'This appears below the name.',

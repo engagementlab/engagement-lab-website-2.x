@@ -23,10 +23,12 @@ else
     npm run build:qa;
 fi
 
+npm i -g pm2;
 pm2 start 'elab-web-client';
 
 # API
 cd ../api;
 nvm use;
 npm i;
+npm i -g pm2;
 pm2 restart 'elab-web-api';

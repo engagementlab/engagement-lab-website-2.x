@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Engagement Lab Website v2.x
  *
@@ -19,11 +20,13 @@ const { Types, } = keystone.Field;
  * See: http://keystonejs.com/docs/database/#lists-options
  */
 const Studio = new keystone.List('Studio', {
+    sortable: true,
     autokey: {
         path: 'key',
         from: 'name',
         unique: true,
     },
+    hidden: true,
 });
 
 /**
@@ -67,17 +70,6 @@ Studio.add(
             initial: true,
             note: 'e.g. _Spring 2020_',
         },
-
-        faculty: {
-            type: Types.Relationship,
-            required: true,
-            initial: true,
-            ref: 'Person',
-            filters: {
-                type: ['faculty leadership', 'faculty fellows'],
-            },
-            many: true,
-        },
         department: {
             type: String,
             required: true,
@@ -95,11 +87,6 @@ Studio.add(
             type: String,
             note: 'Override default sponsor of label of _Class Sponsor_',
         },
-        students: {
-            type: Types.TextArray,
-            required: true,
-            initial: true,
-        },
         relatedLinks: {
             type: Types.Relationship,
             ref: 'Resource',
@@ -110,6 +97,11 @@ Studio.add(
         },
         contact: {
             type: String,
+        },
+        intro: {
+            type: Types.Markdown,
+            required: true,
+            initial: true,
         },
         body: {
             type: Types.Markdown,
@@ -129,7 +121,6 @@ Studio.add(
             noedit: true,
             note: '**All images below need to be very high quality.** <br />' +
         '_Thumbnail Image_: Image shown as thumb in listings. <br />' +
-        '_Background Image_: Image shown as studio background. <br />' +
         '_Primary Image_: Image shown above intro. <br />' +
         '_Gallery Images_: Images below main studio info. To re-order, remove and upload again. <br />' +
         '_Image Captions_: Please specify in order of images. If an image has no caption, enter **#** in text field <br />' +
@@ -140,13 +131,6 @@ Studio.add(
         thumb: {
             type: Types.CloudinaryImage,
             label: 'Thumbnail Image',
-            folder: 'homepage-2.0/studios',
-            autoCleanup: true,
-        },
-        // Image for studio BG
-        bgImage: {
-            type: Types.CloudinaryImage,
-            label: 'Background Image',
             folder: 'homepage-2.0/studios',
             autoCleanup: true,
         },
@@ -226,6 +210,7 @@ Studio.schema.statics.removeResourceRef = (resourceId, callback) => {
     (err, result) => {
         callback(err, result);
 
+        // eslint-disable-next-line no-console
         if (err) console.error(err);
     });
 };
@@ -253,6 +238,7 @@ Studio.schema.post('save', (doc, next) => {
         global.elasti.index({
             index: 'listing',
             type: 'studio',
+            // eslint-disable-next-line no-underscore-dangle
             id: doc._id.toString(),
             body: {
                 name: doc.name,
