@@ -15,6 +15,7 @@ const Undergraduate = {
       id: ID!
       name: String!
       description: Markdown
+      curriculumDescription: Markdown
       currentStudiosYear: String
     }
   `,
