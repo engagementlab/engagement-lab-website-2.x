@@ -15,8 +15,7 @@ const About = {
       id: ID!
       date: Date
       tagline: Markdown
-      summary1: String
-      summary2: String
+      summary1: Markdown
       image: Image!
     }
   `,
