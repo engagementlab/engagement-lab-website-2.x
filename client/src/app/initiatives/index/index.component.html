@@ -18,11 +18,7 @@
     </div>
 </section>
 
-<section
-    id="types"
-    class="columns is-mobile is-multiline no-margin"
-    *ngIf="content"
->
+<section id="types" *ngIf="content">
     <!-- <div id="status" class="columns column is-full is-mobile">
         <span class="column flex">
             <a
@@ -52,8 +48,9 @@
         </span>
     </div> -->
 
-    <div class="column is-11-mobile is-6-tablet is-4-desktop" *ngIf="content">
+    <div class="columns is-mobile is-multiline no-margin" *ngIf="content">
         <div
+            class="column is-11-mobile is-6-tablet is-4-desktop"
             *ngFor="
                 let initiative of content.allStudioInitiatives;
                 let i = index
@@ -70,6 +67,7 @@
                     autoFormat="true"
                     [responsive]="true"
                     [alt]="'Thumbnail image for initiative ' + initiative.name"
+                    *ngIf="initiative.thumb"
                 ></cdn-image>
                 <p>{{ initiative.description }}</p>
             </a>
