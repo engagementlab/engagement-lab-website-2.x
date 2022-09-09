@@ -5,3 +5,4 @@
 {"_id":{"$oid":"6192752825477e640a0f0128"},"name":{"first":"Mikaela","last":"Joyce"},"isAdmin":true,"email":"mikaela_joyce@emerson.edu","__v":0}
 {"_id":{"$oid":"61a7e20225477e640a0f0129"},"name":{"first":"Fatima","last":"Yesuf"},"isAdmin":true,"email":"fatimah_yesuf@emerson.edu","__v":0}
 {"_id":{"$oid":"61b0e50c25477e640a0f012f"},"name":{"first":"Grace","last":"Fu"},"isAdmin":true,"email":"grace_fu@emerson.edu","__v":0}
+{"_id":{"$oid":"630f8f88f32c2b4fa72d4fe2"},"name":{"first":"Paul","last":"Mihailidis"},"isAdmin":true,"email":"paul_mihailidis@emerson.edu","__v":0}
