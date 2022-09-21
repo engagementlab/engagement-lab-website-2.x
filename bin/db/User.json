@@ -1,8 +1,5 @@
 {"_id":{"$oid":"5efa1d646306285f27820e95"},"name":{"first":"Johnny","last":"Richardson"},"isAdmin":true,"email":"john_richardson@emerson.edu","__v":0}
 {"_id":{"$oid":"5f356736535f334f001b17a0"},"name":{"first":"Eric","last":"Gordon"},"isAdmin":true,"email":"eric_gordon@emerson.edu","__v":0}
-{"_id":{"$oid":"6154cebf25477e640a0f0106"},"name":{"first":"Aaron","last":"Stier-Cohen"},"isAdmin":true,"email":"aaron_stiercohen@emerson.edu","__v":0}
-{"_id":{"$oid":"6154cf0225477e640a0f0107"},"name":{"first":"Sharry","last":"Li"},"isAdmin":true,"email":"sharry_li@emerson.edu","__v":0}
-{"_id":{"$oid":"6192752825477e640a0f0128"},"name":{"first":"Mikaela","last":"Joyce"},"isAdmin":true,"email":"mikaela_joyce@emerson.edu","__v":0}
-{"_id":{"$oid":"61a7e20225477e640a0f0129"},"name":{"first":"Fatima","last":"Yesuf"},"isAdmin":true,"email":"fatimah_yesuf@emerson.edu","__v":0}
-{"_id":{"$oid":"61b0e50c25477e640a0f012f"},"name":{"first":"Grace","last":"Fu"},"isAdmin":true,"email":"grace_fu@emerson.edu","__v":0}
 {"_id":{"$oid":"630f8f88f32c2b4fa72d4fe2"},"name":{"first":"Paul","last":"Mihailidis"},"isAdmin":true,"email":"paul_mihailidis@emerson.edu","__v":0}
+{"_id":{"$oid":"6318b94af32c2b4fa72d4fe6"},"name":{"first":"Rachele","last":"Gardner"},"isAdmin":true,"email":"rachele_gardner@emerson.edu","__v":0}
+{"_id":{"$oid":"6318b967f32c2b4fa72d4fe7"},"name":{"first":"John","last":"Yang"},"isAdmin":true,"email":"john_yang@emerson.edu","__v":0}
