@@ -101,11 +101,6 @@ export class TeamComponent implements OnInit {
                     }
                     relatedLinks
                 }
-                allCohorts {
-                  key
-                  label
-                  current
-                }
             }
         `;
 
@@ -115,7 +110,7 @@ export class TeamComponent implements OnInit {
         this.staff = response['allStaffPeople'];
         this.students = response['allMastersPeople'];
         this.alumni = response['allAlumniPeople'];
-        this.cohorts = response['allCohorts'].filter(c => !c.current);
+        // this.cohorts = response['allCohorts'].filter(c => !c.current);
     }
 
     getCohortAlumni(cohortKey: string) {
