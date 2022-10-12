@@ -86,25 +86,10 @@ export class TeamComponent implements OnInit {
                         last
                     }
                     key
+                    title
                     image {
                         public_id
                     }
-                }
-                allAlumniPeople {
-                    name {
-                        first
-                        last
-                    }
-                    cohortYear {
-                        key
-                        label
-                    }
-                    relatedLinks
-                }
-                allCohorts {
-                  key
-                  label
-                  current
                 }
             }
         `;
@@ -112,10 +97,12 @@ export class TeamComponent implements OnInit {
         const response = await this.dataSvc.getSet('team', query);
         this.leadership = response['allLeadershipPeople'];
         this.faculty = response['allFacultyPeople'];
-        this.staff = response['allStaffPeople'];
-        this.students = response['allMastersPeople'];
-        this.alumni = response['allAlumniPeople'];
-        this.cohorts = response['allCohorts'].filter(c => !c.current);
+        // this.staff =;
+        this.students = response['allStaffPeople'].concat(
+            response['allMastersPeople'],
+        );
+        // this.alumni = response['allAlumniPeople'];
+        // this.cohorts = response['allCohorts'].filter(c => !c.current);
     }
 
     getCohortAlumni(cohortKey: string) {

@@ -90,29 +90,26 @@ export class GraduateCurriculumComponent implements OnInit {
             'type',
         );
 
-        const cohortQuery = `   
-          {
-              allPeople(cohortYear: "${this.content.cohortYear}") {
-                  name {
-                      first
-                      last
-                  }
-                  cohortYear {
-                      name 
-                  }
-                  key
-                  image {
-                      public_id
+        const cohortQuery = `
+              {
+                allMastersPeople {
+                      name {
+                          first
+                          last
+                      }
+                      key
+                      image {
+                          public_id
+                      }
                   }
               }
-          }
-      `;
+          `;
         const cohortResponse = await this.dataSvc.getSetWithKey(
             'masters',
             'cohort',
             cohortQuery,
         );
-        this.people = cohortResponse['allPeople'];
+        this.people = cohortResponse['allMastersPeople'];
     }
     async getPerson(key: string): Promise<void> {
         // No dupe requests!

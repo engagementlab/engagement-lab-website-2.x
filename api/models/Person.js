@@ -70,9 +70,6 @@ Person.add({
     title: {
         type: String,
         label: 'Title',
-        dependsOn: {
-            category: ['leadership', 'staff', 'faculty fellows', 'lab assistants', 'undergraduate fellows'],
-        },
         initial: true,
         note: 'This appears below the name.',
     },

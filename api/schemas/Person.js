@@ -11,7 +11,6 @@
 const { model, } = global.keystone.list('Person');
 
 const Person = {
-
     schema: `
         type Person {
             id: ObjectID!
@@ -32,21 +31,20 @@ const Person = {
             onLeave: Boolean
         }
   `,
-    queries: ['allPeople(cohortYear: ObjectID): [Person]',
+    queries: [
+        'allPeople(cohortYear: ObjectID): [Person]',
         'allMastersPeople: [Person]',
         'allAlumniPeople: [Person]',
         'allStaffPeople: [Person]',
         'allFacultyPeople: [Person]',
         'allLeadershipPeople: [Person]',
-        'getPerson(key: String): Person'],
+        'getPerson(key: String): Person'
+    ],
     resolvers: {
         allPeople: async (parent, args) => {
             // If cohort year specified, get only those people
             const query = args.cohortYear ?
-
-                { cohortYear: args.cohortYear, category: 'Masters', } :
-
-                // Otherwise, get only non-alums or alums who are also faculty/staff
+                { cohortYear: args.cohortYear, category: 'Masters', } : // Otherwise, get only non-alums or alums who are also faculty/staff
                 {
                     $or: [
                         { alumni: { $ne: true, }, },
@@ -54,40 +52,55 @@ const Person = {
                     ],
                 };
 
-            return model.find(query).populate('cohortYear')
-                // Sort by first name
-                .sort([
-                    ['name.first', 'ascending']
-                ]).exec();
+            return (
+                model
+                    .find(query)
+                    .populate('cohortYear')
+                    // Sort by first name
+                    .sort([['name.first', 'ascending']])
+                    .exec()
+            );
         },
-        allStaffPeople: async () => model.find({ enabled: true, category: 'staff', }).sort([
-            ['name.first', 'ascending']
-        ]).exec(),
-        allFacultyPeople: async () => model.find({ enabled: true, category: 'faculty fellows', }).sort([
-            ['name.first', 'ascending']
-        ]).exec(),
-        allLeadershipPeople: async () => model.find({ enabled: true, category: 'leadership', }).sort([
-            ['sortOrder', 'ascending']
-        ]).exec(),
+        allStaffPeople: async () => model
+            .find({ enabled: true, category: { $in: ['staff', 'lab assistants'], }, })
+            .sort([['name.first', 'ascending']])
+            .exec(),
+        allFacultyPeople: async () => model
+            .find({ enabled: true, category: 'faculty fellows', })
+            .sort([['name.first', 'ascending']])
+            .exec(),
+        allLeadershipPeople: async () => model
+            .find({ enabled: true, category: 'leadership', })
+            .sort([['sortOrder', 'ascending']])
+            .exec(),
         allMastersPeople: async () => {
-            const cohort = await global.keystone.list('Filter').model.findOne({
-                category: 'Cohort',
-                current: true,
-            }).exec();
-            const people = await model.find({ enabled: true, category: 'Masters', cohortYear: cohort, }).sort([
-                ['name.first', 'ascending']
-            ]).exec();
+            const cohort = await global.keystone
+                .list('Filter')
+                .model.findOne({
+                    category: 'Cohort',
+                    current: true,
+                })
+                .exec();
+            const people = await model
+                .find({ enabled: true, category: 'Masters', cohortYear: cohort, })
+                .sort([['name.first', 'ascending']])
+                .exec();
             return people;
         },
-        allAlumniPeople: async () => model.find({ enabled: true, category: 'Masters', alumni: true, }).sort([
-            ['name.first', 'ascending']
-        ]).populate('cohortYear').exec(),
+        allAlumniPeople: async () => model
+            .find({ enabled: true, category: 'Masters', alumni: true, })
+            .sort([['name.first', 'ascending']])
+            .populate('cohortYear')
+            .exec(),
         getPerson: async (parent, args) => {
-            const person = await model.findOne({ key: args.key, }).populate('cohortYear').populate('projects').populate('mdProjects')
+            const person = await model
+                .findOne({ key: args.key, })
+                .populate('cohortYear')
+                .populate('projects')
+                .populate('mdProjects')
                 .exec();
             return person;
         },
     },
-
 };
 module.exports = Person;

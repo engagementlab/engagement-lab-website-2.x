@@ -112,6 +112,17 @@
         [people]="content.faculty"
     ></people-grid>
 </section>
+
+<section id="cohort" *ngIf="people">
+    <hr />
+    <h1 class="uppercase">
+        Current Students
+    </h1>
+    <people-grid
+        modalRoute="/curriculum/graduate/students"
+        [people]="people"
+    ></people-grid>
+</section>
 <!-- 
 <section id="projects" *ngIf="content && content.projects && content.projects.length > 0">
     <hr />

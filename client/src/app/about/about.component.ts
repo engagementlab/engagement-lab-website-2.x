@@ -16,8 +16,9 @@ export class AboutComponent implements OnInit {
         const query = `
             {
                 allAboutPages {
-                    summary1
-                    summary2
+                    summary1 {
+                        html
+                    }
                     image
                     {
                         public_id 

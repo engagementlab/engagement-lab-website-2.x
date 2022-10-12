@@ -26,6 +26,11 @@ const routes: Routes = [
                 pathMatch: 'full',
             },
             {
+                path: 'graduate/students/:key',
+                component: GraduateCurriculumComponent,
+                pathMatch: 'full',
+            },
+            {
                 path: 'undergraduate',
                 component: UndergraduateComponent,
                 pathMatch: 'full',

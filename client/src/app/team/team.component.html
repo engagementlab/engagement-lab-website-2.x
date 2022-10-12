@@ -14,20 +14,82 @@
 <people-grid [people]="students"></people-grid>
 
 <h2>Alumni</h2>
-
+<!-- 
 <div *ngFor="let cohort of cohorts">
-    <h3>{{ cohort.label }}</h3>
+  <h3>{{ cohort.label }}</h3>
 
-    <p *ngFor="let student of getCohortAlumni(cohort.key)">
-        <span
-            *ngIf="
+  <p *ngFor="let student of getCohortAlumni(cohort.key)">
+    <span *ngIf="
                 student.relatedLinks && student.relatedLinks.length > 0;
                 else noLink
-            "
-            >{{ student.name.first }} {{ student.name.last }}</span
-        >
-        <ng-template #noLink
-            >{{ student.name.first }} {{ student.name.last }}</ng-template
-        >
-    </p>
+            ">{{ student.name.first }} {{ student.name.last }}</span>
+    <ng-template #noLink>{{ student.name.first }} {{ student.name.last }}</ng-template>
+  </p>
+</div> -->
+
+<div>
+    <h3>2021 - 2022</h3>
+    <p>Aaron Stier-Cohen</p>
+    <p>Amy Zhang</p>
+    <p>Fatimah-Zahra Yesuf</p>
+    <p>Grace Fu</p>
+    <p>Jacqueline Yang</p>
+    <p>Jiatao Cui</p>
+    <p>Phil Jones</p>
+    <p>Sharry Li</p>
+    <p>Xufan Hu</p>
+
+    <h3>2020 - 2021</h3>
+    <p>Graham Rutherford</p>
+    <p>Melody (Yu-Hsuan) Hsu</p>
+    <p>Mikaela Joyce</p>
+    <p>Ramón Montes</p>
+    <p>Sydney Angove</p>
+
+    <h3>2019 - 2020</h3>
+    <p>Cathy Edwards</p>
+    <p>Chitra Anwar</p>
+    <p>Hassan Hassan</p>
+    <p>Hope Chung</p>
+    <p>Kathleen Carroll</p>
+    <p>Linhui Huang</p>
+    <p>Noah Braun</p>
+    <p>Paul Cifarelli</p>
+    <p>Rakshya Devkota</p>
+    <p>Sumi Dey</p>
+    <p>Xingying Wang</p>
+    <p>Yiwen (Lava) Cui</p>
+
+    <h3>2018-2019</h3>
+    <p>Elisa Hamilton</p>
+    <p>Emily Baeza</p>
+    <p>Giles Bullen</p>
+    <p>Herman Servatius</p>
+    <p>Isaiah Frisbie</p>
+    <p>Lea Nielsen</p>
+    <p>Renée Hopkins</p>
+    <p>Vicki Rapti</p>
+
+    <h3>2017 - 2018</h3>
+    <p>Aakanksha Gupta</p>
+    <p>Anna Ladd</p>
+    <p>Becky Bastien</p>
+    <p>Cathy Edwards</p>
+    <p>Jonathan Elbaz</p>
+    <p>Justin Warren</p>
+    <p>Lauren Stott</p>
+    <p>Lindsy Goldberg</p>
+    <p>Melissa Teng</p>
+    <p>Neil Perry</p>
+    <p>Sharon Amuguni</p>
+    <p>Stanley Dominique</p>
+
+    <h3>2016 - 2017</h3>
+    <p>Eron Salling</p>
+    <p>Jesse Fryburg</p>
+    <p>Jessica Weaver</p>
+    <p>Miriam Chahine</p>
+    <p>Rachel Hanebutt</p>
+    <p>Riley Hunt</p>
+    <p>Samantha Viotty</p>
 </div>

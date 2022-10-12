@@ -40,10 +40,7 @@ About.add({
     },
 
     summary1: {
-        type: Types.Textarea, label: 'Mission Statement', required: true, initial: true,
-    },
-    summary2: {
-        type: Types.Textarea, label: 'Value Statement', required: true, initial: true,
+        type: Types.Markdown, label: 'Mission Statement', required: true, initial: true,
     },
 
     image: {
