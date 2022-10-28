@@ -3,3 +3,5 @@
 {"_id":{"$oid":"630f8f88f32c2b4fa72d4fe2"},"name":{"first":"Paul","last":"Mihailidis"},"isAdmin":true,"email":"paul_mihailidis@emerson.edu","__v":0}
 {"_id":{"$oid":"6318b94af32c2b4fa72d4fe6"},"name":{"first":"Rachele","last":"Gardner"},"isAdmin":true,"email":"rachele_gardner@emerson.edu","__v":0}
 {"_id":{"$oid":"6318b967f32c2b4fa72d4fe7"},"name":{"first":"John","last":"Yang"},"isAdmin":true,"email":"john_yang@emerson.edu","__v":0}
+{"_id":{"$oid":"633daaa403a71c6f4b488982"},"name":{"first":"Neve","last":"Chambers"},"isAdmin":true,"email":"neve_chambers@emerson.edu","__v":0}
+{"_id":{"$oid":"634867418e967b742cf8340a"},"name":{"first":"Maeve","last":"Lawler"},"isAdmin":true,"email":"maeve_lawler@emerson.edu","__v":0}
