@@ -36,7 +36,7 @@
     "@angular/router": "~13.0.2",
     "@engagementlab/el-scss": "latest",
     "@nicky-lenaers/ngx-scroll-to": "^9.0.0",
-    "@scullyio/init": "^0.0.28",
+    "@scullyio/init": "^2.1.41",
     "@scullyio/ng-lib": "2.0.2",
     "@scullyio/scully": "2.0.2",
     "animejs": "^3.2.0",
