@@ -135,7 +135,7 @@ const newsArchiveIdPlugin = async (route, config) => {
 };
 const newsIdPlugin = async (route, config) => {
     // Obtain all news keys from new cms
-    const response = await axios.get('https://cms.qa.transformnarratives.org/rest/news');
+    const response = await axios.get('https://qa.transformnarratives.org/cms/rest/news');
 
     const routes = [];
 

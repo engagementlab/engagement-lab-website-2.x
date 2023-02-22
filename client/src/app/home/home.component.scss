@@ -35,8 +35,6 @@ a {
 }
 
 #intro {
-    padding-bottom: 12%;
-
     h1 {
         font-weight: 300;
         @include pxtoem(32, 48);
@@ -218,8 +216,6 @@ a {
     color: white;
 
     padding: 2%;
-    margin-top: 17%;
-
     a {
         svg {
             .arrow {
