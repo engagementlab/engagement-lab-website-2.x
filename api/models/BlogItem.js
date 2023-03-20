@@ -38,7 +38,7 @@ BlogItem.add({
         index: true,
         default: 'Blogs are now created in new CMS',
         noedit: true,
-        note: '[Please click here.](https://cms.qa.transformnarratives.org/news-items)',
+        note: '[Please click here.](https://cms.elab.emerson.edu/tngvi/news-items)',
     },
 });
 
