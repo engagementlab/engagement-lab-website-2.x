@@ -5,74 +5,102 @@ import {
     ViewChildren,
     QueryList,
 } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { DataService } from 'src/app/utils/data.service';
-
+interface Video {
+    show: boolean;
+    url: SafeResourceUrl;
+}
+type VideoData = Record<string, Video>;
 @Component({
     selector: 'app-studios',
     templateUrl: './studios.component.html',
     styleUrls: ['./studios.component.scss'],
 })
-export class GraduateStudiosComponent implements OnInit, AfterViewInit {
+export class UndergraduateStudiosComponent implements OnInit, AfterViewInit {
     public content: any;
-    public cohorts: any;
-    public projects: any;
-    public currentSelector: string;
+    public requiredStudios: any;
+    public studios: any;
+    public videoDisplay: VideoData = {};
 
-    @ViewChildren('projectList') projectList: QueryList<any>;
-
-    constructor(private dataSvc: DataService) {}
+    constructor(
+        private dataSvc: DataService,
+        private sanitizer: DomSanitizer,
+    ) {}
 
     async ngOnInit(): Promise<any> {
         const query = `
         {
-            allMastersPages {
-              studiosBlurb
+          allUndergraduateStudios {
+            name
+            requiredCourse
+            description {
+              html
             }
-            allCohorts {
-              key
-              name
+            faculty {
+                key
+                name {
+                    first
+                    last
+                }
+                image {
+                    public_id
+                }
             }
-            allMDProjectPages {
-              key
-              name
-              thumb {
+            semester
+            url
+            year
+            {
+                label
+            }
+            video
+            videoThumbnail { 
                 public_id
-              }
-              cohortYear {
-                  key  
-              }
             }
+          }
+
+          allUndergraduatePages {
+            currentStudiosYear
+          }
         }
     `;
 
-        const mastersResponse = await this.dataSvc.getSetWithKey(
-            'graduate',
+        const response = await this.dataSvc.getSetWithKey(
+            'undergraduate',
             'studios',
             query,
         );
-        this.content = mastersResponse['allMastersPages'];
-        this.cohorts = mastersResponse['allCohorts'];
-        this.projects = mastersResponse['allMDProjectPages'];
-    }
+        this.content = response['allUndergraduatePages'];
 
-    ngAfterViewInit() {
-        this.projectList.changes.subscribe(t => {
-            if (this.projects.length % 2 === 1) {
-                this.projects.push({
-                    projectType: 'dummy',
-                    key: 'dummy',
-                    cohortYear: { key: 'dummy' },
-                });
+        this.requiredStudios = response['allUndergraduateStudios'].filter(
+            studio => {
+                return studio.requiredCourse === true;
+            },
+        );
+        this.studios = response['allUndergraduateStudios'].filter(studio => {
+            return !studio.requiredCourse;
+        });
+        // Populate record for toggling video embeds and sanitize video IDs into iframe URLs
+        response['allUndergraduateStudios'].forEach(studio => {
+            if (studio.video) {
+                this.videoDisplay[studio.video] = {
+                    show: false,
+                    url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                        `https://player.vimeo.com/video/${studio.video}?autoplay=1&color=00ab9e&byline=0&portrait=0`,
+                    ),
+                };
             }
         });
     }
-    public applySelector(selector: string) {
-        this.currentSelector = selector;
+
+    ngAfterViewInit() {}
+
+    getYearStudios(label: string) {
+        return this.studios.filter(studio => studio.year.label === label);
     }
 
-    public isSelected(selector: string) {
-        return (
-            !this.currentSelector || this.currentSelector.indexOf(selector) > -1
-        );
+    // Toggle selected video to display embed
+    embedVideo(key: string) {
+        this.videoDisplay[key].show = true;
     }
 }

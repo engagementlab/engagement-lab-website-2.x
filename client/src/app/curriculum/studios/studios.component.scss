@@ -1,23 +1,65 @@
+@import '~src/styles/_variables';
 @import '~src/styles/_mixins';
 
-#intro {
-  @include font-overpass;
+.video {
+    a {
+        display: block;
+        position: relative;
+        .icon {
+            @include transition(transform, 0.15s, ease-in-out);
+            position: absolute;
+            left: calc(50% - 40px);
+            top: calc(50% - 40px);
 
-  a {
-    cursor: pointer;
-  }
+            @include phones {
+                left: calc(50% - 12px);
+                top: calc(50% - 12px);
+            }
+        }
 
-  .bold {
-    font-weight: 900;
-  }
-
-  .controls a {
-    margin-right: 2%;
-
-
-    &:hover,
-    &.active {
-      border-bottom: 1px solid black;
+        &:hover {
+            .icon {
+                @include scale(1.2);
+            }
+        }
     }
-  }
+
+    .title {
+        @include font-overpass;
+    }
+
+    .embed {
+        .frame {
+            position: relative;
+            padding: 56.25% 0 0 0;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+#intro {
+    @include font-overpass;
+
+    a {
+        cursor: pointer;
+    }
+
+    .bold {
+        font-weight: 900;
+    }
+
+    .controls a {
+        margin-right: 2%;
+
+        &:hover,
+        &.active {
+            border-bottom: 1px solid black;
+        }
+    }
 }

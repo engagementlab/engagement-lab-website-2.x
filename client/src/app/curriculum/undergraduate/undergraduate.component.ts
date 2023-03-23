@@ -11,8 +11,6 @@ import { DataService } from 'src/app/utils/data.service';
 export class UndergraduateComponent implements OnInit {
     public content: any;
     public academicYears: any;
-    public requiredStudios: any;
-    public studios: any;
 
     public currentPerson: any;
     private gettingPerson: boolean;
@@ -49,30 +47,6 @@ export class UndergraduateComponent implements OnInit {
             curriculumDescription {
                 html
             }
-            currentStudiosYear
-          }
-          allUndergraduateStudios {
-            name
-            requiredCourse
-            description {
-              html
-            }
-            faculty {
-                key
-                name {
-                    first
-                    last
-                }
-                image {
-                    public_id
-                }
-            }
-            semester
-            url
-            year
-            {
-                label
-            }
           }
         }
       `;
@@ -81,21 +55,9 @@ export class UndergraduateComponent implements OnInit {
 
         this.content = response['allUndergraduatePages'];
         this.academicYears = response['allYears'];
-        this.requiredStudios = response['allUndergraduateStudios'].filter(
-            studio => {
-                return studio.requiredCourse === true;
-            },
-        );
-        this.studios = response['allUndergraduateStudios'].filter(studio => {
-            return !studio.requiredCourse;
-        });
         this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
             `https://player.vimeo.com/video/744697164?autoplay=1&color=00ab9e&byline=0&portrait=0`,
         );
-    }
-
-    getYearStudios(label: string) {
-        return this.studios.filter(studio => studio.year.label === label);
     }
     embedVideo() {
         this.videoDisplayToggle = true;

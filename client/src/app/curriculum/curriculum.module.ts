@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { GraduateCurriculumComponent } from './graduate/graduate.component';
 import { UndergraduateComponent } from './undergraduate/undergraduate.component';
+import { UndergraduateStudiosComponent } from './studios/studios.component';
 
 const routes: Routes = [
     {
@@ -33,6 +34,11 @@ const routes: Routes = [
             {
                 path: 'undergraduate',
                 component: UndergraduateComponent,
+                pathMatch: 'full',
+            },
+            {
+                path: 'studios',
+                component: UndergraduateStudiosComponent,
                 pathMatch: 'full',
             },
             {

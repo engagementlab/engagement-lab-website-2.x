@@ -43,6 +43,7 @@ export class NavComponent implements AfterViewInit {
         {
             label: 'Curriculum',
             subLinks: [
+                { url: 'curriculum/studios', label: 'Social Impact Studios' },
                 {
                     url: 'curriculum/undergraduate',
                     label: 'Undergraduate',

@@ -47,7 +47,7 @@ import { EventIndexComponent } from './events/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { GraduateCurriculumComponent } from './curriculum/graduate/graduate.component';
 import { GraduateAlumniComponent } from './curriculum/alumni/alumni.component';
-import { GraduateStudiosComponent } from './curriculum/studios/studios.component';
+import { UndergraduateStudiosComponent } from './curriculum/studios/studios.component';
 import { GraduateProjectComponent } from './curriculum/studios/project/project.component';
 import { GraduateInfoComponent } from './curriculum/info/info.component';
 import { HomeComponent } from './home/home.component';
@@ -113,7 +113,7 @@ export const config: CloudinaryConfiguration = appConfig;
         FooterComponent,
         GraduateCurriculumComponent,
         GraduateAlumniComponent,
-        GraduateStudiosComponent,
+        UndergraduateStudiosComponent,
         GraduateProjectComponent,
         GraduateInfoComponent,
         HomeComponent,

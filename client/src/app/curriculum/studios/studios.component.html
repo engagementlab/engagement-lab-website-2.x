@@ -1,64 +1,159 @@
-<section
-    id="intro"
-    class="columns is-mobile is-multiline no-margin"
-    *ngIf="content"
->
-    <h2 class="column is-full-tablet is-11-mobile">
-        Thesis Studios
-    </h2>
-
-    <h3 class="column is-3-tablet is-11-mobile blurb">
-        {{ content.studiosBlurb }}
-    </h3>
-
-    <div id="filters" class="uppercase column columns is-mobile is-full">
-        <span class="bold column is-1">Year:</span>
-        <span class="controls column"
-            ><a
-                aria-label="Button to filter thesis projects by all years"
-                [class.active]="!currentSelector"
-                (click)="applySelector(null)"
-                >All</a
+<h3 class="column is-full">Required Courses</h3>
+<div id="required-studios" class="columns is-multiline no-margin">
+    <div
+        *ngFor="let studio of requiredStudios; let odd = odd"
+        class="column is-11-mobile"
+        [class.is-half-tablet]="!odd"
+    >
+        <h4>{{ studio.name }}</h4>
+        <p>{{ studio.semester }} Semester</p>
+        <p>
+            <em>Instructor<span *ngIf="studio.faculty.length > 1">s</span>:</em
+            >&nbsp;
+            <span *ngFor="let person of studio.faculty; let i = index">
+                <a
+                    class="href"
+                    routerLink="/curriculum/undergraduate/faculty/{{
+                        person.key
+                    }}"
+                    >{{ person.name.first }} {{ person.name.last }}</a
+                ><span *ngIf="i < studio.faculty.length - 1"
+                    >,&nbsp;</span
+                ></span
             >
+        </p>
+        <p [innerHtml]="studio.description.html"></p>
+        <div class="video" *ngIf="studio.video">
             <a
-                *ngFor="let cohort of cohorts"
-                [attr.aria-label]="
-                    'Button to filter projects by ' +
-                    cohort.name.replace('Cohort', '') +
-                    'year'
-                "
-                [class.active]="currentSelector === cohort.key"
-                (click)="applySelector(cohort.key)"
+                id="video-thumb"
+                [routerLink]=""
+                (click)="embedVideo(studio.video)"
+                *ngIf="!videoDisplay[studio.video].show"
             >
-                {{ cohort.name.replace('Cohort', '') }}
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ studio.videoThumbnail.public_id }}"
+                    autoFormat="true"
+                    alt="Preview thumbnail image for {{
+                        studio.name
+                    }} introduction video."
+                    *ngIf="
+                        studio.videoThumbnail && studio.videoThumbnail.public_id
+                    "
+                ></cdn-image>
+                <img
+                    src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
+                    alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
+                    *ngIf="
+                        !studio.videoThumbnail ||
+                        !studio.videoThumbnail.public_id
+                    "
+                />
+                <span class="icon">
+                    <svg width="80" height="80" fill="none" viewBox="0 0 80 80">
+                        <path
+                            fill="#fff"
+                            d="M40 0C17.92 0 0 17.92 0 40s17.92 40 40 40 40-17.92 40-40S62.08 0 40 0zM29.44 55.84V24.16L56.96 40 29.44 55.84z"
+                        />
+                    </svg>
+                </span>
             </a>
-        </span>
-    </div>
-</section>
-
-<section id="projects" class="columns is-multiline no-margin" *ngIf="projects">
-    <ng-container #projectList *ngFor="let project of projects">
-        <div
-            *ngIf="isSelected(project.cohortYear.key)"
-            class="project view-tooltip column is-3-tablet is-11-mobile"
-        >
-            <a
-                routerLink="/graduate/projects/{{ project.key }}"
-                *ngIf="project.key !== 'dummy'"
+            <div
+                id="video-embed"
+                class="embed"
+                *ngIf="videoDisplay[studio.video].show"
             >
-                <div class="bg">
-                    <span role="tooltip">view</span>
-                    <cdn-image
-                        cloudinaryPrefix="/"
-                        cloudinaryId="{{ project.thumb.public_id }}"
-                        autoFormat="true"
-                        [responsive]="true"
-                        height="350"
-                        alt="Thumbnail image for '{{ project.name }}' project"
-                    ></cdn-image>
+                <div class="frame">
+                    <iframe
+                        [src]="videoDisplay[studio.video].url"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
                 </div>
-                <h4>{{ project.name }}</h4>
-            </a>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
         </div>
-    </ng-container>
-</section>
+    </div>
+</div>
+
+<h3 class="column is-half" *ngIf="content">
+    {{ content.currentStudiosYear }} Studios
+</h3>
+<div id="studios" class="columns is-multiline no-margin">
+    <div
+        *ngFor="let studio of studios; let odd = odd"
+        class="column is-11-mobile"
+        [class.is-half-tablet]="!odd"
+    >
+        <h4>{{ studio.name }}</h4>
+        <p>{{ studio.semester }} Semester</p>
+        <p>
+            <em>Instructor<span *ngIf="studio.faculty.length > 1">s</span>:</em
+            >&nbsp;
+            <span *ngFor="let person of studio.faculty; let i = index">
+                <a
+                    class="href"
+                    routerLink="/curriculum/undergraduate/faculty/{{
+                        person.key
+                    }}"
+                    >{{ person.name.first }} {{ person.name.last }}</a
+                ><span *ngIf="i < studio.faculty.length - 1"
+                    >,&nbsp;</span
+                ></span
+            >
+        </p>
+        <p [innerHtml]="studio.description.html"></p>
+        <div class="video" *ngIf="studio.video">
+            <a
+                id="video-thumb"
+                [routerLink]=""
+                (click)="embedVideo(studio.video)"
+                *ngIf="!videoDisplay[studio.video].show"
+            >
+                <cdn-image
+                    cloudinaryPrefix="/"
+                    cloudinaryId="{{ studio.videoThumbnail.public_id }}"
+                    autoFormat="true"
+                    alt="Preview thumbnail image for {{
+                        studio.name
+                    }} introduction video."
+                    *ngIf="
+                        studio.videoThumbnail && studio.videoThumbnail.public_id
+                    "
+                ></cdn-image>
+                <img
+                    src="https://dummyimage.com/500x300/cfcfcf/ff0000.png&text=Needs+thumbnail"
+                    alt="Preview image thumbnail for video with text saying 'Needs thumbnail'"
+                    *ngIf="
+                        !studio.videoThumbnail ||
+                        !studio.videoThumbnail.public_id
+                    "
+                />
+                <span class="icon">
+                    <svg width="80" height="80" fill="none" viewBox="0 0 80 80">
+                        <path
+                            fill="#fff"
+                            d="M40 0C17.92 0 0 17.92 0 40s17.92 40 40 40 40-17.92 40-40S62.08 0 40 0zM29.44 55.84V24.16L56.96 40 29.44 55.84z"
+                        />
+                    </svg>
+                </span>
+            </a>
+            <div
+                id="video-embed"
+                class="embed"
+                *ngIf="videoDisplay[studio.video].show"
+            >
+                <div class="frame">
+                    <iframe
+                        [src]="videoDisplay[studio.video].url"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
