@@ -60,6 +60,9 @@ export class UndergraduateStudiosComponent implements OnInit, AfterViewInit {
           }
 
           allUndergraduatePages {
+            studiosDescription { 
+                html
+            }
             currentStudiosYear
           }
         }
