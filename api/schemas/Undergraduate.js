@@ -9,12 +9,12 @@
  * ==========
  */
 const Undergraduate = {
-
     schema: `
     type Undergraduate {
       id: ID!
       name: String!
       description: Markdown
+      studiosDescription: Markdown
       curriculumDescription: Markdown
       currentStudiosYear: String
     }
@@ -23,6 +23,5 @@ const Undergraduate = {
     resolvers: {
         allUndergraduatePages: async () => global.keystone.list('Undergraduate').model.findOne({}).exec(),
     },
-
 };
 module.exports = Undergraduate;
