@@ -41,6 +41,11 @@ Undergraduate.add({
         required: true,
         initial: true,
     },
+    studiosDescription: {
+        type: Types.Markdown,
+        required: true,
+        initial: true,
+    },
     curriculumDescription: {
         type: Types.Markdown,
         required: true,
@@ -51,7 +56,7 @@ Undergraduate.add({
         required: true,
         initial: true,
     },
-/*     currentStudios: {
+    /*     currentStudios: {
         type: Types.Relationship,
         required: true,
         initial: true,

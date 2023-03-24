@@ -34,7 +34,7 @@ UndergraduateStudio.add({
         hidden: true,
         required: true,
     },
-    // current: { type: Boolean, initial: true, },
+    enabled: { type: Boolean, initial: true, },
     description: {
         type: Types.Markdown,
     },
@@ -50,13 +50,24 @@ UndergraduateStudio.add({
         required: true,
     },
     semester: {
-        required: true, initial: true, type: Types.Select, options: ['Fall', 'Spring'],
+        required: true,
+        initial: true,
+        type: Types.Select,
+        options: ['Fall', 'Spring'],
     },
     url: {
         type: Types.Url,
         label: 'External URL',
         validate: urlValidator,
         note: 'External page describing this studio. Must be in format "http://www.something.org"',
+    },
+    video: {
+        type: String,
+        note: 'Must be video ID from a Vimeo URL (vimeo.com/**420657931** ← this is an ID)',
+    },
+    videoThumbnail: {
+        type: Types.CloudinaryImage,
+        folder: 'homepage-2.0/studios',
     },
     requiredCourse: { type: Boolean, },
 });
