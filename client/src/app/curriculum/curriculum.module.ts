@@ -42,8 +42,8 @@ const routes: Routes = [
                 pathMatch: 'full',
             },
             {
-                path: 'undergraduate/faculty/:key',
-                component: UndergraduateComponent,
+                path: 'studios/faculty/:key',
+                component: UndergraduateStudiosComponent,
                 pathMatch: 'full',
             },
         ],

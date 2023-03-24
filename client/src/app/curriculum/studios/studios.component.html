@@ -1,10 +1,15 @@
+<person-modal
+    *ngIf="currentPerson"
+    [person]="currentPerson"
+    (onClose)="closePerson()"
+></person-modal>
 <h2 class="column is-full-tablet is-11-mobile">
     Social Impact Studios
 </h2>
 <div class="column is-5-desktop is-full-tablet is-11-mobile blurb">
     <p [innerHtml]="content.studiosDescription.html"></p>
 </div>
-<h3 class="column is-full">Required Courses</h3>
+<h3 class="column is-full">Foundations Course</h3>
 <div id="required-studios" class="columns is-multiline no-margin">
     <div
         *ngFor="let studio of requiredStudios; let odd = odd"
@@ -19,9 +24,7 @@
             <span *ngFor="let person of studio.faculty; let i = index">
                 <a
                     class="href"
-                    routerLink="/curriculum/undergraduate/faculty/{{
-                        person.key
-                    }}"
+                    routerLink="/curriculum/studios/faculty/{{ person.key }}"
                     >{{ person.name.first }} {{ person.name.last }}</a
                 ><span *ngIf="i < studio.faculty.length - 1"
                     >,&nbsp;</span
@@ -86,12 +89,8 @@
 <h3 class="column is-half" *ngIf="content">
     {{ content.currentStudiosYear }} Studios
 </h3>
-<div id="studios" class="columns is-multiline no-margin">
-    <div
-        *ngFor="let studio of studios; let odd = odd"
-        class="column is-11-mobile"
-        [class.is-half-tablet]="!odd"
-    >
+<div id="studios" class="no-margin">
+    <div *ngFor="let studio of studios; let odd = odd" class="studio">
         <h4>{{ studio.name }}</h4>
         <p>{{ studio.semester }} Semester</p>
         <p>
@@ -100,9 +99,7 @@
             <span *ngFor="let person of studio.faculty; let i = index">
                 <a
                     class="href"
-                    routerLink="/curriculum/undergraduate/faculty/{{
-                        person.key
-                    }}"
+                    routerLink="/curriculum/studios/faculty/{{ person.key }}"
                     >{{ person.name.first }} {{ person.name.last }}</a
                 ><span *ngIf="i < studio.faculty.length - 1"
                     >,&nbsp;</span

@@ -1,11 +1,6 @@
-import {
-    Component,
-    OnInit,
-    AfterViewInit,
-    ViewChildren,
-    QueryList,
-} from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/utils/data.service';
 interface Video {
     show: boolean;
@@ -23,12 +18,26 @@ export class UndergraduateStudiosComponent implements OnInit, AfterViewInit {
     public studios: any;
     public videoDisplay: VideoData = {};
 
+    public currentPerson: any;
+    private gettingPerson: boolean;
+
     constructor(
         private dataSvc: DataService,
         private sanitizer: DomSanitizer,
-    ) {}
+        private router: Router,
+        private _route: ActivatedRoute,
+    ) {
+        this._route.params.subscribe(params => {
+            if (Object.keys(params).length < 1) return;
+            this.getPerson(params.key);
+        });
+    }
 
     async ngOnInit(): Promise<any> {
+        // Pre-load person
+        const key = this._route.snapshot.paramMap.get('key');
+        if (key) this.getPerson(key);
+
         const query = `
         {
           allUndergraduateStudios {
@@ -105,5 +114,48 @@ export class UndergraduateStudiosComponent implements OnInit, AfterViewInit {
     // Toggle selected video to display embed
     embedVideo(key: string) {
         this.videoDisplay[key].show = true;
+    }
+
+    async getPerson(key: string): Promise<void> {
+        // No dupe requests!
+        if (this.gettingPerson) return;
+
+        this.gettingPerson = true;
+        this.currentPerson = undefined;
+
+        const query = `   
+        {
+            getPerson(key: "${key}") {
+              name {
+                first
+                last
+              }
+              key
+              title
+              image {
+                  public_id
+              }
+              bio { 
+                  html
+              }
+              category
+              relatedLinks
+              contact
+            }
+        }`;
+
+        const response = await this.dataSvc.getSetWithKey(
+            'undergraduate-faculty',
+            key,
+            query,
+        );
+        this.currentPerson = response['getPerson'];
+    }
+
+    closePerson(): void {
+        this.gettingPerson = false;
+        this.currentPerson = undefined;
+
+        this.router.navigateByUrl('curriculum/studios');
     }
 }
