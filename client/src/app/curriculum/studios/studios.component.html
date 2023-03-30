@@ -3,11 +3,25 @@
     [person]="currentPerson"
     (onClose)="closePerson()"
 ></person-modal>
-<h2 class="column is-full-tablet is-11-mobile">
+<h2 class="column is-5-tablet is-11-mobile">
     Social Impact Studios
 </h2>
-<div class="column is-5-desktop is-full-tablet is-11-mobile blurb">
-    <p [innerHtml]="content.studiosDescription.html"></p>
+<div class="columns is-multiline">
+    <div
+        class="column is-5-desktop is-full-tablet is-11-mobile blurb"
+        *ngIf="content"
+    >
+        <p [innerHtml]="content.studiosDescription.html"></p>
+    </div>
+    <div class="column">
+        <cdn-image
+            cloudinaryId="about/fall-studios-23_e0g3ya"
+            width="700"
+            alt="Make an impact. Register for a Social Impact Studio for the fall semester!"
+            autoFormat="true"
+            [responsive]="true"
+        ></cdn-image>
+    </div>
 </div>
 <h3 class="column is-full">Foundations Course</h3>
 <div id="required-studios" class="columns is-multiline no-margin">
