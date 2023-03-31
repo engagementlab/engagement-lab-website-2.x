@@ -10,7 +10,6 @@ const queryData = async (queryName,
         } 
     }`;
     const response = await axios.post('http://localhost:3000/graphql', { query: body });
-    // console.log(response)
 
     return response.data.data;
 };
@@ -134,6 +133,7 @@ const newsArchiveIdPlugin = async (route, config) => {
     return Promise.resolve(routes);
 };
 const newsIdPlugin = async (route, config) => {
+    try {
     // Obtain all news keys from new cms
     const response = await axios.get(
         'https://cms.elab.emerson.edu/tngvi/rest/news',
@@ -143,7 +143,11 @@ const newsIdPlugin = async (route, config) => {
 
     response.data.forEach((res) => {
         routes.push({ route: `/news/${res.key}` });
-    });
+    });}
+    catch (err) {
+        console.error(err);
+        return Promise.reject(err);
+    }
     return Promise.resolve(routes);
 };
 const validator = async (config) => [];
