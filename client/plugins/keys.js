@@ -134,21 +134,22 @@ const newsArchiveIdPlugin = async (route, config) => {
 };
 const newsIdPlugin = async (route, config) => {
     try {
-    // Obtain all news keys from new cms
-    const response = await axios.get(
-        'https://cms.elab.emerson.edu/tngvi/rest/news',
-    );
+        // Obtain all news keys from new cms
+        const response = await axios.get(
+            'https://cms.elab.emerson.edu/tngvi/rest/news',
+        );
 
-    const routes = [];
+        const routes = [];
 
-    response.data.forEach((res) => {
-        routes.push({ route: `/news/${res.key}` });
-    });}
+        response.data.forEach((res) => {
+            routes.push({ route: `/news/${res.key}` });
+        });
+        return Promise.resolve(routes);
+    }
     catch (err) {
         console.error(err);
         return Promise.reject(err);
     }
-    return Promise.resolve(routes);
 };
 const validator = async (config) => [];
 registerPlugin('router', 'studios', studioIdPlugin, validator);
