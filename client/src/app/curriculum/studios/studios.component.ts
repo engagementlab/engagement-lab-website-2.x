@@ -13,7 +13,11 @@ type VideoData = Record<string, Video>;
     styleUrls: ['./studios.component.scss'],
 })
 export class UndergraduateStudiosComponent implements OnInit, AfterViewInit {
-    public content: any;
+    public content: any = {
+        studiosDescription: {
+            html: '',
+        },
+    };
     public requiredStudios: any;
     public studios: any;
     public videoDisplay: VideoData = {};

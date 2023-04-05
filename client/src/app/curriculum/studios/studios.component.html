@@ -6,11 +6,8 @@
 <h2 class="column is-5-tablet is-11-mobile">
     Social Impact Studios
 </h2>
-<div class="columns is-multiline">
-    <div
-        class="column is-5-desktop is-full-tablet is-11-mobile blurb"
-        *ngIf="content"
-    >
+<div class="columns is-multiline" *ngIf="content !== undefined">
+    <div class="column is-5-desktop is-full-tablet is-11-mobile blurb">
         <p [innerHtml]="content.studiosDescription.html"></p>
     </div>
     <div class="column">

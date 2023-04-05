@@ -88,16 +88,23 @@ const personIdPlugin = async (route, config) => {
 const facultyIdPlugin = async (route, config) => {
     // Obtain all faculty people keys via graphql query
     const body = `query {                         
-        allMastersPages {
-            faculty {
-                key
-            }
+        allFacultyPeople {
+            key
+        }
+        allLeadershipPeople {
+            key
         }
     }`;
     const response = await axios.post('http://localhost:3000/graphql', { query: body });
     const routes = [];
-    response.data.data.allMastersPages.faculty.forEach((res) => {
+    response.data.data.allFacultyPeople.forEach(res => {
         routes.push({ route: `/curriculum/graduate/faculty/${res.key}` });
+        routes.push({ route: `/curriculum/studios/faculty/${res.key}` });
+        routes.push({ route: `/curriculum/undergraduate/faculty/${res.key}` });
+    });
+    response.data.data.allLeadershipPeople.forEach(res => {
+        routes.push({ route: `/curriculum/graduate/faculty/${res.key}` });
+        routes.push({ route: `/curriculum/studios/faculty/${res.key}` });
         routes.push({ route: `/curriculum/undergraduate/faculty/${res.key}` });
     });
     return Promise.resolve(routes);
