@@ -3,7 +3,7 @@ import './plugins/routes';
 
 exports.config = {
     // logFileSeverity: 0,
-    inlineStateOnly: true,
+    inlineStateOnly: false,
     projectRoot: './src',
     projectName: 'elab-web',
     outDir: '../bin/app',
