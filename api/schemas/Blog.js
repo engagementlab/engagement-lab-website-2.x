@@ -26,7 +26,7 @@ const Blog = {
             const newsItem = await global.keystone.list('Blog').model.findOne({ key: args.key, }).exec();
             // Optimize image tags
             newsItem.body.html = newsItem.body.html.replace(/upload\/v1/gm, 'upload/c_scale,f_auto,w_700/v1/');
-            newsItem.body.html = newsItem.body.html.replace('<img src', '<img style="max-width:700px" src');
+            newsItem.body.html = newsItem.body.html.replace(/<img src/gm, '<img style="max-width:700px" src');
             return newsItem;
         },
     },
