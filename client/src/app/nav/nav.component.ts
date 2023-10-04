@@ -77,7 +77,7 @@ export class NavComponent implements AfterViewInit {
         {
             url: 'news',
             label: 'News',
-            enabled: true,
+            enabled: false,
         },
         { url: 'partner', label: 'Partner With Us', enabled: true },
         { url: 'getinvolved', label: 'Get Involved', enabled: true },

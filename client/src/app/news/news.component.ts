@@ -15,8 +15,7 @@ export class NewsComponent {
 
     async ngOnInit() {
         const { key } = this.route.snapshot.params;
-        const data = await this.dataSvc.getNews(key);
-
+        const data = null;
         this.setContent(data);
     }
 
