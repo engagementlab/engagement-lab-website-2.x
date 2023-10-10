@@ -1,7 +1,7 @@
 {
   "apps": [{
       "name": "engagement-lab-website-api",
-      "script": "app.js",
+      "script": "/srv/engagement-lab-website-2.0/source/api/app.js",
       "exec_interpreter": "/home/node/.nvm/versions/node/v14/bin/node",
       "env_production": {
         "NODE_ENV": "production"
